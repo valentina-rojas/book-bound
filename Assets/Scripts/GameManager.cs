@@ -133,6 +133,10 @@ public class GameManager : MonoBehaviour
 
             ShelfManager.instance.RestarLibroEsperadoPorGenero(libro.tipoLibro);
             libro.gameObject.SetActive(false);
+            if (CharacterManager.instance.UltimoPersonajeAtendido != null)
+            {
+                CharacterManager.instance.UltimoPersonajeAtendido.tituloLibroPrestado = libro.titulo;
+            }
 
             audioSource.PlayOneShot(sonidoCorrecto);
             ActualizarSpritePersonaje();

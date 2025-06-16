@@ -165,15 +165,14 @@ MonoBehaviour:
   dialogueLinesMala:
   - "\xBFQu\xE9 es esto?"
   - "\xA1No, no, no! Yo quiero hongos. "
-  - "Bah, me llevo esto igual\u2026"
-  - Pero no era lo que buscaba...
+  - 
   spriteRespuestaBuena: {fileID: -990964772, guid: d65f33f931bba9c4cbab03bfee64aa50, type: 3}
   spriteRespuestaMala: {fileID: -1670925046, guid: d65f33f931bba9c4cbab03bfee64aa50, type: 3}
   libroDeseadoID: 33
   tipoPreferido: herbologia
+  tituloLibroPrestado: 
   nombreDelCliente: Bruja
   descripcionPedido: "Solicit\xF3 \"Algo para vengarse\""
-  tituloLibroPrestado: 
   stickersRequeridos: 
   tituloLibroPortada: 
   hechizoSolicitado: 0

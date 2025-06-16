@@ -162,12 +162,6 @@ public class BookManager : MonoBehaviour
     public void RecomendarLibro()
     {
         panelConfirmarSeleccion.SetActive(false);
-
-        if (CharacterManager.instance.UltimoPersonajeAtendido != null)
-        {
-            CharacterManager.instance.UltimoPersonajeAtendido.tituloLibroPrestado = libroActual.titulo;
-        }
-
      
         GameManager.instance.VerificarRecomendacion(libroActual);
 
