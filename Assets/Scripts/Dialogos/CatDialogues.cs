@@ -155,8 +155,7 @@ public class CatDialogues : MonoBehaviour
             botonRepetir.gameObject.SetActive(true);
         }
     }
-
-    private void FinalizarDialogo()
+    public void FinalizarDialogo()
     {
         dialoguePanel.SetActive(false);
 
