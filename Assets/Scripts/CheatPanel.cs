@@ -47,12 +47,10 @@ public class CheatPanel : MonoBehaviour
     {
         GameManager gm = GameManager.instance;
 
-        // FINALIZAR DIÁLOGO ACTUAL si hay alguno corriendo
         CatDialogues cat = FindFirstObjectByType<CatDialogues>();
         if (cat != null)
-            cat.FinalizarDialogo(); // ← esto limpia y cierra el diálogo activo
+            cat.FinalizarDialogo(); 
 
-        // Reiniciar estados
         ShelfManager.instance?.ReiniciarEstado();
         CameraManager.instance?.ActivarCamaraPrincipal();
         CobwebManager.instance?.ReiniciarTelarañas();
