@@ -165,7 +165,7 @@ MonoBehaviour:
   dialogueLinesMala:
   - "\xBFQu\xE9 es esto?"
   - "\xA1No, no, no! Yo quiero hongos. "
-  - 
+  - Esto no me sirve
   spriteRespuestaBuena: {fileID: -990964772, guid: d65f33f931bba9c4cbab03bfee64aa50, type: 3}
   spriteRespuestaMala: {fileID: -1670925046, guid: d65f33f931bba9c4cbab03bfee64aa50, type: 3}
   libroDeseadoID: 33

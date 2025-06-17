@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class HistorialManager : MonoBehaviour
 {
@@ -36,11 +37,42 @@ public class HistorialManager : MonoBehaviour
         if (uiManager != null && uiManager.GetPanelHistorial() != null)
         {
             uiManager.GetPanelHistorial().SetActive(false);
-            Debug.Log("Panel de historial cerrado"); // Mensaje de depuración
+            Debug.Log("Panel de historial cerrado"); 
         }
     }
 
     #region Historial de Pedidos
+
+    private string ResaltarEnNegrita(string texto, List<string> palabras)
+    {
+        foreach (var palabra in palabras)
+        {
+            if (!string.IsNullOrEmpty(palabra))
+            {
+                texto = texto.Replace(palabra, $"<b><color=#e82e2e>{palabra}</color></b>");
+            }
+        }
+        return texto;
+    }
+
+    public void TachadoUltimaEntrada()
+    {
+        if (uiManager == null) return;
+
+        var contenido = uiManager.GetHistorialContent();
+        if (contenido.childCount == 0) return;
+
+        Transform ultimaEntrada = contenido.GetChild(0); 
+        TMP_Text[] textos = ultimaEntrada.GetComponentsInChildren<TMP_Text>();
+
+        if (textos.Length >= 2)
+        {
+            if (!textos[1].text.StartsWith("<s>"))
+            {
+                textos[1].text = $"<s>{textos[1].text}</s>";
+            }
+        }
+    }
     private void MostrarHistorial()
     {
         var personajes = CharacterManager.instance.GetPersonajesAtendidos();
@@ -52,19 +84,34 @@ public class HistorialManager : MonoBehaviour
         }
         else
         {
+            List<string> palabrasParaNegrita = new List<string> { "vengarse", "cuento", "asustar", "cama" };
+
             foreach (var personaje in personajes)
             {
+                var contenido = uiManager.GetHistorialContent();
+                if (contenido.childCount > 0)
+                {
+                    Transform entradaAnterior = contenido.GetChild(0);
+                    TMP_Text[] textosAnteriores = entradaAnterior.GetComponentsInChildren<TMP_Text>();
+                    if (textosAnteriores.Length >= 2 && !textosAnteriores[1].text.StartsWith("<s>"))
+                    {
+                        textosAnteriores[1].text = $"<s>{textosAnteriores[1].text}</s>";
+                    }
+                }
+
                 GameObject entrada = Instantiate(uiManager.GetPrefabEntradaHistorial(), uiManager.GetHistorialContent());
+                entrada.transform.SetSiblingIndex(0);
                 TMP_Text[] textos = entrada.GetComponentsInChildren<TMP_Text>();
 
                 if (textos.Length >= 2)
                 {
                     textos[0].text = personaje.nombreDelCliente;
-                    textos[1].text = personaje.descripcionPedido;
+                    textos[1].text = ResaltarEnNegrita(personaje.descripcionPedido, palabrasParaNegrita);
                 }
             }
         }
     }
+
 
     private void LimpiarHistorialUI()
     {
@@ -98,7 +145,7 @@ public class HistorialManager : MonoBehaviour
         if (personajes == null || personajes.Count == 0)
         {
             MostrarMensajeLibrosVacio("No hay libros prestados para mostrar.");
-            Debug.Log("No hay personajes atendidos"); // Mensaje de depuración
+            Debug.Log("No hay personajes atendidos"); 
         }
         else
         {
@@ -113,6 +160,7 @@ public class HistorialManager : MonoBehaviour
                     hayLibros = true;
 
                     GameObject entrada = Instantiate(uiManager.GetPrefabEntradaLibro(), uiManager.GetLibrosContent());
+                    entrada.transform.SetSiblingIndex(0);
                     TMP_Text[] textos = entrada.GetComponentsInChildren<TMP_Text>();
 
                     if (textos.Length >= 2)
@@ -156,7 +204,7 @@ public class HistorialManager : MonoBehaviour
         {
             textos[0].text = mensaje;
             textos[1].text = "";
-            Debug.Log("Mostrando mensaje de libros vacío"); // Mensaje de depuración
+            Debug.Log("Mostrando mensaje de libros vacío"); 
         }
     }
     #endregion

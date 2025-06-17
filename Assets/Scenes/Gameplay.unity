@@ -31067,7 +31067,7 @@ MonoBehaviour:
   historialContent: {fileID: 1149309982}
   prefabEntradaHistorial: {fileID: 4469383039418106170, guid: 93637624e76e3b54492698ddf19972f4, type: 3}
   librosContent: {fileID: 1670475058}
-  prefabEntradaLibro: {fileID: 4469383039418106170, guid: f444594ad8494494c8c4c541cbe2de8d, type: 3}
+  prefabEntradaLibro: {fileID: 4469383039418106170, guid: 3af97bbbfe2debd47b08c0b26565b595, type: 3}
 --- !u!4 &1468377848
 Transform:
   m_ObjectHideFlags: 0
