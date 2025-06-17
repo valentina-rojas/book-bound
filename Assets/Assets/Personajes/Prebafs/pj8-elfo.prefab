@@ -172,7 +172,7 @@ MonoBehaviour:
   tipoPreferido: fantasia
   tituloLibroPrestado: 
   nombreDelCliente: Elfo
-  descripcionPedido: "Solicit\xF3 unn libro que hable de equilibrio, luz y oscuridad.\r\n"
+  descripcionPedido: "Solicit\xF3 un libro que hable de equilibrio, luz y oscuridad\r\n"
   stickersRequeridos: 
   tituloLibroPortada: 
   hechizoSolicitado: 0

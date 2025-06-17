@@ -84,7 +84,10 @@ public class HistorialManager : MonoBehaviour
         }
         else
         {
-            List<string> palabrasParaNegrita = new List<string> { "vengarse", "cuento", "asustar", "cama" };
+            List<string> palabrasParaNegrita = new List<string>
+            { "La Dama de los Secretos Perdidos", "vengarse", "asustar", "cama", "reparar", "crear", "portada", "libro",
+            "hechizar", "prueba", "conocimientos", "equilibrio", "luz", "oscuridad", "El Guardián del Bosque Azul",
+            "relatos", "invisible", "no dicho", "Compendio de Plantas Susurrantes"};
 
             foreach (var personaje in personajes)
             {

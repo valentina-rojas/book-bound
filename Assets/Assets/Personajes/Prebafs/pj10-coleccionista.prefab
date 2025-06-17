@@ -171,8 +171,8 @@ MonoBehaviour:
   tipoPreferido: terror
   tituloLibroPrestado: 
   nombreDelCliente: Coleccionista
-  descripcionPedido: "Solicit\xF3 un libro inquietante, lleno de relatos sobre lo
-    invisible y lo no dicho.\r"
+  descripcionPedido: "Solicit\xF3 un libro con relatos sobre lo invisible y lo no
+    dicho.\r"
   stickersRequeridos: 
   tituloLibroPortada: 
   hechizoSolicitado: 0

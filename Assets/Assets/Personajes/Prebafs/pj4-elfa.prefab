@@ -175,12 +175,13 @@ MonoBehaviour:
   spriteRespuestaMala: {fileID: -2029843000, guid: afe1cec9e28d9a84099a7d453d54140b, type: 3}
   libroDeseadoID: 33
   tipoPreferido: herbologia
-  nombreDelCliente: Elfa
-  descripcionPedido: "Solicit\xF3 crear una portada para su libro de viajes y descubrimientos "
   tituloLibroPrestado: 
+  nombreDelCliente: Elfa
+  descripcionPedido: "Solicit\xF3 crear una portada para su libro"
   stickersRequeridos: 0e000000
   tituloLibroPortada: Cartas sobre el camino
   hechizoSolicitado: 0
+  libroDonadoID: 0
 --- !u!114 &4978074495582524776
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -170,13 +170,14 @@ MonoBehaviour:
   spriteRespuestaMala: {fileID: 2020737730, guid: 1eb3ebefd4ee59a4a86fff92b07faf47, type: 3}
   libroDeseadoID: 63
   tipoPreferido: terror
-  nombreDelCliente: Anciano
-  descripcionPedido: "Solicit\xF3 un cuento para asustar a los \"mocosos\" que se
-    esconden debajo de su cama"
   tituloLibroPrestado: 
+  nombreDelCliente: Anciano
+  descripcionPedido: "Solicit\xF3 algo para asustar a los \"mocosos\" debajo de su
+    cama"
   stickersRequeridos: 
   tituloLibroPortada: 
   hechizoSolicitado: 0
+  libroDonadoID: 0
 --- !u!114 &1136955672045997557
 MonoBehaviour:
   m_ObjectHideFlags: 0
