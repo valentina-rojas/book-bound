@@ -4230,7 +4230,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -777, y: -481}
-  m_SizeDelta: {x: 1383.4752, y: 819.36}
+  m_SizeDelta: {x: 1417, y: 988}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &202989502
 MonoBehaviour:
@@ -4252,7 +4252,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: -4251668931768978912, guid: 9966564f4cd21da45a99b3ae750e38cc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8202,8 +8202,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 773, y: 480}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 798.3, y: 476.7}
+  m_SizeDelta: {x: 100, y: 110}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &375403079
 MonoBehaviour:
@@ -8281,7 +8281,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1024528176872462452, guid: fef0518405a8b7c46a2b1dce10a18326, type: 3}
+  m_Sprite: {fileID: -1977979503596986246, guid: 4ec2d660c6abc3149a83c540602da0a2, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -18481,19 +18481,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 848665965}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1997312401}
-        m_TargetAssemblyTypeName: DevolverLibro, Assembly-CSharp
-        m_MethodName: ConfirmarDevolucion
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 22
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &848665965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32643,7 +32631,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -341.41, y: 0}
+  m_AnchoredPosition: {x: -360, y: 0}
   m_SizeDelta: {x: 935.82007, y: 423.12085}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1479853291
@@ -32845,7 +32833,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 650, y: 375}
+  m_AnchoredPosition: {x: 666.2, y: 418.8}
   m_SizeDelta: {x: 160, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1489167536
@@ -39900,7 +39888,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000061035156, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -1391.96, y: -417.51}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1821247953
@@ -42712,8 +42700,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvasDevolucion: {fileID: 1821247951}
-  botonConfirmarDevolucion: {fileID: 848665964}
   imagenLibro: {fileID: 324840642}
+  botonConfirmarDevolucion: {fileID: 848665964}
   fantasiaSprite: {fileID: 6875664790056892873, guid: 0388c976766e8944db976454d33c8882, type: 3}
   misterioSprite: {fileID: 1488180427319606480, guid: 84566c513d5035342a657db17d95ec1a, type: 3}
   pocionesSprite: {fileID: -4721226998713458786, guid: e1378f9ebdcd9394db7bee5682767384, type: 3}
@@ -43735,7 +43723,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 340.75995, y: 0}
+  m_AnchoredPosition: {x: 310, y: 0}
   m_SizeDelta: {x: 905.82007, y: 423.12085}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2038109633
