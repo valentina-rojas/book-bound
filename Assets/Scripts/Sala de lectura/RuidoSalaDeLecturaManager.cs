@@ -14,6 +14,8 @@ public class RuidoSalaDeLecturaManager : MonoBehaviour
     [SerializeField] private GameObject botonDetenerRuido;
 
     private bool eventoActivo = false;
+    private bool esperandoProbabilidad = false;
+    private Coroutine corutinaEvento;
     private AudioSource audioSourceEfectos;
     private CatDialogues catDialogues;
 
@@ -21,7 +23,7 @@ public class RuidoSalaDeLecturaManager : MonoBehaviour
     {
         catDialogues = FindObjectOfType<CatDialogues>();
         if (catDialogues == null)
-            Debug.LogWarning("❗ No se encontró CatDialogues en la escena.");
+            Debug.LogWarning("No se encontró CatDialogues en la escena.");
     }
 
     private void Start()
@@ -34,35 +36,62 @@ public class RuidoSalaDeLecturaManager : MonoBehaviour
 
     public void IntentarActivarSalaRuidosa()
     {
-        Debug.Log("🟩 IntentarActivarSalaRuidosa fue llamado.");
+        Debug.Log("IntentarActivarSalaRuidosa fue llamado.");
 
-        if (eventoActivo)
+        if (eventoActivo || esperandoProbabilidad)
             return;
 
         if (GameManager.instance == null)
         {
-            Debug.LogWarning("❗ GameManager no está disponible.");
+            Debug.LogWarning("GameManager no está disponible.");
             return;
         }
 
         if (GameManager.instance.nivelActual <= 3)
         {
-            Debug.Log("ℹ️ Nivel demasiado bajo para activar sala ruidosa.");
+            Debug.Log("Nivel demasiado bajo para activar sala ruidosa.");
             return;
         }
 
-        ActivarEventoSalaRuidosa();
+        esperandoProbabilidad = true;
+        corutinaEvento = StartCoroutine(CheckearProbabilidadEvento());
+    }
+
+    private IEnumerator CheckearProbabilidadEvento()
+    {
+        Debug.Log("Comienza a esperar posible activación del evento de ruido.");
+
+        while (!eventoActivo)
+        {
+            float tiempoEspera = Random.Range(30f, 90f);
+            Debug.Log($"Esperando {tiempoEspera:F1} segundos antes del próximo intento.");
+            yield return new WaitForSeconds(tiempoEspera);
+
+            float chance = Random.value;
+            Debug.Log($"Probabilidad obtenida: {chance}");
+
+            if (chance <= 0.2f)
+            {
+                ActivarEventoSalaRuidosa();
+                yield break;
+            }
+            else
+            {
+                Debug.Log("No se activó el evento esta vez. Se intentará de nuevo.");
+            }
+        }
     }
 
     private void ActivarEventoSalaRuidosa()
     {
         if (audioRuido == null)
         {
-            Debug.LogWarning("❗ AudioSource no asignado.");
+            Debug.LogWarning("AudioSource no asignado.");
             return;
         }
 
         eventoActivo = true;
+        esperandoProbabilidad = false;
 
         if (!audioRuido.gameObject.activeSelf)
             audioRuido.gameObject.SetActive(true);
@@ -76,7 +105,7 @@ public class RuidoSalaDeLecturaManager : MonoBehaviour
         if (botonDetenerRuido != null)
             botonDetenerRuido.SetActive(true);
 
-        Debug.Log("📢 Evento de sala ruidosa activado.");
+        Debug.Log("Evento de sala ruidosa activado.");
 
         if (catDialogues != null)
         {
@@ -110,7 +139,7 @@ public class RuidoSalaDeLecturaManager : MonoBehaviour
 
         if (audioRuido == null)
         {
-            Debug.LogWarning("❗ AudioSource no asignado.");
+            Debug.LogWarning("AudioSource no asignado.");
             return;
         }
 
@@ -120,11 +149,25 @@ public class RuidoSalaDeLecturaManager : MonoBehaviour
         if (botonDetenerRuido != null)
             botonDetenerRuido.SetActive(false);
 
-        Debug.Log("📴 Evento de sala ruidosa desactivado.");
+        Debug.Log("Evento de sala ruidosa desactivado.");
 
         if (catDialogues != null)
         {
             catDialogues.FinalizarDialogo();
         }
+
+        IntentarActivarSalaRuidosa();
+    }
+
+    public void CancelarPosibilidadDeEvento()
+    {
+        if (corutinaEvento != null)
+        {
+            StopCoroutine(corutinaEvento);
+            corutinaEvento = null;
+        }
+
+        esperandoProbabilidad = false;
+        Debug.Log("Se canceló la posibilidad de que ocurra el evento de sala ruidosa.");
     }
 }

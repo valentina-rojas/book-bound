@@ -18,6 +18,7 @@ public class CatDialogues : MonoBehaviour
     private int lineIndex;
     private string[] dialogueLines;
     private int diaActual;
+    private bool esDialogoExtra = false;
 
     private Dictionary<int, string[]> dialoguesPorDia = new Dictionary<int, string[]>()
     {
@@ -106,8 +107,16 @@ public class CatDialogues : MonoBehaviour
         {
             diaActual = dia;
             dialogueLines = dialoguesPorDia[dia];
+            esDialogoExtra = false; 
             StartDialogue();
         }
+    }
+
+    public void IniciarDialogoExtra(string mensaje)
+    {
+        dialogueLines = new string[] { mensaje };
+        esDialogoExtra = true; 
+        StartDialogue();
     }
 
     private void StartDialogue()
@@ -169,7 +178,11 @@ public class CatDialogues : MonoBehaviour
             botonRepetir.gameObject.SetActive(false);
 
         CameraManager.instance?.ActivarBotonCamara();
-        TaskManager.instance?.MostrarTareas();
+
+        if (!esDialogoExtra)
+        {
+            TaskManager.instance?.MostrarTareas();
+        }
     }
 
    private void ActualizarTextoBoton()
@@ -182,13 +195,6 @@ public class CatDialogues : MonoBehaviour
 
         if (botonRepetir != null)
             botonRepetir.gameObject.SetActive(false);
-    }
-
-
-    public void IniciarDialogoExtra(string mensaje)
-    {
-        dialogueLines = new string[] { mensaje };
-        StartDialogue();
     }
 
 }

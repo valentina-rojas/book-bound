@@ -178,7 +178,7 @@ MonoBehaviour:
   tituloLibroPrestado: 
   nombreDelCliente: Elfa
   descripcionPedido: "Solicit\xF3 crear una portada para su libro"
-  stickersRequeridos: 0e000000
+  stickersRequeridos: 070000000e0000000400000006000000
   tituloLibroPortada: Cartas sobre el camino
   hechizoSolicitado: 0
   libroDonadoID: 0
