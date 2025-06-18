@@ -40,12 +40,14 @@ public class CharacterManager : MonoBehaviour
                 CameraManager.instance.ActivarBotonCamara();
                 BookManager.instance.HabilitarBotonConfirmacion();
                 break;
-
+            case CharacterAttributes.TipoDePedido.DevolverLibro:
+                Debug.Log("Este personaje quiere devolver un libro.");
+                CameraManager.instance.ActivarPanelDevolver();
+                break;
             case CharacterAttributes.TipoDePedido.RepararLibro:
                 Debug.Log("Este personaje necesita que repares un libro.");
                 CameraManager.instance.ActivarPanelReparacion();
                 break;
-
             case CharacterAttributes.TipoDePedido.HacerPortada:
                 Debug.Log("Este personaje quiere que le hagas una portada.");
                 CameraManager.instance.ActivarPanelPortada();

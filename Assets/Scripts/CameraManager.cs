@@ -18,6 +18,8 @@ public class CameraManager : MonoBehaviour
     public BookCoverManager bookCoverManager;
     public GameObject panelHechizo;
     public GameObject panelDonar;
+    public GameObject panelDevolver;
+
 
     void Awake()
     {
@@ -36,10 +38,6 @@ public class CameraManager : MonoBehaviour
             if (canvasObjects != null && i < canvasObjects.Length)
                 canvasObjects[i].SetActive(isActive);
         }
-
-
-        // botonCambiarCamara2.gameObject.SetActive(false);
-        // botonCambiarCamara3.gameObject.SetActive(false);
 
         int nivel = GameManager.instance.nivelActual;
 
@@ -154,6 +152,17 @@ public class CameraManager : MonoBehaviour
     public void DesctivarPanelDonar()
     {
         panelDonar.gameObject.SetActive(false);
+    }
+
+    public void ActivarPanelDevolver()
+    {
+        DevolverLibro.instance.MostrarPanelDevolucion();
+        panelDevolver.gameObject.SetActive(true);
+    }
+
+    public void DesctivarPanelDevolver()
+    {
+        panelDevolver.gameObject.SetActive(false);
     }
 
     public void ActivarCamaraPrincipal()

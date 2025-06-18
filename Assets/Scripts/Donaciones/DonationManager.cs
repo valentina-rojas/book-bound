@@ -11,14 +11,14 @@ public class DonationManager : MonoBehaviour
     public GameObject canvasDonacion;
     public Image imagenPortada;
     public Sprite spriteDefault;
-    public Button botonAceptarDonacion;  // Referencia al botón
+    public Button botonAceptarDonacion;  
 
     [Header("Audio")]
     public AudioClip sonidoAperturaPanel;
     private AudioSource audioSource;
 
     [Header("Animación")]
-    public float duracionAnimacion = 1f; // duración de la animación escala
+    public float duracionAnimacion = 1f; 
 
     [Header("Sprites por género")]
     public Sprite fantasiaSprite;
@@ -47,7 +47,6 @@ public class DonationManager : MonoBehaviour
             audioSource = gameObject.AddComponent<AudioSource>();
         }
 
-        // Inicializar diccionario
         spritesPorGenero = new Dictionary<string, Sprite>
         {
             { "fantasia", fantasiaSprite },
@@ -59,27 +58,25 @@ public class DonationManager : MonoBehaviour
             { "terror", terrorSprite }
         };
 
-        // Asegurarse que el botón está oculto inicialmente
         if (botonAceptarDonacion != null)
             botonAceptarDonacion.gameObject.SetActive(false);
     }
 
     public void ActualizarPortada()
     {
-        // Mostrar panel y preparar animación y sonido
         if (canvasDonacion != null)
             canvasDonacion.SetActive(true);
 
         if (imagenPortada == null)
         {
-            Debug.LogWarning("⚠️ imagenPortada no está asignada.");
+            Debug.LogWarning("imagenPortada no está asignada.");
             return;
         }
 
         CharacterAttributes personaje = GameManager.instance.personajeActual;
         if (personaje == null)
         {
-            Debug.LogWarning("⚠️ No hay personaje actual asignado.");
+            Debug.LogWarning("No hay personaje actual asignado.");
             imagenPortada.sprite = spriteDefault;
             return;
         }
@@ -96,22 +93,19 @@ public class DonationManager : MonoBehaviour
                 if (!string.IsNullOrEmpty(genero) && spritesPorGenero.TryGetValue(genero, out Sprite spriteGenero))
                 {
                     imagenPortada.sprite = spriteGenero;
-                    Debug.Log($"🎨 Portada actualizada con sprite de género: {genero}");
+                    Debug.Log($"Portada actualizada con sprite de género: {genero}");
                 }
                 else
                 {
                     imagenPortada.sprite = spriteDefault;
-                    Debug.LogWarning($"⚠️ No se encontró sprite para el género '{genero}', se usa sprite default.");
+                    Debug.LogWarning($"No se encontró sprite para el género '{genero}', se usa sprite default.");
                 }
 
-                // Reiniciar escala a 0 (invisible)
                 imagenPortada.transform.localScale = Vector3.zero;
 
-                // Ocultar botón
                 if (botonAceptarDonacion != null)
                     botonAceptarDonacion.gameObject.SetActive(false);
 
-                // Iniciar animación + sonido
                 StartCoroutine(AnimarPortadaYSonido());
 
                 return;
@@ -119,12 +113,11 @@ public class DonationManager : MonoBehaviour
         }
 
         imagenPortada.sprite = spriteDefault;
-        Debug.LogWarning($"⚠️ Libro con ID {libroID} no encontrado. Portada por defecto asignada.");
+        Debug.LogWarning($"Libro con ID {libroID} no encontrado. Portada por defecto asignada.");
     }
 
     private IEnumerator AnimarPortadaYSonido()
     {
-        // Reproducir sonido
         if (sonidoAperturaPanel != null)
         {
             audioSource.PlayOneShot(sonidoAperturaPanel);
@@ -134,7 +127,6 @@ public class DonationManager : MonoBehaviour
         Vector3 escalaInicial = Vector3.zero;
         Vector3 escalaFinal = Vector3.one;
 
-        // Animar escala del libro de 0 a 1
         while (tiempo < duracionAnimacion)
         {
             tiempo += Time.deltaTime;
@@ -143,16 +135,13 @@ public class DonationManager : MonoBehaviour
             yield return null;
         }
 
-        // Asegurar que la escala final es 1
         imagenPortada.transform.localScale = escalaFinal;
 
-        // Esperar hasta que termine el sonido (si está sonando)
         while (audioSource.isPlaying)
         {
             yield return null;
         }
 
-        // Mostrar botón aceptar donación
         if (botonAceptarDonacion != null)
             botonAceptarDonacion.gameObject.SetActive(true);
     }
@@ -163,29 +152,29 @@ public class DonationManager : MonoBehaviour
 
         if (personaje == null)
         {
-            Debug.LogWarning("⚠️ No hay personaje actual asignado en GameManager.");
+            Debug.LogWarning("No hay personaje actual asignado en GameManager.");
             return;
         }
 
         int libroID = personaje.libroDonadoID;
-        Debug.Log($"📘 Buscando libro donado con ID: {libroID}");
+        Debug.Log($"Buscando libro donado con ID: {libroID}");
 
         BookData[] libros = Resources.FindObjectsOfTypeAll<BookData>();
-        Debug.Log($"🔍 Libros encontrados: {libros.Length}");
+        Debug.Log($"Libros encontrados: {libros.Length}");
 
         foreach (BookData libro in libros)
         {
             if (libro.libroID == libroID)
             {
                 libro.gameObject.SetActive(true);
-                Debug.Log($"✅ Libro con ID {libroID} activado.");
+                Debug.Log($"Libro con ID {libroID} activado.");
 
                 string genero = libro.tipoLibro.ToLower().Trim();
 
                 if (!string.IsNullOrEmpty(genero))
                 {
                     ShelfManager.instance.SumarLibroEsperadoPorGenero(genero);
-                    Debug.Log($"📚 Sumado libro al género: {genero}");
+                    Debug.Log($"Sumado libro al género: {genero}");
                 }
 
                 break;

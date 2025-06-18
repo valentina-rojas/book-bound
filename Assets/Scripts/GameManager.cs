@@ -255,6 +255,15 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void LibroDevuelto()
+    {
+        if (characterSpawn != null)
+        {
+            resultadoRecomendacion = ResultadoRecomendacion.Buena;
+            characterSpawn.EndInteraction();
+        }
+    }
+
      public void CompletarTrivia(int correctas, int incorrectas)
     {
         if (correctas > incorrectas)

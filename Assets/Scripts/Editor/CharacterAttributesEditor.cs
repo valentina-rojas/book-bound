@@ -21,6 +21,9 @@ public class CharacterAttributesEditor : Editor
     SerializedProperty hechizoSolicitado;
     SerializedProperty libroDonadoID;
 
+    SerializedProperty libroDevueltoID;       
+    SerializedProperty tituloLibroDevuelto;      
+
     SerializedProperty nombreDelCliente;
     SerializedProperty descripcionPedido;
 
@@ -42,6 +45,9 @@ public class CharacterAttributesEditor : Editor
 
         hechizoSolicitado = serializedObject.FindProperty("hechizoSolicitado");
         libroDonadoID = serializedObject.FindProperty("libroDonadoID");
+
+        libroDevueltoID = serializedObject.FindProperty("libroDevueltoID");           
+        tituloLibroDevuelto = serializedObject.FindProperty("tituloLibroDevuelto");   
 
         nombreDelCliente = serializedObject.FindProperty("nombreDelCliente");
         descripcionPedido = serializedObject.FindProperty("descripcionPedido");
@@ -94,6 +100,12 @@ public class CharacterAttributesEditor : Editor
             case CharacterAttributes.TipoDePedido.DonarLibro:
                 EditorGUILayout.LabelField("📤 Donación", EditorStyles.boldLabel);
                 EditorGUILayout.PropertyField(libroDonadoID);
+                break;
+
+            case CharacterAttributes.TipoDePedido.DevolverLibro:
+                EditorGUILayout.LabelField("📥 Devolución", EditorStyles.boldLabel);
+                EditorGUILayout.PropertyField(libroDevueltoID);
+                EditorGUILayout.PropertyField(tituloLibroDevuelto);
                 break;
         }
 
