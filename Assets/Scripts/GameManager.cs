@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     private UIManager uiManager;
     private CharacterSpawn characterSpawn;
     private SpriteRenderer spriteRendererPersonaje;
-    [SerializeField] private GameObject salaLecturaGO; 
+
 
     [Header("Estado del juego")]
     public CharacterAttributes personajeActual;
@@ -82,20 +82,16 @@ public class GameManager : MonoBehaviour
 
         if (nivelActual == 2)
             CameraManager.instance.botonCambiarCamara3.gameObject.SetActive(true);
-        
         if (nivelActual == 4)
             CameraManager.instance.botonCambiarCamara2.gameObject.SetActive(true);
-
         Time.timeScale = 0f;
         yield return new WaitForSecondsRealtime(3f);
         panelInfoLibro.SetActive(false);
         Time.timeScale = 1f;
-
         MenuPausa.instance.MostrarBotonPausa();
         TaskManager.instance.InicializarTareasParaNivel();
         FindFirstObjectByType<CatDialogues>().IniciarDialogoDelDia(nivelActual);
     }
-
 
     public void IniciarSpawnDePersonajes()
     {
@@ -117,7 +113,6 @@ public class GameManager : MonoBehaviour
         personajeActual = personaje;
         spriteRendererPersonaje = personajeActual.GetComponent<SpriteRenderer>();
     }
-
 
     public void VerificarRecomendacion(BookData libro)
     {
@@ -263,6 +258,7 @@ public class GameManager : MonoBehaviour
             characterSpawn.EndInteraction();
         }
     }
+
 
      public void CompletarTrivia(int correctas, int incorrectas)
     {

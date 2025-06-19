@@ -150,8 +150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tipoDePedido: 6
   dialogueLinesInicio:
-  - Hay historias de una joven con un poder que puede cambiarlo todo.
-  - Es raro, pero siento que este tomo guarda respuestas que necesito encontrar.
+  - Te traigo esto
   dialogueLinesBuena:
   - Gracias
   dialogueLinesMala:

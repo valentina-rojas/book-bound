@@ -17,7 +17,12 @@ public class CharacterSpawn : MonoBehaviour
 
     public void AsignarPersonajesDelNivel(GameObject[] personajesDelNivel)
     {
-        characters = personajesDelNivel;
+        // Clonamos la lista de prefabs para asegurarnos que no son objetos modificados
+        characters = new GameObject[personajesDelNivel.Length];
+        for (int i = 0; i < personajesDelNivel.Length; i++)
+        {
+            characters[i] = personajesDelNivel[i];
+        }
     }
 
     public void ComenzarSpawn()
@@ -33,6 +38,7 @@ public class CharacterSpawn : MonoBehaviour
             GameObject candidate = characters[currentIndex];
             CharacterAttributes atributos = candidate.GetComponent<CharacterAttributes>();
 
+            // Si es de tipo "DevolverLibro", verificar si el libro está en el historial
             if (atributos != null && atributos.tipoDePedido == CharacterAttributes.TipoDePedido.DevolverLibro)
             {
                 HistorialManager historial = FindFirstObjectByType<HistorialManager>();
@@ -44,6 +50,7 @@ public class CharacterSpawn : MonoBehaviour
                 }
             }
 
+            // Instanciar personaje (siempre desde prefab, no desde objeto modificado)
             GameObject currentCharacter = Instantiate(candidate, spawnPoint.position, Quaternion.identity);
 
             if (audioSource != null && sonidoAparicionPersonaje != null)
@@ -54,6 +61,7 @@ public class CharacterSpawn : MonoBehaviour
             interactionFinished = false;
             CharacterManager.instance.ResetearAtencion();
 
+            atributos = currentCharacter.GetComponent<CharacterAttributes>();
             DialogueManager dialogueManager = currentCharacter.GetComponent<DialogueManager>();
 
             if (atributos != null)
@@ -147,3 +155,4 @@ public class CharacterSpawn : MonoBehaviour
         }
     }
 }
+
