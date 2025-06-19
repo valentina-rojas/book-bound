@@ -1,7 +1,6 @@
 using UnityEngine;
 using System.Collections;
 
-
 public class CharacterSpawn : MonoBehaviour
 {
     private GameObject[] characters;
@@ -15,11 +14,12 @@ public class CharacterSpawn : MonoBehaviour
     [Header("Sonido")]
     public AudioSource audioSource;
     public AudioClip sonidoAparicionPersonaje;
+
     public void AsignarPersonajesDelNivel(GameObject[] personajesDelNivel)
     {
         characters = personajesDelNivel;
     }
-    
+
     public void ComenzarSpawn()
     {
         currentIndex = 0;
@@ -30,24 +30,36 @@ public class CharacterSpawn : MonoBehaviour
     {
         while (currentIndex < characters.Length)
         {
-            GameObject currentCharacter = Instantiate(characters[currentIndex], spawnPoint.position, Quaternion.identity);
+            GameObject candidate = characters[currentIndex];
+            CharacterAttributes atributos = candidate.GetComponent<CharacterAttributes>();
+
+            if (atributos != null && atributos.tipoDePedido == CharacterAttributes.TipoDePedido.DevolverLibro)
+            {
+                HistorialManager historial = FindFirstObjectByType<HistorialManager>();
+                if (historial == null || !historial.GetLibrosPrestados().Contains(atributos.tituloLibroDevuelto))
+                {
+                    Debug.Log($"[SKIP] {atributos.nombreDelCliente} no será instanciado porque el libro '{atributos.tituloLibroDevuelto}' no está en el historial.");
+                    currentIndex++;
+                    continue;
+                }
+            }
+
+            GameObject currentCharacter = Instantiate(candidate, spawnPoint.position, Quaternion.identity);
 
             if (audioSource != null && sonidoAparicionPersonaje != null)
             {
                 audioSource.PlayOneShot(sonidoAparicionPersonaje);
             }
-            
+
             interactionFinished = false;
             CharacterManager.instance.ResetearAtencion();
 
-
-            CharacterAttributes atributos = currentCharacter.GetComponent<CharacterAttributes>();
             DialogueManager dialogueManager = currentCharacter.GetComponent<DialogueManager>();
+
             if (atributos != null)
             {
                 GameManager.instance.EstablecerPersonajeActual(atributos);
                 GameManager.instance.resultadoRecomendacion = GameManager.ResultadoRecomendacion.Ninguna;
-
             }
             else
             {
@@ -70,7 +82,6 @@ public class CharacterSpawn : MonoBehaviour
         }
 
         Debug.Log("Todos los personajes han pasado.");
-
         GameManager.instance.FinDeNivel();
     }
 
@@ -92,7 +103,7 @@ public class CharacterSpawn : MonoBehaviour
         HabilitarDialogo();
     }
 
-   public void EndInteraction()
+    public void EndInteraction()
     {
         if (!interactionFinished)
         {
@@ -102,7 +113,7 @@ public class CharacterSpawn : MonoBehaviour
 
     private IEnumerator MostrarDialogoDeResultado()
     {
-        DialogueManager dialogueManager = FindObjectOfType<CharacterAttributes>().gameObject.GetComponent<DialogueManager>();
+        DialogueManager dialogueManager = FindObjectOfType<CharacterAttributes>()?.gameObject.GetComponent<DialogueManager>();
 
         if (dialogueManager != null)
         {
@@ -114,7 +125,7 @@ public class CharacterSpawn : MonoBehaviour
             Debug.LogError("DialogueManager no encontrado.");
         }
 
-        interactionFinished = true; 
+        interactionFinished = true;
     }
 
     public void FinalizarInteraccion()

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4652195673153815505
+--- !u!1 &5489013454305063670
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,40 +8,40 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3699967482294955210}
-  - component: {fileID: 6432651152165925142}
-  - component: {fileID: 6634143803118803031}
-  - component: {fileID: 3892951439070596770}
-  - component: {fileID: 1177564428679998758}
+  - component: {fileID: 4737617679182200722}
+  - component: {fileID: 783976809163873193}
+  - component: {fileID: 3238045532763851809}
+  - component: {fileID: 1295417710627305486}
+  - component: {fileID: 1136955672045997557}
   m_Layer: 0
-  m_Name: pj6-bruja-mayor
+  m_Name: pj3-anciano busqueda
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3699967482294955210
+--- !u!4 &4737617679182200722
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4652195673153815505}
+  m_GameObject: {fileID: 5489013454305063670}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.3990312, y: 0.0036667958, z: 0}
+  m_LocalPosition: {x: -2.4786737, y: 0.67623585, z: 0}
   m_LocalScale: {x: 0.93, y: 0.93, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &6432651152165925142
+--- !u!212 &783976809163873193
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4652195673153815505}
+  m_GameObject: {fileID: 5489013454305063670}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -79,24 +79,24 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -3
-  m_Sprite: {fileID: 1761835546, guid: 68ad608c8f0e52745af1cbbc76225bd4, type: 3}
+  m_Sprite: {fileID: -310598990, guid: 1eb3ebefd4ee59a4a86fff92b07faf47, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 4.87, y: 7.09}
+  m_Size: {x: 5.83, y: 7.68}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &6634143803118803031
+--- !u!61 &3238045532763851809
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4652195673153815505}
+  m_GameObject: {fileID: 5489013454305063670}
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
@@ -128,67 +128,65 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.87, y: 8}
-    newSize: {x: 4.87, y: 7.09}
+    oldSize: {x: 5.83, y: 8}
+    newSize: {x: 5.83, y: 7.68}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 5.97, y: 7.79}
+  m_Size: {x: 6.46, y: 7.84}
   m_EdgeRadius: 0
---- !u!114 &3892951439070596770
+--- !u!114 &1295417710627305486
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4652195673153815505}
+  m_GameObject: {fileID: 5489013454305063670}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: df2f3b74621b28f49a0a8e3505329b67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tipoDePedido: 3
+  tipoDePedido: 0
   dialogueLinesInicio:
-  - "Este libro... no es un libro cualquiera, coraz\xF3n."
-  - Dentro guarda una receta muy antigua..
-  - "prohibida\u2026 "
-  - "olvidada a prop\xF3sito por quienes tem\xEDan su poder."
-  - "Si cayera en manos equivocadas... podr\xEDa desatar un desastre. O algo a\xFAn
-    peor."
-  - "Necesito encantarlo, sellarlo con un conjuro especial\u2026"
-  - "No es dif\xEDcil, solo debes agregarle las runas correctas en orden"
-  - "Lo har\xEDa yo pero ya me tiemblan las manos y se me dificulta "
-  - Las runas que debes usar son las de tierra, sombra y fuego, en ese orden
-  - "\xBFCrees que podr\xEDas ayudarme?"
+  - Buen dia...
+  - "necesito ese libro\u2026"
+  - uno lleno de cuentos para asustar a los mocosos que se esconden bajo mi cama.
+  - No recuerdo el nombre...
+  - "Pero tenia historias de manos fr\xEDas, risas raras en los armarios... "
+  - "y cosas que se asoman desde debajo del colch\xF3n."
   dialogueLinesBuena:
-  - "\xA1Que maravilla!"
-  - "El libro est\xE1 sellado con un hechizo perfecto."
-  - "Conf\xEDo en que el conocimiento contenido aqu\xED permanecer\xE1 a salvo...
-    gracias a ti."
+  - "\xA1Justo lo que necesitaba!"
+  - " Jejeje\u2026 "
+  - "perfecto para asustar a esos mocosos et\xE9reos que me chillan en los tobillos
+    a medianoche."
+  - "Si sobrevivo hasta ma\xF1ana, paso a contarte c\xF3mo fue."
   dialogueLinesMala:
-  - Oh, cielos... algo ha salido mal.
-  - "Este no es el hechizo que quer\xEDa\u2026 "
-  - Si alguien indeseado lo abre... no quiero ni imaginarlo.
-  - "Tendr\xE9 que buscar a otra alma sensible que pueda ayudarme. Pero gracias por
-    intentarlo\u2026"
-  spriteRespuestaBuena: {fileID: 199910097, guid: 68ad608c8f0e52745af1cbbc76225bd4, type: 3}
-  spriteRespuestaMala: {fileID: -1394314759, guid: 68ad608c8f0e52745af1cbbc76225bd4, type: 3}
-  libroDeseadoID: 12
-  tipoPreferido: misterio
-  nombreDelCliente: Bruja Mayor
-  descripcionPedido: "Solicit\xF3 hechizar un libro"
+  - "A ver\u2026"
+  - "\xBFy esto qu\xE9 es?..."
+  - como me dejen un zapato bajo la cama esta noche, te maldigo las pantuflas.
+  spriteRespuestaBuena: {fileID: -310598990, guid: 1eb3ebefd4ee59a4a86fff92b07faf47, type: 3}
+  spriteRespuestaMala: {fileID: 2020737730, guid: 1eb3ebefd4ee59a4a86fff92b07faf47, type: 3}
+  libroDeseadoID: 63
+  tipoPreferido: terror
   tituloLibroPrestado: 
+  nombreDelCliente: Anciano
+  descripcionPedido: "Solicit\xF3 algo para asustar a los \"mocosos\" debajo de su
+    cama"
   stickersRequeridos: 
   tituloLibroPortada: 
-  hechizoSolicitado: 1
---- !u!114 &1177564428679998758
+  hechizoSolicitado: 0
+  libroDonadoID: 0
+  libroDevueltoID: 0
+  tituloLibroDevuelto: 
+--- !u!114 &1136955672045997557
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4652195673153815505}
+  m_GameObject: {fileID: 5489013454305063670}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c05e4ea107c952145ac179a6a78788e5, type: 3}

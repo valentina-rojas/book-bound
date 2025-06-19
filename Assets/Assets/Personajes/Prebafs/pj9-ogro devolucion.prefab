@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3892951439070596770}
   - component: {fileID: 1177564428679998758}
   m_Layer: 0
-  m_Name: pj5-forastero
+  m_Name: pj9-ogro devolucion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -79,12 +79,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -3
-  m_Sprite: {fileID: 1223007848, guid: 1077768549b866f4ebfa4ea68ddb611d, type: 3}
+  m_Sprite: {fileID: 778940893, guid: a66e3af046e5eca408074cba8de23bb9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 5.67, y: 7.68}
+  m_Size: {x: 4.62, y: 8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -128,8 +128,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5.67, y: 8}
-    newSize: {x: 5.67, y: 7.68}
+    oldSize: {x: 4.62, y: 8}
+    newSize: {x: 4.62, y: 8}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -148,30 +148,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df2f3b74621b28f49a0a8e3505329b67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tipoDePedido: 0
+  tipoDePedido: 6
   dialogueLinesInicio:
-  - "Buenas\u2026 "
-  - "o tal vez malas\u2026"
-  - "\xBFqu\xE9 hora es? Da igual."
-  - Busco La Dama de los Secretos Perdidos.
-  - "Y antes de que preguntes: s\xED, es para m\xED. "
-  - "Y no, no pienso contarte para qu\xE9 lo quiero.\r\n"
+  - "Vengo a devolverte El Guardi\xE1n del Bosque Azul."
   dialogueLinesBuena:
-  - "Hmm\u2026 s\xED, este es el que buscaba."
-  - Gracias...
+  - "Volver\xE9 de nuevo "
   dialogueLinesMala:
-  - "\xBFQu\xE9 te hizo pensar que me interesar\xEDa un libro de esos?"
-  - Ugh... no importa.
-  spriteRespuestaBuena: {fileID: 668051778, guid: 1077768549b866f4ebfa4ea68ddb611d, type: 3}
-  spriteRespuestaMala: {fileID: -262679529, guid: 1077768549b866f4ebfa4ea68ddb611d, type: 3}
-  libroDeseadoID: 12
-  tipoPreferido: misterio
-  nombreDelCliente: 'Forastero '
-  descripcionPedido: "Solicit\xF3 \"La Dama de los Secretos Perdidos\""
+  - ...
+  spriteRespuestaBuena: {fileID: 1977612217, guid: a66e3af046e5eca408074cba8de23bb9, type: 3}
+  spriteRespuestaMala: {fileID: 1212924309, guid: a66e3af046e5eca408074cba8de23bb9, type: 3}
+  libroDeseadoID: 2
+  tipoPreferido: fantasia
   tituloLibroPrestado: 
+  nombreDelCliente: Ogro
+  descripcionPedido: "Devolvi\xF3 un libro"
   stickersRequeridos: 
   tituloLibroPortada: 
   hechizoSolicitado: 0
+  libroDonadoID: 0
+  libroDevueltoID: 2
+  tituloLibroDevuelto: "El Guardi\xE1n del Bosque Azul"
 --- !u!114 &1177564428679998758
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -6,6 +6,7 @@ using System.Collections.Generic;
 public class HistorialManager : MonoBehaviour
 {
     private UIManager uiManager;
+    private List<string> librosPrestados = new List<string>();
 
     private void Start()
     {
@@ -37,7 +38,7 @@ public class HistorialManager : MonoBehaviour
         if (uiManager != null && uiManager.GetPanelHistorial() != null)
         {
             uiManager.GetPanelHistorial().SetActive(false);
-            Debug.Log("Panel de historial cerrado"); 
+            Debug.Log("Panel de historial cerrado");
         }
     }
 
@@ -62,7 +63,7 @@ public class HistorialManager : MonoBehaviour
         var contenido = uiManager.GetHistorialContent();
         if (contenido.childCount == 0) return;
 
-        Transform ultimaEntrada = contenido.GetChild(0); 
+        Transform ultimaEntrada = contenido.GetChild(0);
         TMP_Text[] textos = ultimaEntrada.GetComponentsInChildren<TMP_Text>();
 
         if (textos.Length >= 2)
@@ -73,6 +74,7 @@ public class HistorialManager : MonoBehaviour
             }
         }
     }
+
     private void MostrarHistorial()
     {
         var personajes = CharacterManager.instance.GetPersonajesAtendidos();
@@ -85,9 +87,11 @@ public class HistorialManager : MonoBehaviour
         else
         {
             List<string> palabrasParaNegrita = new List<string>
-            { "La Dama de los Secretos Perdidos", "vengarse", "asustar", "cama", "reparar", "crear", "portada", "libro",
-            "hechizar", "prueba", "conocimientos", "equilibrio", "luz", "oscuridad", "El Guardián del Bosque Azul",
-            "relatos", "invisible", "no dicho", "Compendio de Plantas Susurrantes"};
+            {
+                "La Dama de los Secretos Perdidos", "vengarse", "asustar", "cama", "reparar", "crear", "portada", "libro",
+                "hechizar", "prueba", "conocimientos", "equilibrio", "luz", "oscuridad", "El Guardián del Bosque Azul",
+                "relatos", "invisible", "no dicho", "Compendio de Plantas Susurrantes"
+            };
 
             foreach (var personaje in personajes)
             {
@@ -115,7 +119,6 @@ public class HistorialManager : MonoBehaviour
         }
     }
 
-
     private void LimpiarHistorialUI()
     {
         if (uiManager.GetHistorialContent() == null) return;
@@ -137,18 +140,22 @@ public class HistorialManager : MonoBehaviour
             textos[1].text = "";
         }
     }
+
     #endregion
 
     #region Libros Prestados
+
     private void MostrarLibrosPrestados()
     {
         var personajes = CharacterManager.instance.GetPersonajesAtendidos();
         LimpiarLibrosUI();
 
+        librosPrestados.Clear();
+
         if (personajes == null || personajes.Count == 0)
         {
             MostrarMensajeLibrosVacio("No hay libros prestados para mostrar.");
-            Debug.Log("No hay personajes atendidos"); 
+            Debug.Log("No hay personajes atendidos");
         }
         else
         {
@@ -171,6 +178,7 @@ public class HistorialManager : MonoBehaviour
                         textos[0].text = personaje.nombreDelCliente;
                         textos[1].text = personaje.tituloLibroPrestado;
                         Debug.Log($"Libro prestado mostrado: {personaje.tituloLibroPrestado}");
+                        librosPrestados.Add(personaje.tituloLibroPrestado);
                     }
                     else
                     {
@@ -185,8 +193,22 @@ public class HistorialManager : MonoBehaviour
                 Debug.Log("No se encontraron libros prestados en personajes.");
             }
         }
+
     }
 
+    public List<string> GetLibrosPrestados()
+    {
+        return new List<string>(librosPrestados);
+    }
+
+    public void RemoverLibroPrestado(string titulo)
+    {
+        if (librosPrestados.Contains(titulo))
+        {
+            librosPrestados.Remove(titulo);
+            Debug.Log($"Libro '{titulo}' eliminado de la lista de libros prestados.");
+        }
+    }
 
     private void LimpiarLibrosUI()
     {
@@ -207,8 +229,9 @@ public class HistorialManager : MonoBehaviour
         {
             textos[0].text = mensaje;
             textos[1].text = "";
-            Debug.Log("Mostrando mensaje de libros vacío"); 
+            Debug.Log("Mostrando mensaje de libros vacío");
         }
     }
+
     #endregion
 }

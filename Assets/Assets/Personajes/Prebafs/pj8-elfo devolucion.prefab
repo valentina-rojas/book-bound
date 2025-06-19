@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3892951439070596770}
   - component: {fileID: 1177564428679998758}
   m_Layer: 0
-  m_Name: pj8-elfo
+  m_Name: pj8-elfo devolucion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -148,35 +148,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df2f3b74621b28f49a0a8e3505329b67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tipoDePedido: 0
+  tipoDePedido: 6
   dialogueLinesInicio:
-  - Busco un libro que hable de equilibrio...
-  - 'y de los extremos entre la luz y la oscuridad.
-
-'
   - Hay historias de una joven con un poder que puede cambiarlo todo.
   - Es raro, pero siento que este tomo guarda respuestas que necesito encontrar.
   dialogueLinesBuena:
-  - "Esto\u2026 es lo que esperaba. "
-  - "Aqu\xED est\xE1n las claves para entender la profec\xEDa."
-  - Gracias.
-  - "Esto podr\xEDa ser el comienzo para forjar un nuevo camino."
+  - Gracias
   dialogueLinesMala:
-  - "No es esto\u2026"
-  - Aunque pueda parecer importante, no es lo que busco.
-  - "Seguir\xE9 buscando."
-  - "Este conocimiento es demasiado vital para m\xED."
+  - ...
   spriteRespuestaBuena: {fileID: 1485804103, guid: 716730f6229ca4f4fa5108dfe4366d6a, type: 3}
   spriteRespuestaMala: {fileID: -165214668, guid: 716730f6229ca4f4fa5108dfe4366d6a, type: 3}
   libroDeseadoID: 3
   tipoPreferido: fantasia
   tituloLibroPrestado: 
   nombreDelCliente: Elfo
-  descripcionPedido: "Solicit\xF3 un libro que hable de equilibrio, luz y oscuridad\r\n"
+  descripcionPedido: "Devolvi\xF3 un libro"
   stickersRequeridos: 
   tituloLibroPortada: 
   hechizoSolicitado: 0
   libroDonadoID: 0
+  libroDevueltoID: 3
+  tituloLibroDevuelto: Luz de Fuego y Sombras
 --- !u!114 &1177564428679998758
 MonoBehaviour:
   m_ObjectHideFlags: 0

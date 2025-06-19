@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      boton-cerrar-historiales_0: 3525602629013861293
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

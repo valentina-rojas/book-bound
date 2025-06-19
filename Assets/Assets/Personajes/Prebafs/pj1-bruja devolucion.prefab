@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2788377987506924977}
   - component: {fileID: 4978074495582524776}
   m_Layer: 0
-  m_Name: pj4-elfa
+  m_Name: pj1-bruja devolucion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -79,12 +79,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -3
-  m_Sprite: {fileID: 1480457148, guid: afe1cec9e28d9a84099a7d453d54140b, type: 3}
+  m_Sprite: {fileID: 476900927, guid: d65f33f931bba9c4cbab03bfee64aa50, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 4.79, y: 7.24}
+  m_Size: {x: 4.16, y: 8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -128,8 +128,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.79, y: 8}
-    newSize: {x: 4.79, y: 7.24}
+    oldSize: {x: 4.16, y: 7.99}
+    newSize: {x: 4.16, y: 8}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -148,40 +148,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df2f3b74621b28f49a0a8e3505329b67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tipoDePedido: 2
+  tipoDePedido: 6
   dialogueLinesInicio:
-  - " Hola\u2026 "
-  - "\xBFtienes un momento? "
-  - Necesito tu ayuda con algo.
-  - " He escrito un libro con todos mis viajes y descubrimientos, pero\u2026"
-  - 'no soy muy buena dibujando portadas.
-
-'
-  - " Quer\xEDa algo que tenga un mapa, una br\xFAjula..."
-  - " tal vez un drag\xF3n peque\xF1ito escondido entre las monta\xF1as\u2026"
-  - "\xBFt\xFA podr\xEDas hacerlo?"
-  - "No tiene que ser perfecto, solo\u2026 "
-  - "algo que haga sonre\xEDr cuando lo vea en la estanter\xEDa.\r\n"
+  - Vengo a devolver esto
   dialogueLinesBuena:
-  - "Est\xE1\u2026 \xA1precioso!"
-  - "\xA1Este mismo!"
-  - "No sabes cu\xE1nto significa para m\xED. "
-  - "Cada detalle\u2026 es justo lo que imaginaba"
-  - " Gracias\u2026 de verdad. \xA1Eres incre\xEDble!\r\n"
+  - "Fue muy \xFAtil, volver\xE9 otra vez"
   dialogueLinesMala:
-  - "\xBFQu\xE9...?"
-  - Esto no es lo que me imaginaba...
-  spriteRespuestaBuena: {fileID: -1300581898, guid: afe1cec9e28d9a84099a7d453d54140b, type: 3}
-  spriteRespuestaMala: {fileID: -2029843000, guid: afe1cec9e28d9a84099a7d453d54140b, type: 3}
+  - .....
+  spriteRespuestaBuena: {fileID: -990964772, guid: d65f33f931bba9c4cbab03bfee64aa50, type: 3}
+  spriteRespuestaMala: {fileID: -1670925046, guid: d65f33f931bba9c4cbab03bfee64aa50, type: 3}
   libroDeseadoID: 33
   tipoPreferido: herbologia
   tituloLibroPrestado: 
-  nombreDelCliente: Elfa
-  descripcionPedido: "Solicit\xF3 crear una portada para su libro"
-  stickersRequeridos: 070000000e0000000400000006000000
-  tituloLibroPortada: Cartas sobre el camino
+  nombreDelCliente: Bruja
+  descripcionPedido: "Devolvi\xF3 un libro"
+  stickersRequeridos: 
+  tituloLibroPortada: 
   hechizoSolicitado: 0
   libroDonadoID: 0
+  libroDevueltoID: 33
+  tituloLibroDevuelto: "Micoperversos: Cr\xF3nicas de Hongos Vengativos"
 --- !u!114 &4978074495582524776
 MonoBehaviour:
   m_ObjectHideFlags: 0
