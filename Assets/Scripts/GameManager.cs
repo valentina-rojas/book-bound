@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     private UIManager uiManager;
     private CharacterSpawn characterSpawn;
     private SpriteRenderer spriteRendererPersonaje;
+    public  PersonasSentadas personasSentadas;
     [Header("Estado del juego")]
     public CharacterAttributes personajeActual;
     [Header("Sonidos")]
@@ -95,6 +96,12 @@ public class GameManager : MonoBehaviour
         {
             Debug.LogWarning("No hay más niveles definidos.");
         }
+
+             if (nivelActual >= 4)
+        {
+            personasSentadas.ActivarPersonasSentadas();
+        }
+
     }
 
     public void EstablecerPersonajeActual(CharacterAttributes personaje)

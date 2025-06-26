@@ -12,6 +12,8 @@ public class RuidoSalaDeLecturaManager : MonoBehaviour
 
     [Header("UI")]
     [SerializeField] private GameObject botonDetenerRuido;
+    [SerializeField] private GameObject[] globosDialogo;
+
 
     private bool eventoActivo = false;
     private bool esperandoProbabilidad = false;
@@ -90,6 +92,13 @@ public class RuidoSalaDeLecturaManager : MonoBehaviour
             return;
         }
 
+            foreach (GameObject obj in globosDialogo)
+        {
+            if (obj != null)
+                obj.SetActive(true);
+        }
+
+
         eventoActivo = true;
         esperandoProbabilidad = false;
 
@@ -141,6 +150,12 @@ public class RuidoSalaDeLecturaManager : MonoBehaviour
         {
             Debug.LogWarning("AudioSource no asignado.");
             return;
+        }
+
+              foreach (GameObject obj in globosDialogo)
+        {
+            if (obj != null)
+                obj.SetActive(false);
         }
 
         audioRuido.Stop();
