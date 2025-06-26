@@ -6,13 +6,14 @@ using UnityEngine.SceneManagement;
 public class MenuPrincipal : MonoBehaviour
 {
 
-public void IniciarJuego()
-{
-    ChangeScene("Cinematica"); 
-}
+    public void IniciarJuego()
+    {
+        ChangeScene("Cinematica"); 
+    }
 
-public void ChangeScene(string name)
-{
-    SceneManager.LoadScene(name);
-}
+    public void ChangeScene(string name)
+    {
+        SceneManager.LoadScene(name);
+    }
+    
 }
