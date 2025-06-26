@@ -63,14 +63,14 @@ public class RuidoSalaDeLecturaManager : MonoBehaviour
 
         while (!eventoActivo)
         {
-            float tiempoEspera = Random.Range(30f, 90f);
+            float tiempoEspera = Random.Range(30f, 60f);
             Debug.Log($"Esperando {tiempoEspera:F1} segundos antes del próximo intento.");
             yield return new WaitForSeconds(tiempoEspera);
 
             float chance = Random.value;
             Debug.Log($"Probabilidad obtenida: {chance}");
 
-            if (chance <= 0.2f)
+            if (chance <= 0.4f)
             {
                 ActivarEventoSalaRuidosa();
                 yield break;

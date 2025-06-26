@@ -7,35 +7,26 @@ using TMPro;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-
     private UIManager uiManager;
     private CharacterSpawn characterSpawn;
     private SpriteRenderer spriteRendererPersonaje;
-
-
     [Header("Estado del juego")]
     public CharacterAttributes personajeActual;
-
     [Header("Sonidos")]
     public AudioClip sonidoCorrecto;
     public AudioClip sonidoIncorrecto;
     public AudioClip sonidoEstrellas;
     private AudioSource audioSource;
-
     public GameObject panelInfoLibro;
     public GameObject panelFinNivel;
     public TMP_Text textoDia;
     public int nivelActual = 1;
-
     public enum ResultadoRecomendacion { Ninguna, Buena, Mala }
     public ResultadoRecomendacion resultadoRecomendacion = ResultadoRecomendacion.Ninguna;
-
     public int recomendacionesBuenas = 0;
     public int recomendacionesMalas = 0;
-
     public TMP_Text textoResultadoFinal;
     public TMP_Text textoTituloFinDeDia;
-
     [System.Serializable]
     public class Nivel
     {
@@ -57,29 +48,28 @@ public class GameManager : MonoBehaviour
     {
         uiManager = FindFirstObjectByType<UIManager>();
         characterSpawn = FindFirstObjectByType<CharacterSpawn>();
-
         audioSource = GetComponent<AudioSource>();
         if (audioSource == null)
             audioSource = gameObject.AddComponent<AudioSource>();
-        
         audioSource.volume = 0.7f; 
-        
         if (uiManager == null)
             Debug.LogError("UIManager no encontrado en la escena.");
-
         if (characterSpawn == null)
             Debug.LogError("CharacterSpawn no encontrado en la escena.");
-
         StartCoroutine(MostrarCartelInicioDia());
     }
 
     private IEnumerator MostrarCartelInicioDia()
     {
+        if (nivelActual - 1 >= niveles.Length)
+        {
+            Debug.LogWarning($"No hay datos definidos para el Día {nivelActual}. El juego debería finalizar o retornar al menú.");
+            yield break; 
+        }
         MenuPausa.instance.OcultarBotonPausa();
         TaskManager.instance.ReiniciarTareas();
         panelInfoLibro.SetActive(true);
         textoDia.text = $"Día {nivelActual}";
-
         if (nivelActual == 2)
             CameraManager.instance.botonCambiarCamara3.gameObject.SetActive(true);
         if (nivelActual == 4)
@@ -96,7 +86,6 @@ public class GameManager : MonoBehaviour
     public void IniciarSpawnDePersonajes()
     {
         TaskManager.instance.OcultarListaTareas();
-
         if (nivelActual - 1 < niveles.Length)
         {
             characterSpawn.AsignarPersonajesDelNivel(niveles[nivelActual - 1].personajesDelNivel);
@@ -149,16 +138,13 @@ public class GameManager : MonoBehaviour
             ActualizarSpritePersonaje();
         }
     }
-
     public void CompletarRestauracion()
     {
         Debug.Log("Restauración completada.");
         resultadoRecomendacion = ResultadoRecomendacion.Buena;
         recomendacionesBuenas++;
         ActualizarSpritePersonaje();
-
     }
-
     public void CompletarPortada(List<StickerID> stickersUsados)
     {
         Debug.Log("Portada completada.");
@@ -336,7 +322,14 @@ public class GameManager : MonoBehaviour
     public void AvanzarAlSiguienteNivel()
     {
         panelFinNivel.SetActive(false);
-        
+
+        if (nivelActual - 1 >= niveles.Length)
+        {
+            Debug.Log("Todos los niveles completados. Cargando escena final...");
+            SceneManager.LoadScene("EscenaFinal");
+            return;
+        }
+
         if (ShelfManager.instance != null)
             ShelfManager.instance.ReiniciarEstado();
 
@@ -345,13 +338,15 @@ public class GameManager : MonoBehaviour
 
         if (CobwebManager.instance != null)
             CobwebManager.instance.ReiniciarTelarañas();
-        
-        if (TendCat.instance != null) 
+
+        if (TendCat.instance != null)
             TendCat.instance.ReiniciarEstado();
-        
+
         if (PlantManager.instance != null)
             PlantManager.instance.ReiniciarEstado();
+
         ShelfManager.instance?.AvanzarContadorDesorden();
+
         StartCoroutine(MostrarCartelInicioDia());
     }
 
