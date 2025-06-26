@@ -23,11 +23,6 @@ public class TendCat : MonoBehaviour
     public Sprite platitoLlenoSprite;
     public Sprite platitoVacioSprite;
 
-    [Header("Sonidos")]
-    public AudioSource audioSource;
-    public AudioClip sonidoCepillado;
-    public AudioClip sonidoComida;
-
     private float tiempoSobreAreaCepillado = 0f;
     private bool tareaCepillarCompletada = false;
     private bool tareaAlimentarCompletada = false;
@@ -98,8 +93,7 @@ public class TendCat : MonoBehaviour
                     barraCepilladoUI.gameObject.SetActive(false);
                 }
 
-                if (audioSource != null && sonidoCepillado != null)
-                    audioSource.PlayOneShot(sonidoCepillado);
+                AudioManager.instance.sonidoGato.Play();
 
 
                 TaskManager.instance.CompletarTareaPorID(2);
@@ -129,8 +123,7 @@ public class TendCat : MonoBehaviour
             tareaAlimentarCompletada = true;
             Debug.Log("Gato alimentado correctamente (detectado por Overlaps)");
 
-            if (audioSource != null && sonidoComida != null)
-                audioSource.PlayOneShot(sonidoComida);
+            AudioManager.instance.sonidoGato.Play();
 
 
             TaskManager.instance.CompletarTareaPorID(3);

@@ -14,12 +14,11 @@ public class PlantWithRegadera : MonoBehaviour
     [Header("Parámetros")]
     public float tiempoNecesarioRiego = 2f;
 
-    [Header("Sonido")]
-    public AudioSource audioSource;
-    public AudioClip sonidoRegadera;
-
     private float tiempoSobrePlanta = 0f;
     private bool isFullyWatered = false;
+
+    private bool regaderaSonando = false;
+
 
     private void Start()
     {
@@ -52,6 +51,12 @@ public class PlantWithRegadera : MonoBehaviour
             // ✅ Cambiar sprite progresivamente
             UpdatePlantAppearance();
 
+            if (!regaderaSonando)
+                {
+                    AudioManager.instance.sonidoRegadera.Play();
+                    regaderaSonando = true;
+                }
+
             if (tiempoSobrePlanta >= tiempoNecesarioRiego)
                 FinalizarRiego();
         }
@@ -63,6 +68,13 @@ public class PlantWithRegadera : MonoBehaviour
 
             // 🔄 Reiniciar apariencia si se cancela el riego
             UpdatePlantAppearance();
+
+
+               if (regaderaSonando)
+                    {
+                        AudioManager.instance.sonidoRegadera.Stop();
+                        regaderaSonando = false;
+                    }
         }
     }
 
@@ -76,8 +88,14 @@ public class PlantWithRegadera : MonoBehaviour
 
         UpdatePlantAppearance();
 
-        if (audioSource != null && sonidoRegadera != null)
-            audioSource.PlayOneShot(sonidoRegadera);
+        //AudioManager.instance.sonidoRegadera.Play();
+
+        if (regaderaSonando)
+        {
+            AudioManager.instance.sonidoRegadera.Stop();
+            regaderaSonando = false;
+        }
+
 
         if (PlantManager.instance != null)
             PlantManager.instance.NotifyPlantFullyWatered();

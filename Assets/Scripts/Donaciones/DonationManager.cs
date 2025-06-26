@@ -13,10 +13,6 @@ public class DonationManager : MonoBehaviour
     public Sprite spriteDefault;
     public Button botonAceptarDonacion;  
 
-    [Header("Audio")]
-    public AudioClip sonidoAperturaPanel;
-    private AudioSource audioSource;
-
     [Header("Animación")]
     public float duracionAnimacion = 1f; 
 
@@ -39,12 +35,6 @@ public class DonationManager : MonoBehaviour
         {
             Destroy(gameObject);
             return;
-        }
-
-        audioSource = GetComponent<AudioSource>();
-        if (audioSource == null)
-        {
-            audioSource = gameObject.AddComponent<AudioSource>();
         }
 
         spritesPorGenero = new Dictionary<string, Sprite>
@@ -118,10 +108,7 @@ public class DonationManager : MonoBehaviour
 
     private IEnumerator AnimarPortadaYSonido()
     {
-        if (sonidoAperturaPanel != null)
-        {
-            audioSource.PlayOneShot(sonidoAperturaPanel);
-        }
+        AudioManager.instance.sonidoArpasLibroDonado.Play();
 
         float tiempo = 0f;
         Vector3 escalaInicial = Vector3.zero;
@@ -136,11 +123,6 @@ public class DonationManager : MonoBehaviour
         }
 
         imagenPortada.transform.localScale = escalaFinal;
-
-        while (audioSource.isPlaying)
-        {
-            yield return null;
-        }
 
         if (botonAceptarDonacion != null)
             botonAceptarDonacion.gameObject.SetActive(true);

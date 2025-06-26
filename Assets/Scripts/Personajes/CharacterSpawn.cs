@@ -11,10 +11,6 @@ public class CharacterSpawn : MonoBehaviour
     private int currentIndex = 0;
     private bool interactionFinished = false;
 
-    [Header("Sonido")]
-    public AudioSource audioSource;
-    public AudioClip sonidoAparicionPersonaje;
-
     public void AsignarPersonajesDelNivel(GameObject[] personajesDelNivel)
     {
         // Clonamos la lista de prefabs para asegurarnos que no son objetos modificados
@@ -53,10 +49,7 @@ public class CharacterSpawn : MonoBehaviour
             // Instanciar personaje (siempre desde prefab, no desde objeto modificado)
             GameObject currentCharacter = Instantiate(candidate, spawnPoint.position, Quaternion.identity);
 
-            if (audioSource != null && sonidoAparicionPersonaje != null)
-            {
-                audioSource.PlayOneShot(sonidoAparicionPersonaje);
-            }
+            AudioManager.instance.sonidoCampanilla.Play();
 
             interactionFinished = false;
             CharacterManager.instance.ResetearAtencion();

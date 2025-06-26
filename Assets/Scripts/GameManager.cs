@@ -13,11 +13,6 @@ public class GameManager : MonoBehaviour
     public  PersonasSentadas personasSentadas;
     [Header("Estado del juego")]
     public CharacterAttributes personajeActual;
-    [Header("Sonidos")]
-    public AudioClip sonidoCorrecto;
-    public AudioClip sonidoIncorrecto;
-    public AudioClip sonidoEstrellas;
-    private AudioSource audioSource;
     public GameObject panelInfoLibro;
     public GameObject panelFinNivel;
     public TMP_Text textoDia;
@@ -49,10 +44,7 @@ public class GameManager : MonoBehaviour
     {
         uiManager = FindFirstObjectByType<UIManager>();
         characterSpawn = FindFirstObjectByType<CharacterSpawn>();
-        audioSource = GetComponent<AudioSource>();
-        if (audioSource == null)
-            audioSource = gameObject.AddComponent<AudioSource>();
-        audioSource.volume = 0.7f; 
+
         if (uiManager == null)
             Debug.LogError("UIManager no encontrado en la escena.");
         if (characterSpawn == null)
@@ -133,7 +125,7 @@ public class GameManager : MonoBehaviour
                 CharacterManager.instance.UltimoPersonajeAtendido.tituloLibroPrestado = libro.titulo;
             }
 
-            audioSource.PlayOneShot(sonidoCorrecto);
+            AudioManager.instance.sonidoLibroCorrecto.Play();
             ActualizarSpritePersonaje();
         }
         else
@@ -141,7 +133,7 @@ public class GameManager : MonoBehaviour
             resultadoRecomendacion = ResultadoRecomendacion.Mala;
             recomendacionesMalas++;
 
-            audioSource.PlayOneShot(sonidoIncorrecto);
+            AudioManager.instance.sonidoLibroIncorrecto.Play();
             ActualizarSpritePersonaje();
         }
     }
@@ -188,7 +180,7 @@ public class GameManager : MonoBehaviour
         if (tieneTodos)
         {
             recomendacionesBuenas++;
-            audioSource.PlayOneShot(sonidoEstrellas);
+            AudioManager.instance.sonidoEstrellas.Play();
             ActualizarSpritePersonaje();
         }
         else
@@ -218,7 +210,7 @@ public class GameManager : MonoBehaviour
             recomendacionesBuenas++;
             Debug.Log($"Hechizo completado correctamente: {hechizoRealizado}");
             ActualizarSpritePersonaje();
-            audioSource.PlayOneShot(sonidoEstrellas);
+            AudioManager.instance.sonidoEstrellas.Play();
         }
         else
         {

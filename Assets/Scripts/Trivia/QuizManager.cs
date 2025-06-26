@@ -12,8 +12,6 @@ public class QuizManager : MonoBehaviour
 
 
     [Header("Audio y Colores")]
-    [SerializeField] private AudioClip m_correctSound = null;
-    [SerializeField] private AudioClip m_incorrectSound = null;
     [SerializeField] private Color m_correctColor = Color.green;
     [SerializeField] private Color m_incorrectColor = Color.red;
     [SerializeField] private float m_waitTime = 1.0f;
@@ -103,10 +101,18 @@ public class QuizManager : MonoBehaviour
             m_audioSource.Stop();
 
         bool isCorrect = optionButton.Option.correct;
-        m_audioSource.clip = isCorrect ? m_correctSound : m_incorrectSound;
+      
         optionButton.SetColor(isCorrect ? m_correctColor : m_incorrectColor);
 
-        m_audioSource.Play();
+        if (isCorrect)
+        {
+            AudioManager.instance.sonidoRespuestaTriviaCorrecta.Play();
+        }
+        else
+        {
+            AudioManager.instance.sonidosonidoRespuestaTriviaIncorrecta.Play();
+        }
+
 
         yield return new WaitForSeconds(m_waitTime);
 
