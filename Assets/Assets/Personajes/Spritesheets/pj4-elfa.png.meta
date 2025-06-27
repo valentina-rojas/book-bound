@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 1b550e1cc6f31224fbc5c0b99cbe78a9
+guid: afe1cec9e28d9a84099a7d453d54140b
 TextureImporter:
   internalIDToNameTable:
   - first:
       213: -3656374577517229106
     second: pj4-elfa_0
+  - first:
+      213: -1318444996819706021
+    second: pj4-elfa_1
+  - first:
+      213: -4106779271679405650
+    second: pj4-elfa_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -119,17 +125,61 @@ TextureImporter:
         x: 0
         y: 0
         width: 479
-        height: 779
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: ecb015da1b2f14dc0800000000000000
-      internalID: -3656374577517229106
+      spriteID: e37af30fe3367a244af3a4640503f672
+      internalID: 1480457148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pj4-elfa_1
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 0
+        width: 479
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e195c5d05b8c9845856a39142ebe79e
+      internalID: -2029843000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pj4-elfa_2
+      rect:
+        serializedVersion: 2
+        x: 958
+        y: 0
+        width: 479
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a6068c2ef957504a98e18fcaddc74f0
+      internalID: -1300581898
       vertices: []
       indices: 
       edges: []
@@ -138,7 +188,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: c7b8e3ad683769947908c5433d6e3103
+    spriteID: 45159b0b32199f74cb094b14a6e4581e
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +198,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      pj4-elfa_0: -3656374577517229106
+      pj4-elfa_0: 1480457148
+      pj4-elfa_1: -2029843000
+      pj4-elfa_2: -1300581898
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

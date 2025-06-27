@@ -11,6 +11,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Gameplay.unity
     guid: bac286513dec6cc41aed14c8a9128309
+  - enabled: 1
+    path: Assets/Scenes/Cinematica.unity
+    guid: f7a652a10b883a2448d3c232abb42b52
+  - enabled: 1
+    path: Assets/Scenes/EscenaFinal.unity
+    guid: 8f4f79615b9acbe48ad34e56e2263d0a
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

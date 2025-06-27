@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8c9ff1d8b036ef64bacccd5a5d90994b
+guid: 1eb3ebefd4ee59a4a86fff92b07faf47
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -109,19 +109,6 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -132,17 +119,61 @@ TextureImporter:
         x: 0
         y: 0
         width: 583
-        height: 768
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 1865999036e1f9950800000000000000
-      internalID: 6457913801384220289
+      spriteID: 9807cd7ce48651d4cb3a326d7eb6271f
+      internalID: -656934528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pj3-anciano_1
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 0
+        width: 583
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9ac5cd713b77b34ea9e8df0a1617d61
+      internalID: 2020737730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pj3-anciano_2
+      rect:
+        serializedVersion: 2
+        x: 1166
+        y: 0
+        width: 583
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79372eeaa123257408332d15b6c30121
+      internalID: -310598990
       vertices: []
       indices: 
       edges: []
@@ -151,7 +182,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 77613e988daac43499909ac242c369a0
     internalID: 0
     vertices: []
     indices: 
@@ -161,7 +192,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      pj3-anciano_0: 6457913801384220289
+      pj3-anciano_0: -656934528
+      pj3-anciano_1: 2020737730
+      pj3-anciano_2: -310598990
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

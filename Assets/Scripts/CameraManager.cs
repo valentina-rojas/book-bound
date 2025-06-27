@@ -1,23 +1,24 @@
 using UnityEngine;
 using UnityEngine.UI;
-using System.Collections.Generic;
 using TMPro;
 
 public class CameraManager : MonoBehaviour
 {
     public static CameraManager instance;
-
     public Camera[] cameras;
     public GameObject[] canvasObjects;
-
     private int currentCameraIndex = 0;
-
+    private bool verificacionInicialHecha = false;
     public Button botonCambiarCamara1;
-
-
+    public Button botonCambiarCamara2;
+    public Button botonCambiarCamara3;
     public GameObject panelReparacion;
     public GameObject panelPortada;
     public GameObject panelPortada2;
+    public BookCoverManager bookCoverManager;
+    public GameObject panelHechizo;
+    public GameObject panelDonar;
+    public GameObject panelDevolver;
 
 
     void Awake()
@@ -37,10 +38,16 @@ public class CameraManager : MonoBehaviour
             if (canvasObjects != null && i < canvasObjects.Length)
                 canvasObjects[i].SetActive(isActive);
         }
+
+        int nivel = GameManager.instance.nivelActual;
+
+        botonCambiarCamara2.gameObject.SetActive(nivel > 2);
+        botonCambiarCamara3.gameObject.SetActive(nivel > 1);
     }
 
     public void CambiarCamara(int cameraIndex)
     {
+        TaskManager.instance.OcultarListaTareas();
         if (cameraIndex < 0 || cameraIndex >= cameras.Length)
         {
             Debug.LogWarning("Índice de cámara fuera de rango.");
@@ -56,26 +63,51 @@ public class CameraManager : MonoBehaviour
         cameras[currentCameraIndex].enabled = true;
         if (canvasObjects != null && currentCameraIndex < canvasObjects.Length)
             canvasObjects[currentCameraIndex].SetActive(true);
+
+        if (cameraIndex == 1)
+        {
+            ShelfManager.instance?.IntentarDesorganizarLibros();
+
+            if (!verificacionInicialHecha)
+            {
+                StartCoroutine(VerificarEstantesDespuesDeFrame());
+                verificacionInicialHecha = true;
+            }
+        }
     }
 
+    private System.Collections.IEnumerator VerificarEstantesDespuesDeFrame()
+    {
+        yield return null;
+
+        ShelfEstante[] estantes = FindObjectsOfType<ShelfEstante>();
+        foreach (var estante in estantes)
+        {
+            estante.VerificarEstante();
+        }
+    }
 
     public void DesactivarBotonCamara()
     {
         botonCambiarCamara1.interactable = false;
+        botonCambiarCamara2.interactable = false;
+        botonCambiarCamara3.interactable = false;
     }
 
     public void ActivarBotonCamara()
     {
         botonCambiarCamara1.interactable = true;
-        Debug.Log("boton habilitado");
+        botonCambiarCamara2.interactable = true;
+        botonCambiarCamara3.interactable = true;
+
+        Debug.Log("botones habilitados");
     }
-
-
 
     public void ActivarPanelReparacion()
     {
         panelReparacion.gameObject.SetActive(true);
-         Debug.Log("PANEL RESTAURACION HABILITADO");
+        TaskManager.instance.OcultarBotonTareas();
+        Debug.Log("PANEL RESTAURACION HABILITADO");
     }
 
     public void DesactivarPanelReparacion()
@@ -83,26 +115,58 @@ public class CameraManager : MonoBehaviour
         panelReparacion.gameObject.SetActive(false);
     }
 
-
     public void ActivarPanelPortada()
     {
-
         panelPortada.gameObject.SetActive(true);
+        TaskManager.instance.OcultarBotonTareas();
+        if (bookCoverManager != null)
+        {
+            bookCoverManager.ActualizarTituloLibro();
+        }
     }
 
     public void DesctivarPanelPortada()
     {
-
         panelPortada.gameObject.SetActive(false);
         panelPortada2.gameObject.SetActive(false);
     }
 
+    public void ActivarPanelHechizo()
+    {
+        panelHechizo.gameObject.SetActive(true);
+        TaskManager.instance.OcultarBotonTareas();
+    }
 
+    public void DesctivarPanelHechizo()
+    {
+        panelHechizo.gameObject.SetActive(false);
+    }
+
+    public void ActivarPanelDonar()
+    {
+        DonationManager.instance.ActualizarPortada();
+        panelDonar.gameObject.SetActive(true);
+        TaskManager.instance.OcultarBotonTareas();
+    }
+
+    public void DesctivarPanelDonar()
+    {
+        panelDonar.gameObject.SetActive(false);
+    }
+
+    public void ActivarPanelDevolver()
+    {
+        DevolverLibro.instance.MostrarPanelDevolucion();
+        panelDevolver.gameObject.SetActive(true);
+    }
+
+    public void DesctivarPanelDevolver()
+    {
+        panelDevolver.gameObject.SetActive(false);
+    }
 
     public void ActivarCamaraPrincipal()
     {
         CambiarCamara(0);
     }
-
-
 }

@@ -1,0 +1,22 @@
+public enum StickerID
+{
+    Flor_Azul,
+    Flor_Morada,
+    Flor_Rosa,
+    Avion,
+    Dragon,
+    Escudo,
+    Montana,
+    Papiro,
+    Sol,
+    Hongo,
+    Velas,
+    Mariposa,
+    Pluma,
+    Luna,
+    Brujula,
+    Estrella_Morada,
+    Estrella_Rosa,
+    Estrella_Verde,
+    Hoja
+}

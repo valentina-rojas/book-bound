@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: c541a975eb3eb174a8357aae45b9e412
+guid: d65f33f931bba9c4cbab03bfee64aa50
 TextureImporter:
   internalIDToNameTable:
   - first:
       213: 690207381077084677
     second: pj1-bruja_0
+  - first:
+      213: 421114435714213412
+    second: pj1-bruja_1
+  - first:
+      213: -7326457934423213488
+    second: pj1-bruja_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -109,19 +115,6 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -132,17 +125,61 @@ TextureImporter:
         x: 0
         y: 0
         width: 416
-        height: 800
+        height: 799
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 50ac37ac4fb149900800000000000000
-      internalID: 690207381077084677
+      spriteID: a2191647eca4b764782e63e908b97772
+      internalID: 476900927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pj1-bruja_1
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 0
+        width: 416
+        height: 799
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74e8160cbc46fdc44a264498ea589543
+      internalID: -1670925046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pj1-bruja_2
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 0
+        width: 416
+        height: 799
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98c7b90f0a2d03548839bff59583c469
+      internalID: -990964772
       vertices: []
       indices: 
       edges: []
@@ -151,7 +188,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: cd713360f9a2ac34f9e88c8b330596c0
     internalID: 0
     vertices: []
     indices: 
@@ -161,7 +198,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      pj1-bruja_0: 690207381077084677
+      pj1-bruja_0: 476900927
+      pj1-bruja_1: -1670925046
+      pj1-bruja_2: -990964772
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
