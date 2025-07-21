@@ -5,27 +5,29 @@ using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
+    #region UI
     [SerializeField] private Button dialogueMark;
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private TMP_Text dialogueText;
-
     private Button botonSiguiente;
     private TMP_Text botonSiguienteTexto;
     private Button botonRepetir;
     private Button botonFinalizar;
+    #endregion
 
+    #region Configuración
     private float typingTime = 0.05f;
     private bool isMouseOver = false;
     private bool didDialogueStart;
     private int lineIndex;
     private bool hasInteracted = false;
-
     private string[] dialogueLines;
     private CharacterAttributes characterAttributes;
-
     private Coroutine typingCoroutine;
     private bool isTyping = false;
+    #endregion
 
+    #region Inicialización
     private void Start()
     {
         UIManager uiManager = FindFirstObjectByType<UIManager>();
@@ -71,7 +73,9 @@ public class DialogueManager : MonoBehaviour
 
         characterAttributes = GetComponent<CharacterAttributes>();
     }
+    #endregion
 
+    #region Lógica del diálogo
     public void EmpezarDialogoResultado()
     {
         hasInteracted = false;
@@ -131,7 +135,7 @@ public class DialogueManager : MonoBehaviour
         }
         else
         {
-            lineIndex = dialogueLines.Length - 1; 
+            lineIndex = dialogueLines.Length - 1;
             botonFinalizar.gameObject.SetActive(true);
             botonRepetir.gameObject.SetActive(true);
         }
@@ -160,6 +164,13 @@ public class DialogueManager : MonoBehaviour
 
     private void ReiniciarDialogo()
     {
+        if (isTyping)
+        {
+            StopCoroutine(typingCoroutine);
+            dialogueText.text = dialogueLines[lineIndex];
+            isTyping = false;
+            return;
+        }
         if (characterAttributes == null) return;
 
         switch (GameManager.instance.resultadoRecomendacion)
@@ -224,4 +235,5 @@ public class DialogueManager : MonoBehaviour
     {
         return !didDialogueStart;
     }
+    #endregion
 }

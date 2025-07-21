@@ -7,22 +7,32 @@ using TMPro;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
+    #region Referencias
     private UIManager uiManager;
     private CharacterSpawn characterSpawn;
     private SpriteRenderer spriteRendererPersonaje;
-    public  PersonasSentadas personasSentadas;
-    [Header("Estado del juego")]
+
+    public PersonasSentadas personasSentadas;
+    #endregion
+
+    #region Estado
     public CharacterAttributes personajeActual;
-    public GameObject panelInfoLibro;
-    public GameObject panelFinNivel;
-    public TMP_Text textoDia;
     public int nivelActual = 1;
     public enum ResultadoRecomendacion { Ninguna, Buena, Mala }
     public ResultadoRecomendacion resultadoRecomendacion = ResultadoRecomendacion.Ninguna;
     public int recomendacionesBuenas = 0;
     public int recomendacionesMalas = 0;
+    #endregion
+
+    #region UI
+    public GameObject panelInfoLibro;
+    public GameObject panelFinNivel;
+    public TMP_Text textoDia;
     public TMP_Text textoResultadoFinal;
     public TMP_Text textoTituloFinDeDia;
+    #endregion
+
+    #region Configuración de Niveles
     [System.Serializable]
     public class Nivel
     {
@@ -31,7 +41,9 @@ public class GameManager : MonoBehaviour
 
     [Header("Niveles del juego")]
     public Nivel[] niveles;
+    #endregion
 
+    #region Ciclo de Vida
     private void Awake()
     {
         if (instance == null)
@@ -51,13 +63,16 @@ public class GameManager : MonoBehaviour
             Debug.LogError("CharacterSpawn no encontrado en la escena.");
         StartCoroutine(MostrarCartelInicioDia());
     }
+    #endregion
 
+
+    #region Flujo de Día y Niveles
     private IEnumerator MostrarCartelInicioDia()
     {
         if (nivelActual - 1 >= niveles.Length)
         {
             Debug.LogWarning($"No hay datos definidos para el Día {nivelActual}. El juego debería finalizar o retornar al menú.");
-            yield break; 
+            yield break;
         }
         MenuPausa.instance.OcultarBotonPausa();
         TaskManager.instance.ReiniciarTareas();
@@ -74,218 +89,6 @@ public class GameManager : MonoBehaviour
         MenuPausa.instance.MostrarBotonPausa();
         TaskManager.instance.InicializarTareasParaNivel();
         FindFirstObjectByType<CatDialogues>().IniciarDialogoDelDia(nivelActual);
-    }
-
-    public void IniciarSpawnDePersonajes()
-    {
-        TaskManager.instance.OcultarListaTareas();
-        if (nivelActual - 1 < niveles.Length)
-        {
-            characterSpawn.AsignarPersonajesDelNivel(niveles[nivelActual - 1].personajesDelNivel);
-            characterSpawn.ComenzarSpawn();
-        }
-        else
-        {
-            Debug.LogWarning("No hay más niveles definidos.");
-        }
-
-             if (nivelActual >= 4)
-        {
-            personasSentadas.ActivarPersonasSentadas();
-        }
-
-    }
-
-    public void EstablecerPersonajeActual(CharacterAttributes personaje)
-    {
-        personajeActual = personaje;
-        spriteRendererPersonaje = personajeActual.GetComponent<SpriteRenderer>();
-    }
-
-    public void VerificarRecomendacion(BookData libro)
-    {
-        if (personajeActual == null)
-        {
-            Debug.LogError("No hay personaje actual asignado.");
-            return;
-        }
-
-        bool esCorrecto = personajeActual.libroDeseadoID == libro.libroID;
-        bool esDelTipoPreferido = personajeActual.tipoPreferido == libro.tipoLibro;
-
-        if (esCorrecto)
-        {
-            resultadoRecomendacion = ResultadoRecomendacion.Buena;
-            recomendacionesBuenas++;
-
-            ShelfManager.instance.RestarLibroEsperadoPorGenero(libro.tipoLibro);
-            libro.gameObject.SetActive(false);
-            if (CharacterManager.instance.UltimoPersonajeAtendido != null)
-            {
-                CharacterManager.instance.UltimoPersonajeAtendido.tituloLibroPrestado = libro.titulo;
-            }
-
-            AudioManager.instance.sonidoLibroCorrecto.Play();
-            ActualizarSpritePersonaje();
-        }
-        else
-        {
-            resultadoRecomendacion = ResultadoRecomendacion.Mala;
-            recomendacionesMalas++;
-
-            AudioManager.instance.sonidoLibroIncorrecto.Play();
-            ActualizarSpritePersonaje();
-        }
-    }
-    public void CompletarRestauracion()
-    {
-        Debug.Log("Restauración completada.");
-        resultadoRecomendacion = ResultadoRecomendacion.Buena;
-        recomendacionesBuenas++;
-        ActualizarSpritePersonaje();
-    }
-    public void CompletarPortada(List<StickerID> stickersUsados)
-    {
-        Debug.Log("Portada completada.");
-
-        if (personajeActual == null)
-        {
-            Debug.LogError("No hay personaje actual asignado para comparar stickers.");
-            return;
-        }
-
-        List<StickerID> stickersRequeridos = personajeActual.stickersRequeridos;
-
-        Debug.Log($"Stickers requeridos ({stickersRequeridos.Count}): {string.Join(", ", stickersRequeridos)}");
-        Debug.Log($"Stickers usados ({stickersUsados.Count}): {string.Join(", ", stickersUsados)}");
-
-        bool tieneTodos = true;
-
-        foreach (StickerID requerido in stickersRequeridos)
-        {
-            if (!stickersUsados.Contains(requerido))
-            {
-                Debug.LogWarning($"Falta sticker requerido: {requerido}");
-                tieneTodos = false;
-                break;
-            }
-            else
-            {
-                Debug.Log($"Sticker requerido presente: {requerido}");
-            }
-        }
-
-        resultadoRecomendacion = tieneTodos ? ResultadoRecomendacion.Buena : ResultadoRecomendacion.Mala;
-
-        if (tieneTodos)
-        {
-            recomendacionesBuenas++;
-            AudioManager.instance.sonidoEstrellas.Play();
-            ActualizarSpritePersonaje();
-        }
-        else
-            recomendacionesMalas++;
-            ActualizarSpritePersonaje();
-
-        Debug.Log("Resultado recomendación: " + resultadoRecomendacion);
-
-        CameraManager.instance.DesctivarPanelPortada();
-
-        if (characterSpawn != null)
-        {
-            characterSpawn.EndInteraction();
-        }
-    }
-
-    public void CompletarHechizo(CharacterAttributes.Hechizo hechizoRealizado)
-    {
-        if (personajeActual == null)
-        {
-            Debug.LogError("No hay personaje actual asignado.");
-            return;
-        }
-        if (hechizoRealizado == personajeActual.hechizoSolicitado)
-        {
-            resultadoRecomendacion = ResultadoRecomendacion.Buena;
-            recomendacionesBuenas++;
-            Debug.Log($"Hechizo completado correctamente: {hechizoRealizado}");
-            ActualizarSpritePersonaje();
-            AudioManager.instance.sonidoEstrellas.Play();
-        }
-        else
-        {
-            resultadoRecomendacion = ResultadoRecomendacion.Mala;
-            recomendacionesMalas++;
-            Debug.LogWarning($"Hechizo incorrecto. Realizado: {hechizoRealizado}, Solicitado: {personajeActual.hechizoSolicitado}");
-            ActualizarSpritePersonaje();
-        }
-        CameraManager.instance.DesctivarPanelHechizo();
-        if (characterSpawn != null)
-        {
-            characterSpawn.EndInteraction();
-        }
-    }
-    
-    public void LibroDonado()
-    {
-        if (characterSpawn != null)
-        {
-            resultadoRecomendacion = ResultadoRecomendacion.Buena;
-            characterSpawn.EndInteraction();
-        }
-    }
-
-    public void LibroDevuelto()
-    {
-        if (characterSpawn != null)
-        {
-            resultadoRecomendacion = ResultadoRecomendacion.Buena;
-            characterSpawn.EndInteraction();
-        }
-    }
-
-
-     public void CompletarTrivia(int correctas, int incorrectas)
-    {
-        if (correctas > incorrectas)
-        {
-            resultadoRecomendacion = ResultadoRecomendacion.Buena;
-            recomendacionesBuenas++;
-            ActualizarSpritePersonaje();
-        }
-        else if (incorrectas > correctas)
-        {
-            resultadoRecomendacion = ResultadoRecomendacion.Mala;
-            recomendacionesMalas++;
-            ActualizarSpritePersonaje();
-        }
-        if (characterSpawn != null)
-        {
-            characterSpawn.EndInteraction();
-        }
-    } 
-
-    private void ActualizarSpritePersonaje()
-    {
-        if (spriteRendererPersonaje == null || personajeActual == null)
-            return;
-
-        switch (resultadoRecomendacion)
-        {
-            case ResultadoRecomendacion.Buena:
-                if (personajeActual.spriteRespuestaBuena != null)
-                    spriteRendererPersonaje.sprite = personajeActual.spriteRespuestaBuena;
-                break;
-
-            case ResultadoRecomendacion.Mala:
-                if (personajeActual.spriteRespuestaMala != null)
-                    spriteRendererPersonaje.sprite = personajeActual.spriteRespuestaMala;
-                break;
-
-            case ResultadoRecomendacion.Ninguna:
-            default:
-                break;
-        }
     }
 
     public void FinDeNivel()
@@ -355,4 +158,242 @@ public class GameManager : MonoBehaviour
         nivelActual = 1;
         SceneManager.LoadScene("MenuPrincipal");
     }
+    #endregion
+
+    #region Personajes
+    public void IniciarSpawnDePersonajes()
+    {
+        TaskManager.instance.OcultarListaTareas();
+        if (nivelActual - 1 < niveles.Length)
+        {
+            characterSpawn.AsignarPersonajesDelNivel(niveles[nivelActual - 1].personajesDelNivel);
+            characterSpawn.ComenzarSpawn();
+        }
+        else
+        {
+            Debug.LogWarning("No hay más niveles definidos.");
+        }
+
+        if (nivelActual >= 4)
+        {
+            personasSentadas.ActivarPersonasSentadas();
+        }
+    }
+
+    public void EstablecerPersonajeActual(CharacterAttributes personaje)
+    {
+        personajeActual = personaje;
+        spriteRendererPersonaje = personajeActual.GetComponent<SpriteRenderer>();
+    }
+
+    private void ActualizarSpritePersonaje()
+    {
+        if (spriteRendererPersonaje == null || personajeActual == null)
+            return;
+
+        switch (resultadoRecomendacion)
+        {
+            case ResultadoRecomendacion.Buena:
+                if (personajeActual.spriteRespuestaBuena != null)
+                    spriteRendererPersonaje.sprite = personajeActual.spriteRespuestaBuena;
+                break;
+
+            case ResultadoRecomendacion.Mala:
+                if (personajeActual.spriteRespuestaMala != null)
+                    spriteRendererPersonaje.sprite = personajeActual.spriteRespuestaMala;
+                break;
+
+            case ResultadoRecomendacion.Ninguna:
+            default:
+                break;
+        }
+    }
+    #endregion
+
+    #region Resultado recomendación 
+    public void VerificarRecomendacion(BookData libro)
+    {
+        if (personajeActual == null)
+        {
+            Debug.LogError("No hay personaje actual asignado.");
+            return;
+        }
+
+        bool esCorrecto = personajeActual.libroDeseadoID == libro.libroID;
+        bool esDelTipoPreferido = personajeActual.tipoPreferido == libro.tipoLibro;
+
+        if (esCorrecto)
+        {
+            resultadoRecomendacion = ResultadoRecomendacion.Buena;
+            recomendacionesBuenas++;
+
+            ShelfManager.instance.RestarLibroEsperadoPorGenero(libro.tipoLibro);
+            libro.gameObject.SetActive(false);
+            if (CharacterManager.instance.UltimoPersonajeAtendido != null)
+            {
+                CharacterManager.instance.UltimoPersonajeAtendido.tituloLibroPrestado = libro.titulo;
+            }
+
+            AudioManager.instance.sonidoLibroCorrecto.Play();
+            ActualizarSpritePersonaje();
+        }
+        else
+        {
+            resultadoRecomendacion = ResultadoRecomendacion.Mala;
+            recomendacionesMalas++;
+
+            AudioManager.instance.sonidoLibroIncorrecto.Play();
+            ActualizarSpritePersonaje();
+        }
+    }
+    #endregion
+
+    #region Resultado pedidos especiales
+    public void CompletarRestauracion()
+    {
+        Debug.Log("Restauración completada.");
+        resultadoRecomendacion = ResultadoRecomendacion.Buena;
+        recomendacionesBuenas++;
+        ActualizarSpritePersonaje();
+    }
+
+    public void CompletarPortada(List<StickerID> stickersUsados)
+    {
+        Debug.Log("Portada completada.");
+
+        if (personajeActual == null)
+        {
+            Debug.LogError("No hay personaje actual asignado para comparar stickers.");
+            return;
+        }
+
+        List<StickerID> stickersRequeridos = personajeActual.stickersRequeridos;
+
+        Debug.Log($"Stickers requeridos ({stickersRequeridos.Count}): {string.Join(", ", stickersRequeridos)}");
+        Debug.Log($"Stickers usados ({stickersUsados.Count}): {string.Join(", ", stickersUsados)}");
+
+        bool tieneTodos = true;
+
+        foreach (StickerID requerido in stickersRequeridos)
+        {
+            if (!stickersUsados.Contains(requerido))
+            {
+                Debug.LogWarning($"Falta sticker requerido: {requerido}");
+                tieneTodos = false;
+                break;
+            }
+            else
+            {
+                Debug.Log($"Sticker requerido presente: {requerido}");
+            }
+        }
+
+        resultadoRecomendacion = tieneTodos ? ResultadoRecomendacion.Buena : ResultadoRecomendacion.Mala;
+
+        if (tieneTodos)
+        {
+            recomendacionesBuenas++;
+            AudioManager.instance.sonidoEstrellas.Play();
+            ActualizarSpritePersonaje();
+        }
+        else
+            recomendacionesMalas++;
+        ActualizarSpritePersonaje();
+
+        Debug.Log("Resultado recomendación: " + resultadoRecomendacion);
+
+        CameraManager.instance.DesctivarPanelPortada();
+
+        if (characterSpawn != null)
+        {
+            characterSpawn.EndInteraction();
+        }
+    }
+
+    public void CompletarHechizo(CharacterAttributes.Hechizo hechizoRealizado)
+    {
+        if (personajeActual == null)
+        {
+            Debug.LogError("No hay personaje actual asignado.");
+            return;
+        }
+        if (hechizoRealizado == personajeActual.hechizoSolicitado)
+        {
+            resultadoRecomendacion = ResultadoRecomendacion.Buena;
+            recomendacionesBuenas++;
+            Debug.Log($"Hechizo completado correctamente: {hechizoRealizado}");
+            ActualizarSpritePersonaje();
+            AudioManager.instance.sonidoEstrellas.Play();
+        }
+        else
+        {
+            resultadoRecomendacion = ResultadoRecomendacion.Mala;
+            recomendacionesMalas++;
+            Debug.LogWarning($"Hechizo incorrecto. Realizado: {hechizoRealizado}, Solicitado: {personajeActual.hechizoSolicitado}");
+            ActualizarSpritePersonaje();
+        }
+        CameraManager.instance.DesctivarPanelHechizo();
+        if (characterSpawn != null)
+        {
+            characterSpawn.EndInteraction();
+        }
+    }
+
+    public void CompletarTrivia(int correctas, int incorrectas)
+    {
+        if (correctas > incorrectas)
+        {
+            resultadoRecomendacion = ResultadoRecomendacion.Buena;
+            recomendacionesBuenas++;
+            ActualizarSpritePersonaje();
+        }
+        else if (incorrectas > correctas)
+        {
+            resultadoRecomendacion = ResultadoRecomendacion.Mala;
+            recomendacionesMalas++;
+            ActualizarSpritePersonaje();
+        }
+        if (characterSpawn != null)
+        {
+            characterSpawn.EndInteraction();
+        }
+    }
+
+    public void ActualizarSpritePorRespuesta(bool fueCorrecta)
+    {
+        if (spriteRendererPersonaje == null || personajeActual == null)
+            return;
+
+        if (fueCorrecta)
+        {
+            if (personajeActual.spriteRespuestaBuena != null)
+                spriteRendererPersonaje.sprite = personajeActual.spriteRespuestaBuena;
+        }
+        else
+        {
+            if (personajeActual.spriteRespuestaMala != null)
+                spriteRendererPersonaje.sprite = personajeActual.spriteRespuestaMala;
+        }
+    }
+    #endregion
+
+    #region Libros devueltos y donados
+    public void LibroDonado()
+    {
+        if (characterSpawn != null)
+        {
+            resultadoRecomendacion = ResultadoRecomendacion.Buena;
+            characterSpawn.EndInteraction();
+        }
+    }
+
+    public void LibroDevuelto()
+    {
+        if (characterSpawn != null)
+        {
+            resultadoRecomendacion = ResultadoRecomendacion.Buena;
+            characterSpawn.EndInteraction();
+        }
+    }
+    #endregion
 }

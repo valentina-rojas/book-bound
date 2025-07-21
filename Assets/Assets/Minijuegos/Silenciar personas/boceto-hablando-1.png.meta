@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      boceto-hablando-1_0: -6811970182112073270
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

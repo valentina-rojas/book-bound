@@ -17724,11 +17724,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c78231a0448298846ab556903bfbf18b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  botonAjustes: {fileID: 0}
-  botonSalir: {fileID: 0}
-  menuAjustes: {fileID: 0}
-  slider: {fileID: 0}
-  sliderValue: 0
 --- !u!4 &754552718
 Transform:
   m_ObjectHideFlags: 0
@@ -36266,9 +36261,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e4703b8100f33845822a1d7ea43aefa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioMixer: {fileID: 24100000, guid: 0db9af2188881f74eb6924d0928d9cfd, type: 2}
+  botonIcono: {fileID: 0}
+  iconoSonidoOn: {fileID: 0}
+  iconoSonidoOff: {fileID: 0}
   musicSlider: {fileID: 1295445570}
   sfxSlider: {fileID: 923438512}
-  audioMixer: {fileID: 24100000, guid: 0db9af2188881f74eb6924d0928d9cfd, type: 2}
 --- !u!1 &1527229175
 GameObject:
   m_ObjectHideFlags: 0

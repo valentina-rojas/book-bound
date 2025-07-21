@@ -1,7 +1,5 @@
 using UnityEngine;
 using System.Collections;
-using System.Collections.Generic;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
 
@@ -10,46 +8,43 @@ public class QuizManager : MonoBehaviour
 {
     public static QuizManager instance;
 
-
+    #region Configuración
     [Header("Audio y Colores")]
     [SerializeField] private Color m_correctColor = Color.green;
     [SerializeField] private Color m_incorrectColor = Color.red;
     [SerializeField] private float m_waitTime = 1.0f;
     [SerializeField] private int totalQuestions = 5;
-    
+    #endregion
+
+    #region UI
     [Header("UI")]
     [SerializeField] private GameObject quizPanel;
     [SerializeField] private GameObject resultsPanel;
     [SerializeField] private TextMeshProUGUI resultsText;
     [SerializeField] private Button closeButton;
+    #endregion
 
-
-    private QuizDB m_quizDB = null;
-    private QuizUI m_quizUI = null;
-    private AudioSource m_audioSource = null;
+    #region Privados
+    private QuizDB m_quizDB;
+    private QuizUI m_quizUI;
+    private AudioSource m_audioSource;
 
     private int correctCount = 0;
     private int incorrectCount = 0;
     private int currentQuestionIndex = 0;
     private bool isWaiting = false;
+    #endregion
 
-
-     private void Awake()
+    #region Ciclo de Vida
+    private void Awake()
     {
         if (instance == null)
-        {
             instance = this;
-            // Opcional: si quieres que persista entre escenas
-            // DontDestroyOnLoad(gameObject);
-        }
         else
-        {
             Destroy(gameObject);
-        }
     }
 
-
-     private void Start()
+    private void Start()
     {
         m_quizDB = FindObjectOfType<QuizDB>();
         m_quizUI = FindObjectOfType<QuizUI>();
@@ -57,13 +52,12 @@ public class QuizManager : MonoBehaviour
 
         quizPanel.SetActive(false);
         resultsPanel.SetActive(false);
-
         closeButton.onClick.AddListener(CloseResults);
-
-        // llamar a StartQuiz() luego de los dialogos del personaje que correspondan
     }
+    #endregion
 
-     public void StartQuiz()
+    #region Manejo del Quiz
+    public void StartQuiz()
     {
         correctCount = 0;
         incorrectCount = 0;
@@ -74,7 +68,6 @@ public class QuizManager : MonoBehaviour
 
         NextQuestion();
     }
-
 
     private void NextQuestion()
     {
@@ -87,7 +80,9 @@ public class QuizManager : MonoBehaviour
         if (isWaiting) return;
         isWaiting = true;
 
-        if (optionButton.Option.correct)
+        bool isCorrect = optionButton.Option.correct;
+
+        if (isCorrect)
             correctCount++;
         else
             incorrectCount++;
@@ -101,18 +96,16 @@ public class QuizManager : MonoBehaviour
             m_audioSource.Stop();
 
         bool isCorrect = optionButton.Option.correct;
-      
+
         optionButton.SetColor(isCorrect ? m_correctColor : m_incorrectColor);
 
         if (isCorrect)
-        {
             AudioManager.instance.sonidoRespuestaTriviaCorrecta.Play();
-        }
         else
-        {
             AudioManager.instance.sonidosonidoRespuestaTriviaIncorrecta.Play();
-        }
 
+        if (GameManager.instance != null)
+            GameManager.instance.ActualizarSpritePorRespuesta(isCorrect);
 
         yield return new WaitForSeconds(m_waitTime);
 
@@ -135,14 +128,9 @@ public class QuizManager : MonoBehaviour
     private void CloseResults()
     {
         resultsPanel.SetActive(false);
-        //llamar a dialogo de personaje o funcion en gamemanager
 
         if (GameManager.instance != null)
-        {
-        GameManager.instance.CompletarTrivia(correctCount, incorrectCount);
-        }
-
-       
-       
+            GameManager.instance.CompletarTrivia(correctCount, incorrectCount);
     }
+    #endregion
 }

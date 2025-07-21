@@ -6,12 +6,15 @@ using UnityEngine.UI;
 
 public class CatDialogues : MonoBehaviour
 {
+    #region UI
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private TMP_Text dialogueText;
     [SerializeField] private Button botonSiguiente;
     [SerializeField] private Button botonRepetir;
     [SerializeField] private Button botonFinalizar;
+    #endregion
 
+    #region Configuración
     private float typingTime = 0.05f;
     private bool isTyping;
     private Coroutine typingCoroutine;
@@ -19,7 +22,9 @@ public class CatDialogues : MonoBehaviour
     private string[] dialogueLines;
     private int diaActual;
     private bool esDialogoExtra = false;
+    #endregion
 
+    #region Diálogos por día
     private Dictionary<int, string[]> dialoguesPorDia = new Dictionary<int, string[]>()
     {
         { 1, new string[] {
@@ -33,7 +38,7 @@ public class CatDialogues : MonoBehaviour
             "¡Buen trabajo ayer!",
             "Hoy los clientes serán un poco más exigentes ¡Y yo igual!.",
             "No puedes dejarme sin comer ni cepillarme.",
-            "Y deberías cuidar las plantas del patio o Rhea se pondra triste cuando vuelva...",
+            "Y deberías cuidar las plantas del patio o Rhea se pondrá triste cuando vuelva...",
             "Pero por el resto vas bien ¡Sigue así!."
         }},
         { 3, new string[] {
@@ -48,17 +53,13 @@ public class CatDialogues : MonoBehaviour
             "No te preocupes, casi ni notarás que está abierta.",
             "¡Buena suerte!"
         }},
-        { 5, new string[] {
-            "¡Vas muy bien!"
-        }},
-        { 6, new string[] {
-            "¡Vas muy bien!"
-        }},
-        { 7, new string[] {
-            "¡Vas muy bien!"
-        }}
+        { 5, new string[] { "¡Vas muy bien!" }},
+        { 6, new string[] { "¡Vas muy bien!" }},
+        { 7, new string[] { "¡Vas muy bien!" }}
     };
+    #endregion
 
+    #region Inicialización
     void Start()
     {
         if (botonSiguiente != null)
@@ -78,28 +79,10 @@ public class CatDialogues : MonoBehaviour
             botonFinalizar.onClick.AddListener(FinalizarDialogo);
             botonFinalizar.gameObject.SetActive(false);
         }
-
     }
+    #endregion
 
-    private void OnBotonSiguienteClick()
-    {
-        if (isTyping)
-        {
-            StopCoroutine(typingCoroutine);
-            dialogueText.text = dialogueLines[lineIndex];
-            isTyping = false;
-            ActualizarTextoBoton();
-        }
-        else
-        {
-            NextDialogueLine();
-        }
-    }
-
-    private void OnBotonRepetirClick()
-    {
-        StartDialogue();
-    }
+    #region Lógica del diálogo
 
     public void IniciarDialogoDelDia(int dia)
     {
@@ -107,7 +90,7 @@ public class CatDialogues : MonoBehaviour
         {
             diaActual = dia;
             dialogueLines = dialoguesPorDia[dia];
-            esDialogoExtra = false; 
+            esDialogoExtra = false;
             StartDialogue();
         }
     }
@@ -115,7 +98,7 @@ public class CatDialogues : MonoBehaviour
     public void IniciarDialogoExtra(string mensaje)
     {
         dialogueLines = new string[] { mensaje };
-        esDialogoExtra = true; 
+        esDialogoExtra = true;
         StartDialogue();
     }
 
@@ -126,9 +109,6 @@ public class CatDialogues : MonoBehaviour
 
         if (botonSiguiente != null)
             botonSiguiente.gameObject.SetActive(true);
-
-        if (botonRepetir != null)
-            botonRepetir.gameObject.SetActive(false);
 
         ActualizarTextoBoton();
         typingCoroutine = StartCoroutine(ShowLine());
@@ -159,11 +139,16 @@ public class CatDialogues : MonoBehaviour
         }
         else
         {
-            lineIndex = dialogueLines.Length - 1; 
-            botonFinalizar.gameObject.SetActive(true);
-            botonRepetir.gameObject.SetActive(true);
+            lineIndex = dialogueLines.Length - 1;
+
+            if (botonFinalizar != null)
+                botonFinalizar.gameObject.SetActive(true);
+
+            if (botonRepetir != null)
+                botonRepetir.gameObject.SetActive(true);
         }
     }
+
     public void FinalizarDialogo()
     {
         dialoguePanel.SetActive(false);
@@ -185,16 +170,40 @@ public class CatDialogues : MonoBehaviour
         }
     }
 
-   private void ActualizarTextoBoton()
-   {
+    private void ActualizarTextoBoton()
+    {
         if (botonSiguiente != null)
             botonSiguiente.gameObject.SetActive(true);
+    }
+    #endregion
 
-        if (botonFinalizar != null)
-            botonFinalizar.gameObject.SetActive(false);
+    #region Eventos de botones
 
-        if (botonRepetir != null)
-            botonRepetir.gameObject.SetActive(false);
+    private void OnBotonSiguienteClick()
+    {
+        if (isTyping)
+        {
+            StopCoroutine(typingCoroutine);
+            dialogueText.text = dialogueLines[lineIndex];
+            isTyping = false;
+            ActualizarTextoBoton();
+        }
+        else
+        {
+            NextDialogueLine();
+        }
     }
 
+    private void OnBotonRepetirClick()
+    {
+        if (isTyping)
+        {
+            StopCoroutine(typingCoroutine);
+            isTyping = false;
+        }
+
+        StartDialogue();
+    }
+
+    #endregion
 }
