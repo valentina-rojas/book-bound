@@ -44,11 +44,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2276fe76f965eac4683bf9f4f441ade4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "\xBFQui\xE9n no es un ave pero como ella vuela?"
+  localizationKey: Q5
   options:
-  - text: Bruja
-    correct: 0
-  - text: "Murci\xE9lago"
+  - localizationKey: A13
     correct: 1
-  - text: Escoba
+    text: Bruja
+  - localizationKey: A14
     correct: 0
+    text: "Murci\xE9lago"
+  - localizationKey: A15
+    correct: 0
+    text: Escoba

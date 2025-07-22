@@ -30,6 +30,31 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c478f676e49448c4a9c9677dfa0ed03a
+    m_Address: Assets/Localization/Tables/TitulosLibrosPortada Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cc2df8860fc95c541ae6338405adec00
+    m_Address: Assets/Localization/Tables/Quiz Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d5f625df8434efa44bbb03f688226d4a
+    m_Address: Assets/Localization/Tables/PedidosEspeciales Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fe0b7a3ca1207384b870d9d03d6d3bc9
+    m_Address: Assets/Localization/Tables/HintsPortada Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ffdf678cb2a3ab94e96750349361a141
+    m_Address: Assets/Localization/Tables/HintsHechizos Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 5b74175e04c18ef40b4a2be33cc0a64b, type: 2}
   m_SchemaSet:

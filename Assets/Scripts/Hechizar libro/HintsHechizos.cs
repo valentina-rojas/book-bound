@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using TMPro;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.Localization;
 
 public class HintsHechizos : MonoBehaviour
 {
@@ -11,11 +12,19 @@ public class HintsHechizos : MonoBehaviour
     [SerializeField] private TMP_Text textoHint;
     [SerializeField] private GameObject panelHint;
 
-    [Header("Configuración de pistas")]
-    [TextArea]
-    [SerializeField] private List<string> pistas = new List<string>();
+    [Header("Configuración")]
+    [SerializeField] private string tabla = "HintsHechizos";  
+    [SerializeField] private List<string> clavesPistas = new List<string>
+    {
+        "Hechizos_hint_1",
+        "Hechizos_hint_2",
+        "Hechizos_hint_3",
+        "Hechizos_hint_4",
+        "Hechizos_hint_5"
+    };
 
     private int indicePistaActual = 0;
+    private LocalizedString pista;
 
     private void Start()
     {
@@ -25,47 +34,45 @@ public class HintsHechizos : MonoBehaviour
         if (textoHint != null)
             textoHint.gameObject.SetActive(false);
 
-        pistas.Add("Ordená las runas en el orden correcto para activar el hechizo.");
-        pistas.Add("¿Probaste empezar con la runa de Tierra?");
-        pistas.Add("Sombra es bastante estable... tal vez vaya en el medio.");
-        pistas.Add("Protección suena a algo que combinaría con Fuego, ¿no?");
-        pistas.Add("Tierra → Sombra → Fuego podría ser una buena combinación...");
-    }
-
-    public void ReiniciarPistas()
-    {
-        indicePistaActual = 0;
-        if (textoHint != null)
-            textoHint.gameObject.SetActive(false);
+        pista = new LocalizedString { TableReference = tabla };
+        pista.StringChanged += ActualizarTextoHint;
     }
 
     private void MostrarSiguientePista()
     {
-        if (pistas.Count == 0 || textoHint == null) return;
+        if (clavesPistas.Count == 0 || textoHint == null)
+            return;
 
-        textoHint.gameObject.SetActive(true); 
+        if (indicePistaActual >= clavesPistas.Count)
+            indicePistaActual = 0;
+
+        pista.TableEntryReference = clavesPistas[indicePistaActual];
+        pista.RefreshString();
+
+        indicePistaActual++;
+
+        textoHint.gameObject.SetActive(true);
         panelHint.SetActive(true);
-
-        if (indicePistaActual < pistas.Count)
-        {
-            textoHint.text = pistas[indicePistaActual];
-            indicePistaActual++;
-        }
-        else
-        {
-           // textoHint.text = "No hay más pistas disponibles.";
-            indicePistaActual = 0; 
-        }
 
         StopAllCoroutines();
         StartCoroutine(OcultarHintLuego(6f));
     }
 
+    private void ActualizarTextoHint(string texto)
+    {
+        textoHint.text = texto;
+    }
 
     private IEnumerator OcultarHintLuego(float tiempo)
     {
         yield return new WaitForSeconds(tiempo);
         textoHint.gameObject.SetActive(false);
-        panelHint.SetActive(false); 
+        panelHint.SetActive(false);
+    }
+
+    private void OnDestroy()
+    {
+        if (pista != null)
+            pista.StringChanged -= ActualizarTextoHint;
     }
 }

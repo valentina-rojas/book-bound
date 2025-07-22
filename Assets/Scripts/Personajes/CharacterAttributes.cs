@@ -1,5 +1,7 @@
 using UnityEngine;
+using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.Localization;
 
 public class CharacterAttributes : MonoBehaviour
 {
@@ -53,4 +55,25 @@ public class CharacterAttributes : MonoBehaviour
     public string[] GetDialogueInicio() => dialogueLinesInicio;
     public string[] GetDialogueBuena() => dialogueLinesBuena;
     public string[] GetDialogueMala() => dialogueLinesMala;
+
+    public IEnumerator GetTituloLibroPortadaLocalized(System.Action<string> callback)
+    {
+        if (string.IsNullOrEmpty(tituloLibroPortada))
+        {
+            callback("");
+            yield break;
+        }
+
+        var localizedString = new LocalizedString
+        {
+            TableReference = "TitulosLibrosPortada",  
+            TableEntryReference = tituloLibroPortada
+        };
+
+        var handle = localizedString.GetLocalizedStringAsync();
+
+        yield return handle;
+
+        callback(handle.Result);
+    }
 }

@@ -20,9 +20,35 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en-US
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 49b72c1712a169341b3a8df1cac28778
+    m_Address: TitulosLibrosPortada_en-US
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en-US
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 5c69e36198570a842bb72341a7b95f21
     m_Address: CatDialogue_en-US
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en-US
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8431b49b9435b9446b8883d2cbe26fbd
+    m_Address: HintsHechizos_en-US
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en-US
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 98f9e10dc48650043a5ccb0fcd064863
+    m_Address: Quiz_en-US
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en-US
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a07d26b33f50c6d459631cd3ea52169b
+    m_Address: HintsPortada_en-US
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en-US
@@ -33,6 +59,14 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en-US
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f2a32bcee1bf08c4f9756d849be592cf
+    m_Address: PedidosEspeciales_en-US
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en-US
+    - Preload
     FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 5b74175e04c18ef40b4a2be33cc0a64b, type: 2}

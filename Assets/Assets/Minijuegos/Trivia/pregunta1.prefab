@@ -44,11 +44,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2276fe76f965eac4683bf9f4f441ade4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "\xBFC\xF3mo se llama la due\xF1a de la librer\xEDa?"
+  localizationKey: Q1
   options:
-  - text: Astrid
+  - localizationKey: A1
     correct: 0
-  - text: Phoebe
+    text: Astrid
+  - localizationKey: A2
     correct: 0
-  - text: Rhea
+    text: Phoebe
+  - localizationKey: A3
     correct: 1
+    text: Rhea

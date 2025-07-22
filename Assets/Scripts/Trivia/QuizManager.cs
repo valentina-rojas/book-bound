@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.Localization.Components;
 
 [RequireComponent(typeof(AudioSource))]
 public class QuizManager : MonoBehaviour
@@ -20,8 +21,15 @@ public class QuizManager : MonoBehaviour
     [Header("UI")]
     [SerializeField] private GameObject quizPanel;
     [SerializeField] private GameObject resultsPanel;
-    [SerializeField] private TextMeshProUGUI resultsText;
     [SerializeField] private Button closeButton;
+
+    [Header("Resultados Localizados")]
+    [SerializeField] private LocalizeStringEvent correctLabelText;
+    [SerializeField] private LocalizeStringEvent incorrectLabelText;
+
+    [Header("Resultados Numéricos")]
+    [SerializeField] private TextMeshProUGUI correctCountText;
+    [SerializeField] private TextMeshProUGUI incorrectCountText;
     #endregion
 
     #region Privados
@@ -122,7 +130,8 @@ public class QuizManager : MonoBehaviour
         quizPanel.SetActive(false);
         resultsPanel.SetActive(true);
 
-        resultsText.text = $" Correctas: {correctCount}\n Incorrectas: {incorrectCount}";
+        correctCountText.text = correctCount.ToString();
+        incorrectCountText.text = incorrectCount.ToString();
     }
 
     private void CloseResults()

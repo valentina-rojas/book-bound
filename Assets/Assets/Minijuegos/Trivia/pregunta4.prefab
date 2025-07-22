@@ -44,11 +44,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2276fe76f965eac4683bf9f4f441ade4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "\xBFQu\xE9 cosa es, que cuanto m\xE1s intensa se hace menos se ve?"
+  localizationKey: Q4
   options:
-  - text: La tormenta
+  - localizationKey: A10
     correct: 0
-  - text: La noche
+    text: La tormenta
+  - localizationKey: A11
     correct: 0
-  - text: La oscuridad
+    text: La noche
+  - localizationKey: A12
     correct: 1
+    text: La oscuridad

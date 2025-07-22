@@ -44,11 +44,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2276fe76f965eac4683bf9f4f441ade4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "\xBFQu\xE9 libro contiene informaci\xF3n sobre hierbas y flores m\xE1gicas?"
+  localizationKey: Q3
   options:
-  - text: Compendio de plantas susurrantes
+  - localizationKey: A7
+    correct: 0
+    text: Compendio de plantas susurrantes
+  - localizationKey: A8
     correct: 1
-  - text: Herbarium de sombras y lumbres
+    text: Herbarium de sombras y lumbres
+  - localizationKey: A9
     correct: 0
-  - text: Hierbas y sabores de reinos olvidados
-    correct: 0
+    text: Hierbas y sabores de reinos olvidados

@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: HintsHechizos_en-US
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en-US
+  m_SharedData: {fileID: 11400000, guid: ffdf678cb2a3ab94e96750349361a141, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 5704949760
+    m_Localized: Arrange the runes in the correct order to activate the spell.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32477192192
+    m_Localized: Have you tried starting with the Earth rune?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44732948480
+    m_Localized: Shadow is quite stable... maybe it goes in the middle.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56460222464
+    m_Localized: Protection sounds like something that would pair with Fire, right?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 67864535040
+    m_Localized: "Earth \u2192 Shadow \u2192 Fire might be a good combination..."
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

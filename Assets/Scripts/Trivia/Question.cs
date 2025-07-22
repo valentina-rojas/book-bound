@@ -4,6 +4,6 @@ using System.Collections.Generic;
 
 public class Question : MonoBehaviour
 {
-    public string text = null;
+    public string localizationKey = null; 
     public List<Option> options = null;
 }

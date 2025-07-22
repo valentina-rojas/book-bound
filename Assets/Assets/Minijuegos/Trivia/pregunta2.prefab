@@ -44,11 +44,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2276fe76f965eac4683bf9f4f441ade4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "\xBFC\xF3mo es el nombre del gato?"
+  localizationKey: Q2
   options:
-  - text: Salem
+  - localizationKey: A4
     correct: 0
-  - text: Artemis
+    text: Salem
+  - localizationKey: A5
     correct: 0
-  - text: Minino
+    text: Artemis
+  - localizationKey: A6
     correct: 1
+    text: Minino

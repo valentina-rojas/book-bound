@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: HintsPortada_es
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: es
+  m_SharedData: {fileID: 11400000, guid: fe0b7a3ca1207384b870d9d03d6d3bc9, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 163331088384
+    m_Localized: "Pens\xE1 en los elementos que la autora mencion\xF3... \xBFqu\xE9
+      podr\xEDa ir primero?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 266649378816
+    m_Localized: Un mapa puede ser una buena base...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 329786236928
+    m_Localized: "Una br\xFAjula puede ayudar a orientarse... tal vez cerca del mapa."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 375785168896
+    m_Localized: "\xBFTe anim\xE1s a esconder algo especial entre las monta\xF1as?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 423197581312
+    m_Localized: "Tal vez un drag\xF3n asom\xE1ndose..."
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

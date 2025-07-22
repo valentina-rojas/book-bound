@@ -12,13 +12,15 @@ public class BookCoverManager : MonoBehaviour
     public RectTransform areaPortada;
     public TMP_Text textoTituloLibro;
 
-
     public void ActualizarTituloLibro()
     {
         var personaje = GameManager.instance.personajeActual;
         if (personaje != null && textoTituloLibro != null)
         {
-            textoTituloLibro.text = personaje.tituloLibroPortada;
+            StartCoroutine(personaje.GetTituloLibroPortadaLocalized((textoLocalizado) =>
+            {
+                textoTituloLibro.text = textoLocalizado;
+            }));
         }
         else
         {
@@ -29,7 +31,6 @@ public class BookCoverManager : MonoBehaviour
     public void VerificarElementosEnPortada()
     {
         finalizarButton.interactable = portadaEditable.transform.childCount > 0;
-        
     }
 
     public void Finalizar()

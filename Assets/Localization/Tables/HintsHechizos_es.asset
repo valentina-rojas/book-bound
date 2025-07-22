@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: HintsHechizos_es
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: es
+  m_SharedData: {fileID: 11400000, guid: ffdf678cb2a3ab94e96750349361a141, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 5704949760
+    m_Localized: "Orden\xE1 las runas en el orden correcto para activar el hechizo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32477192192
+    m_Localized: "\xBFProbaste empezar con la runa de Tierra?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44732948480
+    m_Localized: Sombra es bastante estable... tal vez vaya en el medio.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56460222464
+    m_Localized: "Protecci\xF3n suena a algo que combinar\xEDa con Fuego, \xBFno?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 67864535040
+    m_Localized: "Tierra \u2192 Sombra \u2192 Fuego podr\xEDa ser una buena combinaci\xF3n..."
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

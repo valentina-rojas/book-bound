@@ -1,0 +1,104 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Quiz_en-US
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en-US
+  m_SharedData: {fileID: 11400000, guid: cc2df8860fc95c541ae6338405adec00, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 18589851648
+    m_Localized: What is something that the more intense it is, the less you see
+      it?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 767579299840
+    m_Localized: The storm
+    m_Metadata:
+      m_Items: []
+  - m_Id: 974777917440
+    m_Localized: The night
+    m_Metadata:
+      m_Items: []
+  - m_Id: 987759288320
+    m_Localized: The darkness
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1371806539776
+    m_Localized: What is the name of the owner of the bookstore?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1695883632640
+    m_Localized: Astrid
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1714497953792
+    m_Localized: Phoebe
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1725789020160
+    m_Localized: Rhea
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1918928330752
+    m_Localized: What is not a bird, but flies like one?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1931834204160
+    m_Localized: Witch
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1947122442240
+    m_Localized: Bat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1958228959232
+    m_Localized: Broom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2877242908672
+    m_Localized: What is the cat's name?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2890320748544
+    m_Localized: Salem
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2913787879424
+    m_Localized: Minino
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2902375178240
+    m_Localized: Artemis
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3267061522432
+    m_Localized: Which book contains information about magical herbs and flowers?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3279745097728
+    m_Localized: Compendium of Whispering Plants
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3292755828736
+    m_Localized: Herbarium of Shadows and Gleams
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3304961253376
+    m_Localized: Herbs and Flavors of Forgotten Realms
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []
