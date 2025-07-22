@@ -1,0 +1,99 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: CatDialogue_en-US
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en-US
+  m_SharedData: {fileID: 11400000, guid: 70715c09457dd1c4a92263855647757e, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 22856965201920
+    m_Localized: Hi! I'm Minino, your assistant in this magical library.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23021344169984
+    m_Localized: Every day, different creatures will come looking for books.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23075161284608
+    m_Localized: Recommend books according to their tastes or exactly what they're
+      looking for.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23111186161664
+    m_Localized: But before receiving customers, you should clean this place a bit...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23153548632064
+    m_Localized: Good luck on your first day!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23183865061376
+    m_Localized: Good job yesterday!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23218036056064
+    m_Localized: "Today the customers will be a bit more demanding\u2014and so will
+      I!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23266669010944
+    m_Localized: You can't leave me hungry or without brushing me.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23297421647872
+    m_Localized: And you should take care of the patio plants or Rhea will be sad
+      when she returns...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23328451108864
+    m_Localized: But otherwise, you're doing well! Keep it up!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23374785585152
+    m_Localized: You're already quite the expert!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23405416587264
+    m_Localized: Customers might start making more varied requests...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23528523603968
+    m_Localized: But trust your magical bookseller instinct!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23590574137344
+    m_Localized: You're doing great!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23630805901312
+    m_Localized: Without a doubt, Rhea chose the right person to take care of this
+      place.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23664247087104
+    m_Localized: So I think we could open the reading room starting today.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23673839460352
+    m_Localized: "Don't worry, you\u2019ll hardly notice it\u2019s open."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23704256552960
+    m_Localized: Good luck!
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

@@ -3,6 +3,8 @@ using System.Collections;
 using TMPro;
 using System.Collections.Generic;
 using UnityEngine.UI;
+using UnityEngine.Localization;
+using UnityEngine.Localization.Settings;
 
 public class CatDialogues : MonoBehaviour
 {
@@ -19,43 +21,21 @@ public class CatDialogues : MonoBehaviour
     private bool isTyping;
     private Coroutine typingCoroutine;
     private int lineIndex;
-    private string[] dialogueLines;
+    private string[] dialogueKeys;
     private int diaActual;
     private bool esDialogoExtra = false;
     #endregion
 
     #region Diálogos por día
-    private Dictionary<int, string[]> dialoguesPorDia = new Dictionary<int, string[]>()
+    private Dictionary<int, string[]> dialoguesPorDia = new Dictionary<int, string[]>
     {
-        { 1, new string[] {
-            "¡Hola! Soy Minino, tu asistente en esta librería mágica.",
-            "Cada día vendrán criaturas distintas buscando libros.",
-            "Recomiéndales libros según sus gustos o el que buscan exactamente.",
-            "Pero antes de recibir clientes deberías limpiar un poco este lugar...",
-            "¡Suerte en tu primer día!" }
-        },
-        { 2, new string[] {
-            "¡Buen trabajo ayer!",
-            "Hoy los clientes serán un poco más exigentes ¡Y yo igual!.",
-            "No puedes dejarme sin comer ni cepillarme.",
-            "Y deberías cuidar las plantas del patio o Rhea se pondrá triste cuando vuelva...",
-            "Pero por el resto vas bien ¡Sigue así!."
-        }},
-        { 3, new string[] {
-            "¡Ya eres todo un experto!",
-            "Puede que los clientes cada vez hagan pedidos más diferentes...",
-            "¡Pero confía en tu instinto de librero mágico!",
-            "¡Vas muy bien!"
-        }},
-        { 4, new string[] {
-            "Sin duda Rhea eligió a la persona correcta para cuidar este lugar.",
-            "Así que creo que podríamos abrir la sala de lectura a partir de hoy.",
-            "No te preocupes, casi ni notarás que está abierta.",
-            "¡Buena suerte!"
-        }},
-        { 5, new string[] { "¡Vas muy bien!" }},
-        { 6, new string[] { "¡Vas muy bien!" }},
-        { 7, new string[] { "¡Vas muy bien!" }}
+        { 1, new string[] { "cat1_1", "cat1_2", "cat1_3", "cat1_4", "cat1_5" } },
+        { 2, new string[] { "cat2_1", "cat2_2", "cat2_3", "cat2_4", "cat2_5" } },
+        { 3, new string[] { "cat3_1", "cat3_2", "cat3_3", "cat3_4" } },
+        { 4, new string[] { "cat4_1", "cat4_2", "cat4_3", "cat4_4" } },
+        { 5, new string[] { "cat5_1" } },
+        { 6, new string[] { "cat6_1" } },
+        { 7, new string[] { "cat7_1" } }
     };
     #endregion
 
@@ -89,7 +69,7 @@ public class CatDialogues : MonoBehaviour
         if (dialoguesPorDia.ContainsKey(dia))
         {
             diaActual = dia;
-            dialogueLines = dialoguesPorDia[dia];
+            dialogueKeys = dialoguesPorDia[dia];
             esDialogoExtra = false;
             StartDialogue();
         }
@@ -97,7 +77,7 @@ public class CatDialogues : MonoBehaviour
 
     public void IniciarDialogoExtra(string mensaje)
     {
-        dialogueLines = new string[] { mensaje };
+        dialogueKeys = new string[] { mensaje };
         esDialogoExtra = true;
         StartDialogue();
     }
@@ -111,15 +91,23 @@ public class CatDialogues : MonoBehaviour
             botonSiguiente.gameObject.SetActive(true);
 
         ActualizarTextoBoton();
-        typingCoroutine = StartCoroutine(ShowLine());
+        typingCoroutine = StartCoroutine(ShowLocalizedLine());
     }
 
-    private IEnumerator ShowLine()
+    private IEnumerator ShowLocalizedLine()
     {
         isTyping = true;
         dialogueText.text = string.Empty;
 
-        foreach (char ch in dialogueLines[lineIndex])
+        string key = dialogueKeys[lineIndex];
+        LocalizedString localizedString = new LocalizedString("CatDialogue", key);
+
+        var handle = localizedString.GetLocalizedStringAsync();
+        yield return handle;
+
+        string line = handle.Result;
+
+        foreach (char ch in line)
         {
             dialogueText.text += ch;
             yield return new WaitForSeconds(typingTime);
@@ -133,13 +121,13 @@ public class CatDialogues : MonoBehaviour
     {
         lineIndex++;
 
-        if (lineIndex < dialogueLines.Length)
+        if (lineIndex < dialogueKeys.Length)
         {
-            typingCoroutine = StartCoroutine(ShowLine());
+            typingCoroutine = StartCoroutine(ShowLocalizedLine());
         }
         else
         {
-            lineIndex = dialogueLines.Length - 1;
+            lineIndex = dialogueKeys.Length - 1;
 
             if (botonFinalizar != null)
                 botonFinalizar.gameObject.SetActive(true);
@@ -184,9 +172,13 @@ public class CatDialogues : MonoBehaviour
         if (isTyping)
         {
             StopCoroutine(typingCoroutine);
-            dialogueText.text = dialogueLines[lineIndex];
-            isTyping = false;
-            ActualizarTextoBoton();
+            LocalizedString temp = new LocalizedString("CatDialogue", dialogueKeys[lineIndex]);
+            temp.GetLocalizedStringAsync().Completed += handle =>
+            {
+                dialogueText.text = handle.Result;
+                isTyping = false;
+                ActualizarTextoBoton();
+            };
         }
         else
         {
