@@ -10,56 +10,64 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
-  m_Name: IU General_es
+  m_Name: IU General_en-US
   m_EditorClassIdentifier: 
   m_LocaleId:
-    m_Code: es
+    m_Code: en-US
   m_SharedData: {fileID: 11400000, guid: bbbbbd888e4a5af41953bddc55cb146e, type: 2}
   m_Metadata:
     m_Items: []
   m_TableData:
   - m_Id: 290594660352
-    m_Localized: JUGAR
+    m_Localized: PLAY
     m_Metadata:
       m_Items: []
   - m_Id: 368361250816
-    m_Localized: HISTORIAL
+    m_Localized: HISTORY
     m_Metadata:
       m_Items: []
   - m_Id: 457624428544
-    m_Localized: LIBROS PRESTADOS DE RHEA
+    m_Localized: RHEA'S BORROWED BOOKS
     m_Metadata:
       m_Items: []
   - m_Id: 1174053494784
-    m_Localized: TAREAS
+    m_Localized: TASKS
     m_Metadata:
       m_Items: []
   - m_Id: 4010208305152
-    m_Localized: "MEN\xDA"
+    m_Localized: MENU
     m_Metadata:
       m_Items: []
   - m_Id: 3845875474432
-    m_Localized: REINICIAR
+    m_Localized: RESTART
     m_Metadata:
       m_Items: []
   - m_Id: 3673380528128
-    m_Localized: REANUDAR
+    m_Localized: RESUME
     m_Metadata:
       m_Items: []
   - m_Id: 3582481571840
-    m_Localized: PAUSA
+    m_Localized: PAUSE
     m_Metadata:
       m_Items: []
   - m_Id: 2276496941056
-    m_Localized: ABRIR TIENDA
+    m_Localized: OPEN THE STORE
     m_Metadata:
       m_Items: []
   - m_Id: 4131469828096
-    m_Localized: "M\xDASICA"
+    m_Localized: MUSIC
     m_Metadata:
       m_Items: []
   - m_Id: 4265842745344
     m_Localized: SFX
+    m_Metadata:
+      m_Items: []
+  - m_Id: 585174761512960
+    m_Localized: SELECT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 585820826935296
+    m_Localized: CONFIRM
     m_Metadata:
       m_Items: []
   references:

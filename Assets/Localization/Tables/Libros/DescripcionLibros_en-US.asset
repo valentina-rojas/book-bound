@@ -1,0 +1,183 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: DescripcionLibros_en-US
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en-US
+  m_SharedData: {fileID: 11400000, guid: 57b41d0b9577b5847a5faa5415505970, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 55986266112
+    m_Localized: "In the Kingdom of Teralthor, where the use of magic is punishable
+      by death, Liora, an apprentice herbalist, accidentally finds a grimoire buried
+      among the roots of an ancient tree. The pages, covered with ancient symbols
+      that glow to the touch, whisper forgotten secrets and connect her with Salakhar,
+      a deity exiled from the mortal realm. As Liora discovers the book responds
+      to her will, witch hunters begin to close in. She must soon decide whether
+      to burn the grimoire and live a normal life\u2026 or unleash a magic capable
+      of shattering the world\u2019s order."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56003043328
+    m_Localized: "In the forgotten corners of an enchanted forest, an ancient creature
+      guards a secret that could change the fate of the entire kingdom. Ancient legends
+      speak of a powerful artifact hidden among trees that whisper names and paths
+      that vanish. Only the brave who decipher the Guardian\u2019s clues can discover
+      the truth and decide if that power deserves to be released."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56003043329
+    m_Localized: "In a world divided between eternal light and endless darkness,
+      two warring kingdoms fight for supremacy. An ancient prophecy foretells the
+      arrival of a young woman able to summon both light and shadows. Caught between
+      both sides, she must discover her origins, forge unexpected alliances, and
+      decide if the world\u2019s balance deserves to be preserved\u2026 or broken
+      forever."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56003043330
+    m_Localized: A novel of enigmas, secret societies, and cursed books. When a young
+      librarian inherits a forbidden tome, she becomes embroiled in an ancient conspiracy
+      threatening to resurface. Clues hidden among the pages, messages in invisible
+      ink, and keys concealed in the architecture of her own city will guide her
+      toward a truth many died to hide.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56003043331
+    m_Localized: "When the eccentric bookseller Alina receives a box with no sender
+      containing an unknown novel titled \u201CThe Room of Silence,\u201D she doesn\u2019t
+      imagine the dark power it hides. In the following days, several customers who
+      buy the book disappear without a trace. Security cameras show the impossible:
+      readers simply vanish into thin air after turning the last page. With skeptical
+      police and her shop in danger, Alina resorts to her detective past to follow
+      the clues the book leaves between the lines. But the deeper she goes into its
+      mystery, the more blurred the line between fiction and reality becomes."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56003043332
+    m_Localized: "In an apparently quiet city, a secret society rules from the shadows.
+      An unfinished diary, left by a missing investigator, contains the first clues.
+      Mysterious disappearances, coded messages, and forgotten symbols point to a
+      power that could alter history\u2019s course if someone manages to unravel
+      the mystery."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56003043333
+    m_Localized: A treatise on magical balms, ointments, and lotions. From creams
+      that reveal invisible beings to salves that allow walking without leaving a
+      trace, this book compiles the knowledge of wandering herbalists and hermit
+      druids. It is said the pages are made of real, living leaves that react to
+      the touch of those intending to heal... or to hunt.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56003043334
+    m_Localized: "A burning book \u2014 literally \u2014 that stays warm to the touch.
+      It contains recipes for potions that awaken inner strength, increase courage
+      in battle, and, in some cases, provoke uncontrollable emotional outbursts.
+      Each chapter is based on basic human emotions: anger, desire, fear, hope. Ideal
+      for war alchemists, charming barbarians, and poets with a dangerous side."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56003043335
+    m_Localized: This tome is a compendium of potions that alter perception of the
+      world, from seeing the passage of the dead to hearing the thoughts of plants.
+      Written by an alchemist who spent twenty years in complete isolation in the
+      Silent Forests, the book offers recipes only for those daring enough to look
+      beyond the veil of reality. Not suitable for impressionable readers or those
+      anxious to keep their sanity.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56003043336
+    m_Localized: A complete compilation of magical flora, separated into healing
+      and cursed species. It includes warnings about handling and case records where
+      these plants altered not only the body but also the will of those who used
+      them. Some, it is said, can only be harvested after whispering their true name
+      at dusk.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56003043337
+    m_Localized: "This voluminous illustrated tome contains detailed descriptions
+      of herbs and flowers with magical properties. From the Dream Water Lily, which
+      induces prophetic visions, to the Truth Bramble, capable of forcing anyone
+      who touches it to confess their deepest secrets. Each plant responds differently
+      depending on the lunar phase and the collector\u2019s intent."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56003043338
+    m_Localized: A disturbing compendium that collects stories and recipes of the
+      most dangerous and vengeful fungi in the realm. From the Spore Shadow, which
+      whispers curses into the ear of anyone who steps on it, to the Vengeful Stinkhorn,
+      able to sprout in the most inconvenient places when someone holds a grudge.
+      It includes methods to summon, calm, or, in emergencies, fry these creatures
+      with enchanted butter.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56003043339
+    m_Localized: A culinary guide of exotic ingredients, coming from lands that only
+      exist in whispers and incomplete maps. Flowers that sing at dusk, spices that
+      light up the darkness, and fruits that can revive memories of past lives. This
+      book gathers traditions from nomadic cooks and herbal witches who traveled
+      beyond the limits of the known world.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56003043340
+    m_Localized: 'Sacred cookbook of the nocturnal clans, written under the light
+      of countless full moons. Each dish not only satisfies hunger but triggers ancient
+      magical effects: sweets that induce prophetic dreams, stews that ward off spirits,
+      and desserts that heal the soul of the afflicted. An invitation to cook with
+      the magic that breathes in every ingredient.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56003043341
+    m_Localized: "Rigorous investigation about the eclipse that stopped time for
+      seven days centuries ago. The records tell how magic was altered, portals opened,
+      and creatures crossed the veil. It includes survivors\u2019 testimonies and
+      fragments of forbidden texts that narrate how that event changed the course
+      of magical history forever."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56003043342
+    m_Localized: Exhaustive chronicle of the feats, betrayals, and tragedies of vanished
+      civilizations. It recounts the rise and fall of kingdoms that once ruled the
+      known world, leaving ruins and relics imbued with ancient magic. A compendium
+      of battles, forgotten heroes, and artifacts that still lie buried underground.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56003043343
+    m_Localized: "A collection of chilling tales about things lurking where least
+      expected: under the bed, behind the mirror, or in a room closed for years.
+      Each story comes with warnings and folk legends whispered to protect the unwary\u2026
+      though sometimes, even that is not enough."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56003043344
+    m_Localized: "For centuries, the Montalban Library has stood, though no one remembers
+      the last time its darkest corners were dusted. Jacinto, its new night librarian,
+      starts noticing unsettling details: books changing places, whispers in unknown
+      languages, shadows crossing empty halls. When he discovers some books are written
+      in blood and tell of events yet to occur, he realizes he is not alone\u2026
+      and the shelves, if one listens closely, have a memory. And hunger."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56003043345
+    m_Localized: Anthology of forbidden tales, collected by a hermit who claims to
+      have traveled to the darkest corners of the world. Stories of voices echoing
+      in empty rooms, shadows mimicking human movements, and sharp laughter on the
+      other side of the mirror. A book that, it is said, never stays still where
+      it is left.
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

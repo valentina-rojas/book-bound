@@ -1,13 +1,17 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEngine.Localization;
+using System.Collections;
 
 public class BookData : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
     public int libroID;
     public string tipoLibro;
+
     public string titulo;
     public string descripcion;
+
     public Sprite imagenLibro;
 
     private Image image;
@@ -32,5 +36,53 @@ public class BookData : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     public void OnPointerExit(PointerEventData eventData)
     {
         image.color = originalColor;
+    }
+
+    public IEnumerator GetTituloLocalized(System.Action<string> callback)
+    {
+        if (string.IsNullOrEmpty(titulo))
+        {
+            callback?.Invoke("");
+            yield break;
+        }
+
+        var localizedString = new LocalizedString
+        {
+            TableReference = "TitulosLibros",
+            TableEntryReference = titulo
+        };
+
+        var handle = localizedString.GetLocalizedStringAsync();
+
+        yield return handle;
+
+        if (handle.Status == UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationStatus.Succeeded)
+            callback?.Invoke(handle.Result);
+        else
+            callback?.Invoke(titulo); 
+    }
+
+    public IEnumerator GetDescripcionLocalized(System.Action<string> callback)
+    {
+        if (string.IsNullOrEmpty(descripcion))
+        {
+            callback?.Invoke("");
+            yield break;
+        }
+
+        var localizedString = new LocalizedString
+        {
+            TableReference = "DescripcionLibros",
+            TableEntryReference = descripcion
+        };
+
+        var handle = localizedString.GetLocalizedStringAsync();
+
+        yield return handle;
+
+        if (handle.Status == UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationStatus.Succeeded)
+            callback?.Invoke(handle.Result);
+        else
+            callback?.Invoke(descripcion); 
     }
 }

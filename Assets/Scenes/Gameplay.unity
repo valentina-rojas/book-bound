@@ -282,7 +282,7 @@ MonoBehaviour:
   textoTituloFinDeDia: {fileID: 915351865}
   niveles:
   - personajesDelNivel:
-    - {fileID: 4406605961863887185, guid: 3292f0a8089a0bf47ba8eb57c5425656, type: 3}
+    - {fileID: 4652195673153815505, guid: 3d804dc5ddf43a74b99b3e1f31086122, type: 3}
     - {fileID: 4406605961863887185, guid: a8da8e8cc78bcbd419e10bb0856638f2, type: 3}
     - {fileID: 5489013454305063670, guid: 5450ced4880d35e4eb7f17dd4ee1d761, type: 3}
   - personajesDelNivel:
@@ -3329,13 +3329,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   libroID: 23
   tipoLibro: pociones
-  titulo: "El Brebaje del Loto Sombr\xEDo"
-  descripcion: "Este tomo es un compendio de pociones que permiten alterar la percepci\xF3n
-    del mundo, desde ver el paso de los muertos hasta escuchar los pensamientos de
-    las plantas. Redactado por un alquimista que pas\xF3 veinte a\xF1os en completo
-    aislamiento en los Bosques Silenciosos, el libro ofrece recetas solo para quienes
-    se atrevan a mirar m\xE1s all\xE1 del velo de la realidad. No apto para lectores
-    impresionables o ansiosos por conservar su cordura."
+  titulo: L3pociones
+  descripcion: DesL3pociones
   imagenLibro: {fileID: -4721226998713458786, guid: e1378f9ebdcd9394db7bee5682767384, type: 3}
 --- !u!1001 &145948553
 PrefabInstance:
@@ -4175,12 +4170,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   libroID: 12
   tipoLibro: misterio
-  titulo: 'La Dama de los Secretos Perdidos '
-  descripcion: "Una novela de enigmas, sociedades ocultas y libros malditos. Cuando
-    una joven bibliotecaria hereda un tomo prohibido, se ve envuelta en una conspiraci\xF3n
-    antigua que amenaza con resurgir. Pistas ocultas entre las p\xE1ginas, mensajes
-    en tinta invisible y claves escondidas en la arquitectura de su propia ciudad
-    la guiar\xE1n hacia una verdad que muchos murieron por ocultar. "
+  titulo: L1misterio
+  descripcion: DesL1misterio
   imagenLibro: {fileID: 1488180427319606480, guid: 84566c513d5035342a657db17d95ec1a, type: 3}
 --- !u!1001 &166164194
 PrefabInstance:
@@ -6716,13 +6707,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   libroID: 22
   tipoLibro: pociones
-  titulo: El Fuego en la Sangre
-  descripcion: "Un libro ardiente \u2014literalmente\u2014 que se mantiene tibio
-    al tacto. Contiene recetas de pociones que despiertan la fuerza interior, aumentan
-    el valor en combate y, en algunos casos, provocan estallidos emocionales incontrolables.
-    Cada cap\xEDtulo est\xE1 basado en las emociones humanas b\xE1sicas: ira, deseo,
-    miedo, esperanza. Ideal para alquimistas de guerra, b\xE1rbaros encantadores
-    y poetas con un lado peligroso."
+  titulo: L2pociones
+  descripcion: DesL2pociones
   imagenLibro: {fileID: -4721226998713458786, guid: e1378f9ebdcd9394db7bee5682767384, type: 3}
 --- !u!1 &256187192
 GameObject:
@@ -7135,12 +7121,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   libroID: 63
   tipoLibro: terror
-  titulo: 'No Mires Bajo la Cama '
-  descripcion: " Colecci\xF3n de relatos espeluznantes sobre las cosas que acechan
-    donde menos se espera: bajo la cama, detr\xE1s del espejo, o en una habitaci\xF3n
-    cerrada desde hace a\xF1os. Cada historia viene acompa\xF1ada de advertencias
-    y leyendas populares transmitidas en susurros, destinadas a proteger a los desprevenidos\u2026
-    aunque a veces, ni eso basta. "
+  titulo: L1terror
+  descripcion: DesL1terror
   imagenLibro: {fileID: 5616735498906361540, guid: b7f6451fb79fc1a40af403359346a16e, type: 3}
 --- !u!1001 &269353660
 PrefabInstance:
@@ -10462,13 +10444,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   libroID: 42
   tipoLibro: recetas
-  titulo: Hierbas y Sabores de Reinos Olvidados
-  descripcion: "Una gu\xEDa culinaria de ingredientes ex\xF3ticos, provenientes de
-    tierras que solo existen en susurros y mapas incompletos. Flores que cantan al
-    caer la tarde, especias que iluminan la oscuridad y frutas que pueden revivir
-    memorias de vidas pasadas. Este libro recoge las tradiciones de cocineros n\xF3madas
-    y brujas herbolarias que viajaron m\xE1s all\xE1 de los l\xEDmites del mundo
-    conocido."
+  titulo: L1recetas
+  descripcion: DesL1recetas
   imagenLibro: {fileID: 3896356493403189417, guid: 188625c57e7472745b3a8f5af92345b0, type: 3}
 --- !u!1 &413733823
 GameObject:
@@ -10881,12 +10858,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   libroID: 31
   tipoLibro: herbologia
-  titulo: 'Compendio de Plantas Susurrantes '
-  descripcion: "Este voluminoso tomo ilustrado contiene descripciones detalladas
-    de hierbas y flores con propiedades m\xE1gicas. Desde el Nen\xFAfar de Sue\xF1os,
-    que induce visiones prof\xE9ticas, hasta la Zarza de Verdades, capaz de obligar
-    a quien la toca a confesar sus secretos m\xE1s profundos. Cada planta responde
-    de forma distinta seg\xFAn la fase lunar y la intenci\xF3n del recolector. "
+  titulo: L2herbologia
+  descripcion: DesL2herbologia
   imagenLibro: {fileID: -1631939519243446036, guid: 1183374ce8638e648aa61e7fb1225d30, type: 3}
 --- !u!1 &427180779
 GameObject:
@@ -12632,15 +12605,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   libroID: 61
   tipoLibro: terror
-  titulo: Voces entre los Estantes
-  descripcion: "Desde hace siglos, la Biblioteca Montalban se mantiene en pie, aunque
-    nadie recuerda cu\xE1ndo fue la \xFAltima vez que se limpi\xF3 el polvo de sus
-    rincones m\xE1s oscuros. Jacinto, su nuevo bibliotecario nocturno, empieza a
-    notar detalles inquietantes: libros que cambian de lugar, susurros en idiomas
-    que no reconoce, sombras que cruzan los pasillos vac\xEDos. Cuando descubre que
-    algunos libros est\xE1n escritos con sangre y relatan eventos a\xFAn no ocurridos,
-    se da cuenta de que no est\xE1 solo\u2026 y que los estantes, si uno escucha
-    con atenci\xF3n, tienen memoria propia. Y hambre.  "
+  titulo: L2terror
+  descripcion: DesL2terror
   imagenLibro: {fileID: 5616735498906361540, guid: b7f6451fb79fc1a40af403359346a16e, type: 3}
 --- !u!1 &488156713
 GameObject:
@@ -14344,12 +14310,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   libroID: 52
   tipoLibro: historia
-  titulo: "Anales de los Reinos Ca\xEDdos"
-  descripcion: "Cr\xF3nica exhaustiva de las gestas, traiciones y tragedias de civilizaciones
-    desaparecidas. Relata el ascenso y ca\xEDda de reinos que alguna vez dominaron
-    el mundo conocido, dejando tras de s\xED ruinas y reliquias imbuidas de magia
-    antigua. Un compendio de batallas, h\xE9roes olvidados y artefactos que a\xFAn
-    hoy descansan bajo tierra."
+  titulo: L2historia
+  descripcion: DesL2historia
   imagenLibro: {fileID: -5346603835413444142, guid: 7eae84f4ce76c3743b45dc793f96f5d1, type: 3}
 --- !u!1 &564981030
 GameObject:
@@ -16321,6 +16283,7 @@ GameObject:
   - component: {fileID: 641285386}
   - component: {fileID: 641285388}
   - component: {fileID: 641285387}
+  - component: {fileID: 641285389}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -16446,6 +16409,46 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 641285385}
   m_CullTransparentMesh: 1
+--- !u!114 &641285389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 641285385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:bbbbbd888e4a5af41953bddc55cb146e
+    m_TableEntryReference:
+      m_KeyId: 585174761512960
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 641285387}
+        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &652590315
 GameObject:
   m_ObjectHideFlags: 0
@@ -19175,6 +19178,7 @@ GameObject:
   - component: {fileID: 799165593}
   - component: {fileID: 799165595}
   - component: {fileID: 799165594}
+  - component: {fileID: 799165596}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -19300,6 +19304,46 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 799165592}
   m_CullTransparentMesh: 1
+--- !u!114 &799165596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 799165592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:eba59d5703ca49849b92d0a44c0858a2
+    m_TableEntryReference:
+      m_KeyId: 594349944119297
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 799165594}
+        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &800807189
 GameObject:
   m_ObjectHideFlags: 0
@@ -21334,6 +21378,7 @@ GameObject:
   - component: {fileID: 861946250}
   - component: {fileID: 861946252}
   - component: {fileID: 861946251}
+  - component: {fileID: 861946253}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -21459,6 +21504,46 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 861946249}
   m_CullTransparentMesh: 1
+--- !u!114 &861946253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 861946249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:eba59d5703ca49849b92d0a44c0858a2
+    m_TableEntryReference:
+      m_KeyId: 594349944119299
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 861946251}
+        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &863213117
 GameObject:
   m_ObjectHideFlags: 0
@@ -23727,16 +23812,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   libroID: 11
   tipoLibro: misterio
-  titulo: El Caso del Lector Ausente
-  descripcion: "Cuando la exc\xE9ntrica librera Alina recibe una caja sin remitente
-    con una novela desconocida titulada \u201CLa Sala del Silencio\u201D, no imagina
-    el oscuro poder que esconde. En los d\xEDas siguientes, varios clientes que compran
-    el libro desaparecen sin dejar rastro. Las c\xE1maras de seguridad muestran lo
-    imposible: los lectores simplemente se desvanecen en el aire tras pasar la \xFAltima
-    p\xE1gina. Con la polic\xEDa esc\xE9ptica y su tienda en peligro, Alina recurre
-    a su pasado como detective para seguir las pistas que el libro va dejando entre
-    l\xEDneas. Pero cuanto m\xE1s se adentra en su misterio, m\xE1s difusa se vuelve
-    la frontera entre ficci\xF3n y realidad."
+  titulo: L2misterio
+  descripcion: DesL2misterio
   imagenLibro: {fileID: 1488180427319606480, guid: 84566c513d5035342a657db17d95ec1a, type: 3}
 --- !u!1001 &936383139
 PrefabInstance:
@@ -23980,13 +24057,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   libroID: 33
   tipoLibro: herbologia
-  titulo: "Micoperversos: Cr\xF3nicas de Hongos Vengativos"
-  descripcion: "Un inquietante compendio que re\xFAne las historias y recetas de
-    los hongos m\xE1s peligrosos y rencorosos del reino. Desde la Sombra Esporada,
-    que susurra maldiciones al o\xEDdo de quien la pisa, hasta el Set\xF3n Vengativo,
-    capaz de brotar en los lugares m\xE1s inconvenientes cuando alguien guarda rencor.
-    Incluye m\xE9todos para invocar, calmar o, en caso de emergencia, fre\xEDr a
-    estas criaturas con mantequilla encantada."
+  titulo: L3herbologia
+  descripcion: DesL3herbologia
   imagenLibro: {fileID: -1631939519243446036, guid: 1183374ce8638e648aa61e7fb1225d30, type: 3}
 --- !u!1 &956553822
 GameObject:
@@ -24355,6 +24427,7 @@ GameObject:
   - component: {fileID: 969397806}
   - component: {fileID: 969397808}
   - component: {fileID: 969397807}
+  - component: {fileID: 969397809}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -24480,6 +24553,46 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 969397805}
   m_CullTransparentMesh: 1
+--- !u!114 &969397809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 969397805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:eba59d5703ca49849b92d0a44c0858a2
+    m_TableEntryReference:
+      m_KeyId: 594349918953472
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 969397807}
+        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &974170251
 GameObject:
   m_ObjectHideFlags: 0
@@ -27591,6 +27704,7 @@ GameObject:
   - component: {fileID: 1139431214}
   - component: {fileID: 1139431216}
   - component: {fileID: 1139431215}
+  - component: {fileID: 1139431217}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -27716,6 +27830,46 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1139431213}
   m_CullTransparentMesh: 1
+--- !u!114 &1139431217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1139431213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:eba59d5703ca49849b92d0a44c0858a2
+    m_TableEntryReference:
+      m_KeyId: 594349944119296
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1139431215}
+        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &1140089545
 GameObject:
   m_ObjectHideFlags: 0
@@ -28974,12 +29128,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   libroID: 62
   tipoLibro: terror
-  titulo: Susurros Tras la Puerta Cerrada
-  descripcion: "Antolog\xEDa de relatos prohibidos, recopilados por un ermita\xF1o
-    que asegura haber viajado a los rincones m\xE1s oscuros del mundo. Historias
-    de voces que resuenan en habitaciones vac\xEDas, sombras que imitan los movimientos
-    humanos y risas agudas al otro lado del espejo. Un libro que, seg\xFAn se cuenta,
-    nunca permanece quieto donde se deja. "
+  titulo: L3terror
+  descripcion: DesL3terror
   imagenLibro: {fileID: 5616735498906361540, guid: b7f6451fb79fc1a40af403359346a16e, type: 3}
 --- !u!1001 &1171655007
 PrefabInstance:
@@ -29704,12 +29854,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   libroID: 32
   tipoLibro: herbologia
-  titulo: 'Herbarium de Sombras y Lumbres '
-  descripcion: "Una completa recopilaci\xF3n de flora m\xE1gica, separada entre especies
-    curativas y malditas. Incluye advertencias sobre su manipulaci\xF3n y registros
-    de casos en los que estas plantas alteraron no solo el cuerpo, sino la voluntad
-    de quienes las utilizaron. Algunas, se dice, solo pueden cosecharse tras susurrar
-    su nombre verdadero al anochecer. "
+  titulo: L1herbologia
+  descripcion: DesL1herbologia
   imagenLibro: {fileID: -1631939519243446036, guid: 1183374ce8638e648aa61e7fb1225d30, type: 3}
 --- !u!1 &1194765554
 GameObject:
@@ -30006,13 +30152,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   libroID: 3
   tipoLibro: fantasia
-  titulo: Luz de Fuego y Sombras
-  descripcion: " En un mundo dividido entre la luz eterna y la oscuridad sin fin,
-    dos reinos enfrentados luchan por la supremac\xEDa. Una antigua profec\xEDa anuncia
-    la llegada de una joven capaz de invocar tanto la luz como las sombras. Atrapada
-    entre ambos bandos, deber\xE1 descubrir sus or\xEDgenes, forjar alianzas inesperadas
-    y decidir si el equilibrio del mundo merece conservarse\u2026 o romperse para
-    siempre."
+  titulo: L3fantasia
+  descripcion: DesL3fantasia
   imagenLibro: {fileID: 6875664790056892873, guid: 0388c976766e8944db976454d33c8882, type: 3}
 --- !u!1 &1208415373
 GameObject:
@@ -30559,6 +30700,7 @@ GameObject:
   - component: {fileID: 1223050788}
   - component: {fileID: 1223050790}
   - component: {fileID: 1223050789}
+  - component: {fileID: 1223050791}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -30684,6 +30826,46 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1223050787}
   m_CullTransparentMesh: 1
+--- !u!114 &1223050791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1223050787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:eba59d5703ca49849b92d0a44c0858a2
+    m_TableEntryReference:
+      m_KeyId: 594349944119298
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1223050789}
+        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+  references:
+    version: 2
+    RefIds: []
 --- !u!1001 &1226212420
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31045,12 +31227,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   libroID: 51
   tipoLibro: historia
-  titulo: "La Verdadera Historia del Eclipse Carmes\xED"
-  descripcion: "Investigaci\xF3n rigurosa sobre el eclipse que detuvo el tiempo durante
-    siete d\xEDas, hace siglos. Los registros hablan de c\xF3mo la magia se alter\xF3,
-    de los portales que se abrieron y de criaturas que cruzaron el velo. Incluye
-    testimonios de supervivientes y fragmentos de textos prohibidos que narran c\xF3mo
-    aquel suceso cambi\xF3 para siempre el curso de la historia m\xE1gica."
+  titulo: L1historia
+  descripcion: DesL1historia
   imagenLibro: {fileID: -5346603835413444142, guid: 7eae84f4ce76c3743b45dc793f96f5d1, type: 3}
 --- !u!1 &1231850361
 GameObject:
@@ -39090,13 +39268,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   libroID: 2
   tipoLibro: fantasia
-  titulo: "El Guardi\xE1n del Bosque Azul"
-  descripcion: "En los rincones olvidados de un bosque encantado, una criatura ancestral
-    custodia un secreto que podr\xEDa cambiar el destino de todo el reino. Antiguas
-    leyendas hablan de un artefacto de inmenso poder, oculto entre \xE1rboles que
-    susurran nombres y senderos que se desvanecen. Solo los valientes que logren
-    descifrar las pistas del Guardi\xE1n podr\xE1n descubrir la verdad y decidir
-    si ese poder merece ser liberado. "
+  titulo: L2fantasia
+  descripcion: DesL2fantasia
   imagenLibro: {fileID: 6875664790056892873, guid: 0388c976766e8944db976454d33c8882, type: 3}
 --- !u!1 &1661033725
 GameObject:
@@ -39656,12 +39829,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   libroID: 41
   tipoLibro: recetas
-  titulo: Banquete de Lunas Llenas
-  descripcion: "Recetario sagrado de los clanes nocturnos, escrito bajo la luz de
-    incontables lunas llenas. Cada plato no solo sacia el hambre, sino que desencadena
-    antiguos efectos m\xE1gicos: dulces que provocan sue\xF1os prof\xE9ticos, guisos
-    capaces de ahuyentar esp\xEDritus y postres que curan el alma de los afligidos.
-    Una invitaci\xF3n a cocinar con la magia que respira en cada ingrediente."
+  titulo: L2recetas
+  descripcion: DesL2recetas
   imagenLibro: {fileID: 3896356493403189417, guid: 188625c57e7472745b3a8f5af92345b0, type: 3}
 --- !u!1 &1684985903
 GameObject:
@@ -41089,12 +41258,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   libroID: 21
   tipoLibro: pociones
-  titulo: "Ung\xFCentos y Ung\xFCencias del Bosque Olvidado"
-  descripcion: "Un tratado sobre b\xE1lsamos, pomadas y lociones de aplicaci\xF3n
-    m\xE1gica. Desde cremas que revelan seres invisibles hasta ung\xFCentos que permiten
-    caminar sin dejar huella, este libro recopila saberes de herbolarias errantes
-    y druidas ermita\xF1os. Se dice que las p\xE1ginas est\xE1n hechas de hojas reales,
-    vivas, que reaccionan al tacto de quien tiene intenci\xF3n de curar... o de cazar."
+  titulo: L1pociones
+  descripcion: DesL1pociones
   imagenLibro: {fileID: -4721226998713458786, guid: e1378f9ebdcd9394db7bee5682767384, type: 3}
 --- !u!1 &1721280897
 GameObject:
@@ -41964,12 +42129,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   libroID: 13
   tipoLibro: misterio
-  titulo: "Cr\xF3nicas del C\xEDrculo Silencioso\r"
-  descripcion: "En una ciudad aparentemente tranquila, una sociedad secreta gobierna
-    desde las sombras. Un diario inacabado, dejado por un investigador desaparecido,
-    contiene las primeras pistas. Misteriosas desapariciones, mensajes en clave y
-    s\xEDmbolos olvidados apuntan a un poder que podr\xEDa alterar el curso de la
-    historia si alguien logra desentra\xF1ar el misterio."
+  titulo: L3misterio
+  descripcion: DesL3misterio
   imagenLibro: {fileID: 1488180427319606480, guid: 84566c513d5035342a657db17d95ec1a, type: 3}
 --- !u!1 &1741889277
 GameObject:
@@ -42855,16 +43016,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   libroID: 1
   tipoLibro: fantasia
-  titulo: Las Runas de Salakhar
-  descripcion: "En el Reino de Teralthor, donde el uso de la magia est\xE1 penado
-    con la muerte, Liora, una aprendiz de herborista, encuentra por accidente un
-    grimorio enterrado entre las ra\xEDces de un \xE1rbol milenario. Las p\xE1ginas,
-    cubiertas de s\xEDmbolos antiguos que brillan al tacto, le susurran secretos
-    olvidados y la conectan con Salakhar, una deidad exiliada del plano mortal. Mientras
-    Liora descubre que el libro responde a su voluntad, los cazadores de hechiceros
-    comienzan a acercarse. Pronto deber\xE1 decidir si quemar el grimorio y vivir
-    una vida normal\u2026 o desatar una magia capaz de resquebrajar el orden del
-    mundo.\n\n"
+  titulo: L1fantasia
+  descripcion: DesL1fantasia
   imagenLibro: {fileID: 6875664790056892873, guid: 0388c976766e8944db976454d33c8882, type: 3}
 --- !u!1 &1774701307
 GameObject:
@@ -46375,6 +46528,7 @@ GameObject:
   - component: {fileID: 1982164395}
   - component: {fileID: 1982164397}
   - component: {fileID: 1982164396}
+  - component: {fileID: 1982164398}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -46500,6 +46654,46 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1982164394}
   m_CullTransparentMesh: 1
+--- !u!114 &1982164398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1982164394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:eba59d5703ca49849b92d0a44c0858a2
+    m_TableEntryReference:
+      m_KeyId: 594349944119300
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1982164396}
+        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &1992882254
 GameObject:
   m_ObjectHideFlags: 0
@@ -46793,6 +46987,7 @@ GameObject:
   - component: {fileID: 1996254827}
   - component: {fileID: 1996254829}
   - component: {fileID: 1996254828}
+  - component: {fileID: 1996254830}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -46918,6 +47113,46 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1996254826}
   m_CullTransparentMesh: 1
+--- !u!114 &1996254830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1996254826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:bbbbbd888e4a5af41953bddc55cb146e
+    m_TableEntryReference:
+      m_KeyId: 585820826935296
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1996254828}
+        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &1997312399
 GameObject:
   m_ObjectHideFlags: 0
@@ -50831,6 +51066,7 @@ GameObject:
   - component: {fileID: 2145585176}
   - component: {fileID: 2145585178}
   - component: {fileID: 2145585177}
+  - component: {fileID: 2145585179}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -50956,6 +51192,46 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2145585175}
   m_CullTransparentMesh: 1
+--- !u!114 &2145585179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2145585175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:eba59d5703ca49849b92d0a44c0858a2
+    m_TableEntryReference:
+      m_KeyId: 594349948313600
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2145585177}
+        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+  references:
+    version: 2
+    RefIds: []
 --- !u!1001 &1563617112494432392
 PrefabInstance:
   m_ObjectHideFlags: 0

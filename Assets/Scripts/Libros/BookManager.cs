@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -20,15 +21,13 @@ public class BookManager : MonoBehaviour
     public TMP_Text tituloConfirmarSeleccion;
 
     public Button botonConfirmar;
-    public Button botonSiguiente;  
-    public Button botonAnterior; 
+    public Button botonSiguiente;
+    public Button botonAnterior;
 
     private CharacterSpawn characterSpawn;
 
-    private List<BookData> librosMismaSeccion = new List<BookData>(); 
-    private int indiceLibroActual = 0; 
-
-
+    private List<BookData> librosMismaSeccion = new List<BookData>();
+    private int indiceLibroActual = 0;
 
     private void Awake()
     {
@@ -37,7 +36,7 @@ public class BookManager : MonoBehaviour
         else
             Destroy(gameObject);
 
-        characterSpawn = FindFirstObjectByType<CharacterSpawn>();
+        characterSpawn = FindObjectOfType<CharacterSpawn>();
         if (characterSpawn == null)
             Debug.LogError("CharacterSpawn no encontrado por BookManager.");
     }
@@ -53,7 +52,7 @@ public class BookManager : MonoBehaviour
         libroActual = libro;
 
         librosMismaSeccion.Clear();
-        BookData[] todosLosLibros = FindObjectsByType<BookData>(FindObjectsSortMode.None);
+        BookData[] todosLosLibros = FindObjectsOfType<BookData>();
 
         foreach (BookData b in todosLosLibros)
         {
@@ -67,22 +66,18 @@ public class BookManager : MonoBehaviour
             {
                 librosMismaSeccion.Add(b);
             }
-            
         }
 
-        librosMismaSeccion = librosMismaSeccion
-            .OrderBy(b => b.transform.position.x) 
-            .ToList();
-
+        librosMismaSeccion = librosMismaSeccion.OrderBy(b => b.transform.position.x).ToList();
         indiceLibroActual = librosMismaSeccion.IndexOf(libro);
-
 
         if (indiceLibroActual == -1)
         {
             libroActual = libro;
             panelInfoLibro.SetActive(true);
-            tituloTexto.text = libroActual.titulo;
-            descripcionTexto.text = libroActual.descripcion;
+
+            StartCoroutine(libroActual.GetTituloLocalized(titulo => tituloTexto.text = titulo));
+            StartCoroutine(libroActual.GetDescripcionLocalized(desc => descripcionTexto.text = desc));
             imagenLibroUI.sprite = libroActual.imagenLibro;
 
             botonAnterior.interactable = false;
@@ -92,7 +87,6 @@ public class BookManager : MonoBehaviour
         {
             MostrarLibroPorIndice(indiceLibroActual);
         }
-
     }
 
     private void MostrarLibroPorIndice(int indice)
@@ -102,8 +96,9 @@ public class BookManager : MonoBehaviour
         libroActual = librosMismaSeccion[indice];
 
         panelInfoLibro.SetActive(true);
-        tituloTexto.text = libroActual.titulo;
-        descripcionTexto.text = libroActual.descripcion;
+
+        StartCoroutine(libroActual.GetTituloLocalized(titulo => tituloTexto.text = titulo));
+        StartCoroutine(libroActual.GetDescripcionLocalized(desc => descripcionTexto.text = desc));
         imagenLibroUI.sprite = libroActual.imagenLibro;
 
         botonAnterior.interactable = indice > 0;
@@ -141,7 +136,8 @@ public class BookManager : MonoBehaviour
         TaskManager.instance.OcultarListaTareas();
         panelConfirmarSeleccion.SetActive(true);
         imagenConfirmarSeleccion.sprite = libroActual.imagenLibro;
-        tituloConfirmarSeleccion.text = libroActual.titulo;
+
+        StartCoroutine(libroActual.GetTituloLocalized(titulo => tituloConfirmarSeleccion.text = titulo));
     }
 
     public void HabilitarBotonConfirmacion()
@@ -162,7 +158,7 @@ public class BookManager : MonoBehaviour
     public void RecomendarLibro()
     {
         panelConfirmarSeleccion.SetActive(false);
-     
+
         GameManager.instance.VerificarRecomendacion(libroActual);
 
         if (characterSpawn != null)

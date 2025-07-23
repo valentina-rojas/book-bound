@@ -10,63 +10,47 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
-  m_Name: IU General Shared Data
+  m_Name: Generos Shared Data
   m_EditorClassIdentifier: 
-  m_TableCollectionName: IU General
-  m_TableCollectionNameGuidString: bbbbbd888e4a5af41953bddc55cb146e
+  m_TableCollectionName: Generos
+  m_TableCollectionNameGuidString: eba59d5703ca49849b92d0a44c0858a2
   m_Entries:
-  - m_Id: 290594660352
-    m_Key: IU000
+  - m_Id: 594349918953472
+    m_Key: fantasia
     m_Metadata:
       m_Items: []
-  - m_Id: 368361250816
-    m_Key: IU001
+  - m_Id: 594349944119296
+    m_Key: misterio
     m_Metadata:
       m_Items: []
-  - m_Id: 457624428544
-    m_Key: IU002
+  - m_Id: 594349944119297
+    m_Key: pociones
     m_Metadata:
       m_Items: []
-  - m_Id: 1174053494784
-    m_Key: IU003
+  - m_Id: 594349944119298
+    m_Key: herbologia
     m_Metadata:
       m_Items: []
-  - m_Id: 2276496941056
-    m_Key: IU004
+  - m_Id: 594349944119299
+    m_Key: recetas
     m_Metadata:
       m_Items: []
-  - m_Id: 3582481571840
-    m_Key: IU005
+  - m_Id: 594349944119300
+    m_Key: historia
     m_Metadata:
       m_Items: []
-  - m_Id: 3673380528128
-    m_Key: IU006
-    m_Metadata:
-      m_Items: []
-  - m_Id: 3845875474432
-    m_Key: IU007
-    m_Metadata:
-      m_Items: []
-  - m_Id: 4010208305152
-    m_Key: IU008
-    m_Metadata:
-      m_Items: []
-  - m_Id: 4131469828096
-    m_Key: IU009
-    m_Metadata:
-      m_Items: []
-  - m_Id: 4265842745344
-    m_Key: IU010
+  - m_Id: 594349948313600
+    m_Key: terror
     m_Metadata:
       m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
-    rid: 8447689071596405004
+    rid: 8447689108922826752
   references:
     version: 2
     RefIds:
-    - rid: 8447689071596405004
+    - rid: 8447689108922826752
       type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
       data:
-        m_CustomEpoch: 1753148164389
+        m_CustomEpoch: 1753283346839

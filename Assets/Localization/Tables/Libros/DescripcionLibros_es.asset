@@ -1,0 +1,194 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: DescripcionLibros_es
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: es
+  m_SharedData: {fileID: 11400000, guid: 57b41d0b9577b5847a5faa5415505970, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 55986266112
+    m_Localized: "En el Reino de Teralthor, donde el uso de la magia est\xE1 penado
+      con la muerte, Liora, una aprendiz de herborista, encuentra por accidente un
+      grimorio enterrado entre las ra\xEDces de un \xE1rbol milenario. Las p\xE1ginas,
+      cubiertas de s\xEDmbolos antiguos que brillan al tacto, le susurran secretos
+      olvidados y la conectan con Salakhar, una deidad exiliada del plano mortal.
+      Mientras Liora descubre que el libro responde a su voluntad, los cazadores
+      de hechiceros comienzan a acercarse. Pronto deber\xE1 decidir si quemar el
+      grimorio y vivir una vida normal\u2026 o desatar una magia capaz de resquebrajar
+      el orden del mundo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56003043328
+    m_Localized: "En los rincones olvidados de un bosque encantado, una criatura
+      ancestral custodia un secreto que podr\xEDa cambiar el destino de todo el reino.
+      Antiguas leyendas hablan de un artefacto de inmenso poder, oculto entre \xE1rboles
+      que susurran nombres y senderos que se desvanecen. Solo los valientes que logren
+      descifrar las pistas del Guardi\xE1n podr\xE1n descubrir la verdad y decidir
+      si ese poder merece ser liberado."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56003043329
+    m_Localized: "En un mundo dividido entre la luz eterna y la oscuridad sin fin,
+      dos reinos enfrentados luchan por la supremac\xEDa. Una antigua profec\xEDa
+      anuncia la llegada de una joven capaz de invocar tanto la luz como las sombras.
+      Atrapada entre ambos bandos, deber\xE1 descubrir sus or\xEDgenes, forjar alianzas
+      inesperadas y decidir si el equilibrio del mundo merece conservarse\u2026 o
+      romperse para siempre."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56003043330
+    m_Localized: "Una novela de enigmas, sociedades ocultas y libros malditos. Cuando
+      una joven bibliotecaria hereda un tomo prohibido, se ve envuelta en una conspiraci\xF3n
+      antigua que amenaza con resurgir. Pistas ocultas entre las p\xE1ginas, mensajes
+      en tinta invisible y claves escondidas en la arquitectura de su propia ciudad
+      la guiar\xE1n hacia una verdad que muchos murieron por ocultar."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56003043331
+    m_Localized: "Cuando la exc\xE9ntrica librera Alina recibe una caja sin remitente
+      con una novela desconocida titulada \u201CLa Sala del Silencio\u201D, no imagina
+      el oscuro poder que esconde. En los d\xEDas siguientes, varios clientes que
+      compran el libro desaparecen sin dejar rastro. Las c\xE1maras de seguridad
+      muestran lo imposible: los lectores simplemente se desvanecen en el aire tras
+      pasar la \xFAltima p\xE1gina. Con la polic\xEDa esc\xE9ptica y su tienda en
+      peligro, Alina recurre a su pasado como detective para seguir las pistas que
+      el libro va dejando entre l\xEDneas. Pero cuanto m\xE1s se adentra en su misterio,
+      m\xE1s difusa se vuelve la frontera entre ficci\xF3n y realidad."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56003043332
+    m_Localized: "En una ciudad aparentemente tranquila, una sociedad secreta gobierna
+      desde las sombras. Un diario inacabado, dejado por un investigador desaparecido,
+      contiene las primeras pistas. Misteriosas desapariciones, mensajes en clave
+      y s\xEDmbolos olvidados apuntan a un poder que podr\xEDa alterar el curso de
+      la historia si alguien logra desentra\xF1ar el misterio."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56003043333
+    m_Localized: "Un tratado sobre b\xE1lsamos, pomadas y lociones de aplicaci\xF3n
+      m\xE1gica. Desde cremas que revelan seres invisibles hasta ung\xFCentos que
+      permiten caminar sin dejar huella, este libro recopila saberes de herbolarias
+      errantes y druidas ermita\xF1os. Se dice que las p\xE1ginas est\xE1n hechas
+      de hojas reales, vivas, que reaccionan al tacto de quien tiene intenci\xF3n
+      de curar... o de cazar."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56003043334
+    m_Localized: "Un libro ardiente \u2014literalmente\u2014 que se mantiene tibio
+      al tacto. Contiene recetas de pociones que despiertan la fuerza interior, aumentan
+      el valor en combate y, en algunos casos, provocan estallidos emocionales incontrolables.
+      Cada cap\xEDtulo est\xE1 basado en las emociones humanas b\xE1sicas: ira, deseo,
+      miedo, esperanza. Ideal para alquimistas de guerra, b\xE1rbaros encantadores
+      y poetas con un lado peligroso."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56003043335
+    m_Localized: "Este tomo es un compendio de pociones que permiten alterar la percepci\xF3n
+      del mundo, desde ver el paso de los muertos hasta escuchar los pensamientos
+      de las plantas. Redactado por un alquimista que pas\xF3 veinte a\xF1os en completo
+      aislamiento en los Bosques Silenciosos, el libro ofrece recetas solo para quienes
+      se atrevan a mirar m\xE1s all\xE1 del velo de la realidad. No apto para lectores
+      impresionables o ansiosos por conservar su cordura."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56003043336
+    m_Localized: "Una completa recopilaci\xF3n de flora m\xE1gica, separada entre
+      especies curativas y malditas. Incluye advertencias sobre su manipulaci\xF3n
+      y registros de casos en los que estas plantas alteraron no solo el cuerpo,
+      sino la voluntad de quienes las utilizaron. Algunas, se dice, solo pueden cosecharse
+      tras susurrar su nombre verdadero al anochecer."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56003043337
+    m_Localized: "Este voluminoso tomo ilustrado contiene descripciones detalladas
+      de hierbas y flores con propiedades m\xE1gicas. Desde el Nen\xFAfar de Sue\xF1os,
+      que induce visiones prof\xE9ticas, hasta la Zarza de Verdades, capaz de obligar
+      a quien la toca a confesar sus secretos m\xE1s profundos. Cada planta responde
+      de forma distinta seg\xFAn la fase lunar y la intenci\xF3n del recolector."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56003043338
+    m_Localized: "Un inquietante compendio que re\xFAne las historias y recetas de
+      los hongos m\xE1s peligrosos y rencorosos del reino. Desde la Sombra Esporada,
+      que susurra maldiciones al o\xEDdo de quien la pisa, hasta el Set\xF3n Vengativo,
+      capaz de brotar en los lugares m\xE1s inconvenientes cuando alguien guarda
+      rencor. Incluye m\xE9todos para invocar, calmar o, en caso de emergencia, fre\xEDr
+      a estas criaturas con mantequilla encantada."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56003043339
+    m_Localized: "Una gu\xEDa culinaria de ingredientes ex\xF3ticos, provenientes
+      de tierras que solo existen en susurros y mapas incompletos. Flores que cantan
+      al caer la tarde, especias que iluminan la oscuridad y frutas que pueden revivir
+      memorias de vidas pasadas. Este libro recoge las tradiciones de cocineros n\xF3madas
+      y brujas herbolarias que viajaron m\xE1s all\xE1 de los l\xEDmites del mundo
+      conocido."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56003043340
+    m_Localized: "Recetario sagrado de los clanes nocturnos, escrito bajo la luz
+      de incontables lunas llenas. Cada plato no solo sacia el hambre, sino que desencadena
+      antiguos efectos m\xE1gicos: dulces que provocan sue\xF1os prof\xE9ticos, guisos
+      capaces de ahuyentar esp\xEDritus y postres que curan el alma de los afligidos.
+      Una invitaci\xF3n a cocinar con la magia que respira en cada ingrediente."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56003043341
+    m_Localized: "Investigaci\xF3n rigurosa sobre el eclipse que detuvo el tiempo
+      durante siete d\xEDas, hace siglos. Los registros hablan de c\xF3mo la magia
+      se alter\xF3, de los portales que se abrieron y de criaturas que cruzaron el
+      velo. Incluye testimonios de supervivientes y fragmentos de textos prohibidos
+      que narran c\xF3mo aquel suceso cambi\xF3 para siempre el curso de la historia
+      m\xE1gica."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56003043342
+    m_Localized: "Cr\xF3nica exhaustiva de las gestas, traiciones y tragedias de
+      civilizaciones desaparecidas. Relata el ascenso y ca\xEDda de reinos que alguna
+      vez dominaron el mundo conocido, dejando tras de s\xED ruinas y reliquias imbuidas
+      de magia antigua. Un compendio de batallas, h\xE9roes olvidados y artefactos
+      que a\xFAn hoy descansan bajo tierra."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56003043343
+    m_Localized: "Colecci\xF3n de relatos espeluznantes sobre las cosas que acechan
+      donde menos se espera: bajo la cama, detr\xE1s del espejo, o en una habitaci\xF3n
+      cerrada desde hace a\xF1os. Cada historia viene acompa\xF1ada de advertencias
+      y leyendas populares transmitidas en susurros, destinadas a proteger a los
+      desprevenidos\u2026 aunque a veces, ni eso basta."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56003043344
+    m_Localized: "Desde hace siglos, la Biblioteca Montalban se mantiene en pie,
+      aunque nadie recuerda cu\xE1ndo fue la \xFAltima vez que se limpi\xF3 el polvo
+      de sus rincones m\xE1s oscuros. Jacinto, su nuevo bibliotecario nocturno, empieza
+      a notar detalles inquietantes: libros que cambian de lugar, susurros en idiomas
+      que no reconoce, sombras que cruzan los pasillos vac\xEDos. Cuando descubre
+      que algunos libros est\xE1n escritos con sangre y relatan eventos a\xFAn no
+      ocurridos, se da cuenta de que no est\xE1 solo\u2026 y que los estantes, si
+      uno escucha con atenci\xF3n, tienen memoria propia. Y hambre."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56003043345
+    m_Localized: "Antolog\xEDa de relatos prohibidos, recopilados por un ermita\xF1o
+      que asegura haber viajado a los rincones m\xE1s oscuros del mundo. Historias
+      de voces que resuenan en habitaciones vac\xEDas, sombras que imitan los movimientos
+      humanos y risas agudas al otro lado del espejo. Un libro que, seg\xFAn se cuenta,
+      nunca permanece quieto donde se deja."
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

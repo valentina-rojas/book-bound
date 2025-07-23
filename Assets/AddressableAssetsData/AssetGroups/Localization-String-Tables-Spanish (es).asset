@@ -41,6 +41,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-es
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5e7f5e77834f17742872215dede496e2
+    m_Address: TitulosLibros_es
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 77011aae46963a34bbb4e0668b41cf28
     m_Address: HintsPortada_es
     m_ReadOnly: 1
@@ -57,6 +63,18 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b46978e904248784ba4e0804fd6f46e2
     m_Address: HintsHechizos_es
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b9e54790154cbfb479c018f9566b896f
+    m_Address: Generos_es
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dbb4c1e187cf9b844abdd1423c30e3a7
+    m_Address: DescripcionLibros_es
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-es

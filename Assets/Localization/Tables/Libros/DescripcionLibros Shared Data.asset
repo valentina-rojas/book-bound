@@ -1,0 +1,104 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: DescripcionLibros Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: DescripcionLibros
+  m_TableCollectionNameGuidString: 57b41d0b9577b5847a5faa5415505970
+  m_Entries:
+  - m_Id: 55986266112
+    m_Key: DesL1fantasia
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56003043328
+    m_Key: DesL2fantasia
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56003043329
+    m_Key: DesL3fantasia
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56003043330
+    m_Key: DesL1misterio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56003043331
+    m_Key: DesL2misterio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56003043332
+    m_Key: DesL3misterio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56003043333
+    m_Key: DesL1pociones
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56003043334
+    m_Key: DesL2pociones
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56003043335
+    m_Key: DesL3pociones
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56003043336
+    m_Key: DesL1herbologia
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56003043337
+    m_Key: DesL2herbologia
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56003043338
+    m_Key: DesL3herbologia
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56003043339
+    m_Key: DesL1recetas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56003043340
+    m_Key: DesL2recetas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56003043341
+    m_Key: DesL1historia
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56003043342
+    m_Key: DesL2historia
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56003043343
+    m_Key: DesL1terror
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56003043344
+    m_Key: DesL2terror
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56003043345
+    m_Key: DesL3terror
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 8447689108922826794
+  references:
+    version: 2
+    RefIds:
+    - rid: 8447689108922826794
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1753286088525

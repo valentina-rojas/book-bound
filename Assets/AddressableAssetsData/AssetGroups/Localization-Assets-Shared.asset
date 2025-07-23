@@ -15,6 +15,11 @@ MonoBehaviour:
   m_GroupName: Localization-Assets-Shared
   m_GUID: 5714861eb78a8034f8d44d0ddd06f2e4
   m_SerializeEntries:
+  - m_GUID: 57b41d0b9577b5847a5faa5415505970
+    m_Address: Assets/Localization/Tables/Libros/DescripcionLibros Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 6ad3930aa06c0e148a91dbe0578eed85
     m_Address: Assets/Localization/Tables/Tareas Shared Data.asset
     m_ReadOnly: 1
@@ -42,6 +47,16 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d5f625df8434efa44bbb03f688226d4a
     m_Address: Assets/Localization/Tables/PedidosEspeciales Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e156b153c01272446b7be2288cc76b20
+    m_Address: Assets/Localization/Tables/Libros/TitulosLibros Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: eba59d5703ca49849b92d0a44c0858a2
+    m_Address: Assets/Localization/Tables/Generos Shared Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

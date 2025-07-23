@@ -28,6 +28,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-en-US
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 516015a441ea70f48b6b99f10e9414c1
+    m_Address: DescripcionLibros_en-US
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en-US
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 5c69e36198570a842bb72341a7b95f21
     m_Address: CatDialogue_en-US
     m_ReadOnly: 1
@@ -37,6 +43,12 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 8431b49b9435b9446b8883d2cbe26fbd
     m_Address: HintsHechizos_en-US
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en-US
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8821c688c6f10e54197d5cd29b12c4ef
+    m_Address: Generos_en-US
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en-US
@@ -53,6 +65,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-en-US
     - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bc3e375ea59427e4fbe97cc3001d2758
+    m_Address: TitulosLibros_en-US
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en-US
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f09b3c82a2dd182488fd5e8ce7e491fc
     m_Address: IU General_en-US
