@@ -6,6 +6,7 @@ using System.Collections;
 
 public class BookData : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
+    #region Datos del libro
     public int libroID;
     public string tipoLibro;
 
@@ -13,10 +14,14 @@ public class BookData : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     public string descripcion;
 
     public Sprite imagenLibro;
+    #endregion
 
+    #region Componentes internos
     private Image image;
     private Color originalColor;
+    #endregion
 
+    #region Unity Events
     private void Start()
     {
         image = GetComponent<Image>();
@@ -37,7 +42,9 @@ public class BookData : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     {
         image.color = originalColor;
     }
+    #endregion
 
+    #region Localización
     public IEnumerator GetTituloLocalized(System.Action<string> callback)
     {
         if (string.IsNullOrEmpty(titulo))
@@ -53,13 +60,12 @@ public class BookData : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         };
 
         var handle = localizedString.GetLocalizedStringAsync();
-
         yield return handle;
 
         if (handle.Status == UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationStatus.Succeeded)
             callback?.Invoke(handle.Result);
         else
-            callback?.Invoke(titulo); 
+            callback?.Invoke(titulo);
     }
 
     public IEnumerator GetDescripcionLocalized(System.Action<string> callback)
@@ -77,12 +83,12 @@ public class BookData : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         };
 
         var handle = localizedString.GetLocalizedStringAsync();
-
         yield return handle;
 
         if (handle.Status == UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationStatus.Succeeded)
             callback?.Invoke(handle.Result);
         else
-            callback?.Invoke(descripcion); 
+            callback?.Invoke(descripcion);
     }
+    #endregion
 }

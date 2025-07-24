@@ -150,37 +150,77 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tipoDePedido: 0
   dialogueLinesInicio:
-  - "Ah, por fin\u2026 Una biblioteca con car\xE1cter."
-  - "No como esas modernas con luz m\xE1gica fr\xEDa."
-  - "Estoy buscando El Guardi\xE1n del Bosque Azul."
-  - "Las leyendas dicen que su autor nunca volvi\xF3 del bosque tras escribirlo."
-  - "Me parece encantador, \xBFno?"
-  - "Necesito comprender la conexi\xF3n entre el artefacto y el linaje de los Guardianes."
-  - Solo ese libro lo detalla.
-  - "\xBFLo tienes?"
+  - Ogro_Inicio_1
+  - Ogro_Inicio_2
+  - Ogro_Inicio_3
+  - Ogro_Inicio_4
+  - Ogro_Inicio_5
+  - Ogro_Inicio_6
+  - Ogro_Inicio_7
+  - Ogro_Inicio_8
+  - Ogro_Inicio_9
   dialogueLinesBuena:
-  - "Lo encontraste\u2026"
-  - "\xBFLo sentiste tambi\xE9n?"
-  - Ese leve temblor cuando lo tocaste.
-  - "Est\xE1 vivo, de alguna forma."
-  - Gracias.
+  - Ogro_Buena_1
+  - Ogro_Buena_2
+  - Ogro_Buena_3
+  - Ogro_Buena_4
+  - Ogro_Buena_5
   dialogueLinesMala:
-  - "Interesante\u2026"
-  - "pero no lo que ped\xED."
-  - "\xBFTal vez el bosque te susurr\xF3 mal?\r"
+  - Ogro_Mala_1
+  - Ogro_Mala_2
+  - Ogro_Mala_3
   spriteRespuestaBuena: {fileID: 1977612217, guid: a66e3af046e5eca408074cba8de23bb9, type: 3}
   spriteRespuestaMala: {fileID: 1212924309, guid: a66e3af046e5eca408074cba8de23bb9, type: 3}
   libroDeseadoID: 2
   tipoPreferido: fantasia
-  tituloLibroPrestado: 
   nombreDelCliente: Ogro
   descripcionPedido: "Solicit\xF3 \"El Guardi\xE1n del Bosque Azul\""
   stickersRequeridos: 
   tituloLibroPortada: 
+  tituloLibroPortadaKey:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   hechizoSolicitado: 0
+  tituloLibroHechizadoKey:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   libroDonadoID: 0
   libroDevueltoID: 0
   tituloLibroDevuelto: 
+  tituloLibroDevueltoKey:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  tituloLibroPrestado: 
+  tituloLibroPrestadoKey:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  references:
+    version: 2
+    RefIds: []
 --- !u!114 &1177564428679998758
 MonoBehaviour:
   m_ObjectHideFlags: 0

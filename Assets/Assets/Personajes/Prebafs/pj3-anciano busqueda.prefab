@@ -150,36 +150,74 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tipoDePedido: 0
   dialogueLinesInicio:
-  - Buen dia...
-  - "necesito ese libro\u2026"
-  - uno lleno de cuentos para asustar a los mocosos que se esconden bajo mi cama.
-  - No recuerdo el nombre...
-  - "Pero tenia historias de manos fr\xEDas, risas raras en los armarios... "
-  - "y cosas que se asoman desde debajo del colch\xF3n."
+  - Anciano_Inicio_1
+  - Anciano_Inicio_2
+  - Anciano_Inicio_3
+  - Anciano_Inicio_4
+  - Anciano_Inicio_5
+  - Anciano_Inicio_6
   dialogueLinesBuena:
-  - "\xA1Justo lo que necesitaba!"
-  - " Jejeje\u2026 "
-  - "perfecto para asustar a esos mocosos et\xE9reos que me chillan en los tobillos
-    a medianoche."
-  - "Si sobrevivo hasta ma\xF1ana, paso a contarte c\xF3mo fue."
+  - Anciano_Buena_1
+  - Anciano_Buena_2
+  - Anciano_Buena_3
+  - Anciano_Buena_4
   dialogueLinesMala:
-  - "A ver\u2026"
-  - "\xBFy esto qu\xE9 es?..."
-  - como me dejen un zapato bajo la cama esta noche, te maldigo las pantuflas.
+  - Anciano_Mala_1
+  - Anciano_Mala_2
+  - Anciano_Mala_3
   spriteRespuestaBuena: {fileID: -310598990, guid: 1eb3ebefd4ee59a4a86fff92b07faf47, type: 3}
   spriteRespuestaMala: {fileID: 2020737730, guid: 1eb3ebefd4ee59a4a86fff92b07faf47, type: 3}
   libroDeseadoID: 63
   tipoPreferido: terror
-  tituloLibroPrestado: 
   nombreDelCliente: Anciano
   descripcionPedido: "Solicit\xF3 algo para asustar a los \"mocosos\" debajo de su
     cama"
   stickersRequeridos: 
   tituloLibroPortada: 
+  tituloLibroPortadaKey:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   hechizoSolicitado: 0
+  tituloLibroHechizadoKey:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   libroDonadoID: 0
   libroDevueltoID: 0
   tituloLibroDevuelto: 
+  tituloLibroDevueltoKey:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  tituloLibroPrestado: 
+  tituloLibroPrestadoKey:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  references:
+    version: 2
+    RefIds: []
 --- !u!114 &1136955672045997557
 MonoBehaviour:
   m_ObjectHideFlags: 0

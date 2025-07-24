@@ -150,24 +150,63 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tipoDePedido: 6
   dialogueLinesInicio:
-  - Te traigo esto
+  - "Elfo_Devoluci\xF3n_1"
   dialogueLinesBuena:
-  - Gracias
+  - "Elfo_Devoluci\xF3n_2"
   dialogueLinesMala:
   - ...
   spriteRespuestaBuena: {fileID: 1485804103, guid: 716730f6229ca4f4fa5108dfe4366d6a, type: 3}
   spriteRespuestaMala: {fileID: -165214668, guid: 716730f6229ca4f4fa5108dfe4366d6a, type: 3}
   libroDeseadoID: 3
   tipoPreferido: fantasia
-  tituloLibroPrestado: 
   nombreDelCliente: Elfo
   descripcionPedido: "Devolvi\xF3 un libro"
   stickersRequeridos: 
   tituloLibroPortada: 
+  tituloLibroPortadaKey:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   hechizoSolicitado: 0
+  tituloLibroHechizadoKey:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   libroDonadoID: 0
   libroDevueltoID: 3
   tituloLibroDevuelto: Luz de Fuego y Sombras
+  tituloLibroDevueltoKey:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  tituloLibroPrestado: 
+  tituloLibroPrestadoKey:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  references:
+    version: 2
+    RefIds: []
 --- !u!114 &1177564428679998758
 MonoBehaviour:
   m_ObjectHideFlags: 0

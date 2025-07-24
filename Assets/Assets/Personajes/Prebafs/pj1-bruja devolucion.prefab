@@ -150,24 +150,63 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tipoDePedido: 6
   dialogueLinesInicio:
-  - Vengo a devolver esto
+  - "Bruja_Devoluci\xF3n_1"
   dialogueLinesBuena:
-  - "Fue muy \xFAtil, volver\xE9 otra vez"
+  - "Bruja_Devoluci\xF3n_2"
   dialogueLinesMala:
   - .....
   spriteRespuestaBuena: {fileID: -990964772, guid: d65f33f931bba9c4cbab03bfee64aa50, type: 3}
   spriteRespuestaMala: {fileID: -1670925046, guid: d65f33f931bba9c4cbab03bfee64aa50, type: 3}
   libroDeseadoID: 33
   tipoPreferido: herbologia
-  tituloLibroPrestado: 
   nombreDelCliente: Bruja
   descripcionPedido: "Devolvi\xF3 un libro"
   stickersRequeridos: 
   tituloLibroPortada: 
+  tituloLibroPortadaKey:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   hechizoSolicitado: 0
+  tituloLibroHechizadoKey:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   libroDonadoID: 0
   libroDevueltoID: 33
   tituloLibroDevuelto: "Micoperversos: Cr\xF3nicas de Hongos Vengativos"
+  tituloLibroDevueltoKey:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  tituloLibroPrestado: 
+  tituloLibroPrestadoKey:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  references:
+    version: 2
+    RefIds: []
 --- !u!114 &4978074495582524776
 MonoBehaviour:
   m_ObjectHideFlags: 0

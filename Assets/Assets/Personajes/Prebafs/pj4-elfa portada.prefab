@@ -150,40 +150,77 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tipoDePedido: 2
   dialogueLinesInicio:
-  - " Hola\u2026 "
-  - "\xBFtienes un momento? "
-  - Necesito tu ayuda con algo.
-  - " He escrito un libro con todos mis viajes y descubrimientos, pero\u2026"
-  - 'no soy muy buena dibujando portadas.
-
-'
-  - " Quer\xEDa algo que tenga un mapa, una br\xFAjula..."
-  - " tal vez un drag\xF3n peque\xF1ito escondido entre las monta\xF1as\u2026"
-  - "\xBFt\xFA podr\xEDas hacerlo?"
-  - "No tiene que ser perfecto, solo\u2026 "
-  - "algo que haga sonre\xEDr cuando lo vea en la estanter\xEDa.\r\n"
+  - Elfa_Inicio_1
+  - Elfa_Inicio_2
+  - Elfa_Inicio_3
+  - Elfa_Inicio_4
+  - Elfa_Inicio_5
+  - Elfa_Inicio_6
+  - Elfa_Inicio_7
+  - Elfa_Inicio_8
+  - Elfa_Inicio_9
+  - Elfa_Inicio_10
   dialogueLinesBuena:
-  - "Est\xE1\u2026 \xA1precioso!"
-  - "\xA1Este mismo!"
-  - "No sabes cu\xE1nto significa para m\xED. "
-  - "Cada detalle\u2026 es justo lo que imaginaba"
-  - " Gracias\u2026 de verdad. \xA1Eres incre\xEDble!\r\n"
+  - Elfa_Buena_1
+  - Elfa_Buena_2
+  - Elfa_Buena_3
+  - Elfa_Buena_4
+  - Elfa_Buena_5
   dialogueLinesMala:
-  - "\xBFQu\xE9...?"
-  - Esto no es lo que me imaginaba...
+  - Elfa_Mala_1
+  - Elfa_Mala_2
   spriteRespuestaBuena: {fileID: -1300581898, guid: afe1cec9e28d9a84099a7d453d54140b, type: 3}
   spriteRespuestaMala: {fileID: -2029843000, guid: afe1cec9e28d9a84099a7d453d54140b, type: 3}
   libroDeseadoID: 33
   tipoPreferido: herbologia
-  tituloLibroPrestado: 
   nombreDelCliente: Elfa
   descripcionPedido: "Solicit\xF3 crear una portada para su libro"
   stickersRequeridos: 070000000e0000000400000006000000
   tituloLibroPortada: 1Cliente
+  tituloLibroPortadaKey:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   hechizoSolicitado: 0
+  tituloLibroHechizadoKey:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   libroDonadoID: 0
   libroDevueltoID: 0
   tituloLibroDevuelto: 
+  tituloLibroDevueltoKey:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  tituloLibroPrestado: 
+  tituloLibroPrestadoKey:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  references:
+    version: 2
+    RefIds: []
 --- !u!114 &4978074495582524776
 MonoBehaviour:
   m_ObjectHideFlags: 0

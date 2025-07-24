@@ -9,12 +9,11 @@ public class BookManager : MonoBehaviour
 {
     public static BookManager instance;
 
+    #region Referencias UI
     public GameObject panelInfoLibro;
     public TMP_Text tituloTexto;
     public TMP_Text descripcionTexto;
     public Image imagenLibroUI;
-
-    private BookData libroActual;
 
     public GameObject panelConfirmarSeleccion;
     public Image imagenConfirmarSeleccion;
@@ -23,12 +22,16 @@ public class BookManager : MonoBehaviour
     public Button botonConfirmar;
     public Button botonSiguiente;
     public Button botonAnterior;
+    #endregion
 
-    private CharacterSpawn characterSpawn;
-
+    #region Estado interno
+    private BookData libroActual;
     private List<BookData> librosMismaSeccion = new List<BookData>();
     private int indiceLibroActual = 0;
+    private CharacterSpawn characterSpawn;
+    #endregion
 
+    #region Inicialización
     private void Awake()
     {
         if (instance == null)
@@ -46,7 +49,9 @@ public class BookManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape) && panelInfoLibro.activeSelf)
             CancelarSeleccion();
     }
+    #endregion
 
+    #region Lógica principal
     public void MostrarInformacion(BookData libro)
     {
         libroActual = libro;
@@ -94,7 +99,6 @@ public class BookManager : MonoBehaviour
         if (indice < 0 || indice >= librosMismaSeccion.Count) return;
 
         libroActual = librosMismaSeccion[indice];
-
         panelInfoLibro.SetActive(true);
 
         StartCoroutine(libroActual.GetTituloLocalized(titulo => tituloTexto.text = titulo));
@@ -104,7 +108,9 @@ public class BookManager : MonoBehaviour
         botonAnterior.interactable = indice > 0;
         botonSiguiente.interactable = indice < librosMismaSeccion.Count - 1;
     }
+    #endregion
 
+    #region Navegación
     public void VerSiguienteLibro()
     {
         if (indiceLibroActual < librosMismaSeccion.Count - 1)
@@ -122,7 +128,9 @@ public class BookManager : MonoBehaviour
             MostrarLibroPorIndice(indiceLibroActual);
         }
     }
+    #endregion
 
+    #region Confirmación y recomendación
     public void ConfirmarSeleccion()
     {
         if (libroActual == null)
@@ -140,6 +148,18 @@ public class BookManager : MonoBehaviour
         StartCoroutine(libroActual.GetTituloLocalized(titulo => tituloConfirmarSeleccion.text = titulo));
     }
 
+    public void RecomendarLibro()
+    {
+        panelConfirmarSeleccion.SetActive(false);
+
+        GameManager.instance.VerificarRecomendacion(libroActual);
+
+        if (characterSpawn != null)
+            characterSpawn.EndInteraction();
+    }
+    #endregion
+
+    #region Botones y control UI
     public void HabilitarBotonConfirmacion()
     {
         botonConfirmar.gameObject.SetActive(true);
@@ -154,14 +174,5 @@ public class BookManager : MonoBehaviour
     {
         panelInfoLibro.SetActive(false);
     }
-
-    public void RecomendarLibro()
-    {
-        panelConfirmarSeleccion.SetActive(false);
-
-        GameManager.instance.VerificarRecomendacion(libroActual);
-
-        if (characterSpawn != null)
-            characterSpawn.EndInteraction();
-    }
+    #endregion
 }

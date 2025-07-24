@@ -22,6 +22,12 @@ MonoBehaviour:
     - Locale-en-US
     - Preload
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 47df4f6425b8b2545bc09819557ab74b
+    m_Address: DialogosClientes_en-US
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en-US
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 49b72c1712a169341b3a8df1cac28778
     m_Address: TitulosLibrosPortada_en-US
     m_ReadOnly: 1

@@ -150,35 +150,74 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tipoDePedido: 0
   dialogueLinesInicio:
-  - Escucha...
-  - Necesito algo para vengarme...
-  - URGENTE!!
-  - "Mi vecino lleva semanas molest\xE1ndome con sus gallinas infernales..."
-  - y, francamente, creo que ya es hora de convertirlo en un helecho.
-  - "\xBFTienes algo o no?"
+  - Bruja_Inicio_1
+  - Bruja_Inicio_2
+  - Bruja_Inicio_3
+  - Bruja_Inicio_4
+  - Bruja_Inicio_5
+  - Bruja_Inicio_6
   dialogueLinesBuena:
-  - "\xA1Por el caldero de mi abuela!"
-  - "\xA1Este mismo!"
-  - "Voy a prepararle un guiso de venganza a ese infeliz\u2026"
-  - Te debo una.
-  - "Si un d\xEDa quieres deshacerte de alg\xFAn vecino, p\xE1sate por mi caba\xF1a"
+  - Bruja_Buena_1
+  - Bruja_Buena_2
+  - Bruja_Buena_3
+  - Bruja_Buena_4
+  - Bruja_Buena_5
   dialogueLinesMala:
-  - "\xBFQu\xE9 es esto?"
-  - "\xA1No, no, no! Yo quiero hongos. "
-  - Esto no me sirve
+  - Bruja_Mala_1
+  - Bruja_Mala_2
+  - Bruja_Mala_3
   spriteRespuestaBuena: {fileID: -990964772, guid: d65f33f931bba9c4cbab03bfee64aa50, type: 3}
   spriteRespuestaMala: {fileID: -1670925046, guid: d65f33f931bba9c4cbab03bfee64aa50, type: 3}
   libroDeseadoID: 33
   tipoPreferido: herbologia
-  tituloLibroPrestado: 
   nombreDelCliente: Bruja
   descripcionPedido: "Solicit\xF3 \"Algo para vengarse\""
   stickersRequeridos: 
   tituloLibroPortada: 
+  tituloLibroPortadaKey:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   hechizoSolicitado: 0
+  tituloLibroHechizadoKey:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   libroDonadoID: 0
   libroDevueltoID: 0
   tituloLibroDevuelto: 
+  tituloLibroDevueltoKey:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  tituloLibroPrestado: 
+  tituloLibroPrestadoKey:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  references:
+    version: 2
+    RefIds: []
 --- !u!114 &4978074495582524776
 MonoBehaviour:
   m_ObjectHideFlags: 0

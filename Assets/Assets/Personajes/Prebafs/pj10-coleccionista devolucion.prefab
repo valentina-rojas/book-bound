@@ -150,24 +150,63 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tipoDePedido: 6
   dialogueLinesInicio:
-  - Te traje esto
+  - "Coleccionista_Devoluci\xF3n_1"
   dialogueLinesBuena:
-  - Fue muy divertido
+  - "Coleccionista_Devoluci\xF3n_2"
   dialogueLinesMala:
   - ...
   spriteRespuestaBuena: {fileID: -581190463, guid: 25d4922366bb00f4ea48642a1a0539de, type: 3}
   spriteRespuestaMala: {fileID: 587403971, guid: 25d4922366bb00f4ea48642a1a0539de, type: 3}
   libroDeseadoID: 62
   tipoPreferido: terror
-  tituloLibroPrestado: 
   nombreDelCliente: Coleccionista
   descripcionPedido: "Devolvi\xF3 un libro"
   stickersRequeridos: 
   tituloLibroPortada: 
+  tituloLibroPortadaKey:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   hechizoSolicitado: 0
+  tituloLibroHechizadoKey:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   libroDonadoID: 0
   libroDevueltoID: 62
   tituloLibroDevuelto: Susurros Tras la Puerta Cerrada
+  tituloLibroDevueltoKey:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  tituloLibroPrestado: 
+  tituloLibroPrestadoKey:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  references:
+    version: 2
+    RefIds: []
 --- !u!114 &1177564428679998758
 MonoBehaviour:
   m_ObjectHideFlags: 0

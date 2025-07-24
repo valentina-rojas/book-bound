@@ -150,24 +150,63 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tipoDePedido: 6
   dialogueLinesInicio:
-  - "Vengo a devolverte El Guardi\xE1n del Bosque Azul."
+  - "Ogro_Devoluci\xF3n_1"
   dialogueLinesBuena:
-  - "Volver\xE9 de nuevo "
+  - "Ogro_Devoluci\xF3n_2"
   dialogueLinesMala:
   - ...
   spriteRespuestaBuena: {fileID: 1977612217, guid: a66e3af046e5eca408074cba8de23bb9, type: 3}
   spriteRespuestaMala: {fileID: 1212924309, guid: a66e3af046e5eca408074cba8de23bb9, type: 3}
   libroDeseadoID: 2
   tipoPreferido: fantasia
-  tituloLibroPrestado: 
   nombreDelCliente: Ogro
   descripcionPedido: "Devolvi\xF3 un libro"
   stickersRequeridos: 
   tituloLibroPortada: 
+  tituloLibroPortadaKey:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   hechizoSolicitado: 0
+  tituloLibroHechizadoKey:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   libroDonadoID: 0
   libroDevueltoID: 2
   tituloLibroDevuelto: "El Guardi\xE1n del Bosque Azul"
+  tituloLibroDevueltoKey:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  tituloLibroPrestado: 
+  tituloLibroPrestadoKey:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  references:
+    version: 2
+    RefIds: []
 --- !u!114 &1177564428679998758
 MonoBehaviour:
   m_ObjectHideFlags: 0

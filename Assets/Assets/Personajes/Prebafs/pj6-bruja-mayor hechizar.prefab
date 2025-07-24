@@ -150,41 +150,77 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tipoDePedido: 3
   dialogueLinesInicio:
-  - "Este libro... no es un libro cualquiera, coraz\xF3n."
-  - Dentro guarda una receta muy antigua..
-  - "prohibida\u2026 "
-  - "olvidada a prop\xF3sito por quienes tem\xEDan su poder."
-  - "Si cayera en manos equivocadas... podr\xEDa desatar un desastre. O algo a\xFAn
-    peor."
-  - "Necesito encantarlo, sellarlo con un conjuro especial\u2026"
-  - "No es dif\xEDcil, solo debes agregarle las runas correctas en orden"
-  - "Lo har\xEDa yo pero ya me tiemblan las manos y se me dificulta "
-  - Las runas que debes usar son las de tierra, sombra y fuego, en ese orden
-  - "\xBFCrees que podr\xEDas ayudarme?"
+  - BrujaMayor_Inicio_1
+  - BrujaMayor_Inicio_2
+  - BrujaMayor_Inicio_3
+  - BrujaMayor_Inicio_4
+  - BrujaMayor_Inicio_5
+  - BrujaMayor_Inicio_6
+  - BrujaMayor_Inicio_7
+  - BrujaMayor_Inicio_8
+  - BrujaMayor_Inicio_9
+  - BrujaMayor_Inicio_10
   dialogueLinesBuena:
-  - "\xA1Que maravilla!"
-  - "El libro est\xE1 sellado con un hechizo perfecto."
-  - "Conf\xEDo en que el conocimiento contenido aqu\xED permanecer\xE1 a salvo...
-    gracias a ti."
+  - BrujaMayor_Buena_1
+  - BrujaMayor_Buena_2
+  - BrujaMayor_Buena_3
   dialogueLinesMala:
-  - Oh, cielos... algo ha salido mal.
-  - "Este no es el hechizo que quer\xEDa\u2026 "
-  - Si alguien indeseado lo abre... no quiero ni imaginarlo.
-  - "Tendr\xE9 que buscar a otra alma sensible que pueda ayudarme. Pero gracias por
-    intentarlo\u2026"
+  - BrujaMayor_Mala_1
+  - BrujaMayor_Mala_2
+  - BrujaMayor_Mala_3
+  - BrujaMayor_Mala_4
   spriteRespuestaBuena: {fileID: 199910097, guid: 68ad608c8f0e52745af1cbbc76225bd4, type: 3}
   spriteRespuestaMala: {fileID: -1394314759, guid: 68ad608c8f0e52745af1cbbc76225bd4, type: 3}
   libroDeseadoID: 12
   tipoPreferido: misterio
-  tituloLibroPrestado: 
   nombreDelCliente: Bruja Mayor
   descripcionPedido: "Solicit\xF3 hechizar un libro"
   stickersRequeridos: 
   tituloLibroPortada: 
+  tituloLibroPortadaKey:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   hechizoSolicitado: 1
+  tituloLibroHechizadoKey:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   libroDonadoID: 0
   libroDevueltoID: 0
   tituloLibroDevuelto: 
+  tituloLibroDevueltoKey:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  tituloLibroPrestado: 
+  tituloLibroPrestadoKey:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  references:
+    version: 2
+    RefIds: []
 --- !u!114 &1177564428679998758
 MonoBehaviour:
   m_ObjectHideFlags: 0

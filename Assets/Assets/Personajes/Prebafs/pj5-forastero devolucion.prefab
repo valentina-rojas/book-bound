@@ -150,24 +150,63 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tipoDePedido: 6
   dialogueLinesInicio:
-  - Traje esto de nuevo...
+  - "Forastero_Devoluci\xF3n_1"
   dialogueLinesBuena:
-  - Gracias...
+  - "Forastero_Devoluci\xF3n_2"
   dialogueLinesMala:
   - ....
   spriteRespuestaBuena: {fileID: 668051778, guid: 1077768549b866f4ebfa4ea68ddb611d, type: 3}
   spriteRespuestaMala: {fileID: -262679529, guid: 1077768549b866f4ebfa4ea68ddb611d, type: 3}
   libroDeseadoID: 12
   tipoPreferido: misterio
-  tituloLibroPrestado: 
   nombreDelCliente: 'Forastero '
   descripcionPedido: "Devolvi\xF3 un libro"
   stickersRequeridos: 
   tituloLibroPortada: 
+  tituloLibroPortadaKey:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   hechizoSolicitado: 0
+  tituloLibroHechizadoKey:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   libroDonadoID: 0
   libroDevueltoID: 12
   tituloLibroDevuelto: La Dama de los Secretos Perdidos
+  tituloLibroDevueltoKey:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  tituloLibroPrestado: 
+  tituloLibroPrestadoKey:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  references:
+    version: 2
+    RefIds: []
 --- !u!114 &1177564428679998758
 MonoBehaviour:
   m_ObjectHideFlags: 0

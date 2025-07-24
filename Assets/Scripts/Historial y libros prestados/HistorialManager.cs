@@ -2,11 +2,17 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using UnityEngine.Localization;
+using UnityEngine.Localization.Settings;
 
 public class HistorialManager : MonoBehaviour
 {
     private UIManager uiManager;
     private List<string> librosPrestados = new List<string>();
+
+    [Header("Mensajes Localizados")]
+    public LocalizedString mensajeHistorialVacio;
+    public LocalizedString mensajeLibrosVacio;
 
     private void Start()
     {
@@ -82,7 +88,10 @@ public class HistorialManager : MonoBehaviour
 
         if (personajes == null || personajes.Count == 0)
         {
-            MostrarMensajeHistorialVacio("No hay historial para mostrar.");
+            mensajeHistorialVacio.StringChanged += (mensaje) =>
+            {
+                MostrarMensajeHistorialVacio(mensaje);
+            };
         }
         else
         {
@@ -149,12 +158,14 @@ public class HistorialManager : MonoBehaviour
     {
         var personajes = CharacterManager.instance.GetPersonajesAtendidos();
         LimpiarLibrosUI();
-
         librosPrestados.Clear();
 
         if (personajes == null || personajes.Count == 0)
         {
-            MostrarMensajeLibrosVacio("No hay libros prestados para mostrar.");
+            mensajeLibrosVacio.StringChanged += (mensaje) =>
+            {
+                MostrarMensajeLibrosVacio(mensaje);
+            };
             Debug.Log("No hay personajes atendidos");
         }
         else
@@ -176,9 +187,14 @@ public class HistorialManager : MonoBehaviour
                     if (textos.Length >= 2)
                     {
                         textos[0].text = personaje.nombreDelCliente;
-                        textos[1].text = personaje.tituloLibroPrestado;
-                        Debug.Log($"Libro prestado mostrado: {personaje.tituloLibroPrestado}");
-                        librosPrestados.Add(personaje.tituloLibroPrestado);
+
+                        LocalizedString localizedTitle = new LocalizedString("TitulosLibros", personaje.tituloLibroPrestado);
+                        localizedTitle.StringChanged += (tituloTraducido) =>
+                        {
+                            textos[1].text = tituloTraducido;
+                            librosPrestados.Add(tituloTraducido);
+                            Debug.Log($"Libro prestado mostrado: {tituloTraducido}");
+                        };
                     }
                     else
                     {
@@ -189,11 +205,13 @@ public class HistorialManager : MonoBehaviour
 
             if (!hayLibros)
             {
-                MostrarMensajeLibrosVacio("No hay libros prestados para mostrar.");
+                mensajeLibrosVacio.StringChanged += (mensaje) =>
+                {
+                    MostrarMensajeLibrosVacio(mensaje);
+                };
                 Debug.Log("No se encontraron libros prestados en personajes.");
             }
         }
-
     }
 
     public List<string> GetLibrosPrestados()

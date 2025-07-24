@@ -150,31 +150,70 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tipoDePedido: 0
   dialogueLinesInicio:
-  - "Buenas\u2026 "
-  - "o tal vez malas\u2026"
-  - "\xBFqu\xE9 hora es? Da igual."
-  - Busco La Dama de los Secretos Perdidos.
-  - "Y antes de que preguntes: s\xED, es para m\xED. "
-  - "Y no, no pienso contarte para qu\xE9 lo quiero.\r\n"
+  - Forastero_Inicio_1
+  - Forastero_Inicio_2
+  - Forastero_Inicio_3
+  - Forastero_Inicio_4
+  - Forastero_Inicio_5
+  - Forastero_Inicio_6
   dialogueLinesBuena:
-  - "Hmm\u2026 s\xED, este es el que buscaba."
-  - Gracias...
+  - Forastero_Buena_1
+  - Forastero_Buena_2
   dialogueLinesMala:
-  - "\xBFQu\xE9 te hizo pensar que me interesar\xEDa un libro de esos?"
-  - Ugh... no importa.
+  - Forastero_Mala_1
+  - Forastero_Mala_2
   spriteRespuestaBuena: {fileID: 668051778, guid: 1077768549b866f4ebfa4ea68ddb611d, type: 3}
   spriteRespuestaMala: {fileID: -262679529, guid: 1077768549b866f4ebfa4ea68ddb611d, type: 3}
   libroDeseadoID: 12
   tipoPreferido: misterio
-  tituloLibroPrestado: 
   nombreDelCliente: 'Forastero '
   descripcionPedido: "Solicit\xF3 \"La Dama de los Secretos Perdidos\""
   stickersRequeridos: 
   tituloLibroPortada: 
+  tituloLibroPortadaKey:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   hechizoSolicitado: 0
+  tituloLibroHechizadoKey:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   libroDonadoID: 0
   libroDevueltoID: 0
   tituloLibroDevuelto: 
+  tituloLibroDevueltoKey:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  tituloLibroPrestado: 
+  tituloLibroPrestadoKey:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  references:
+    version: 2
+    RefIds: []
 --- !u!114 &1177564428679998758
 MonoBehaviour:
   m_ObjectHideFlags: 0

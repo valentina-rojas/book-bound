@@ -150,35 +150,72 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tipoDePedido: 0
   dialogueLinesInicio:
-  - Busco un libro que hable de equilibrio...
-  - 'y de los extremos entre la luz y la oscuridad.
-
-'
-  - Hay historias de una joven con un poder que puede cambiarlo todo.
-  - Es raro, pero siento que este tomo guarda respuestas que necesito encontrar.
+  - Elfo_Inicio_1
+  - Elfo_Inicio_2
+  - Elfo_Inicio_3
+  - Elfo_Inicio_4
   dialogueLinesBuena:
-  - "Esto\u2026 es lo que esperaba. "
-  - "Aqu\xED est\xE1n las claves para entender la profec\xEDa."
-  - Gracias.
-  - "Esto podr\xEDa ser el comienzo para forjar un nuevo camino."
+  - Elfo_Buena_1
+  - Elfo_Buena_2
+  - Elfo_Buena_3
+  - Elfo_Buena_4
   dialogueLinesMala:
-  - "No es esto\u2026"
-  - Aunque pueda parecer importante, no es lo que busco.
-  - "Seguir\xE9 buscando."
-  - "Este conocimiento es demasiado vital para m\xED."
+  - Elfo_Mala_1
+  - Elfo_Mala_2
+  - Elfo_Mala_3
+  - Elfo_Mala_4
   spriteRespuestaBuena: {fileID: 1485804103, guid: 716730f6229ca4f4fa5108dfe4366d6a, type: 3}
   spriteRespuestaMala: {fileID: -165214668, guid: 716730f6229ca4f4fa5108dfe4366d6a, type: 3}
   libroDeseadoID: 3
   tipoPreferido: fantasia
-  tituloLibroPrestado: 
   nombreDelCliente: Elfo
   descripcionPedido: "Solicit\xF3 un libro que hable de equilibrio, luz y oscuridad\r\n"
   stickersRequeridos: 
   tituloLibroPortada: 
+  tituloLibroPortadaKey:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   hechizoSolicitado: 0
+  tituloLibroHechizadoKey:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   libroDonadoID: 0
   libroDevueltoID: 0
   tituloLibroDevuelto: 
+  tituloLibroDevueltoKey:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  tituloLibroPrestado: 
+  tituloLibroPrestadoKey:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  references:
+    version: 2
+    RefIds: []
 --- !u!114 &1177564428679998758
 MonoBehaviour:
   m_ObjectHideFlags: 0

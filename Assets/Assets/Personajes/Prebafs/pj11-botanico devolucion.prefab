@@ -150,24 +150,63 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tipoDePedido: 6
   dialogueLinesInicio:
-  - "Buen d\xEDa\u2026 vine a devolver esto\r"
+  - "Botanico_Devoluci\xF3n_1"
   dialogueLinesBuena:
-  - Muchas gracias
+  - "Botanico_Devoluci\xF3n_2"
   dialogueLinesMala:
   - ...
   spriteRespuestaBuena: {fileID: 637835688, guid: 9a1f17f349264864f859580553096926, type: 3}
   spriteRespuestaMala: {fileID: 1179943327, guid: 9a1f17f349264864f859580553096926, type: 3}
   libroDeseadoID: 31
   tipoPreferido: herbologia
-  tituloLibroPrestado: 
   nombreDelCliente: "Bot\xE1nico"
   descripcionPedido: "Devolvi\xF3 un libro"
   stickersRequeridos: 
   tituloLibroPortada: 
+  tituloLibroPortadaKey:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   hechizoSolicitado: 0
+  tituloLibroHechizadoKey:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   libroDonadoID: 0
   libroDevueltoID: 31
   tituloLibroDevuelto: 'Compendio de Plantas Susurrantes '
+  tituloLibroDevueltoKey:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  tituloLibroPrestado: 
+  tituloLibroPrestadoKey:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  references:
+    version: 2
+    RefIds: []
 --- !u!114 &1177564428679998758
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -150,40 +150,74 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tipoDePedido: 1
   dialogueLinesInicio:
-  - " \xA1Eh, hola! "
-  - "Perd\xF3n por llegar as\xED, pero necesito tu ayuda urgente."
-  - " Estaba practicando una encuadernaci\xF3n antigua y\u2026"
-  - "bueno\u2026"
-  - "se me desarm\xF3 el libro entero. "
-  - "Las p\xE1ginas salieron volando por todos lados."
-  - ' Si mi maestro se entera, me va a mandar a limpiar estantes por una semana.'
-  - " \xBFPodr\xEDas ayudarme a ordenarlas de nuevo?"
+  - Aprendiz_Inicio_1
+  - Aprendiz_Inicio_2
+  - Aprendiz_Inicio_3
+  - Aprendiz_Inicio_4
+  - Aprendiz_Inicio_5
+  - Aprendiz_Inicio_6
+  - Aprendiz_Inicio_7
+  - Aprendiz_Inicio_8
   dialogueLinesBuena:
-  - " \xA1Lo lograste! "
-  - "No puedo creer lo bien que qued\xF3."
-  - "Hasta parece que nunca se desarm\xF3.\r\n"
-  - "Mi maestro no se enterar\xE1 de nada\u2026"
-  - 'y yo voy a poder dormir tranquilo esta noche.
-
-'
+  - Aprendiz_Buena_1
+  - Aprendiz_Buena_2
+  - Aprendiz_Buena_3
+  - Aprendiz_Buena_4
+  - Aprendiz_Buena_5
   dialogueLinesMala:
-  - "\xBFQu\xE9 es esto?"
-  - "\xA1No, no, no! Yo quiero hongos. "
-  - "Bah, me llevo esto igual\u2026"
   - Pero no era lo que buscaba...
   spriteRespuestaBuena: {fileID: -1118278708, guid: b6f696f6fecafb949ae7a64dc6242b7e, type: 3}
   spriteRespuestaMala: {fileID: 829811526, guid: b6f696f6fecafb949ae7a64dc6242b7e, type: 3}
   libroDeseadoID: 33
   tipoPreferido: herbologia
-  tituloLibroPrestado: 
   nombreDelCliente: Aprendiz
   descripcionPedido: "Solicit\xF3 reparar libro"
   stickersRequeridos: 
   tituloLibroPortada: 
+  tituloLibroPortadaKey:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   hechizoSolicitado: 0
+  tituloLibroHechizadoKey:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   libroDonadoID: 0
   libroDevueltoID: 0
   tituloLibroDevuelto: 
+  tituloLibroDevueltoKey:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  tituloLibroPrestado: 
+  tituloLibroPrestadoKey:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  references:
+    version: 2
+    RefIds: []
 --- !u!114 &4978074495582524776
 MonoBehaviour:
   m_ObjectHideFlags: 0

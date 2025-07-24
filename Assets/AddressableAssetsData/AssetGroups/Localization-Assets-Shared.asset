@@ -15,6 +15,11 @@ MonoBehaviour:
   m_GroupName: Localization-Assets-Shared
   m_GUID: 5714861eb78a8034f8d44d0ddd06f2e4
   m_SerializeEntries:
+  - m_GUID: 398c04003a7316346af2890274873762
+    m_Address: Assets/Localization/Tables/Dialogos/DialogosClientes Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 57b41d0b9577b5847a5faa5415505970
     m_Address: Assets/Localization/Tables/Libros/DescripcionLibros Shared Data.asset
     m_ReadOnly: 1

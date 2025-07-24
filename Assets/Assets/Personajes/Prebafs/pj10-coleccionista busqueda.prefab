@@ -150,35 +150,73 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tipoDePedido: 0
   dialogueLinesInicio:
-  - "Me dijeron que aqu\xED se encuentra\u2026"
-  - "Algo dif\xEDcil de conservar."
-  - Busco un volumen que no suele quedarse quieto.
-  - "Relatos que hablan m\xE1s all\xE1 de lo visible\u2026"
-  - de cosas que solo se sienten en el silencio.
-  - "Me han dicho que aqu\xED podr\xEDan tenerlo\u2026 aunque pocos se atreven a
-    buscarlo."
+  - Coleccionista_Inicio_1
+  - Coleccionista_Inicio_2
+  - Coleccionista_Inicio_3
+  - Coleccionista_Inicio_4
+  - Coleccionista_Inicio_5
+  - Coleccionista_Inicio_6
   dialogueLinesBuena:
-  - "Ah\u2026 lo reconoc\xED por el leve temblor en la mesa."
-  - Siempre reacciona cuando lo acercan a una mano que no le teme.
-  - "Gracias. Que sus noches sigan en silencio\u2026 si puede."
+  - Coleccionista_Buena_1
+  - Coleccionista_Buena_2
+  - Coleccionista_Buena_3
   dialogueLinesMala:
-  - No. Esto tiene palabras, pero ninguna que corte el aire.
-  - "No importa. A veces, el libro aparece solo cuando est\xE1 listo para ser le\xEDdo."
-  - "Adi\xF3s."
+  - Coleccionista_Mala_1
+  - Coleccionista_Mala_2
+  - Coleccionista_Mala_3
   spriteRespuestaBuena: {fileID: -581190463, guid: 25d4922366bb00f4ea48642a1a0539de, type: 3}
   spriteRespuestaMala: {fileID: 587403971, guid: 25d4922366bb00f4ea48642a1a0539de, type: 3}
   libroDeseadoID: 62
   tipoPreferido: terror
-  tituloLibroPrestado: 
   nombreDelCliente: Coleccionista
   descripcionPedido: "Solicit\xF3 un libro con relatos sobre lo invisible y lo no
     dicho.\r"
   stickersRequeridos: 
   tituloLibroPortada: 
+  tituloLibroPortadaKey:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   hechizoSolicitado: 0
+  tituloLibroHechizadoKey:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   libroDonadoID: 0
   libroDevueltoID: 0
   tituloLibroDevuelto: 
+  tituloLibroDevueltoKey:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  tituloLibroPrestado: 
+  tituloLibroPrestadoKey:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  references:
+    version: 2
+    RefIds: []
 --- !u!114 &1177564428679998758
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -30341,6 +30341,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a98185ce11f567543a699f861c2dc2f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mensajeHistorialVacio:
+    m_TableReference:
+      m_TableCollectionName: GUID:bbbbbd888e4a5af41953bddc55cb146e
+    m_TableEntryReference:
+      m_KeyId: 976820355375104
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  mensajeLibrosVacio:
+    m_TableReference:
+      m_TableCollectionName: GUID:bbbbbd888e4a5af41953bddc55cb146e
+    m_TableEntryReference:
+      m_KeyId: 976914672689152
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &1214981514
 GameObject:
   m_ObjectHideFlags: 0

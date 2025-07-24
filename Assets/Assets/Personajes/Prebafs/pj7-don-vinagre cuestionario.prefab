@@ -150,32 +150,72 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tipoDePedido: 4
   dialogueLinesInicio:
-  - "Hmpf. As\xED que t\xFA eres el nuevo encargado...\r\n"
-  - "\xBFCu\xE1nto tiempo llevas aqu\xED? \xBFHoras? \xBFMinutos?"
-  - "\xBFQu\xE9 te parece un peque\xF1o juego para poner a prueba tu... \"sabidur\xEDa\"?"
-  - "Prep\xE1rate. No aceptar\xE9 respuestas mediocres.\r\n"
+  - DonVinagre_Inicio_1
+  - DonVinagre_Inicio_2
+  - DonVinagre_Inicio_3
+  - DonVinagre_Inicio_4
+  - DonVinagre_Inicio_5
   dialogueLinesBuena:
-  - "No est\xE1 mal\u2026 para alguien con tan poco potencial."
-  - Espero que esto no haya sido pura suerte.
-  - Me conformo... por ahora. No te acostumbres a los elogios.
+  - DonVinagre_Buena_1
+  - DonVinagre_Buena_2
+  - DonVinagre_Buena_3
   dialogueLinesMala:
-  - "No s\xE9 si re\xEDr o llorar."
-  - Si vas a ocupar este puesto, al menos finge saber lo que haces.
-  - Eso fue... doloroso. Para ambos.
-  - Mejor me largo. No puedo ver tanta mediocridad junta.
+  - DonVinagre_Mala_1
+  - DonVinagre_Mala_2
+  - DonVinagre_Mala_3
+  - DonVinagre_Mala_4
   spriteRespuestaBuena: {fileID: -691833446, guid: 1d5feb4c40c77e942984aab325e0aad6, type: 3}
   spriteRespuestaMala: {fileID: -718686173, guid: 1d5feb4c40c77e942984aab325e0aad6, type: 3}
   libroDeseadoID: 12
   tipoPreferido: misterio
-  tituloLibroPrestado: 
   nombreDelCliente: Don Vinagre
   descripcionPedido: Puso a prueba tus conocimientos
   stickersRequeridos: 
   tituloLibroPortada: 
+  tituloLibroPortadaKey:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   hechizoSolicitado: 0
+  tituloLibroHechizadoKey:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   libroDonadoID: 0
   libroDevueltoID: 0
   tituloLibroDevuelto: 
+  tituloLibroDevueltoKey:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  tituloLibroPrestado: 
+  tituloLibroPrestadoKey:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  references:
+    version: 2
+    RefIds: []
 --- !u!114 &1177564428679998758
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -150,37 +150,74 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tipoDePedido: 0
   dialogueLinesInicio:
-  - "Buen d\xEDa\u2026\r\n"
-  - Estoy buscando el Compendio de Plantas Susurrantes.
-  - Lo necesito con cierta urgencia.
-  - "Es una edici\xF3n antigua, con ilustraciones detalladas."
-  - "La mayor\xEDa de las copias nuevas omitieron los comentarios sobre los efectos
-    lunares."
-  - "Estoy haciendo una investigaci\xF3n sobre c\xF3mo la Zarza de Verdades reacciona
-    bajo eclipses parciales."
-  - "Y no, no es para experimentar con nadie\u2026 todav\xEDa."
+  - Botanico_Inicio_1
+  - Botanico_Inicio_2
+  - Botanico_Inicio_3
+  - Botanico_Inicio_4
+  - Botanico_Inicio_5
+  - Botanico_Inicio_6
+  - Botanico_Inicio_7
   dialogueLinesBuena:
-  - "\xA1Oh! Este es. \xA1Qu\xE9 maravilla!"
-  - "Las ilustraciones... est\xE1n tal cual las describieron."
-  - "Incluso tiene el ap\xE9ndice sobre recolecci\xF3n en la tercera fase lunar.\r\n"
-  - "Excelente. Esto va a ahorrarme semanas de prueba y error\u2026 "
-  - "y probablemente unos cuantos sarpullidos m\xE1gicos."
+  - Botanico_Buena_1
+  - Botanico_Buena_2
+  - Botanico_Buena_3
+  - Botanico_Buena_4
+  - Botanico_Buena_5
   dialogueLinesMala:
-  - Hm... no, este no es.
-  - "Bueno\u2026 seguir\xE9 buscando. Gracias igual."
+  - Botanico_Mala_1
+  - Botanico_Mala_2
   spriteRespuestaBuena: {fileID: 637835688, guid: 9a1f17f349264864f859580553096926, type: 3}
   spriteRespuestaMala: {fileID: 1179943327, guid: 9a1f17f349264864f859580553096926, type: 3}
   libroDeseadoID: 31
   tipoPreferido: herbologia
-  tituloLibroPrestado: 
   nombreDelCliente: "Bot\xE1nico"
   descripcionPedido: "Solicit\xF3 \"Compendio de Plantas Susurrantes\""
   stickersRequeridos: 
   tituloLibroPortada: 
+  tituloLibroPortadaKey:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   hechizoSolicitado: 0
+  tituloLibroHechizadoKey:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   libroDonadoID: 0
   libroDevueltoID: 0
   tituloLibroDevuelto: 
+  tituloLibroDevueltoKey:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  tituloLibroPrestado: 
+  tituloLibroPrestadoKey:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  references:
+    version: 2
+    RefIds: []
 --- !u!114 &1177564428679998758
 MonoBehaviour:
   m_ObjectHideFlags: 0

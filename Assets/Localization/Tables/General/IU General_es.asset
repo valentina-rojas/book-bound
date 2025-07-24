@@ -70,6 +70,14 @@ MonoBehaviour:
     m_Localized: CONFIRMAR
     m_Metadata:
       m_Items: []
+  - m_Id: 976820355375104
+    m_Localized: No hay historial para mostrar.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 976914672689152
+    m_Localized: No hay libros prestados para mostrar.
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
