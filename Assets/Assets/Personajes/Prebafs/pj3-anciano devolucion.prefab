@@ -162,7 +162,7 @@ MonoBehaviour:
   libroDeseadoID: 63
   tipoPreferido: terror
   nombreDelCliente: Anciano
-  descripcionPedido: "Devolvi\xF3 un libro"
+  descripcionPedido: Devolucion
   stickersRequeridos: 
   tituloLibroPortada: 
   tituloLibroPortadaKey:

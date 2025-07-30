@@ -169,7 +169,7 @@ MonoBehaviour:
   libroDeseadoID: 3
   tipoPreferido: fantasia
   nombreDelCliente: Elfo
-  descripcionPedido: "Solicit\xF3 un libro que hable de equilibrio, luz y oscuridad\r\n"
+  descripcionPedido: Elfo_Des
   stickersRequeridos: 
   tituloLibroPortada: 
   tituloLibroPortadaKey:

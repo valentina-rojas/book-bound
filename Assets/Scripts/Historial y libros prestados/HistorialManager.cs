@@ -4,11 +4,14 @@ using UnityEngine.UI;
 using System.Collections.Generic;
 using UnityEngine.Localization;
 using UnityEngine.Localization.Settings;
+using UnityEngine.Localization.Tables;
+using System.Collections;
 
 public class HistorialManager : MonoBehaviour
 {
     private UIManager uiManager;
     private List<string> librosPrestados = new List<string>();
+    private bool historialCargado = false; 
 
     [Header("Mensajes Localizados")]
     public LocalizedString mensajeHistorialVacio;
@@ -34,9 +37,19 @@ public class HistorialManager : MonoBehaviour
     {
         if (uiManager == null) return;
 
-        MostrarHistorial();
-        MostrarLibrosPrestados();
+        if (historialCargado)
+        {
+            uiManager.GetPanelHistorial().SetActive(true);
+            return;
+        }
+
+        StartCoroutine(CargarPalabrasResaltadas((palabrasParaNegrita) =>
+        {
+            StartCoroutine(MostrarHistorialConPalabras(palabrasParaNegrita));
+        }));
+        StartCoroutine(MostrarLibrosPrestados());
         uiManager.GetPanelHistorial().SetActive(true);
+        historialCargado = true;
     }
 
     public void CerrarTodo()
@@ -45,13 +58,103 @@ public class HistorialManager : MonoBehaviour
         {
             uiManager.GetPanelHistorial().SetActive(false);
             Debug.Log("Panel de historial cerrado");
+            historialCargado = false; 
         }
     }
 
     #region Historial de Pedidos
 
+    private IEnumerator CargarPalabrasResaltadas(System.Action<List<string>> callback)
+    {
+        var tableLoading = LocalizationSettings.StringDatabase.GetTableAsync("PalabrasResaltadas");
+        yield return tableLoading;
+
+        var table = tableLoading.Result as StringTable;
+        var palabras = new List<string>();
+
+        if (table == null)
+        {
+            Debug.LogWarning("No se encontró la tabla 'PalabrasResaltadas'.");
+            callback(palabras);
+            yield break;
+        }
+
+        foreach (var entry in table)
+        {
+            if (!string.IsNullOrEmpty(entry.Value.LocalizedValue))
+            {
+                palabras.Add(entry.Value.LocalizedValue);
+            }
+        }
+
+        callback(palabras);
+    }
+
+    private IEnumerator MostrarHistorialConPalabras(List<string> palabrasParaNegrita)
+    {
+        var personajes = CharacterManager.instance.GetPersonajesAtendidos();
+        LimpiarHistorialUI();
+
+        if (personajes == null || personajes.Count == 0)
+        {
+            bool mensajeMostrado = false;
+            mensajeHistorialVacio.StringChanged -= MostrarMensajeHistorialVacioHandler; // prevenir múltiples suscripciones
+            mensajeHistorialVacio.StringChanged += MostrarMensajeHistorialVacioHandler;
+            yield break;
+        }
+
+        HashSet<string> entradasExistentes = new HashSet<string>();
+
+        foreach (var personaje in personajes)
+        {
+            bool done = false;
+            string descripcionTraducida = "";
+
+            yield return StartCoroutine(personaje.GetDescripcionPedidoLocalized((desc) =>
+            {
+                descripcionTraducida = ResaltarEnNegrita(desc, palabrasParaNegrita);
+                done = true;
+            }));
+            while (!done) yield return null;
+
+            string claveEntrada = personaje.nombreDelCliente + "|" + descripcionTraducida;
+            if (entradasExistentes.Contains(claveEntrada))
+            {
+                Debug.Log("Entrada duplicada detectada. No se agrega.");
+                continue;
+            }
+
+            entradasExistentes.Add(claveEntrada);
+
+            GameObject entrada = Instantiate(uiManager.GetPrefabEntradaHistorial(), uiManager.GetHistorialContent());
+            entrada.transform.SetSiblingIndex(0);
+            TMP_Text[] textos = entrada.GetComponentsInChildren<TMP_Text>();
+
+            if (textos.Length >= 2)
+            {
+                string nombreTraducido = personaje.nombreDelCliente;
+
+                yield return StartCoroutine(personaje.GetNombreClienteLocalized(nombre =>
+                {
+                    nombreTraducido = nombre;
+                }));
+
+                textos[0].text = nombreTraducido;
+                textos[1].text = descripcionTraducida;
+            }
+        }
+    }
+
+    private void MostrarMensajeHistorialVacioHandler(string mensaje)
+    {
+        MostrarMensajeHistorialVacio(mensaje);
+    }
+
     private string ResaltarEnNegrita(string texto, List<string> palabras)
     {
+        if (string.IsNullOrEmpty(texto) || palabras == null || palabras.Count == 0)
+            return texto;
+
         foreach (var palabra in palabras)
         {
             if (!string.IsNullOrEmpty(palabra))
@@ -81,53 +184,6 @@ public class HistorialManager : MonoBehaviour
         }
     }
 
-    private void MostrarHistorial()
-    {
-        var personajes = CharacterManager.instance.GetPersonajesAtendidos();
-        LimpiarHistorialUI();
-
-        if (personajes == null || personajes.Count == 0)
-        {
-            mensajeHistorialVacio.StringChanged += (mensaje) =>
-            {
-                MostrarMensajeHistorialVacio(mensaje);
-            };
-        }
-        else
-        {
-            List<string> palabrasParaNegrita = new List<string>
-            {
-                "La Dama de los Secretos Perdidos", "vengarse", "asustar", "cama", "reparar", "crear", "portada", "libro",
-                "hechizar", "prueba", "conocimientos", "equilibrio", "luz", "oscuridad", "El Guardián del Bosque Azul",
-                "relatos", "invisible", "no dicho", "Compendio de Plantas Susurrantes"
-            };
-
-            foreach (var personaje in personajes)
-            {
-                var contenido = uiManager.GetHistorialContent();
-                if (contenido.childCount > 0)
-                {
-                    Transform entradaAnterior = contenido.GetChild(0);
-                    TMP_Text[] textosAnteriores = entradaAnterior.GetComponentsInChildren<TMP_Text>();
-                    if (textosAnteriores.Length >= 2 && !textosAnteriores[1].text.StartsWith("<s>"))
-                    {
-                        textosAnteriores[1].text = $"<s>{textosAnteriores[1].text}</s>";
-                    }
-                }
-
-                GameObject entrada = Instantiate(uiManager.GetPrefabEntradaHistorial(), uiManager.GetHistorialContent());
-                entrada.transform.SetSiblingIndex(0);
-                TMP_Text[] textos = entrada.GetComponentsInChildren<TMP_Text>();
-
-                if (textos.Length >= 2)
-                {
-                    textos[0].text = personaje.nombreDelCliente;
-                    textos[1].text = ResaltarEnNegrita(personaje.descripcionPedido, palabrasParaNegrita);
-                }
-            }
-        }
-    }
-
     private void LimpiarHistorialUI()
     {
         if (uiManager.GetHistorialContent() == null) return;
@@ -153,8 +209,7 @@ public class HistorialManager : MonoBehaviour
     #endregion
 
     #region Libros Prestados
-
-    private void MostrarLibrosPrestados()
+    private IEnumerator MostrarLibrosPrestados()
     {
         var personajes = CharacterManager.instance.GetPersonajesAtendidos();
         LimpiarLibrosUI();
@@ -162,16 +217,14 @@ public class HistorialManager : MonoBehaviour
 
         if (personajes == null || personajes.Count == 0)
         {
-            mensajeLibrosVacio.StringChanged += (mensaje) =>
-            {
-                MostrarMensajeLibrosVacio(mensaje);
-            };
+            mensajeLibrosVacio.StringChanged -= MostrarMensajeLibrosVacioHandler;
+            mensajeLibrosVacio.StringChanged += MostrarMensajeLibrosVacioHandler;
             Debug.Log("No hay personajes atendidos");
+            yield break; 
         }
         else
         {
             bool hayLibros = false;
-
             foreach (var personaje in personajes)
             {
                 Debug.Log($"Revisando personaje: {personaje.nombreDelCliente} - Libro: '{personaje.tituloLibroPrestado}'");
@@ -186,15 +239,28 @@ public class HistorialManager : MonoBehaviour
 
                     if (textos.Length >= 2)
                     {
-                        textos[0].text = personaje.nombreDelCliente;
+                        string nombreTraducido = personaje.nombreDelCliente;
+
+                        yield return StartCoroutine(personaje.GetNombreClienteLocalized(nombre =>
+                        {
+                            nombreTraducido = nombre;
+                        }));
+
+                        textos[0].text = nombreTraducido;
 
                         LocalizedString localizedTitle = new LocalizedString("TitulosLibros", personaje.tituloLibroPrestado);
-                        localizedTitle.StringChanged += (tituloTraducido) =>
+                        localizedTitle.StringChanged -= LocalizedTitle_StringChanged;
+                        localizedTitle.StringChanged += LocalizedTitle_StringChanged;
+
+                        void LocalizedTitle_StringChanged(string tituloTraducido)
                         {
                             textos[1].text = tituloTraducido;
-                            librosPrestados.Add(tituloTraducido);
-                            Debug.Log($"Libro prestado mostrado: {tituloTraducido}");
-                        };
+                            if (!librosPrestados.Contains(tituloTraducido))
+                            {
+                                librosPrestados.Add(tituloTraducido);
+                                Debug.Log($"Libro prestado mostrado: {tituloTraducido}");
+                            }
+                        }
                     }
                     else
                     {
@@ -205,13 +271,18 @@ public class HistorialManager : MonoBehaviour
 
             if (!hayLibros)
             {
-                mensajeLibrosVacio.StringChanged += (mensaje) =>
-                {
-                    MostrarMensajeLibrosVacio(mensaje);
-                };
+                mensajeLibrosVacio.StringChanged -= MostrarMensajeLibrosVacioHandler;
+                mensajeLibrosVacio.StringChanged += MostrarMensajeLibrosVacioHandler;
                 Debug.Log("No se encontraron libros prestados en personajes.");
             }
         }
+
+        yield break; 
+    }
+
+    private void MostrarMensajeLibrosVacioHandler(string mensaje)
+    {
+        MostrarMensajeLibrosVacio(mensaje);
     }
 
     public List<string> GetLibrosPrestados()
@@ -250,6 +321,5 @@ public class HistorialManager : MonoBehaviour
             Debug.Log("Mostrando mensaje de libros vacío");
         }
     }
-
     #endregion
 }

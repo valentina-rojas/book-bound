@@ -171,7 +171,7 @@ MonoBehaviour:
   libroDeseadoID: 33
   tipoPreferido: herbologia
   nombreDelCliente: Aprendiz
-  descripcionPedido: "Solicit\xF3 reparar libro"
+  descripcionPedido: Reparacion
   stickersRequeridos: 
   tituloLibroPortada: 
   tituloLibroPortadaKey:

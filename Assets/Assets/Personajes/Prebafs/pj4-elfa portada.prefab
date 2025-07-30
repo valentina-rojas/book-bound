@@ -174,7 +174,7 @@ MonoBehaviour:
   libroDeseadoID: 33
   tipoPreferido: herbologia
   nombreDelCliente: Elfa
-  descripcionPedido: "Solicit\xF3 crear una portada para su libro"
+  descripcionPedido: Portada
   stickersRequeridos: 070000000e0000000400000006000000
   tituloLibroPortada: 1Cliente
   tituloLibroPortadaKey:

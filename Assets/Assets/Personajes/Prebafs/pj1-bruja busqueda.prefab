@@ -171,7 +171,7 @@ MonoBehaviour:
   libroDeseadoID: 33
   tipoPreferido: herbologia
   nombreDelCliente: Bruja
-  descripcionPedido: "Solicit\xF3 \"Algo para vengarse\""
+  descripcionPedido: Bruja_Des
   stickersRequeridos: 
   tituloLibroPortada: 
   tituloLibroPortadaKey:

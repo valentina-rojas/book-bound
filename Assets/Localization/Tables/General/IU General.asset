@@ -30,7 +30,7 @@ MonoBehaviour:
         - rid: 8447689087114543193
         - rid: 8447689087114543194
         - rid: 8447689087114543195
-        m_ConnectedFile: 
+        m_ConnectedFile: C:/Users/Urano/Downloads/IU - IU General.csv
     - rid: 8447689087114543193
       type: {class: KeyIdColumns, ns: UnityEditor.Localization.Plugins.CSV.Columns, asm: Unity.Localization.Editor}
       data:

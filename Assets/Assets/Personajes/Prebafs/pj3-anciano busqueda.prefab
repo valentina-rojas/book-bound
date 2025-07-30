@@ -170,8 +170,7 @@ MonoBehaviour:
   libroDeseadoID: 63
   tipoPreferido: terror
   nombreDelCliente: Anciano
-  descripcionPedido: "Solicit\xF3 algo para asustar a los \"mocosos\" debajo de su
-    cama"
+  descripcionPedido: Anciano_Des
   stickersRequeridos: 
   tituloLibroPortada: 
   tituloLibroPortadaKey:

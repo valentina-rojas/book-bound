@@ -2,6 +2,8 @@ using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
 using System.Collections.Generic;
+using UnityEngine.Localization.Components;
+using UnityEngine.Localization;
 using TMPro;
 
 public class GameManager : MonoBehaviour
@@ -30,6 +32,14 @@ public class GameManager : MonoBehaviour
     public TMP_Text textoDia;
     public TMP_Text textoResultadoFinal;
     public TMP_Text textoTituloFinDeDia;
+
+    [Header("Localización")]
+    public LocalizedString textoDiaLocalized;
+    public LocalizedString textoFinDiaLocalized;
+    public LocalizedString resumenClientesLocalized;
+    public LocalizedString mensajeFinalBienLocalized;
+    public LocalizedString mensajeFinalMalLocalized;
+    public LocalizedString mensajeFinalRegularLocalized;
     #endregion
 
     #region Configuración de Niveles
@@ -74,14 +84,30 @@ public class GameManager : MonoBehaviour
             Debug.LogWarning($"No hay datos definidos para el Día {nivelActual}. El juego debería finalizar o retornar al menú.");
             yield break;
         }
+
         MenuPausa.instance.OcultarBotonPausa();
         TaskManager.instance.ReiniciarTareas();
         panelInfoLibro.SetActive(true);
-        textoDia.text = $"Día {nivelActual}";
+
+        var handle = textoDiaLocalized.GetLocalizedStringAsync();
+        yield return handle;
+
+        if (handle.Status == UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationStatus.Succeeded)
+        {
+            string textoLocalizado = handle.Result;
+            textoDia.text = string.Format(textoLocalizado, nivelActual);
+        }
+        else
+        {
+            Debug.LogWarning("No se pudo cargar el texto localizado para el Día.");
+            textoDia.text = $"Día {nivelActual}";
+        }
+
         if (nivelActual == 2)
             CameraManager.instance.botonCambiarCamara3.gameObject.SetActive(true);
         if (nivelActual == 4)
             CameraManager.instance.botonCambiarCamara2.gameObject.SetActive(true);
+
         Time.timeScale = 0f;
         yield return new WaitForSecondsRealtime(3f);
         panelInfoLibro.SetActive(false);
@@ -93,34 +119,71 @@ public class GameManager : MonoBehaviour
 
     public void FinDeNivel()
     {
+        StartCoroutine(MostrarCartelFinDeDia());
+    }
+
+    private IEnumerator MostrarCartelFinDeDia()
+    {
         TaskManager.instance.OcultarListaTareas();
         TaskManager.instance.OcultarBotonTareas();
         MenuPausa.instance.OcultarBotonPausa();
-        nivelActual++;
         panelFinNivel.gameObject.SetActive(true);
-        textoTituloFinDeDia.text = $"Fin del Día {nivelActual - 1}";
 
-        string mensajeFinal = "";
+        int diaMostrado = nivelActual;
+        nivelActual++;
 
-        string resumenClientes = $"Clientes satisfechos: {recomendacionesBuenas}\nClientes insatisfechos: {recomendacionesMalas}\n";
+        var handleTitulo = textoFinDiaLocalized.GetLocalizedStringAsync();
+        yield return handleTitulo;
 
-        if (recomendacionesBuenas > recomendacionesMalas)
+        if (handleTitulo.Status == UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationStatus.Succeeded)
         {
-            mensajeFinal = "¡Buen trabajo! Tus recomendaciones ayudaron a muchos clientes.\n\n" + resumenClientes;
-        }
-        else if (recomendacionesMalas > recomendacionesBuenas)
-        {
-            mensajeFinal = "Hoy no fue el mejor día... ¡Seguro mañana será mejor!\n\n" + resumenClientes;
+            textoTituloFinDeDia.text = string.Format(handleTitulo.Result, diaMostrado);
         }
         else
         {
-            mensajeFinal = "Un día regular. ¡Seguro mañana será mejor!\n\n" + resumenClientes;
+            textoTituloFinDeDia.text = $"Fin del Día {diaMostrado}";
+        }
+
+        var handleResumen = resumenClientesLocalized.GetLocalizedStringAsync();
+        yield return handleResumen;
+
+        string resumenClientes;
+        if (handleResumen.Status == UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationStatus.Succeeded)
+        {
+            resumenClientes = string.Format(handleResumen.Result, recomendacionesBuenas, recomendacionesMalas);
+        }
+        else
+        {
+            resumenClientes = $"Clientes satisfechos: {recomendacionesBuenas}\nClientes insatisfechos: {recomendacionesMalas}";
+        }
+
+        LocalizedString mensajeFinalLocalized;
+        if (recomendacionesBuenas > recomendacionesMalas)
+            mensajeFinalLocalized = mensajeFinalBienLocalized;
+        else if (recomendacionesMalas > recomendacionesBuenas)
+            mensajeFinalLocalized = mensajeFinalMalLocalized;
+        else
+            mensajeFinalLocalized = mensajeFinalRegularLocalized;
+
+        var handleMensaje = mensajeFinalLocalized.GetLocalizedStringAsync();
+        yield return handleMensaje;
+
+        string mensajeFinal;
+        if (handleMensaje.Status == UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationStatus.Succeeded)
+        {
+            mensajeFinal = handleMensaje.Result + "\n" + resumenClientes;
+        }
+        else
+        {
+            mensajeFinal = "Resultado del día.\n" + resumenClientes;
         }
 
         textoResultadoFinal.text = mensajeFinal;
+
         recomendacionesBuenas = 0;
         recomendacionesMalas = 0;
     }
+
     public void AvanzarAlSiguienteNivel()
     {
         panelFinNivel.SetActive(false);

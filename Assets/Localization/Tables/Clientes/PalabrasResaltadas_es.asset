@@ -1,0 +1,99 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: PalabrasResaltadas_es
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: es
+  m_SharedData: {fileID: 11400000, guid: 6c1587999afa9a048a7e03b4aa8b2d45, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 72037867520
+    m_Localized: La Dama de los Secretos Perdidos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 72113364992
+    m_Localized: vengarse
+    m_Metadata:
+      m_Items: []
+  - m_Id: 72113364993
+    m_Localized: asustar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 72113364994
+    m_Localized: cama
+    m_Metadata:
+      m_Items: []
+  - m_Id: 72117559296
+    m_Localized: reparar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 72117559297
+    m_Localized: crear
+    m_Metadata:
+      m_Items: []
+  - m_Id: 72117559298
+    m_Localized: portada
+    m_Metadata:
+      m_Items: []
+  - m_Id: 72117559299
+    m_Localized: libro
+    m_Metadata:
+      m_Items: []
+  - m_Id: 72117559300
+    m_Localized: hechizar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 72117559301
+    m_Localized: prueba
+    m_Metadata:
+      m_Items: []
+  - m_Id: 72117559302
+    m_Localized: conocimientos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 72117559303
+    m_Localized: equilibrio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 72117559304
+    m_Localized: luz
+    m_Metadata:
+      m_Items: []
+  - m_Id: 72117559305
+    m_Localized: oscuridad
+    m_Metadata:
+      m_Items: []
+  - m_Id: 72117559306
+    m_Localized: "El Guardi\xE1n del Bosque Azul"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 72117559307
+    m_Localized: relatos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 72117559308
+    m_Localized: invisible
+    m_Metadata:
+      m_Items: []
+  - m_Id: 72117559309
+    m_Localized: no dicho
+    m_Metadata:
+      m_Items: []
+  - m_Id: 72121753600
+    m_Localized: Compendio de Plantas Susurrantes
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

@@ -159,8 +159,8 @@ MonoBehaviour:
   spriteRespuestaMala: {fileID: -262679529, guid: 1077768549b866f4ebfa4ea68ddb611d, type: 3}
   libroDeseadoID: 12
   tipoPreferido: misterio
-  nombreDelCliente: 'Forastero '
-  descripcionPedido: "Devolvi\xF3 un libro"
+  nombreDelCliente: Forastero
+  descripcionPedido: Devolucion
   stickersRequeridos: 
   tituloLibroPortada: 
   tituloLibroPortadaKey:

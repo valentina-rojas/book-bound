@@ -81,8 +81,46 @@ public class CharacterAttributes : MonoBehaviour
     public string tipoPreferido;
 
     public string nombreDelCliente;
-    [TextArea(1, 3)]
-    public string descripcionPedido;
+
+    [Tooltip("Clave de la tabla 'DescripcionPedidos'")]
+    public string descripcionPedido; 
+
+    public IEnumerator GetDescripcionPedidoLocalized(System.Action<string> callback)
+    {
+        if (string.IsNullOrEmpty(descripcionPedido))
+        {
+            callback("");
+            yield break;
+        }
+
+        var localizedString = new LocalizedString
+        {
+            TableReference = "DescripcionPedidos",
+            TableEntryReference = descripcionPedido
+        };
+
+        var handle = localizedString.GetLocalizedStringAsync();
+        yield return handle;
+        callback(handle.Result);
+    }
+    public IEnumerator GetNombreClienteLocalized(System.Action<string> callback)
+    {
+        if (string.IsNullOrEmpty(nombreDelCliente))
+        {
+            callback("");
+            yield break;
+        }
+
+        var localizedString = new LocalizedString
+        {
+            TableReference = "Clientes",
+            TableEntryReference = nombreDelCliente 
+        };
+
+        var handle = localizedString.GetLocalizedStringAsync();
+        yield return handle;
+        callback(handle.Result);
+    }
 
     public List<StickerID> stickersRequeridos = new List<StickerID>();
 

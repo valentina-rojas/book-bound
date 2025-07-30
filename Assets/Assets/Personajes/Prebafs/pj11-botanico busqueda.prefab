@@ -171,7 +171,7 @@ MonoBehaviour:
   libroDeseadoID: 31
   tipoPreferido: herbologia
   nombreDelCliente: "Bot\xE1nico"
-  descripcionPedido: "Solicit\xF3 \"Compendio de Plantas Susurrantes\""
+  descripcionPedido: Botanico_Des
   stickersRequeridos: 
   tituloLibroPortada: 
   tituloLibroPortadaKey:

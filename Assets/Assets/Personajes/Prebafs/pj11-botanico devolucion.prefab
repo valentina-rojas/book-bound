@@ -160,7 +160,7 @@ MonoBehaviour:
   libroDeseadoID: 31
   tipoPreferido: herbologia
   nombreDelCliente: "Bot\xE1nico"
-  descripcionPedido: "Devolvi\xF3 un libro"
+  descripcionPedido: Devolucion
   stickersRequeridos: 
   tituloLibroPortada: 
   tituloLibroPortadaKey:

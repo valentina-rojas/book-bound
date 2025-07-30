@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Clientes Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: Clientes
+  m_TableCollectionNameGuidString: f30d9453c7f83754b83e68dcf089d445
+  m_Entries:
+  - m_Id: 34431737856
+    m_Key: Bruja
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34586927104
+    m_Key: Aprendiz
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34586927105
+    m_Key: Anciano
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34586927106
+    m_Key: Elfa
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34586927107
+    m_Key: Forastero
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34586927108
+    m_Key: BrujaMayor
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34586927109
+    m_Key: DonVinagre
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34586927110
+    m_Key: Elfo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34586927111
+    m_Key: Ogro
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34586927112
+    m_Key: Coleccionista
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34586927113
+    m_Key: "Bot\xE1nico"
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 8447689252848009341
+  references:
+    version: 2
+    RefIds:
+    - rid: 8447689252848009341
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1753839714401

@@ -160,7 +160,7 @@ MonoBehaviour:
   libroDeseadoID: 2
   tipoPreferido: fantasia
   nombreDelCliente: Ogro
-  descripcionPedido: "Devolvi\xF3 un libro"
+  descripcionPedido: Devolucion
   stickersRequeridos: 
   tituloLibroPortada: 
   tituloLibroPortadaKey:

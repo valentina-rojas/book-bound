@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5be51871efa6c3e4eae1703925c8f5ac, type: 3}
+  m_Name: Clientes
+  m_EditorClassIdentifier: 
+  m_SharedTableData: {fileID: 11400000, guid: f30d9453c7f83754b83e68dcf089d445, type: 2}
+  m_Tables:
+  - {fileID: 11400000, guid: 20ed42e7d79c69b4abebdefb0c91a25c, type: 2}
+  - {fileID: 11400000, guid: 174640b38e7685a4580b1da90ed77eb7, type: 2}
+  m_Extensions:
+  - rid: 8447689252848009342
+  m_Group: String Table
+  references:
+    version: 2
+    RefIds:
+    - rid: 8447689252848009342
+      type: {class: CsvExtension, ns: UnityEditor.Localization.Plugins.CSV, asm: Unity.Localization.Editor}
+      data:
+        m_Collection: {fileID: 11400000}
+        m_ColumnsList:
+        - rid: 8447689252848009343
+        - rid: 8447689252848009344
+        - rid: 8447689252848009345
+        m_ConnectedFile: C:/Users/Urano/Downloads/Clientes - Clientes (1).csv
+    - rid: 8447689252848009343
+      type: {class: KeyIdColumns, ns: UnityEditor.Localization.Plugins.CSV.Columns, asm: Unity.Localization.Editor}
+      data:
+        m_IncludeId: 1
+        m_IncludeSharedComments: 1
+        m_KeyFieldName: Key
+        m_IdFieldName: Id
+        m_CommentFieldName: Shared Comments
+    - rid: 8447689252848009344
+      type: {class: LocaleColumns, ns: UnityEditor.Localization.Plugins.CSV.Columns, asm: Unity.Localization.Editor}
+      data:
+        m_LocaleIdentifier:
+          m_Code: en-US
+        m_FieldName: English (United States)(en-US)
+        m_CommentFieldName: English (United States)(en-US) Comments
+        m_IncludeComments: 1
+    - rid: 8447689252848009345
+      type: {class: LocaleColumns, ns: UnityEditor.Localization.Plugins.CSV.Columns, asm: Unity.Localization.Editor}
+      data:
+        m_LocaleIdentifier:
+          m_Code: es
+        m_FieldName: Spanish(es)
+        m_CommentFieldName: Spanish(es) Comments
+        m_IncludeComments: 1

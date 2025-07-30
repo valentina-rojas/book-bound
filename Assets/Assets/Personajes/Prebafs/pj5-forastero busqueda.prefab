@@ -166,8 +166,8 @@ MonoBehaviour:
   spriteRespuestaMala: {fileID: -262679529, guid: 1077768549b866f4ebfa4ea68ddb611d, type: 3}
   libroDeseadoID: 12
   tipoPreferido: misterio
-  nombreDelCliente: 'Forastero '
-  descripcionPedido: "Solicit\xF3 \"La Dama de los Secretos Perdidos\""
+  nombreDelCliente: Forastero
+  descripcionPedido: Forastero_Des
   stickersRequeridos: 
   tituloLibroPortada: 
   tituloLibroPortadaKey:

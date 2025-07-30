@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: DescripcionPedidos_en-US
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en-US
+  m_SharedData: {fileID: 11400000, guid: 438ec36ffc13c0940a8f7e0039b48687, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 52018454528
+    m_Localized: Returned a book
+    m_Metadata:
+      m_Items: []
+  - m_Id: 52211392512
+    m_Localized: Donated a book
+    m_Metadata:
+      m_Items: []
+  - m_Id: 52211392513
+    m_Localized: Requested to repair a book
+    m_Metadata:
+      m_Items: []
+  - m_Id: 52211392514
+    m_Localized: Requested a custom cover for a book
+    m_Metadata:
+      m_Items: []
+  - m_Id: 52211392515
+    m_Localized: Requested to enchant a book
+    m_Metadata:
+      m_Items: []
+  - m_Id: 52211392516
+    m_Localized: Tested your knowledge
+    m_Metadata:
+      m_Items: []
+  - m_Id: 52211392517
+    m_Localized: Requested "Something for revenge"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 52211392518
+    m_Localized: Requested something to scare the "brats" under his bed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 52211392519
+    m_Localized: Requested The Lady of Lost Secrets
+    m_Metadata:
+      m_Items: []
+  - m_Id: 52211392520
+    m_Localized: Requested The Guardian of the Blue Forest
+    m_Metadata:
+      m_Items: []
+  - m_Id: 52211392521
+    m_Localized: Requested Whispering Plants Compendium
+    m_Metadata:
+      m_Items: []
+  - m_Id: 52211392522
+    m_Localized: Requested a book with tales about the invisible and the unspoken
+    m_Metadata:
+      m_Items: []
+  - m_Id: 52211392523
+    m_Localized: Requested a book about balance, light, and darkness
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

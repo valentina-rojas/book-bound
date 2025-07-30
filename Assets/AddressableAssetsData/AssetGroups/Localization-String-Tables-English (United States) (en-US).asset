@@ -15,6 +15,19 @@ MonoBehaviour:
   m_GroupName: Localization-String-Tables-English (United States) (en-US)
   m_GUID: 1b68ed80b92fd29479e7309878df1fb4
   m_SerializeEntries:
+  - m_GUID: 20ed42e7d79c69b4abebdefb0c91a25c
+    m_Address: Clientes_en-US
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en-US
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 29428e9a0d26fc4408bf0ee3a64f66d7
+    m_Address: DescripcionPedidos_en-US
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en-US
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 4457f4eefe32d63438bbdc77fc7c3199
     m_Address: Tareas_en-US
     m_ReadOnly: 1
@@ -74,6 +87,18 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: bc3e375ea59427e4fbe97cc3001d2758
     m_Address: TitulosLibros_en-US
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en-US
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cda6569aaa282ee4fbb599e1f73cab63
+    m_Address: PalabrasResaltadas_en-US
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en-US
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e4225564d46213c4f924e3525d8891fc
+    m_Address: Inicio Final_en-US
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en-US

@@ -169,8 +169,7 @@ MonoBehaviour:
   libroDeseadoID: 62
   tipoPreferido: terror
   nombreDelCliente: Coleccionista
-  descripcionPedido: "Solicit\xF3 un libro con relatos sobre lo invisible y lo no
-    dicho.\r"
+  descripcionPedido: Coleccionista_Des
   stickersRequeridos: 
   tituloLibroPortada: 
   tituloLibroPortadaKey:

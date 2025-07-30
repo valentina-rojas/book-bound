@@ -18,63 +18,67 @@ MonoBehaviour:
   m_Metadata:
     m_Items: []
   m_TableData:
-  - m_Id: 290594660352
+  - m_Id: 2879503517523968
     m_Localized: JUGAR
     m_Metadata:
       m_Items: []
-  - m_Id: 368361250816
+  - m_Id: 2879503542689792
     m_Localized: HISTORIAL
     m_Metadata:
       m_Items: []
-  - m_Id: 457624428544
+  - m_Id: 2879503542689793
     m_Localized: LIBROS PRESTADOS DE RHEA
     m_Metadata:
       m_Items: []
-  - m_Id: 1174053494784
+  - m_Id: 2879503542689794
     m_Localized: TAREAS
     m_Metadata:
       m_Items: []
-  - m_Id: 4010208305152
-    m_Localized: "MEN\xDA"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 3845875474432
-    m_Localized: REINICIAR
-    m_Metadata:
-      m_Items: []
-  - m_Id: 3673380528128
-    m_Localized: REANUDAR
-    m_Metadata:
-      m_Items: []
-  - m_Id: 3582481571840
-    m_Localized: PAUSA
-    m_Metadata:
-      m_Items: []
-  - m_Id: 2276496941056
+  - m_Id: 2879503546884096
     m_Localized: ABRIR TIENDA
     m_Metadata:
       m_Items: []
-  - m_Id: 4131469828096
+  - m_Id: 2879503546884097
+    m_Localized: PAUSA
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2879503546884098
+    m_Localized: REANUDAR
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2879503551078400
+    m_Localized: REINICIAR
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2879503551078401
+    m_Localized: "MEN\xDA"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2879503551078402
+    m_Localized: "EMPEZAR OTRO D\xCDA"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2879503551078403
     m_Localized: "M\xDASICA"
     m_Metadata:
       m_Items: []
-  - m_Id: 4265842745344
+  - m_Id: 2879503551078404
     m_Localized: SFX
     m_Metadata:
       m_Items: []
-  - m_Id: 585174761512960
+  - m_Id: 2879503551078405
     m_Localized: SELECCIONAR
     m_Metadata:
       m_Items: []
-  - m_Id: 585820826935296
+  - m_Id: 2879503551078406
     m_Localized: CONFIRMAR
     m_Metadata:
       m_Items: []
-  - m_Id: 976820355375104
+  - m_Id: 2879503551078407
     m_Localized: No hay historial para mostrar.
     m_Metadata:
       m_Items: []
-  - m_Id: 976914672689152
+  - m_Id: 2879503551078408
     m_Localized: No hay libros prestados para mostrar.
     m_Metadata:
       m_Items: []

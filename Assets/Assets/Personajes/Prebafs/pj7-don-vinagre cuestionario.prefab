@@ -168,8 +168,8 @@ MonoBehaviour:
   spriteRespuestaMala: {fileID: -718686173, guid: 1d5feb4c40c77e942984aab325e0aad6, type: 3}
   libroDeseadoID: 12
   tipoPreferido: misterio
-  nombreDelCliente: Don Vinagre
-  descripcionPedido: Puso a prueba tus conocimientos
+  nombreDelCliente: DonVinagre
+  descripcionPedido: Quiz
   stickersRequeridos: 
   tituloLibroPortada: 
   tituloLibroPortadaKey:

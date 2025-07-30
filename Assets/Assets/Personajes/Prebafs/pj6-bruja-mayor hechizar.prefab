@@ -173,8 +173,8 @@ MonoBehaviour:
   spriteRespuestaMala: {fileID: -1394314759, guid: 68ad608c8f0e52745af1cbbc76225bd4, type: 3}
   libroDeseadoID: 12
   tipoPreferido: misterio
-  nombreDelCliente: Bruja Mayor
-  descripcionPedido: "Solicit\xF3 hechizar un libro"
+  nombreDelCliente: BrujaMayor
+  descripcionPedido: Hechizar
   stickersRequeridos: 
   tituloLibroPortada: 
   tituloLibroPortadaKey:

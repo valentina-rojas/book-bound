@@ -15,6 +15,13 @@ MonoBehaviour:
   m_GroupName: Localization-String-Tables-Spanish (es)
   m_GUID: 6f1e38327e859e24b983e661985c5557
   m_SerializeEntries:
+  - m_GUID: 174640b38e7685a4580b1da90ed77eb7
+    m_Address: Clientes_es
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 17db2e32d67bc694aa456764dfb6ad0a
     m_Address: Tareas_es
     m_ReadOnly: 1
@@ -53,6 +60,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-es
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6b15ab57e87f4cf4f8424cfd99925e98
+    m_Address: PalabrasResaltadas_es
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 77011aae46963a34bbb4e0668b41cf28
     m_Address: HintsPortada_es
     m_ReadOnly: 1
@@ -66,6 +79,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-es
     - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a825d13f2c84458408539660ad708dac
+    m_Address: Inicio Final_es
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b46978e904248784ba4e0804fd6f46e2
     m_Address: HintsHechizos_es
@@ -81,6 +100,12 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: dbb4c1e187cf9b844abdd1423c30e3a7
     m_Address: DescripcionLibros_es
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: efc2b8452bbb77e49a2a9720e4670dbc
+    m_Address: DescripcionPedidos_es
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-es

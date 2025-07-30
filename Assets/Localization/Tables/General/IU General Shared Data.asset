@@ -15,64 +15,68 @@ MonoBehaviour:
   m_TableCollectionName: IU General
   m_TableCollectionNameGuidString: bbbbbd888e4a5af41953bddc55cb146e
   m_Entries:
-  - m_Id: 290594660352
-    m_Key: IU000
+  - m_Id: 2879503517523968
+    m_Key: BTN_JUGAR
     m_Metadata:
       m_Items: []
-  - m_Id: 368361250816
-    m_Key: IU001
+  - m_Id: 2879503542689792
+    m_Key: TITULO_HISTORIAL
     m_Metadata:
       m_Items: []
-  - m_Id: 457624428544
-    m_Key: IU002
+  - m_Id: 2879503542689793
+    m_Key: TITULO_LIBROS_PRESTADOS_RHEA
     m_Metadata:
       m_Items: []
-  - m_Id: 1174053494784
-    m_Key: IU003
+  - m_Id: 2879503542689794
+    m_Key: TITULO_TAREAS
     m_Metadata:
       m_Items: []
-  - m_Id: 2276496941056
-    m_Key: IU004
+  - m_Id: 2879503546884096
+    m_Key: BTN_ABRIR_TIENDA
     m_Metadata:
       m_Items: []
-  - m_Id: 3582481571840
-    m_Key: IU005
+  - m_Id: 2879503546884097
+    m_Key: BTN_PAUSA
     m_Metadata:
       m_Items: []
-  - m_Id: 3673380528128
-    m_Key: IU006
+  - m_Id: 2879503546884098
+    m_Key: BTN_REANUDAR
     m_Metadata:
       m_Items: []
-  - m_Id: 3845875474432
-    m_Key: IU007
+  - m_Id: 2879503551078400
+    m_Key: BTN_REINICIAR
     m_Metadata:
       m_Items: []
-  - m_Id: 4010208305152
-    m_Key: IU008
+  - m_Id: 2879503551078401
+    m_Key: BTN_MENU
     m_Metadata:
       m_Items: []
-  - m_Id: 4131469828096
-    m_Key: IU009
+  - m_Id: 2879503551078402
+    m_Key: BTN_SIGUIENTE_NIVEL
     m_Metadata:
       m_Items: []
-  - m_Id: 4265842745344
-    m_Key: IU010
+  - m_Id: 2879503551078403
+    m_Key: BTN_MUSICA
     m_Metadata:
       m_Items: []
-  - m_Id: 585174761512960
-    m_Key: IU011
+  - m_Id: 2879503551078404
+    m_Key: BTN_SFX
     m_Metadata:
       m_Items: []
-  - m_Id: 585820826935296
-    m_Key: IU012
+  - m_Id: 2879503551078405
+    m_Key: BTN_SELECCIONAR
     m_Metadata:
       m_Items: []
-  - m_Id: 976820355375104
-    m_Key: IU013
+  - m_Id: 2879503551078406
+    m_Key: BTN_CONFIRMAR
     m_Metadata:
       m_Items: []
-  - m_Id: 976914672689152
-    m_Key: IU014
+  - m_Id: 2879503551078407
+    m_Key: MSG_SIN_HISTORIAL
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2879503551078408
+    m_Key: MSG_SIN_LIBROS_PRESTADOS
     m_Metadata:
       m_Items: []
   m_Metadata:

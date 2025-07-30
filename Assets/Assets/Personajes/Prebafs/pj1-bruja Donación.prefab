@@ -159,7 +159,7 @@ MonoBehaviour:
   libroDeseadoID: 33
   tipoPreferido: herbologia
   nombreDelCliente: Bruja
-  descripcionPedido: "Don\xF3 un libro"
+  descripcionPedido: Donacion
   stickersRequeridos: 
   tituloLibroPortada: 
   tituloLibroPortadaKey:
