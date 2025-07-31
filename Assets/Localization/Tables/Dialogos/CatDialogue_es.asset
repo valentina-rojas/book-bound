@@ -27,16 +27,16 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23075161284608
-    m_Localized: "Recomi\xE9ndales libros seg\xFAn sus gustos o el que buscan exactamente."
+    m_Localized: "Recomendales libros seg\xFAn sus gustos o el que buscan exactamente."
     m_Metadata:
       m_Items: []
   - m_Id: 23111186161664
-    m_Localized: "Pero antes de recibir clientes deber\xEDas limpiar un poco este
+    m_Localized: "Pero antes de recibir clientes, deber\xEDas limpiar un poco este
       lugar..."
     m_Metadata:
       m_Items: []
   - m_Id: 23153548632064
-    m_Localized: "\xA1Suerte en tu primer d\xEDa!"
+    m_Localized: "Puedes consultar tu lista de tareas para saber qu\xE9 hacer."
     m_Metadata:
       m_Items: []
   - m_Id: 23183865061376

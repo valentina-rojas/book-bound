@@ -7,7 +7,7 @@ using TMPro;
 [System.Serializable]
 public class NivelDeTareas
 {
-    public List<TMP_Text> textosTareas; 
+    public List<TMP_Text> textosTareas;
 }
 
 public class TaskManager : MonoBehaviour
@@ -32,6 +32,7 @@ public class TaskManager : MonoBehaviour
 
     private List<TMP_Text> textosTareas;
     private List<bool> tareasCompletadas;
+    private bool tiendaAbiertaPorPrimeraVez = false;
 
     private void Awake()
     {
@@ -53,7 +54,7 @@ public class TaskManager : MonoBehaviour
 
     public void InicializarTareasParaNivel()
     {
-        tareasYaCompletadas = false; 
+        tareasYaCompletadas = false;
 
         int nivelIndex = GameManager.instance.nivelActual - 1;
 
@@ -81,8 +82,10 @@ public class TaskManager : MonoBehaviour
             if (texto != null)
             {
                 texto.gameObject.SetActive(true);
-                string textoPlano = texto.text.Replace("<s>", "").Replace("</s>", "");
-                texto.text = textoPlano;
+
+                LocalizedStrikethrough strikethrough = texto.GetComponent<LocalizedStrikethrough>();
+                if (strikethrough != null)
+                    strikethrough.Reiniciar();
             }
             tareasCompletadas.Add(false);
         }
@@ -120,6 +123,17 @@ public class TaskManager : MonoBehaviour
     {
         Debug.Log("Tienda abierta");
         botonAbrirTienda.gameObject.SetActive(false);
+
+        if (!tiendaAbiertaPorPrimeraVez)
+        {
+            tiendaAbiertaPorPrimeraVez = true;
+
+            if (Tutorial.instance != null)
+            {
+                Debug.Log("Avanzando tutorial a paso 4 tras abrir tienda");
+                Tutorial.instance.AvanzarAlSiguientePaso();
+            }
+        }
     }
 
     public void CompletarTareaPorID(int id)
@@ -134,13 +148,8 @@ public class TaskManager : MonoBehaviour
         {
             tareasCompletadas[id] = true;
 
-           // if (animacionLapiz != null)
-          //  animacionLapiz.ReproducirAnimacion();
-
-             if (animacionLapiz != null && botonAbrirLista.gameObject.activeInHierarchy)
-            {
-            animacionLapiz.ReproducirAnimacion();
-            }
+            if (animacionLapiz != null && botonAbrirLista.gameObject.activeInHierarchy)
+                animacionLapiz.ReproducirAnimacion();
 
             if (audioSource != null && sonidoTareaCompletada != null)
             {
@@ -154,9 +163,37 @@ public class TaskManager : MonoBehaviour
 
         RevisarTareas();
     }
+
+    private IEnumerator TacharYReproducirSonido(int id, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        TacharTexto(id);
+        audioSource.PlayOneShot(sonidoTareaCompletada);
+        RevisarTareas();
+    }
+
+    private void TacharTexto(int id)
+    {
+        if (id < 0 || id >= textosTareas.Count) return;
+
+        TMP_Text texto = textosTareas[id];
+        if (texto != null)
+        {
+            LocalizedStrikethrough strikethrough = texto.GetComponent<LocalizedStrikethrough>();
+            if (strikethrough != null)
+            {
+                strikethrough.ActivarTachado();
+            }
+            else
+            {
+                texto.text = "<s>" + texto.text + "</s>";
+            }
+        }
+    }
+
     private void RevisarTareas()
     {
-        if (tareasYaCompletadas) return; 
+        if (tareasYaCompletadas) return;
 
         foreach (bool completada in tareasCompletadas)
         {
@@ -164,15 +201,35 @@ public class TaskManager : MonoBehaviour
                 return;
         }
 
-        tareasYaCompletadas = true; 
+        tareasYaCompletadas = true;
 
         Debug.Log("¡Todas las tareas de este nivel están completas!");
 
-        if (botonAbrirTienda != null)
+        if (GameManager.instance != null && GameManager.instance.nivelActual != 1)
         {
-            panelTareas.SetActive(true);
-            botonAbrirLista.gameObject.SetActive(false);
-            botonAbrirTienda.gameObject.SetActive(true);
+            if (botonAbrirTienda != null)
+            {
+                panelTareas.SetActive(true);
+                botonAbrirLista.gameObject.SetActive(false);
+                botonAbrirTienda.gameObject.SetActive(true);
+            }
+        }
+
+        if (GameManager.instance != null && GameManager.instance.nivelActual == 1)
+        {
+            if (Tutorial.instance != null)
+            {
+                Debug.Log("Mostrando flecha volver desde TaskManager");
+                Tutorial.instance.MostrarFlechaVolver();
+            }
+            else
+            {
+                Debug.LogWarning("Tutorial.instance es null");
+            }
+        }
+        else
+        {
+            Debug.LogWarning("No es nivel 1 o GameManager es null");
         }
     }
 
@@ -191,34 +248,23 @@ public class TaskManager : MonoBehaviour
         InicializarTareasParaNivel();
     }
 
-    private IEnumerator TacharYReproducirSonido(int id, float delay)
-    {
-        yield return new WaitForSeconds(delay);
-
-        TacharTexto(id);
-        audioSource.PlayOneShot(sonidoTareaCompletada);
-
-        RevisarTareas();
-    }
-
-    private void TacharTexto(int id)
-    {
-        string nombreOriginal = textosTareas[id].text;
-        textosTareas[id].text = "<s>" + nombreOriginal + "</s>";
-    }
-
-    private IEnumerator ReproducirSonidoTareaConDelay(float delay)
-    {
-        yield return new WaitForSeconds(delay);
-        audioSource.PlayOneShot(sonidoTareaCompletada);
-    }
-    
     public bool EsTareaActiva(int id)
     {
         if (textosTareas == null || id < 0 || id >= textosTareas.Count)
             return false;
 
         return textosTareas[id].gameObject.activeSelf;
+    }
+
+    public void HabilitarBotonTienda()
+    {
+        if (botonAbrirTienda != null)
+            botonAbrirTienda.gameObject.SetActive(true);
+    }
+    
+    public bool SeAbrioTiendaAlMenosUnaVez()
+    {
+        return tiendaAbiertaPorPrimeraVez;
     }
 
 }

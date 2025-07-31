@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
 public class CameraManager : MonoBehaviour
 {
@@ -9,9 +8,11 @@ public class CameraManager : MonoBehaviour
     public GameObject[] canvasObjects;
     private int currentCameraIndex = 0;
     private bool verificacionInicialHecha = false;
+    public Button botonCambiarCamara0;
     public Button botonCambiarCamara1;
     public Button botonCambiarCamara2;
     public Button botonCambiarCamara3;
+
     public GameObject panelReparacion;
     public GameObject panelPortada;
     public GameObject panelPortada2;
@@ -19,7 +20,6 @@ public class CameraManager : MonoBehaviour
     public GameObject panelHechizo;
     public GameObject panelDonar;
     public GameObject panelDevolver;
-
 
     void Awake()
     {
@@ -43,11 +43,13 @@ public class CameraManager : MonoBehaviour
 
         botonCambiarCamara2.gameObject.SetActive(nivel > 2);
         botonCambiarCamara3.gameObject.SetActive(nivel > 1);
+        botonCambiarCamara0.interactable = false;
     }
 
     public void CambiarCamara(int cameraIndex)
     {
         TaskManager.instance.OcultarListaTareas();
+
         if (cameraIndex < 0 || cameraIndex >= cameras.Length)
         {
             Debug.LogWarning("Índice de cámara fuera de rango.");
@@ -74,6 +76,11 @@ public class CameraManager : MonoBehaviour
                 verificacionInicialHecha = true;
             }
         }
+
+        if (cameraIndex == 0 && Tutorial.instance != null)
+        {
+            Tutorial.instance.AlVolverACamaraPrincipal();
+        }
     }
 
     private System.Collections.IEnumerator VerificarEstantesDespuesDeFrame()
@@ -89,18 +96,21 @@ public class CameraManager : MonoBehaviour
 
     public void DesactivarBotonCamara()
     {
+        botonCambiarCamara0.interactable = false;
         botonCambiarCamara1.interactable = false;
         botonCambiarCamara2.interactable = false;
         botonCambiarCamara3.interactable = false;
     }
-
     public void ActivarBotonCamara()
     {
         botonCambiarCamara1.interactable = true;
         botonCambiarCamara2.interactable = true;
         botonCambiarCamara3.interactable = true;
+    }
 
-        Debug.Log("botones habilitados");
+    public void ActivarBotonCamaraTuto()
+    {
+        botonCambiarCamara0.interactable = true;
     }
 
     public void ActivarPanelReparacion()
@@ -119,10 +129,7 @@ public class CameraManager : MonoBehaviour
     {
         panelPortada.gameObject.SetActive(true);
         TaskManager.instance.OcultarBotonTareas();
-        if (bookCoverManager != null)
-        {
-            bookCoverManager.ActualizarTituloLibro();
-        }
+        bookCoverManager?.ActualizarTituloLibro();
     }
 
     public void DesctivarPanelPortada()

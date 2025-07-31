@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Extra_en-US
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en-US
+  m_SharedData: {fileID: 11400000, guid: 0017bb68c12ca3b43b8ad3fc80c23699, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 71333224448
+    m_Localized: Let's start by cleaning the cobwebs at the reception.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71429693440
+    m_Localized: Now head to the library to organize the books.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71429693441
+    m_Localized: You should arrange them by genre. Don't worry, you'll know when
+      it's right.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71429693442
+    m_Localized: I'll wait for you here.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71429693443
+    m_Localized: Great! The store is ready, so you can open it now.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71429693444
+    m_Localized: It's time to serve your first customer.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71433887744
+    m_Localized: Click the question mark to find out what they want.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71433887745
+    m_Localized: You can check the history to review what they asked for.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71433887746
+    m_Localized: You'll also see the borrowed books listed on the side.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71433887747
+    m_Localized: For now, go get the book the customer wants.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71433887748
+    m_Localized: The better you know the books, the fewer mistakes you'll make.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71433887749
+    m_Localized: Good luck on your first day!
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

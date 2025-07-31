@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Extra_es
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: es
+  m_SharedData: {fileID: 11400000, guid: 0017bb68c12ca3b43b8ad3fc80c23699, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 71333224448
+    m_Localized: "Comencemos limpiando las telara\xF1as en la recepci\xF3n."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71429693440
+    m_Localized: Ahora ve a la biblioteca para organizar los libros.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71429693441
+    m_Localized: "Debes ordenarlos por g\xE9nero. No te preocupes, te dar\xE1s cuenta
+      cuando est\xE9n bien organizados."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71429693442
+    m_Localized: "Te espero aqu\xED."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71429693443
+    m_Localized: "\xA1Genial! La tienda ya est\xE1 ordenada, as\xED que puedes abrirla
+      ahora."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71429693444
+    m_Localized: Es hora de atender al primer cliente.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71433887744
+    m_Localized: "Haz clic en el signo de interrogaci\xF3n para saber qu\xE9 quiere."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71433887745
+    m_Localized: "Puedes ver el historial para revisar qu\xE9 quer\xEDa."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71433887746
+    m_Localized: "Tambi\xE9n ver\xE1s los libros prestados a un lado."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71433887747
+    m_Localized: De momento, ve y busca el libro para el cliente.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71433887748
+    m_Localized: "Mientras m\xE1s conozcas los libros, mejor ser\xE1 y menos te equivocar\xE1s."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71433887749
+    m_Localized: "\xA1Suerte en tu primer d\xEDa!"
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

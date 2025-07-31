@@ -1,0 +1,76 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Extra Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: Extra
+  m_TableCollectionNameGuidString: 0017bb68c12ca3b43b8ad3fc80c23699
+  m_Entries:
+  - m_Id: 71333224448
+    m_Key: Tuto1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71429693440
+    m_Key: Tuto2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71429693441
+    m_Key: Tuto3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71429693442
+    m_Key: Tuto4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71429693443
+    m_Key: Tuto5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71429693444
+    m_Key: Tuto6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71433887744
+    m_Key: Tuto7
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71433887745
+    m_Key: Tuto8
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71433887746
+    m_Key: Tuto9
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71433887747
+    m_Key: Tuto10
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71433887748
+    m_Key: Tuto11
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71433887749
+    m_Key: Tuto12
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 8447689290255958016
+  references:
+    version: 2
+    RefIds:
+    - rid: 8447689290255958016
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1753975077348

@@ -24,6 +24,7 @@ public class CatDialogues : MonoBehaviour
     private string[] dialogueKeys;
     private int diaActual;
     private bool esDialogoExtra = false;
+    private string tablaActual = "CatDialogue"; 
     #endregion
 
     #region Diálogos por día
@@ -71,14 +72,21 @@ public class CatDialogues : MonoBehaviour
             diaActual = dia;
             dialogueKeys = dialoguesPorDia[dia];
             esDialogoExtra = false;
+            tablaActual = "CatDialogue"; 
             StartDialogue();
         }
     }
 
     public void IniciarDialogoExtra(string mensaje)
     {
-        dialogueKeys = new string[] { mensaje };
+        IniciarDialogoExtraDesdeLista(new string[] { mensaje });
+    }
+
+    public void IniciarDialogoExtraDesdeLista(string[] mensajes, string tabla = "Extra")
+    {
+        dialogueKeys = mensajes;
         esDialogoExtra = true;
+        tablaActual = tabla;
         StartDialogue();
     }
 
@@ -94,13 +102,15 @@ public class CatDialogues : MonoBehaviour
         typingCoroutine = StartCoroutine(ShowLocalizedLine());
     }
 
+    public System.Action OnDialogoUltimaLineaTipeada; 
+
     private IEnumerator ShowLocalizedLine()
     {
         isTyping = true;
         dialogueText.text = string.Empty;
 
         string key = dialogueKeys[lineIndex];
-        LocalizedString localizedString = new LocalizedString("CatDialogue", key);
+        LocalizedString localizedString = new LocalizedString(tablaActual, key);
 
         var handle = localizedString.GetLocalizedStringAsync();
         yield return handle;
@@ -115,6 +125,11 @@ public class CatDialogues : MonoBehaviour
 
         isTyping = false;
         ActualizarTextoBoton();
+
+        if (lineIndex == dialogueKeys.Length - 1)
+        {
+            OnDialogoUltimaLineaTipeada?.Invoke();
+        }
     }
 
     private void NextDialogueLine()
@@ -137,6 +152,7 @@ public class CatDialogues : MonoBehaviour
         }
     }
 
+    public System.Action OnDialogoExtraFinalizado;
     public void FinalizarDialogo()
     {
         dialoguePanel.SetActive(false);
@@ -154,7 +170,21 @@ public class CatDialogues : MonoBehaviour
 
         if (!esDialogoExtra)
         {
+            if (lineIndex == dialogueKeys.Length - 1)
+            {
+                OnDialogoUltimaLineaTipeada?.Invoke();
+            }
+
             TaskManager.instance?.MostrarTareas();
+
+            if (diaActual == 1)
+            {
+                Tutorial.instance?.EmpezarTutorial();
+            }
+        }
+        else
+        {
+            OnDialogoExtraFinalizado?.Invoke();
         }
     }
 
@@ -172,7 +202,7 @@ public class CatDialogues : MonoBehaviour
         if (isTyping)
         {
             StopCoroutine(typingCoroutine);
-            LocalizedString temp = new LocalizedString("CatDialogue", dialogueKeys[lineIndex]);
+            LocalizedString temp = new LocalizedString(tablaActual, dialogueKeys[lineIndex]);
             temp.GetLocalizedStringAsync().Completed += handle =>
             {
                 dialogueText.text = handle.Result;

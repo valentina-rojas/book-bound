@@ -82,6 +82,11 @@ MonoBehaviour:
     m_Localized: No hay libros prestados para mostrar.
     m_Metadata:
       m_Items: []
+  - m_Id: 3557647698272256
+    m_Localized: "Puedes recorrer los libros de una misma secci\xF3n usando las flechas
+      junto al t\xEDtulo, siempre que est\xE9n bien ordenados."
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

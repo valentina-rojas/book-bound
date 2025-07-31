@@ -14,6 +14,8 @@ public class BookManager : MonoBehaviour
     public TMP_Text tituloTexto;
     public TMP_Text descripcionTexto;
     public Image imagenLibroUI;
+    public TMP_Text textoIndicacion; 
+
 
     public GameObject panelConfirmarSeleccion;
     public Image imagenConfirmarSeleccion;
@@ -91,6 +93,17 @@ public class BookManager : MonoBehaviour
         else
         {
             MostrarLibroPorIndice(indiceLibroActual);
+        }
+        if (textoIndicacion != null)
+        {
+            if (GameManager.instance.nivelActual == 1 && !TaskManager.instance.SeAbrioTiendaAlMenosUnaVez())
+            {
+                textoIndicacion.gameObject.SetActive(true);
+            }
+            else
+            {
+                textoIndicacion.gameObject.SetActive(false);
+            }
         }
     }
 

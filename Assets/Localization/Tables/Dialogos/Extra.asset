@@ -10,28 +10,28 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5be51871efa6c3e4eae1703925c8f5ac, type: 3}
-  m_Name: CatDialogue
+  m_Name: Extra
   m_EditorClassIdentifier: 
-  m_SharedTableData: {fileID: 11400000, guid: 70715c09457dd1c4a92263855647757e, type: 2}
+  m_SharedTableData: {fileID: 11400000, guid: 0017bb68c12ca3b43b8ad3fc80c23699, type: 2}
   m_Tables:
-  - {fileID: 11400000, guid: 5c69e36198570a842bb72341a7b95f21, type: 2}
-  - {fileID: 11400000, guid: 900406d05124b3247a56034d295b9d40, type: 2}
+  - {fileID: 11400000, guid: 2c395a2c4f8dc404da93d903210cfc62, type: 2}
+  - {fileID: 11400000, guid: c2ced28b334f7fb44abd002a5bbd5b7b, type: 2}
   m_Extensions:
-  - rid: 8447689108922826765
+  - rid: 8447689290255958017
   m_Group: String Table
   references:
     version: 2
     RefIds:
-    - rid: 8447689108922826765
+    - rid: 8447689290255958017
       type: {class: CsvExtension, ns: UnityEditor.Localization.Plugins.CSV, asm: Unity.Localization.Editor}
       data:
         m_Collection: {fileID: 11400000}
         m_ColumnsList:
-        - rid: 8447689108922826766
-        - rid: 8447689108922826767
-        - rid: 8447689108922826768
-        m_ConnectedFile: C:/Users/Urano/Downloads/Dialogos - CatDialogue.csv
-    - rid: 8447689108922826766
+        - rid: 8447689290255958018
+        - rid: 8447689290255958019
+        - rid: 8447689290255958020
+        m_ConnectedFile: C:/Users/Urano/Downloads/Dialogos - Tutorial.csv
+    - rid: 8447689290255958018
       type: {class: KeyIdColumns, ns: UnityEditor.Localization.Plugins.CSV.Columns, asm: Unity.Localization.Editor}
       data:
         m_IncludeId: 1
@@ -39,7 +39,7 @@ MonoBehaviour:
         m_KeyFieldName: Key
         m_IdFieldName: Id
         m_CommentFieldName: Shared Comments
-    - rid: 8447689108922826767
+    - rid: 8447689290255958019
       type: {class: LocaleColumns, ns: UnityEditor.Localization.Plugins.CSV.Columns, asm: Unity.Localization.Editor}
       data:
         m_LocaleIdentifier:
@@ -47,7 +47,7 @@ MonoBehaviour:
         m_FieldName: English (United States)(en-US)
         m_CommentFieldName: English (United States)(en-US) Comments
         m_IncludeComments: 1
-    - rid: 8447689108922826768
+    - rid: 8447689290255958020
       type: {class: LocaleColumns, ns: UnityEditor.Localization.Plugins.CSV.Columns, asm: Unity.Localization.Editor}
       data:
         m_LocaleIdentifier:

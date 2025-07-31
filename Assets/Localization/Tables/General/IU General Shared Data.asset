@@ -79,6 +79,10 @@ MonoBehaviour:
     m_Key: MSG_SIN_LIBROS_PRESTADOS
     m_Metadata:
       m_Items: []
+  - m_Id: 3557647698272256
+    m_Key: NOTA_PASAJE_LIBROS
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

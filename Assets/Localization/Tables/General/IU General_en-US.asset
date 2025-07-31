@@ -82,6 +82,11 @@ MonoBehaviour:
     m_Localized: No borrowed books to display.
     m_Metadata:
       m_Items: []
+  - m_Id: 3557647698272256
+    m_Localized: You can browse through books from the same section using the arrows
+      next to the title, as long as they are properly ordered.
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
