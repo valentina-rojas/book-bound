@@ -184,7 +184,7 @@ MonoBehaviour:
     m_LocalVariables: []
   libroDonadoID: 0
   libroDevueltoID: 31
-  tituloLibroDevuelto: 'Compendio de Plantas Susurrantes '
+  tituloLibroDevuelto: L2herbologia
   tituloLibroDevueltoKey:
     m_TableReference:
       m_TableCollectionName: 
@@ -222,3 +222,4 @@ MonoBehaviour:
   dialogueMark: {fileID: 0}
   dialoguePanel: {fileID: 0}
   dialogueText: {fileID: 0}
+  tutorialFinalizado: 0

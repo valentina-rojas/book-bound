@@ -218,7 +218,6 @@ public class HistorialManager : MonoBehaviour
     {
         var personajes = CharacterManager.instance.GetPersonajesAtendidos();
         LimpiarLibrosUI();
-        librosPrestados.Clear();
 
         if (personajes == null || personajes.Count == 0)
         {
@@ -260,11 +259,6 @@ public class HistorialManager : MonoBehaviour
                         void LocalizedTitle_StringChanged(string tituloTraducido)
                         {
                             textos[1].text = tituloTraducido;
-                            if (!librosPrestados.Contains(tituloTraducido))
-                            {
-                                librosPrestados.Add(tituloTraducido);
-                                Debug.Log($"Libro prestado mostrado: {tituloTraducido}");
-                            }
                         }
                     }
                     else
@@ -283,6 +277,29 @@ public class HistorialManager : MonoBehaviour
         }
 
         yield break; 
+    }
+
+    public void ActualizarLibrosPrestados()
+    {
+        librosPrestados.Clear();
+
+        var personajes = CharacterManager.instance.GetPersonajesAtendidos();
+
+        if (personajes == null || personajes.Count == 0)
+            return;
+
+        foreach (var personaje in personajes)
+        {
+            if (!string.IsNullOrEmpty(personaje.tituloLibroPrestado))
+            {
+                if (!librosPrestados.Contains(personaje.tituloLibroPrestado))
+                {
+                    librosPrestados.Add(personaje.tituloLibroPrestado);
+                }
+            }
+        }
+
+        Debug.Log("Libros prestados actualizados sin necesidad de abrir el historial.");
     }
 
     private void MostrarMensajeLibrosVacioHandler(string mensaje)

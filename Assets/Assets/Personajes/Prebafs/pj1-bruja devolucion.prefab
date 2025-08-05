@@ -184,7 +184,7 @@ MonoBehaviour:
     m_LocalVariables: []
   libroDonadoID: 0
   libroDevueltoID: 33
-  tituloLibroDevuelto: "Micoperversos: Cr\xF3nicas de Hongos Vengativos"
+  tituloLibroDevuelto: L3herbologia
   tituloLibroDevueltoKey:
     m_TableReference:
       m_TableCollectionName: 
@@ -222,3 +222,4 @@ MonoBehaviour:
   dialogueMark: {fileID: 0}
   dialoguePanel: {fileID: 0}
   dialogueText: {fileID: 0}
+  tutorialFinalizado: 0
