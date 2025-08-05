@@ -12,15 +12,19 @@ public class Tutorial : MonoBehaviour
     public GameObject flechaVolver;
 
     private CatDialogues cat;
+    private bool esperandoCierreHistorial = false;
     private int pasoActual = 0;
 
     private string[][] dialogosPorPaso = new string[][]
     {
-        new string[] { "Tuto1" },
-        new string[] { "Tuto2", "Tuto3", "Tuto4" },
-        new string[] { },
-        new string[] { "Tuto5" },
-        new string[] { "Tuto6", "Tuto7" }                        
+        new string[] { "Tuto1" },                                // Paso 0: Introducción + activar telaraña
+        new string[] { "Tuto2", "Tuto3", "Tuto4" },              // Paso 1: Explicación limpieza telaraña + tareas
+        new string[] { },                                        // Paso 2: Espera acción del jugador (volver a cámara)
+        new string[] { "Tuto5" },                                // Paso 3: Mostrar tareas y botón tienda
+        new string[] { "Tuto6", "Tuto7", "Tuto8" },              // Paso 4: Diálogo con primer cliente
+        new string[] { "Tuto9", "Tuto10" },                      // Paso 5: Abrir historial tras diálogo
+        new string[] { "Tuto11" },                               // Paso 6: Resultado primer cliente
+        new string[] { "Tuto12", "Tuto13" }                      // Paso 7: Cierre tutorial
     };
 
     private void Awake()
@@ -31,7 +35,7 @@ public class Tutorial : MonoBehaviour
         if (cat != null)
         {
             cat.OnDialogoExtraFinalizado += OnDialogoExtraFinalizado;
-            cat.OnDialogoUltimaLineaTipeada += OnDialogoUltimaLineaTipeada; 
+            cat.OnDialogoUltimaLineaTipeada += OnDialogoUltimaLineaTipeada;
         }
     }
 
@@ -40,7 +44,7 @@ public class Tutorial : MonoBehaviour
         if (cat != null)
         {
             cat.OnDialogoExtraFinalizado -= OnDialogoExtraFinalizado;
-            cat.OnDialogoUltimaLineaTipeada -= OnDialogoUltimaLineaTipeada; 
+            cat.OnDialogoUltimaLineaTipeada -= OnDialogoUltimaLineaTipeada;
         }
     }
     private void OnDialogoUltimaLineaTipeada()
@@ -92,14 +96,6 @@ public class Tutorial : MonoBehaviour
             {
                 flechaBiblioteca?.SetActive(false);
             }
-            else if (pasoActual == 3)
-            {
-                if (GameManager.instance != null && GameManager.instance.nivelActual == 1)
-                {
-                    TaskManager.instance.MostrarTareas();
-                    TaskManager.instance.botonAbrirTienda.gameObject.SetActive(true);
-                }
-            }
         }
     }
 
@@ -123,7 +119,28 @@ public class Tutorial : MonoBehaviour
         if (pasoActual == 1)
         {
             TaskManager.instance?.OcultarListaTareas();
+            CameraManager.instance.ActivarBotonCamara();
             flechaBiblioteca?.SetActive(true);
+        }
+        else if (pasoActual == 3)
+        {
+            Debug.Log("Finalizó Tuto5, mostrando tareas y habilitando botón de tienda.");
+            
+            if (GameManager.instance != null && GameManager.instance.nivelActual == 1)
+            {
+                TaskManager.instance.MostrarTareas();
+                TaskManager.instance.botonAbrirTienda.gameObject.SetActive(true);
+            }
+        }
+        else if (pasoActual == 5)
+        {
+            Debug.Log("Finalizó el diálogo Tuto9. Abriendo historial...");
+            HistorialManager historial = FindObjectOfType<HistorialManager>();
+            if (historial != null)
+            {
+                historial.AbrirTodo();
+                esperandoCierreHistorial = true;
+            }
         }
     }
 
@@ -145,6 +162,30 @@ public class Tutorial : MonoBehaviour
         {
             pasoActual = 3;
             MostrarPasoActual();
+        }
+    }
+
+    public void PrimerClienteTerminoDialogo()
+    {
+        if (pasoActual == 4)
+        {
+            Debug.Log("Primer cliente terminó diálogo inicial. Avanzando al paso 5 del tutorial (Tuto8).");
+            AvanzarAlSiguientePaso(); 
+        }
+        else if (pasoActual == 6)
+        {
+            Debug.Log("Primer diálogo de resultado finalizado. Avanzando al paso 7 del tutorial (Tuto11 y Tuto12).");
+            AvanzarAlSiguientePaso(); 
+        }
+    }
+    
+    public void AlCerrarHistorial()
+    {
+        if (esperandoCierreHistorial && pasoActual == 5)
+        {
+            Debug.Log("Historial cerrado. Avanzando al paso 6 del tutorial (Tuto10).");
+            esperandoCierreHistorial = false;
+            AvanzarAlSiguientePaso();
         }
     }
 }

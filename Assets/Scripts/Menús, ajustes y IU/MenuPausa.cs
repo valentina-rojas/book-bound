@@ -9,6 +9,10 @@ public class MenuPausa : MonoBehaviour
     public static MenuPausa instance;
     [SerializeField] private GameObject botonPausa;
     [SerializeField] private GameObject menuPausa;
+    [SerializeField] private GameObject panelConfirmacionSalida;
+    [SerializeField] private GameObject botonConfirmarSalida;
+    [SerializeField] private GameObject botonCancelarSalida;
+
 
     private void Awake()
     {
@@ -39,9 +43,19 @@ public class MenuPausa : MonoBehaviour
 
     public void Salir()
     {
-        Debug.Log("Cerrando juego");
+        Debug.Log("Mostrando panel de confirmación de salida...");
+        panelConfirmacionSalida.SetActive(true);
+    }
+
+    public void ConfirmarSalida()
+    {
         Time.timeScale = 1f;
         SceneManager.LoadScene("MenuPrincipal");
+    }
+
+    public void CancelarSalida()
+    {
+        panelConfirmacionSalida.SetActive(false);
     }
 
     public void OcultarBotonPausa()

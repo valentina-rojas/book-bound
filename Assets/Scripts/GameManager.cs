@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour
     public ResultadoRecomendacion resultadoRecomendacion = ResultadoRecomendacion.Ninguna;
     public int recomendacionesBuenas = 0;
     public int recomendacionesMalas = 0;
+    private bool primerClienteDetectado = false;
     #endregion
 
     #region UI
@@ -224,6 +225,16 @@ public class GameManager : MonoBehaviour
     #endregion
 
     #region Personajes
+
+    public bool EsPrimerCliente()
+    {
+        if (!primerClienteDetectado)
+        {
+            primerClienteDetectado = true;
+            return true;
+        }
+        return false;
+    }
     public void IniciarSpawnDePersonajes()
     {
         TaskManager.instance.OcultarListaTareas();

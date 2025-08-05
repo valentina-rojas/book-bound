@@ -26,6 +26,7 @@ public class DialogueManager : MonoBehaviour
     private CharacterAttributes characterAttributes;
     private Coroutine typingCoroutine;
     private bool isTyping = false;
+    public bool tutorialFinalizado = false;
     #endregion
 
     #region Inicialización
@@ -63,6 +64,7 @@ public class DialogueManager : MonoBehaviour
     #endregion
 
     #region Lógica del diálogo
+
     public void EmpezarDialogoResultado()
     {
         hasInteracted = false;
@@ -203,6 +205,15 @@ public class DialogueManager : MonoBehaviour
         if (characterManager != null && characterAttributes != null)
         {
             characterManager.AtenderPersonaje(characterAttributes);
+            if (GameManager.instance.nivelActual == 1 && GameManager.instance.EsPrimerCliente())
+            {
+                Tutorial.instance?.PrimerClienteTerminoDialogo();
+                tutorialFinalizado = true;
+            }
+            if (GameManager.instance.nivelActual == 1 && tutorialFinalizado)
+            {
+                Tutorial.instance?.PrimerClienteTerminoDialogo();
+            }
         }
     }
 

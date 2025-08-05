@@ -166,8 +166,6 @@ public class CatDialogues : MonoBehaviour
         if (botonRepetir != null)
             botonRepetir.gameObject.SetActive(false);
 
-        CameraManager.instance?.ActivarBotonCamara();
-
         if (!esDialogoExtra)
         {
             if (lineIndex == dialogueKeys.Length - 1)

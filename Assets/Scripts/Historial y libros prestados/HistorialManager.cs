@@ -58,8 +58,13 @@ public class HistorialManager : MonoBehaviour
         {
             uiManager.GetPanelHistorial().SetActive(false);
             Debug.Log("Panel de historial cerrado");
-            historialCargado = false; 
+            historialCargado = false;
         }
+        Tutorial tutorial = FindObjectOfType<Tutorial>();
+            if (tutorial != null)
+            {
+                tutorial.AlCerrarHistorial();
+            }
     }
 
     #region Historial de Pedidos

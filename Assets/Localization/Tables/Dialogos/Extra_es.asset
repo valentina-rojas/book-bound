@@ -49,22 +49,27 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 71433887745
-    m_Localized: "Puedes ver el historial para revisar qu\xE9 quer\xEDa."
+    m_Localized: "Y aseg\xFArate de finalizar la conversaci\xF3n cuando ya hayas
+      entendido lo que quiere."
     m_Metadata:
       m_Items: []
   - m_Id: 71433887746
-    m_Localized: "Tambi\xE9n ver\xE1s los libros prestados a un lado."
+    m_Localized: "Puedes ver el historial para revisar qu\xE9 quer\xEDa."
     m_Metadata:
       m_Items: []
   - m_Id: 71433887747
-    m_Localized: De momento, ve y busca el libro para el cliente.
+    m_Localized: "Tambi\xE9n ver\xE1s los libros prestados a un lado."
     m_Metadata:
       m_Items: []
   - m_Id: 71433887748
-    m_Localized: "Mientras m\xE1s conozcas los libros, mejor ser\xE1 y menos te equivocar\xE1s."
+    m_Localized: De momento, ve y busca el libro para el cliente.
     m_Metadata:
       m_Items: []
   - m_Id: 71433887749
+    m_Localized: "Mientras m\xE1s conozcas los libros, mejor ser\xE1 y menos te equivocar\xE1s."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1570702445158400
     m_Localized: "\xA1Suerte en tu primer d\xEDa!"
     m_Metadata:
       m_Items: []
