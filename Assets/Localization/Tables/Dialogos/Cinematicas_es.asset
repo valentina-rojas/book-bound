@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Cinematicas_es
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: es
+  m_SharedData: {fileID: 11400000, guid: f46e1649903d87647a6e9039203b727d, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 23153254400
+    m_Localized: "\xA1Ah! Llegaste justo a tiempo"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23232946176
+    m_Localized: "Necesito pedirte un favor\u2026"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23237140480
+    m_Localized: "He recibido una carta urgente del c\xEDrculo de archivistas errantes"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23237140481
+    m_Localized: "Un tomo antiguo ha despertado y necesitan mi ayuda\u2026"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23237140482
+    m_Localized: "As\xED que\u2026 La librer\xEDa es toda tuya por un tiempito\u2026"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23237140483
+    m_Localized: "O dos lunas\u2026 o cinco\u2026"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23237140484
+    m_Localized: El tiempo es flexible cuando se viaja entre portales
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23237140485
+    m_Localized: "Atiende a los clientes\u2026"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23237140486
+    m_Localized: Y no olvides alimentar al gato
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23237140487
+    m_Localized: "\xA1Buena suerte joven!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23237140488
+    m_Localized: "\xA1Gracias por cuidar la librer\xEDa!"
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

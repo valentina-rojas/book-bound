@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Cinematicas_en-US
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en-US
+  m_SharedData: {fileID: 11400000, guid: f46e1649903d87647a6e9039203b727d, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 23153254400
+    m_Localized: Ah! You arrived just in time
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23232946176
+    m_Localized: "I need to ask you a favor\u2026"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23237140480
+    m_Localized: I've received an urgent letter from the Circle of Wandering Archivists
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23237140481
+    m_Localized: "An ancient tome has awakened and they need my help\u2026"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23237140482
+    m_Localized: "So\u2026 The bookshop is all yours for a little while\u2026"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23237140483
+    m_Localized: "Or two moons\u2026 or five\u2026"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23237140484
+    m_Localized: Time is flexible when traveling between portals
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23237140485
+    m_Localized: "Take care of the customers\u2026"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23237140486
+    m_Localized: And don't forget to feed the cat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23237140487
+    m_Localized: Good luck, young one!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23237140488
+    m_Localized: Thank you for taking care of the bookshop!
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

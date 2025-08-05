@@ -90,6 +90,11 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f46e1649903d87647a6e9039203b727d
+    m_Address: Assets/Localization/Tables/Dialogos/Cinematicas Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: fe0b7a3ca1207384b870d9d03d6d3bc9
     m_Address: Assets/Localization/Tables/HintsPortada Shared Data.asset
     m_ReadOnly: 1

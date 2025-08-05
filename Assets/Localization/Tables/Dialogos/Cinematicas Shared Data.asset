@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Cinematicas Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: Cinematicas
+  m_TableCollectionNameGuidString: f46e1649903d87647a6e9039203b727d
+  m_Entries:
+  - m_Id: 23153254400
+    m_Key: intro_1a
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23232946176
+    m_Key: intro_1b
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23237140480
+    m_Key: intro_2a
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23237140481
+    m_Key: intro_2b
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23237140482
+    m_Key: intro_3a
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23237140483
+    m_Key: intro_3b
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23237140484
+    m_Key: intro_3c
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23237140485
+    m_Key: intro_4a
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23237140486
+    m_Key: intro_4b
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23237140487
+    m_Key: intro_5a
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23237140488
+    m_Key: outro_thanks
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 6318578996144767050
+  references:
+    version: 2
+    RefIds:
+    - rid: 6318578996144767050
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1754422252011

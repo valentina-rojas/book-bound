@@ -34,6 +34,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-en-US
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3674570b0a7c36d4d9ddf379c1962b50
+    m_Address: Cinematicas_en-US
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en-US
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 4457f4eefe32d63438bbdc77fc7c3199
     m_Address: Tareas_en-US
     m_ReadOnly: 1

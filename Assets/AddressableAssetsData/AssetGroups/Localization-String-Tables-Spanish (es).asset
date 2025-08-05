@@ -80,6 +80,12 @@ MonoBehaviour:
     - Locale-es
     - Preload
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 906c3d9cc0e1d8340938d64ee4b0e6be
+    m_Address: Cinematicas_es
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a825d13f2c84458408539660ad708dac
     m_Address: Inicio Final_es
     m_ReadOnly: 1
