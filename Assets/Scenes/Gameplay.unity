@@ -337,7 +337,7 @@ MonoBehaviour:
   niveles:
   - personajesDelNivel:
     - {fileID: 4652195673153815505, guid: 3d804dc5ddf43a74b99b3e1f31086122, type: 3}
-    - {fileID: 4652195673153815505, guid: 03e54cad6edb9374690e175a4d150160, type: 3}
+    - {fileID: 4406605961863887185, guid: a8da8e8cc78bcbd419e10bb0856638f2, type: 3}
     - {fileID: 5489013454305063670, guid: 5450ced4880d35e4eb7f17dd4ee1d761, type: 3}
   - personajesDelNivel:
     - {fileID: 4406605961863887185, guid: 3292f0a8089a0bf47ba8eb57c5425656, type: 3}

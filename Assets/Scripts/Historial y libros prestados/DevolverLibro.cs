@@ -113,18 +113,15 @@ public class DevolverLibro : MonoBehaviour
             return;
         }
 
-        // Activar el libro en escena
         libroActual.gameObject.SetActive(true);
         Debug.Log($"Libro con ID {libroActual.libroID} activado.");
 
-        // Quitar de la lista de libros prestados
         HistorialManager historial = FindFirstObjectByType<HistorialManager>();
         if (historial != null)
         {
             historial.RemoverLibroPrestado(libroActual.titulo); 
         }
 
-        // ✅ Agregar libro al género correspondiente (como en donación)
         string genero = libroActual.tipoLibro.ToLower().Trim();
         if (!string.IsNullOrEmpty(genero))
         {
@@ -132,7 +129,6 @@ public class DevolverLibro : MonoBehaviour
             Debug.Log($"Sumado libro devuelto al género: {genero}");
         }
 
-        // Cerrar paneles y limpiar estado
         CameraManager.instance.DesctivarPanelDevolver();
         GameManager.instance.LibroDevuelto();
 

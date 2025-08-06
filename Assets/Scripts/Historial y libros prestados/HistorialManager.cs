@@ -103,15 +103,16 @@ public class HistorialManager : MonoBehaviour
         if (personajes == null || personajes.Count == 0)
         {
             bool mensajeMostrado = false;
-            mensajeHistorialVacio.StringChanged -= MostrarMensajeHistorialVacioHandler; // prevenir múltiples suscripciones
+            mensajeHistorialVacio.StringChanged -= MostrarMensajeHistorialVacioHandler;
             mensajeHistorialVacio.StringChanged += MostrarMensajeHistorialVacioHandler;
             yield break;
         }
 
         HashSet<string> entradasExistentes = new HashSet<string>();
 
-        foreach (var personaje in personajes)
+        for (int i = 0; i < personajes.Count; i++)
         {
+            var personaje = personajes[i];
             bool done = false;
             string descripcionTraducida = "";
 
@@ -146,6 +147,11 @@ public class HistorialManager : MonoBehaviour
 
                 textos[0].text = nombreTraducido;
                 textos[1].text = descripcionTraducida;
+
+                if (i < personajes.Count - 1) 
+                {
+                    textos[1].text = $"<s>{textos[1].text}</s>";
+                }
             }
         }
     }
@@ -164,12 +170,14 @@ public class HistorialManager : MonoBehaviour
         {
             if (!string.IsNullOrEmpty(palabra))
             {
-                texto = texto.Replace(palabra, $"<b><color=#e82e2e>{palabra}</color></b>");
+                if (!texto.Contains($"<{palabra}>") && !texto.Contains($"</{palabra}>"))
+                {
+                    texto = texto.Replace(palabra, $"<b><color=#e82e2e>{palabra}</color></b>");
+                }
             }
         }
         return texto;
     }
-
     public void TachadoUltimaEntrada()
     {
         if (uiManager == null) return;
@@ -180,11 +188,18 @@ public class HistorialManager : MonoBehaviour
         Transform ultimaEntrada = contenido.GetChild(0);
         TMP_Text[] textos = ultimaEntrada.GetComponentsInChildren<TMP_Text>();
 
-        if (textos.Length >= 2)
+        if (textos.Length >= 2 && !textos[1].text.StartsWith("<s>"))
         {
-            if (!textos[1].text.StartsWith("<s>"))
+            textos[1].text = $"<s>{textos[1].text}</s>";
+        }
+
+        if (contenido.childCount > 1)
+        {
+            Transform entradaAnterior = contenido.GetChild(1);
+            TMP_Text[] textosAnteriores = entradaAnterior.GetComponentsInChildren<TMP_Text>();
+            if (textosAnteriores.Length >= 2 && !textosAnteriores[1].text.StartsWith("<s>"))
             {
-                textos[1].text = $"<s>{textos[1].text}</s>";
+                textosAnteriores[1].text = $"<s>{textosAnteriores[1].text}</s>";
             }
         }
     }
