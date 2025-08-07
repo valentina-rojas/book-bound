@@ -201,6 +201,7 @@ MonoBehaviour:
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
+  libroDevuelto: 0
   tituloLibroPrestado: 
   tituloLibroPrestadoKey:
     m_TableReference:
@@ -229,3 +230,4 @@ MonoBehaviour:
   dialogueMark: {fileID: 0}
   dialoguePanel: {fileID: 0}
   dialogueText: {fileID: 0}
+  tutorialFinalizado: 0

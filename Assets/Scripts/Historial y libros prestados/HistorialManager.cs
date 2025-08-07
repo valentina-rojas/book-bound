@@ -11,6 +11,7 @@ public class HistorialManager : MonoBehaviour
 {
     private UIManager uiManager;
     private List<string> librosPrestados = new List<string>();
+    private HashSet<string> librosDevueltos = new HashSet<string>();
     private bool historialCargado = false; 
 
     [Header("Mensajes Localizados")]
@@ -229,7 +230,7 @@ public class HistorialManager : MonoBehaviour
     #endregion
 
     #region Libros Prestados
-    private IEnumerator MostrarLibrosPrestados()
+    public IEnumerator MostrarLibrosPrestados()
     {
         var personajes = CharacterManager.instance.GetPersonajesAtendidos();
         LimpiarLibrosUI();
@@ -268,13 +269,14 @@ public class HistorialManager : MonoBehaviour
                         textos[0].text = nombreTraducido;
 
                         LocalizedString localizedTitle = new LocalizedString("TitulosLibros", personaje.tituloLibroPrestado);
-                        localizedTitle.StringChanged -= LocalizedTitle_StringChanged;
-                        localizedTitle.StringChanged += LocalizedTitle_StringChanged;
-
-                        void LocalizedTitle_StringChanged(string tituloTraducido)
+                        localizedTitle.StringChanged += (tituloTraducido) =>
                         {
-                            textos[1].text = tituloTraducido;
-                        }
+                            if (librosDevueltos.Contains(personaje.tituloLibroPrestado))
+                                textos[1].text = $"<s>{tituloTraducido}</s>";
+                            else
+                                textos[1].text = tituloTraducido;
+                        };
+
                     }
                     else
                     {
@@ -333,6 +335,15 @@ public class HistorialManager : MonoBehaviour
         {
             librosPrestados.Remove(titulo);
             Debug.Log($"Libro '{titulo}' eliminado de la lista de libros prestados.");
+        }
+    }
+
+    public void RegistrarDevolucion(string tituloLibro)
+    {
+        if (!librosDevueltos.Contains(tituloLibro))
+        {
+            librosDevueltos.Add(tituloLibro);
+            Debug.Log($"Libro '{tituloLibro}' marcado como devuelto.");
         }
     }
 

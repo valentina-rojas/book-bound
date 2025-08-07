@@ -119,7 +119,8 @@ public class DevolverLibro : MonoBehaviour
         HistorialManager historial = FindFirstObjectByType<HistorialManager>();
         if (historial != null)
         {
-            historial.RemoverLibroPrestado(libroActual.titulo); 
+            historial.RegistrarDevolucion(libroActual.titulo);
+            historial.StartCoroutine(historial.MostrarLibrosPrestados());
         }
 
         string genero = libroActual.tipoLibro.ToLower().Trim();
