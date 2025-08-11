@@ -72,6 +72,10 @@ MonoBehaviour:
     m_Localized: Good luck on your first day!
     m_Metadata:
       m_Items: []
+  - m_Id: 3978396539985920
+    m_Localized: This is a library, not a nightclub. Go and shut them up!
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

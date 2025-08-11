@@ -73,6 +73,10 @@ MonoBehaviour:
     m_Localized: "\xA1Suerte en tu primer d\xEDa!"
     m_Metadata:
       m_Items: []
+  - m_Id: 3978396539985920
+    m_Localized: "Esta es una librer\xEDa, no una discoteca. \xA1Ve a callarlos!"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

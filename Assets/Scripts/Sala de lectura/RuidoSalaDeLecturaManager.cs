@@ -83,7 +83,6 @@ public class RuidoSalaDeLecturaManager : MonoBehaviour
             }
         }
     }
-
     private void ActivarEventoSalaRuidosa()
     {
         if (audioRuido == null)
@@ -92,12 +91,11 @@ public class RuidoSalaDeLecturaManager : MonoBehaviour
             return;
         }
 
-            foreach (GameObject obj in globosDialogo)
+        foreach (GameObject obj in globosDialogo)
         {
             if (obj != null)
                 obj.SetActive(true);
         }
-
 
         eventoActivo = true;
         esperandoProbabilidad = false;
@@ -118,7 +116,10 @@ public class RuidoSalaDeLecturaManager : MonoBehaviour
 
         if (catDialogues != null)
         {
-            catDialogues.IniciarDialogoExtra("Esta es una librería, no una discoteca. ¡Ve a callarlos!");
+            catDialogues.IniciarDialogoExtraDesdeLista(
+                new string[] { "SalaRuidosa" }, 
+                "Extra"
+            );
         }
     }
 
