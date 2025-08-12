@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: 5c2d871e86d1eff4c8f8b16e9dbf7f85
+guid: 9d60983c1ea88a44384fd5cec00ec360
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2006298336991220807
-    second: 4a_0
+      213: -1725633836739107330
+    second: boton-musica-menu_0
+  - first:
+      213: -7100848942425573563
+    second: boton-musica-menu_1
+  - first:
+      213: 7374976975647169075
+    second: boton-musica-menu_2
+  - first:
+      213: 630765724256751557
+    second: boton-musica-menu_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,23 +122,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 4a_0
+      name: boton-musica-menu_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1920
-        height: 1080
+        width: 52
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 9bb6e26da423824e0800000000000000
-      internalID: -2006298336991220807
+      spriteID: 76c4991ebba4fe5439da958258915c8c
+      internalID: 765454962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boton-musica-menu_1
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 0
+        width: 52
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de355ae991404664f9f9c546f8363ad8
+      internalID: -716837748
       vertices: []
       indices: 
       edges: []
@@ -138,7 +169,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: d1059952e780f1344b829e17a40e7ab3
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +179,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      4a_0: -2006298336991220807
+      boton-musica-menu_0: 765454962
+      boton-musica-menu_1: -716837748
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

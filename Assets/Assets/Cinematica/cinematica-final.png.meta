@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      cinematica-final_0: -1950888432645484586
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

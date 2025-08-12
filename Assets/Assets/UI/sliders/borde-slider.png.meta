@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: caa6f04b2c2d45b468c858aeb510819b
+guid: 1afdfb1c3fa8a85469b7f8b1e4093a50
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3748425351803905432
-    second: titulo_0
+      213: 2925548299833151651
+    second: borde-slider_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: titulo_0
+      name: borde-slider_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1920
-        height: 1080
+        width: 143
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 89527595ff4150430800000000000000
-      internalID: 3748425351803905432
+      spriteID: 3a09dc0bda2a99820800000000000000
+      internalID: 2925548299833151651
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      titulo_0: 3748425351803905432
+      borde-slider_0: 2925548299833151651
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

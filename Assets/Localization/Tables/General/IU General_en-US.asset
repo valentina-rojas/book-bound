@@ -94,6 +94,11 @@ MonoBehaviour:
     m_Localized: Are you sure you want to quit? You will lose your progress.
     m_Metadata:
       m_Items: []
+  - m_Id: 7853250800427008
+    m_Localized: You can use the arrows beside the book title to navigate between
+      books within the same section, as long as they are properly organized.
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

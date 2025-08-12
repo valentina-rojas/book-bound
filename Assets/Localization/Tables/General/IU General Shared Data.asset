@@ -91,6 +91,10 @@ MonoBehaviour:
     m_Key: SALIR
     m_Metadata:
       m_Items: []
+  - m_Id: 7853250800427008
+    m_Key: NOTA
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

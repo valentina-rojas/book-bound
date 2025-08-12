@@ -94,6 +94,12 @@ MonoBehaviour:
     m_Localized: "\xBFEst\xE1s seguro de que quieres salir? Perder\xE1s tu progreso."
     m_Metadata:
       m_Items: []
+  - m_Id: 7853250800427008
+    m_Localized: "Puedes usar las flechas a los lados del t\xEDtulo para navegar
+      entre los libros de una misma secci\xF3n, siempre que est\xE9n correctamente
+      organizados."
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
