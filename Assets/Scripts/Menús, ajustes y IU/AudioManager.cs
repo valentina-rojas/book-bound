@@ -14,12 +14,11 @@ public class AudioManager : MonoBehaviour
     public AudioSource sonidoRuidoSala;
     public AudioSource sonidoSeleccionarLibro;
     public AudioSource sonidoSilenciarSala;
-    public AudioSource sonidoTacharTareaCompletada;
     public AudioSource sonidoRespuestaTriviaCorrecta;
     public AudioSource sonidosonidoRespuestaTriviaIncorrecta;
     public AudioSource sonidoArpasLibroDonado;
     public AudioSource sonidoGato;
-
+    public AudioSource sonidoRonroneo;
  
     private void Awake()
     {

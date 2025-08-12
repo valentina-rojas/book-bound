@@ -16,12 +16,14 @@ public class TendCat : MonoBehaviour
     public float tiempoNecesario = 2f;
     public Slider barraCepilladoUI;
 
-
     [Header("Alimentar")]
     public RectTransform bolsaComidaUI;
     public RectTransform platitoUI;
     public Sprite platitoLlenoSprite;
     public Sprite platitoVacioSprite;
+
+    [Header("Acariciar")]
+    public GameObject corazonesGO;
 
     private float tiempoSobreAreaCepillado = 0f;
     private bool tareaCepillarCompletada = false;
@@ -47,6 +49,7 @@ public class TendCat : MonoBehaviour
     {
         VerificarCepillado();
         VerificarAlimentacion();
+        VerificarAcariciar();
     }
 
     public void ActualizarVisibilidadObjetos()
@@ -54,11 +57,9 @@ public class TendCat : MonoBehaviour
         if (TaskManager.instance == null)
             return;
 
-        // Mostrar el cepillo si la tarea 2 está activa
         bool mostrarCepillo = TaskManager.instance.EsTareaActiva(2);
         if (cepilloGO != null) cepilloGO.SetActive(mostrarCepillo);
 
-        // Mostrar comida y platito si la tarea 3 está activa
         bool mostrarComida = TaskManager.instance.EsTareaActiva(3);
         if (bolsaComidaGO != null) bolsaComidaGO.SetActive(mostrarComida);
         if (platitoGO != null) platitoGO.SetActive(mostrarComida);
@@ -133,6 +134,37 @@ public class TendCat : MonoBehaviour
             {
                 platitoImage.sprite = platitoLlenoSprite;
             }
+        }
+    }
+
+    private void VerificarAcariciar()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            Vector2 mousePos = Input.mousePosition;
+
+            if (RectTransformUtility.RectangleContainsScreenPoint(areaCepilladoUI, mousePos, camara))
+            {
+                AudioManager.instance.sonidoRonroneo.Play();
+
+                if (corazonesGO != null)
+                {
+                    corazonesGO.SetActive(true);
+
+                    Animator animator = corazonesGO.GetComponent<Animator>();
+                    if (animator != null)
+                    {
+                        animator.enabled = false;
+                        animator.enabled = true;
+                        animator.Play("corazones", -1, 0f);
+                    }
+                }
+            }
+        }
+
+        if (corazonesGO != null && !AudioManager.instance.sonidoRonroneo.isPlaying)
+        {
+            corazonesGO.SetActive(false);
         }
     }
 
