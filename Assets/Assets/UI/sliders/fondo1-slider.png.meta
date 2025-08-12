@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 250dc42a22728d247afae1d5a4de3b17
+guid: d491a090ece2f04478c725e716232694
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 825746309640408854
-    second: boton-jugar2_0
+      213: 3329924553485747313
+    second: fondo1-slider_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: boton-jugar2_0
+      name: fondo1-slider_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 207
-        height: 108
+        width: 136
+        height: 13
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 61fc4b4c4e3a57b00800000000000000
-      internalID: 825746309640408854
+      spriteID: 1748e5b1db4463e20800000000000000
+      internalID: 3329924553485747313
       vertices: []
       indices: 
       edges: []
@@ -147,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      boton-jugar2_0: 825746309640408854
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
