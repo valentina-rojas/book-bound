@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      mostrador-sala-principal_0: -3426021230078203088
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
