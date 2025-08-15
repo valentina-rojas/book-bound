@@ -90,7 +90,7 @@ public class Tutorial : MonoBehaviour
             if (pasoActual == 0)
             {
                 flechaTelaraña?.SetActive(true);
-                StartCoroutine(HabilitarTelaranaConDelay(5f));
+                StartCoroutine(HabilitarTelaranaConDelay(2f));
             }
             else if (pasoActual == 1)
             {
@@ -125,7 +125,7 @@ public class Tutorial : MonoBehaviour
         else if (pasoActual == 3)
         {
             Debug.Log("Finalizó Tuto5, mostrando tareas y habilitando botón de tienda.");
-            
+
             if (GameManager.instance != null && GameManager.instance.nivelActual == 1)
             {
                 TaskManager.instance.MostrarTareas();
@@ -170,15 +170,15 @@ public class Tutorial : MonoBehaviour
         if (pasoActual == 4)
         {
             Debug.Log("Primer cliente terminó diálogo inicial. Avanzando al paso 5 del tutorial (Tuto8).");
-            AvanzarAlSiguientePaso(); 
+            AvanzarAlSiguientePaso();
         }
         else if (pasoActual == 6)
         {
             Debug.Log("Primer diálogo de resultado finalizado. Avanzando al paso 7 del tutorial (Tuto11 y Tuto12).");
-            AvanzarAlSiguientePaso(); 
+            AvanzarAlSiguientePaso();
         }
     }
-    
+
     public void AlCerrarHistorial()
     {
         if (esperandoCierreHistorial && pasoActual == 5)
@@ -188,4 +188,29 @@ public class Tutorial : MonoBehaviour
             AvanzarAlSiguientePaso();
         }
     }
+    
+    public void SaltarTutorial()
+    {
+        pasoActual = dialogosPorPaso.Length; 
+
+        flechaTelaraña?.SetActive(false);
+        flechaBiblioteca?.SetActive(false);
+        flechaVolver?.SetActive(false);
+
+        if (telaranaTutorial != null)
+        {
+            telaranaTutorial.HabilitarInteraccion();
+        }
+
+        CameraManager.instance?.ActivarCamaraPrincipal();
+        CameraManager.instance?.ActivarBotonCamara();
+        CameraManager.instance?.ActivarBotonCamaraTuto(); 
+
+        TaskManager.instance?.MostrarTareas();
+        if (GameManager.instance != null)
+            TaskManager.instance.botonAbrirTienda.gameObject.SetActive(true);
+
+        enabled = false;
+    }
+
 }

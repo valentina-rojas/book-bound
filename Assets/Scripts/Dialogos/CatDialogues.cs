@@ -25,6 +25,8 @@ public class CatDialogues : MonoBehaviour
     private int diaActual;
     private bool esDialogoExtra = false;
     private string tablaActual = "CatDialogue"; 
+    private bool cancelandoDialogo = false;
+
     #endregion
 
     #region Diálogos por día
@@ -108,6 +110,7 @@ public class CatDialogues : MonoBehaviour
     {
         isTyping = true;
         dialogueText.text = string.Empty;
+        cancelandoDialogo = false;
 
         string key = dialogueKeys[lineIndex];
         LocalizedString localizedString = new LocalizedString(tablaActual, key);
@@ -115,13 +118,18 @@ public class CatDialogues : MonoBehaviour
         var handle = localizedString.GetLocalizedStringAsync();
         yield return handle;
 
+        if (cancelandoDialogo) yield break;
+
         string line = handle.Result;
 
         foreach (char ch in line)
         {
+            if (cancelandoDialogo) yield break;
             dialogueText.text += ch;
             yield return new WaitForSeconds(typingTime);
         }
+
+        if (cancelandoDialogo) yield break;
 
         isTyping = false;
         ActualizarTextoBoton();
@@ -155,35 +163,56 @@ public class CatDialogues : MonoBehaviour
     public System.Action OnDialogoExtraFinalizado;
     public void FinalizarDialogo()
     {
+        if (typingCoroutine != null)
+        {
+            StopCoroutine(typingCoroutine);
+            typingCoroutine = null;
+        }
+        StopAllCoroutines(); 
+
+        isTyping = false;
+        lineIndex = 0;
+        dialogueText.text = string.Empty;
+
         dialoguePanel.SetActive(false);
-
-        if (botonSiguiente != null)
-            botonSiguiente.gameObject.SetActive(false);
-
-        if (botonFinalizar != null)
-            botonFinalizar.gameObject.SetActive(false);
-
-        if (botonRepetir != null)
-            botonRepetir.gameObject.SetActive(false);
+        botonSiguiente?.gameObject.SetActive(false);
+        botonFinalizar?.gameObject.SetActive(false);
+        botonRepetir?.gameObject.SetActive(false);
 
         if (!esDialogoExtra)
         {
             if (lineIndex == dialogueKeys.Length - 1)
-            {
                 OnDialogoUltimaLineaTipeada?.Invoke();
-            }
 
             TaskManager.instance?.MostrarTareas();
 
             if (diaActual == 1)
-            {
                 Tutorial.instance?.EmpezarTutorial();
-            }
         }
         else
         {
             OnDialogoExtraFinalizado?.Invoke();
         }
+    }
+
+    public void CancelarDialogo()
+    {
+        cancelandoDialogo = true;
+        if (typingCoroutine != null)
+        {
+            StopCoroutine(typingCoroutine);
+            typingCoroutine = null;
+        }
+        StopAllCoroutines();
+
+        dialogueText.text = string.Empty;
+        dialoguePanel.SetActive(false);
+        botonSiguiente?.gameObject.SetActive(false);
+        botonFinalizar?.gameObject.SetActive(false);
+        botonRepetir?.gameObject.SetActive(false);
+
+        isTyping = false;
+        lineIndex = 0;
     }
 
     private void ActualizarTextoBoton()

@@ -49,7 +49,7 @@ public class CheatPanel : MonoBehaviour
 
         CatDialogues cat = FindFirstObjectByType<CatDialogues>();
         if (cat != null)
-            cat.FinalizarDialogo(); 
+            cat.CancelarDialogo();
 
         ShelfManager.instance?.ReiniciarEstado();
         CameraManager.instance?.ActivarCamaraPrincipal();
@@ -64,6 +64,12 @@ public class CheatPanel : MonoBehaviour
         gm.StartCoroutine("MostrarCartelInicioDia");
 
         ActualizarPanel();
+        Tutorial tutorial = FindObjectOfType<Tutorial>();
+        if (tutorial != null)
+        {
+            tutorial.SaltarTutorial();
+        }
+
     }
 
     public void ActualizarPanel()
