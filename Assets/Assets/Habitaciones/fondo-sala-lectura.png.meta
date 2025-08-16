@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 5b19f26f7b8d95f48897c06659c0f8d9
+guid: 67dd9d1e818e4d945a43fcbfbf6bdfce
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1038033956298251344
-    second: sala-comun_0
+      213: 8880017944494995122
+    second: fondo-sala-lectura_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -97,7 +97,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: WebGL
+    buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -110,7 +110,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: Android
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -126,7 +126,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sala-comun_0
+      name: fondo-sala-lectura_0
       rect:
         serializedVersion: 2
         x: 0
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 05c53fd2266d76e00800000000000000
-      internalID: 1038033956298251344
+      spriteID: 2b6f7bca5492c3b70800000000000000
+      internalID: 8880017944494995122
       vertices: []
       indices: 
       edges: []
@@ -160,8 +160,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      sala-comun_0: 1038033956298251344
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
