@@ -43,11 +43,12 @@ public class CheatPanel : MonoBehaviour
             SaltarANivelDesdeCheat();
         }
     }
+
     private void SaltarANivelDesdeCheat()
     {
         GameManager gm = GameManager.instance;
 
-        CatDialogues cat = FindFirstObjectByType<CatDialogues>();
+        CatDialogues cat = Object.FindFirstObjectByType<CatDialogues>();
         if (cat != null)
             cat.CancelarDialogo();
 
@@ -64,12 +65,12 @@ public class CheatPanel : MonoBehaviour
         gm.StartCoroutine("MostrarCartelInicioDia");
 
         ActualizarPanel();
-        Tutorial tutorial = FindObjectOfType<Tutorial>();
+
+        Tutorial tutorial = Object.FindFirstObjectByType<Tutorial>();
         if (tutorial != null)
         {
             tutorial.SaltarTutorial();
         }
-
     }
 
     public void ActualizarPanel()

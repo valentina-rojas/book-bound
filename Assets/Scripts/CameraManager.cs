@@ -87,7 +87,7 @@ public class CameraManager : MonoBehaviour
     {
         yield return null;
 
-        ShelfEstante[] estantes = FindObjectsOfType<ShelfEstante>();
+        ShelfEstante[] estantes = Object.FindObjectsByType<ShelfEstante>(FindObjectsSortMode.None);
         foreach (var estante in estantes)
         {
             estante.VerificarEstante();
@@ -101,6 +101,7 @@ public class CameraManager : MonoBehaviour
         botonCambiarCamara2.interactable = false;
         botonCambiarCamara3.interactable = false;
     }
+
     public void ActivarBotonCamara()
     {
         botonCambiarCamara1.interactable = true;
@@ -130,6 +131,7 @@ public class CameraManager : MonoBehaviour
         panelPortada.gameObject.SetActive(true);
         TaskManager.instance.OcultarBotonTareas();
         bookCoverManager?.ActualizarTituloLibro();
+        bookCoverManager.ActivarStickersPorSet();
     }
 
     public void DesctivarPanelPortada()

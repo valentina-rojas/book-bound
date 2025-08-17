@@ -130,6 +130,7 @@ public class CharacterAttributes : MonoBehaviour
     [Header("Portada")]
     public string tituloLibroPortada = "";
     public LocalizedString tituloLibroPortadaKey;
+    public StickerSet setStickersDeseado = StickerSet.Default;
     public List<LocalizedString> pistasPortada = new List<LocalizedString>();
 
     [Header("Hechizo")]

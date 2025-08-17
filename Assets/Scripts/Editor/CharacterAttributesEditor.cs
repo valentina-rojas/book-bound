@@ -16,6 +16,7 @@ public class CharacterAttributesEditor : Editor
     SerializedProperty pistasReparacion;
     SerializedProperty stickersRequeridos;
     SerializedProperty tituloLibroPortada;
+    SerializedProperty setStickersDeseado; 
     SerializedProperty pistasPortada;
     SerializedProperty hechizoSolicitado;
     SerializedProperty pistasHechizo;
@@ -42,6 +43,7 @@ public class CharacterAttributesEditor : Editor
 
         stickersRequeridos = serializedObject.FindProperty("stickersRequeridos");
         tituloLibroPortada = serializedObject.FindProperty("tituloLibroPortada");
+        setStickersDeseado = serializedObject.FindProperty("setStickersDeseado"); 
         pistasPortada = serializedObject.FindProperty("pistasPortada");
 
         hechizoSolicitado = serializedObject.FindProperty("hechizoSolicitado");
@@ -100,6 +102,7 @@ public class CharacterAttributesEditor : Editor
                 EditorGUILayout.LabelField("🎨 Portada", EditorStyles.boldLabel);
                 EditorGUILayout.PropertyField(stickersRequeridos);
                 EditorGUILayout.PropertyField(tituloLibroPortada);
+                EditorGUILayout.PropertyField(setStickersDeseado); 
                 EditorGUILayout.Space();
                 EditorGUILayout.LabelField("💡 Pistas para la Portada", EditorStyles.boldLabel);
                 EditorGUILayout.PropertyField(pistasPortada, true); 

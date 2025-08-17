@@ -27,6 +27,24 @@ public class BookCoverManager : MonoBehaviour
             textoTituloLibro.text = "";
         }
     }
+    
+    public void ActivarStickersPorSet()
+    {
+        var personaje = GameManager.instance.personajeActual;
+        if (personaje == null) return;
+
+        StickerSet setDeseado = personaje.setStickersDeseado;
+
+        foreach (Transform child in portadaEditable.transform)
+        {
+            StickerData data = child.GetComponent<StickerData>();
+            if (data != null)
+            {
+                child.gameObject.SetActive(data.stickerSet == setDeseado);
+            }
+        }
+    }
+
 
     public void VerificarElementosEnPortada()
     {
