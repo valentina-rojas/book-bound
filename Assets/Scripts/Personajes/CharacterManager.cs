@@ -47,6 +47,7 @@ public class CharacterManager : MonoBehaviour
             case CharacterAttributes.TipoDePedido.RepararLibro:
                 Debug.Log("Este personaje necesita que repares un libro.");
                 CameraManager.instance.ActivarPanelReparacion();
+                FindFirstObjectByType<HintsReparar>()?.SendMessage("CargarPistasDePersonaje");
                 break;
             case CharacterAttributes.TipoDePedido.HacerPortada:
                 Debug.Log("Este personaje quiere que le hagas una portada.");

@@ -173,6 +173,47 @@ MonoBehaviour:
   nombreDelCliente: Aprendiz
   descripcionPedido: Reparacion
   stickersRequeridos: 
+  pistasReparacion:
+  - m_TableReference:
+      m_TableCollectionName: GUID:e73f8710991d0c742a5265b33c9934ff
+    m_TableEntryReference:
+      m_KeyId: 22574440448
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:e73f8710991d0c742a5265b33c9934ff
+    m_TableEntryReference:
+      m_KeyId: 22607994880
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:e73f8710991d0c742a5265b33c9934ff
+    m_TableEntryReference:
+      m_KeyId: 22607994881
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:e73f8710991d0c742a5265b33c9934ff
+    m_TableEntryReference:
+      m_KeyId: 22607994882
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:e73f8710991d0c742a5265b33c9934ff
+    m_TableEntryReference:
+      m_KeyId: 22607994883
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   tituloLibroPortada: 
   tituloLibroPortadaKey:
     m_TableReference:
@@ -183,6 +224,7 @@ MonoBehaviour:
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
+  pistasPortada: []
   hechizoSolicitado: 0
   tituloLibroHechizadoKey:
     m_TableReference:
@@ -193,6 +235,7 @@ MonoBehaviour:
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
+  pistasHechizo: []
   libroDonadoID: 0
   libroDevueltoID: 0
   tituloLibroDevuelto: 
@@ -233,3 +276,4 @@ MonoBehaviour:
   dialogueMark: {fileID: 0}
   dialoguePanel: {fileID: 0}
   dialogueText: {fileID: 0}
+  tutorialFinalizado: 0

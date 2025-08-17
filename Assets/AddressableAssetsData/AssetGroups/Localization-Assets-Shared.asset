@@ -80,6 +80,11 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e73f8710991d0c742a5265b33c9934ff
+    m_Address: Assets/Localization/Tables/Pedidos/HintsReparar Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: eba59d5703ca49849b92d0a44c0858a2
     m_Address: Assets/Localization/Tables/Generos Shared Data.asset
     m_ReadOnly: 1

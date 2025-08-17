@@ -124,6 +124,9 @@ public class CharacterAttributes : MonoBehaviour
 
     public List<StickerID> stickersRequeridos = new List<StickerID>();
 
+    [Header("Reparación")]
+    public List<LocalizedString> pistasReparacion = new List<LocalizedString>();
+
     [Header("Portada")]
     public string tituloLibroPortada = "";
     public LocalizedString tituloLibroPortadaKey;

@@ -10,23 +10,18 @@ public class CharacterAttributesEditor : Editor
     SerializedProperty dialogueLinesMala;
     SerializedProperty spriteRespuestaBuena;
     SerializedProperty spriteRespuestaMala;
-
     SerializedProperty libroDeseadoID;
     SerializedProperty tipoPreferido;
     SerializedProperty tituloLibroPrestado;
-
+    SerializedProperty pistasReparacion;
     SerializedProperty stickersRequeridos;
     SerializedProperty tituloLibroPortada;
     SerializedProperty pistasPortada;
-
     SerializedProperty hechizoSolicitado;
     SerializedProperty pistasHechizo;
-
     SerializedProperty libroDonadoID;
-
     SerializedProperty libroDevueltoID;       
     SerializedProperty tituloLibroDevuelto;      
-
     SerializedProperty nombreDelCliente;
     SerializedProperty descripcionPedido;
 
@@ -42,6 +37,8 @@ public class CharacterAttributesEditor : Editor
         libroDeseadoID = serializedObject.FindProperty("libroDeseadoID");
         tipoPreferido = serializedObject.FindProperty("tipoPreferido");
         tituloLibroPrestado = serializedObject.FindProperty("tituloLibroPrestado");
+
+        pistasReparacion = serializedObject.FindProperty("pistasReparacion");
 
         stickersRequeridos = serializedObject.FindProperty("stickersRequeridos");
         tituloLibroPortada = serializedObject.FindProperty("tituloLibroPortada");
@@ -92,11 +89,17 @@ public class CharacterAttributesEditor : Editor
                 EditorGUILayout.PropertyField(tituloLibroPrestado);
                 break;
 
+            case CharacterAttributes.TipoDePedido.RepararLibro:
+                EditorGUILayout.LabelField("🛠️ Reparación", EditorStyles.boldLabel);
+                EditorGUILayout.Space();
+                EditorGUILayout.LabelField("💡 Pistas para Reparación", EditorStyles.boldLabel);
+                EditorGUILayout.PropertyField(pistasReparacion, true);
+                break;
+
             case CharacterAttributes.TipoDePedido.HacerPortada:
                 EditorGUILayout.LabelField("🎨 Portada", EditorStyles.boldLabel);
                 EditorGUILayout.PropertyField(stickersRequeridos);
                 EditorGUILayout.PropertyField(tituloLibroPortada);
-
                 EditorGUILayout.Space();
                 EditorGUILayout.LabelField("💡 Pistas para la Portada", EditorStyles.boldLabel);
                 EditorGUILayout.PropertyField(pistasPortada, true); 
@@ -105,7 +108,6 @@ public class CharacterAttributesEditor : Editor
             case CharacterAttributes.TipoDePedido.HechizarLibro:
                 EditorGUILayout.LabelField("✨ Hechizo", EditorStyles.boldLabel);
                 EditorGUILayout.PropertyField(hechizoSolicitado);
-
                 EditorGUILayout.Space();
                 EditorGUILayout.LabelField("💡 Pistas para el Hechizo", EditorStyles.boldLabel);
                 EditorGUILayout.PropertyField(pistasHechizo, true); 

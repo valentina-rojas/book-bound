@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: HintsReparar_en-US
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en-US
+  m_SharedData: {fileID: 11400000, guid: e73f8710991d0c742a5265b33c9934ff, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 22574440448
+    m_Localized: "Before setting out, wouldn\u2019t it be useful to check the map?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22607994880
+    m_Localized: The compass could show you the right path.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22607994881
+    m_Localized: "You can see monsters in the distance; don\u2019t lose track of
+      the sequence of encounters."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22607994882
+    m_Localized: "To open a treasure, you first need the key\u2026 have you found
+      it yet?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22607994883
+    m_Localized: "Returning home isn\u2019t the start; make sure you\u2019ve completed
+      everything before."
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

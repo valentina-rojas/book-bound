@@ -11,7 +11,6 @@ public class CharacterSpawn : MonoBehaviour
     private int currentIndex = 0;
     private bool interactionFinished = false;
 
-    // 👇 Nueva referencia al personaje actual instanciado
     private GameObject currentCharacter;
 
     public void AsignarPersonajesDelNivel(GameObject[] personajesDelNivel)
@@ -47,7 +46,6 @@ public class CharacterSpawn : MonoBehaviour
                 }
             }
 
-            // ✅ Guardamos en campo de la clase
             currentCharacter = Instantiate(candidate, spawnPoint.position, Quaternion.identity);
 
             AudioManager.instance.sonidoCampanilla.Play();
@@ -115,7 +113,6 @@ public class CharacterSpawn : MonoBehaviour
 
     private IEnumerator MostrarDialogoDeResultado()
     {
-        // ✅ Usamos la referencia guardada en vez de FindObjectOfType
         DialogueManager dialogueManager = currentCharacter?.GetComponent<DialogueManager>();
 
         if (dialogueManager != null)
