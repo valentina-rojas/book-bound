@@ -127,10 +127,12 @@ public class CharacterAttributes : MonoBehaviour
     [Header("Portada")]
     public string tituloLibroPortada = "";
     public LocalizedString tituloLibroPortadaKey;
+    public List<LocalizedString> pistasPortada = new List<LocalizedString>();
 
     [Header("Hechizo")]
     public Hechizo hechizoSolicitado = Hechizo.Ninguno;
     public LocalizedString tituloLibroHechizadoKey;
+    public List<LocalizedString> pistasHechizo = new List<LocalizedString>();
 
     [Header("Donación")]
     public int libroDonadoID;

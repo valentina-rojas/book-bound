@@ -310,7 +310,7 @@ public class GameManager : MonoBehaviour
 
             AudioManager.instance.sonidoLibroCorrecto.Play();
             ActualizarSpritePersonaje();
-            FindObjectOfType<HistorialManager>()?.ActualizarLibrosPrestados();
+            FindFirstObjectByType<HistorialManager>()?.ActualizarLibrosPrestados();
         }
         else
         {

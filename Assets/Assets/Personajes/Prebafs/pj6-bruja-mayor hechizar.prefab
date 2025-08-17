@@ -186,12 +186,54 @@ MonoBehaviour:
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
+  pistasPortada: []
   hechizoSolicitado: 1
   tituloLibroHechizadoKey:
     m_TableReference:
       m_TableCollectionName: 
     m_TableEntryReference:
       m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  pistasHechizo:
+  - m_TableReference:
+      m_TableCollectionName: GUID:ffdf678cb2a3ab94e96750349361a141
+    m_TableEntryReference:
+      m_KeyId: 5704949760
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:ffdf678cb2a3ab94e96750349361a141
+    m_TableEntryReference:
+      m_KeyId: 32477192192
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:ffdf678cb2a3ab94e96750349361a141
+    m_TableEntryReference:
+      m_KeyId: 44732948480
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:ffdf678cb2a3ab94e96750349361a141
+    m_TableEntryReference:
+      m_KeyId: 56460222464
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:ffdf678cb2a3ab94e96750349361a141
+    m_TableEntryReference:
+      m_KeyId: 67864535040
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -236,3 +278,4 @@ MonoBehaviour:
   dialogueMark: {fileID: 0}
   dialoguePanel: {fileID: 0}
   dialogueText: {fileID: 0}
+  tutorialFinalizado: 0

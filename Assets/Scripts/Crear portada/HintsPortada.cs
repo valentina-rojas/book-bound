@@ -2,9 +2,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine.Localization;
-using UnityEngine.Localization.Settings;
+using System.Collections.Generic;
 
 public class HintsPortada : MonoBehaviour
 {
@@ -13,18 +12,8 @@ public class HintsPortada : MonoBehaviour
     [SerializeField] private TMP_Text textoHint;
     [SerializeField] private GameObject panelHint;
 
-    [Header("Configuración")]
-    [SerializeField] private string tabla = "HintsPortada";
-    [SerializeField] private List<string> clavesPistas = new List<string>
-    {
-        "Portada_hint_1",
-        "Portada_hint_2",
-        "Portada_hint_3",
-        "Portada_hint_4",
-        "Portada_hint_5"
-    };
-
     private int indicePistaActual = 0;
+    private List<LocalizedString> pistasActuales;
 
     private void Start()
     {
@@ -33,6 +22,22 @@ public class HintsPortada : MonoBehaviour
 
         if (textoHint != null)
             textoHint.gameObject.SetActive(false);
+
+        CargarPistasDePersonaje();
+    }
+
+    private void CargarPistasDePersonaje()
+    {
+        var personaje = CharacterManager.instance?.UltimoPersonajeAtendido;
+        if (personaje != null && personaje.tipoDePedido == CharacterAttributes.TipoDePedido.HacerPortada)
+        {
+            pistasActuales = personaje.pistasPortada;
+        }
+        else
+        {
+            pistasActuales = new List<LocalizedString>();
+        }
+        ReiniciarPistas();
     }
 
     public void ReiniciarPistas()
@@ -44,15 +49,14 @@ public class HintsPortada : MonoBehaviour
 
     private void MostrarSiguientePista()
     {
-        if (clavesPistas.Count == 0 || textoHint == null) return;
+        if (pistasActuales == null || pistasActuales.Count == 0 || textoHint == null) return;
 
         textoHint.gameObject.SetActive(true);
         panelHint.SetActive(true);
 
-        if (indicePistaActual < clavesPistas.Count)
+        if (indicePistaActual < pistasActuales.Count)
         {
-            string key = clavesPistas[indicePistaActual];
-            LocalizedString pista = new LocalizedString { TableReference = tabla, TableEntryReference = key };
+            LocalizedString pista = pistasActuales[indicePistaActual];
             pista.StringChanged += ActualizarTextoHint;
             pista.RefreshString();
             indicePistaActual++;

@@ -4454,13 +4454,6 @@ MonoBehaviour:
   botonHint: {fileID: 1483487245}
   textoHint: {fileID: 925845414}
   panelHint: {fileID: 850493502}
-  tabla: HintsHechizos
-  clavesPistas:
-  - Hechizos_hint_1
-  - Hechizos_hint_2
-  - Hechizos_hint_3
-  - Hechizos_hint_4
-  - Hechizos_hint_5
 --- !u!1 &173634779
 GameObject:
   m_ObjectHideFlags: 0
@@ -9566,13 +9559,6 @@ MonoBehaviour:
   botonHint: {fileID: 1536893762}
   textoHint: {fileID: 1555061635}
   panelHint: {fileID: 868308180}
-  tabla: HintsPortada
-  clavesPistas:
-  - Portada_hint_1
-  - Portada_hint_2
-  - Portada_hint_3
-  - Portada_hint_4
-  - Portada_hint_5
 --- !u!1 &344720880
 GameObject:
   m_ObjectHideFlags: 0

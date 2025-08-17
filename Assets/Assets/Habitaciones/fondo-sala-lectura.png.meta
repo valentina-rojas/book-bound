@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      fondo-sala-lectura_0: 8880017944494995122
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

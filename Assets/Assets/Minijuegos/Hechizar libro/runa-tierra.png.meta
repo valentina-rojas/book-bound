@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      runa-tierra_0: -8122047040364800865
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

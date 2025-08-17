@@ -51,10 +51,12 @@ public class CharacterManager : MonoBehaviour
             case CharacterAttributes.TipoDePedido.HacerPortada:
                 Debug.Log("Este personaje quiere que le hagas una portada.");
                 CameraManager.instance.ActivarPanelPortada();
+                FindFirstObjectByType<HintsPortada>()?.SendMessage("CargarPistasDePersonaje");
                 break;
             case CharacterAttributes.TipoDePedido.HechizarLibro:
                 Debug.Log("Este personaje quiere que le hechices un libro.");
                 CameraManager.instance.ActivarPanelHechizo(); 
+                FindFirstObjectByType<HintsHechizos>()?.SendMessage("CargarPistasDePersonaje");
                 break;
             case CharacterAttributes.TipoDePedido.JuegoTrivia:
                 Debug.Log("Este personaje quiere hacerte preguntas");

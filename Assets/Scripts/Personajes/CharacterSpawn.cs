@@ -11,9 +11,11 @@ public class CharacterSpawn : MonoBehaviour
     private int currentIndex = 0;
     private bool interactionFinished = false;
 
+    // 👇 Nueva referencia al personaje actual instanciado
+    private GameObject currentCharacter;
+
     public void AsignarPersonajesDelNivel(GameObject[] personajesDelNivel)
     {
-        // Clonamos la lista de prefabs para asegurarnos que no son objetos modificados
         characters = new GameObject[personajesDelNivel.Length];
         for (int i = 0; i < personajesDelNivel.Length; i++)
         {
@@ -34,7 +36,6 @@ public class CharacterSpawn : MonoBehaviour
             GameObject candidate = characters[currentIndex];
             CharacterAttributes atributos = candidate.GetComponent<CharacterAttributes>();
 
-            // Si es de tipo "DevolverLibro", verificar si el libro está en el historial
             if (atributos != null && atributos.tipoDePedido == CharacterAttributes.TipoDePedido.DevolverLibro)
             {
                 HistorialManager historial = FindFirstObjectByType<HistorialManager>();
@@ -46,8 +47,8 @@ public class CharacterSpawn : MonoBehaviour
                 }
             }
 
-            // Instanciar personaje (siempre desde prefab, no desde objeto modificado)
-            GameObject currentCharacter = Instantiate(candidate, spawnPoint.position, Quaternion.identity);
+            // ✅ Guardamos en campo de la clase
+            currentCharacter = Instantiate(candidate, spawnPoint.position, Quaternion.identity);
 
             AudioManager.instance.sonidoCampanilla.Play();
 
@@ -114,7 +115,8 @@ public class CharacterSpawn : MonoBehaviour
 
     private IEnumerator MostrarDialogoDeResultado()
     {
-        DialogueManager dialogueManager = FindObjectOfType<CharacterAttributes>()?.gameObject.GetComponent<DialogueManager>();
+        // ✅ Usamos la referencia guardada en vez de FindObjectOfType
+        DialogueManager dialogueManager = currentCharacter?.GetComponent<DialogueManager>();
 
         if (dialogueManager != null)
         {
@@ -123,7 +125,7 @@ public class CharacterSpawn : MonoBehaviour
         }
         else
         {
-            Debug.LogError("DialogueManager no encontrado.");
+            Debug.LogError("DialogueManager no encontrado en el personaje actual.");
         }
 
         interactionFinished = true;
@@ -136,7 +138,7 @@ public class CharacterSpawn : MonoBehaviour
 
     private void HabilitarDialogo()
     {
-        DialogueManager dialogueManager = FindFirstObjectByType<DialogueManager>();
+        DialogueManager dialogueManager = currentCharacter?.GetComponent<DialogueManager>();
         if (dialogueManager != null)
         {
             dialogueManager.EnableDialogue();
@@ -148,4 +150,3 @@ public class CharacterSpawn : MonoBehaviour
         }
     }
 }
-

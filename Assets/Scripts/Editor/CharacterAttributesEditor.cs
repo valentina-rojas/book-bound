@@ -17,8 +17,11 @@ public class CharacterAttributesEditor : Editor
 
     SerializedProperty stickersRequeridos;
     SerializedProperty tituloLibroPortada;
+    SerializedProperty pistasPortada;
 
     SerializedProperty hechizoSolicitado;
+    SerializedProperty pistasHechizo;
+
     SerializedProperty libroDonadoID;
 
     SerializedProperty libroDevueltoID;       
@@ -42,8 +45,11 @@ public class CharacterAttributesEditor : Editor
 
         stickersRequeridos = serializedObject.FindProperty("stickersRequeridos");
         tituloLibroPortada = serializedObject.FindProperty("tituloLibroPortada");
+        pistasPortada = serializedObject.FindProperty("pistasPortada");
 
         hechizoSolicitado = serializedObject.FindProperty("hechizoSolicitado");
+        pistasHechizo = serializedObject.FindProperty("pistasHechizo");
+
         libroDonadoID = serializedObject.FindProperty("libroDonadoID");
 
         libroDevueltoID = serializedObject.FindProperty("libroDevueltoID");           
@@ -90,11 +96,19 @@ public class CharacterAttributesEditor : Editor
                 EditorGUILayout.LabelField("🎨 Portada", EditorStyles.boldLabel);
                 EditorGUILayout.PropertyField(stickersRequeridos);
                 EditorGUILayout.PropertyField(tituloLibroPortada);
+
+                EditorGUILayout.Space();
+                EditorGUILayout.LabelField("💡 Pistas para la Portada", EditorStyles.boldLabel);
+                EditorGUILayout.PropertyField(pistasPortada, true); 
                 break;
 
             case CharacterAttributes.TipoDePedido.HechizarLibro:
                 EditorGUILayout.LabelField("✨ Hechizo", EditorStyles.boldLabel);
                 EditorGUILayout.PropertyField(hechizoSolicitado);
+
+                EditorGUILayout.Space();
+                EditorGUILayout.LabelField("💡 Pistas para el Hechizo", EditorStyles.boldLabel);
+                EditorGUILayout.PropertyField(pistasHechizo, true); 
                 break;
 
             case CharacterAttributes.TipoDePedido.DonarLibro:

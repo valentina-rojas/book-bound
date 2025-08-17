@@ -12,19 +12,8 @@ public class HintsHechizos : MonoBehaviour
     [SerializeField] private TMP_Text textoHint;
     [SerializeField] private GameObject panelHint;
 
-    [Header("Configuración")]
-    [SerializeField] private string tabla = "HintsHechizos";  
-    [SerializeField] private List<string> clavesPistas = new List<string>
-    {
-        "Hechizos_hint_1",
-        "Hechizos_hint_2",
-        "Hechizos_hint_3",
-        "Hechizos_hint_4",
-        "Hechizos_hint_5"
-    };
-
     private int indicePistaActual = 0;
-    private LocalizedString pista;
+    private List<LocalizedString> pistasActuales;
 
     private void Start()
     {
@@ -34,25 +23,48 @@ public class HintsHechizos : MonoBehaviour
         if (textoHint != null)
             textoHint.gameObject.SetActive(false);
 
-        pista = new LocalizedString { TableReference = tabla };
-        pista.StringChanged += ActualizarTextoHint;
+        CargarPistasDePersonaje();
+    }
+
+    private void CargarPistasDePersonaje()
+    {
+        var personaje = CharacterManager.instance?.UltimoPersonajeAtendido;
+        if (personaje != null && personaje.tipoDePedido == CharacterAttributes.TipoDePedido.HechizarLibro)
+        {
+            pistasActuales = personaje.pistasHechizo; 
+        }
+        else
+        {
+            pistasActuales = new List<LocalizedString>();
+        }
+        ReiniciarPistas();
+    }
+
+    public void ReiniciarPistas()
+    {
+        indicePistaActual = 0;
+        if (textoHint != null)
+            textoHint.gameObject.SetActive(false);
     }
 
     private void MostrarSiguientePista()
     {
-        if (clavesPistas.Count == 0 || textoHint == null)
-            return;
-
-        if (indicePistaActual >= clavesPistas.Count)
-            indicePistaActual = 0;
-
-        pista.TableEntryReference = clavesPistas[indicePistaActual];
-        pista.RefreshString();
-
-        indicePistaActual++;
+        if (pistasActuales == null || pistasActuales.Count == 0 || textoHint == null) return;
 
         textoHint.gameObject.SetActive(true);
         panelHint.SetActive(true);
+
+        if (indicePistaActual < pistasActuales.Count)
+        {
+            LocalizedString pista = pistasActuales[indicePistaActual];
+            pista.StringChanged += ActualizarTextoHint;
+            pista.RefreshString();
+            indicePistaActual++;
+        }
+        else
+        {
+            indicePistaActual = 0;
+        }
 
         StopAllCoroutines();
         StartCoroutine(OcultarHintLuego(6f));
@@ -68,11 +80,5 @@ public class HintsHechizos : MonoBehaviour
         yield return new WaitForSeconds(tiempo);
         textoHint.gameObject.SetActive(false);
         panelHint.SetActive(false);
-    }
-
-    private void OnDestroy()
-    {
-        if (pista != null)
-            pista.StringChanged -= ActualizarTextoHint;
     }
 }
