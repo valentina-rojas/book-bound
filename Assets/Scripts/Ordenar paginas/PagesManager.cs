@@ -35,17 +35,53 @@ public class PagesManager : MonoBehaviour
         }
     }
 
-    public void CheckOrder()
+    public void ActivarCategoriaCorrecta()
     {
+        var personaje = GameManager.instance.personajeActual;
+        if (personaje == null) return;
+
+        PageCategory categoria = personaje.categoriaLibroReparar;
+
+        PageData[] todasLasPaginas = FindObjectsByType<PageData>(FindObjectsSortMode.None);
+        foreach (PageData pagina in todasLasPaginas)
+        {
+            pagina.gameObject.SetActive(pagina.category == categoria);
+        }
+
         foreach (PagesSlot slot in slots)
         {
-            if (slot.transform.childCount == 0)
+            slot.ActivarImagenPorCategoria(categoria);
+        }
+    }
+
+    public void CheckOrder()
+    {
+        var personaje = GameManager.instance.personajeActual;
+        if (personaje == null) return;
+
+        PageCategory categoria = personaje.categoriaLibroReparar;
+
+        foreach (PagesSlot slot in slots)
+        {
+            if (!slot.gameObject.activeInHierarchy) 
+                continue; 
+
+            PageData pageData = null;
+            foreach (Transform child in slot.transform)
             {
-                Debug.Log("Faltan páginas.");
+                if (child.gameObject.activeSelf)
+                {
+                    pageData = child.GetComponent<PageData>();
+                    break;
+                }
+            }
+
+            if (pageData == null)
+            {
+                Debug.Log("Faltan páginas visibles en un slot.");
                 return;
             }
 
-            PageData pageData = slot.transform.GetChild(0).GetComponent<PageData>();
             if (pageData.pageID != slot.expectedPageID)
             {
                 Debug.Log("Página fuera de lugar.");
@@ -57,25 +93,35 @@ public class PagesManager : MonoBehaviour
 
         foreach (PagesSlot slot in slots)
         {
-            Transform page = slot.transform.GetChild(0);
-            DraggableItem draggable = page.GetComponent<DraggableItem>();
-            if (draggable != null)
+            if (!slot.gameObject.activeInHierarchy) continue;
+
+            Transform page = null;
+            foreach (Transform child in slot.transform)
             {
-                draggable.enabled = false;
+                if (child.gameObject.activeSelf)
+                {
+                    page = child;
+                    break;
+                }
+            }
+
+            if (page != null)
+            {
+                DraggableItem draggable = page.GetComponent<DraggableItem>();
+                if (draggable != null)
+                {
+                    draggable.enabled = false;
+                }
             }
         }
 
-         // Reproducir sonido de éxito
         if (audioSource != null && sonidoCorrecto != null)
         {
             audioSource.PlayOneShot(sonidoCorrecto);
         }
 
-        //habilitar boton
         botonEntregar.gameObject.SetActive(true);
     }
-
-
 
     public void FinalizarRestauracion()
     {
@@ -88,7 +134,4 @@ public class PagesManager : MonoBehaviour
         }
 
     }
-
-
-
 }

@@ -1,14 +1,15 @@
 public enum StickerID
 {
+    #region default
     Flor_Azul,
     Flor_Morada,
     Flor_Rosa,
-    Avion,
+    Avion_Default,
     Dragon,
     Escudo,
     Montana,
     Papiro,
-    Sol,
+    Sol_Default,
     Hongo,
     Velas,
     Mariposa,
@@ -18,5 +19,26 @@ public enum StickerID
     Estrella_Morada,
     Estrella_Rosa,
     Estrella_Verde,
-    Hoja
+    Hoja_Default,
+    #endregion
+    #region aventura
+    Avion_Aventura,
+    Barril,
+    Cofre,
+    Espada,
+    Estrella_uno,
+    Estrella_dos,
+    Estrella_tres,
+    Faro,
+    Fogata,
+    Hoja_uno,
+    Hoja_dos,
+    Isla,
+    Mapa,
+    Pajaro,
+    Sol_Aventura,
+    Sombrero,
+    Tiburon,
+    Velero
+    #endregion
 }

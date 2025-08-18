@@ -1,49 +1,59 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class PagesSlot : MonoBehaviour, IDropHandler
 {
-
     public int expectedPageID;
+
+    [Header("Placeholders por categoría")]
+    public GameObject placeholderDefault;
+    public GameObject placeholderRecetas;
+
+    public void ActivarImagenPorCategoria(PageCategory categoria)
+    {
+        if (placeholderDefault != null) placeholderDefault.SetActive(categoria == PageCategory.Default);
+        if (placeholderRecetas != null) placeholderRecetas.SetActive(categoria == PageCategory.Recetas);
+    }
 
     public void OnDrop(PointerEventData eventData)
     {
         GameObject dropped = eventData.pointerDrag;
         DraggableItem draggableItem = dropped.GetComponent<DraggableItem>();
 
-        // Si este slot ya tiene una página
-        if (transform.childCount != 0)
+        if (transform.childCount > 0)
         {
-            // La página actual en este slot
-            GameObject current = transform.GetChild(0).gameObject;
-            DraggableItem currentDraggable = current.GetComponent<DraggableItem>();
+            Transform currentChild = null;
 
-            // Guardar el parent actual de la página soltada
-            Transform previousParent = draggableItem.parentAfterDrag;
+            foreach (Transform child in transform)
+            {
+                if (child.gameObject.activeSelf)
+                {
+                    currentChild = child;
+                    break;
+                }
+            }
 
-            // Mover la página actual al slot anterior de la página soltada
-            currentDraggable.transform.SetParent(previousParent);
-            current.transform.localPosition = Vector3.zero; // Centramos por si acaso
+            if (currentChild != null)
+            {
+                DraggableItem currentDraggable = currentChild.GetComponent<DraggableItem>();
+                Transform previousParent = draggableItem.parentAfterDrag;
 
+                currentChild.SetParent(previousParent);
+                currentChild.localPosition = Vector3.zero;
+            }
         }
 
-        // Colocar la página soltada en este slot
         draggableItem.parentAfterDrag = transform;
         dropped.transform.SetParent(transform);
         dropped.transform.localPosition = Vector3.zero;
 
-        // Verificar si corresponde
         PageData pageData = dropped.GetComponent<PageData>();
         if (pageData.pageID == expectedPageID)
-        {
-            Debug.Log("corresponde");
-        }
+            Debug.Log("Página correcta");
         else
-        {
-            Debug.Log("no corresponde a este estante");
-        }
+            Debug.Log("Página incorrecta");
 
-        // Chequear el orden total
         PagesManager.instance.CheckOrder();
     }
 }

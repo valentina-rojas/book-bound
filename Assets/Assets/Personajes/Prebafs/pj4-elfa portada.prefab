@@ -176,6 +176,7 @@ MonoBehaviour:
   nombreDelCliente: Elfa
   descripcionPedido: Portada
   stickersRequeridos: 070000000e0000000400000006000000
+  pistasReparacion: []
   tituloLibroPortada: 1Cliente
   tituloLibroPortadaKey:
     m_TableReference:
@@ -186,6 +187,7 @@ MonoBehaviour:
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
+  setStickersDeseado: 0
   pistasPortada:
   - m_TableReference:
       m_TableCollectionName: GUID:fe0b7a3ca1207384b870d9d03d6d3bc9
@@ -237,6 +239,7 @@ MonoBehaviour:
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
+  pistasHechizo: []
   libroDonadoID: 0
   libroDevueltoID: 0
   tituloLibroDevuelto: 

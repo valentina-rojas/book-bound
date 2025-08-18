@@ -126,6 +126,7 @@ public class CharacterAttributes : MonoBehaviour
 
     [Header("Reparación")]
     public List<LocalizedString> pistasReparacion = new List<LocalizedString>();
+    public PageCategory categoriaLibroReparar = PageCategory.Default;
 
     [Header("Portada")]
     public string tituloLibroPortada = "";

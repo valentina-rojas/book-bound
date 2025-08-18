@@ -214,6 +214,7 @@ MonoBehaviour:
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
+  categoriaLibroReparar: 0
   tituloLibroPortada: 
   tituloLibroPortadaKey:
     m_TableReference:
@@ -224,6 +225,7 @@ MonoBehaviour:
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
+  setStickersDeseado: 0
   pistasPortada: []
   hechizoSolicitado: 0
   tituloLibroHechizadoKey:

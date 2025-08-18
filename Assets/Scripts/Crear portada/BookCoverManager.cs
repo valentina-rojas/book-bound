@@ -12,6 +12,11 @@ public class BookCoverManager : MonoBehaviour
     public RectTransform areaPortada;
     public TMP_Text textoTituloLibro;
 
+    [Header("Portadas por set")]
+    public GameObject portadaDefault;
+    public GameObject portadaAventura;
+    public GameObject portadaAstronomico;
+
     public void ActualizarTituloLibro()
     {
         var personaje = GameManager.instance.personajeActual;
@@ -34,6 +39,8 @@ public class BookCoverManager : MonoBehaviour
         if (personaje == null) return;
 
         StickerSet setDeseado = personaje.setStickersDeseado;
+        
+        ActualizarPortadaSegunSet(setDeseado);
 
         foreach (Transform child in portadaEditable.transform)
         {
@@ -45,6 +52,25 @@ public class BookCoverManager : MonoBehaviour
         }
     }
 
+    private void ActualizarPortadaSegunSet(StickerSet setDeseado)
+    {
+        portadaDefault?.SetActive(false);
+        portadaAventura?.SetActive(false);
+        portadaAstronomico?.SetActive(false);
+
+        switch (setDeseado)
+        {
+            case StickerSet.Default:
+                portadaDefault?.SetActive(true);
+                break;
+            case StickerSet.Aventura:
+                portadaAventura?.SetActive(true);
+                break;
+            case StickerSet.Astronomico:
+                portadaAstronomico?.SetActive(true);
+                break;
+        }
+    }
 
     public void VerificarElementosEnPortada()
     {

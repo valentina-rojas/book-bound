@@ -118,7 +118,7 @@ public class CameraManager : MonoBehaviour
     {
         panelReparacion.gameObject.SetActive(true);
         TaskManager.instance.OcultarBotonTareas();
-        Debug.Log("PANEL RESTAURACION HABILITADO");
+        PagesManager.instance.ActivarCategoriaCorrecta();
     }
 
     public void DesactivarPanelReparacion()
