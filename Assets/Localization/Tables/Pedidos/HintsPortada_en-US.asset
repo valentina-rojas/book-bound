@@ -38,6 +38,42 @@ MonoBehaviour:
     m_Localized: Maybe a dragon peeking out...
     m_Metadata:
       m_Items: []
+  - m_Id: 9867519041642496
+    m_Localized: Do you see the sails on the horizon? The journey starts with the
+      wind.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9867519062614016
+    m_Localized: "A secret island may be the center of the story\u2026 dare to draw
+      it."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9867519062614017
+    m_Localized: The compass points strangely, maybe towards the hidden path.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9867519062614018
+    m_Localized: "Whispers tell of an ancient chest\u2026 could it be half-buried
+      in the sand?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9867519062614019
+    m_Localized: "Treasure is never just gold\u2026 leave a hint of mystery in the
+      design."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9912790203146240
+    m_Localized: What elements were mentioned?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9912790236700672
+    m_Localized: "There are many constellations\u2026"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9912790236700673
+    m_Localized: "Do your best to meet the client\u2019s expectations."
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

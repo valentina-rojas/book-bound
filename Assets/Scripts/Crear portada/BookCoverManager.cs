@@ -35,6 +35,11 @@ public class BookCoverManager : MonoBehaviour
     
     public void ActivarStickersPorSet()
     {
+        if (finalizarButton != null)
+        {
+            finalizarButton.gameObject.SetActive(true);
+            finalizarButton.interactable = true;
+        }
         var personaje = GameManager.instance.personajeActual;
         if (personaje == null) return;
 
@@ -74,7 +79,7 @@ public class BookCoverManager : MonoBehaviour
 
     public void VerificarElementosEnPortada()
     {
-        finalizarButton.interactable = portadaEditable.transform.childCount > 0;
+        bool tieneElementos = portadaEditable.transform.childCount > 0;
     }
 
     public void Finalizar()
@@ -104,5 +109,13 @@ public class BookCoverManager : MonoBehaviour
         }
 
         GameManager.instance.CompletarPortada(stickersUsados);
+
+        StartCoroutine(CerrarPortadaFinalDespuesDeTiempo());
+    }
+
+    private IEnumerator CerrarPortadaFinalDespuesDeTiempo()
+    {
+        yield return new WaitForSeconds(3f);
+        portadaFinal.SetActive(false);
     }
 }

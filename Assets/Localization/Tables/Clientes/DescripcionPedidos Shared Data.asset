@@ -67,6 +67,18 @@ MonoBehaviour:
     m_Key: Elfo_Des
     m_Metadata:
       m_Items: []
+  - m_Id: 7262852126253056
+    m_Key: Elfa1_Des
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7262852147224576
+    m_Key: Aprendiz1_Des
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7262852147224577
+    m_Key: BrujaMayor_Des
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

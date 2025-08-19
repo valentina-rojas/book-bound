@@ -39,6 +39,32 @@ public enum StickerID
     Sol_Aventura,
     Sombrero,
     Tiburon,
-    Velero
+    Velero,
+    #endregion
+    #region Astronomia
+    Agujero_Negro,
+    Asteroide,
+    Cohete,
+    Cometa,
+    Constelacion_uno,
+    Constelacion_dos,
+    Constelacion_tres,
+    Constelacion_cuatro,
+    Estrella_Fugas,
+    Estrella_Astronomia_uno,
+    Estrella_Astronomia_dos,
+    Estrella_Astronomia_tres,
+    Estrella_Astronomia_cuatro,
+    Galaxia_uno,
+    Galaxia_dos,
+    Nave,
+    Planeta_uno,
+    Planeta_dos,
+    Planeta_tres,
+    Planeta_cuatro,
+    Planeta_cinco,
+    Satelite,
+    Sol_Astronomia,
+    Telescopio,
     #endregion
 }

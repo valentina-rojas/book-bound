@@ -40,6 +40,26 @@ MonoBehaviour:
       lo anterior."
     m_Metadata:
       m_Items: []
+  - m_Id: 388853991645184
+    m_Localized: "\xBFTienes todos los ingredientes listos?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 388854025199616
+    m_Localized: Es hora de mezclar todo bien para hacer la masa.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 388854025199617
+    m_Localized: Amasemos hasta que la masa quede suave y lisa.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 388854025199618
+    m_Localized: "La masa debe levar\u2026 dale un buen descanso."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 388854025199619
+    m_Localized: "\xA1No te los comas crudos! Al horno con ellos."
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

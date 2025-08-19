@@ -41,6 +41,26 @@ MonoBehaviour:
       everything before."
     m_Metadata:
       m_Items: []
+  - m_Id: 388853991645184
+    m_Localized: Do you have all the ingredients ready?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 388854025199616
+    m_Localized: Time to mix everything well to make the dough.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 388854025199617
+    m_Localized: "Let\u2019s knead until the dough is soft and smooth."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 388854025199618
+    m_Localized: "The dough needs to rise\u2026 give it a little rest."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 388854025199619
+    m_Localized: "Don\u2019t eat them raw! Into the oven they go."
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

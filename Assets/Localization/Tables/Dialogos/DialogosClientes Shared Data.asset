@@ -15,266 +15,6 @@ MonoBehaviour:
   m_TableCollectionName: DialogosClientes
   m_TableCollectionNameGuidString: 398c04003a7316346af2890274873762
   m_Entries:
-  - m_Id: 521054887936
-    m_Key: Bruja_Inicio_1
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521054887937
-    m_Key: Bruja_Inicio_2
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521054887938
-    m_Key: Bruja_Inicio_3
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521054887939
-    m_Key: Bruja_Inicio_4
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521054887940
-    m_Key: Bruja_Inicio_5
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521054887941
-    m_Key: Bruja_Inicio_6
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521054887942
-    m_Key: Bruja_Buena_1
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521054887943
-    m_Key: Bruja_Buena_2
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521054887944
-    m_Key: Bruja_Buena_3
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521054887945
-    m_Key: Bruja_Buena_4
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521054887946
-    m_Key: Bruja_Buena_5
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521054887947
-    m_Key: Bruja_Mala_1
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521054887948
-    m_Key: Bruja_Mala_2
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521054887949
-    m_Key: Bruja_Mala_3
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521054887951
-    m_Key: "Bruja_Devoluci\xF3n_1"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521054887952
-    m_Key: "Bruja_Devoluci\xF3n_2"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521054887953
-    m_Key: "Bruja_Donaci\xF3n_1"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521054887954
-    m_Key: "Bruja_Donaci\xF3n_2"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521054887955
-    m_Key: Aprendiz_Inicio_1
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521054887956
-    m_Key: Aprendiz_Inicio_2
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521054887957
-    m_Key: Aprendiz_Inicio_3
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521054887958
-    m_Key: Aprendiz_Inicio_4
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521054887959
-    m_Key: Aprendiz_Inicio_5
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521054887960
-    m_Key: Aprendiz_Inicio_6
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521054887961
-    m_Key: Aprendiz_Inicio_7
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521054887962
-    m_Key: Aprendiz_Inicio_8
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521054887963
-    m_Key: Aprendiz_Buena_1
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521054887964
-    m_Key: Aprendiz_Buena_2
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521054887965
-    m_Key: Aprendiz_Buena_3
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521054887966
-    m_Key: Aprendiz_Buena_4
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521054887967
-    m_Key: Aprendiz_Buena_5
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521054887968
-    m_Key: Anciano_Inicio_1
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521054887969
-    m_Key: Anciano_Inicio_2
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521054887970
-    m_Key: Anciano_Inicio_3
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521054887971
-    m_Key: Anciano_Inicio_4
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521054887972
-    m_Key: Anciano_Inicio_5
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521054887973
-    m_Key: Anciano_Inicio_6
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521054887974
-    m_Key: Anciano_Buena_1
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521054887975
-    m_Key: Anciano_Buena_2
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521054887976
-    m_Key: Anciano_Buena_3
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521054887977
-    m_Key: Anciano_Buena_4
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521054887978
-    m_Key: Anciano_Mala_1
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521054887979
-    m_Key: Anciano_Mala_2
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521059082240
-    m_Key: Anciano_Mala_3
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521059082241
-    m_Key: "Anciano_Devoluci\xF3n_1"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521059082242
-    m_Key: "Anciano_Devoluci\xF3n_2"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521059082243
-    m_Key: "Anciano_Devoluci\xF3n_3"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521059082244
-    m_Key: "Anciano_Devoluci\xF3n_4"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521059082245
-    m_Key: Elfa_Inicio_1
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521059082246
-    m_Key: Elfa_Inicio_2
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521059082247
-    m_Key: Elfa_Inicio_3
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521059082248
-    m_Key: Elfa_Inicio_4
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521059082249
-    m_Key: Elfa_Inicio_5
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521059082250
-    m_Key: Elfa_Inicio_6
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521059082251
-    m_Key: Elfa_Inicio_7
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521059082252
-    m_Key: Elfa_Inicio_8
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521059082253
-    m_Key: Elfa_Inicio_9
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521059082254
-    m_Key: Elfa_Inicio_10
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521059082255
-    m_Key: Elfa_Buena_1
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521059082256
-    m_Key: Elfa_Buena_2
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521059082257
-    m_Key: Elfa_Buena_3
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521059082258
-    m_Key: Elfa_Buena_4
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521059082259
-    m_Key: Elfa_Buena_5
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521059082260
-    m_Key: Elfa_Mala_1
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521059082261
-    m_Key: Elfa_Mala_2
-    m_Metadata:
-      m_Items: []
   - m_Id: 521059082262
     m_Key: Forastero_Inicio_1
     m_Metadata:
@@ -313,130 +53,6 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 521059082271
     m_Key: Forastero_Mala_2
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521059082272
-    m_Key: "Forastero_Devoluci\xF3n_1"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521059082273
-    m_Key: "Forastero_Devoluci\xF3n_2"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521059082274
-    m_Key: DonVinagre_Inicio_1
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521059082275
-    m_Key: DonVinagre_Inicio_2
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521059082276
-    m_Key: DonVinagre_Inicio_3
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521059082277
-    m_Key: DonVinagre_Inicio_4
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521059082278
-    m_Key: DonVinagre_Inicio_5
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521059082279
-    m_Key: DonVinagre_Buena_1
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521059082280
-    m_Key: DonVinagre_Buena_2
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521059082281
-    m_Key: DonVinagre_Buena_3
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521059082282
-    m_Key: DonVinagre_Mala_1
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521059082283
-    m_Key: DonVinagre_Mala_2
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521059082284
-    m_Key: DonVinagre_Mala_3
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521059082285
-    m_Key: DonVinagre_Mala_4
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521059082286
-    m_Key: BrujaMayor_Inicio_1
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521059082287
-    m_Key: BrujaMayor_Inicio_2
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521059082288
-    m_Key: BrujaMayor_Inicio_3
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521059082289
-    m_Key: BrujaMayor_Inicio_4
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521059082290
-    m_Key: BrujaMayor_Inicio_5
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521059082291
-    m_Key: BrujaMayor_Inicio_6
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521059082292
-    m_Key: BrujaMayor_Inicio_7
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521059082293
-    m_Key: BrujaMayor_Inicio_8
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521059082294
-    m_Key: BrujaMayor_Inicio_9
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521059082295
-    m_Key: BrujaMayor_Inicio_10
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521059082296
-    m_Key: BrujaMayor_Buena_1
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521059082297
-    m_Key: BrujaMayor_Buena_2
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521059082298
-    m_Key: BrujaMayor_Buena_3
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521059082299
-    m_Key: BrujaMayor_Mala_1
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521059082300
-    m_Key: BrujaMayor_Mala_2
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521059082301
-    m_Key: BrujaMayor_Mala_3
-    m_Metadata:
-      m_Items: []
-  - m_Id: 521059082302
-    m_Key: BrujaMayor_Mala_4
     m_Metadata:
       m_Items: []
   - m_Id: 521059082303
@@ -507,12 +123,344 @@ MonoBehaviour:
     m_Key: Ogro_Mala_3
     m_Metadata:
       m_Items: []
+  - m_Id: 521054887968
+    m_Key: Anciano_Inicio_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521054887969
+    m_Key: Anciano_Inicio_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521054887970
+    m_Key: Anciano_Inicio_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521054887971
+    m_Key: Anciano_Inicio_4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521054887972
+    m_Key: Anciano_Inicio_5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521054887973
+    m_Key: Anciano_Inicio_6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521054887974
+    m_Key: Anciano_Buena_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521054887975
+    m_Key: Anciano_Buena_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521054887976
+    m_Key: Anciano_Buena_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521054887977
+    m_Key: Anciano_Buena_4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521054887978
+    m_Key: Anciano_Mala_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521054887979
+    m_Key: Anciano_Mala_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521059082240
+    m_Key: Anciano_Mala_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9170868245274624
+    m_Key: Anciano1_Donacion_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9170868257857536
+    m_Key: Anciano1_Donacion_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9170868257857537
+    m_Key: Anciano1_Donacion_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9170868257857538
+    m_Key: Anciano1_Donacion_4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521054887936
+    m_Key: Bruja_Inicio_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521054887937
+    m_Key: Bruja_Inicio_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521054887938
+    m_Key: Bruja_Inicio_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521054887939
+    m_Key: Bruja_Inicio_4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521054887940
+    m_Key: Bruja_Inicio_5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521054887941
+    m_Key: Bruja_Inicio_6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521054887942
+    m_Key: Bruja_Buena_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521054887943
+    m_Key: Bruja_Buena_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521054887944
+    m_Key: Bruja_Buena_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521054887945
+    m_Key: Bruja_Buena_4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521054887946
+    m_Key: Bruja_Buena_5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521054887947
+    m_Key: Bruja_Mala_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521054887948
+    m_Key: Bruja_Mala_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521054887949
+    m_Key: Bruja_Mala_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521059082338
+    m_Key: Coleccionista_Inicio_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521059082339
+    m_Key: Coleccionista_Inicio_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521059082340
+    m_Key: Coleccionista_Inicio_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521059082341
+    m_Key: Coleccionista_Inicio_4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521059082342
+    m_Key: Coleccionista_Inicio_5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521059082343
+    m_Key: Coleccionista_Inicio_6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521059082344
+    m_Key: Coleccionista_Buena_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521059082345
+    m_Key: Coleccionista_Buena_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521059082346
+    m_Key: Coleccionista_Buena_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521059082347
+    m_Key: Coleccionista_Mala_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521059082348
+    m_Key: Coleccionista_Mala_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521059082349
+    m_Key: Coleccionista_Mala_3
+    m_Metadata:
+      m_Items: []
   - m_Id: 521059082320
     m_Key: "Ogro_Devoluci\xF3n_1"
     m_Metadata:
       m_Items: []
   - m_Id: 521059082321
     m_Key: "Ogro_Devoluci\xF3n_2"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521059082245
+    m_Key: Elfa_Inicio_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521059082246
+    m_Key: Elfa_Inicio_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521059082247
+    m_Key: Elfa_Inicio_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521059082248
+    m_Key: Elfa_Inicio_4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521059082249
+    m_Key: Elfa_Inicio_5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521059082250
+    m_Key: Elfa_Inicio_6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521059082251
+    m_Key: Elfa_Inicio_7
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521059082252
+    m_Key: Elfa_Inicio_8
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521059082253
+    m_Key: Elfa_Inicio_9
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521059082254
+    m_Key: Elfa_Inicio_10
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521059082255
+    m_Key: Elfa_Buena_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521059082256
+    m_Key: Elfa_Buena_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521059082257
+    m_Key: Elfa_Buena_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521059082258
+    m_Key: Elfa_Buena_4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521059082259
+    m_Key: Elfa_Buena_5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521059082260
+    m_Key: Elfa_Mala_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521059082261
+    m_Key: Elfa_Mala_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637500747776
+    m_Key: BrujaMayor2_Inicio_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637517524992
+    m_Key: BrujaMayor2_Inicio_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637517524993
+    m_Key: BrujaMayor2_Inicio_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637517524994
+    m_Key: BrujaMayor2_Inicio_4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637517524995
+    m_Key: BrujaMayor2_Inicio_5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637517524996
+    m_Key: BrujaMayor2_Inicio_6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637517524997
+    m_Key: BrujaMayor2_Buena_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637517524998
+    m_Key: BrujaMayor2_Buena_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637517524999
+    m_Key: BrujaMayor2_Buena_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637517525000
+    m_Key: BrujaMayor2_Mala_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637517525001
+    m_Key: BrujaMayor2_Mala_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521059082352
+    m_Key: Elfo_Inicio_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521059082353
+    m_Key: Elfo_Inicio_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521059082354
+    m_Key: Elfo_Inicio_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521059082355
+    m_Key: Elfo_Inicio_4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521059082356
+    m_Key: Elfo_Buena_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521059082357
+    m_Key: Elfo_Buena_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521059082358
+    m_Key: Elfo_Buena_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521059082359
+    m_Key: Elfo_Buena_4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521059082360
+    m_Key: Elfo_Mala_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521059082361
+    m_Key: Elfo_Mala_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521059082362
+    m_Key: Elfo_Mala_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521059082363
+    m_Key: Elfo_Mala_4
     m_Metadata:
       m_Items: []
   - m_Id: 521059082322
@@ -571,60 +519,184 @@ MonoBehaviour:
     m_Key: Botanico_Mala_2
     m_Metadata:
       m_Items: []
-  - m_Id: 521059082336
-    m_Key: "Botanico_Devoluci\xF3n_1"
+  - m_Id: 521059082241
+    m_Key: "Anciano_Devoluci\xF3n_1"
     m_Metadata:
       m_Items: []
-  - m_Id: 521059082337
-    m_Key: "Botanico_Devoluci\xF3n_2"
+  - m_Id: 521059082242
+    m_Key: "Anciano_Devoluci\xF3n_2"
     m_Metadata:
       m_Items: []
-  - m_Id: 521059082338
-    m_Key: Coleccionista_Inicio_1
+  - m_Id: 521059082243
+    m_Key: "Anciano_Devoluci\xF3n_3"
     m_Metadata:
       m_Items: []
-  - m_Id: 521059082339
-    m_Key: Coleccionista_Inicio_2
+  - m_Id: 521059082244
+    m_Key: "Anciano_Devoluci\xF3n_4"
     m_Metadata:
       m_Items: []
-  - m_Id: 521059082340
-    m_Key: Coleccionista_Inicio_3
+  - m_Id: 521059082274
+    m_Key: DonVinagre_Inicio_1
     m_Metadata:
       m_Items: []
-  - m_Id: 521059082341
-    m_Key: Coleccionista_Inicio_4
+  - m_Id: 521059082275
+    m_Key: DonVinagre_Inicio_2
     m_Metadata:
       m_Items: []
-  - m_Id: 521059082342
-    m_Key: Coleccionista_Inicio_5
+  - m_Id: 521059082276
+    m_Key: DonVinagre_Inicio_3
     m_Metadata:
       m_Items: []
-  - m_Id: 521059082343
-    m_Key: Coleccionista_Inicio_6
+  - m_Id: 521059082277
+    m_Key: DonVinagre_Inicio_4
     m_Metadata:
       m_Items: []
-  - m_Id: 521059082344
-    m_Key: Coleccionista_Buena_1
+  - m_Id: 521059082278
+    m_Key: DonVinagre_Inicio_5
     m_Metadata:
       m_Items: []
-  - m_Id: 521059082345
-    m_Key: Coleccionista_Buena_2
+  - m_Id: 521059082279
+    m_Key: DonVinagre_Buena_1
     m_Metadata:
       m_Items: []
-  - m_Id: 521059082346
-    m_Key: Coleccionista_Buena_3
+  - m_Id: 521059082280
+    m_Key: DonVinagre_Buena_2
     m_Metadata:
       m_Items: []
-  - m_Id: 521059082347
-    m_Key: Coleccionista_Mala_1
+  - m_Id: 521059082281
+    m_Key: DonVinagre_Buena_3
     m_Metadata:
       m_Items: []
-  - m_Id: 521059082348
-    m_Key: Coleccionista_Mala_2
+  - m_Id: 521059082282
+    m_Key: DonVinagre_Mala_1
     m_Metadata:
       m_Items: []
-  - m_Id: 521059082349
-    m_Key: Coleccionista_Mala_3
+  - m_Id: 521059082283
+    m_Key: DonVinagre_Mala_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521059082284
+    m_Key: DonVinagre_Mala_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521059082285
+    m_Key: DonVinagre_Mala_4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913600
+    m_Key: Forastero1_Inicio_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913601
+    m_Key: Forastero1_Inicio_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913602
+    m_Key: Forastero1_Inicio_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913603
+    m_Key: Forastero1_Inicio_4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913604
+    m_Key: Forastero1_Inicio_5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913605
+    m_Key: Forastero1_Inicio_6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913606
+    m_Key: Forastero1_Inicio_7
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913607
+    m_Key: Forastero1_Buena_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913608
+    m_Key: Forastero1_Buena_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913609
+    m_Key: Forastero1_Mala_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913610
+    m_Key: Elfa1_Inicio_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913611
+    m_Key: Elfa1_Inicio_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913612
+    m_Key: Elfa1_Inicio_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913613
+    m_Key: Elfa1_Inicio_4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913614
+    m_Key: Elfa1_Inicio_5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913615
+    m_Key: Elfa1_Buena_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913616
+    m_Key: Elfa1_Buena_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913617
+    m_Key: Elfa1_Mala_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913618
+    m_Key: Elfa1_Mala_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9170868262051840
+    m_Key: Aprendiz1_Inicio_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9170868262051841
+    m_Key: Aprendiz1_Inicio_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9170868262051842
+    m_Key: Aprendiz1_Inicio_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9170868262051843
+    m_Key: Aprendiz1_Inicio_4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9170868262051844
+    m_Key: Aprendiz1_Buena_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9170868262051845
+    m_Key: Aprendiz1_Buena_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9170868262051846
+    m_Key: Aprendiz1_Buena_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9170868262051847
+    m_Key: Aprendiz1_Mala_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9170868262051848
+    m_Key: Aprendiz1_Mala_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9170868262051849
+    m_Key: Aprendiz1_Mala_3
     m_Metadata:
       m_Items: []
   - m_Id: 521059082350
@@ -635,60 +707,348 @@ MonoBehaviour:
     m_Key: "Coleccionista_Devoluci\xF3n_2"
     m_Metadata:
       m_Items: []
-  - m_Id: 521059082352
-    m_Key: Elfo_Inicio_1
+  - m_Id: 521059082272
+    m_Key: "Forastero_Devoluci\xF3n_1"
     m_Metadata:
       m_Items: []
-  - m_Id: 521059082353
-    m_Key: Elfo_Inicio_2
+  - m_Id: 521059082273
+    m_Key: "Forastero_Devoluci\xF3n_2"
     m_Metadata:
       m_Items: []
-  - m_Id: 521059082354
-    m_Key: Elfo_Inicio_3
+  - m_Id: 521054887953
+    m_Key: "Bruja_Donaci\xF3n_1"
     m_Metadata:
       m_Items: []
-  - m_Id: 521059082355
-    m_Key: Elfo_Inicio_4
+  - m_Id: 521054887954
+    m_Key: "Bruja_Donaci\xF3n_2"
     m_Metadata:
       m_Items: []
-  - m_Id: 521059082356
-    m_Key: Elfo_Buena_1
+  - m_Id: 521054887955
+    m_Key: Aprendiz_Inicio_1
     m_Metadata:
       m_Items: []
-  - m_Id: 521059082357
-    m_Key: Elfo_Buena_2
+  - m_Id: 521054887956
+    m_Key: Aprendiz_Inicio_2
     m_Metadata:
       m_Items: []
-  - m_Id: 521059082358
-    m_Key: Elfo_Buena_3
+  - m_Id: 521054887957
+    m_Key: Aprendiz_Inicio_3
     m_Metadata:
       m_Items: []
-  - m_Id: 521059082359
-    m_Key: Elfo_Buena_4
+  - m_Id: 521054887958
+    m_Key: Aprendiz_Inicio_4
     m_Metadata:
       m_Items: []
-  - m_Id: 521059082360
-    m_Key: Elfo_Mala_1
+  - m_Id: 521054887959
+    m_Key: Aprendiz_Inicio_5
     m_Metadata:
       m_Items: []
-  - m_Id: 521059082361
-    m_Key: Elfo_Mala_2
+  - m_Id: 521054887960
+    m_Key: Aprendiz_Inicio_6
     m_Metadata:
       m_Items: []
-  - m_Id: 521059082362
-    m_Key: Elfo_Mala_3
+  - m_Id: 521054887961
+    m_Key: Aprendiz_Inicio_7
     m_Metadata:
       m_Items: []
-  - m_Id: 521059082363
-    m_Key: Elfo_Mala_4
+  - m_Id: 521054887962
+    m_Key: Aprendiz_Inicio_8
     m_Metadata:
       m_Items: []
-  - m_Id: 521059082364
-    m_Key: "Elfo_Devoluci\xF3n_1"
+  - m_Id: 521054887963
+    m_Key: Aprendiz_Buena_1
     m_Metadata:
       m_Items: []
-  - m_Id: 521059082365
-    m_Key: "Elfo_Devoluci\xF3n_2"
+  - m_Id: 521054887964
+    m_Key: Aprendiz_Buena_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521054887965
+    m_Key: Aprendiz_Buena_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521054887966
+    m_Key: Aprendiz_Buena_4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521054887967
+    m_Key: Aprendiz_Buena_5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521059082286
+    m_Key: BrujaMayor_Inicio_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521059082287
+    m_Key: BrujaMayor_Inicio_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521059082288
+    m_Key: BrujaMayor_Inicio_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521059082289
+    m_Key: BrujaMayor_Inicio_4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521059082290
+    m_Key: BrujaMayor_Inicio_5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521059082291
+    m_Key: BrujaMayor_Inicio_6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521059082292
+    m_Key: BrujaMayor_Inicio_7
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521059082293
+    m_Key: BrujaMayor_Inicio_8
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521059082294
+    m_Key: BrujaMayor_Inicio_9
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521059082295
+    m_Key: BrujaMayor_Inicio_10
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521059082296
+    m_Key: BrujaMayor_Buena_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521059082297
+    m_Key: BrujaMayor_Buena_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521059082298
+    m_Key: BrujaMayor_Buena_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521059082299
+    m_Key: BrujaMayor_Mala_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521059082300
+    m_Key: BrujaMayor_Mala_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521059082301
+    m_Key: BrujaMayor_Mala_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521059082302
+    m_Key: BrujaMayor_Mala_4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913629
+    m_Key: BrujaMayor1_Inicio_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913630
+    m_Key: BrujaMayor1_Inicio_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913631
+    m_Key: BrujaMayor1_Inicio_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913632
+    m_Key: BrujaMayor1_Inicio_4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913633
+    m_Key: BrujaMayor1_Inicio_5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913634
+    m_Key: BrujaMayor1_Buena_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913635
+    m_Key: BrujaMayor1_Buena_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913636
+    m_Key: BrujaMayor1_Buena_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913637
+    m_Key: BrujaMayor1_Mala_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913638
+    m_Key: BrujaMayor1_Mala_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913639
+    m_Key: BrujaMayor1_Mala_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521059082336
+    m_Key: "Botanico_Devoluci\xF3n_1"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521059082337
+    m_Key: "Botanico_Devoluci\xF3n_2"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521054887951
+    m_Key: "Bruja_Devoluci\xF3n_1"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 521054887952
+    m_Key: "Bruja_Devoluci\xF3n_2"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913640
+    m_Key: "Elfa2_Donaci\xF3n_1"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913641
+    m_Key: "Elfa2_Donaci\xF3n_2"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913642
+    m_Key: "Elfa2_Donaci\xF3n_3"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913643
+    m_Key: "Elfa2_Donaci\xF3n_4"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913644
+    m_Key: "Elfa2_Donaci\xF3n_5"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913645
+    m_Key: "Elfa2_Donaci\xF3n_6"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913646
+    m_Key: DonVinagre1_Inicio_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913647
+    m_Key: DonVinagre1_Inicio_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913648
+    m_Key: DonVinagre1_Inicio_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913649
+    m_Key: DonVinagre1_Inicio_4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913650
+    m_Key: DonVinagre1_Buena_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913651
+    m_Key: DonVinagre1_Buena_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913652
+    m_Key: DonVinagre1_Mala_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913653
+    m_Key: DonVinagre1_Mala_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913654
+    m_Key: DonVinagre1_Mala_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913655
+    m_Key: Coleccionista1_Inicio_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913656
+    m_Key: Coleccionista1_Inicio_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913657
+    m_Key: Coleccionista1_Inicio_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913658
+    m_Key: Coleccionista1_Inicio_4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913659
+    m_Key: Coleccionista1_Inicio_5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913660
+    m_Key: Coleccionista1_Inicio_6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913661
+    m_Key: Coleccionista1_Inicio_7
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913662
+    m_Key: Coleccionista1_Buena_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913663
+    m_Key: Coleccionista1_Buena_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913664
+    m_Key: Coleccionista1_Mala_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913665
+    m_Key: Coleccionista1_Mala_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913666
+    m_Key: Elfo1_Inicio_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913667
+    m_Key: Elfo1_Inicio_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913668
+    m_Key: Elfo1_Inicio_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913669
+    m_Key: Elfo1_Inicio_4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913670
+    m_Key: Elfo1_Inicio_5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913671
+    m_Key: Elfo1_Inicio_6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913672
+    m_Key: Elfo1_Inicio_7
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9170868262051850
+    m_Key: Elfo1_Inicio_8
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913673
+    m_Key: Elfo1_Buena_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913674
+    m_Key: Elfo1_Mala_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913675
+    m_Key: Elfo1_Mala_2
     m_Metadata:
       m_Items: []
   m_Metadata:

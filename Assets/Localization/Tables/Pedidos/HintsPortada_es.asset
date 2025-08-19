@@ -39,6 +39,43 @@ MonoBehaviour:
     m_Localized: "Tal vez un drag\xF3n asom\xE1ndose..."
     m_Metadata:
       m_Items: []
+  - m_Id: 9867519041642496
+    m_Localized: "\xBFVes las velas en el horizonte? La traves\xEDa empieza con el
+      viento."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9867519062614016
+    m_Localized: "Una isla secreta puede ser el centro de la historia\u2026 atr\xE9vete
+      a dibujarla."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9867519062614017
+    m_Localized: "La br\xFAjula apunta de forma extra\xF1a, quiz\xE1 hacia el camino
+      oculto."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9867519062614018
+    m_Localized: "Los susurros hablan de un cofre antiguo\u2026 \xBFpodr\xEDa estar
+      semienterrado en la arena?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9867519062614019
+    m_Localized: "El tesoro nunca es solo oro\u2026 deja una pista de misterio en
+      el dise\xF1o."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9912790203146240
+    m_Localized: "\xBFQu\xE9 elementos fueron mencionados?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9912790236700672
+    m_Localized: 'Existen muchas constelaciones... '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9912790236700673
+    m_Localized: 'Haz lo mejor por cumplir las espectativas del cliente '
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

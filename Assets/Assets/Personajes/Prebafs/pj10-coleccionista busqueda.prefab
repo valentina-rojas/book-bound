@@ -166,11 +166,13 @@ MonoBehaviour:
   - Coleccionista_Mala_3
   spriteRespuestaBuena: {fileID: -581190463, guid: 25d4922366bb00f4ea48642a1a0539de, type: 3}
   spriteRespuestaMala: {fileID: 587403971, guid: 25d4922366bb00f4ea48642a1a0539de, type: 3}
-  libroDeseadoID: 62
+  libroDeseadoID: 61
   tipoPreferido: terror
   nombreDelCliente: Coleccionista
   descripcionPedido: Coleccionista_Des
   stickersRequeridos: 
+  pistasReparacion: []
+  categoriaLibroReparar: 0
   tituloLibroPortada: 
   tituloLibroPortadaKey:
     m_TableReference:
@@ -181,6 +183,8 @@ MonoBehaviour:
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
+  setStickersDeseado: 0
+  pistasPortada: []
   hechizoSolicitado: 0
   tituloLibroHechizadoKey:
     m_TableReference:
@@ -191,6 +195,7 @@ MonoBehaviour:
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
+  pistasHechizo: []
   libroDonadoID: 0
   libroDevueltoID: 0
   tituloLibroDevuelto: 
@@ -231,3 +236,4 @@ MonoBehaviour:
   dialogueMark: {fileID: 0}
   dialoguePanel: {fileID: 0}
   dialogueText: {fileID: 0}
+  tutorialFinalizado: 0

@@ -705,12 +705,388 @@ MonoBehaviour:
     m_Localized: "Este conocimiento es demasiado vital para m\xED."
     m_Metadata:
       m_Items: []
-  - m_Id: 521059082364
-    m_Localized: Te traigo esto
+  - m_Id: 9123637500747776
+    m_Localized: "Buenos d\xEDas cari\xF1o..."
     m_Metadata:
       m_Items: []
-  - m_Id: 521059082365
-    m_Localized: Gracias
+  - m_Id: 9123637517524992
+    m_Localized: Estaba buscando una receta para cocinar con hongos venenosos y hacerlos
+      inofensivos para su consumo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637517524993
+    m_Localized: "Y se me desarm\xF3 el libro..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637517524994
+    m_Localized: "Ya s\xE9, estaba muy viejo ya, pero es legado de mi madre, y quisiera
+      conservarlo..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637517524995
+    m_Localized: "\xBFMe ayudas a ordenar nuevamente las p\xE1ginas?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637517524996
+    m_Localized: "Me ser\xEDas de gran ayuda..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637517524997
+    m_Localized: "Oh tesoro, \xA1muchas gracias!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637517524998
+    m_Localized: "Qued\xF3 como nuevo..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637517524999
+    m_Localized: Agradezco mucho tu ayuda.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637517525000
+    m_Localized: Oh, que pena que no pudo solucionarse.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637517525001
+    m_Localized: Gracias igual por tu ayuda.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913600
+    m_Localized: Hola... soy yo de nuevo.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913601
+    m_Localized: "Esta vez necesito que me ayudes con algo...\xBFPodr\xEDas?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913602
+    m_Localized: "Estuve escribiendo un libro sobre las aventuras que viv\xED en
+      mis viajes, pero necesito ayuda con la portada del libro."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913603
+    m_Localized: Soy muy bueno escribiendo pero no dibujando.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913604
+    m_Localized: "\xBFPodr\xE1s hacerlo?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913605
+    m_Localized: "Deber\xEDa tener objetos que recuerden que mi viaje fue en velero,
+      hacia una isla secreta donde devel\xE9 el misterio de un tesoro antiguo escondido..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913606
+    m_Localized: Algo que haga que mis seguidores quieran leerlo inmediatamente...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913607
+    m_Localized: "Excelente, es justo lo que quer\xEDa..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913608
+    m_Localized: Gracias, nos veremos nuevamente...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913609
+    m_Localized: "\xBFQu\xE9 es esto? \xBFAcaso no escuchaste lo que ped\xED?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913610
+    m_Localized: "Buenos d\xEDas.."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913611
+    m_Localized: Hoy no vengo a pedirte ayuda..
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913612
+    m_Localized: sino para que me puedas prestar un libro.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913613
+    m_Localized: Estoy buscando Las Runas de Salakhar...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913614
+    m_Localized: "Mi maestro me lo recomend\xF3 como inspiraci\xF3n para crear una
+      nueva historia."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913615
+    m_Localized: "Que bueno que nadie lo haya llevado a\xFAn"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913616
+    m_Localized: "\xA1Muchas gracias por tu ayuda!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913617
+    m_Localized: Esto no es lo que esperaba..
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913618
+    m_Localized: "Qu\xE9 pena que no lo tengas, volver\xE9 otro d\xEDa a buscarlo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913629
+    m_Localized: "Buenos d\xEDas coraz\xF3n..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913630
+    m_Localized: Hoy vengo a solicitar que me prestes un libro
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913631
+    m_Localized: Estoy necesitando conseguir Hierbas y Sabores de Reinos Olvidados...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913632
+    m_Localized: Mi hermana viene de visita y es muy exquisita en cuanto a todo lo
+      referido al arte culinario...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913633
+    m_Localized: "Necesito sorprenderla, \xBFme ayudas con el libro?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913634
+    m_Localized: "\xA1Oh cari\xF1o muchas gracias! "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913635
+    m_Localized: Agradezco tu ayuda...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913636
+    m_Localized: Prometo volver con algo para que pruebes, no te vas a arrepentir.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913637
+    m_Localized: Oh, no es esto lo que yo necesito...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913638
+    m_Localized: "Me arreglar\xE9 cocinando lo que s\xE9."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913639
+    m_Localized: Muchas gracias igual tesoro.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913640
+    m_Localized: "\xA1Hola! \xBFC\xF3mo est\xE1s hoy?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913641
+    m_Localized: "Vengo porque tengo algo que quiz\xE1s pueda serte \xFAtil..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913642
+    m_Localized: "Digo, ya que tienes una librer\xEDa..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913643
+    m_Localized: "Limpiando encontr\xE9 este libro, Banquete de Lunas Llenas y pens\xE9
+      en tra\xE9rtelo para tu colecci\xF3n."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913644
+    m_Localized: "Espero que tengas un lindo d\xEDa."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913645
+    m_Localized: "\xA1Nos vemos!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913646
+    m_Localized: "Mhh, t\xFA todav\xEDa por aqu\xED..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913647
+    m_Localized: "Bien, calculo que a esta altura ya debes conocer m\xE1s sobre el
+      funcionamiento de esta librer\xEDa..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913648
+    m_Localized: Espero que ahora sepas responder correctamente mis preguntas.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913649
+    m_Localized: Veamos...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913650
+    m_Localized: Veo que estuviste estudiando bastante.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913651
+    m_Localized: "No puedo negar que Rhea no eligi\xF3 a cualquiera para reemplazarla."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913652
+    m_Localized: "Como lo supon\xEDa..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913653
+    m_Localized: "No puedo creer que alguien tan mediocre siga al mando de esta librer\xEDa."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913654
+    m_Localized: "Lo hablar\xE9 con Rhea a su regreso."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913655
+    m_Localized: "Ah, eres t\xFA de nuevo..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913656
+    m_Localized: Esperaba encontrar a Rhea.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913657
+    m_Localized: "Bueno, ya que est\xE1s aqu\xED te pregunto..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913658
+    m_Localized: "Quisiera restaurar este libro, necesito arreglarlo para poder leer
+      la informaci\xF3n que contiene."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913659
+    m_Localized: "Imagino que sabr\xE1s algo sobre runas antiguas..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913660
+    m_Localized: "Para reconstruirlo necesito seguir el orden de este acertijo...
+      \xBFMe ayudas?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913661
+    m_Localized: '"Agua que fluye, tierra que sostiene y fuego que arrasa"'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913662
+    m_Localized: "\xA1Incre\xEDble! Lograste arreglarlo..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913663
+    m_Localized: "Sinceramente no confiaba en que lo har\xEDas...Gracias."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913664
+    m_Localized: Oh no, eh perdido la oportunidad de leer sus secretos.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913665
+    m_Localized: "Sab\xEDa que no deb\xEDa dejar que me ayudes, eres una inexperta."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913666
+    m_Localized: Hola...Vengo en busca de tu ayuda.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913667
+    m_Localized: "Mi padre quiere publicar su libro y me pidi\xF3 que haga la tapa
+      del mismo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913668
+    m_Localized: "Francamente, s\xE9 que nunca voy a complacerlo, y lo que haga no
+      lo convencer\xE1."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913669
+    m_Localized: Tienes fama de hacer buenas portadas, vine porque te han recomendado.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913670
+    m_Localized: "\xBFPodr\xE1s ayudarme? Quiero sacarme esta tarea de encima lo
+      antes posible."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913671
+    m_Localized: "El libro habla sobre los descubrimientos astron\xF3micos realizados
+      por \xE9l y los Elfos del C\xEDrculo del Cielo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913672
+    m_Localized: "Principalmente la relaci\xF3n entre las diversas constelaciones"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913673
+    m_Localized: "Gracias, creo que le gustar\xE1..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913674
+    m_Localized: "Mhhh no creo poder convencerlo, \xBFrealmente entendiste lo que
+      te ped\xED?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637525913675
+    m_Localized: "Creo que no eres tan buena como dicen por ah\xED..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9170868245274624
+    m_Localized: "Buenos d\xEDas..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9170868257857536
+    m_Localized: "\xBFC\xF3mo est\xE1s hoy?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9170868257857537
+    m_Localized: Vengo a dejarte esto, era de mi finada esposa...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9170868257857538
+    m_Localized: "Y esa vieja era mala como las ara\xF1as, pero qu\xE9 bien cocinaba
+      jeje"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9170868262051840
+    m_Localized: "Buenos d\xEDas..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9170868262051841
+    m_Localized: Estoy buscando un libro...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9170868262051842
+    m_Localized: Uno que detalle tanto flora curativa como maldita
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9170868262051843
+    m_Localized: "\xBFTienes algo por ah\xED que pueda ayudarme?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9170868262051844
+    m_Localized: "\xA1Exactamente esto es lo que necesitaba!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9170868262051845
+    m_Localized: Muchas gracias...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9170868262051846
+    m_Localized: "Pronto lo devolver\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9170868262051847
+    m_Localized: No, esto para nada es lo que estaba buscando...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9170868262051848
+    m_Localized: "Ver\xE9 si hay otra librer\xEDa m\xE1s completa que lo tenga."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9170868262051849
+    m_Localized: Hasta luego.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9170868262051850
+    m_Localized: Dibuja algo relacionado a ese tema.
     m_Metadata:
       m_Items: []
   references:

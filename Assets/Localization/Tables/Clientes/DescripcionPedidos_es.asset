@@ -70,6 +70,18 @@ MonoBehaviour:
     m_Localized: "Solicit\xF3 un libro que hable de equilibrio, luz y oscuridad"
     m_Metadata:
       m_Items: []
+  - m_Id: 7262852126253056
+    m_Localized: "Solicit\xF3 \"Las Runas de Salakhar\""
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7262852147224576
+    m_Localized: "Solicit\xF3 un libro que detalle tanto flora curativa como maldita"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7262852147224577
+    m_Localized: "Solicit\xF3 \"Hierbas y Sabores de Reinos Olvidados\""
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

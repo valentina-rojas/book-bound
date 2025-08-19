@@ -70,6 +70,18 @@ MonoBehaviour:
     m_Localized: Requested a book about balance, light, and darkness
     m_Metadata:
       m_Items: []
+  - m_Id: 7262852126253056
+    m_Localized: Requested The Runes of Salakhar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7262852147224576
+    m_Localized: Requested a book that details both healing and cursed flora
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7262852147224577
+    m_Localized: Requested Herbs and Flavors of Forgotten Realms
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

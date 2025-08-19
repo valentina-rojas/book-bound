@@ -38,6 +38,26 @@ MonoBehaviour:
     m_Localized: "Earth \u2192 Shadow \u2192 Fire might be a good combination..."
     m_Metadata:
       m_Items: []
+  - m_Id: 9899251816112128
+    m_Localized: "Look for the element that flows freely\u2026"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9899251845472256
+    m_Localized: Water comes first, maybe a blue rune?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9899251845472257
+    m_Localized: Now find the element that holds everything together.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9899251845472258
+    m_Localized: "The earth is solid\u2026 "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9899251845472259
+    m_Localized: "Finally, the element that burns\u2026 place the red rune."
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

@@ -38,6 +38,26 @@ MonoBehaviour:
     m_Localized: "Tierra \u2192 Sombra \u2192 Fuego podr\xEDa ser una buena combinaci\xF3n..."
     m_Metadata:
       m_Items: []
+  - m_Id: 9899251816112128
+    m_Localized: "Busca el elemento que fluye libremente\u2026"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9899251845472256
+    m_Localized: "El agua va primero, \xBFquiz\xE1 una runa azul?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9899251845472257
+    m_Localized: Ahora busca el elemento que sostiene todo.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9899251845472258
+    m_Localized: "La tierra es s\xF3lida\u2026 "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9899251845472259
+    m_Localized: "Finalmente, el elemento que arrasa\u2026 coloca la runa roja."
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
