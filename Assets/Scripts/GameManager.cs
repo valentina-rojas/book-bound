@@ -373,11 +373,9 @@ public class GameManager : MonoBehaviour
         }
         else
             recomendacionesMalas++;
-        ActualizarSpritePersonaje();
+            ActualizarSpritePersonaje();
 
-        Debug.Log("Resultado recomendación: " + resultadoRecomendacion);
-
-        CameraManager.instance.DesctivarPanelPortada();
+            Debug.Log("Resultado recomendación: " + resultadoRecomendacion);
 
         if (characterSpawn != null)
         {

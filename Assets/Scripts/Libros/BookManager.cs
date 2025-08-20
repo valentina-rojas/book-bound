@@ -41,7 +41,7 @@ public class BookManager : MonoBehaviour
         else
             Destroy(gameObject);
 
-        characterSpawn = FindObjectOfType<CharacterSpawn>();
+        characterSpawn = FindFirstObjectByType<CharacterSpawn>();
         if (characterSpawn == null)
             Debug.LogError("CharacterSpawn no encontrado por BookManager.");
     }
@@ -59,7 +59,7 @@ public class BookManager : MonoBehaviour
         libroActual = libro;
 
         librosMismaSeccion.Clear();
-        BookData[] todosLosLibros = FindObjectsOfType<BookData>();
+        BookData[] todosLosLibros = FindObjectsByType<BookData>(FindObjectsSortMode.None);
 
         foreach (BookData b in todosLosLibros)
         {

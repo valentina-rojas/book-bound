@@ -22,6 +22,14 @@ MonoBehaviour:
     m_Localized: Cartas sobre el camino
     m_Metadata:
       m_Items: []
+  - m_Id: 10523100689637376
+    m_Localized: "Cr\xF3nicas de un viaje infinito"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10523100714803200
+    m_Localized: El universo del todo
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

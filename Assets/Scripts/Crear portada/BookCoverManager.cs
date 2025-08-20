@@ -7,7 +7,6 @@ using TMPro;
 public class BookCoverManager : MonoBehaviour
 {
     public GameObject portadaEditable;
-    public GameObject portadaFinal;
     public Button finalizarButton;
     public RectTransform areaPortada;
     public TMP_Text textoTituloLibro;
@@ -17,19 +16,23 @@ public class BookCoverManager : MonoBehaviour
     public GameObject portadaAventura;
     public GameObject portadaAstronomico;
 
-    public void ActualizarTituloLibro()
+    public IEnumerator ActualizarTituloLibroDespuesDeFrame()
     {
+        yield return null;
+
         var personaje = GameManager.instance.personajeActual;
         if (personaje != null && textoTituloLibro != null)
         {
-            StartCoroutine(personaje.GetTituloLibroPortadaLocalized((textoLocalizado) =>
+            yield return StartCoroutine(personaje.GetTituloLibroPortadaLocalized((textoLocalizado) =>
             {
                 textoTituloLibro.text = textoLocalizado;
+                textoTituloLibro.ForceMeshUpdate();
             }));
         }
-        else
+        else if (textoTituloLibro != null)
         {
             textoTituloLibro.text = "";
+            textoTituloLibro.ForceMeshUpdate();
         }
     }
     
@@ -84,19 +87,20 @@ public class BookCoverManager : MonoBehaviour
 
     public void Finalizar()
     {
-        portadaFinal.SetActive(true);
+        if (finalizarButton != null)
+            finalizarButton.gameObject.SetActive(false);
 
         List<StickerID> stickersUsados = new List<StickerID>();
 
         foreach (Transform child in portadaEditable.transform)
         {
-            if (RectTransformUtility.RectangleContainsScreenPoint(areaPortada, RectTransformUtility.WorldToScreenPoint(null, child.position)))
+            if (RectTransformUtility.RectangleContainsScreenPoint(
+                areaPortada, 
+                RectTransformUtility.WorldToScreenPoint(null, child.position)))
             {
                 StickerData data = child.GetComponent<StickerData>();
                 if (data != null && !stickersUsados.Contains(data.stickerID))
-                {
                     stickersUsados.Add(data.stickerID);
-                }
 
                 DraggableItem draggable = child.GetComponent<DraggableItem>();
                 if (draggable != null)
@@ -109,13 +113,13 @@ public class BookCoverManager : MonoBehaviour
         }
 
         GameManager.instance.CompletarPortada(stickersUsados);
-
-        StartCoroutine(CerrarPortadaFinalDespuesDeTiempo());
+        StartCoroutine(MostrarPreviewPortada());
     }
 
-    private IEnumerator CerrarPortadaFinalDespuesDeTiempo()
+    private IEnumerator MostrarPreviewPortada()
     {
         yield return new WaitForSeconds(3f);
-        portadaFinal.SetActive(false);
+        CameraManager.instance.DesctivarPanelPortada();
     }
+
 }

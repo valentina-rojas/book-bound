@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Localization;
 
 public class CharacterManager : MonoBehaviour
 {
@@ -32,6 +33,16 @@ public class CharacterManager : MonoBehaviour
         {
             personajesAtendidos.Add(personaje);
         }
+        GameManager.instance.personajeActual = personaje;
+        
+        if (!string.IsNullOrEmpty(personaje.tituloLibroPortada))
+        {
+            personaje.tituloLibroPortadaKey = new LocalizedString
+            {
+                TableReference = "TitulosLibrosPortada",
+                TableEntryReference = personaje.tituloLibroPortada
+            };
+        }
 
         switch (personaje.tipoDePedido)
         {
@@ -56,7 +67,7 @@ public class CharacterManager : MonoBehaviour
                 break;
             case CharacterAttributes.TipoDePedido.HechizarLibro:
                 Debug.Log("Este personaje quiere que le hechices un libro.");
-                CameraManager.instance.ActivarPanelHechizo(); 
+                CameraManager.instance.ActivarPanelHechizo();
                 FindFirstObjectByType<HintsHechizos>()?.SendMessage("CargarPistasDePersonaje");
                 break;
             case CharacterAttributes.TipoDePedido.JuegoTrivia:

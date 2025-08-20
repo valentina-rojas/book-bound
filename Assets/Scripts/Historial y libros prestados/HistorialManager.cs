@@ -61,7 +61,7 @@ public class HistorialManager : MonoBehaviour
             Debug.Log("Panel de historial cerrado");
             historialCargado = false;
         }
-        Tutorial tutorial = FindObjectOfType<Tutorial>();
+        Tutorial tutorial = FindFirstObjectByType<Tutorial>();
             if (tutorial != null)
             {
                 tutorial.AlCerrarHistorial();
@@ -103,7 +103,7 @@ public class HistorialManager : MonoBehaviour
 
         if (personajes == null || personajes.Count == 0)
         {
-            bool mensajeMostrado = false;
+            //bool mensajeMostrado = false;
             mensajeHistorialVacio.StringChanged -= MostrarMensajeHistorialVacioHandler;
             mensajeHistorialVacio.StringChanged += MostrarMensajeHistorialVacioHandler;
             yield break;

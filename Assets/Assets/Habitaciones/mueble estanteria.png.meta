@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      mueble estanteria_0: -2437577317027717223
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

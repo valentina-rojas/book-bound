@@ -37,7 +37,7 @@ public class ShelfManager : MonoBehaviour
         {
             librosEsperadosPorGenero[genero] = Mathf.Max(0, librosEsperadosPorGenero[genero] - 1);
 
-            ShelfEstante[] estantes = FindObjectsOfType<ShelfEstante>();
+            ShelfEstante[] estantes = FindObjectsByType<ShelfEstante>(FindObjectsSortMode.None);
             foreach (var estante in estantes)
             {
                 if (estante.genero == genero)
@@ -54,7 +54,7 @@ public class ShelfManager : MonoBehaviour
         {
             librosEsperadosPorGenero[genero] += 1;
 
-            ShelfEstante[] estantes = FindObjectsOfType<ShelfEstante>();
+            ShelfEstante[] estantes = FindObjectsByType<ShelfEstante>(FindObjectsSortMode.None);
             foreach (var estante in estantes)
             {
                 if (estante.genero == genero)
@@ -72,7 +72,7 @@ public class ShelfManager : MonoBehaviour
 
     public void RevisarOrganizacion()
     {
-        ShelfEstante[] estantes = FindObjectsOfType<ShelfEstante>();
+        ShelfEstante[] estantes = FindObjectsByType<ShelfEstante>(FindObjectsSortMode.None);
         bool todosCorrectos = true;
 
         foreach (ShelfEstante estante in estantes)
@@ -121,7 +121,7 @@ public class ShelfManager : MonoBehaviour
 
     public void MarcarTodosLosCartelesComoCorrectos()
     {
-        ShelfEstante[] estantes = FindObjectsOfType<ShelfEstante>();
+        ShelfEstante[] estantes = FindObjectsByType<ShelfEstante>(FindObjectsSortMode.None);
         foreach (var estante in estantes)
         {
             estante.MarcarCartelComoCorrecto();
@@ -138,7 +138,7 @@ public class ShelfManager : MonoBehaviour
     public void DesorganizarLibros()
     {
         List<Transform> librosActivos = new List<Transform>();
-        ShelfEstante[] estantes = FindObjectsOfType<ShelfEstante>();
+        ShelfEstante[] estantes = FindObjectsByType<ShelfEstante>(FindObjectsSortMode.None);
         List<Transform> slotsDisponibles = new List<Transform>();
 
         foreach (ShelfEstante estante in estantes)

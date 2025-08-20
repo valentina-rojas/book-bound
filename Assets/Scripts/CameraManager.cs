@@ -15,7 +15,6 @@ public class CameraManager : MonoBehaviour
 
     public GameObject panelReparacion;
     public GameObject panelPortada;
-    public GameObject panelPortada2;
     public BookCoverManager bookCoverManager;
     public GameObject panelHechizo;
     public GameObject panelDonar;
@@ -129,18 +128,22 @@ public class CameraManager : MonoBehaviour
         panelReparacion.gameObject.SetActive(false);
     }
 
-    public void ActivarPanelPortada()
-    {
-        panelPortada.gameObject.SetActive(true);
-        TaskManager.instance.OcultarBotonTareas();
-        bookCoverManager?.ActualizarTituloLibro();
-        bookCoverManager.ActivarStickersPorSet();
-    }
+public void ActivarPanelPortada()
+{
+    panelPortada.SetActive(true);  // primero activamos el panel
+    TaskManager.instance.OcultarBotonTareas();
+
+    // iniciamos la actualización del título en runtime
+    if (bookCoverManager != null)
+        StartCoroutine(bookCoverManager.ActualizarTituloLibroDespuesDeFrame());
+
+    bookCoverManager?.ActivarStickersPorSet();
+}
+
 
     public void DesctivarPanelPortada()
     {
         panelPortada.gameObject.SetActive(false);
-        panelPortada2.gameObject.SetActive(false);
     }
 
     public void ActivarPanelHechizo()
