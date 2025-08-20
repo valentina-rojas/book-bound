@@ -150,20 +150,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tipoDePedido: 4
   dialogueLinesInicio:
-  - DonVinagre_Inicio_1
-  - DonVinagre_Inicio_2
-  - DonVinagre_Inicio_3
-  - DonVinagre_Inicio_4
-  - DonVinagre_Inicio_5
+  - DonVinagre1_Inicio_1
+  - DonVinagre1_Inicio_2
+  - DonVinagre1_Inicio_3
+  - DonVinagre1_Inicio_4
   dialogueLinesBuena:
-  - DonVinagre_Buena_1
-  - DonVinagre_Buena_2
-  - DonVinagre_Buena_3
+  - DonVinagre1_Buena_1
+  - DonVinagre1_Buena_2
   dialogueLinesMala:
-  - DonVinagre_Mala_1
-  - DonVinagre_Mala_2
-  - DonVinagre_Mala_3
-  - DonVinagre_Mala_4
+  - DonVinagre1_Mala_1
+  - DonVinagre1_Mala_2
+  - DonVinagre1_Mala_3
   spriteRespuestaBuena: {fileID: -691833446, guid: 1d5feb4c40c77e942984aab325e0aad6, type: 3}
   spriteRespuestaMala: {fileID: -718686173, guid: 1d5feb4c40c77e942984aab325e0aad6, type: 3}
   libroDeseadoID: 12
@@ -171,6 +168,8 @@ MonoBehaviour:
   nombreDelCliente: DonVinagre
   descripcionPedido: Quiz
   stickersRequeridos: 
+  pistasReparacion: []
+  categoriaLibroReparar: 0
   tituloLibroPortada: 
   tituloLibroPortadaKey:
     m_TableReference:
@@ -181,6 +180,8 @@ MonoBehaviour:
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
+  setStickersDeseado: 0
+  pistasPortada: []
   hechizoSolicitado: 0
   tituloLibroHechizadoKey:
     m_TableReference:
@@ -191,6 +192,13 @@ MonoBehaviour:
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
+  pistasHechizo: []
+  m_preguntasTrivia:
+  - {fileID: 522501443280084635, guid: 65b0829a10920a04bbbc4608d3dc7af6, type: 3}
+  - {fileID: 522501443280084635, guid: ddde38c6c03aed94c97d690a1e0a1d86, type: 3}
+  - {fileID: 522501443280084635, guid: ebd18b9990550784bab6c0168e2b1832, type: 3}
+  - {fileID: 522501443280084635, guid: 6247c4c7b12ce304c95a33b0dd2dacb3, type: 3}
+  - {fileID: 522501443280084635, guid: dedfa1d14e7a70943a5469b01f9b93e5, type: 3}
   libroDonadoID: 0
   libroDevueltoID: 0
   tituloLibroDevuelto: 
@@ -231,3 +239,4 @@ MonoBehaviour:
   dialogueMark: {fileID: 0}
   dialoguePanel: {fileID: 0}
   dialogueText: {fileID: 0}
+  tutorialFinalizado: 0

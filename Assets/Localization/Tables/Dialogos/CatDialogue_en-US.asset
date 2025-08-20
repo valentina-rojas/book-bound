@@ -94,6 +94,26 @@ MonoBehaviour:
     m_Localized: Good luck!
     m_Metadata:
       m_Items: []
+  - m_Id: 10497099322531840
+    m_Localized: Wow, thanks to you the library is becoming well-known.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10497099356086272
+    m_Localized: The word is spreading that the service here is excellent.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10497099356086273
+    m_Localized: Maybe we could attract new customers...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10497099356086274
+    m_Localized: Though some unwelcome visitors might show up...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10497099356086275
+    m_Localized: Ah, don't worry about that. Let's start another day!
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

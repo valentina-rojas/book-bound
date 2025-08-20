@@ -5,6 +5,7 @@ using UnityEngine.Localization;
 
 public class CharacterAttributes : MonoBehaviour
 {
+    #region Enums
     public enum TipoDePedido
     {
         BuscarLibro,
@@ -25,13 +26,28 @@ public class CharacterAttributes : MonoBehaviour
         Restauracion,
         Comunicacion
     }
+    #endregion
 
+    #region Propiedades Generales
     public TipoDePedido tipoDePedido;
 
     [SerializeField, TextArea(2, 4)] private string[] dialogueLinesInicio;
     [SerializeField, TextArea(2, 4)] private string[] dialogueLinesBuena;
     [SerializeField, TextArea(2, 4)] private string[] dialogueLinesMala;
 
+    public Sprite spriteRespuestaBuena;
+    public Sprite spriteRespuestaMala;
+
+    public int libroDeseadoID;
+    public string tipoPreferido;
+
+    public string nombreDelCliente;
+
+    [Tooltip("Clave de la tabla 'DescripcionPedidos'")]
+    public string descripcionPedido; 
+    #endregion
+
+    #region Localización
     public IEnumerator GetDialogueInicioLocalized(System.Action<List<string>> callback)
     {
         yield return GetLocalizedLinesFromTable("DialogosClientes", dialogueLinesInicio, callback);
@@ -74,17 +90,6 @@ public class CharacterAttributes : MonoBehaviour
         callback(results);
     }
 
-    public Sprite spriteRespuestaBuena;
-    public Sprite spriteRespuestaMala;
-
-    public int libroDeseadoID;
-    public string tipoPreferido;
-
-    public string nombreDelCliente;
-
-    [Tooltip("Clave de la tabla 'DescripcionPedidos'")]
-    public string descripcionPedido; 
-
     public IEnumerator GetDescripcionPedidoLocalized(System.Action<string> callback)
     {
         if (string.IsNullOrEmpty(descripcionPedido))
@@ -103,6 +108,7 @@ public class CharacterAttributes : MonoBehaviour
         yield return handle;
         callback(handle.Result);
     }
+
     public IEnumerator GetNombreClienteLocalized(System.Action<string> callback)
     {
         if (string.IsNullOrEmpty(nombreDelCliente))
@@ -122,6 +128,21 @@ public class CharacterAttributes : MonoBehaviour
         callback(handle.Result);
     }
 
+    private IEnumerator GetLocalizedString(LocalizedString localizedString, System.Action<string> callback)
+    {
+        if (localizedString == null || string.IsNullOrEmpty(localizedString.TableEntryReference))
+        {
+            callback("");
+            yield break;
+        }
+
+        var handle = localizedString.GetLocalizedStringAsync();
+        yield return handle;
+        callback(handle.Result);
+    }
+    #endregion
+
+    #region Stickers y Pistas
     public List<StickerID> stickersRequeridos = new List<StickerID>();
 
     [Header("Reparación")]
@@ -138,7 +159,15 @@ public class CharacterAttributes : MonoBehaviour
     public Hechizo hechizoSolicitado = Hechizo.Ninguno;
     public LocalizedString tituloLibroHechizadoKey;
     public List<LocalizedString> pistasHechizo = new List<LocalizedString>();
+    #endregion
 
+    #region Trivia
+    [Header("Trivia")]
+    [SerializeField] private List<Question> m_preguntasTrivia = new List<Question>();
+    public List<Question> PreguntasTrivia => m_preguntasTrivia;
+    #endregion
+
+    #region Donación y Devolución
     [Header("Donación")]
     public int libroDonadoID;
 
@@ -150,7 +179,9 @@ public class CharacterAttributes : MonoBehaviour
     [Header("Préstamo")]
     public string tituloLibroPrestado = "";
     public LocalizedString tituloLibroPrestadoKey;
+    #endregion
 
+    #region Métodos de Acceso Rápido
     public string[] GetDialogueInicio() => dialogueLinesInicio;
     public string[] GetDialogueBuena() => dialogueLinesBuena;
     public string[] GetDialogueMala() => dialogueLinesMala;
@@ -174,17 +205,5 @@ public class CharacterAttributes : MonoBehaviour
     {
         yield return GetLocalizedString(tituloLibroHechizadoKey, callback);
     }
-
-    private IEnumerator GetLocalizedString(LocalizedString localizedString, System.Action<string> callback)
-    {
-        if (localizedString == null || string.IsNullOrEmpty(localizedString.TableEntryReference))
-        {
-            callback("");
-            yield break;
-        }
-
-        var handle = localizedString.GetLocalizedStringAsync();
-        yield return handle;
-        callback(handle.Result);
-    }
+    #endregion
 }

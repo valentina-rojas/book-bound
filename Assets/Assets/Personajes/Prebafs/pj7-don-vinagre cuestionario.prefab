@@ -171,6 +171,8 @@ MonoBehaviour:
   nombreDelCliente: DonVinagre
   descripcionPedido: Quiz
   stickersRequeridos: 
+  pistasReparacion: []
+  categoriaLibroReparar: 0
   tituloLibroPortada: 
   tituloLibroPortadaKey:
     m_TableReference:
@@ -181,6 +183,8 @@ MonoBehaviour:
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
+  setStickersDeseado: 0
+  pistasPortada: []
   hechizoSolicitado: 0
   tituloLibroHechizadoKey:
     m_TableReference:
@@ -191,6 +195,13 @@ MonoBehaviour:
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
+  pistasHechizo: []
+  m_preguntasTrivia:
+  - {fileID: 7291832426838509793, guid: 6467c86f045abc04083025285ffd2aaa, type: 3}
+  - {fileID: 3973443552610072737, guid: 2a23644a0223a6c4a864aec2e85b8ad6, type: 3}
+  - {fileID: 468350040306589788, guid: 5f5b6d72bdb1b2b4788d065906988137, type: 3}
+  - {fileID: 5002192555813059283, guid: 21682355d8ef08e439f8df79b6ab8ba3, type: 3}
+  - {fileID: 522501443280084635, guid: 15afe3aa8ae3ac949abfc8959a44ea9a, type: 3}
   libroDonadoID: 0
   libroDevueltoID: 0
   tituloLibroDevuelto: 
@@ -231,3 +242,4 @@ MonoBehaviour:
   dialogueMark: {fileID: 0}
   dialoguePanel: {fileID: 0}
   dialogueText: {fileID: 0}
+  tutorialFinalizado: 0

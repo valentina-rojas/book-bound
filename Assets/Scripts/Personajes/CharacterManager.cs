@@ -61,7 +61,7 @@ public class CharacterManager : MonoBehaviour
                 break;
             case CharacterAttributes.TipoDePedido.JuegoTrivia:
                 Debug.Log("Este personaje quiere hacerte preguntas");
-                QuizManager.instance.StartQuiz();
+                QuizManager.instance.StartQuiz(personaje.PreguntasTrivia);
                 break;
             case CharacterAttributes.TipoDePedido.DonarLibro:
                 Debug.Log("Este personaje quiere donar un libro");

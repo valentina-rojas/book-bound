@@ -99,6 +99,87 @@ MonoBehaviour:
     m_Localized: Herbs and Flavors of Forgotten Realms
     m_Metadata:
       m_Items: []
+  - m_Id: 10236841236799488
+    m_Localized: Which customer likes to scare children?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10236841266159616
+    m_Localized: Witch
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10236841266159617
+    m_Localized: Elder
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10236841266159618
+    m_Localized: Ogre
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10236841266159619
+    m_Localized: Which was the first book you were requested to provide?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10236841266159620
+    m_Localized: Don't Look Under the Bed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10236841266159621
+    m_Localized: The Lady of Lost Secrets
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10236841266159622
+    m_Localized: The Guardian of the Blue Forest
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10236841266159623
+    m_Localized: How many different book classifications exist in the library?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10236841266159624
+    m_Localized: 6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10236841266159625
+    m_Localized: 7
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10236841266159626
+    m_Localized: 8
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10236841266159627
+    m_Localized: How many cobwebs do you have to clean each day?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10236841266159628
+    m_Localized: 4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10236841266159629
+    m_Localized: 5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10236841266159630
+    m_Localized: 6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10236841266159631
+    m_Localized: What is the name of the book in which the Elf asks for help with
+      the cover?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10236841266159632
+    m_Localized: Letters on the Road
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10236841266159633
+    m_Localized: "The Dragon\u2019s Path"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10236841266159634
+    m_Localized: Magical Travel Stories
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

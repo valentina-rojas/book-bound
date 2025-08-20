@@ -4,26 +4,33 @@ using System.Collections;
 
 public class RuidoSalaDeLecturaManager : MonoBehaviour
 {
+    #region Audio
     [Header("Audio")]
     [SerializeField] private AudioSource audioRuido;
 
     [Header("Sonido Silenciar")]
     [SerializeField] private AudioClip sonidoSilenciar;
 
+    private AudioSource audioSourceEfectos;
+    #endregion
+
+    #region UI
     [Header("UI")]
     [SerializeField] private GameObject botonDetenerRuido;
     [SerializeField] private GameObject[] globosDialogo;
+    #endregion
 
-
+    #region Variables Privadas
     private bool eventoActivo = false;
     private bool esperandoProbabilidad = false;
     private Coroutine corutinaEvento;
-    private AudioSource audioSourceEfectos;
     private CatDialogues catDialogues;
+    #endregion
 
+    #region Ciclo de Vida
     private void Awake()
     {
-        catDialogues = FindObjectOfType<CatDialogues>();
+        catDialogues = Object.FindFirstObjectByType<CatDialogues>(); 
         if (catDialogues == null)
             Debug.LogWarning("No se encontró CatDialogues en la escena.");
     }
@@ -35,7 +42,9 @@ public class RuidoSalaDeLecturaManager : MonoBehaviour
 
         audioSourceEfectos = gameObject.AddComponent<AudioSource>();
     }
+    #endregion
 
+    #region Evento Sala Ruidosa
     public void IntentarActivarSalaRuidosa()
     {
         Debug.Log("IntentarActivarSalaRuidosa fue llamado.");
@@ -83,6 +92,7 @@ public class RuidoSalaDeLecturaManager : MonoBehaviour
             }
         }
     }
+
     private void ActivarEventoSalaRuidosa()
     {
         if (audioRuido == null)
@@ -114,15 +124,14 @@ public class RuidoSalaDeLecturaManager : MonoBehaviour
 
         Debug.Log("Evento de sala ruidosa activado.");
 
-        if (catDialogues != null)
-        {
-            catDialogues.IniciarDialogoExtraDesdeLista(
-                new string[] { "SalaRuidosa" }, 
-                "Extra"
-            );
-        }
+        catDialogues?.IniciarDialogoExtraDesdeLista(
+            new string[] { "SalaRuidosa" },
+            "Extra"
+        );
     }
+    #endregion
 
+    #region Control Silenciar
     public void SilenciarConSonido()
     {
         if (eventoActivo && sonidoSilenciar != null && audioSourceEfectos != null)
@@ -141,7 +150,9 @@ public class RuidoSalaDeLecturaManager : MonoBehaviour
         yield return new WaitForSeconds(sonidoSilenciar.length);
         DesactivarSalaRuidosa();
     }
+    #endregion
 
+    #region Desactivación del Evento
     public void DesactivarSalaRuidosa()
     {
         if (!eventoActivo)
@@ -153,7 +164,7 @@ public class RuidoSalaDeLecturaManager : MonoBehaviour
             return;
         }
 
-              foreach (GameObject obj in globosDialogo)
+        foreach (GameObject obj in globosDialogo)
         {
             if (obj != null)
                 obj.SetActive(false);
@@ -167,10 +178,7 @@ public class RuidoSalaDeLecturaManager : MonoBehaviour
 
         Debug.Log("Evento de sala ruidosa desactivado.");
 
-        if (catDialogues != null)
-        {
-            catDialogues.FinalizarDialogo();
-        }
+        catDialogues?.FinalizarDialogo();
 
         IntentarActivarSalaRuidosa();
     }
@@ -186,4 +194,5 @@ public class RuidoSalaDeLecturaManager : MonoBehaviour
         esperandoProbabilidad = false;
         Debug.Log("Se canceló la posibilidad de que ocurra el evento de sala ruidosa.");
     }
+    #endregion
 }

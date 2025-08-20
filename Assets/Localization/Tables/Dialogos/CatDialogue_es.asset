@@ -94,6 +94,26 @@ MonoBehaviour:
     m_Localized: "\xA1Buena suerte!"
     m_Metadata:
       m_Items: []
+  - m_Id: 10497099322531840
+    m_Localized: "Vaya, gracias a ti la librer\xEDa se est\xE1 haciendo conocida."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10497099356086272
+    m_Localized: "Se corre la voz de que la atenci\xF3n aqu\xED es excelente."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10497099356086273
+    m_Localized: "Quiz\xE1 podr\xEDamos atraer nuevos clientes\u2026"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10497099356086274
+    m_Localized: "Aunque podr\xEDa aparecer alg\xFAn que otro visitante indeseado\u2026"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10497099356086275
+    m_Localized: "Ah, no le des importancia a eso. \xA1A empezar otro d\xEDa!"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

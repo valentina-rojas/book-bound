@@ -5,12 +5,14 @@ public class Tutorial : MonoBehaviour
 {
     public static Tutorial instance;
 
-    [Header("Elementos del tutorial")]
+    #region Elementos del Tutorial
     public GameObject flechaTelaraña;
     public CobwebCleaning telaranaTutorial;
     public GameObject flechaBiblioteca;
     public GameObject flechaVolver;
+    #endregion
 
+    #region Variables Privadas
     private CatDialogues cat;
     private bool esperandoCierreHistorial = false;
     private int pasoActual = 0;
@@ -26,11 +28,13 @@ public class Tutorial : MonoBehaviour
         new string[] { "Tuto11" },                               // Paso 6: Resultado primer cliente
         new string[] { "Tuto12", "Tuto13" }                      // Paso 7: Cierre tutorial
     };
+    #endregion
 
+    #region Ciclo de Vida
     private void Awake()
     {
         instance = this;
-        cat = FindObjectOfType<CatDialogues>();
+        cat = Object.FindFirstObjectByType<CatDialogues>(); 
 
         if (cat != null)
         {
@@ -47,6 +51,9 @@ public class Tutorial : MonoBehaviour
             cat.OnDialogoUltimaLineaTipeada -= OnDialogoUltimaLineaTipeada;
         }
     }
+    #endregion
+
+    #region Eventos del Cat
     private void OnDialogoUltimaLineaTipeada()
     {
         if (pasoActual == 0)
@@ -56,6 +63,38 @@ public class Tutorial : MonoBehaviour
         }
     }
 
+    private void OnDialogoExtraFinalizado()
+    {
+        if (pasoActual == 1)
+        {
+            TaskManager.instance?.OcultarListaTareas();
+            CameraManager.instance.ActivarBotonCamara();
+            flechaBiblioteca?.SetActive(true);
+        }
+        else if (pasoActual == 3)
+        {
+            Debug.Log("Finalizó Tuto5, mostrando tareas y habilitando botón de tienda.");
+
+            if (GameManager.instance != null && GameManager.instance.nivelActual == 1)
+            {
+                TaskManager.instance.MostrarTareas();
+                TaskManager.instance.botonAbrirTienda.gameObject.SetActive(true);
+            }
+        }
+        else if (pasoActual == 5)
+        {
+            Debug.Log("Finalizó el diálogo Tuto9. Abriendo historial...");
+            HistorialManager historial = Object.FindFirstObjectByType<HistorialManager>(); 
+            if (historial != null)
+            {
+                historial.AbrirTodo();
+                esperandoCierreHistorial = true;
+            }
+        }
+    }
+    #endregion
+
+    #region Tutorial Control
     public void EmpezarTutorial()
     {
         pasoActual = 0;
@@ -77,14 +116,11 @@ public class Tutorial : MonoBehaviour
             {
                 cat.IniciarDialogoExtraDesdeLista(dialogos);
             }
-            else
+            else if (pasoActual == 2 && flechaVolver != null)
             {
-                if (pasoActual == 2 && flechaVolver != null)
-                {
-                    Debug.Log("Activando flechaVolver");
-                    flechaVolver.SetActive(true);
-                    CameraManager.instance.ActivarBotonCamaraTuto();
-                }
+                Debug.Log("Activando flechaVolver");
+                flechaVolver.SetActive(true);
+                CameraManager.instance.ActivarBotonCamaraTuto();
             }
 
             if (pasoActual == 0)
@@ -111,36 +147,6 @@ public class Tutorial : MonoBehaviour
         else
         {
             Debug.LogWarning("Referencia a la telaraña del tutorial no asignada.");
-        }
-    }
-
-    private void OnDialogoExtraFinalizado()
-    {
-        if (pasoActual == 1)
-        {
-            TaskManager.instance?.OcultarListaTareas();
-            CameraManager.instance.ActivarBotonCamara();
-            flechaBiblioteca?.SetActive(true);
-        }
-        else if (pasoActual == 3)
-        {
-            Debug.Log("Finalizó Tuto5, mostrando tareas y habilitando botón de tienda.");
-
-            if (GameManager.instance != null && GameManager.instance.nivelActual == 1)
-            {
-                TaskManager.instance.MostrarTareas();
-                TaskManager.instance.botonAbrirTienda.gameObject.SetActive(true);
-            }
-        }
-        else if (pasoActual == 5)
-        {
-            Debug.Log("Finalizó el diálogo Tuto9. Abriendo historial...");
-            HistorialManager historial = FindObjectOfType<HistorialManager>();
-            if (historial != null)
-            {
-                historial.AbrirTodo();
-                esperandoCierreHistorial = true;
-            }
         }
     }
 
@@ -188,23 +194,21 @@ public class Tutorial : MonoBehaviour
             AvanzarAlSiguientePaso();
         }
     }
-    
+
     public void SaltarTutorial()
     {
-        pasoActual = dialogosPorPaso.Length; 
+        pasoActual = dialogosPorPaso.Length;
 
         flechaTelaraña?.SetActive(false);
         flechaBiblioteca?.SetActive(false);
         flechaVolver?.SetActive(false);
 
         if (telaranaTutorial != null)
-        {
             telaranaTutorial.HabilitarInteraccion();
-        }
 
         CameraManager.instance?.ActivarCamaraPrincipal();
         CameraManager.instance?.ActivarBotonCamara();
-        CameraManager.instance?.ActivarBotonCamaraTuto(); 
+        CameraManager.instance?.ActivarBotonCamaraTuto();
 
         TaskManager.instance?.MostrarTareas();
         if (GameManager.instance != null)
@@ -212,5 +216,5 @@ public class Tutorial : MonoBehaviour
 
         enabled = false;
     }
-
+    #endregion
 }

@@ -4,6 +4,7 @@ using UnityEditor;
 [CustomEditor(typeof(CharacterAttributes))]
 public class CharacterAttributesEditor : Editor
 {
+    #region Propiedades Serialized
     SerializedProperty tipoDePedido;
     SerializedProperty dialogueLinesInicio;
     SerializedProperty dialogueLinesBuena;
@@ -26,7 +27,9 @@ public class CharacterAttributesEditor : Editor
     SerializedProperty tituloLibroDevuelto;      
     SerializedProperty nombreDelCliente;
     SerializedProperty descripcionPedido;
+    #endregion
 
+    #region OnEnable
     void OnEnable()
     {
         tipoDePedido = serializedObject.FindProperty("tipoDePedido");
@@ -59,31 +62,54 @@ public class CharacterAttributesEditor : Editor
         nombreDelCliente = serializedObject.FindProperty("nombreDelCliente");
         descripcionPedido = serializedObject.FindProperty("descripcionPedido");
     }
+    #endregion
 
+    #region OnInspectorGUI
     public override void OnInspectorGUI()
     {
         serializedObject.Update();
 
+        DrawTipoYDialogos();
+        DrawSpritesRespuesta();
+        DrawDatosCliente();
+        DrawSeccionPorTipo();
+
+        serializedObject.ApplyModifiedProperties();
+    }
+    #endregion
+
+    #region Secciones Inspector
+    private void DrawTipoYDialogos()
+    {
         EditorGUILayout.PropertyField(tipoDePedido);
         EditorGUILayout.Space();
         EditorGUILayout.LabelField("📖 Diálogos", EditorStyles.boldLabel);
         EditorGUILayout.PropertyField(dialogueLinesInicio);
         EditorGUILayout.PropertyField(dialogueLinesBuena);
         EditorGUILayout.PropertyField(dialogueLinesMala);
+    }
 
+    private void DrawSpritesRespuesta()
+    {
         EditorGUILayout.Space();
         EditorGUILayout.LabelField("🎭 Sprites de Respuesta", EditorStyles.boldLabel);
         EditorGUILayout.PropertyField(spriteRespuestaBuena);
         EditorGUILayout.PropertyField(spriteRespuestaMala);
+    }
 
+    private void DrawDatosCliente()
+    {
         EditorGUILayout.Space();
         EditorGUILayout.LabelField("📚 Datos del Cliente", EditorStyles.boldLabel);
         EditorGUILayout.PropertyField(nombreDelCliente);
         EditorGUILayout.PropertyField(descripcionPedido);
+    }
 
+    private void DrawSeccionPorTipo()
+    {
         CharacterAttributes.TipoDePedido tipo = (CharacterAttributes.TipoDePedido)tipoDePedido.enumValueIndex;
-
         EditorGUILayout.Space();
+
         switch (tipo)
         {
             case CharacterAttributes.TipoDePedido.BuscarLibro:
@@ -101,36 +127,40 @@ public class CharacterAttributesEditor : Editor
                 EditorGUILayout.PropertyField(pistasReparacion, true);
                 break;
 
-                case CharacterAttributes.TipoDePedido.HacerPortada:
-                    EditorGUILayout.LabelField("🎨 Portada", EditorStyles.boldLabel);
-                    EditorGUILayout.PropertyField(stickersRequeridos);
-                    EditorGUILayout.PropertyField(tituloLibroPortada);
-                    EditorGUILayout.PropertyField(setStickersDeseado); 
-                    EditorGUILayout.Space();
-                    EditorGUILayout.LabelField("💡 Pistas para la Portada", EditorStyles.boldLabel);
-                    EditorGUILayout.PropertyField(pistasPortada, true); 
-                    break;
+            case CharacterAttributes.TipoDePedido.HacerPortada:
+                EditorGUILayout.LabelField("🎨 Portada", EditorStyles.boldLabel);
+                EditorGUILayout.PropertyField(stickersRequeridos);
+                EditorGUILayout.PropertyField(tituloLibroPortada);
+                EditorGUILayout.PropertyField(setStickersDeseado); 
+                EditorGUILayout.Space();
+                EditorGUILayout.LabelField("💡 Pistas para la Portada", EditorStyles.boldLabel);
+                EditorGUILayout.PropertyField(pistasPortada, true); 
+                break;
 
-                case CharacterAttributes.TipoDePedido.HechizarLibro:
-                    EditorGUILayout.LabelField("✨ Hechizo", EditorStyles.boldLabel);
-                    EditorGUILayout.PropertyField(hechizoSolicitado);
-                    EditorGUILayout.Space();
-                    EditorGUILayout.LabelField("💡 Pistas para el Hechizo", EditorStyles.boldLabel);
-                    EditorGUILayout.PropertyField(pistasHechizo, true); 
-                    break;
+            case CharacterAttributes.TipoDePedido.HechizarLibro:
+                EditorGUILayout.LabelField("✨ Hechizo", EditorStyles.boldLabel);
+                EditorGUILayout.PropertyField(hechizoSolicitado);
+                EditorGUILayout.Space();
+                EditorGUILayout.LabelField("💡 Pistas para el Hechizo", EditorStyles.boldLabel);
+                EditorGUILayout.PropertyField(pistasHechizo, true); 
+                break;
 
-                case CharacterAttributes.TipoDePedido.DonarLibro:
-                    EditorGUILayout.LabelField("📤 Donación", EditorStyles.boldLabel);
-                    EditorGUILayout.PropertyField(libroDonadoID);
-                    break;
+            case CharacterAttributes.TipoDePedido.JuegoTrivia:
+                EditorGUILayout.LabelField("❓ Trivia", EditorStyles.boldLabel);
+                EditorGUILayout.PropertyField(serializedObject.FindProperty("m_preguntasTrivia"), true);
+                break;
 
-                case CharacterAttributes.TipoDePedido.DevolverLibro:
-                    EditorGUILayout.LabelField("📥 Devolución", EditorStyles.boldLabel);
-                    EditorGUILayout.PropertyField(libroDevueltoID);
-                    EditorGUILayout.PropertyField(tituloLibroDevuelto);
-                    break;
+            case CharacterAttributes.TipoDePedido.DonarLibro:
+                EditorGUILayout.LabelField("📤 Donación", EditorStyles.boldLabel);
+                EditorGUILayout.PropertyField(libroDonadoID);
+                break;
+
+            case CharacterAttributes.TipoDePedido.DevolverLibro:
+                EditorGUILayout.LabelField("📥 Devolución", EditorStyles.boldLabel);
+                EditorGUILayout.PropertyField(libroDevueltoID);
+                EditorGUILayout.PropertyField(tituloLibroDevuelto);
+                break;
         }
-
-        serializedObject.ApplyModifiedProperties();
     }
+    #endregion
 }

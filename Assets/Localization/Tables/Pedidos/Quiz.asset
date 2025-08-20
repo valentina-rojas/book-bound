@@ -30,7 +30,7 @@ MonoBehaviour:
         - rid: 8447689087114543223
         - rid: 8447689087114543224
         - rid: 8447689087114543225
-        m_ConnectedFile: 
+        m_ConnectedFile: C:/Users/Urano/Downloads/Pedidos - Quiz (2).csv
     - rid: 8447689087114543223
       type: {class: KeyIdColumns, ns: UnityEditor.Localization.Plugins.CSV.Columns, asm: Unity.Localization.Editor}
       data:

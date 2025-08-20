@@ -99,6 +99,88 @@ MonoBehaviour:
     m_Localized: Hierbas y sabores de reinos olvidados
     m_Metadata:
       m_Items: []
+  - m_Id: 10236841236799488
+    m_Localized: "\xBFA qu\xE9 cliente le gusta asustar ni\xF1os?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10236841266159616
+    m_Localized: Bruja
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10236841266159617
+    m_Localized: Anciano
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10236841266159618
+    m_Localized: Ogro
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10236841266159619
+    m_Localized: "\xBFCu\xE1l fue el primer libro que te solicitaron?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10236841266159620
+    m_Localized: No Mires Bajo la Cama
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10236841266159621
+    m_Localized: La Dama de los Secretos Perdidos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10236841266159622
+    m_Localized: "El Guardi\xE1n del Bosque Azul"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10236841266159623
+    m_Localized: "\xBFCu\xE1ntas clasificaciones diferentes de libros existen en
+      la biblioteca?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10236841266159624
+    m_Localized: 6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10236841266159625
+    m_Localized: 7
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10236841266159626
+    m_Localized: 8
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10236841266159627
+    m_Localized: "\xBFCu\xE1ntas telara\xF1as debes limpiar cada d\xEDa?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10236841266159628
+    m_Localized: 4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10236841266159629
+    m_Localized: 5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10236841266159630
+    m_Localized: 6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10236841266159631
+    m_Localized: "\xBFCu\xE1l es el nombre del libro en el que la Elfa pide que la
+      ayuden con la portada?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10236841266159632
+    m_Localized: Cartas Sobre el Camino
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10236841266159633
+    m_Localized: "El Camino del Drag\xF3n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10236841266159634
+    m_Localized: "Historias de Viajes M\xE1gicos"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

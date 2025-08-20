@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.Localization.Components;
@@ -41,6 +42,8 @@ public class QuizManager : MonoBehaviour
     private int incorrectCount = 0;
     private int currentQuestionIndex = 0;
     private bool isWaiting = false;
+
+    private List<Question> currentQuestions;
     #endregion
 
     #region Ciclo de Vida
@@ -54,8 +57,8 @@ public class QuizManager : MonoBehaviour
 
     private void Start()
     {
-        m_quizDB = FindObjectOfType<QuizDB>();
-        m_quizUI = FindObjectOfType<QuizUI>();
+        m_quizDB = Object.FindFirstObjectByType<QuizDB>();
+        m_quizUI = Object.FindFirstObjectByType<QuizUI>();
         m_audioSource = GetComponent<AudioSource>();
 
         quizPanel.SetActive(false);
@@ -65,11 +68,13 @@ public class QuizManager : MonoBehaviour
     #endregion
 
     #region Manejo del Quiz
-    public void StartQuiz()
+    public void StartQuiz(List<Question> preguntasPersonaje)
     {
         correctCount = 0;
         incorrectCount = 0;
         currentQuestionIndex = 0;
+
+        currentQuestions = preguntasPersonaje;
 
         quizPanel.SetActive(true);
         resultsPanel.SetActive(false);
@@ -80,7 +85,14 @@ public class QuizManager : MonoBehaviour
     private void NextQuestion()
     {
         isWaiting = false;
-        m_quizUI.Construct(m_quizDB.GetRandom(), GiveAnswer);
+
+        if (currentQuestionIndex >= currentQuestions.Count)
+        {
+            ShowResults();
+            return;
+        }
+
+        m_quizUI.Construct(currentQuestions[currentQuestionIndex], GiveAnswer);
     }
 
     private void GiveAnswer(OptionButton optionButton)

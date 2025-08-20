@@ -118,7 +118,10 @@ public class CameraManager : MonoBehaviour
     {
         panelReparacion.gameObject.SetActive(true);
         TaskManager.instance.OcultarBotonTareas();
+        PagesManager.instance.ResetSistema();
+        PagesManager.instance.DebugPaginas();
         PagesManager.instance.ActivarCategoriaCorrecta();
+        PagesManager.instance.DebugPaginas();
     }
 
     public void DesactivarPanelReparacion()
