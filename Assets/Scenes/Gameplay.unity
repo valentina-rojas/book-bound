@@ -16030,7 +16030,7 @@ Transform:
   m_GameObject: {fileID: 587792347}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 194.23593, y: -51.596916, z: 3368.5515}
+  m_LocalPosition: {x: 147, y: -75, z: 3368.5515}
   m_LocalScale: {x: 100.44001, y: 100.44001, z: 108}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -16082,12 +16082,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 54702501, guid: 7e0f6d57437b36649bd4ea3d178c2ccf, type: 3}
+  m_Sprite: {fileID: 840086402, guid: bfb5e1b1690a48b4f97a962ba2f2fb5a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.95, y: 1.95}
+  m_Size: {x: 2.14, y: 2.95}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -16106,10 +16106,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   growthStages:
-  - {fileID: 54702501, guid: 7e0f6d57437b36649bd4ea3d178c2ccf, type: 3}
-  - {fileID: -1728577814, guid: 7e0f6d57437b36649bd4ea3d178c2ccf, type: 3}
-  - {fileID: -1534606278, guid: 7e0f6d57437b36649bd4ea3d178c2ccf, type: 3}
-  - {fileID: -1839153586, guid: 7e0f6d57437b36649bd4ea3d178c2ccf, type: 3}
+  - {fileID: 840086402, guid: bfb5e1b1690a48b4f97a962ba2f2fb5a, type: 3}
+  - {fileID: -214466674, guid: bfb5e1b1690a48b4f97a962ba2f2fb5a, type: 3}
+  - {fileID: -981869998, guid: bfb5e1b1690a48b4f97a962ba2f2fb5a, type: 3}
+  - {fileID: -1211551660, guid: bfb5e1b1690a48b4f97a962ba2f2fb5a, type: 3}
   plantRenderer: {fileID: 587792349}
   regaderaUI: {fileID: 820194266}
   areaPlantaUI: {fileID: 783256162}
@@ -16153,8 +16153,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.95, y: 1.95}
-    newSize: {x: 1.95, y: 1.95}
+    oldSize: {x: 2.14, y: 2.95}
+    newSize: {x: 2.14, y: 2.95}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -21341,7 +21341,7 @@ Transform:
   m_GameObject: {fileID: 813529477}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 443.71606, y: 12.1230955, z: 3368.5515}
+  m_LocalPosition: {x: 378, y: 118, z: 3368.5515}
   m_LocalScale: {x: 100.44001, y: 100.44001, z: 108}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -21393,12 +21393,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1552092096, guid: bfb5e1b1690a48b4f97a962ba2f2fb5a, type: 3}
+  m_Sprite: {fileID: -429380293, guid: 97d99b69898283e47a43f34c568c5249, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2.14, y: 2.95}
+  m_Size: {x: 1.95, y: 1.95}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -21417,10 +21417,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   growthStages:
-  - {fileID: -1552092096, guid: bfb5e1b1690a48b4f97a962ba2f2fb5a, type: 3}
-  - {fileID: -1212508434, guid: bfb5e1b1690a48b4f97a962ba2f2fb5a, type: 3}
-  - {fileID: -942377769, guid: bfb5e1b1690a48b4f97a962ba2f2fb5a, type: 3}
-  - {fileID: -929984635, guid: bfb5e1b1690a48b4f97a962ba2f2fb5a, type: 3}
+  - {fileID: -429380293, guid: 97d99b69898283e47a43f34c568c5249, type: 3}
+  - {fileID: 943881044, guid: 97d99b69898283e47a43f34c568c5249, type: 3}
+  - {fileID: 2120660593, guid: 97d99b69898283e47a43f34c568c5249, type: 3}
+  - {fileID: -1936203295, guid: 97d99b69898283e47a43f34c568c5249, type: 3}
   plantRenderer: {fileID: 813529479}
   regaderaUI: {fileID: 820194266}
   areaPlantaUI: {fileID: 1706888424}
@@ -21464,8 +21464,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.14, y: 2.95}
-    newSize: {x: 2.14, y: 2.95}
+    oldSize: {x: 1.95, y: 1.95}
+    newSize: {x: 1.95, y: 1.95}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -49993,7 +49993,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 184587965, guid: 77f9c09154ca06342b7af5399d520b59, type: 3}
+  m_Sprite: {fileID: 1784825107, guid: 77f9c09154ca06342b7af5399d520b59, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -50063,10 +50063,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   growthStages:
-  - {fileID: 184587965, guid: 77f9c09154ca06342b7af5399d520b59, type: 3}
-  - {fileID: -1483517753, guid: 77f9c09154ca06342b7af5399d520b59, type: 3}
-  - {fileID: 1702266795, guid: 77f9c09154ca06342b7af5399d520b59, type: 3}
-  - {fileID: -1620356596, guid: 77f9c09154ca06342b7af5399d520b59, type: 3}
+  - {fileID: 1784825107, guid: 77f9c09154ca06342b7af5399d520b59, type: 3}
+  - {fileID: -1606916860, guid: 77f9c09154ca06342b7af5399d520b59, type: 3}
+  - {fileID: -422699519, guid: 77f9c09154ca06342b7af5399d520b59, type: 3}
+  - {fileID: -1074133341, guid: 77f9c09154ca06342b7af5399d520b59, type: 3}
   plantRenderer: {fileID: 1811326880}
   regaderaUI: {fileID: 820194266}
   areaPlantaUI: {fileID: 956617214}
@@ -51390,7 +51390,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1870575871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51408,7 +51408,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.441
   m_Color: {r: 0.764151, g: 0.5903741, b: 0.1477839, a: 1}
-  m_Intensity: 5
+  m_Intensity: 6
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
   m_ApplyToSortingLayers: 000000001b92da53df2abd60
@@ -51452,7 +51452,7 @@ Transform:
   m_GameObject: {fileID: 1870575870}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -21.09, y: 1.1023264, z: -1089.8127}
+  m_LocalPosition: {x: -32.75, y: 14.21, z: -1089.8127}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

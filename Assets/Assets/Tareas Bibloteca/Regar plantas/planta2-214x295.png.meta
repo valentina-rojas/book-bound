@@ -106,6 +106,19 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
     buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -137,8 +150,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 79ef15a6c8b40344d83b8fe3eb49628b
-      internalID: -1552092096
+      spriteID: 77fcc4560fa20854f97a6a1c22e8b31b
+      internalID: 840086402
       vertices: []
       indices: 
       edges: []
@@ -159,8 +172,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8d5791d74d8b75143bf2c1ded2bd0dee
-      internalID: -1212508434
+      spriteID: cd8daa903533a3c4ab19b129bbf0a1e5
+      internalID: -214466674
       vertices: []
       indices: 
       edges: []
@@ -181,8 +194,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 272fa814b0a054c4faaa5b82daf6fcfc
-      internalID: -942377769
+      spriteID: e9fa1811b84335b4eb915eef9fc704ec
+      internalID: -981869998
       vertices: []
       indices: 
       edges: []
@@ -203,8 +216,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 62ed379887453054e880e4d1553ecd51
-      internalID: -929984635
+      spriteID: 6ee424efa3655b94eb0937ce6a68830c
+      internalID: -1211551660
       vertices: []
       indices: 
       edges: []
@@ -213,7 +226,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 8c8f5a983b9a5c543b32d28cc9e4f06b
+    spriteID: 37ba7cdbbfea10d49b5ecbe770b9d72e
     internalID: 0
     vertices: []
     indices: 
@@ -223,10 +236,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      planta2-214x295_0: -1552092096
-      planta2-214x295_1: -1212508434
-      planta2-214x295_2: -942377769
-      planta2-214x295_3: -929984635
+      planta2-214x295_0: 840086402
+      planta2-214x295_1: -214466674
+      planta2-214x295_2: -981869998
+      planta2-214x295_3: -1211551660
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
