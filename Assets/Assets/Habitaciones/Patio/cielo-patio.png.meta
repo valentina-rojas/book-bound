@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      cielo-patio_0: -923670869441160965
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

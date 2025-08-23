@@ -121,8 +121,14 @@ public class TaskManager : MonoBehaviour
 
     private void OnClickAbrirTienda()
     {
-        Debug.Log("Tienda abierta");
         botonAbrirTienda.gameObject.SetActive(false);
+
+        RuidoSalaDeLecturaManager ruido = FindFirstObjectByType<RuidoSalaDeLecturaManager>();
+        if (ruido != null)
+        {
+            ruido.PermitirEventos(); 
+            ruido.IntentarActivarSalaRuidosa();
+        }
 
         if (!tiendaAbiertaPorPrimeraVez)
         {
@@ -130,7 +136,6 @@ public class TaskManager : MonoBehaviour
 
             if (Tutorial.instance != null)
             {
-                Debug.Log("Avanzando tutorial a paso 4 tras abrir tienda");
                 Tutorial.instance.AvanzarAlSiguientePaso();
             }
         }
@@ -203,8 +208,6 @@ public class TaskManager : MonoBehaviour
 
         tareasYaCompletadas = true;
 
-        Debug.Log("¡Todas las tareas de este nivel están completas!");
-
         if (GameManager.instance != null && GameManager.instance.nivelActual != 1)
         {
             if (botonAbrirTienda != null)
@@ -219,17 +222,8 @@ public class TaskManager : MonoBehaviour
         {
             if (Tutorial.instance != null)
             {
-                Debug.Log("Mostrando flecha volver desde TaskManager");
                 Tutorial.instance.MostrarFlechaVolver();
             }
-            else
-            {
-                Debug.LogWarning("Tutorial.instance es null");
-            }
-        }
-        else
-        {
-            Debug.LogWarning("No es nivel 1 o GameManager es null");
         }
     }
 

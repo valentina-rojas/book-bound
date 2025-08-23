@@ -82,7 +82,6 @@ public class GameManager : MonoBehaviour
     {
         if (nivelActual - 1 >= niveles.Length)
         {
-            Debug.LogWarning($"No hay datos definidos para el Día {nivelActual}. El juego debería finalizar o retornar al menú.");
             yield break;
         }
 
@@ -100,7 +99,6 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("No se pudo cargar el texto localizado para el Día.");
             textoDia.text = $"Día {nivelActual}";
         }
 
@@ -132,6 +130,13 @@ public class GameManager : MonoBehaviour
 
         int diaMostrado = nivelActual;
         nivelActual++;
+
+        var ruidoManager = FindFirstObjectByType<RuidoSalaDeLecturaManager>();
+        if (ruidoManager != null)
+        {
+            ruidoManager.DesactivarSalaRuidosa();
+            ruidoManager.CancelarPosibilidadDeEvento();
+        }
 
         var handleTitulo = textoFinDiaLocalized.GetLocalizedStringAsync();
         yield return handleTitulo;
@@ -191,7 +196,6 @@ public class GameManager : MonoBehaviour
 
         if (nivelActual - 1 >= niveles.Length)
         {
-            Debug.Log("Todos los niveles completados. Cargando escena final...");
             SceneManager.LoadScene("EscenaFinal");
             return;
         }
@@ -326,7 +330,6 @@ public class GameManager : MonoBehaviour
     #region Resultado pedidos especiales
     public void CompletarRestauracion()
     {
-        Debug.Log("Restauración completada.");
         resultadoRecomendacion = ResultadoRecomendacion.Buena;
         recomendacionesBuenas++;
         ActualizarSpritePersonaje();
@@ -334,7 +337,6 @@ public class GameManager : MonoBehaviour
 
     public void CompletarPortada(List<StickerID> stickersUsados)
     {
-        Debug.Log("Portada completada.");
 
         if (personajeActual == null)
         {
@@ -374,8 +376,6 @@ public class GameManager : MonoBehaviour
         else
             recomendacionesMalas++;
             ActualizarSpritePersonaje();
-
-            Debug.Log("Resultado recomendación: " + resultadoRecomendacion);
 
         if (characterSpawn != null)
         {

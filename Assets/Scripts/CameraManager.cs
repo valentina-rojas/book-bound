@@ -51,7 +51,6 @@ public class CameraManager : MonoBehaviour
 
         if (cameraIndex < 0 || cameraIndex >= cameras.Length)
         {
-            Debug.LogWarning("Índice de cámara fuera de rango.");
             return;
         }
 

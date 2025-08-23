@@ -25,12 +25,13 @@ public class RuidoSalaDeLecturaManager : MonoBehaviour
     private bool esperandoProbabilidad = false;
     private Coroutine corutinaEvento;
     private CatDialogues catDialogues;
+    private bool eventosPermitidos = true;
     #endregion
 
     #region Ciclo de Vida
     private void Awake()
     {
-        catDialogues = Object.FindFirstObjectByType<CatDialogues>(); 
+        catDialogues = Object.FindFirstObjectByType<CatDialogues>();
         if (catDialogues == null)
             Debug.LogWarning("No se encontró CatDialogues en la escena.");
     }
@@ -45,9 +46,21 @@ public class RuidoSalaDeLecturaManager : MonoBehaviour
     #endregion
 
     #region Evento Sala Ruidosa
+    public void PermitirEventos()
+    {
+        eventosPermitidos = true;
+        IntentarActivarSalaRuidosa();
+    }
+
     public void IntentarActivarSalaRuidosa()
     {
         Debug.Log("IntentarActivarSalaRuidosa fue llamado.");
+
+        if (!eventosPermitidos) 
+        {
+            Debug.Log("Eventos deshabilitados (fin de nivel).");
+            return;
+        }
 
         if (eventoActivo || esperandoProbabilidad)
             return;
@@ -58,9 +71,10 @@ public class RuidoSalaDeLecturaManager : MonoBehaviour
             return;
         }
 
-        if (GameManager.instance.nivelActual <= 3)
+        if (GameManager.instance.nivelActual <= 3 ||
+            TaskManager.instance == null)
         {
-            Debug.Log("Nivel demasiado bajo para activar sala ruidosa.");
+            Debug.Log("Condiciones no cumplidas para activar sala ruidosa.");
             return;
         }
 
@@ -81,7 +95,7 @@ public class RuidoSalaDeLecturaManager : MonoBehaviour
             float chance = Random.value;
             Debug.Log($"Probabilidad obtenida: {chance}");
 
-            if (chance <= 0.4f)
+            if (chance <= 0.9f)
             {
                 ActivarEventoSalaRuidosa();
                 yield break;
@@ -180,7 +194,8 @@ public class RuidoSalaDeLecturaManager : MonoBehaviour
 
         catDialogues?.FinalizarDialogo();
 
-        IntentarActivarSalaRuidosa();
+        if (eventosPermitidos)
+            IntentarActivarSalaRuidosa();
     }
 
     public void CancelarPosibilidadDeEvento()
@@ -192,6 +207,7 @@ public class RuidoSalaDeLecturaManager : MonoBehaviour
         }
 
         esperandoProbabilidad = false;
+        eventosPermitidos = false; 
         Debug.Log("Se canceló la posibilidad de que ocurra el evento de sala ruidosa.");
     }
     #endregion
