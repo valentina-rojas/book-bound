@@ -8,17 +8,23 @@ public class CobwebCleaning : MonoBehaviour
 
     [Header("¿Es la telaraña del tutorial?")]
     public bool esTelarañaTutorial = false;
-    private bool puedeInteractuar = true;
-    private bool interaccionFueHabilitada = false;
+
+    [Header("Nivel mínimo para que aparezca esta telaraña")]
+    public int nivelMinimo = 1;
+
+    [Header("Sala a la que pertenece")]
+    public string sala; 
+
+    [HideInInspector] public bool puedeInteractuar = true;
+    [HideInInspector] public bool interaccionFueHabilitada = false;
+
     private void Start()
     {
         sr = GetComponent<SpriteRenderer>();
         CobwebManager.instance.RegistrarTelaraña(this);
 
         if (esTelarañaTutorial)
-        {
-            puedeInteractuar = false; 
-        }
+            puedeInteractuar = false;
     }
 
     private void OnMouseDown()
@@ -35,11 +41,10 @@ public class CobwebCleaning : MonoBehaviour
             gameObject.SetActive(false);
 
             if (esTelarañaTutorial)
-            {
                 Tutorial.instance?.AvanzarAlSiguientePaso();
-            }
         }
     }
+
     public void ReiniciarTelaraña()
     {
         clicsActuales = 0f;
@@ -47,13 +52,9 @@ public class CobwebCleaning : MonoBehaviour
         gameObject.SetActive(true);
 
         if (esTelarañaTutorial && !interaccionFueHabilitada)
-        {
             puedeInteractuar = false;
-        }
         else
-        {
             puedeInteractuar = true;
-        }
     }
 
     public void HabilitarInteraccion()

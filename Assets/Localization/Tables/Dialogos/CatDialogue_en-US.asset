@@ -62,36 +62,36 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23374785585152
-    m_Localized: You're already quite the expert!
-    m_Metadata:
-      m_Items: []
-  - m_Id: 23405416587264
-    m_Localized: Customers might start making more varied requests...
-    m_Metadata:
-      m_Items: []
-  - m_Id: 23528523603968
-    m_Localized: But trust your magical bookseller instinct!
-    m_Metadata:
-      m_Items: []
-  - m_Id: 23590574137344
-    m_Localized: You're doing great!
-    m_Metadata:
-      m_Items: []
-  - m_Id: 23630805901312
     m_Localized: Without a doubt, Rhea chose the right person to take care of this
       place.
     m_Metadata:
       m_Items: []
-  - m_Id: 23664247087104
+  - m_Id: 23405416587264
     m_Localized: So I think we could open the reading room starting today.
     m_Metadata:
       m_Items: []
-  - m_Id: 23673839460352
+  - m_Id: 23528523603968
     m_Localized: "Don't worry, you\u2019ll hardly notice it\u2019s open."
     m_Metadata:
       m_Items: []
-  - m_Id: 23704256552960
+  - m_Id: 23590574137344
     m_Localized: Good luck!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23630805901312
+    m_Localized: You're already quite the expert!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23664247087104
+    m_Localized: Customers might start making more varied requests...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23673839460352
+    m_Localized: But trust your magical bookseller instinct!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23704256552960
+    m_Localized: You're doing great!
     m_Metadata:
       m_Items: []
   - m_Id: 10497099322531840

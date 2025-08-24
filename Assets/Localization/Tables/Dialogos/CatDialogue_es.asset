@@ -61,37 +61,37 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23374785585152
-    m_Localized: "\xA1Ya eres todo un experto!"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 23405416587264
-    m_Localized: "Puede que los clientes cada vez hagan pedidos m\xE1s diferentes..."
-    m_Metadata:
-      m_Items: []
-  - m_Id: 23528523603968
-    m_Localized: "\xA1Pero conf\xEDa en tu instinto de librero m\xE1gico!"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 23590574137344
-    m_Localized: "\xA1Vas muy bien!"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 23630805901312
     m_Localized: "Sin duda Rhea eligi\xF3 a la persona correcta para cuidar este
       lugar."
     m_Metadata:
       m_Items: []
-  - m_Id: 23664247087104
+  - m_Id: 23405416587264
     m_Localized: "As\xED que creo que podr\xEDamos abrir la sala de lectura a partir
       de hoy."
     m_Metadata:
       m_Items: []
-  - m_Id: 23673839460352
+  - m_Id: 23528523603968
     m_Localized: "No te preocupes, casi ni notar\xE1s que est\xE1 abierta."
     m_Metadata:
       m_Items: []
-  - m_Id: 23704256552960
+  - m_Id: 23590574137344
     m_Localized: "\xA1Buena suerte!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23630805901312
+    m_Localized: "\xA1Ya eres todo un experto!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23664247087104
+    m_Localized: "Puede que los clientes cada vez hagan pedidos m\xE1s diferentes..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23673839460352
+    m_Localized: "\xA1Pero conf\xEDa en tu instinto de librero m\xE1gico!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23704256552960
+    m_Localized: "\xA1Vas muy bien!"
     m_Metadata:
       m_Items: []
   - m_Id: 10497099322531840

@@ -68,7 +68,7 @@ public class RuidoSalaDeLecturaManager : MonoBehaviour
             return;
         }
 
-        if (GameManager.instance.nivelActual <= 3 ||
+        if (GameManager.instance.nivelActual <= 2 ||
             TaskManager.instance == null)
         {
             return;

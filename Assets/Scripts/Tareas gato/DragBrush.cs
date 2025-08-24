@@ -41,7 +41,10 @@ public class DragBrush : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
 
     public void OnEndDrag(PointerEventData eventData)
     {
+        TendCat.instance?.ReiniciarBarraCepillado();
+
         rectTransform.localPosition = posicionInicial;
         image.raycastTarget = true;
     }
+
 }

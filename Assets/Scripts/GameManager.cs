@@ -104,7 +104,7 @@ public class GameManager : MonoBehaviour
 
         if (nivelActual == 2)
             CameraManager.instance.botonCambiarCamara3.gameObject.SetActive(true);
-        if (nivelActual == 4)
+        if (nivelActual == 3)
             CameraManager.instance.botonCambiarCamara2.gameObject.SetActive(true);
 
         Time.timeScale = 0f;
@@ -247,7 +247,7 @@ public class GameManager : MonoBehaviour
             Debug.LogWarning("No hay más niveles definidos.");
         }
 
-        if (nivelActual >= 4)
+        if (nivelActual >= 3)
         {
             personasSentadas.ActivarPersonasSentadas();
         }

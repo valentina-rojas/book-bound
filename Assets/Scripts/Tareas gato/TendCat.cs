@@ -10,39 +10,44 @@ public class TendCat : MonoBehaviour
     public GameObject bolsaComidaGO;
     public GameObject platitoGO;
 
-    [Header("Cepillado")]
+    #region Cepillado
     public RectTransform cepilloUI;
     public RectTransform areaCepilladoUI;
     public float tiempoNecesario = 2f;
     public Slider barraCepilladoUI;
 
-    [Header("Alimentar")]
+    private Vector2 ultimaPosicionCepillo;
+    private bool estaMoviendose = false;
+    private float tiempoSobreAreaCepillado = 0f;
+    private bool tareaCepillarCompletada = false;
+    #endregion
+
+    #region Alimentar
     public RectTransform bolsaComidaUI;
     public RectTransform platitoUI;
     public Sprite platitoLlenoSprite;
     public Sprite platitoVacioSprite;
 
-    [Header("Acariciar")]
-    public GameObject corazonesGO;
-
-    private float tiempoSobreAreaCepillado = 0f;
-    private bool tareaCepillarCompletada = false;
     private bool tareaAlimentarCompletada = false;
+    #endregion
+
+    #region Acariciar
+    public GameObject corazonesGO;
+    #endregion
 
     private Camera camara;
 
+    #region Unity
     private void Awake()
     {
-        if (instance == null)
-            instance = this;
-        else
-            Destroy(gameObject); 
+        if (instance == null) instance = this;
+        else Destroy(gameObject);
     }
+
     private void Start()
     {
         camara = Camera.main;
-        if (barraCepilladoUI != null)
-            barraCepilladoUI.gameObject.SetActive(false);
+        if (barraCepilladoUI != null) barraCepilladoUI.gameObject.SetActive(false);
     }
 
     private void Update()
@@ -51,27 +56,31 @@ public class TendCat : MonoBehaviour
         VerificarAlimentacion();
         VerificarAcariciar();
     }
+    #endregion
 
+    #region Actualización UI
     public void ActualizarVisibilidadObjetos()
     {
-        if (TaskManager.instance == null)
-            return;
+        if (TaskManager.instance == null) return;
 
-        bool mostrarCepillo = TaskManager.instance.EsTareaActiva(2);
-        if (cepilloGO != null) cepilloGO.SetActive(mostrarCepillo);
+        if (cepilloGO != null) cepilloGO.SetActive(TaskManager.instance.EsTareaActiva(2));
 
         bool mostrarComida = TaskManager.instance.EsTareaActiva(3);
         if (bolsaComidaGO != null) bolsaComidaGO.SetActive(mostrarComida);
         if (platitoGO != null) platitoGO.SetActive(mostrarComida);
     }
+    #endregion
 
+    #region Cepillado
     private void VerificarCepillado()
     {
         if (tareaCepillarCompletada) return;
 
         Vector2 posicionCepillo = RectTransformUtility.WorldToScreenPoint(camara, cepilloUI.position);
+        estaMoviendose = (Vector2.Distance(posicionCepillo, ultimaPosicionCepillo) > 0.5f);
+        ultimaPosicionCepillo = posicionCepillo;
 
-        if (RectTransformUtility.RectangleContainsScreenPoint(areaCepilladoUI, posicionCepillo, camara))
+        if (RectTransformUtility.RectangleContainsScreenPoint(areaCepilladoUI, posicionCepillo, camara) && estaMoviendose)
         {
             if (barraCepilladoUI != null && !barraCepilladoUI.gameObject.activeSelf)
                 barraCepilladoUI.gameObject.SetActive(true);
@@ -80,8 +89,6 @@ public class TendCat : MonoBehaviour
 
             if (barraCepilladoUI != null)
                 barraCepilladoUI.value = tiempoSobreAreaCepillado / tiempoNecesario;
-
-            Debug.Log($"Cepillando al gato: {tiempoSobreAreaCepillado:F2}s");
 
             if (tiempoSobreAreaCepillado >= tiempoNecesario)
             {
@@ -94,23 +101,23 @@ public class TendCat : MonoBehaviour
                 }
 
                 AudioManager.instance.sonidoGato.Play();
-
-
                 TaskManager.instance.CompletarTareaPorID(2);
-            }
-        }
-        else
-        {
-            tiempoSobreAreaCepillado = 0f;
-
-            if (barraCepilladoUI != null)
-            {
-                barraCepilladoUI.value = 0f;
-                barraCepilladoUI.gameObject.SetActive(false);
             }
         }
     }
 
+    public void ReiniciarBarraCepillado()
+    {
+        tiempoSobreAreaCepillado = 0f;
+        if (barraCepilladoUI != null)
+        {
+            barraCepilladoUI.value = 0f;
+            barraCepilladoUI.gameObject.SetActive(false);
+        }
+    }
+    #endregion
+
+    #region Alimentar
     private void VerificarAlimentacion()
     {
         if (tareaAlimentarCompletada) return;
@@ -127,12 +134,12 @@ public class TendCat : MonoBehaviour
 
             Image platitoImage = platitoUI.GetComponent<Image>();
             if (platitoImage != null && platitoLlenoSprite != null)
-            {
                 platitoImage.sprite = platitoLlenoSprite;
-            }
         }
     }
+    #endregion
 
+    #region Acariciar
     private void VerificarAcariciar()
     {
         if (Input.GetMouseButtonDown(0))
@@ -146,7 +153,6 @@ public class TendCat : MonoBehaviour
                 if (corazonesGO != null)
                 {
                     corazonesGO.SetActive(true);
-
                     Animator animator = corazonesGO.GetComponent<Animator>();
                     if (animator != null)
                     {
@@ -159,11 +165,11 @@ public class TendCat : MonoBehaviour
         }
 
         if (corazonesGO != null && !AudioManager.instance.sonidoRonroneo.isPlaying)
-        {
             corazonesGO.SetActive(false);
-        }
     }
+    #endregion
 
+    #region Utilidades
     private Rect GetScreenRect(RectTransform rt)
     {
         Vector3[] corners = new Vector3[4];
@@ -174,24 +180,16 @@ public class TendCat : MonoBehaviour
 
         return new Rect(bottomLeft, topRight - bottomLeft);
     }
-    
+
     public void ReiniciarEstado()
     {
         tareaCepillarCompletada = false;
-        tiempoSobreAreaCepillado = 0f;
-
-        if (barraCepilladoUI != null)
-        {
-            barraCepilladoUI.value = 0f;
-            barraCepilladoUI.gameObject.SetActive(false);
-        }
-
+        ReiniciarBarraCepillado();
         tareaAlimentarCompletada = false;
 
         Image platitoImage = platitoUI.GetComponent<Image>();
         if (platitoImage != null && platitoVacioSprite != null)
-        {
             platitoImage.sprite = platitoVacioSprite;
-        }
     }
+    #endregion
 }
