@@ -58,7 +58,6 @@ public class HistorialManager : MonoBehaviour
         if (uiManager != null && uiManager.GetPanelHistorial() != null)
         {
             uiManager.GetPanelHistorial().SetActive(false);
-            Debug.Log("Panel de historial cerrado");
             historialCargado = false;
         }
         Tutorial tutorial = FindFirstObjectByType<Tutorial>();
@@ -103,7 +102,6 @@ public class HistorialManager : MonoBehaviour
 
         if (personajes == null || personajes.Count == 0)
         {
-            //bool mensajeMostrado = false;
             mensajeHistorialVacio.StringChanged -= MostrarMensajeHistorialVacioHandler;
             mensajeHistorialVacio.StringChanged += MostrarMensajeHistorialVacioHandler;
             yield break;
@@ -127,7 +125,6 @@ public class HistorialManager : MonoBehaviour
             string claveEntrada = personaje.nombreDelCliente + "|" + descripcionTraducida;
             if (entradasExistentes.Contains(claveEntrada))
             {
-                Debug.Log("Entrada duplicada detectada. No se agrega.");
                 continue;
             }
 
@@ -239,7 +236,6 @@ public class HistorialManager : MonoBehaviour
         {
             mensajeLibrosVacio.StringChanged -= MostrarMensajeLibrosVacioHandler;
             mensajeLibrosVacio.StringChanged += MostrarMensajeLibrosVacioHandler;
-            Debug.Log("No hay personajes atendidos");
             yield break; 
         }
         else
@@ -289,7 +285,6 @@ public class HistorialManager : MonoBehaviour
             {
                 mensajeLibrosVacio.StringChanged -= MostrarMensajeLibrosVacioHandler;
                 mensajeLibrosVacio.StringChanged += MostrarMensajeLibrosVacioHandler;
-                Debug.Log("No se encontraron libros prestados en personajes.");
             }
         }
 
@@ -315,8 +310,6 @@ public class HistorialManager : MonoBehaviour
                 }
             }
         }
-
-        Debug.Log("Libros prestados actualizados sin necesidad de abrir el historial.");
     }
 
     private void MostrarMensajeLibrosVacioHandler(string mensaje)
@@ -366,7 +359,6 @@ public class HistorialManager : MonoBehaviour
         {
             textos[0].text = mensaje;
             textos[1].text = "";
-            Debug.Log("Mostrando mensaje de libros vacío");
         }
     }
     #endregion

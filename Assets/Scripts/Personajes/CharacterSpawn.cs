@@ -80,8 +80,6 @@ public class CharacterSpawn : MonoBehaviour
 
             yield return new WaitForSeconds(2f);
         }
-
-        Debug.Log("Todos los personajes han pasado.");
         GameManager.instance.FinDeNivel();
     }
 
@@ -139,7 +137,6 @@ public class CharacterSpawn : MonoBehaviour
         if (dialogueManager != null)
         {
             dialogueManager.EnableDialogue();
-            Debug.Log("Dialogue habilitado.");
         }
         else
         {

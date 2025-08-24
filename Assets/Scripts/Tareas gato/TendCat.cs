@@ -86,7 +86,6 @@ public class TendCat : MonoBehaviour
             if (tiempoSobreAreaCepillado >= tiempoNecesario)
             {
                 tareaCepillarCompletada = true;
-                Debug.Log("Gato cepillado correctamente");
 
                 if (barraCepilladoUI != null)
                 {
@@ -122,11 +121,8 @@ public class TendCat : MonoBehaviour
         if (rectPlatito.Overlaps(rectBolsa))
         {
             tareaAlimentarCompletada = true;
-            Debug.Log("Gato alimentado correctamente (detectado por Overlaps)");
 
             AudioManager.instance.sonidoGato.Play();
-
-
             TaskManager.instance.CompletarTareaPorID(3);
 
             Image platitoImage = platitoUI.GetComponent<Image>();

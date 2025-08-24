@@ -23,7 +23,6 @@ public class DragBrush : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        Debug.Log("Comenzó a arrastrarse el cepillo");
         image.raycastTarget = false;
     }
 
@@ -42,9 +41,7 @@ public class DragBrush : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        Debug.Log("Se soltó el cepillo y volvió a su posición");
         rectTransform.localPosition = posicionInicial;
         image.raycastTarget = true;
     }
 }
-

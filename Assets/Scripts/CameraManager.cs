@@ -4,22 +4,31 @@ using UnityEngine.UI;
 public class CameraManager : MonoBehaviour
 {
     public static CameraManager instance;
+
+    #region Variables
     public Camera[] cameras;
     public GameObject[] canvasObjects;
     private int currentCameraIndex = 0;
     private bool verificacionInicialHecha = false;
+
+    [Header("Botones de cámara")]
     public Button botonCambiarCamara0;
     public Button botonCambiarCamara1;
     public Button botonCambiarCamara2;
     public Button botonCambiarCamara3;
 
+    [Header("Paneles")]
     public GameObject panelReparacion;
     public GameObject panelPortada;
-    public BookCoverManager bookCoverManager;
     public GameObject panelHechizo;
     public GameObject panelDonar;
     public GameObject panelDevolver;
 
+    [Header("Managers")]
+    public BookCoverManager bookCoverManager;
+    #endregion
+
+    #region Unity Lifecycle
     void Awake()
     {
         if (instance == null)
@@ -34,6 +43,7 @@ public class CameraManager : MonoBehaviour
         {
             bool isActive = (i == 0);
             cameras[i].enabled = isActive;
+
             if (canvasObjects != null && i < canvasObjects.Length)
                 canvasObjects[i].SetActive(isActive);
         }
@@ -44,54 +54,46 @@ public class CameraManager : MonoBehaviour
         botonCambiarCamara3.gameObject.SetActive(nivel > 1);
         botonCambiarCamara0.interactable = false;
     }
+    #endregion
 
+    #region Cambio de Cámaras
     public void CambiarCamara(int cameraIndex)
     {
         TaskManager.instance.OcultarListaTareas();
 
-        if (cameraIndex < 0 || cameraIndex >= cameras.Length)
-        {
-            return;
-        }
+        if (cameraIndex < 0 || cameraIndex >= cameras.Length) return;
 
         cameras[currentCameraIndex].enabled = false;
         if (canvasObjects != null && currentCameraIndex < canvasObjects.Length)
             canvasObjects[currentCameraIndex].SetActive(false);
 
         currentCameraIndex = cameraIndex;
-
         cameras[currentCameraIndex].enabled = true;
+
         if (canvasObjects != null && currentCameraIndex < canvasObjects.Length)
             canvasObjects[currentCameraIndex].SetActive(true);
 
         if (cameraIndex == 1)
         {
-            ShelfManager.instance?.IntentarDesorganizarLibros();
-
-            if (!verificacionInicialHecha)
-            {
-                StartCoroutine(VerificarEstantesDespuesDeFrame());
-                verificacionInicialHecha = true;
-            }
+            ShelfManager.instance?.RevisarOrganizacion();
+            Gnomos.instance?.EjecutarDesorganizacionSiPendiente();
         }
 
         if (cameraIndex == 0 && Tutorial.instance != null)
-        {
             Tutorial.instance.AlVolverACamaraPrincipal();
-        }
     }
 
     private System.Collections.IEnumerator VerificarEstantesDespuesDeFrame()
     {
         yield return null;
-
         ShelfEstante[] estantes = Object.FindObjectsByType<ShelfEstante>(FindObjectsSortMode.None);
-        foreach (var estante in estantes)
-        {
-            estante.VerificarEstante();
-        }
-    }
 
+        foreach (var estante in estantes)
+            estante.VerificarEstante();
+    }
+    #endregion
+
+    #region Botones de Cámara
     public void DesactivarBotonCamara()
     {
         botonCambiarCamara0.interactable = false;
@@ -112,6 +114,13 @@ public class CameraManager : MonoBehaviour
         botonCambiarCamara0.interactable = true;
     }
 
+    public void ActivarCamaraPrincipal()
+    {
+        CambiarCamara(0);
+    }
+    #endregion
+
+    #region Paneles
     public void ActivarPanelReparacion()
     {
         panelReparacion.gameObject.SetActive(true);
@@ -127,18 +136,16 @@ public class CameraManager : MonoBehaviour
         panelReparacion.gameObject.SetActive(false);
     }
 
-public void ActivarPanelPortada()
-{
-    panelPortada.SetActive(true);  // primero activamos el panel
-    TaskManager.instance.OcultarBotonTareas();
+    public void ActivarPanelPortada()
+    {
+        panelPortada.SetActive(true);
+        TaskManager.instance.OcultarBotonTareas();
 
-    // iniciamos la actualización del título en runtime
-    if (bookCoverManager != null)
-        StartCoroutine(bookCoverManager.ActualizarTituloLibroDespuesDeFrame());
+        if (bookCoverManager != null)
+            StartCoroutine(bookCoverManager.ActualizarTituloLibroDespuesDeFrame());
 
-    bookCoverManager?.ActivarStickersPorSet();
-}
-
+        bookCoverManager?.ActivarStickersPorSet();
+    }
 
     public void DesctivarPanelPortada()
     {
@@ -178,9 +185,5 @@ public void ActivarPanelPortada()
     {
         panelDevolver.gameObject.SetActive(false);
     }
-
-    public void ActivarCamaraPrincipal()
-    {
-        CambiarCamara(0);
-    }
+    #endregion
 }

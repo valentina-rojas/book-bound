@@ -23,7 +23,6 @@ public class DragFood : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        Debug.Log("Comenzó a arrastrarse la bolsa de comida");
         image.raycastTarget = false;
     }
 
@@ -42,7 +41,6 @@ public class DragFood : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        Debug.Log("Se soltó la bolsa de comida y volvió a su posición");
         rectTransform.localPosition = posicionInicial;
         image.raycastTarget = true;
     }

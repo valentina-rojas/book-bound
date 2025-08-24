@@ -37,14 +37,12 @@ public class CobwebManager : MonoBehaviour
 
         if (telarañasActivas.Count == 0)
         {
-            Debug.Log("¡Todas las telarañas fueron limpiadas!");
             AccionFinal();
         }
     }
 
     private void AccionFinal()
     {
-        Debug.Log("Podés avanzar al siguiente paso ✨");
         TaskManager.instance.CompletarTareaPorID(0);
     }
 

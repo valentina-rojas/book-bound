@@ -53,7 +53,6 @@ public class PagesSlot : MonoBehaviour, IDropHandler
             Debug.Log("Página correcta");
         else
             Debug.Log("Página incorrecta");
-
         PagesManager.instance.CheckOrder();
     }
 }

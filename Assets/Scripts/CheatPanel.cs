@@ -51,14 +51,10 @@ public class CheatPanel : MonoBehaviour
         CatDialogues cat = Object.FindFirstObjectByType<CatDialogues>();
         if (cat != null)
             cat.CancelarDialogo();
-
-        ShelfManager.instance?.ReiniciarEstado();
         CameraManager.instance?.ActivarCamaraPrincipal();
         CobwebManager.instance?.ReiniciarTelarañas();
         TendCat.instance?.ReiniciarEstado();
         PlantManager.instance?.ReiniciarEstado();
-        ShelfManager.instance?.AvanzarContadorDesorden();
-
         TaskManager.instance?.ReiniciarTareas();
 
         gm.StopAllCoroutines();

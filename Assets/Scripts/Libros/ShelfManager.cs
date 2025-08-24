@@ -5,7 +5,6 @@ public class ShelfManager : MonoBehaviour
 {
     public static ShelfManager instance;
     public AudioSource audioLibroCorrecto;
-    private int contadorDesorden = 2;
     private bool librosDesorganizados = false;
 
     public Dictionary<string, int> librosEsperadosPorGenero = new Dictionary<string, int>()
@@ -113,7 +112,6 @@ public class ShelfManager : MonoBehaviour
 
         if (todosCorrectos)
         {
-            Debug.Log("🎉 Todos los libros visibles están correctamente organizados.");
             TaskManager.instance.CompletarTareaPorID(1);
             MarcarTodosLosCartelesComoCorrectos();
         }
@@ -128,15 +126,11 @@ public class ShelfManager : MonoBehaviour
         }
     }
 
-    public void AvanzarContadorDesorden()
-    {
-        contadorDesorden++;
-        if (contadorDesorden > 5)
-            contadorDesorden = 1;
-    }
-
     public void DesorganizarLibros()
     {
+        if (librosDesorganizados)
+            return;
+
         List<Transform> librosActivos = new List<Transform>();
         ShelfEstante[] estantes = FindObjectsByType<ShelfEstante>(FindObjectsSortMode.None);
         List<Transform> slotsDisponibles = new List<Transform>();
@@ -174,22 +168,9 @@ public class ShelfManager : MonoBehaviour
             estante.VerificarEstante();
         }
 
+        librosDesorganizados = true;
+
         Debug.Log($"🔀 Libros reorganizados: {librosActivos.Count}");
-    }
-
-    public void IntentarDesorganizarLibros()
-    {
-        RevisarOrganizacion();
-        if (contadorDesorden == 1 && !librosDesorganizados)
-        {
-            DesorganizarLibros();
-            librosDesorganizados = true;
-        }
-    }
-
-    public void ReiniciarEstado()
-    {
-        librosDesorganizados = false;
     }
 
     private void Shuffle<T>(List<T> lista)

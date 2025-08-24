@@ -24,16 +24,10 @@ public class ShelfSlots : MonoBehaviour, IDropHandler
         {
             if (bookData.tipoLibro == generoPermitido)
             {
-                Debug.Log("Libro colocado correctamente.");
                 if (ShelfManager.instance.audioLibroCorrecto != null && ShelfManager.instance.audioLibroCorrecto.clip != null)
                 {
                     ShelfManager.instance.audioLibroCorrecto.PlayOneShot(ShelfManager.instance.audioLibroCorrecto.clip);
                 }
-            }
-
-            else
-            {
-                Debug.Log("Este libro no corresponde a este estante.");
             }
         }
 

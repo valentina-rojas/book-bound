@@ -20,11 +20,6 @@ public class PlantManager : MonoBehaviour
     {
         plantas.Add(planta);
         totalPlants = plantas.Count;
-
-        if (plantas.Count == expectedPlantCount)
-        {
-            Debug.Log("Todas las plantas registradas.");
-        }
     }
 
     public void NotifyPlantFullyWatered()
@@ -33,7 +28,6 @@ public class PlantManager : MonoBehaviour
 
         if (fullyWateredPlants >= totalPlants)
         {
-            Debug.Log("¡Todas las plantas fueron regadas!");
             TaskManager.instance.CompletarTareaPorID(4);
         }
     }

@@ -43,7 +43,6 @@ public class MenuPausa : MonoBehaviour
 
     public void Salir()
     {
-        Debug.Log("Mostrando panel de confirmación de salida...");
         panelConfirmacionSalida.SetActive(true);
     }
 

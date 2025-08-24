@@ -58,7 +58,6 @@ public class Tutorial : MonoBehaviour
     {
         if (pasoActual == 0)
         {
-            Debug.Log("Última línea tipeada detectada, iniciando coroutine para habilitar telaraña con delay...");
             StartCoroutine(HabilitarTelaranaConDelay(2f));
         }
     }
@@ -73,8 +72,6 @@ public class Tutorial : MonoBehaviour
         }
         else if (pasoActual == 3)
         {
-            Debug.Log("Finalizó Tuto5, mostrando tareas y habilitando botón de tienda.");
-
             if (GameManager.instance != null && GameManager.instance.nivelActual == 1)
             {
                 TaskManager.instance.MostrarTareas();
@@ -83,7 +80,6 @@ public class Tutorial : MonoBehaviour
         }
         else if (pasoActual == 5)
         {
-            Debug.Log("Finalizó el diálogo Tuto9. Abriendo historial...");
             HistorialManager historial = Object.FindFirstObjectByType<HistorialManager>(); 
             if (historial != null)
             {
@@ -118,7 +114,6 @@ public class Tutorial : MonoBehaviour
             }
             else if (pasoActual == 2 && flechaVolver != null)
             {
-                Debug.Log("Activando flechaVolver");
                 flechaVolver.SetActive(true);
                 CameraManager.instance.ActivarBotonCamaraTuto();
             }
@@ -141,12 +136,7 @@ public class Tutorial : MonoBehaviour
 
         if (telaranaTutorial != null)
         {
-            Debug.Log("Habilitando interacción de la telaraña tras delay.");
             telaranaTutorial.HabilitarInteraccion();
-        }
-        else
-        {
-            Debug.LogWarning("Referencia a la telaraña del tutorial no asignada.");
         }
     }
 
@@ -175,12 +165,10 @@ public class Tutorial : MonoBehaviour
     {
         if (pasoActual == 4)
         {
-            Debug.Log("Primer cliente terminó diálogo inicial. Avanzando al paso 5 del tutorial (Tuto8).");
             AvanzarAlSiguientePaso();
         }
         else if (pasoActual == 6)
         {
-            Debug.Log("Primer diálogo de resultado finalizado. Avanzando al paso 7 del tutorial (Tuto11 y Tuto12).");
             AvanzarAlSiguientePaso();
         }
     }
@@ -189,7 +177,6 @@ public class Tutorial : MonoBehaviour
     {
         if (esperandoCierreHistorial && pasoActual == 5)
         {
-            Debug.Log("Historial cerrado. Avanzando al paso 6 del tutorial (Tuto10).");
             esperandoCierreHistorial = false;
             AvanzarAlSiguientePaso();
         }

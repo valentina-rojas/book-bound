@@ -54,11 +54,8 @@ public class RuidoSalaDeLecturaManager : MonoBehaviour
 
     public void IntentarActivarSalaRuidosa()
     {
-        Debug.Log("IntentarActivarSalaRuidosa fue llamado.");
-
         if (!eventosPermitidos) 
         {
-            Debug.Log("Eventos deshabilitados (fin de nivel).");
             return;
         }
 
@@ -74,7 +71,6 @@ public class RuidoSalaDeLecturaManager : MonoBehaviour
         if (GameManager.instance.nivelActual <= 3 ||
             TaskManager.instance == null)
         {
-            Debug.Log("Condiciones no cumplidas para activar sala ruidosa.");
             return;
         }
 
@@ -84,25 +80,17 @@ public class RuidoSalaDeLecturaManager : MonoBehaviour
 
     private IEnumerator CheckearProbabilidadEvento()
     {
-        Debug.Log("Comienza a esperar posible activación del evento de ruido.");
-
         while (!eventoActivo)
         {
             float tiempoEspera = Random.Range(30f, 60f);
-            Debug.Log($"Esperando {tiempoEspera:F1} segundos antes del próximo intento.");
             yield return new WaitForSeconds(tiempoEspera);
 
             float chance = Random.value;
-            Debug.Log($"Probabilidad obtenida: {chance}");
 
-            if (chance <= 0.9f)
+            if (chance <= 0.25f)
             {
                 ActivarEventoSalaRuidosa();
                 yield break;
-            }
-            else
-            {
-                Debug.Log("No se activó el evento esta vez. Se intentará de nuevo.");
             }
         }
     }
@@ -135,8 +123,6 @@ public class RuidoSalaDeLecturaManager : MonoBehaviour
 
         if (botonDetenerRuido != null)
             botonDetenerRuido.SetActive(true);
-
-        Debug.Log("Evento de sala ruidosa activado.");
 
         catDialogues?.IniciarDialogoExtraDesdeLista(
             new string[] { "SalaRuidosa" },
@@ -190,8 +176,6 @@ public class RuidoSalaDeLecturaManager : MonoBehaviour
         if (botonDetenerRuido != null)
             botonDetenerRuido.SetActive(false);
 
-        Debug.Log("Evento de sala ruidosa desactivado.");
-
         catDialogues?.FinalizarDialogo();
 
         if (eventosPermitidos)
@@ -208,7 +192,6 @@ public class RuidoSalaDeLecturaManager : MonoBehaviour
 
         esperandoProbabilidad = false;
         eventosPermitidos = false; 
-        Debug.Log("Se canceló la posibilidad de que ocurra el evento de sala ruidosa.");
     }
     #endregion
 }

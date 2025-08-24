@@ -9993,6 +9993,7 @@ GameObject:
   m_Component:
   - component: {fileID: 373414044}
   - component: {fileID: 373414046}
+  - component: {fileID: 373414047}
   m_Layer: 0
   m_Name: GameEvents
   m_TagString: Untagged
@@ -10034,6 +10035,18 @@ MonoBehaviour:
   globosDialogo:
   - {fileID: 1654578684}
   - {fileID: 1632897941}
+--- !u!114 &373414047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 373414043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7ebb40c2a4e42646a71f22df300441c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &375403077
 GameObject:
   m_ObjectHideFlags: 0

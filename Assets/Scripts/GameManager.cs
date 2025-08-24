@@ -200,9 +200,6 @@ public class GameManager : MonoBehaviour
             return;
         }
 
-        if (ShelfManager.instance != null)
-            ShelfManager.instance.ReiniciarEstado();
-
         if (CameraManager.instance != null)
             CameraManager.instance.ActivarCamaraPrincipal();
 
@@ -214,8 +211,6 @@ public class GameManager : MonoBehaviour
 
         if (PlantManager.instance != null)
             PlantManager.instance.ReiniciarEstado();
-
-        ShelfManager.instance?.AvanzarContadorDesorden();
 
         StartCoroutine(MostrarCartelInicioDia());
     }

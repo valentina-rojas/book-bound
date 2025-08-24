@@ -125,10 +125,11 @@ public class TaskManager : MonoBehaviour
 
         RuidoSalaDeLecturaManager ruido = FindFirstObjectByType<RuidoSalaDeLecturaManager>();
         if (ruido != null)
-        {
-            ruido.PermitirEventos(); 
             ruido.IntentarActivarSalaRuidosa();
-        }
+
+        Gnomos gnomos = FindFirstObjectByType<Gnomos>();
+        if (gnomos != null)
+            gnomos.IntentarActivarEventoGnomos();
 
         if (!tiendaAbiertaPorPrimeraVez)
         {

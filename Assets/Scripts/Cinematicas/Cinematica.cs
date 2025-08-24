@@ -44,7 +44,6 @@ public class Cinematica : MonoBehaviour
             indiceActual++;
         }
 
-        Debug.Log("Cinemática finalizada.");
         CerrarCinematica();
     }
 

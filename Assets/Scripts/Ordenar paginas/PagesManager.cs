@@ -34,8 +34,6 @@ public class PagesManager : MonoBehaviour
 
     public void ResetSistema()
     {
-        Debug.Log("ResetSistema llamado");
-        
         foreach (PageData pagina in PageData.todasLasPaginas)
         {
             if (pagina == null) continue;
@@ -127,18 +125,14 @@ public class PagesManager : MonoBehaviour
 
             if (pageData == null)
             {
-                Debug.Log("Faltan páginas visibles en un slot.");
                 return;
             }
 
             if (pageData.pageID != slot.expectedPageID)
             {
-                Debug.Log("Página fuera de lugar.");
                 return;
             }
         }
-
-        Debug.Log("¡Libro restaurado correctamente!");
 
         foreach (PagesSlot slot in slots)
         {
