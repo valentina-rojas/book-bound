@@ -22,6 +22,7 @@ public class ShelfEstante : MonoBehaviour
         }
 
         cantidadEsperadaActual = ShelfManager.instance.ObtenerLibrosEsperadosParaGenero(genero);
+        VerificarEstante();
     }
 
     public void VerificarEstante()

@@ -18,7 +18,6 @@ public class DialogueManager : MonoBehaviour
 
     #region Configuración
     private float typingTime = 0.05f;
-    private bool isMouseOver = false;
     private bool didDialogueStart;
     private int lineIndex;
     private bool hasInteracted = false;
@@ -221,7 +220,6 @@ public class DialogueManager : MonoBehaviour
     {
         if (!hasInteracted)
         {
-            isMouseOver = true;
             dialogueMark?.gameObject.SetActive(true);
         }
     }

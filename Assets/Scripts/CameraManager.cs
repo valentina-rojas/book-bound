@@ -9,7 +9,6 @@ public class CameraManager : MonoBehaviour
     public Camera[] cameras;
     public GameObject[] canvasObjects;
     private int currentCameraIndex = 0;
-    private bool verificacionInicialHecha = false;
 
     [Header("Botones de cámara")]
     public Button botonCambiarCamara0;
