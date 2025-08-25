@@ -8,7 +8,8 @@ public class CameraManager : MonoBehaviour
     #region Variables
     public Camera[] cameras;
     public GameObject[] canvasObjects;
-    private int currentCameraIndex = 0;
+    public int currentCameraIndex = 0;
+    public int CurrentCameraIndex => currentCameraIndex;
 
     [Header("Botones de cámara")]
     public Button botonCambiarCamara0;
@@ -123,6 +124,8 @@ public class CameraManager : MonoBehaviour
     public void ActivarPanelReparacion()
     {
         panelReparacion.gameObject.SetActive(true);
+        InventarioManager.Instance.OcultarInventarioCompleto();
+        HistorialManager.Instance.OcultarBotonAbrirHistorial();
         TaskManager.instance.OcultarBotonTareas();
         PagesManager.instance.ResetSistema();
         PagesManager.instance.DebugPaginas();
@@ -133,12 +136,16 @@ public class CameraManager : MonoBehaviour
     public void DesactivarPanelReparacion()
     {
         panelReparacion.gameObject.SetActive(false);
+        InventarioManager.Instance.MostrarInventarioCompleto();
+        HistorialManager.Instance.MostrarBotonAbrirHistorial();
     }
 
     public void ActivarPanelPortada()
     {
         panelPortada.SetActive(true);
         TaskManager.instance.OcultarBotonTareas();
+        InventarioManager.Instance.OcultarInventarioCompleto();
+        HistorialManager.Instance.OcultarBotonAbrirHistorial();
 
         if (bookCoverManager != null)
             StartCoroutine(bookCoverManager.ActualizarTituloLibroDespuesDeFrame());
@@ -149,22 +156,30 @@ public class CameraManager : MonoBehaviour
     public void DesctivarPanelPortada()
     {
         panelPortada.gameObject.SetActive(false);
+        InventarioManager.Instance.MostrarInventarioCompleto();
+        HistorialManager.Instance.MostrarBotonAbrirHistorial();
     }
 
     public void ActivarPanelHechizo()
     {
         panelHechizo.gameObject.SetActive(true);
         TaskManager.instance.OcultarBotonTareas();
+        InventarioManager.Instance.OcultarInventarioCompleto();
+        HistorialManager.Instance.OcultarBotonAbrirHistorial();
     }
 
     public void DesctivarPanelHechizo()
     {
         panelHechizo.gameObject.SetActive(false);
+        InventarioManager.Instance.MostrarInventarioCompleto();
+        HistorialManager.Instance.MostrarBotonAbrirHistorial();
     }
 
     public void ActivarPanelDonar()
     {
         DonationManager.instance.ActualizarPortada();
+        InventarioManager.Instance.OcultarInventarioCompleto();
+        HistorialManager.Instance.OcultarBotonAbrirHistorial();
         panelDonar.gameObject.SetActive(true);
         TaskManager.instance.OcultarBotonTareas();
     }
@@ -172,6 +187,8 @@ public class CameraManager : MonoBehaviour
     public void DesctivarPanelDonar()
     {
         panelDonar.gameObject.SetActive(false);
+        InventarioManager.Instance.MostrarInventarioCompleto();
+        HistorialManager.Instance.MostrarBotonAbrirHistorial();
     }
 
     public void ActivarPanelDevolver()

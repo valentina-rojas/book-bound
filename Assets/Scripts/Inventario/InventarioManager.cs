@@ -13,7 +13,6 @@ public class InventarioManager : MonoBehaviour
     [SerializeField] private Button botonAbrirInventario; 
 
     private List<Item> items = new List<Item>();
-    private Dictionary<Item, ItemMundo> itemMundoReferences = new Dictionary<Item, ItemMundo>();
 
     private void Awake()
     {
@@ -44,10 +43,24 @@ public class InventarioManager : MonoBehaviour
         }
     }
 
+    public void OcultarInventarioCompleto()
+    {
+        if (botonAbrirInventario != null)
+            botonAbrirInventario.gameObject.SetActive(false);
+
+        if (panelInventario != null)
+            panelInventario.SetActive(false);
+    }
+
+    public void MostrarInventarioCompleto()
+    {
+        if (botonAbrirInventario != null)
+            botonAbrirInventario.gameObject.SetActive(true);
+    }
+
     public void AgregarItem(Item item, ItemMundo itemMundo)
     {
         items.Add(item);
-        itemMundoReferences[item] = itemMundo;
         ActualizarUI();
         AbrirInventario();
     }
@@ -73,11 +86,11 @@ public class InventarioManager : MonoBehaviour
 
     public void UsarItem(Item item)
     {
-        if (itemMundoReferences.ContainsKey(item))
+        var instancias = ItemMundo.ObtenerInstancias(item);
+        if (instancias.Count > 0)
         {
-            itemMundoReferences[item].ReactivarEnMundo();
+            instancias[0].ReactivarEnMundo();
             items.Remove(item);
-            itemMundoReferences.Remove(item);
             ActualizarUI();
         }
     }

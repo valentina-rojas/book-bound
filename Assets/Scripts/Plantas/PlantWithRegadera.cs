@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class PlantWithRegadera : MonoBehaviour
 {
-    public Sprite[] growthStages;
+    public Sprite[] growthStages; 
     public SpriteRenderer plantRenderer;
 
     [Header("Referencias UI")]
@@ -14,11 +14,14 @@ public class PlantWithRegadera : MonoBehaviour
     [Header("Parámetros")]
     public float tiempoNecesarioRiego = 2f;
 
+    [Header("Configuración de aparición")]
+    public int nivelMinimo = 1;  
+
     private float tiempoSobrePlanta = 0f;
     private bool isFullyWatered = false;
-
     private bool regaderaSonando = false;
 
+    [HideInInspector] public bool activaHoy = false; 
 
     private void Start()
     {
@@ -30,7 +33,8 @@ public class PlantWithRegadera : MonoBehaviour
 
     private void Update()
     {
-        VerificarRiegoConArrastre();
+        if (activaHoy) 
+            VerificarRiegoConArrastre();
     }
 
     private void VerificarRiegoConArrastre()
@@ -48,14 +52,13 @@ public class PlantWithRegadera : MonoBehaviour
             tiempoSobrePlanta += Time.deltaTime;
             barraRiegoUI.value = tiempoSobrePlanta / tiempoNecesarioRiego;
 
-            // ✅ Cambiar sprite progresivamente
             UpdatePlantAppearance();
 
             if (!regaderaSonando)
-                {
-                    AudioManager.instance.sonidoRegadera.Play();
-                    regaderaSonando = true;
-                }
+            {
+                AudioManager.instance.sonidoRegadera.Play();
+                regaderaSonando = true;
+            }
 
             if (tiempoSobrePlanta >= tiempoNecesarioRiego)
                 FinalizarRiego();
@@ -66,15 +69,13 @@ public class PlantWithRegadera : MonoBehaviour
             barraRiegoUI.value = 0f;
             barraRiegoUI.gameObject.SetActive(false);
 
-            // 🔄 Reiniciar apariencia si se cancela el riego
             UpdatePlantAppearance();
 
-
-               if (regaderaSonando)
-                    {
-                        AudioManager.instance.sonidoRegadera.Stop();
-                        regaderaSonando = false;
-                    }
+            if (regaderaSonando)
+            {
+                AudioManager.instance.sonidoRegadera.Stop();
+                regaderaSonando = false;
+            }
         }
     }
 
@@ -88,14 +89,11 @@ public class PlantWithRegadera : MonoBehaviour
 
         UpdatePlantAppearance();
 
-        //AudioManager.instance.sonidoRegadera.Play();
-
         if (regaderaSonando)
         {
             AudioManager.instance.sonidoRegadera.Stop();
             regaderaSonando = false;
         }
-
 
         if (PlantManager.instance != null)
             PlantManager.instance.NotifyPlantFullyWatered();
@@ -103,6 +101,12 @@ public class PlantWithRegadera : MonoBehaviour
 
     private void UpdatePlantAppearance()
     {
+        if (!activaHoy)
+        {
+            plantRenderer.sprite = growthStages[growthStages.Length - 1];
+            return;
+        }
+
         int stage = Mathf.Clamp(
             (int)(tiempoSobrePlanta / tiempoNecesarioRiego * (growthStages.Length - 1)),
             0,
@@ -123,8 +127,18 @@ public class PlantWithRegadera : MonoBehaviour
             barraRiegoUI.gameObject.SetActive(false);
         }
 
+        activaHoy = false;
+
+        if (growthStages != null && growthStages.Length > 0)
+            plantRenderer.sprite = growthStages[growthStages.Length - 1];
+    }
+
+    public void ActivarHoy()
+    {
+        ReiniciarPlanta();
+        activaHoy = true;
+
         if (growthStages != null && growthStages.Length > 0)
             plantRenderer.sprite = growthStages[0];
     }
 }
-

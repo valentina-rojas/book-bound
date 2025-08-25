@@ -86,7 +86,7 @@ public class GameManager : MonoBehaviour
         }
 
         MenuPausa.instance.OcultarBotonPausa();
-        InventarioManager.Instance.OcultarBotonAbrirInventario();
+        InventarioManager.Instance.OcultarInventarioCompleto();
         TaskManager.instance.ReiniciarTareas();
         panelInfoLibro.SetActive(true);
 
@@ -113,7 +113,7 @@ public class GameManager : MonoBehaviour
         panelInfoLibro.SetActive(false);
         Time.timeScale = 1f;
         MenuPausa.instance.MostrarBotonPausa();
-        InventarioManager.Instance.MostrarBotonAbrirInventario();
+        InventarioManager.Instance.MostrarInventarioCompleto();
         TaskManager.instance.InicializarTareasParaNivel();
         FindFirstObjectByType<CatDialogues>().IniciarDialogoDelDia(nivelActual);
     }
@@ -128,6 +128,7 @@ public class GameManager : MonoBehaviour
         TaskManager.instance.OcultarListaTareas();
         TaskManager.instance.OcultarBotonTareas();
         MenuPausa.instance.OcultarBotonPausa();
+        InventarioManager.Instance.OcultarInventarioCompleto();
         panelFinNivel.gameObject.SetActive(true);
 
         int diaMostrado = nivelActual;

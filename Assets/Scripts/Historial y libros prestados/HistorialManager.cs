@@ -9,6 +9,7 @@ using System.Collections;
 
 public class HistorialManager : MonoBehaviour
 {
+    public static HistorialManager Instance;
     private UIManager uiManager;
     private List<string> librosPrestados = new List<string>();
     private HashSet<string> librosDevueltos = new HashSet<string>();
@@ -17,6 +18,14 @@ public class HistorialManager : MonoBehaviour
     [Header("Mensajes Localizados")]
     public LocalizedString mensajeHistorialVacio;
     public LocalizedString mensajeLibrosVacio;
+
+    private void Awake()
+    {
+        if (Instance == null)
+            Instance = this;
+        else
+            Destroy(gameObject);
+    }
 
     private void Start()
     {
@@ -31,6 +40,22 @@ public class HistorialManager : MonoBehaviour
                 uiManager.GetBotonAbrirHistorial().onClick.AddListener(AbrirTodo);
 
             uiManager.GetPanelHistorial().SetActive(false);
+        }
+    }
+
+    public void OcultarBotonAbrirHistorial()
+    {
+        if (uiManager != null && uiManager.GetBotonAbrirHistorial() != null)
+        {
+            uiManager.GetBotonAbrirHistorial().gameObject.SetActive(false);
+        }
+    }
+
+    public void MostrarBotonAbrirHistorial()
+    {
+        if (uiManager != null && uiManager.GetBotonAbrirHistorial() != null)
+        {
+            uiManager.GetBotonAbrirHistorial().gameObject.SetActive(true);
         }
     }
 
