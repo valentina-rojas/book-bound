@@ -142,6 +142,13 @@ public class TendCat : MonoBehaviour
     #region Acariciar
     private void VerificarAcariciar()
     {
+        if (CameraManager.instance.CurrentCameraIndex != 0)
+        {
+            if (corazonesGO != null)
+                corazonesGO.SetActive(false);
+            return;
+        }
+
         if (Input.GetMouseButtonDown(0))
         {
             Vector2 mousePos = Input.mousePosition;

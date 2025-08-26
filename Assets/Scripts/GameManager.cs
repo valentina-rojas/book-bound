@@ -302,6 +302,7 @@ public class GameManager : MonoBehaviour
         {
             resultadoRecomendacion = ResultadoRecomendacion.Buena;
             recomendacionesBuenas++;
+            EconomyManager.instance.SumarDinero(20);
 
             ShelfManager.instance.RestarLibroEsperadoPorGenero(libro.tipoLibro);
             libro.gameObject.SetActive(false);
@@ -330,6 +331,7 @@ public class GameManager : MonoBehaviour
     {
         resultadoRecomendacion = ResultadoRecomendacion.Buena;
         recomendacionesBuenas++;
+        EconomyManager.instance.SumarDinero(30);
         ActualizarSpritePersonaje();
     }
 
@@ -368,6 +370,7 @@ public class GameManager : MonoBehaviour
         if (tieneTodos)
         {
             recomendacionesBuenas++;
+            EconomyManager.instance.SumarDinero(30);
             AudioManager.instance.sonidoEstrellas.Play();
             ActualizarSpritePersonaje();
         }
@@ -392,6 +395,7 @@ public class GameManager : MonoBehaviour
         {
             resultadoRecomendacion = ResultadoRecomendacion.Buena;
             recomendacionesBuenas++;
+            EconomyManager.instance.SumarDinero(30);
             Debug.Log($"Hechizo completado correctamente: {hechizoRealizado}");
             ActualizarSpritePersonaje();
             AudioManager.instance.sonidoEstrellas.Play();
@@ -416,6 +420,7 @@ public class GameManager : MonoBehaviour
         {
             resultadoRecomendacion = ResultadoRecomendacion.Buena;
             recomendacionesBuenas++;
+            EconomyManager.instance.SumarDinero(30);
             ActualizarSpritePersonaje();
         }
         else if (incorrectas > correctas)
@@ -464,6 +469,7 @@ public class GameManager : MonoBehaviour
         {
             resultadoRecomendacion = ResultadoRecomendacion.Buena;
             characterSpawn.EndInteraction();
+            EconomyManager.instance.SumarDinero(5);
         }
     }
     #endregion
