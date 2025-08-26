@@ -335,9 +335,8 @@ public class GameManager : MonoBehaviour
         ActualizarSpritePersonaje();
     }
 
-    public void CompletarPortada(List<StickerID> stickersUsados)
+    public void CompletarPortada(List<StickerID> stickersUsados, int extras = 0)
     {
-
         if (personajeActual == null)
         {
             Debug.LogError("No hay personaje actual asignado para comparar stickers.");
@@ -345,43 +344,45 @@ public class GameManager : MonoBehaviour
         }
 
         List<StickerID> stickersRequeridos = personajeActual.stickersRequeridos;
+        int totalRequeridos = stickersRequeridos.Count;
 
-        Debug.Log($"Stickers requeridos ({stickersRequeridos.Count}): {string.Join(", ", stickersRequeridos)}");
-        Debug.Log($"Stickers usados ({stickersUsados.Count}): {string.Join(", ", stickersUsados)}");
+        if (totalRequeridos == 0)
+        {
+            resultadoRecomendacion = ResultadoRecomendacion.Ninguna;
+            return;
+        }
 
-        bool tieneTodos = true;
-
+        int correctos = 0;
         foreach (StickerID requerido in stickersRequeridos)
         {
-            if (!stickersUsados.Contains(requerido))
-            {
-                Debug.LogWarning($"Falta sticker requerido: {requerido}");
-                tieneTodos = false;
-                break;
-            }
-            else
-            {
-                Debug.Log($"Sticker requerido presente: {requerido}");
-            }
+            if (stickersUsados.Contains(requerido))
+                correctos++;
         }
 
-        resultadoRecomendacion = tieneTodos ? ResultadoRecomendacion.Buena : ResultadoRecomendacion.Mala;
+        float porcentaje = (float)correctos / totalRequeridos;
 
-        if (tieneTodos)
+        if (porcentaje < 0.5f)
         {
+            resultadoRecomendacion = ResultadoRecomendacion.Mala;
+            recomendacionesMalas++;
+        }
+        else if (porcentaje < 1f)
+        {
+            resultadoRecomendacion = ResultadoRecomendacion.Buena;
             recomendacionesBuenas++;
-            EconomyManager.instance.SumarDinero(30);
+            EconomyManager.instance.SumarDinero(15 + extras); 
             AudioManager.instance.sonidoEstrellas.Play();
-            ActualizarSpritePersonaje();
         }
         else
-            recomendacionesMalas++;
-            ActualizarSpritePersonaje();
-
-        if (characterSpawn != null)
         {
-            characterSpawn.EndInteraction();
+            resultadoRecomendacion = ResultadoRecomendacion.Buena;
+            recomendacionesBuenas++;
+            EconomyManager.instance.SumarDinero(30 + extras); 
+            AudioManager.instance.sonidoEstrellas.Play();
         }
+
+        ActualizarSpritePersonaje();
+        characterSpawn?.EndInteraction();
     }
 
     public void CompletarHechizo(CharacterAttributes.Hechizo hechizoRealizado)
@@ -404,6 +405,7 @@ public class GameManager : MonoBehaviour
         {
             resultadoRecomendacion = ResultadoRecomendacion.Mala;
             recomendacionesMalas++;
+            EconomyManager.instance.SumarDinero(15);
             Debug.LogWarning($"Hechizo incorrecto. Realizado: {hechizoRealizado}, Solicitado: {personajeActual.hechizoSolicitado}");
             ActualizarSpritePersonaje();
         }
@@ -420,7 +422,10 @@ public class GameManager : MonoBehaviour
         {
             resultadoRecomendacion = ResultadoRecomendacion.Buena;
             recomendacionesBuenas++;
-            EconomyManager.instance.SumarDinero(30);
+            
+            int recompensa = correctas * 6;
+            EconomyManager.instance.SumarDinero(recompensa);
+
             ActualizarSpritePersonaje();
         }
         else if (incorrectas > correctas)
@@ -429,6 +434,7 @@ public class GameManager : MonoBehaviour
             recomendacionesMalas++;
             ActualizarSpritePersonaje();
         }
+
         if (characterSpawn != null)
         {
             characterSpawn.EndInteraction();

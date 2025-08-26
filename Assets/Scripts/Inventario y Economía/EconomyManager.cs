@@ -5,7 +5,7 @@ public class EconomyManager : MonoBehaviour
 {
     public static EconomyManager instance;
 
-    public int dineroInicial = 100;
+    public int dineroInicial = 0;
     private int dineroActual;
 
     public TMP_Text textoDinero;
