@@ -10,7 +10,7 @@ public class InventarioManager : MonoBehaviour
     [SerializeField] private GameObject panelInventario;
     [SerializeField] private Transform contenedorItems;
     [SerializeField] private GameObject prefabSlotItem;
-    [SerializeField] private Button botonAbrirInventario; 
+    [SerializeField] private Button botonAbrirInventario;
 
     private List<Item> items = new List<Item>();
 
@@ -20,7 +20,7 @@ public class InventarioManager : MonoBehaviour
         else Destroy(gameObject);
 
         panelInventario.SetActive(false);
-        
+
         if (botonAbrirInventario != null)
         {
             botonAbrirInventario.onClick.AddListener(AbrirInventario);
@@ -76,7 +76,7 @@ public class InventarioManager : MonoBehaviour
         {
             GameObject nuevoSlot = Instantiate(prefabSlotItem, contenedorItems);
             UISlotItem slotItem = nuevoSlot.GetComponent<UISlotItem>();
-            
+
             if (slotItem != null)
             {
                 slotItem.Configurar(i, UsarItem);
@@ -86,29 +86,59 @@ public class InventarioManager : MonoBehaviour
 
     public void UsarItem(Item item)
     {
-        var instancias = ItemMundo.ObtenerInstancias(item);
-        if (instancias.Count > 0)
+        if (item.categoria == CategoriaItem.Paredes || item.categoria == CategoriaItem.Pisos)
         {
-            instancias[0].ReactivarEnMundo();
-            items.Remove(item);
-            ActualizarUI();
+            SlotLugar slot = EncontrarSlot(item.categoria);
+            if (slot != null)
+            {
+                slot.ColocarItem(item);
+                items.Remove(item);
+                ActualizarUI();
+            }
         }
+        else
+        {
+            var instancias = ItemMundo.ObtenerInstancias(item);
+            if (instancias.Count > 0)
+            {
+                instancias[0].ReactivarEnMundo();
+                items.Remove(item);
+                ActualizarUI();
+            }
+        }
+    }
+
+    private SlotLugar EncontrarSlot(CategoriaItem categoria)
+    {
+        SlotLugar[] slots = FindObjectsOfType<SlotLugar>();
+        foreach (var s in slots)
+        {
+            if (s.categoriaSlot == categoria)
+                return s;
+        }
+        return null;
     }
 
     public void AbrirInventario()
     {
         panelInventario.SetActive(true);
-        OcultarBotonAbrirInventario(); 
+        OcultarBotonAbrirInventario();
     }
 
     public void CerrarInventario()
     {
         panelInventario.SetActive(false);
-        MostrarBotonAbrirInventario(); 
+        MostrarBotonAbrirInventario();
     }
 
     public void CerrarInventarioDesdeBoton()
     {
         CerrarInventario();
     }
+    
+    public List<Item> ObtenerItems()
+    {
+        return new List<Item>(items); 
+    }
+
 }

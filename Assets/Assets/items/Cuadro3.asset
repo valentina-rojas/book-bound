@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 460f30a183331354c9fd9a08296342ea, type: 3}
-  m_Name: Regadera
+  m_Name: Cuadro3
   m_EditorClassIdentifier: 
-  nombre: regadera
-  icono: {fileID: -3592870961793364727, guid: 9bcb627998172714b9d1f866fe95bf78, type: 3}
-  precio: 0
-  categoria: 4
+  nombre: Cuadro 3
+  icono: {fileID: -2109446308767234789, guid: 0152b28e0d2eeec4ab403e218eec508b, type: 3}
+  precio: 35
+  categoria: 2

@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 460f30a183331354c9fd9a08296342ea, type: 3}
-  m_Name: Regadera
+  m_Name: Pared tapiz amarillo
   m_EditorClassIdentifier: 
-  nombre: regadera
-  icono: {fileID: -3592870961793364727, guid: 9bcb627998172714b9d1f866fe95bf78, type: 3}
-  precio: 0
-  categoria: 4
+  nombre: Tapiz Amarillo
+  icono: {fileID: -4376620784049155037, guid: 0d9fe69a4424d4b4b94793379d2f3c42, type: 3}
+  precio: 55
+  categoria: 1

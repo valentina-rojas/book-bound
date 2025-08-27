@@ -16,6 +16,7 @@ public class CameraManager : MonoBehaviour
     public Button botonCambiarCamara1;
     public Button botonCambiarCamara2;
     public Button botonCambiarCamara3;
+    public Button botonCambiarCamara4;
 
     [Header("Paneles")]
     public GameObject panelReparacion;
@@ -100,6 +101,7 @@ public class CameraManager : MonoBehaviour
         botonCambiarCamara1.interactable = false;
         botonCambiarCamara2.interactable = false;
         botonCambiarCamara3.interactable = false;
+        botonCambiarCamara4.interactable = false;
     }
 
     public void ActivarBotonCamara()
@@ -107,6 +109,7 @@ public class CameraManager : MonoBehaviour
         botonCambiarCamara1.interactable = true;
         botonCambiarCamara2.interactable = true;
         botonCambiarCamara3.interactable = true;
+        botonCambiarCamara4.interactable = true;
     }
 
     public void ActivarBotonCamaraTuto()

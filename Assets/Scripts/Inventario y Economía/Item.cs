@@ -1,8 +1,19 @@
 using UnityEngine;
 
+public enum CategoriaItem
+{
+    Pisos,
+    Paredes,
+    Cuadros,
+    Muebles,
+    Decoracion
+}
+
 [CreateAssetMenu(fileName = "NuevoItem", menuName = "Inventario/Item")]
 public class Item : ScriptableObject
 {
     public string nombre;
     public Sprite icono;
+    public int precio;
+    public CategoriaItem categoria;
 }
