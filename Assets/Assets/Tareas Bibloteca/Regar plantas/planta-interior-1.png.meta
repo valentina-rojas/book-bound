@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: 8fa6ae5425e4d4842a19faea8e06ac91
+guid: 417313161484bf24ab720b38e2e05fe2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5419646602552533757
-    second: libro-recetas-v2_0
+      213: 3645850226987031396
+    second: planta-interior-1_0
+  - first:
+      213: 4367091642431375120
+    second: planta-interior-1_1
+  - first:
+      213: -8677489719873296737
+    second: planta-interior-1_2
+  - first:
+      213: 3729344215592939748
+    second: planta-interior-1_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,23 +135,89 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: libro-recetas-v2_0
+      name: planta-interior-1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 60
-        height: 168
+        width: 258
+        height: 349
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: df2eb49ded3763b40800000000000000
-      internalID: 5419646602552533757
+      spriteID: 92981d4f70c0a534296cf4c3b4847f71
+      internalID: 307561683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planta-interior-1_1
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 0
+        width: 258
+        height: 349
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 516d3cabf317b0b45b1d5363b9b419ec
+      internalID: 101805340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planta-interior-1_2
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 0
+        width: 258
+        height: 349
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 548e784c37801574d95950aff5a9389c
+      internalID: 151282356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planta-interior-1_3
+      rect:
+        serializedVersion: 2
+        x: 774
+        y: 0
+        width: 258
+        height: 349
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a5a5ff198bb2c649906433d37f517f1
+      internalID: 724690256
       vertices: []
       indices: 
       edges: []
@@ -151,7 +226,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: b72fbc8f96f560646b0fe9097619a0ac
     internalID: 0
     vertices: []
     indices: 
@@ -160,7 +235,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      planta-interior-1_0: 307561683
+      planta-interior-1_1: 101805340
+      planta-interior-1_2: 151282356
+      planta-interior-1_3: 724690256
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

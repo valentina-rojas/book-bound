@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 8fa6ae5425e4d4842a19faea8e06ac91
+guid: 7bd9f1a7deb306d4b84d7b415d8d16f0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5419646602552533757
-    second: libro-recetas-v2_0
+      213: -8891895791732762750
+    second: fondo-sala-principal 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: libro-recetas-v2_0
+      name: fondo-sala-principal 1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 60
-        height: 168
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: df2eb49ded3763b40800000000000000
-      internalID: 5419646602552533757
+      spriteID: 2875af183e3a99480800000000000000
+      internalID: -8891895791732762750
       vertices: []
       indices: 
       edges: []
