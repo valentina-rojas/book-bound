@@ -17492,10 +17492,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   growthStages:
-  - {fileID: -1551877890, guid: c389791c9b011554c8f8baf209b62f58, type: 3}
-  - {fileID: 1628401963, guid: c389791c9b011554c8f8baf209b62f58, type: 3}
-  - {fileID: -706054371, guid: c389791c9b011554c8f8baf209b62f58, type: 3}
   - {fileID: 200417673, guid: c389791c9b011554c8f8baf209b62f58, type: 3}
+  - {fileID: -706054371, guid: c389791c9b011554c8f8baf209b62f58, type: 3}
+  - {fileID: 1628401963, guid: c389791c9b011554c8f8baf209b62f58, type: 3}
+  - {fileID: -1551877890, guid: c389791c9b011554c8f8baf209b62f58, type: 3}
   plantRenderer: {fileID: 576257802}
   regaderaUI: {fileID: 1558150964}
   areaPlantaUI: {fileID: 959956731}
@@ -17546,7 +17546,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -10
+  m_SortingOrder: -8
   m_Sprite: {fileID: -1551877890, guid: c389791c9b011554c8f8baf209b62f58, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -56772,10 +56772,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   growthStages:
-  - {fileID: 307561683, guid: 417313161484bf24ab720b38e2e05fe2, type: 3}
-  - {fileID: 101805340, guid: 417313161484bf24ab720b38e2e05fe2, type: 3}
-  - {fileID: 151282356, guid: 417313161484bf24ab720b38e2e05fe2, type: 3}
   - {fileID: 724690256, guid: 417313161484bf24ab720b38e2e05fe2, type: 3}
+  - {fileID: 151282356, guid: 417313161484bf24ab720b38e2e05fe2, type: 3}
+  - {fileID: 101805340, guid: 417313161484bf24ab720b38e2e05fe2, type: 3}
+  - {fileID: 307561683, guid: 417313161484bf24ab720b38e2e05fe2, type: 3}
   plantRenderer: {fileID: 1764503831}
   regaderaUI: {fileID: 1558150964}
   areaPlantaUI: {fileID: 1176040923}
@@ -56826,7 +56826,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -10
+  m_SortingOrder: -8
   m_Sprite: {fileID: 307561683, guid: 417313161484bf24ab720b38e2e05fe2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

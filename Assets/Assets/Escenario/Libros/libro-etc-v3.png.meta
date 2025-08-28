@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      libro-etc-v3_0: -6320238067614481594
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

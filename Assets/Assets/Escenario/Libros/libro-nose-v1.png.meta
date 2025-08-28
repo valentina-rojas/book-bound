@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      libro-nose-v1_0: 400124708978358110
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

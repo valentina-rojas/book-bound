@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      libro-recetas-v3_0: 1842679911278730828
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

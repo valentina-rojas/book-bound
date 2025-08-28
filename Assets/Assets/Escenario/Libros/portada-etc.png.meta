@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      portada-etc_0: 1488180427319606480
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

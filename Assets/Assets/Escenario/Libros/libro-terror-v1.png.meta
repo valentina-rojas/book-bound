@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      libro-terror-v1_0: 8452201037489099171
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

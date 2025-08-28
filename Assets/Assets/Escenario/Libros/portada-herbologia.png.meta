@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      portada-herbologia_0: -1631939519243446036
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      libro-pociones-v1_0: -8713254116359164349
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

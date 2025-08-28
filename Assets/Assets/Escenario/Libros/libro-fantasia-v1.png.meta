@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      libro-fantasia-v1_0: 4161951262923807474
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

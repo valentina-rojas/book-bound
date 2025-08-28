@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      libro-herbologia-v3_0: 7651470207665028968
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

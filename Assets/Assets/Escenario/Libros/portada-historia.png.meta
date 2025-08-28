@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      portada-historia_0: -5346603835413444142
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

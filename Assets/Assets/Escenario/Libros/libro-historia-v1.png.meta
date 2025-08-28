@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      libro-historia-v1_0: 2838461248304316658
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
