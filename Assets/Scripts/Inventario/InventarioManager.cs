@@ -22,41 +22,19 @@ public class InventarioManager : MonoBehaviour
         panelInventario.SetActive(false);
 
         if (botonAbrirInventario != null)
-        {
             botonAbrirInventario.onClick.AddListener(AbrirInventario);
-        }
     }
 
-    public void OcultarBotonAbrirInventario()
-    {
-        if (botonAbrirInventario != null)
-        {
-            botonAbrirInventario.gameObject.SetActive(false);
-        }
-    }
-
-    public void MostrarBotonAbrirInventario()
-    {
-        if (botonAbrirInventario != null)
-        {
-            botonAbrirInventario.gameObject.SetActive(true);
-        }
-    }
+    public void OcultarBotonAbrirInventario() => botonAbrirInventario?.gameObject.SetActive(false);
+    public void MostrarBotonAbrirInventario() => botonAbrirInventario?.gameObject.SetActive(true);
 
     public void OcultarInventarioCompleto()
     {
-        if (botonAbrirInventario != null)
-            botonAbrirInventario.gameObject.SetActive(false);
-
-        if (panelInventario != null)
-            panelInventario.SetActive(false);
+        OcultarBotonAbrirInventario();
+        panelInventario?.SetActive(false);
     }
 
-    public void MostrarInventarioCompleto()
-    {
-        if (botonAbrirInventario != null)
-            botonAbrirInventario.gameObject.SetActive(true);
-    }
+    public void MostrarInventarioCompleto() => MostrarBotonAbrirInventario();
 
     public void AgregarItem(Item item, ItemMundo itemMundo)
     {
@@ -68,19 +46,13 @@ public class InventarioManager : MonoBehaviour
     private void ActualizarUI()
     {
         foreach (Transform child in contenedorItems)
-        {
             Destroy(child.gameObject);
-        }
 
         foreach (Item i in items)
         {
             GameObject nuevoSlot = Instantiate(prefabSlotItem, contenedorItems);
             UISlotItem slotItem = nuevoSlot.GetComponent<UISlotItem>();
-
-            if (slotItem != null)
-            {
-                slotItem.Configurar(i, UsarItem);
-            }
+            if (slotItem != null) slotItem.Configurar(i, UsarItem);
         }
     }
 
@@ -91,7 +63,7 @@ public class InventarioManager : MonoBehaviour
             SlotLugar slot = EncontrarSlot(item.categoria);
             if (slot != null)
             {
-                slot.ColocarItem(item); 
+                slot.ColocarItem(item);
                 items.Remove(item);
                 ActualizarUI();
                 return;
@@ -106,16 +78,24 @@ public class InventarioManager : MonoBehaviour
             items.Remove(item);
             ActualizarUI();
         }
-
     }
+
+    public void EliminarItem(Item item)
+    {
+        if (items.Contains(item))
+        {
+            items.Remove(item);
+            ActualizarUI();
+        }
+    }
+
     private SlotLugar EncontrarSlot(CategoriaItem categoria)
     {
         SlotLugar[] slots = FindObjectsByType<SlotLugar>(FindObjectsSortMode.None);
         foreach (var s in slots)
-        {
             if (s.categoriaSlot == categoria)
                 return s;
-        }
+
         return null;
     }
 
@@ -131,14 +111,7 @@ public class InventarioManager : MonoBehaviour
         MostrarBotonAbrirInventario();
     }
 
-    public void CerrarInventarioDesdeBoton()
-    {
-        CerrarInventario();
-    }
-    
-    public List<Item> ObtenerItems()
-    {
-        return new List<Item>(items); 
-    }
+    public void CerrarInventarioDesdeBoton() => CerrarInventario();
 
+    public List<Item> ObtenerItems() => new List<Item>(items);
 }
