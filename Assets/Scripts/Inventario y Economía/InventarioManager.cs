@@ -110,7 +110,7 @@ public class InventarioManager : MonoBehaviour
 
     private SlotLugar EncontrarSlot(CategoriaItem categoria)
     {
-        SlotLugar[] slots = FindObjectsOfType<SlotLugar>();
+        SlotLugar[] slots = FindObjectsByType<SlotLugar>(FindObjectsSortMode.None);
         foreach (var s in slots)
         {
             if (s.categoriaSlot == categoria)

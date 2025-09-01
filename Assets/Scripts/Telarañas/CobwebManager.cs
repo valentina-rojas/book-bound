@@ -21,6 +21,10 @@ public class CobwebManager : MonoBehaviour
     private void Start()
     {
         gameManager = FindFirstObjectByType<GameManager>();
+
+        todasLasTelarañas.Clear();
+        todasLasTelarañas.AddRange(FindObjectsOfType<CobwebCleaning>(true));
+
         if (gameManager == null)
             Debug.LogError("GameManager no encontrado en la escena.");
         else
@@ -48,7 +52,10 @@ public class CobwebManager : MonoBehaviour
         telarañasActivas.Clear();
 
         foreach (CobwebCleaning t in todasLasTelarañas)
-            t.ReiniciarTelaraña();
+        {
+            if (t != null)   
+                t.ReiniciarTelaraña();
+        }
 
         if (gameManagerListo && gameManager != null)
             ActivarTelarañasPorNivel(gameManager.nivelActual);

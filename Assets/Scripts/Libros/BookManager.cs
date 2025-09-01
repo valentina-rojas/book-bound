@@ -15,7 +15,8 @@ public class BookManager : MonoBehaviour
     public TMP_Text descripcionTexto;
     public Image imagenLibroUI;
     public TMP_Text textoIndicacion; 
-
+    public Button botonCamaraMostrador;
+    public Button botonCamaraPatio;
 
     public GameObject panelConfirmarSeleccion;
     public Image imagenConfirmarSeleccion;
@@ -105,6 +106,9 @@ public class BookManager : MonoBehaviour
                 textoIndicacion.gameObject.SetActive(false);
             }
         }
+        if (botonCamaraMostrador != null) botonCamaraMostrador.interactable = false;
+        if (botonCamaraPatio != null) botonCamaraPatio.interactable = false;
+
     }
 
     private void MostrarLibroPorIndice(int indice)
@@ -186,6 +190,8 @@ public class BookManager : MonoBehaviour
     public void CancelarSeleccion()
     {
         panelInfoLibro.SetActive(false);
+        if (botonCamaraMostrador != null) botonCamaraMostrador.interactable = true;
+        if (botonCamaraPatio != null) botonCamaraPatio.interactable = true;
     }
     #endregion
 }

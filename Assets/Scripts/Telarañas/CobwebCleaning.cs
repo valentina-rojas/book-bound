@@ -18,9 +18,13 @@ public class CobwebCleaning : MonoBehaviour
     [HideInInspector] public bool puedeInteractuar = true;
     [HideInInspector] public bool interaccionFueHabilitada = false;
 
-    private void Start()
+    private void Awake()
     {
         sr = GetComponent<SpriteRenderer>();
+    }
+
+    private void Start()
+    {
         CobwebManager.instance.RegistrarTelaraña(this);
 
         if (esTelarañaTutorial)
@@ -48,7 +52,13 @@ public class CobwebCleaning : MonoBehaviour
     public void ReiniciarTelaraña()
     {
         clicsActuales = 0f;
-        sr.color = new Color(sr.color.r, sr.color.g, sr.color.b, 1f);
+
+        if (sr == null) 
+            sr = GetComponent<SpriteRenderer>();
+
+        if (sr != null)
+            sr.color = new Color(sr.color.r, sr.color.g, sr.color.b, 1f);
+
         gameObject.SetActive(true);
 
         if (esTelarañaTutorial && !interaccionFueHabilitada)
