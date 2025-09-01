@@ -91,23 +91,23 @@ public class InventarioManager : MonoBehaviour
             SlotLugar slot = EncontrarSlot(item.categoria);
             if (slot != null)
             {
-                slot.ColocarItem(item);
+                slot.ColocarItem(item); 
                 items.Remove(item);
                 ActualizarUI();
+                return;
             }
         }
-        else
-        {
-            var instancias = ItemMundo.ObtenerInstancias(item);
-            if (instancias.Count > 0)
-            {
-                instancias[0].ReactivarEnMundo();
-                items.Remove(item);
-                ActualizarUI();
-            }
-        }
-    }
 
+        var instancias = ItemMundo.ObtenerInstancias(item);
+        if (instancias.Count > 0)
+        {
+            ItemMundo instancia = instancias.Find(x => !x.gameObject.activeSelf) ?? instancias[0];
+            instancia.ReactivarEnMundo();
+            items.Remove(item);
+            ActualizarUI();
+        }
+
+    }
     private SlotLugar EncontrarSlot(CategoriaItem categoria)
     {
         SlotLugar[] slots = FindObjectsByType<SlotLugar>(FindObjectsSortMode.None);
