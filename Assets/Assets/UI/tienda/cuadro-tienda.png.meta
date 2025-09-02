@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      cuadro-tienda_0: 4906099466742197297
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

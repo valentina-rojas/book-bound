@@ -9,9 +9,11 @@ public class InventarioManager : MonoBehaviour
     [Header("UI")]
     [SerializeField] private GameObject panelInventario;
     [SerializeField] private Transform contenedorItems;
-    [SerializeField] private GameObject prefabSlotItem;
+    [SerializeField] public GameObject prefabSlotItem;
     [SerializeField] private Button botonAbrirInventario;
-
+    public void OcultarBotonAbrirInventario() => botonAbrirInventario?.gameObject.SetActive(false);
+    public void MostrarBotonAbrirInventario() => botonAbrirInventario?.gameObject.SetActive(true);
+    public void MostrarInventarioCompleto() => MostrarBotonAbrirInventario();
     private List<Item> items = new List<Item>();
 
     private void Awake()
@@ -25,22 +27,23 @@ public class InventarioManager : MonoBehaviour
             botonAbrirInventario.onClick.AddListener(AbrirInventario);
     }
 
-    public void OcultarBotonAbrirInventario() => botonAbrirInventario?.gameObject.SetActive(false);
-    public void MostrarBotonAbrirInventario() => botonAbrirInventario?.gameObject.SetActive(true);
-
     public void OcultarInventarioCompleto()
     {
         OcultarBotonAbrirInventario();
         panelInventario?.SetActive(false);
     }
 
-    public void MostrarInventarioCompleto() => MostrarBotonAbrirInventario();
-
     public void AgregarItem(Item item, ItemMundo itemMundo)
     {
         items.Add(item);
         ActualizarUI();
-        AbrirInventario();
+        AbrirInventario(); 
+    }
+
+    public void AgregarItemSinAbrir(Item item)
+    {
+        items.Add(item);
+        ActualizarUI();
     }
 
     private void ActualizarUI()

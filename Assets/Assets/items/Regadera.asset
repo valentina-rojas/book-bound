@@ -15,4 +15,4 @@ MonoBehaviour:
   nombre: regadera
   icono: {fileID: -3592870961793364727, guid: 9bcb627998172714b9d1f866fe95bf78, type: 3}
   precio: 0
-  categoria: 4
+  categoria: 5

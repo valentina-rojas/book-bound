@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using System;
+using System.Collections.Generic;
 
 public class UISlotItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
@@ -14,7 +15,7 @@ public class UISlotItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
     private CanvasGroup canvasGroup;
     private Vector2 originalPosition;
 
-    private Item currentItem;
+    public Item currentItem;
     private Action<Item> onItemClick;
 
     public void SetItem(Item item)
@@ -57,29 +58,65 @@ public class UISlotItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
     public void OnDrag(PointerEventData eventData)
     {
         rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
-
-        if (ObtenerSlotCuadroValidoDebajo() != null)
-            icono.color = Color.white;
-        else
-            icono.color = new Color(1f, 1f, 1f, 0.5f);
+        icono.color = (ObtenerSlotCuadroValidoDebajo() != null) ? Color.white : new Color(1f, 1f, 1f, 0.5f);
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
         canvasGroup.alpha = 1f;
         canvasGroup.blocksRaycasts = true;
+        bool colocado = false;
 
         SlotCuadro slot = ObtenerSlotCuadroValidoDebajo();
-
         if (slot != null)
         {
-            slot.ColocarItem(currentItem, this);
-            InventarioManager.Instance.EliminarItem(currentItem);
+            if (slot.TryColocarItem(currentItem, out var reemplazado))
+            {
+                InventarioManager.Instance.EliminarItem(currentItem);
+                if (reemplazado != null)
+                    InventarioManager.Instance.AgregarItemSinAbrir(reemplazado);
+                colocado = true;
+            }
         }
-        else
+
+        if (!colocado && currentItem != null &&
+            currentItem.categoria == CategoriaItem.Paredes || 
+            currentItem.categoria == CategoriaItem.Pisos || 
+            currentItem.categoria == CategoriaItem.Otros)
         {
-            rectTransform.anchoredPosition = originalPosition;
+            SlotLugar[] slotsLugar = GameObject.FindObjectsByType<SlotLugar>(FindObjectsSortMode.None);
+            foreach (var s in slotsLugar)
+            {
+                if (s.categoriaSlot == currentItem.categoria)
+                {
+                    s.ColocarItem(currentItem);
+                    InventarioManager.Instance.EliminarItem(currentItem);
+                    colocado = true;
+                    break;
+                }
+            }
         }
+
+        if (!colocado)
+        {
+            List<ItemMundo> instancias = ItemMundo.ObtenerInstancias(currentItem);
+            if (instancias.Count > 0)
+            {
+                foreach (var instancia in instancias)
+                {
+                    if (instancia.cameraIndex == CameraManager.instance.CurrentCameraIndex)
+                    {
+                        instancia.ReactivarEnMundo();
+                        InventarioManager.Instance.EliminarItem(currentItem);
+                        colocado = true;
+                        break;
+                    }
+                }
+            }
+        }
+
+        if (!colocado)
+            rectTransform.anchoredPosition = originalPosition;
 
         icono.color = Color.white;
     }
@@ -87,7 +124,7 @@ public class UISlotItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
     private SlotCuadro ObtenerSlotCuadroValidoDebajo()
     {
         PointerEventData pointerData = new PointerEventData(EventSystem.current) { position = Input.mousePosition };
-        var results = new System.Collections.Generic.List<RaycastResult>();
+        var results = new List<RaycastResult>();
         EventSystem.current.RaycastAll(pointerData, results);
 
         foreach (var r in results)

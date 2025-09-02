@@ -73,7 +73,7 @@ public class ShopManager : MonoBehaviour
         if (EconomyManager.instance.ObtenerDinero() >= item.precio)
         {
             EconomyManager.instance.RestarDinero(item.precio);
-            InventarioManager.Instance.AgregarItem(item, null);
+            InventarioManager.Instance.AgregarItemSinAbrir(item);
 
             ActualizarUI();
         }

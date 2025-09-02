@@ -6,7 +6,8 @@ public enum CategoriaItem
     Paredes,
     Cuadros,
     Muebles,
-    Decoracion
+    Decoracion,
+    Otros
 }
 
 [CreateAssetMenu(fileName = "NuevoItem", menuName = "Inventario/Item")]
