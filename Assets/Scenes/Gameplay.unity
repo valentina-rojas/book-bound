@@ -11466,6 +11466,15 @@ MonoBehaviour:
   - {fileID: 2033014059}
   - {fileID: 876035448}
   velocidad: 5
+  risasClips:
+  - {fileID: 8300000, guid: 975c630d44bfae942b87776507c23330, type: 3}
+  - {fileID: 8300000, guid: fc0b9b68521a37843a3245476a37b4ca, type: 3}
+  - {fileID: 8300000, guid: 6835f9d77a7cabe4e8e08d386dbbd889, type: 3}
+  extrasClips:
+  - {fileID: 8300000, guid: 598709e0e9d2dae428f3164ed15b9146, type: 3}
+  - {fileID: 8300000, guid: c19834871cb3fb04b863e7cd6a860406, type: 3}
+  - {fileID: 8300000, guid: 53eeeecd6c2386340b0a9fde7af1e8c2, type: 3}
+  - {fileID: 8300000, guid: c6656375498d9824eb6c2d650725ccdf, type: 3}
   animacionEjecutada: 0
   desorganizarPendiente: 0
 --- !u!1 &375403077

@@ -8,17 +8,31 @@ public class Gnomos : MonoBehaviour
     private bool eventoActivadoHoy = false;
 
     [Header("Animación Gnomos")]
-    public GameObject[] prefabsGnomos; 
-    public Transform[] spawnPointsCam0; 
-    public Transform[] targetPointsCam0; 
+    public GameObject[] prefabsGnomos;
+    public Transform[] spawnPointsCam0;
+    public Transform[] targetPointsCam0;
     public float velocidad = 2f;
 
-    public bool animacionEjecutada = false; 
-    public bool desorganizarPendiente = false; 
+    [Header("Audio Gnomos")]
+    public AudioClip[] risasClips;      
+    public AudioClip[] extrasClips;     
+    private List<AudioSource> risasSources = new List<AudioSource>();
+    private List<Coroutine> risasCoroutines = new List<Coroutine>();
+
+    public bool animacionEjecutada = false;
+    public bool desorganizarPendiente = false;
 
     private void Awake()
     {
         instance = this;
+
+        foreach (var clip in risasClips)
+        {
+            AudioSource src = gameObject.AddComponent<AudioSource>();
+            src.clip = clip;
+            src.loop = false;
+            risasSources.Add(src);
+        }
     }
 
     public void IntentarActivarEventoGnomos()
@@ -29,7 +43,7 @@ public class Gnomos : MonoBehaviour
             if (Random.value <= probabilidad)
             {
                 Debug.Log("Evento de gnomos activado.");
-                desorganizarPendiente = true; 
+                desorganizarPendiente = true;
             }
             else
             {
@@ -54,6 +68,15 @@ public class Gnomos : MonoBehaviour
 
     private IEnumerator MostrarGnomoAnimacion()
     {
+        if (AudioManager.instance != null && AudioManager.instance.sonidoCampanilla != null)
+            AudioManager.instance.sonidoCampanilla.Play();
+
+        foreach (var src in risasSources)
+        {
+            Coroutine c = StartCoroutine(RisaAleatoria(src));
+            risasCoroutines.Add(c);
+        }
+
         List<GameObject> gnomosInstanciados = new List<GameObject>();
 
         for (int i = 0; i < prefabsGnomos.Length; i++)
@@ -83,7 +106,7 @@ public class Gnomos : MonoBehaviour
             yield return null;
         }
 
-        yield return new WaitForSeconds(2f);
+        yield return StartCoroutine(ReproducirExtrasDurante(5f));
 
         bool todosRegresaron = false;
         while (!todosRegresaron)
@@ -103,11 +126,64 @@ public class Gnomos : MonoBehaviour
             yield return null;
         }
 
+        if (AudioManager.instance != null && AudioManager.instance.sonidoCampanilla != null)
+            AudioManager.instance.sonidoCampanilla.Play();
         foreach (var gnomo in gnomosInstanciados)
             Destroy(gnomo);
+        foreach (var c in risasCoroutines)
+            StopCoroutine(c);
+        foreach (var src in risasSources)
+            src.Stop();
+        risasCoroutines.Clear();
 
         animacionEjecutada = true;
         Debug.Log("Animación completa: gnomos entraron y salieron.");
+    }
+
+    private IEnumerator RisaAleatoria(AudioSource src)
+    {
+        yield return new WaitForSeconds(Random.Range(0.2f, 1.5f));
+
+        while (true)
+        {
+            src.pitch = Random.Range(0.9f, 1.1f);
+            src.volume = Random.Range(0.6f, 1f);
+            src.Play();
+            yield return new WaitForSeconds(src.clip.length + Random.Range(0.5f, 2f));
+        }
+    }
+
+    private IEnumerator ReproducirExtrasDurante(float duracion)
+    {
+        float tiempo = 0f;
+
+        while (tiempo < duracion)
+        {
+            int cantidad = Random.Range(2, 4); 
+
+            for (int i = 0; i < cantidad; i++)
+            {
+                if (extrasClips.Length > 0)
+                {
+                    AudioClip clip = extrasClips[Random.Range(0, extrasClips.Length)];
+                    float volumen = Random.Range(0.6f, 1f);
+                    float pitch = Random.Range(0.9f, 1.1f);
+                    GameObject tempGO = new GameObject("ExtraSound");
+                    tempGO.transform.position = transform.position;
+                    AudioSource aSource = tempGO.AddComponent<AudioSource>();
+                    aSource.clip = clip;
+                    aSource.volume = volumen;
+                    aSource.pitch = pitch;
+                    aSource.Play();
+
+                    Destroy(tempGO, clip.length);
+                }
+            }
+
+            float delay = Random.Range(0.5f, 1f);
+            tiempo += delay;
+            yield return new WaitForSeconds(delay);
+        }
     }
 
     private void EjecutarDesorganizacion()
