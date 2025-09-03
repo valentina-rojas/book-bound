@@ -70,15 +70,13 @@ public class CameraManager : MonoBehaviour
 
         currentCameraIndex = cameraIndex;
         cameras[currentCameraIndex].enabled = true;
-
         if (canvasObjects != null && currentCameraIndex < canvasObjects.Length)
             canvasObjects[currentCameraIndex].SetActive(true);
 
+        Gnomos.instance?.OnCameraChanged(currentCameraIndex);
+        
         if (cameraIndex == 1)
-        {
             ShelfManager.instance?.RevisarOrganizacion();
-            Gnomos.instance?.EjecutarDesorganizacionSiPendiente();
-        }
 
         if (cameraIndex == 0 && Tutorial.instance != null)
             Tutorial.instance.AlVolverACamaraPrincipal();

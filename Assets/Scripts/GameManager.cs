@@ -116,6 +116,8 @@ public class GameManager : MonoBehaviour
         InventarioManager.Instance.MostrarInventarioCompleto();
         TaskManager.instance.InicializarTareasParaNivel();
         FindFirstObjectByType<CatDialogues>().IniciarDialogoDelDia(nivelActual);
+        if (Gnomos.instance != null)
+            Gnomos.instance.ReiniciarEvento();
     }
 
     public void FinDeNivel()
