@@ -13,7 +13,6 @@ public class GameManager : MonoBehaviour
     private UIManager uiManager;
     private CharacterSpawn characterSpawn;
     private SpriteRenderer spriteRendererPersonaje;
-
     public PersonasSentadas personasSentadas;
     #endregion
 
@@ -192,7 +191,7 @@ public class GameManager : MonoBehaviour
         }
 
         textoResultadoFinal.text = mensajeFinal;
-
+        personasSentadas.DesactivarPersonasSentadas();
         recomendacionesBuenas = 0;
         recomendacionesMalas = 0;
     }
