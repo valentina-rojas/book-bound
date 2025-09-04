@@ -107,6 +107,8 @@ public class GameManager : MonoBehaviour
             CameraManager.instance.botonCambiarCamara3.gameObject.SetActive(true);
         if (nivelActual == 3)
             CameraManager.instance.botonCambiarCamara2.gameObject.SetActive(true);
+        if (nivelActual == 4)
+            CameraManager.instance.botonCambiarCamara4.gameObject.SetActive(true);
 
         Time.timeScale = 0f;
         yield return new WaitForSecondsRealtime(3f);

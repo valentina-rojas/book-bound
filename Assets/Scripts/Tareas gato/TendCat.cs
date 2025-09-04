@@ -33,6 +33,7 @@ public class TendCat : MonoBehaviour
 
     #region Acariciar
     public GameObject corazonesGO;
+    private bool acariciando = false;
     #endregion
 
     private Camera camara;
@@ -140,6 +141,7 @@ public class TendCat : MonoBehaviour
     #endregion
 
     #region Acariciar
+
     private void VerificarAcariciar()
     {
         if (CameraManager.instance.CurrentCameraIndex != 0)
@@ -149,13 +151,14 @@ public class TendCat : MonoBehaviour
             return;
         }
 
-        if (Input.GetMouseButtonDown(0))
+        if (!acariciando && Input.GetMouseButtonDown(0))
         {
             Vector2 mousePos = Input.mousePosition;
 
             if (RectTransformUtility.RectangleContainsScreenPoint(areaCepilladoUI, mousePos, camara))
             {
                 AudioManager.instance.sonidoRonroneo.Play();
+                acariciando = true; 
 
                 if (corazonesGO != null)
                 {
@@ -171,8 +174,12 @@ public class TendCat : MonoBehaviour
             }
         }
 
-        if (corazonesGO != null && !AudioManager.instance.sonidoRonroneo.isPlaying)
-            corazonesGO.SetActive(false);
+        if (acariciando && !AudioManager.instance.sonidoRonroneo.isPlaying)
+        {
+            acariciando = false; 
+            if (corazonesGO != null)
+                corazonesGO.SetActive(false);
+        }
     }
     #endregion
 

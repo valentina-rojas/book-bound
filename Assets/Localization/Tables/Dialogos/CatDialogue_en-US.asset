@@ -23,20 +23,19 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23021344169984
-    m_Localized: Every day, different creatures will come looking for books.
+    m_Localized: Every day, different creatures will come looking for books...
     m_Metadata:
       m_Items: []
   - m_Id: 23075161284608
-    m_Localized: Recommend books according to their tastes or exactly what they're
-      looking for.
+    m_Localized: or requesting that you help them with certain tasks.
     m_Metadata:
       m_Items: []
   - m_Id: 23111186161664
-    m_Localized: But before receiving customers, you should clean this place a bit...
+    m_Localized: Follow the instructions to properly fulfill their orders.
     m_Metadata:
       m_Items: []
   - m_Id: 23153548632064
-    m_Localized: You can check your task list to know what to do.
+    m_Localized: But before receiving customers, you should clean this place a bit...
     m_Metadata:
       m_Items: []
   - m_Id: 23183865061376
@@ -53,8 +52,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23297421647872
-    m_Localized: And you should take care of the patio plants or Rhea will be sad
-      when she returns...
+    m_Localized: And you should water the plants, or Rhea will be sad when she comes
+      back...
     m_Metadata:
       m_Items: []
   - m_Id: 23328451108864
@@ -74,16 +73,12 @@ MonoBehaviour:
     m_Localized: "Don't worry, you\u2019ll hardly notice it\u2019s open."
     m_Metadata:
       m_Items: []
-  - m_Id: 23590574137344
-    m_Localized: Good luck!
-    m_Metadata:
-      m_Items: []
   - m_Id: 23630805901312
     m_Localized: You're already quite the expert!
     m_Metadata:
       m_Items: []
   - m_Id: 23664247087104
-    m_Localized: Customers might start making more varied requests...
+    m_Localized: The customers might place more complex orders...
     m_Metadata:
       m_Items: []
   - m_Id: 23673839460352
@@ -91,7 +86,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23704256552960
-    m_Localized: You're doing great!
+    m_Localized: Starting today, you will have access to the shop to buy items and
+      decorate as you like.
     m_Metadata:
       m_Items: []
   - m_Id: 10497099322531840
@@ -112,6 +108,22 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 10497099356086275
     m_Localized: Ah, don't worry about that. Let's start another day!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16166956454027264
+    m_Localized: You can check your task list to know what to do.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16166956491776000
+    m_Localized: Good luck!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16166956491776001
+    m_Localized: You can get there through the exit on your left.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16166956491776002
+    m_Localized: "And apart from that, have fun! You\u2019re doing great!"
     m_Metadata:
       m_Items: []
   references:

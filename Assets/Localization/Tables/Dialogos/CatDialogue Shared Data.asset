@@ -35,6 +35,10 @@ MonoBehaviour:
     m_Key: cat1_5
     m_Metadata:
       m_Items: []
+  - m_Id: 16166956454027264
+    m_Key: cat1_6
+    m_Metadata:
+      m_Items: []
   - m_Id: 23183865061376
     m_Key: cat2_1
     m_Metadata:
@@ -67,7 +71,7 @@ MonoBehaviour:
     m_Key: cat3_3
     m_Metadata:
       m_Items: []
-  - m_Id: 23590574137344
+  - m_Id: 16166956491776000
     m_Key: cat3_4
     m_Metadata:
       m_Items: []
@@ -85,6 +89,14 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 23704256552960
     m_Key: cat4_4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16166956491776001
+    m_Key: cat4_5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16166956491776002
+    m_Key: cat4_6
     m_Metadata:
       m_Items: []
   - m_Id: 10497099322531840

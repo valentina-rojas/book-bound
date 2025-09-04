@@ -67,7 +67,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 0}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -129,6 +129,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icono: {fileID: 4864768276903014072}
   button: {fileID: 4491624883755478110}
+  panelInventarioRect: {fileID: 0}
+  currentItem: {fileID: 0}
 --- !u!222 &1141350869568229273
 CanvasRenderer:
   m_ObjectHideFlags: 0

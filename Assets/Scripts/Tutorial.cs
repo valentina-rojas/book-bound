@@ -26,7 +26,7 @@ public class Tutorial : MonoBehaviour
         new string[] { "Tuto6", "Tuto7", "Tuto8" },              // Paso 4: Diálogo con primer cliente
         new string[] { "Tuto9", "Tuto10" },                      // Paso 5: Abrir historial tras diálogo
         new string[] { "Tuto11" },                               // Paso 6: Resultado primer cliente
-        new string[] { "Tuto12", "Tuto13" }                      // Paso 7: Cierre tutorial
+        new string[] { "Tuto12", "Tuto13", "Tuto14" }                      // Paso 7: Cierre tutorial
     };
     #endregion
 

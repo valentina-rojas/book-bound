@@ -19,7 +19,7 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 71333224448
-    m_Localized: "Comencemos limpiando las telara\xF1as en la recepci\xF3n."
+    m_Localized: "Comencemos quitando las telara\xF1as en la recepci\xF3n."
     m_Metadata:
       m_Items: []
   - m_Id: 71429693440
@@ -45,16 +45,16 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 71433887744
-    m_Localized: "Haz clic en el signo de exclamaci\xF3n para saber qu\xE9 quiere."
+    m_Localized: "Haz clic en el signo de exclamaci\xF3n para saber qu\xE9 desea."
     m_Metadata:
       m_Items: []
   - m_Id: 71433887745
     m_Localized: "Y aseg\xFArate de finalizar la conversaci\xF3n cuando ya hayas
-      entendido lo que quiere."
+      entendido lo que te pide."
     m_Metadata:
       m_Items: []
   - m_Id: 71433887746
-    m_Localized: "Puedes ver el historial para revisar qu\xE9 quer\xEDa."
+    m_Localized: "Puedes ver el historial para revisar qu\xE9 te solicit\xF3."
     m_Metadata:
       m_Items: []
   - m_Id: 71433887747
@@ -66,15 +66,29 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 71433887749
-    m_Localized: "Mientras m\xE1s conozcas los libros, mejor ser\xE1 y menos te equivocar\xE1s."
+    m_Localized: "Mientras m\xE1s conozcas los libros, m\xE1s f\xE1cil ser\xE1 atender
+      los pedidos de los clientes."
     m_Metadata:
       m_Items: []
   - m_Id: 1570702445158400
-    m_Localized: "\xA1Suerte en tu primer d\xEDa!"
+    m_Localized: "Y recibiras una propina en base a la atenci\xF3n que des, as\xED
+      que esfuerzate. "
     m_Metadata:
       m_Items: []
   - m_Id: 3978396539985920
     m_Localized: "Esta es una librer\xEDa, no una discoteca. \xA1Ve a callarlos!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12667835218829312
+    m_Localized: "\xA1Qu\xE9 desastre han hecho estos duendecillos!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12667915007074304
+    m_Localized: "Deber\xE1s volver a poner todo en su lugar."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12668754358607872
+    m_Localized: "\xA1Suerte en tu primer d\xEDa!"
     m_Metadata:
       m_Items: []
   references:

@@ -23,20 +23,20 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23021344169984
-    m_Localized: "Cada d\xEDa vendr\xE1n criaturas distintas buscando libros."
+    m_Localized: "Cada d\xEDa vendr\xE1n diferentes criaturas buscando libros..."
     m_Metadata:
       m_Items: []
   - m_Id: 23075161284608
-    m_Localized: "Recomendales libros seg\xFAn sus gustos o el que buscan exactamente."
+    m_Localized: o solicitando que los ayudes a realizar ciertas tareas.
     m_Metadata:
       m_Items: []
   - m_Id: 23111186161664
-    m_Localized: "Pero antes de recibir clientes, deber\xEDas limpiar un poco este
-      lugar..."
+    m_Localized: Sigue las instrucciones para cumplir correctamente con sus pedidos.
     m_Metadata:
       m_Items: []
   - m_Id: 23153548632064
-    m_Localized: "Puedes consultar tu lista de tareas para saber qu\xE9 hacer."
+    m_Localized: "Pero antes de recibir clientes, deber\xEDas limpiar un poco este
+      lugar..."
     m_Metadata:
       m_Items: []
   - m_Id: 23183865061376
@@ -52,8 +52,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23297421647872
-    m_Localized: "Y deber\xEDas cuidar las plantas del patio o Rhea se pondr\xE1
-      triste cuando vuelva..."
+    m_Localized: "Y deber\xEDas regar las plantas o Rhea se pondr\xE1 triste cuando
+      vuelva..."
     m_Metadata:
       m_Items: []
   - m_Id: 23328451108864
@@ -74,16 +74,12 @@ MonoBehaviour:
     m_Localized: "No te preocupes, casi ni notar\xE1s que est\xE1 abierta."
     m_Metadata:
       m_Items: []
-  - m_Id: 23590574137344
-    m_Localized: "\xA1Buena suerte!"
-    m_Metadata:
-      m_Items: []
   - m_Id: 23630805901312
     m_Localized: "\xA1Ya eres todo un experto!"
     m_Metadata:
       m_Items: []
   - m_Id: 23664247087104
-    m_Localized: "Puede que los clientes cada vez hagan pedidos m\xE1s diferentes..."
+    m_Localized: "Puede que los clientes realicen pedidos m\xE1s complejos..."
     m_Metadata:
       m_Items: []
   - m_Id: 23673839460352
@@ -91,7 +87,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23704256552960
-    m_Localized: "\xA1Vas muy bien!"
+    m_Localized: "Adem\xE1s a partir de hoy, tendr\xE1s acceso a la tienda para poder
+      comprar objetos y decorar a tu gusto."
     m_Metadata:
       m_Items: []
   - m_Id: 10497099322531840
@@ -112,6 +109,22 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 10497099356086275
     m_Localized: "Ah, no le des importancia a eso. \xA1A empezar otro d\xEDa!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16166956454027264
+    m_Localized: "Puedes consultar la lista de tareas para saber qu\xE9 hacer."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16166956491776000
+    m_Localized: "\xA1Buena suerte!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16166956491776001
+    m_Localized: "Puedes ir all\xED por la salida a tu izquierda. "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16166956491776002
+    m_Localized: "Por lo dem\xE1s, divi\xE9rtete \xA1Vas muy bien!"
     m_Metadata:
       m_Items: []
   references:

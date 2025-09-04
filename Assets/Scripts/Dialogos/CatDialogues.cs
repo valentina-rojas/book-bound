@@ -32,10 +32,10 @@ public class CatDialogues : MonoBehaviour
     #region Diálogos por día
     private Dictionary<int, string[]> dialoguesPorDia = new Dictionary<int, string[]>
     {
-        { 1, new string[] { "cat1_1", "cat1_2", "cat1_3", "cat1_4", "cat1_5" } },
+        { 1, new string[] { "cat1_1", "cat1_2", "cat1_3", "cat1_4", "cat1_5", "cat1_6" } },
         { 2, new string[] { "cat2_1", "cat2_2", "cat2_3", "cat2_4", "cat2_5" } },
         { 3, new string[] { "cat3_1", "cat3_2", "cat3_3", "cat3_4" } },
-        { 4, new string[] { "cat4_1", "cat4_2", "cat4_3", "cat4_4" } },
+        { 4, new string[] { "cat4_1", "cat4_2", "cat4_3", "cat4_4", "cat4_5", "cat4_6" } },
         { 5, new string[] { "cat5_1", "cat5_2", "cat5_3", "cat5_4", "cat5_5" } },
         { 6, new string[] { "cat6_1" } },
         { 7, new string[] { "cat7_1" } }

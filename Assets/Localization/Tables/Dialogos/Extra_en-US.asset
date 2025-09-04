@@ -44,7 +44,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 71433887744
-    m_Localized: Click the question mark to find out what they want.
+    m_Localized: Click on the exclamation mark to see what they want.
     m_Metadata:
       m_Items: []
   - m_Id: 71433887745
@@ -65,15 +65,29 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 71433887749
-    m_Localized: The better you know the books, the fewer mistakes you'll make.
+    m_Localized: The more you know about the books, the easier it will be to fulfill
+      the customers' orders.
     m_Metadata:
       m_Items: []
   - m_Id: 1570702445158400
-    m_Localized: Good luck on your first day!
+    m_Localized: And you will receive a tip based on the attention you give, so do
+      your best.
     m_Metadata:
       m_Items: []
   - m_Id: 3978396539985920
     m_Localized: This is a library, not a nightclub. Go and shut them up!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12667835218829312
+    m_Localized: What a mess these little elves have made!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12667915007074304
+    m_Localized: "You\u2019ll have to put everything back in its place."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12668754358607872
+    m_Localized: Good luck on your first day!
     m_Metadata:
       m_Items: []
   references:

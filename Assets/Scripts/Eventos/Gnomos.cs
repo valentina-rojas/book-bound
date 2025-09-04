@@ -21,10 +21,15 @@ public class Gnomos : MonoBehaviour
 
     public bool animacionEjecutada = false;
     public bool desorganizarPendiente = false;
+    private CatDialogues catDialogues;
 
     private void Awake()
     {
         instance = this;
+
+        catDialogues = Object.FindFirstObjectByType<CatDialogues>();
+        if (catDialogues == null)
+            Debug.LogWarning("No se encontró CatDialogues en la escena.");
 
         foreach (var clip in risasClips)
         {
@@ -137,7 +142,10 @@ public class Gnomos : MonoBehaviour
         risasCoroutines.Clear();
 
         animacionEjecutada = true;
-        Debug.Log("Animación completa: gnomos entraron y salieron.");
+        catDialogues?.IniciarDialogoExtraDesdeLista(
+            new string[] { "Gnomos1", "Gnomos2" },  
+            "Extra"
+        );
     }
 
     private IEnumerator RisaAleatoria(AudioSource src)
