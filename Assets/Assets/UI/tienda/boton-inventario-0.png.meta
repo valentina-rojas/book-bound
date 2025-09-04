@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 2e61b2027d05aab44b96c3827cbdb968
+guid: 038cd586715c12b4281827e1c8456dd9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5380185667573389071
-    second: libro-terror-v3_0
+      213: 2083412635301442795
+    second: boton-inventario-0_0
+  - first:
+      213: 2734214273257746973
+    second: boton-inventario-0_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,23 +129,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: libro-terror-v3_0
+      name: boton-inventario-0_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 60
-        height: 190
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: f071c55fb524aaa40800000000000000
-      internalID: 5380185667573389071
+      spriteID: 725cc0a8a1d5eb64e8fda5a1d72c3ab0
+      internalID: 329987962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boton-inventario-0_1
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c82a196278c5a274a97118dfe00621d7
+      internalID: 1321280911
       vertices: []
       indices: 
       edges: []
@@ -151,7 +176,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 348792bfddca33d4d8cf9a8f4a91be66
+    spriteID: a051c8ae56acbc94bac6d1782a69e972
     internalID: 0
     vertices: []
     indices: 
@@ -161,7 +186,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      libro-terror-v3_0: 5380185667573389071
+      boton-inventario-0_0: 329987962
+      boton-inventario-0_1: 1321280911
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
