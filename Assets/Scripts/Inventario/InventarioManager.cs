@@ -11,6 +11,9 @@ public class InventarioManager : MonoBehaviour
     [SerializeField] private Transform contenedorItems;
     [SerializeField] public GameObject prefabSlotItem;
     [SerializeField] private Button botonAbrirInventario;
+    [SerializeField] private Sprite spriteBotonCerrado;
+    [SerializeField] private Sprite spriteBotonAbierto;
+
     public void OcultarBotonAbrirInventario() => botonAbrirInventario?.gameObject.SetActive(false);
     public void MostrarBotonAbrirInventario() => botonAbrirInventario?.gameObject.SetActive(true);
     public void MostrarInventarioCompleto() => MostrarBotonAbrirInventario();
@@ -24,7 +27,7 @@ public class InventarioManager : MonoBehaviour
         panelInventario.SetActive(false);
 
         if (botonAbrirInventario != null)
-            botonAbrirInventario.onClick.AddListener(AbrirInventario);
+            botonAbrirInventario.onClick.AddListener(ToggleInventario);
     }
 
     public void OcultarInventarioCompleto()
@@ -102,16 +105,27 @@ public class InventarioManager : MonoBehaviour
         return null;
     }
 
+    // 🔹 Nuevo: un solo método para alternar entre abrir/cerrar
+    public void ToggleInventario()
+    {
+        if (panelInventario.activeSelf)
+            CerrarInventario();
+        else
+            AbrirInventario();
+    }
+
     public void AbrirInventario()
     {
         panelInventario.SetActive(true);
-        OcultarBotonAbrirInventario();
+        if (botonAbrirInventario != null && spriteBotonAbierto != null)
+            botonAbrirInventario.image.sprite = spriteBotonAbierto;
     }
 
     public void CerrarInventario()
     {
         panelInventario.SetActive(false);
-        MostrarBotonAbrirInventario();
+        if (botonAbrirInventario != null && spriteBotonCerrado != null)
+            botonAbrirInventario.image.sprite = spriteBotonCerrado;
     }
 
     public void CerrarInventarioDesdeBoton() => CerrarInventario();
