@@ -161,7 +161,8 @@ public class BookManager : MonoBehaviour
         TaskManager.instance.OcultarListaTareas();
         panelConfirmarSeleccion.SetActive(true);
         imagenConfirmarSeleccion.sprite = libroActual.imagenLibro;
-
+        if (botonCamaraMostrador != null) botonCamaraMostrador.interactable = true;
+        if (botonCamaraPatio != null) botonCamaraPatio.interactable = true;
         StartCoroutine(libroActual.GetTituloLocalized(titulo => tituloConfirmarSeleccion.text = titulo));
     }
 
