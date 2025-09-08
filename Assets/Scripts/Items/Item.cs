@@ -7,6 +7,7 @@ public enum CategoriaItem
     Cuadros,
     Muebles,
     Decoracion,
+    Herramientas,
     Otros
 }
 
