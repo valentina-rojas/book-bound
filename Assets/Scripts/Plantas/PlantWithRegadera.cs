@@ -3,25 +3,23 @@ using UnityEngine.UI;
 
 public class PlantWithRegadera : MonoBehaviour
 {
-    public Sprite[] growthStages; 
+    public Sprite[] growthStages;
     public SpriteRenderer plantRenderer;
 
     [Header("Referencias UI")]
-    public RectTransform regaderaUI;
-    public RectTransform areaPlantaUI;
     public Slider barraRiegoUI;
 
     [Header("Parámetros")]
     public float tiempoNecesarioRiego = 2f;
-
-    [Header("Configuración de aparición")]
-    public int nivelMinimo = 1;  
+    public int nivelMinimo = 1;
 
     private float tiempoSobrePlanta = 0f;
-    private bool isFullyWatered = false;
+    public bool isFullyWatered = false;
     private bool regaderaSonando = false;
 
-    [HideInInspector] public bool activaHoy = false; 
+    [HideInInspector] public bool activaHoy = false;
+
+    public bool IsFullyWatered { get { return isFullyWatered; } }
 
     private void Start()
     {
@@ -31,51 +29,34 @@ public class PlantWithRegadera : MonoBehaviour
             PlantManager.instance.RegisterPlant(this);
     }
 
-    private void Update()
+    public void RegarTick(float delta)
     {
-        if (activaHoy) 
-            VerificarRiegoConArrastre();
+        if (!activaHoy || isFullyWatered) return;
+
+        if (!barraRiegoUI.gameObject.activeSelf)
+            barraRiegoUI.gameObject.SetActive(true);
+
+        tiempoSobrePlanta += delta;
+        barraRiegoUI.value = tiempoSobrePlanta / tiempoNecesarioRiego;
+
+        UpdatePlantAppearance();
+
+        if (!regaderaSonando && AudioManager.instance != null)
+        {
+            AudioManager.instance.sonidoRegadera.Play();
+            regaderaSonando = true;
+        }
+
+        if (tiempoSobrePlanta >= tiempoNecesarioRiego)
+            FinalizarRiego();
     }
 
-    private void VerificarRiegoConArrastre()
+    public void DetenerSonidoRegadera()
     {
-        if (isFullyWatered)
-            return;
-
-        Vector2 posicionRegadera = RectTransformUtility.WorldToScreenPoint(Camera.main, regaderaUI.position);
-
-        if (RectTransformUtility.RectangleContainsScreenPoint(areaPlantaUI, posicionRegadera, Camera.main))
+        if (regaderaSonando && AudioManager.instance != null)
         {
-            if (!barraRiegoUI.gameObject.activeSelf)
-                barraRiegoUI.gameObject.SetActive(true);
-
-            tiempoSobrePlanta += Time.deltaTime;
-            barraRiegoUI.value = tiempoSobrePlanta / tiempoNecesarioRiego;
-
-            UpdatePlantAppearance();
-
-            if (!regaderaSonando)
-            {
-                AudioManager.instance.sonidoRegadera.Play();
-                regaderaSonando = true;
-            }
-
-            if (tiempoSobrePlanta >= tiempoNecesarioRiego)
-                FinalizarRiego();
-        }
-        else
-        {
-            tiempoSobrePlanta = 0f;
-            barraRiegoUI.value = 0f;
-            barraRiegoUI.gameObject.SetActive(false);
-
-            UpdatePlantAppearance();
-
-            if (regaderaSonando)
-            {
-                AudioManager.instance.sonidoRegadera.Stop();
-                regaderaSonando = false;
-            }
+            AudioManager.instance.sonidoRegadera.Stop();
+            regaderaSonando = false;
         }
     }
 
@@ -88,12 +69,7 @@ public class PlantWithRegadera : MonoBehaviour
         barraRiegoUI.gameObject.SetActive(false);
 
         UpdatePlantAppearance();
-
-        if (regaderaSonando)
-        {
-            AudioManager.instance.sonidoRegadera.Stop();
-            regaderaSonando = false;
-        }
+        DetenerSonidoRegadera();
 
         if (PlantManager.instance != null)
             PlantManager.instance.NotifyPlantFullyWatered();
@@ -128,6 +104,7 @@ public class PlantWithRegadera : MonoBehaviour
         }
 
         activaHoy = false;
+        DetenerSonidoRegadera();
 
         if (growthStages != null && growthStages.Length > 0)
             plantRenderer.sprite = growthStages[growthStages.Length - 1];

@@ -59,11 +59,14 @@ public class ShopManager : MonoBehaviour
 
         foreach (var item in itemsDisponibles)
         {
-            if (item.categoria == categoriaActual && !itemsEnInventario.Contains(item))
+            if (item.categoria == categoriaActual)
             {
-                GameObject nuevoSlot = Instantiate(prefabSlotTienda, contenedorItems);
-                UITiendaSlot slot = nuevoSlot.GetComponent<UITiendaSlot>();
-                slot.Configurar(item, ComprarItem);
+                if (item.categoria == CategoriaItem.Herramientas || !itemsEnInventario.Contains(item))
+                {
+                    GameObject nuevoSlot = Instantiate(prefabSlotTienda, contenedorItems);
+                    UITiendaSlot slot = nuevoSlot.GetComponent<UITiendaSlot>();
+                    slot.Configurar(item, ComprarItem);
+                }
             }
         }
     }

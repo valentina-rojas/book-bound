@@ -98,24 +98,6 @@ public class UISlotItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
         }
 
         if (!colocado)
-        {
-            List<ItemMundo> instancias = ItemMundo.ObtenerInstancias(currentItem);
-            if (instancias.Count > 0)
-            {
-                foreach (var instancia in instancias)
-                {
-                    if (instancia.cameraIndex == CameraManager.instance.CurrentCameraIndex)
-                    {
-                        instancia.ReactivarEnMundo();
-                        InventarioManager.Instance.EliminarItem(currentItem);
-                        colocado = true;
-                        break;
-                    }
-                }
-            }
-        }
-
-        if (!colocado)
             rectTransform.anchoredPosition = originalPosition;
 
         icono.color = Color.white;
