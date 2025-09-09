@@ -38,6 +38,10 @@ public class MenuPausa : MonoBehaviour
     public void Reiniciar()
     {
         Time.timeScale = 1f;
+
+        if (EconomyManager.instance != null)
+            EconomyManager.instance.ReiniciarDineroNivel(); 
+
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
@@ -49,6 +53,14 @@ public class MenuPausa : MonoBehaviour
     public void ConfirmarSalida()
     {
         Time.timeScale = 1f;
+        SaveManager.BorrarGuardado();
+
+        if (EconomyManager.instance != null)
+            EconomyManager.instance.ReiniciarDineroNivel();
+
+        if (InventarioManager.Instance != null)
+            InventarioManager.Instance.ObtenerItems().Clear();
+
         SceneManager.LoadScene("MenuPrincipal");
     }
 

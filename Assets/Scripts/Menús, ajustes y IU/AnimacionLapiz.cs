@@ -13,7 +13,7 @@ public class AnimacionLapiz : MonoBehaviour
 
     void Start()
     {
-        image.gameObject.SetActive(false); // Empieza desactivado
+        image.gameObject.SetActive(false); 
     }
 
 

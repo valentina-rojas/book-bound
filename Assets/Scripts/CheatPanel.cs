@@ -56,7 +56,13 @@ public class CheatPanel : MonoBehaviour
         TendCat.instance?.ReiniciarEstado();
         PlantManager.instance?.ReiniciarEstado();
         TaskManager.instance?.ReiniciarTareas();
-
+        SaveManager.GuardarTodo(
+            gm.nivelActual,
+            HistorialManager.Instance.GetHistorialPedidos(),
+            HistorialManager.Instance.GetLibrosPrestados(),
+            EconomyManager.instance.ObtenerDinero(),
+            InventarioManager.Instance.GuardarInventario()  
+        );
         gm.StopAllCoroutines();
         gm.StartCoroutine("MostrarCartelInicioDia");
 

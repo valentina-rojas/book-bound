@@ -20,17 +20,12 @@ public class SonidoAjustes : MonoBehaviour
 
     void Start()
     {
-        // Cargar estado guardado
         sonidoActivo = PlayerPrefs.GetInt("SonidoActivo", 1) == 1;
-
-        // Aplicar volumen general según estado
         audioMixer.SetFloat("MasterVolume", sonidoActivo ? 0f : -80f);
 
-        // Cambiar icono
         if (botonIcono != null)
             botonIcono.sprite = sonidoActivo ? iconoSonidoOn : iconoSonidoOff;
 
-        // Sliders: si está muteado, los ponemos en cero visualmente
         if (musicSlider != null)
         {
             musicSlider.value = sonidoActivo ? 0.5f : 0f;
@@ -69,7 +64,6 @@ public class SonidoAjustes : MonoBehaviour
     {
         if (sonidoActivo)
         {
-            //  Silenciar todo
             audioMixer.SetFloat("MasterVolume", -80f);
             sonidoActivo = false;
             if (botonIcono != null)
@@ -77,14 +71,12 @@ public class SonidoAjustes : MonoBehaviour
         }
         else
         {
-            //  Restaurar sonido
             audioMixer.SetFloat("MasterVolume", 0f);
             sonidoActivo = true;
             if (botonIcono != null)
                 botonIcono.sprite = iconoSonidoOn;
         }
 
-        // Guardar estado
         PlayerPrefs.SetInt("SonidoActivo", sonidoActivo ? 1 : 0);
         PlayerPrefs.Save();
     }
@@ -94,7 +86,6 @@ public class SonidoAjustes : MonoBehaviour
     {
         if (!sonidoActivo && valor > 0.01f)
         {
-            // Restaurar sonido
             audioMixer.SetFloat("MasterVolume", 0f);
             sonidoActivo = true;
             PlayerPrefs.SetInt("SonidoActivo", 1);
@@ -104,5 +95,4 @@ public class SonidoAjustes : MonoBehaviour
                 botonIcono.sprite = iconoSonidoOn;
         }
     }
-
 }

@@ -12,7 +12,7 @@ public class BookCoverManager : MonoBehaviour
     public TMP_Text textoTituloLibro;
     
     [Header("Verificación de título")]
-    public RectTransform areaTitulo; // Área donde está el título que no debe ser cubierto
+    public RectTransform areaTitulo; 
 
     [Header("Portadas por set")]
     public GameObject portadaDefault;
@@ -98,7 +98,6 @@ public class BookCoverManager : MonoBehaviour
 
         foreach (Transform child in portadaEditable.transform)
         {
-            // Verificar si el punto central está dentro del área (para considerar el sticker como "dentro")
             bool puntoCentralDentro = RectTransformUtility.RectangleContainsScreenPoint(
                 areaPortada,
                 RectTransformUtility.WorldToScreenPoint(null, child.position));
@@ -111,7 +110,6 @@ public class BookCoverManager : MonoBehaviour
                     if (!stickersUsados.Contains(data.stickerID))
                         stickersUsados.Add(data.stickerID);
 
-                    // Para el extra: verificar si está COMPLETAMENTE dentro
                     if (GameManager.instance.personajeActual != null &&
                         GameManager.instance.personajeActual.stickersRequeridos.Contains(data.stickerID) &&
                         EstaStickerCompletamenteDentro(child as RectTransform, areaPortada))
@@ -130,7 +128,6 @@ public class BookCoverManager : MonoBehaviour
             }
         }
 
-        // Verificar si los stickers no cubren el título (3 extras adicionales)
         if (!StickersCubrenTitulo())
         {
             extras += 3;
@@ -145,21 +142,19 @@ public class BookCoverManager : MonoBehaviour
     {
         if (sticker == null || areaPortada == null) return false;
 
-        // Obtener las esquinas del sticker en espacio de pantalla
         Vector3[] stickerCorners = new Vector3[4];
         sticker.GetWorldCorners(stickerCorners);
 
-        // Verificar que todas las esquinas del sticker estén dentro del área
         foreach (Vector3 corner in stickerCorners)
         {
             Vector2 screenPoint = RectTransformUtility.WorldToScreenPoint(null, corner);
             if (!RectTransformUtility.RectangleContainsScreenPoint(areaPortada, screenPoint, null))
             {
-                return false; // Una esquina está fuera del área
+                return false; 
             }
         }
 
-        return true; // Todas las esquinas están dentro del área
+        return true; 
     }
 
     private bool StickersCubrenTitulo()
@@ -168,7 +163,6 @@ public class BookCoverManager : MonoBehaviour
 
         foreach (Transform child in portadaEditable.transform)
         {
-            // Solo verificar stickers que están dentro del área de la portada
             bool puntoCentralDentro = RectTransformUtility.RectangleContainsScreenPoint(
                 areaPortada,
                 RectTransformUtility.WorldToScreenPoint(null, child.position));
@@ -178,27 +172,22 @@ public class BookCoverManager : MonoBehaviour
                 StickerData data = child.GetComponent<StickerData>();
                 if (data != null)
                 {
-                    // Verificar si este sticker se superpone con el área del título
                     if (StickerSuperponeTitulo(child as RectTransform, areaTitulo))
                     {
-                        return true; // Al menos un sticker cubre el título
+                        return true; 
                     }
                 }
             }
         }
 
-        return false; // Ningún sticker cubre el título
+        return false;
     }
 
     private bool StickerSuperponeTitulo(RectTransform sticker, RectTransform areaTitulo)
     {
         if (sticker == null || areaTitulo == null) return false;
-
-        // Obtener los rectángulos en espacio de mundo
         Rect stickerRect = GetWorldRect(sticker);
         Rect tituloRect = GetWorldRect(areaTitulo);
-
-        // Verificar si los rectángulos se superponen
         return stickerRect.Overlaps(tituloRect);
     }
 

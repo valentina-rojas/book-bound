@@ -21,7 +21,7 @@ public class UIManager : MonoBehaviour
     public Button GetBotonFinalizar() => botonFinalizar;
 
     [Header("Panel Unificado")]
-    [SerializeField] private GameObject panelHistorial; // Ahora contiene ambos contenidos
+    [SerializeField] private GameObject panelHistorial; 
     [SerializeField] private Button botonCerrarHistorial;
     [SerializeField] private Button botonAbrirHistorial;
 

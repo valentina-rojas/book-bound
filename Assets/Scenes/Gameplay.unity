@@ -50376,6 +50376,7 @@ GameObject:
   - component: {fileID: 1468360315}
   - component: {fileID: 1468360316}
   - component: {fileID: 1468360317}
+  - component: {fileID: 1468360318}
   m_Layer: 0
   m_Name: "Inventario y econom\xEDa"
   m_TagString: Untagged
@@ -50471,6 +50472,19 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 606ad9f02f4aac641b6ff9251944cf17, type: 2}
   - {fileID: 11400000, guid: 27151f08bd192fd40be9529d60f363c4, type: 2}
   - {fileID: 11400000, guid: 93d27e6e90fd10a4883895734221d0cc, type: 2}
+--- !u!114 &1468360318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1468360313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 078781ed91eb1ff4bbc84251fccfc961, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  todosLosItems: []
 --- !u!1 &1468377846
 GameObject:
   m_ObjectHideFlags: 0

@@ -71,10 +71,14 @@ public class GameManager : MonoBehaviour
             Debug.LogError("UIManager no encontrado en la escena.");
         if (characterSpawn == null)
             Debug.LogError("CharacterSpawn no encontrado en la escena.");
-        StartCoroutine(MostrarCartelInicioDia());
+            var data = SaveManager.CargarTodo();
+            nivelActual = data.nivelActual;
+            EconomyManager.instance.CargarDinero();
+            HistorialManager.Instance.CargarHistorial(data.historialPedidos);
+            HistorialManager.Instance.CargarLibrosPrestados(data.librosPrestados);;
+                StartCoroutine(MostrarCartelInicioDia());
     }
     #endregion
-
 
     #region Flujo de Día y Niveles
     private IEnumerator MostrarCartelInicioDia()
@@ -87,6 +91,8 @@ public class GameManager : MonoBehaviour
         MenuPausa.instance.OcultarBotonPausa();
         InventarioManager.Instance.OcultarInventarioCompleto();
         TaskManager.instance.ReiniciarTareas();
+        EconomyManager.instance.FijarDineroInicioNivel();
+        InventarioManager.Instance.CargarInventario();
         panelInfoLibro.SetActive(true);
 
         var handle = textoDiaLocalized.GetLocalizedStringAsync();
@@ -217,7 +223,13 @@ public class GameManager : MonoBehaviour
 
         if (PlantManager.instance != null)
             PlantManager.instance.ReiniciarEstado();
-
+    SaveManager.GuardarTodo(
+        nivelActual,
+        HistorialManager.Instance.GetHistorialPedidos(),
+        HistorialManager.Instance.GetLibrosPrestados(),
+        EconomyManager.instance.ObtenerDinero(),
+        InventarioManager.Instance.GuardarInventario()  
+    );
         StartCoroutine(MostrarCartelInicioDia());
     }
 
