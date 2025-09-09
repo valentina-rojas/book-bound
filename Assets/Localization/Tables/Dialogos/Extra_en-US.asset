@@ -27,8 +27,9 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 71429693441
-    m_Localized: You should arrange them by genre. Don't worry, you'll know when
-      it's right.
+    m_Localized: "You should organize them by genre. You can read what each book
+      is about to figure out its genre, and don\u2019t worry, you\u2019ll know when
+      they\u2019re correctly organized."
     m_Metadata:
       m_Items: []
   - m_Id: 71429693442

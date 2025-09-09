@@ -27,8 +27,9 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 71429693441
-    m_Localized: "Debes ordenarlos por g\xE9nero. No te preocupes, te dar\xE1s cuenta
-      cuando est\xE9n bien organizados."
+    m_Localized: "Debes ordenarlos por g\xE9nero. Puedes leer de qu\xE9 trata cada
+      libro para saber a qu\xE9 g\xE9nero pertenece, y no te preocupes, te dar\xE1s
+      cuenta cuando est\xE9n bien organizados."
     m_Metadata:
       m_Items: []
   - m_Id: 71429693442

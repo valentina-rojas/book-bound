@@ -149,19 +149,19 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 10236841266159627
-    m_Localized: "\xBFCu\xE1ntas telara\xF1as debes limpiar cada d\xEDa?"
+    m_Localized: "\xBFCu\xE1ntas plantas tiene Rhea?"
     m_Metadata:
       m_Items: []
   - m_Id: 10236841266159628
-    m_Localized: 4
-    m_Metadata:
-      m_Items: []
-  - m_Id: 10236841266159629
     m_Localized: 5
     m_Metadata:
       m_Items: []
-  - m_Id: 10236841266159630
+  - m_Id: 10236841266159629
     m_Localized: 6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10236841266159630
+    m_Localized: 7
     m_Metadata:
       m_Items: []
   - m_Id: 10236841266159631

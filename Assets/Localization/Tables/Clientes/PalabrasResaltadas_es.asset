@@ -94,6 +94,22 @@ MonoBehaviour:
     m_Localized: Compendio de Plantas Susurrantes
     m_Metadata:
       m_Items: []
+  - m_Id: 14882115016105984
+    m_Localized: flora
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14882115049660416
+    m_Localized: curativa
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14882115049660417
+    m_Localized: maldita
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14882115049660418
+    m_Localized: Hierbas y Sabores de Reinos Olvidados
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

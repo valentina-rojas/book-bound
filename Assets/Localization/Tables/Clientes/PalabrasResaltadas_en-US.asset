@@ -94,6 +94,22 @@ MonoBehaviour:
     m_Localized: Compendium of Whispering Plants
     m_Metadata:
       m_Items: []
+  - m_Id: 14882115016105984
+    m_Localized: flora
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14882115049660416
+    m_Localized: healing
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14882115049660417
+    m_Localized: cursed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14882115049660418
+    m_Localized: Herbs and Flavors of Forgotten Realms
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

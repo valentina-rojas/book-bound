@@ -14,8 +14,8 @@ public class Gnomos : MonoBehaviour
     public float velocidad = 2f;
 
     [Header("Audio Gnomos")]
-    public AudioClip[] risasClips;      
-    public AudioClip[] extrasClips;     
+    public AudioClip[] risasClips;
+    public AudioClip[] extrasClips;
     private List<AudioSource> risasSources = new List<AudioSource>();
     private List<Coroutine> risasCoroutines = new List<Coroutine>();
 
@@ -73,6 +73,8 @@ public class Gnomos : MonoBehaviour
 
     private IEnumerator MostrarGnomoAnimacion()
     {
+        CameraManager.instance?.DesactivarBotonCamara();
+
         if (AudioManager.instance != null && AudioManager.instance.sonidoCampanilla != null)
             AudioManager.instance.sonidoCampanilla.Play();
 
@@ -111,7 +113,7 @@ public class Gnomos : MonoBehaviour
             yield return null;
         }
 
-        yield return StartCoroutine(ReproducirExtrasDurante(5f));
+        yield return StartCoroutine(ReproducirExtrasDurante(2f));
 
         bool todosRegresaron = false;
         while (!todosRegresaron)
@@ -133,6 +135,7 @@ public class Gnomos : MonoBehaviour
 
         if (AudioManager.instance != null && AudioManager.instance.sonidoCampanilla != null)
             AudioManager.instance.sonidoCampanilla.Play();
+
         foreach (var gnomo in gnomosInstanciados)
             Destroy(gnomo);
         foreach (var c in risasCoroutines)
@@ -142,10 +145,17 @@ public class Gnomos : MonoBehaviour
         risasCoroutines.Clear();
 
         animacionEjecutada = true;
-        catDialogues?.IniciarDialogoExtraDesdeLista(
-            new string[] { "Gnomos1", "Gnomos2" },  
-            "Extra"
-        );
+
+        if (catDialogues != null)
+        {
+            catDialogues.IniciarDialogoExtraDesdeLista(
+                new string[] { "Gnomos1", "Gnomos2" },
+                "Extra"
+            );
+        }
+
+        CameraManager.instance?.ActivarBotonCamara();
+        CameraManager.instance?.ActivarBotonCamaraTuto();
     }
 
     private IEnumerator RisaAleatoria(AudioSource src)
@@ -167,7 +177,7 @@ public class Gnomos : MonoBehaviour
 
         while (tiempo < duracion)
         {
-            int cantidad = Random.Range(2, 4); 
+            int cantidad = Random.Range(2, 4);
 
             for (int i = 0; i < cantidad; i++)
             {

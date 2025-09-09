@@ -73,12 +73,10 @@ public class QuizManager : MonoBehaviour
         correctCount = 0;
         incorrectCount = 0;
         currentQuestionIndex = 0;
-
         currentQuestions = preguntasPersonaje;
-
         quizPanel.SetActive(true);
         resultsPanel.SetActive(false);
-
+        CameraManager.instance?.DesactivarBotonCamara();
         NextQuestion();
     }
 
@@ -141,7 +139,6 @@ public class QuizManager : MonoBehaviour
     {
         quizPanel.SetActive(false);
         resultsPanel.SetActive(true);
-
         correctCountText.text = correctCount.ToString();
         incorrectCountText.text = incorrectCount.ToString();
     }
@@ -149,7 +146,8 @@ public class QuizManager : MonoBehaviour
     private void CloseResults()
     {
         resultsPanel.SetActive(false);
-
+        CameraManager.instance?.ActivarBotonCamara();
+        CameraManager.instance?.ActivarBotonCamaraTuto();
         if (GameManager.instance != null)
             GameManager.instance.CompletarTrivia(correctCount, incorrectCount);
     }

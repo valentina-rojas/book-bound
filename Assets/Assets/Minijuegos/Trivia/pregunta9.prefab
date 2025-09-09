@@ -49,9 +49,9 @@ MonoBehaviour:
   - localizationKey: A26
     correct: 0
     text: 7
-  - localizationKey: A25
-    correct: 1
-    text: 4
   - localizationKey: A27
-    correct: 0
+    correct: 1
     text: 8
+  - localizationKey: A25
+    correct: 0
+    text: 4
