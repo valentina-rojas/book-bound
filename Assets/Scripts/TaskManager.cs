@@ -97,6 +97,7 @@ public class TaskManager : MonoBehaviour
 
         if (TendCat.instance != null)
             TendCat.instance.ActualizarVisibilidadObjetos();
+            DragRegadera.instance.ActualizarVisibilidadRegadera();
     }
 
     public void MostrarTareas()

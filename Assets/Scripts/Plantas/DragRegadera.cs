@@ -5,22 +5,33 @@ using System.Collections.Generic;
 
 public class DragRegadera : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
+    #region Singleton
+    public static DragRegadera instance;
+    #endregion
+
+    #region Referencias
     private Canvas canvas;
     private RectTransform rectTransform;
     private Vector3 posicionInicial;
     private Image image;
     private Transform parentOriginal;
+    private PlantWithRegadera plantaActual;
+    #endregion
 
-    [Header("Configuración")]
+    #region Configuración
     public float rotationWhenWatering = 45f;
     public float wateringDistance = 100f;
 
-    private PlantWithRegadera plantaActual;
     private bool sobrePlanta = false;
     private bool estaArrastrando = false;
+    #endregion
 
+    #region Unity
     private void Awake()
     {
+        if (instance == null) instance = this;
+        else Destroy(gameObject);
+
         canvas = GetComponentInParent<Canvas>();
         rectTransform = GetComponent<RectTransform>();
         image = GetComponent<Image>();
@@ -39,7 +50,9 @@ public class DragRegadera : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
             plantaActual.RegarTick(Time.deltaTime);
         }
     }
+    #endregion
 
+    #region Drag Handlers
     public void OnBeginDrag(PointerEventData eventData)
     {
         image.raycastTarget = false;
@@ -62,10 +75,30 @@ public class DragRegadera : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
         }
     }
 
+    public void OnEndDrag(PointerEventData eventData)
+    {
+        estaArrastrando = false;
+
+        if (plantaActual != null)
+        {
+            plantaActual.DetenerSonidoRegadera();
+            plantaActual = null;
+        }
+
+        rectTransform.SetParent(parentOriginal, true);
+        rectTransform.localPosition = posicionInicial;
+        rectTransform.rotation = Quaternion.identity;
+        image.raycastTarget = true;
+
+        sobrePlanta = false;
+    }
+    #endregion
+
+    #region Plant Detection
     private void DetectarPlantas(Vector2 screenPosition)
     {
         List<PlantWithRegadera> plantasActivas = ObtenerPlantasActivas();
-        
+
         bool encontroPlanta = false;
         PlantWithRegadera nuevaPlanta = null;
 
@@ -87,7 +120,7 @@ public class DragRegadera : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
             {
                 if (plantaActual != null)
                     plantaActual.DetenerSonidoRegadera();
-                
+
                 plantaActual = nuevaPlanta;
             }
         }
@@ -106,10 +139,10 @@ public class DragRegadera : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
     private List<PlantWithRegadera> ObtenerPlantasActivas()
     {
         List<PlantWithRegadera> activas = new List<PlantWithRegadera>();
-        
+
         if (PlantManager.instance != null)
         {
-            foreach (var planta in FindObjectsOfType<PlantWithRegadera>())
+            foreach (var planta in GameObject.FindObjectsByType<PlantWithRegadera>(FindObjectsSortMode.None))
             {
                 if (planta.activaHoy && !planta.IsFullyWatered && planta.gameObject.activeInHierarchy)
                 {
@@ -117,7 +150,7 @@ public class DragRegadera : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
                 }
             }
         }
-        
+
         return activas;
     }
 
@@ -128,9 +161,9 @@ public class DragRegadera : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
             if (!cam.gameObject.activeInHierarchy || !cam.enabled) continue;
 
             Vector3 plantaScreenPos = cam.WorldToScreenPoint(planta.transform.position);
-            
+
             float distancia = Vector2.Distance(screenPosition, plantaScreenPos);
-            float umbralDeteccion = 50f; 
+            float umbralDeteccion = 50f;
 
             if (distancia <= umbralDeteccion)
             {
@@ -140,22 +173,13 @@ public class DragRegadera : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 
         return false;
     }
+    #endregion
 
-    public void OnEndDrag(PointerEventData eventData)
+    #region Visibilidad
+    public void ActualizarVisibilidadRegadera()
     {
-        estaArrastrando = false;
-        
-        if (plantaActual != null)
-        {
-            plantaActual.DetenerSonidoRegadera();
-            plantaActual = null;
-        }
-
-        rectTransform.SetParent(parentOriginal, true);
-        rectTransform.localPosition = posicionInicial;
-        rectTransform.rotation = Quaternion.identity;
-        image.raycastTarget = true;
-        
-        sobrePlanta = false;
+        if (TaskManager.instance == null) return;
+        gameObject.SetActive(TaskManager.instance.EsTareaActiva(4));
     }
+    #endregion
 }

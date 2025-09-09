@@ -11,19 +11,15 @@ public class TendCat : MonoBehaviour
     public GameObject platitoGO;
 
     #region Cepillado
-    public RectTransform cepilloUI;
     public RectTransform areaCepilladoUI;
     public float tiempoNecesario = 2f;
     public Slider barraCepilladoUI;
 
-    private Vector2 ultimaPosicionCepillo;
-    private bool estaMoviendose = false;
     private float tiempoSobreAreaCepillado = 0f;
     private bool tareaCepillarCompletada = false;
     #endregion
 
     #region Alimentar
-    public RectTransform bolsaComidaUI;
     public RectTransform platitoUI;
     public Sprite platitoLlenoSprite;
     public Sprite platitoVacioSprite;
@@ -53,8 +49,6 @@ public class TendCat : MonoBehaviour
 
     private void Update()
     {
-        VerificarCepillado();
-        VerificarAlimentacion();
         VerificarAcariciar();
     }
     #endregion
@@ -73,34 +67,24 @@ public class TendCat : MonoBehaviour
     #endregion
 
     #region Cepillado
-    private void VerificarCepillado()
+    public void VerificarCepilladoConItem(Vector3 screenPos)
     {
         if (tareaCepillarCompletada) return;
 
-        Vector2 posicionCepillo = RectTransformUtility.WorldToScreenPoint(camara, cepilloUI.position);
-        estaMoviendose = (Vector2.Distance(posicionCepillo, ultimaPosicionCepillo) > 0.5f);
-        ultimaPosicionCepillo = posicionCepillo;
-
-        if (RectTransformUtility.RectangleContainsScreenPoint(areaCepilladoUI, posicionCepillo, camara) && estaMoviendose)
+        if (RectTransformUtility.RectangleContainsScreenPoint(areaCepilladoUI, screenPos, camara))
         {
-            if (barraCepilladoUI != null && !barraCepilladoUI.gameObject.activeSelf)
-                barraCepilladoUI.gameObject.SetActive(true);
-
             tiempoSobreAreaCepillado += Time.deltaTime;
-
             if (barraCepilladoUI != null)
+            {
+                barraCepilladoUI.gameObject.SetActive(true);
                 barraCepilladoUI.value = tiempoSobreAreaCepillado / tiempoNecesario;
+            }
 
             if (tiempoSobreAreaCepillado >= tiempoNecesario)
             {
                 tareaCepillarCompletada = true;
-
-                if (barraCepilladoUI != null)
-                {
-                    barraCepilladoUI.value = 1f;
-                    barraCepilladoUI.gameObject.SetActive(false);
-                }
-
+                barraCepilladoUI.value = 1f;
+                barraCepilladoUI.gameObject.SetActive(false);
                 AudioManager.instance.sonidoGato.Play();
                 TaskManager.instance.CompletarTareaPorID(2);
             }
@@ -119,17 +103,15 @@ public class TendCat : MonoBehaviour
     #endregion
 
     #region Alimentar
-    private void VerificarAlimentacion()
+    public void VerificarAlimentacionConItem(Vector3 screenPos)
     {
         if (tareaAlimentarCompletada) return;
 
         Rect rectPlatito = GetScreenRect(platitoUI);
-        Rect rectBolsa = GetScreenRect(bolsaComidaUI);
 
-        if (rectPlatito.Overlaps(rectBolsa))
+        if (rectPlatito.Contains(screenPos))
         {
             tareaAlimentarCompletada = true;
-
             AudioManager.instance.sonidoGato.Play();
             TaskManager.instance.CompletarTareaPorID(3);
 
@@ -141,7 +123,6 @@ public class TendCat : MonoBehaviour
     #endregion
 
     #region Acariciar
-
     private void VerificarAcariciar()
     {
         if (CameraManager.instance.CurrentCameraIndex != 0)
@@ -158,7 +139,7 @@ public class TendCat : MonoBehaviour
             if (RectTransformUtility.RectangleContainsScreenPoint(areaCepilladoUI, mousePos, camara))
             {
                 AudioManager.instance.sonidoRonroneo.Play();
-                acariciando = true; 
+                acariciando = true;
 
                 if (corazonesGO != null)
                 {
@@ -176,7 +157,7 @@ public class TendCat : MonoBehaviour
 
         if (acariciando && !AudioManager.instance.sonidoRonroneo.isPlaying)
         {
-            acariciando = false; 
+            acariciando = false;
             if (corazonesGO != null)
                 corazonesGO.SetActive(false);
         }
