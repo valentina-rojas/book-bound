@@ -28,6 +28,7 @@ public class ShelfEstante : MonoBehaviour
     public void VerificarEstante()
     {
         int librosCorrectos = 0;
+        int librosTotales = 0;
         bool hayLibroIncorrecto = false;
 
         foreach (Transform slot in transform)
@@ -37,6 +38,7 @@ public class ShelfEstante : MonoBehaviour
                 Transform libro = slot.GetChild(0);
                 if (!libro.gameObject.activeInHierarchy) continue;
 
+                librosTotales++;
                 BookData data = libro.GetComponent<BookData>();
                 if (data != null)
                 {
@@ -52,24 +54,29 @@ public class ShelfEstante : MonoBehaviour
             }
         }
 
-        if (!hayLibroIncorrecto && librosCorrectos == cantidadEsperadaActual)
+        Debug.Log($"Estante {genero}: Correctos={librosCorrectos}, Esperados={cantidadEsperadaActual}, Incorrectos={hayLibroIncorrecto}");
+
+        if (hayLibroIncorrecto || librosCorrectos != cantidadEsperadaActual)
         {
-            cartelGenero.color = new Color(1f, 0.85f, 0f);
+            cartelGenero.color = colorOriginal;
+            Debug.Log($"Estante {genero} NO está correcto");
         }
         else
         {
-            cartelGenero.color = colorOriginal;
+            cartelGenero.color = new Color(1f, 0.85f, 0f);
+            Debug.Log($"Estante {genero} está correcto");
         }
     }
 
     public void ActualizarCantidadEsperada()
     {
         cantidadEsperadaActual = ShelfManager.instance.ObtenerLibrosEsperadosParaGenero(genero);
+        Debug.Log($"Estante {genero}: Nueva cantidad esperada = {cantidadEsperadaActual}");
         VerificarEstante();
     }
 
     public void MarcarCartelComoCorrecto()
     {
-        cartelGenero.color = new Color(1f, 0.85f, 0f); 
+        cartelGenero.color = new Color(1f, 0.85f, 0f);
     }
 }

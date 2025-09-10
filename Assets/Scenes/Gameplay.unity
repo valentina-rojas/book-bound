@@ -142,7 +142,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7005782736949932808, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Name
-      value: 10
+      value: 10misterio
       objectReference: {fileID: 0}
     - target: {fileID: 8963061120737835069, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Pivot.x
@@ -1233,7 +1233,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7005782736949932808, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Name
-      value: 5
+      value: 5recetas
       objectReference: {fileID: 0}
     - target: {fileID: 8963061120737835069, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Pivot.x
@@ -1341,7 +1341,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7005782736949932808, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Name
-      value: 8
+      value: "8herbolog\xEDa"
       objectReference: {fileID: 0}
     - target: {fileID: 8963061120737835069, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Pivot.x
@@ -3311,7 +3311,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7005782736949932808, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Name
-      value: 1
+      value: "1herbolog\xEDa"
       objectReference: {fileID: 0}
     - target: {fileID: 8963061120737835069, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Pivot.x
@@ -3638,7 +3638,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7005782736949932808, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Name
-      value: 5
+      value: "5herbolog\xEDa"
       objectReference: {fileID: 0}
     - target: {fileID: 8963061120737835069, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Pivot.x
@@ -3853,7 +3853,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7005782736949932808, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Name
-      value: 2
+      value: 2terror
       objectReference: {fileID: 0}
     - target: {fileID: 8963061120737835069, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Pivot.x
@@ -4356,7 +4356,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7005782736949932808, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Name
-      value: 8
+      value: 8misterio
       objectReference: {fileID: 0}
     - target: {fileID: 8963061120737835069, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Pivot.x
@@ -4616,7 +4616,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7005782736949932808, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Name
-      value: 7
+      value: 7historia
       objectReference: {fileID: 0}
     - target: {fileID: 8963061120737835069, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Pivot.x
@@ -5108,7 +5108,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7005782736949932808, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Name
-      value: 4
+      value: 4historia
       objectReference: {fileID: 0}
     - target: {fileID: 8963061120737835069, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Pivot.x
@@ -6091,7 +6091,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7005782736949932808, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Name
-      value: 6
+      value: 6misterio
       objectReference: {fileID: 0}
     - target: {fileID: 8963061120737835069, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Pivot.x
@@ -7291,7 +7291,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7005782736949932808, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Name
-      value: 8
+      value: 8fantasia
       objectReference: {fileID: 0}
     - target: {fileID: 8963061120737835069, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Pivot.x
@@ -8797,7 +8797,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7005782736949932808, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Name
-      value: 7
+      value: 7recetas
       objectReference: {fileID: 0}
     - target: {fileID: 8963061120737835069, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Pivot.x
@@ -9309,7 +9309,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7005782736949932808, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Name
-      value: 4
+      value: 4fantasia
       objectReference: {fileID: 0}
     - target: {fileID: 8963061120737835069, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Pivot.x
@@ -9419,7 +9419,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7005782736949932808, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Name
-      value: 2
+      value: 2misterio
       objectReference: {fileID: 0}
     - target: {fileID: 8963061120737835069, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Pivot.x
@@ -10270,7 +10270,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7005782736949932808, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Name
-      value: 7
+      value: 7fantasia
       objectReference: {fileID: 0}
     - target: {fileID: 8963061120737835069, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Pivot.x
@@ -12500,7 +12500,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7005782736949932808, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Name
-      value: 1
+      value: 1recetas
       objectReference: {fileID: 0}
     - target: {fileID: 8963061120737835069, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Pivot.x
@@ -13244,7 +13244,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7005782736949932808, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Name
-      value: 8
+      value: 8historia
       objectReference: {fileID: 0}
     - target: {fileID: 8963061120737835069, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Pivot.x
@@ -14041,7 +14041,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7005782736949932808, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Name
-      value: 6
+      value: 6recetas
       objectReference: {fileID: 0}
     - target: {fileID: 8963061120737835069, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Pivot.x
@@ -17017,7 +17017,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7005782736949932808, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Name
-      value: 1
+      value: 1pociones
       objectReference: {fileID: 0}
     - target: {fileID: 8963061120737835069, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Pivot.x
@@ -17130,7 +17130,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7005782736949932808, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Name
-      value: 10
+      value: 10fantasia
       objectReference: {fileID: 0}
     - target: {fileID: 8963061120737835069, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Pivot.x
@@ -17430,7 +17430,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7005782736949932808, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Name
-      value: 3
+      value: 3recetas
       objectReference: {fileID: 0}
     - target: {fileID: 8963061120737835069, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Pivot.x
@@ -19222,7 +19222,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7005782736949932808, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Name
-      value: 8
+      value: 8recetas
       objectReference: {fileID: 0}
     - target: {fileID: 8963061120737835069, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Pivot.x
@@ -21123,7 +21123,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7005782736949932808, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Name
-      value: 9
+      value: 9historia
       objectReference: {fileID: 0}
     - target: {fileID: 8963061120737835069, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Pivot.x
@@ -21657,7 +21657,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7005782736949932808, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Name
-      value: 5
+      value: 5terror
       objectReference: {fileID: 0}
     - target: {fileID: 8963061120737835069, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Pivot.x
@@ -22710,7 +22710,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7005782736949932808, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Name
-      value: 3
+      value: 3terror
       objectReference: {fileID: 0}
     - target: {fileID: 8963061120737835069, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Pivot.x
@@ -22921,7 +22921,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7005782736949932808, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Name
-      value: 4
+      value: "4herbolog\xEDa"
       objectReference: {fileID: 0}
     - target: {fileID: 8963061120737835069, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Pivot.x
@@ -23158,7 +23158,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7005782736949932808, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Name
-      value: 8
+      value: 8terror
       objectReference: {fileID: 0}
     - target: {fileID: 8963061120737835069, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Pivot.x
@@ -24298,7 +24298,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7005782736949932808, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Name
-      value: 7
+      value: 7terror
       objectReference: {fileID: 0}
     - target: {fileID: 8963061120737835069, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Pivot.x
@@ -24941,7 +24941,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7005782736949932808, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Name
-      value: 5
+      value: 5pociones
       objectReference: {fileID: 0}
     - target: {fileID: 8963061120737835069, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Pivot.x
@@ -25275,7 +25275,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7005782736949932808, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Name
-      value: 2
+      value: 2historia
       objectReference: {fileID: 0}
     - target: {fileID: 8963061120737835069, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Pivot.x
@@ -27574,7 +27574,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7005782736949932808, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Name
-      value: 3
+      value: 3historia
       objectReference: {fileID: 0}
     - target: {fileID: 8963061120737835069, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Pivot.x
@@ -29847,7 +29847,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7005782736949932808, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Name
-      value: 6
+      value: 6fantasia
       objectReference: {fileID: 0}
     - target: {fileID: 8963061120737835069, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Pivot.x
@@ -29993,7 +29993,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7005782736949932808, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Name
-      value: 3
+      value: 3misterio
       objectReference: {fileID: 0}
     - target: {fileID: 8963061120737835069, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Pivot.x
@@ -31264,7 +31264,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7005782736949932808, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Name
-      value: 6
+      value: 6pociones
       objectReference: {fileID: 0}
     - target: {fileID: 8963061120737835069, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Pivot.x
@@ -32971,7 +32971,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7005782736949932808, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Name
-      value: 9
+      value: 9terror
       objectReference: {fileID: 0}
     - target: {fileID: 8963061120737835069, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Pivot.x
@@ -33571,7 +33571,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7005782736949932808, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Name
-      value: 6
+      value: "6herbolog\xEDa"
       objectReference: {fileID: 0}
     - target: {fileID: 8963061120737835069, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Pivot.x
@@ -35446,7 +35446,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7005782736949932808, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Name
-      value: 3
+      value: "3herbolog\xEDa"
       objectReference: {fileID: 0}
     - target: {fileID: 8963061120737835069, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Pivot.x
@@ -35608,7 +35608,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7005782736949932808, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Name
-      value: 4
+      value: 4recetas
       objectReference: {fileID: 0}
     - target: {fileID: 8963061120737835069, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Pivot.x
@@ -36288,7 +36288,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7005782736949932808, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Name
-      value: 4
+      value: 4terror
       objectReference: {fileID: 0}
     - target: {fileID: 8963061120737835069, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Pivot.x
@@ -36712,7 +36712,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7005782736949932808, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Name
-      value: 2
+      value: 2fantasia
       objectReference: {fileID: 0}
     - target: {fileID: 8963061120737835069, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Pivot.x
@@ -39338,7 +39338,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7005782736949932808, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Name
-      value: 9
+      value: 9pociones
       objectReference: {fileID: 0}
     - target: {fileID: 8963061120737835069, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Pivot.x
@@ -42701,7 +42701,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7005782736949932808, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Name
-      value: 7
+      value: 7pociones
       objectReference: {fileID: 0}
     - target: {fileID: 8963061120737835069, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Pivot.x
@@ -42929,7 +42929,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7005782736949932808, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Name
-      value: 4
+      value: 4misterio
       objectReference: {fileID: 0}
     - target: {fileID: 8963061120737835069, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Pivot.x
@@ -43625,7 +43625,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7005782736949932808, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Name
-      value: 5
+      value: 5misterio
       objectReference: {fileID: 0}
     - target: {fileID: 8963061120737835069, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Pivot.x
@@ -46028,7 +46028,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7005782736949932808, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Name
-      value: 1
+      value: 1misterio
       objectReference: {fileID: 0}
     - target: {fileID: 8963061120737835069, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Pivot.x
@@ -46645,7 +46645,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7005782736949932808, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Name
-      value: 2
+      value: "2herbolog\xEDa"
       objectReference: {fileID: 0}
     - target: {fileID: 8963061120737835069, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Pivot.x
@@ -47654,7 +47654,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7005782736949932808, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Name
-      value: 9
+      value: 9fantasia
       objectReference: {fileID: 0}
     - target: {fileID: 8963061120737835069, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Pivot.x
@@ -47915,7 +47915,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7005782736949932808, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Name
-      value: 2
+      value: 2recetas
       objectReference: {fileID: 0}
     - target: {fileID: 8963061120737835069, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Pivot.x
@@ -48780,7 +48780,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7005782736949932808, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Name
-      value: 10
+      value: "10herbolog\xEDa"
       objectReference: {fileID: 0}
     - target: {fileID: 8963061120737835069, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Pivot.x
@@ -49743,7 +49743,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 078781ed91eb1ff4bbc84251fccfc961, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  todosLosItems: []
 --- !u!1 &1468377846
 GameObject:
   m_ObjectHideFlags: 0
@@ -50725,7 +50724,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7005782736949932808, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Name
-      value: 4
+      value: 4pociones
       objectReference: {fileID: 0}
     - target: {fileID: 8963061120737835069, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Pivot.x
@@ -51200,7 +51199,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7005782736949932808, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Name
-      value: 6
+      value: 6terror
       objectReference: {fileID: 0}
     - target: {fileID: 8963061120737835069, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Pivot.x
@@ -51411,7 +51410,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7005782736949932808, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Name
-      value: 9
+      value: "9herbolog\xEDa"
       objectReference: {fileID: 0}
     - target: {fileID: 8963061120737835069, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Pivot.x
@@ -52216,7 +52215,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7005782736949932808, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Name
-      value: 1
+      value: 1terror
       objectReference: {fileID: 0}
     - target: {fileID: 8963061120737835069, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Pivot.x
@@ -54854,7 +54853,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7005782736949932808, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Name
-      value: 6
+      value: 6historia
       objectReference: {fileID: 0}
     - target: {fileID: 8963061120737835069, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Pivot.x
@@ -56558,7 +56557,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7005782736949932808, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Name
-      value: 9
+      value: 9misterio
       objectReference: {fileID: 0}
     - target: {fileID: 8963061120737835069, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Pivot.x
@@ -56801,7 +56800,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7005782736949932808, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Name
-      value: 5
+      value: 5fantasia
       objectReference: {fileID: 0}
     - target: {fileID: 8963061120737835069, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Pivot.x
@@ -57286,7 +57285,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7005782736949932808, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Name
-      value: 3
+      value: 3pociones
       objectReference: {fileID: 0}
     - target: {fileID: 8963061120737835069, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Pivot.x
@@ -57399,7 +57398,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7005782736949932808, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Name
-      value: 3
+      value: 3fantasia
       objectReference: {fileID: 0}
     - target: {fileID: 8963061120737835069, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Pivot.x
@@ -61765,7 +61764,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7005782736949932808, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Name
-      value: 1
+      value: 1fantasia
       objectReference: {fileID: 0}
     - target: {fileID: 8963061120737835069, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Pivot.x
@@ -61878,7 +61877,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7005782736949932808, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Name
-      value: 7
+      value: 7misterio
       objectReference: {fileID: 0}
     - target: {fileID: 8963061120737835069, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Pivot.x
@@ -64485,7 +64484,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7005782736949932808, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Name
-      value: 7
+      value: "7herbolog\xEDa"
       objectReference: {fileID: 0}
     - target: {fileID: 8963061120737835069, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Pivot.x
@@ -64963,7 +64962,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7005782736949932808, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Name
-      value: 10
+      value: 10pociones
       objectReference: {fileID: 0}
     - target: {fileID: 8963061120737835069, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Pivot.x
@@ -65587,7 +65586,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7005782736949932808, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Name
-      value: 8
+      value: 8pociones
       objectReference: {fileID: 0}
     - target: {fileID: 8963061120737835069, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Pivot.x
@@ -66840,7 +66839,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7005782736949932808, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Name
-      value: 1
+      value: 1historia
       objectReference: {fileID: 0}
     - target: {fileID: 8963061120737835069, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Pivot.x
@@ -68431,7 +68430,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7005782736949932808, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Name
-      value: 5
+      value: 5historia
       objectReference: {fileID: 0}
     - target: {fileID: 8963061120737835069, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Pivot.x
@@ -70390,7 +70389,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7005782736949932808, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Name
-      value: 2
+      value: 2pociones
       objectReference: {fileID: 0}
     - target: {fileID: 8963061120737835069, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Pivot.x

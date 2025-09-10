@@ -71,17 +71,20 @@ public class GameManager : MonoBehaviour
             Debug.LogError("UIManager no encontrado en la escena.");
         if (characterSpawn == null)
             Debug.LogError("CharacterSpawn no encontrado en la escena.");
-        
+
         SaveData data = SaveManager.CargarNivel();
         nivelActual = Mathf.Max(1, data.nivelActual);
-        
-        // Inicializar cámaras según el nivel cargado
+        Invoke("RestaurarEstadoJuego", 0.2f);
         CameraManager.instance?.InicializarCamarasDesdeCarga(nivelActual);
-        
         StartCoroutine(MostrarCartelInicioDia());
     }
-    #endregion
 
+    private void RestaurarEstadoJuego()
+    {
+        SaveData data = SaveManager.CargarNivel();
+        SaveManager.RestaurarLibros(data);
+    }
+    #endregion
 
     #region Flujo de Día y Niveles
     private IEnumerator MostrarCartelInicioDia()
@@ -109,10 +112,8 @@ public class GameManager : MonoBehaviour
             textoDia.text = $"Día {nivelActual}";
         }
 
-        // Asegurar que las cámaras estén configuradas correctamente
         if (CameraManager.instance != null)
         {
-            // Activar botones según nivel actual
             CameraManager.instance.botonCambiarCamara3.gameObject.SetActive(nivelActual > 1);
             CameraManager.instance.botonCambiarCamara2.gameObject.SetActive(nivelActual > 2);
             CameraManager.instance.botonCambiarCamara4.gameObject.SetActive(nivelActual > 3);

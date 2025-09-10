@@ -91,4 +91,63 @@ public class BookData : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
             callback?.Invoke(descripcion);
     }
     #endregion
+
+    #region Sistema de Guardado
+    public LibroGuardado ToLibroGuardado()
+    {
+        return new LibroGuardado()
+        {
+            libroID = this.libroID,
+            tipoLibro = this.tipoLibro,
+            titulo = this.titulo,
+            descripcion = this.descripcion,
+            estaHabilitado = this.gameObject.activeSelf,
+            posicion = this.transform.localPosition, 
+            parentPath = GetParentPath(this.transform.parent)
+        };
+    }
+
+    private string GetParentPath(Transform parent)
+    {
+        if (parent == null) 
+        {
+            Debug.LogWarning("El libro no tiene padre asignado");
+            return "";
+        }
+        
+        return parent.name; 
+    }
+
+    public void FromLibroGuardado(LibroGuardado libroGuardado)
+    {
+        this.libroID = libroGuardado.libroID;
+        this.tipoLibro = libroGuardado.tipoLibro;
+        this.titulo = libroGuardado.titulo;
+        this.descripcion = libroGuardado.descripcion;
+        
+        if (!string.IsNullOrEmpty(libroGuardado.parentPath))
+        {
+            ShelfSlots[] todosLosSlots = GameObject.FindObjectsOfType<ShelfSlots>(true);
+            Transform parentSlot = System.Array.Find(todosLosSlots, s => s.gameObject.name == libroGuardado.parentPath)?.transform;
+            
+            if (parentSlot != null)
+            {
+                this.transform.SetParent(parentSlot);
+                Debug.Log($"Libro {libroID} asignado a slot: {parentSlot.name}");
+            }
+            else
+            {
+                Debug.LogWarning($"No se encontró el slot: {libroGuardado.parentPath}");
+            }
+        }
+        
+        this.transform.localPosition = libroGuardado.posicion;
+        this.gameObject.SetActive(libroGuardado.estaHabilitado);
+        
+        if (transform.parent != null)
+        {
+            LayoutRebuilder.ForceRebuildLayoutImmediate(transform.parent as RectTransform);
+        }
+    }
+    #endregion
 }

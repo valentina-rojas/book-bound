@@ -23,6 +23,16 @@ public class ShelfManager : MonoBehaviour
         instance = this;
     }
 
+    public void ForzarVerificacionTodosEstantes()
+    {
+        ShelfEstante[] estantes = FindObjectsByType<ShelfEstante>(FindObjectsSortMode.None);
+        foreach (ShelfEstante estante in estantes)
+        {
+            estante.VerificarEstante();
+        }
+        Debug.Log("✓ Verificación forzada de todos los estantes completada");
+    }
+
     public int ObtenerLibrosEsperadosParaGenero(string genero)
     {
         if (librosEsperadosPorGenero.TryGetValue(genero, out int cantidad))
@@ -102,18 +112,20 @@ public class ShelfManager : MonoBehaviour
                 }
             }
 
-            if (librosCorrectos != ObtenerLibrosEsperadosParaGenero(estante.genero) || hayLibroIncorrecto)
+            bool estanteCorrecto = !hayLibroIncorrecto && librosCorrectos == ObtenerLibrosEsperadosParaGenero(estante.genero);
+            
+            if (!estanteCorrecto)
             {
                 todosCorrectos = false;
             }
 
-            estante.VerificarEstante();
+            estante.VerificarEstante(); 
         }
 
         if (todosCorrectos)
         {
             TaskManager.instance.CompletarTareaPorID(1);
-            MarcarTodosLosCartelesComoCorrectos();
+            MarcarTodosLosCartelesComoCorrectos(); 
         }
     }
 
@@ -170,7 +182,7 @@ public class ShelfManager : MonoBehaviour
 
         librosDesorganizados = true;
 
-        Debug.Log($"🔀 Libros reorganizados: {librosActivos.Count}");
+        Debug.Log($"Libros reorganizados: {librosActivos.Count}");
     }
 
     private void Shuffle<T>(List<T> lista)
