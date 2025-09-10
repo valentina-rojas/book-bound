@@ -19099,7 +19099,7 @@ MonoBehaviour:
   - {fileID: -1551877890, guid: c389791c9b011554c8f8baf209b62f58, type: 3}
   plantRenderer: {fileID: 576257802}
   barraRiegoUI: {fileID: 549725995}
-  tiempoNecesarioRiego: 2
+  tiempoNecesarioRiego: 1
   nivelMinimo: 2
   isFullyWatered: 0
   activaHoy: 0
@@ -19667,7 +19667,7 @@ MonoBehaviour:
   - {fileID: 840086402, guid: bfb5e1b1690a48b4f97a962ba2f2fb5a, type: 3}
   plantRenderer: {fileID: 587792349}
   barraRiegoUI: {fileID: 946950665}
-  tiempoNecesarioRiego: 2
+  tiempoNecesarioRiego: 1
   nivelMinimo: 2
   isFullyWatered: 0
   activaHoy: 0
@@ -26616,7 +26616,7 @@ MonoBehaviour:
   - {fileID: -429380293, guid: 97d99b69898283e47a43f34c568c5249, type: 3}
   plantRenderer: {fileID: 813529479}
   barraRiegoUI: {fileID: 1101585706}
-  tiempoNecesarioRiego: 2
+  tiempoNecesarioRiego: 1
   nivelMinimo: 2
   isFullyWatered: 0
   activaHoy: 0
@@ -34502,7 +34502,7 @@ MonoBehaviour:
   - {fileID: 1784825107, guid: 77f9c09154ca06342b7af5399d520b59, type: 3}
   plantRenderer: {fileID: 1041073874}
   barraRiegoUI: {fileID: 699506646}
-  tiempoNecesarioRiego: 2
+  tiempoNecesarioRiego: 1
   nivelMinimo: 2
   isFullyWatered: 0
   activaHoy: 0
@@ -58757,7 +58757,7 @@ MonoBehaviour:
   plantRenderer: {fileID: 1764503831}
   barraRiegoUI: {fileID: 488369052}
   tiempoNecesarioRiego: 1
-  nivelMinimo: 1
+  nivelMinimo: 2
   isFullyWatered: 0
   activaHoy: 0
 --- !u!212 &1764503831
@@ -60614,7 +60614,7 @@ MonoBehaviour:
   - {fileID: 1784825107, guid: 77f9c09154ca06342b7af5399d520b59, type: 3}
   plantRenderer: {fileID: 1811326880}
   barraRiegoUI: {fileID: 386106925}
-  tiempoNecesarioRiego: 2
+  tiempoNecesarioRiego: 1
   nivelMinimo: 2
   isFullyWatered: 0
   activaHoy: 0
@@ -63063,7 +63063,7 @@ MonoBehaviour:
   - {fileID: -429380293, guid: 97d99b69898283e47a43f34c568c5249, type: 3}
   plantRenderer: {fileID: 1884971299}
   barraRiegoUI: {fileID: 1979857828}
-  tiempoNecesarioRiego: 2
+  tiempoNecesarioRiego: 1
   nivelMinimo: 3
   isFullyWatered: 0
   activaHoy: 0
@@ -68320,7 +68320,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7005782736949932808, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Name
-      value: 9
+      value: 9recetas
       objectReference: {fileID: 0}
     - target: {fileID: 8963061120737835069, guid: 9c7be9a11cc43034a838897aa6669729, type: 3}
       propertyPath: m_Pivot.x

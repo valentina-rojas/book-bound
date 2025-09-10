@@ -77,7 +77,7 @@ public class CobwebManager : MonoBehaviour
                 if (nivelActual == 1)
                 {
                     t.gameObject.SetActive(true);
-                    t.puedeInteractuar = false; 
+                    t.puedeInteractuar = false;
                     t.interaccionFueHabilitada = false;
 
                     if (!telarañasActivas.Contains(t))
@@ -85,6 +85,9 @@ public class CobwebManager : MonoBehaviour
                 }
                 continue; 
             }
+
+            if (nivelActual == 1)
+                continue;
 
             if (t.nivelMinimo <= nivelActual)
             {
@@ -95,26 +98,29 @@ public class CobwebManager : MonoBehaviour
             }
         }
 
-        foreach (var sala in telarañasPorSala.Keys)
+        if (nivelActual > 1)
         {
-            List<CobwebCleaning> lista = telarañasPorSala[sala];
-
-            for (int i = 0; i < lista.Count; i++)
+            foreach (var sala in telarañasPorSala.Keys)
             {
-                CobwebCleaning temp = lista[i];
-                int randomIndex = Random.Range(i, lista.Count);
-                lista[i] = lista[randomIndex];
-                lista[randomIndex] = temp;
-            }
+                List<CobwebCleaning> lista = telarañasPorSala[sala];
 
-            int cantidadActivar = Random.Range(1, Mathf.Min(maxPorSala, lista.Count) + 1);
+                for (int i = 0; i < lista.Count; i++)
+                {
+                    CobwebCleaning temp = lista[i];
+                    int randomIndex = Random.Range(i, lista.Count);
+                    lista[i] = lista[randomIndex];
+                    lista[randomIndex] = temp;
+                }
 
-            for (int i = 0; i < cantidadActivar; i++)
-            {
-                var t = lista[i];
-                t.gameObject.SetActive(true);
-                if (!telarañasActivas.Contains(t))
-                    telarañasActivas.Add(t);
+                int cantidadActivar = Random.Range(1, Mathf.Min(maxPorSala, lista.Count) + 1);
+
+                for (int i = 0; i < cantidadActivar; i++)
+                {
+                    var t = lista[i];
+                    t.gameObject.SetActive(true);
+                    if (!telarañasActivas.Contains(t))
+                        telarañasActivas.Add(t);
+                }
             }
         }
 

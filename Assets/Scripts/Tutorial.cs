@@ -26,7 +26,7 @@ public class Tutorial : MonoBehaviour
         new string[] { "Tuto6", "Tuto7", "Tuto8" },              // Paso 4: Diálogo con primer cliente
         new string[] { "Tuto9", "Tuto10" },                      // Paso 5: Abrir historial tras diálogo
         new string[] { "Tuto11" },                               // Paso 6: Resultado primer cliente
-        new string[] { "Tuto12", "Tuto13", "Tuto14" }                      // Paso 7: Cierre tutorial
+        new string[] { "Tuto12", "Tuto13", "Tuto14" }           // Paso 7: Cierre tutorial
     };
     #endregion
 
@@ -58,9 +58,11 @@ public class Tutorial : MonoBehaviour
 
             CameraManager.instance?.ActivarCamaraPrincipal();
             CameraManager.instance?.ActivarBotonCamara();
+
             flechaTelaraña?.SetActive(false);
             flechaBiblioteca?.SetActive(false);
             flechaVolver?.SetActive(false);
+
             enabled = false; 
         }
     }
@@ -78,7 +80,7 @@ public class Tutorial : MonoBehaviour
     #region Eventos del Cat
     private void OnDialogoUltimaLineaTipeada()
     {
-        if (pasoActual == 0)
+        if (pasoActual == 0 && GameManager.instance.nivelActual == 1)
         {
             StartCoroutine(HabilitarTelaranaConDelay(2f));
         }
@@ -86,19 +88,16 @@ public class Tutorial : MonoBehaviour
 
     private void OnDialogoExtraFinalizado()
     {
-        if (pasoActual == 1)
+        if (pasoActual == 1 && GameManager.instance.nivelActual == 1)
         {
             TaskManager.instance?.OcultarListaTareas();
             CameraManager.instance.ActivarBotonCamara();
             flechaBiblioteca?.SetActive(true);
         }
-        else if (pasoActual == 3)
+        else if (pasoActual == 3 && GameManager.instance.nivelActual == 1)
         {
-            if (GameManager.instance != null && GameManager.instance.nivelActual == 1)
-            {
-                TaskManager.instance.MostrarTareas();
-                TaskManager.instance.botonAbrirTienda.gameObject.SetActive(true);
-            }
+            TaskManager.instance.MostrarTareas();
+            TaskManager.instance.botonAbrirTienda.gameObject.SetActive(true);
         }
         else if (pasoActual == 5)
         {
@@ -134,19 +133,15 @@ public class Tutorial : MonoBehaviour
             {
                 cat.IniciarDialogoExtraDesdeLista(dialogos);
             }
-            else if (pasoActual == 2 && flechaVolver != null)
+            else if (pasoActual == 2 && GameManager.instance.nivelActual == 1)
             {
                 flechaVolver.SetActive(true);
             }
 
-            if (pasoActual == 0)
+            if (pasoActual == 0 && GameManager.instance.nivelActual == 1)
             {
                 flechaTelaraña?.SetActive(true);
                 StartCoroutine(HabilitarTelaranaConDelay(2f));
-            }
-            else if (pasoActual == 1)
-            {
-                flechaBiblioteca?.SetActive(false);
             }
         }
     }

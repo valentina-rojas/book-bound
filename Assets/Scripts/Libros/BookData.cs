@@ -127,7 +127,7 @@ public class BookData : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         
         if (!string.IsNullOrEmpty(libroGuardado.parentPath))
         {
-            ShelfSlots[] todosLosSlots = GameObject.FindObjectsOfType<ShelfSlots>(true);
+            ShelfSlots[] todosLosSlots = Object.FindObjectsByType<ShelfSlots>(FindObjectsSortMode.None);
             Transform parentSlot = System.Array.Find(todosLosSlots, s => s.gameObject.name == libroGuardado.parentPath)?.transform;
             
             if (parentSlot != null)
