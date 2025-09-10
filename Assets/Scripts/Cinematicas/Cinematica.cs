@@ -15,15 +15,18 @@ public class Cinematica : MonoBehaviour
 
     void Start()
     {
-        if (imagenes.Length > 0 && imagenUI != null)
+        Time.timeScale = 1f; 
+
+        if (imagenes != null && imagenes.Length > 0 && imagenUI != null)
         {
             StartCoroutine(ReproducirCinematica());
         }
         else
         {
-            Debug.LogWarning("Faltan referencias en la cinemática.");
+            Debug.LogWarning("Faltan referencias en la cinemática (imagenes o imagenUI).");
         }
     }
+
     IEnumerator ReproducirCinematica()
     {
         while (indiceActual < imagenes.Length)

@@ -67,7 +67,8 @@ public class CheatPanel : MonoBehaviour
         {
             tutorial.SaltarTutorial();
         }
-        SaveManager.GuardarNivel(gm.nivelActual);
+        SaveManager.GuardarNivel(gm.nivelActual, HistorialManager.Instance.GetLibrosPrestados());
+
     }
 
     public void ActualizarPanel()

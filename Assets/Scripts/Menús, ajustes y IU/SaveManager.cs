@@ -1,26 +1,29 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 [System.Serializable]
-public class SaveData
-{
-    public int nivelActual;
-}
+    public class SaveData
+    {
+        public int nivelActual;
+        public List<LibroPrestado> librosPrestados;
+    }
 
-public static class SaveManager
-{
-    private const string SaveKey = "JuegoGuardado";
+    public static class SaveManager
+    {
+        private const string SaveKey = "JuegoGuardado";
 
-    public static void GuardarNivel(int nivel)
+    public static void GuardarNivel(int nivel, List<LibroPrestado> libros)
     {
         SaveData data = new SaveData()
         {
-            nivelActual = nivel
+            nivelActual = nivel,
+            librosPrestados = new List<LibroPrestado>(libros)
         };
 
         string json = JsonUtility.ToJson(data);
         PlayerPrefs.SetString(SaveKey, json);
         PlayerPrefs.Save();
-        Debug.Log($"Juego guardado: Nivel {nivel}");
+        Debug.Log($"Juego guardado: Nivel {nivel}, Libros: {libros.Count}");
     }
 
     public static SaveData CargarNivel()
@@ -29,7 +32,8 @@ public static class SaveManager
         {
             return new SaveData()
             {
-                nivelActual = 0
+                nivelActual = 0,
+                librosPrestados = new List<LibroPrestado>() 
             };
         }
 

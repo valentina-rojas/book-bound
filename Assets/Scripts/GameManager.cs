@@ -214,7 +214,8 @@ public class GameManager : MonoBehaviour
             SceneManager.LoadScene("EscenaFinal");
             return;
         }
-            SaveManager.GuardarNivel(nivelActual);
+            SaveManager.GuardarNivel(nivelActual, HistorialManager.Instance.GetLibrosPrestados());
+
 
         if (CameraManager.instance != null)
             CameraManager.instance.ActivarCamaraPrincipal();

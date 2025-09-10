@@ -38,7 +38,7 @@ public class CharacterSpawn : MonoBehaviour
             if (atributos != null && atributos.tipoDePedido == CharacterAttributes.TipoDePedido.DevolverLibro)
             {
                 HistorialManager historial = FindFirstObjectByType<HistorialManager>();
-                if (historial == null || !historial.GetLibrosPrestados().Contains(atributos.tituloLibroDevuelto))
+                if (historial == null || !historial.GetLibrosPrestados().Exists(l => l.titulo == atributos.tituloLibroDevuelto))
                 {
                     Debug.Log($"[SKIP] {atributos.nombreDelCliente} no será instanciado porque el libro '{atributos.tituloLibroDevuelto}' no está en el historial.");
                     currentIndex++;
