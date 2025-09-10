@@ -71,14 +71,17 @@ public class GameManager : MonoBehaviour
             Debug.LogError("UIManager no encontrado en la escena.");
         if (characterSpawn == null)
             Debug.LogError("CharacterSpawn no encontrado en la escena.");
-            var data = SaveManager.CargarTodo();
-            nivelActual = data.nivelActual;
-            EconomyManager.instance.CargarDinero();
-            HistorialManager.Instance.CargarHistorial(data.historialPedidos);
-            HistorialManager.Instance.CargarLibrosPrestados(data.librosPrestados);;
-                StartCoroutine(MostrarCartelInicioDia());
+        
+        SaveData data = SaveManager.CargarNivel();
+        nivelActual = Mathf.Max(1, data.nivelActual);
+        
+        // Inicializar cámaras según el nivel cargado
+        CameraManager.instance?.InicializarCamarasDesdeCarga(nivelActual);
+        
+        StartCoroutine(MostrarCartelInicioDia());
     }
     #endregion
+
 
     #region Flujo de Día y Niveles
     private IEnumerator MostrarCartelInicioDia()
@@ -91,8 +94,6 @@ public class GameManager : MonoBehaviour
         MenuPausa.instance.OcultarBotonPausa();
         InventarioManager.Instance.OcultarInventarioCompleto();
         TaskManager.instance.ReiniciarTareas();
-        EconomyManager.instance.FijarDineroInicioNivel();
-        InventarioManager.Instance.CargarInventario();
         panelInfoLibro.SetActive(true);
 
         var handle = textoDiaLocalized.GetLocalizedStringAsync();
@@ -108,12 +109,14 @@ public class GameManager : MonoBehaviour
             textoDia.text = $"Día {nivelActual}";
         }
 
-        if (nivelActual == 2)
-            CameraManager.instance.botonCambiarCamara3.gameObject.SetActive(true);
-        if (nivelActual == 3)
-            CameraManager.instance.botonCambiarCamara2.gameObject.SetActive(true);
-        if (nivelActual == 4)
-            CameraManager.instance.botonCambiarCamara4.gameObject.SetActive(true);
+        // Asegurar que las cámaras estén configuradas correctamente
+        if (CameraManager.instance != null)
+        {
+            // Activar botones según nivel actual
+            CameraManager.instance.botonCambiarCamara3.gameObject.SetActive(nivelActual > 1);
+            CameraManager.instance.botonCambiarCamara2.gameObject.SetActive(nivelActual > 2);
+            CameraManager.instance.botonCambiarCamara4.gameObject.SetActive(nivelActual > 3);
+        }
 
         Time.timeScale = 0f;
         yield return new WaitForSecondsRealtime(3f);
@@ -211,6 +214,7 @@ public class GameManager : MonoBehaviour
             SceneManager.LoadScene("EscenaFinal");
             return;
         }
+            SaveManager.GuardarNivel(nivelActual);
 
         if (CameraManager.instance != null)
             CameraManager.instance.ActivarCamaraPrincipal();
@@ -223,13 +227,7 @@ public class GameManager : MonoBehaviour
 
         if (PlantManager.instance != null)
             PlantManager.instance.ReiniciarEstado();
-    SaveManager.GuardarTodo(
-        nivelActual,
-        HistorialManager.Instance.GetHistorialPedidos(),
-        HistorialManager.Instance.GetLibrosPrestados(),
-        EconomyManager.instance.ObtenerDinero(),
-        InventarioManager.Instance.GuardarInventario()  
-    );
+
         StartCoroutine(MostrarCartelInicioDia());
     }
 

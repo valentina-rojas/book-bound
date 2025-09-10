@@ -68,40 +68,35 @@ public class CobwebManager : MonoBehaviour
 
         telarañasActivas.Clear();
 
-        List<CobwebCleaning> tutoriales = new List<CobwebCleaning>();
         Dictionary<string, List<CobwebCleaning>> telarañasPorSala = new Dictionary<string, List<CobwebCleaning>>();
 
         foreach (var t in todasLasTelarañas)
         {
             if (t.esTelarañaTutorial)
             {
-                tutoriales.Add(t);
                 if (nivelActual == 1)
                 {
                     t.gameObject.SetActive(true);
-                    telarañasActivas.Add(t);
-                    t.puedeInteractuar = false;
+                    t.puedeInteractuar = false; 
                     t.interaccionFueHabilitada = false;
+
+                    if (!telarañasActivas.Contains(t))
+                        telarañasActivas.Add(t);
                 }
+                continue; 
             }
-            
+
             if (t.nivelMinimo <= nivelActual)
             {
                 if (!telarañasPorSala.ContainsKey(t.sala))
                     telarañasPorSala[t.sala] = new List<CobwebCleaning>();
 
-                if (!(t.esTelarañaTutorial && nivelActual == 1))
-                {
-                    telarañasPorSala[t.sala].Add(t);
-                }
+                telarañasPorSala[t.sala].Add(t);
             }
         }
 
         foreach (var sala in telarañasPorSala.Keys)
         {
-            if (nivelActual == 1 && sala == "1") 
-                continue;
-
             List<CobwebCleaning> lista = telarañasPorSala[sala];
 
             for (int i = 0; i < lista.Count; i++)
@@ -120,24 +115,10 @@ public class CobwebManager : MonoBehaviour
                 t.gameObject.SetActive(true);
                 if (!telarañasActivas.Contains(t))
                     telarañasActivas.Add(t);
-                
-                if (t.esTelarañaTutorial && nivelActual > 1)
-                {
-                    t.puedeInteractuar = true;
-                }
             }
         }
 
-        if (telarañasActivas.Count == 0 && todasLasTelarañas.Count > 0)
-        {
-            var telarañaNoTutorial = todasLasTelarañas.Find(t => !t.esTelarañaTutorial && t.nivelMinimo <= nivelActual);
-            if (telarañaNoTutorial != null)
-            {
-                telarañaNoTutorial.gameObject.SetActive(true);
-                telarañasActivas.Add(telarañaNoTutorial);
-            }
-        }
-
-        Debug.Log($"Nivel {nivelActual}: Activadas {telarañasActivas.Count} telarañas (Tutorial incluida: {tutoriales.Count > 0})");
+        Debug.Log($"Nivel {nivelActual}: Activadas {telarañasActivas.Count} telarañas (Tutorial incluida: {nivelActual == 1})");
     }
+
 }

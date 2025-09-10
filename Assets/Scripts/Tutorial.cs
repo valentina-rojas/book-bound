@@ -34,12 +34,34 @@ public class Tutorial : MonoBehaviour
     private void Awake()
     {
         instance = this;
-        cat = Object.FindFirstObjectByType<CatDialogues>(); 
+        cat = Object.FindFirstObjectByType<CatDialogues>();
 
         if (cat != null)
         {
             cat.OnDialogoExtraFinalizado += OnDialogoExtraFinalizado;
             cat.OnDialogoUltimaLineaTipeada += OnDialogoUltimaLineaTipeada;
+        }
+
+        SaveData saveData = SaveManager.CargarNivel();
+        if (saveData.nivelActual > 1)
+        {
+            Debug.Log("Cargando partida de nivel superior al 1, tutorial saltado");
+
+            if (telaranaTutorial != null)
+                telaranaTutorial.HabilitarInteraccion();
+
+            if (TaskManager.instance != null)
+            {
+                TaskManager.instance.MostrarTareas();
+                TaskManager.instance.botonAbrirTienda.gameObject.SetActive(true);
+            }
+
+            CameraManager.instance?.ActivarCamaraPrincipal();
+            CameraManager.instance?.ActivarBotonCamara();
+            flechaTelaraña?.SetActive(false);
+            flechaBiblioteca?.SetActive(false);
+            flechaVolver?.SetActive(false);
+            enabled = false; 
         }
     }
 
@@ -80,7 +102,7 @@ public class Tutorial : MonoBehaviour
         }
         else if (pasoActual == 5)
         {
-            HistorialManager historial = Object.FindFirstObjectByType<HistorialManager>(); 
+            HistorialManager historial = Object.FindFirstObjectByType<HistorialManager>();
             if (historial != null)
             {
                 historial.AbrirTodo();
@@ -115,7 +137,6 @@ public class Tutorial : MonoBehaviour
             else if (pasoActual == 2 && flechaVolver != null)
             {
                 flechaVolver.SetActive(true);
-                CameraManager.instance.ActivarBotonCamaraTuto();
             }
 
             if (pasoActual == 0)
@@ -195,8 +216,6 @@ public class Tutorial : MonoBehaviour
 
         CameraManager.instance?.ActivarCamaraPrincipal();
         CameraManager.instance?.ActivarBotonCamara();
-        CameraManager.instance?.ActivarBotonCamaraTuto();
-
         TaskManager.instance?.MostrarTareas();
         if (GameManager.instance != null)
             TaskManager.instance.botonAbrirTienda.gameObject.SetActive(true);

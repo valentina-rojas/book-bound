@@ -5,15 +5,24 @@ using UnityEngine.SceneManagement;
 
 public class MenuPrincipal : MonoBehaviour
 {
-
-    public void IniciarJuego()
+    public void NuevaPartida()
     {
-        ChangeScene("Cinematica"); 
+        SaveManager.BorrarGuardado();
+        SceneManager.LoadScene("Cinematica");
     }
 
-    public void ChangeScene(string name)
+    public void CargarPartida()
     {
-        SceneManager.LoadScene(name);
+        SaveData data = SaveManager.CargarNivel();
+
+        if (data == null || data.nivelActual <= 1)
+        {
+            SceneManager.LoadScene("Cinematica");
+        }
+        else
+        {
+            SceneManager.LoadScene("Gameplay"); 
+        }
     }
-    
+
 }

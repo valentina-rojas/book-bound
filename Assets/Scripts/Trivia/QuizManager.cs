@@ -147,7 +147,6 @@ public class QuizManager : MonoBehaviour
     {
         resultsPanel.SetActive(false);
         CameraManager.instance?.ActivarBotonCamara();
-        CameraManager.instance?.ActivarBotonCamaraTuto();
         if (GameManager.instance != null)
             GameManager.instance.CompletarTrivia(correctCount, incorrectCount);
     }

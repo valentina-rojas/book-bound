@@ -100,6 +100,14 @@ MonoBehaviour:
       organizados."
     m_Metadata:
       m_Items: []
+  - m_Id: 18121272379219968
+    m_Localized: CARGAR PARTIDA
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18121352951799808
+    m_Localized: NUEVA PARTIDA
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

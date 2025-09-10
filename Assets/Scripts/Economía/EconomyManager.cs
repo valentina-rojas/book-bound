@@ -7,7 +7,6 @@ public class EconomyManager : MonoBehaviour
 
     public int dineroInicial = 0;
     private int dineroActual;
-    private int dineroInicioNivel; 
 
     public TMP_Text textoDinero;
 
@@ -19,19 +18,21 @@ public class EconomyManager : MonoBehaviour
             DontDestroyOnLoad(gameObject);
         }
         else
+        {
             Destroy(gameObject);
+        }
     }
 
     private void Start()
     {
         dineroActual = dineroInicial;
-        dineroInicioNivel = dineroActual; 
         ActualizarUI();
     }
 
     public void SumarDinero(int cantidad)
     {
         if (cantidad < 0) return;
+
         dineroActual += cantidad;
         ActualizarUI();
     }
@@ -39,21 +40,20 @@ public class EconomyManager : MonoBehaviour
     public void RestarDinero(int cantidad)
     {
         if (cantidad < 0) return;
+
         dineroActual -= cantidad;
         if (dineroActual < 0) dineroActual = 0;
         ActualizarUI();
     }
 
-    public int ObtenerDinero() => dineroActual;
-
-    public void FijarDineroInicioNivel()
+    public int ObtenerDinero()
     {
-        dineroInicioNivel = dineroActual;
+        return dineroActual;
     }
 
-    public void ReiniciarDineroNivel()
+    public void ReiniciarDinero()
     {
-        dineroActual = dineroInicioNivel;
+        dineroActual = dineroInicial;
         ActualizarUI();
     }
 
@@ -61,25 +61,5 @@ public class EconomyManager : MonoBehaviour
     {
         if (textoDinero != null)
             textoDinero.text = $"${dineroActual}";
-    }
-
-    public void GuardarDinero()
-    {
-        SaveData currentSave = SaveManager.CargarTodo();
-        SaveManager.GuardarTodo(
-            currentSave.nivelActual,
-            HistorialManager.Instance?.GetHistorialPedidos(),
-            HistorialManager.Instance?.GetLibrosPrestados(),
-            dineroActual,
-            InventarioManager.Instance.ObtenerItems() 
-        );
-    }
-
-    public void CargarDinero()
-    {
-        SaveData data = SaveManager.CargarTodo();
-        dineroActual = data.dineroActual;
-        dineroInicioNivel = dineroActual; 
-        ActualizarUI();
     }
 }

@@ -155,7 +155,6 @@ public class Gnomos : MonoBehaviour
         }
 
         CameraManager.instance?.ActivarBotonCamara();
-        CameraManager.instance?.ActivarBotonCamaraTuto();
     }
 
     private IEnumerator RisaAleatoria(AudioSource src)

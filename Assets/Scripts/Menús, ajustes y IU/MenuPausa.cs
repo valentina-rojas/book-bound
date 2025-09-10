@@ -39,34 +39,20 @@ public class MenuPausa : MonoBehaviour
     {
         Time.timeScale = 1f;
 
-        if (EconomyManager.instance != null)
-            EconomyManager.instance.ReiniciarDineroNivel(); 
-
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SaveData data = SaveManager.CargarNivel();
+        if (data != null && data.nivelActual > 1)
+        {
+            SceneManager.LoadScene("Gameplay");
+        }
+        else
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
     }
 
     public void Salir()
     {
-        panelConfirmacionSalida.SetActive(true);
-    }
-
-    public void ConfirmarSalida()
-    {
-        Time.timeScale = 1f;
-        SaveManager.BorrarGuardado();
-
-        if (EconomyManager.instance != null)
-            EconomyManager.instance.ReiniciarDineroNivel();
-
-        if (InventarioManager.Instance != null)
-            InventarioManager.Instance.ObtenerItems().Clear();
-
         SceneManager.LoadScene("MenuPrincipal");
-    }
-
-    public void CancelarSalida()
-    {
-        panelConfirmacionSalida.SetActive(false);
     }
 
     public void OcultarBotonPausa()

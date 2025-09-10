@@ -15,6 +15,7 @@ public class InventarioManager : MonoBehaviour
     [SerializeField] private Transform contenedorParedes;
     [SerializeField] private Transform contenedorPisos;
     [SerializeField] private Transform contenedorCuadros;
+    // puedes añadir más contenedores según categorías
 
     [Header("Botones de pestañas")]
     [SerializeField] private Button botonPestañaHerramientas;
@@ -34,9 +35,14 @@ public class InventarioManager : MonoBehaviour
     {
         if (Instance == null) Instance = this;
         else Destroy(gameObject);
+
         panelInventario.SetActive(false);
+
+        // Botón abrir/cerrar
         if (botonAbrirInventario != null)
             botonAbrirInventario.onClick.AddListener(ToggleInventario);
+
+        // Botones de pestañas
         if (botonPestañaHerramientas != null)
             botonPestañaHerramientas.onClick.AddListener(() => MostrarPestaña(CategoriaItem.Herramientas));
         if (botonPestañaParedes != null)
@@ -47,7 +53,7 @@ public class InventarioManager : MonoBehaviour
             botonPestañaCuadros.onClick.AddListener(() => MostrarPestaña(CategoriaItem.Cuadros));
 
         InicializarHerramientas();
-        MostrarPestaña(CategoriaItem.Herramientas);
+        MostrarPestaña(CategoriaItem.Herramientas); 
     }
 
     private void InicializarHerramientas()
@@ -60,6 +66,7 @@ public class InventarioManager : MonoBehaviour
         }
     }
 
+    // Activa solo el contenedor correspondiente a la categoría
     private void MostrarPestaña(CategoriaItem categoria)
     {
         contenedorHerramientas.gameObject.SetActive(categoria == CategoriaItem.Herramientas);
@@ -90,6 +97,7 @@ public class InventarioManager : MonoBehaviour
         Transform contenedor = ObtenerContenedor(categoria);
         if (contenedor == null) return;
 
+        // Limpiar solo el contenedor de la categoría (excepto herramientas permanentes)
         if (categoria != CategoriaItem.Herramientas)
         {
             foreach (Transform child in contenedor)
@@ -100,7 +108,7 @@ public class InventarioManager : MonoBehaviour
         {
             if (i.categoria != categoria) continue;
 
-            if (i.categoria == CategoriaItem.Herramientas) continue; 
+            if (i.categoria == CategoriaItem.Herramientas) continue; // ya permanentes
 
             GameObject nuevoSlot = Instantiate(prefabSlotItem, contenedor);
             UISlotItem slotItem = nuevoSlot.GetComponent<UISlotItem>();
@@ -168,7 +176,7 @@ public class InventarioManager : MonoBehaviour
     public void AbrirInventario()
     {
         panelInventario.SetActive(true);
-        MostrarPestaña(CategoriaItem.Herramientas);
+        MostrarPestaña(CategoriaItem.Herramientas); 
         if (botonAbrirInventario != null && spriteBotonAbierto != null)
             botonAbrirInventario.image.sprite = spriteBotonAbierto;
     }
@@ -181,7 +189,9 @@ public class InventarioManager : MonoBehaviour
     }
 
     public void CerrarInventarioDesdeBoton() => CerrarInventario();
+
     public List<Item> ObtenerItems() => new List<Item>(items);
+
     public void OcultarBotonAbrirInventario() => botonAbrirInventario?.gameObject.SetActive(false);
     public void MostrarBotonAbrirInventario() => botonAbrirInventario?.gameObject.SetActive(true);
 
@@ -189,42 +199,12 @@ public class InventarioManager : MonoBehaviour
     {
         panelInventario.SetActive(true);
         MostrarBotonAbrirInventario();
-        MostrarPestaña(CategoriaItem.Herramientas);
+        MostrarPestaña(CategoriaItem.Herramientas); 
     }
 
     public void OcultarInventarioCompleto()
     {
         panelInventario.SetActive(false);
         OcultarBotonAbrirInventario();
-    }
-
-    public List<Item> GuardarInventario()
-    {
-        SaveManager.GuardarTodo(
-            GameManager.instance.nivelActual,
-            HistorialManager.Instance.GetHistorialPedidos(),
-            HistorialManager.Instance.GetLibrosPrestados(),
-            EconomyManager.instance.ObtenerDinero(),
-            ObtenerItems() 
-        );
-        return new List<Item>(items);
-    }
-
-    public void CargarInventario()
-    {
-        SaveData data = SaveManager.CargarTodo();
-        items.Clear();
-
-        foreach (string itemID in data.itemsInventario)
-        {
-            Item item = ItemDatabase.Instance.GetItemByID(itemID); 
-            if (item != null)
-                items.Add(item);
-        }
-
-        ActualizarUI(CategoriaItem.Herramientas);
-        ActualizarUI(CategoriaItem.Paredes);
-        ActualizarUI(CategoriaItem.Pisos);
-        ActualizarUI(CategoriaItem.Cuadros);
     }
 }

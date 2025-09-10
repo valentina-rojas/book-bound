@@ -38,22 +38,28 @@ public class CameraManager : MonoBehaviour
             Destroy(gameObject);
     }
 
-    void Start()
+    public void InicializarCamarasDesdeCarga(int nivelCargado)
     {
         for (int i = 0; i < cameras.Length; i++)
         {
-            bool isActive = (i == 0);
+            bool isActive = (i == 0); 
             cameras[i].enabled = isActive;
 
             if (canvasObjects != null && i < canvasObjects.Length)
                 canvasObjects[i].SetActive(isActive);
         }
 
-        int nivel = GameManager.instance.nivelActual;
-
-        botonCambiarCamara2.gameObject.SetActive(nivel > 2);
-        botonCambiarCamara3.gameObject.SetActive(nivel > 1);
+        currentCameraIndex = 0;
+        botonCambiarCamara2.gameObject.SetActive(nivelCargado > 2);
+        botonCambiarCamara3.gameObject.SetActive(nivelCargado > 1);
+        botonCambiarCamara4.gameObject.SetActive(nivelCargado > 3);
         botonCambiarCamara0.interactable = false;
+        botonCambiarCamara1.interactable = (nivelCargado > 0);
+        botonCambiarCamara2.interactable = (nivelCargado > 2);
+        botonCambiarCamara3.interactable = (nivelCargado > 1);
+        botonCambiarCamara4.interactable = (nivelCargado > 3);
+
+        Debug.Log($"Cámaras inicializadas para nivel: {nivelCargado}");
     }
     #endregion
 
@@ -80,6 +86,29 @@ public class CameraManager : MonoBehaviour
 
         if (cameraIndex == 0 && Tutorial.instance != null)
             Tutorial.instance.AlVolverACamaraPrincipal();
+
+        ActualizarEstadoBotonesCamaras();
+    }
+
+    private void ActualizarEstadoBotonesCamaras()
+    {
+        if (Gnomos.instance != null && Gnomos.instance.animacionEjecutada == false && Gnomos.instance.desorganizarPendiente)
+            return;
+
+        botonCambiarCamara0.interactable = true;
+        botonCambiarCamara1.interactable = true;
+        botonCambiarCamara2.interactable = true;
+        botonCambiarCamara3.interactable = true;
+        botonCambiarCamara4.interactable = true;
+
+        switch (currentCameraIndex)
+        {
+            case 0: botonCambiarCamara0.interactable = false; break;
+            case 1: botonCambiarCamara1.interactable = false; break;
+            case 2: botonCambiarCamara2.interactable = false; break;
+            case 3: botonCambiarCamara3.interactable = false; break;
+            case 4: botonCambiarCamara4.interactable = false; break;
+        }
     }
 
     private System.Collections.IEnumerator VerificarEstantesDespuesDeFrame()
@@ -104,15 +133,11 @@ public class CameraManager : MonoBehaviour
 
     public void ActivarBotonCamara()
     {
+        botonCambiarCamara0.interactable = true;
         botonCambiarCamara1.interactable = true;
         botonCambiarCamara2.interactable = true;
         botonCambiarCamara3.interactable = true;
         botonCambiarCamara4.interactable = true;
-    }
-
-    public void ActivarBotonCamaraTuto()
-    {
-        botonCambiarCamara0.interactable = true;
     }
 
     public void ActivarCamaraPrincipal()

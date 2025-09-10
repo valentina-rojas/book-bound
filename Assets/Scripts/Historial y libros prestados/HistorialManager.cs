@@ -13,7 +13,7 @@ public class HistorialManager : MonoBehaviour
     private UIManager uiManager;
     private List<string> librosPrestados = new List<string>();
     private HashSet<string> librosDevueltos = new HashSet<string>();
-    private bool historialCargado = false;
+    private bool historialCargado = false; 
 
     [Header("Mensajes Localizados")]
     public LocalizedString mensajeHistorialVacio;
@@ -21,7 +21,6 @@ public class HistorialManager : MonoBehaviour
 
     private void Awake()
     {
-        uiManager = FindFirstObjectByType<UIManager>();
         if (Instance == null)
             Instance = this;
         else
@@ -30,6 +29,8 @@ public class HistorialManager : MonoBehaviour
 
     private void Start()
     {
+        uiManager = FindFirstObjectByType<UIManager>();
+
         if (uiManager != null)
         {
             if (uiManager.GetBotonCerrarHistorial() != null)
@@ -85,10 +86,10 @@ public class HistorialManager : MonoBehaviour
             historialCargado = false;
         }
         Tutorial tutorial = FindFirstObjectByType<Tutorial>();
-        if (tutorial != null)
-        {
-            tutorial.AlCerrarHistorial();
-        }
+            if (tutorial != null)
+            {
+                tutorial.AlCerrarHistorial();
+            }
     }
 
     #region Historial de Pedidos
@@ -170,7 +171,7 @@ public class HistorialManager : MonoBehaviour
                 textos[0].text = nombreTraducido;
                 textos[1].text = descripcionTraducida;
 
-                if (i < personajes.Count - 1)
+                if (i < personajes.Count - 1) 
                 {
                     textos[1].text = $"<s>{textos[1].text}</s>";
                 }
@@ -260,7 +261,7 @@ public class HistorialManager : MonoBehaviour
         {
             mensajeLibrosVacio.StringChanged -= MostrarMensajeLibrosVacioHandler;
             mensajeLibrosVacio.StringChanged += MostrarMensajeLibrosVacioHandler;
-            yield break;
+            yield break; 
         }
         else
         {
@@ -312,7 +313,7 @@ public class HistorialManager : MonoBehaviour
             }
         }
 
-        yield break;
+        yield break; 
     }
 
     public void ActualizarLibrosPrestados()
@@ -384,41 +385,6 @@ public class HistorialManager : MonoBehaviour
             textos[0].text = mensaje;
             textos[1].text = "";
         }
-    }
-    #endregion
-
-    #region Guardado
-    public List<string> GetHistorialPedidos()
-    {
-        List<string> historial = new List<string>();
-        foreach (Transform child in uiManager.GetHistorialContent())
-        {
-            TMP_Text[] textos = child.GetComponentsInChildren<TMP_Text>();
-            if (textos.Length >= 2)
-                historial.Add(textos[1].text);
-        }
-        return historial;
-    }
-
-    public void CargarHistorial(List<string> historial)
-    {
-        LimpiarHistorialUI();
-        foreach (string entrada in historial)
-        {
-            GameObject go = Instantiate(uiManager.GetPrefabEntradaHistorial(), uiManager.GetHistorialContent());
-            TMP_Text[] textos = go.GetComponentsInChildren<TMP_Text>();
-            if (textos.Length >= 2)
-            {
-                textos[0].text = "Cliente";
-                textos[1].text = entrada;
-            }
-        }
-    }
-
-    public void CargarLibrosPrestados(List<string> libros)
-    {
-        librosPrestados.Clear();
-        librosPrestados.AddRange(libros);
     }
     #endregion
 }
