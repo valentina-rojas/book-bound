@@ -20,6 +20,7 @@ public class SaveData
     public int dinero;
     public List<LibroPrestado> librosPrestados;
     public List<LibroGuardado> librosEstantes;
+    public List<SlotGuardado> slotsGuardados; 
 }
 
 public static class SaveManager
@@ -30,24 +31,27 @@ public static class SaveManager
     {
         List<LibroGuardado> librosEstantes = new List<LibroGuardado>();
         BookData[] todosLibros = GameObject.FindObjectsOfType<BookData>(true); 
-        
         foreach (BookData libro in todosLibros)
-        {
             librosEstantes.Add(libro.ToLibroGuardado());
-        }
+        List<SlotGuardado> slotsGuardados = new List<SlotGuardado>();
+        SlotLugar[] todosSlots = GameObject.FindObjectsOfType<SlotLugar>(true);
+        foreach (SlotLugar slot in todosSlots)
+            slotsGuardados.Add(slot.ToSlotGuardado());
 
         SaveData data = new SaveData()
         {
             nivelActual = nivel,
             dinero = EconomyManager.instance.ObtenerDinero(),
             librosPrestados = new List<LibroPrestado>(libros),
-            librosEstantes = librosEstantes
+            librosEstantes = librosEstantes,
+            slotsGuardados = slotsGuardados
         };
 
         string json = JsonUtility.ToJson(data);
         PlayerPrefs.SetString(SaveKey, json);
         PlayerPrefs.Save();
-        Debug.Log($"Juego guardado: Nivel {nivel}, Libros prestados: {libros.Count}, Libros en estantes: {librosEstantes.Count}");
+
+        Debug.Log($"Juego guardado: Nivel {nivel}, Libros: {librosEstantes.Count}, Slots: {slotsGuardados.Count}");
     }
 
     public static SaveData CargarNivel()
@@ -60,15 +64,17 @@ public static class SaveManager
                 nivelActual = 1,
                 dinero = 0,
                 librosPrestados = new List<LibroPrestado>(),
-                librosEstantes = new List<LibroGuardado>()
+                librosEstantes = new List<LibroGuardado>(),
+                slotsGuardados = new List<SlotGuardado>()
             };
         }
 
         string json = PlayerPrefs.GetString(SaveKey);
         SaveData data = JsonUtility.FromJson<SaveData>(json);
-        Debug.Log($"Partida cargada: Nivel {data.nivelActual}, Libros en estantes: {data.librosEstantes.Count}");
+        Debug.Log($"Partida cargada: Nivel {data.nivelActual}, Libros: {data.librosEstantes.Count}, Slots: {data.slotsGuardados.Count}");
         return data;
     }
+
     public static void RestaurarDatos(SaveData data)
     {
         if (data == null) return;
@@ -77,7 +83,9 @@ public static class SaveManager
             EconomyManager.instance.EstablecerDinero(data.dinero);
             
         RestaurarLibros(data);
+        RestaurarSlots(data);
     }
+
     public static void RestaurarLibros(SaveData data)
     {
         if (data == null || data.librosEstantes == null || data.librosEstantes.Count == 0)
@@ -100,9 +108,7 @@ public static class SaveManager
                 {
                     ShelfSlots slotPadre = System.Array.Find(todosLosSlots, s => s.gameObject.name == libroGuardado.parentPath);
                     if (slotPadre != null)
-                    {
                         libro.transform.SetParent(slotPadre.transform);
-                    }
                 }
 
                 libro.transform.localPosition = libroGuardado.posicion;
@@ -121,6 +127,59 @@ public static class SaveManager
             ShelfManager.instance.Invoke("ForzarVerificacionTodosEstantes", 0.3f);
             ShelfManager.instance.Invoke("RevisarOrganizacion", 0.5f);
         }
+    }
+
+    public static void RestaurarSlots(SaveData data)
+    {
+        if (data == null || data.slotsGuardados == null || data.slotsGuardados.Count == 0)
+        {
+            Debug.Log("No hay datos de slots para restaurar");
+            return;
+        }
+
+        SlotLugar[] todosSlots = GameObject.FindObjectsOfType<SlotLugar>(true);
+
+        foreach (SlotGuardado slotGuardado in data.slotsGuardados)
+        {
+            SlotLugar slot = System.Array.Find(
+                todosSlots,
+                s => ObtenerRutaCompleta(s.transform) == slotGuardado.slotPath
+            );
+
+            if (slot != null)
+            {
+                if (!string.IsNullOrEmpty(slotGuardado.itemNombre))
+                {
+                    Item item = InventarioManager.Instance.ObtenerItemPorNombre(slotGuardado.itemNombre);
+                    slot.itemActual = item;
+
+                    if (slot.render != null && item != null && item.icono != null)
+                        slot.render.sprite = item.icono;
+                }
+                else
+                {
+                    slot.itemActual = null;
+                    if (slot.render != null) slot.render.sprite = null;
+                }
+
+                Debug.Log($"Slot {slotGuardado.slotPath} restaurado con item {slotGuardado.itemNombre}");
+            }
+            else
+            {
+                Debug.LogWarning($"No se encontró el slot con ruta {slotGuardado.slotPath}");
+            }
+        }
+    }
+
+    public static string ObtenerRutaCompleta(Transform transform)
+    {
+        string path = transform.name;
+        while (transform.parent != null)
+        {
+            transform = transform.parent;
+            path = transform.name + "/" + path;
+        }
+        return path;
     }
 
     public static void BorrarGuardado()

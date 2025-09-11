@@ -5,6 +5,7 @@ using System.Collections.Generic;
 public class InventarioManager : MonoBehaviour
 {
     public static InventarioManager Instance;
+    public List<Item> todosLosItems = new List<Item>();
 
     [Header("UI Inventario")]
     [SerializeField] private GameObject panelInventario;
@@ -15,7 +16,6 @@ public class InventarioManager : MonoBehaviour
     [SerializeField] private Transform contenedorParedes;
     [SerializeField] private Transform contenedorPisos;
     [SerializeField] private Transform contenedorCuadros;
-    // puedes añadir más contenedores según categorías
 
     [Header("Botones de pestañas")]
     [SerializeField] private Button botonPestañaHerramientas;
@@ -38,11 +38,8 @@ public class InventarioManager : MonoBehaviour
 
         panelInventario.SetActive(false);
 
-        // Botón abrir/cerrar
         if (botonAbrirInventario != null)
             botonAbrirInventario.onClick.AddListener(ToggleInventario);
-
-        // Botones de pestañas
         if (botonPestañaHerramientas != null)
             botonPestañaHerramientas.onClick.AddListener(() => MostrarPestaña(CategoriaItem.Herramientas));
         if (botonPestañaParedes != null)
@@ -53,7 +50,7 @@ public class InventarioManager : MonoBehaviour
             botonPestañaCuadros.onClick.AddListener(() => MostrarPestaña(CategoriaItem.Cuadros));
 
         InicializarHerramientas();
-        MostrarPestaña(CategoriaItem.Herramientas); 
+        MostrarPestaña(CategoriaItem.Herramientas);
     }
 
     private void InicializarHerramientas()
@@ -66,7 +63,6 @@ public class InventarioManager : MonoBehaviour
         }
     }
 
-    // Activa solo el contenedor correspondiente a la categoría
     private void MostrarPestaña(CategoriaItem categoria)
     {
         contenedorHerramientas.gameObject.SetActive(categoria == CategoriaItem.Herramientas);
@@ -97,7 +93,6 @@ public class InventarioManager : MonoBehaviour
         Transform contenedor = ObtenerContenedor(categoria);
         if (contenedor == null) return;
 
-        // Limpiar solo el contenedor de la categoría (excepto herramientas permanentes)
         if (categoria != CategoriaItem.Herramientas)
         {
             foreach (Transform child in contenedor)
@@ -108,7 +103,7 @@ public class InventarioManager : MonoBehaviour
         {
             if (i.categoria != categoria) continue;
 
-            if (i.categoria == CategoriaItem.Herramientas) continue; // ya permanentes
+            if (i.categoria == CategoriaItem.Herramientas) continue;
 
             GameObject nuevoSlot = Instantiate(prefabSlotItem, contenedor);
             UISlotItem slotItem = nuevoSlot.GetComponent<UISlotItem>();
@@ -176,7 +171,7 @@ public class InventarioManager : MonoBehaviour
     public void AbrirInventario()
     {
         panelInventario.SetActive(true);
-        MostrarPestaña(CategoriaItem.Herramientas); 
+        MostrarPestaña(CategoriaItem.Herramientas);
         if (botonAbrirInventario != null && spriteBotonAbierto != null)
             botonAbrirInventario.image.sprite = spriteBotonAbierto;
     }
@@ -199,12 +194,18 @@ public class InventarioManager : MonoBehaviour
     {
         panelInventario.SetActive(true);
         MostrarBotonAbrirInventario();
-        MostrarPestaña(CategoriaItem.Herramientas); 
+        MostrarPestaña(CategoriaItem.Herramientas);
     }
 
     public void OcultarInventarioCompleto()
     {
         panelInventario.SetActive(false);
         OcultarBotonAbrirInventario();
+    }
+    
+    public Item ObtenerItemPorNombre(string nombre)
+    {
+        if (string.IsNullOrEmpty(nombre)) return null;
+        return todosLosItems.Find(i => i.nombre == nombre);
     }
 }

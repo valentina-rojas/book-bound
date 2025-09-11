@@ -49635,7 +49635,6 @@ GameObject:
   - component: {fileID: 1468360315}
   - component: {fileID: 1468360316}
   - component: {fileID: 1468360317}
-  - component: {fileID: 1468360318}
   m_Layer: 0
   m_Name: "Inventario y econom\xEDa"
   m_TagString: Untagged
@@ -49670,6 +49669,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3133c3353d63afd4e9ec01b63326a141, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  todosLosItems:
+  - {fileID: 11400000, guid: 7ce5a0bf2c5ca44429290604a4a6c8b3, type: 2}
+  - {fileID: 11400000, guid: fb0cc56a786fccb4b99cecb2ccba19bc, type: 2}
+  - {fileID: 11400000, guid: 8555d2a79b0ad8249b393ccfef33c32d, type: 2}
+  - {fileID: 11400000, guid: cf8a0ecbbb287fd4383450aef57f94f0, type: 2}
+  - {fileID: 11400000, guid: c00acd1df7651ba41bb33e2c920725b0, type: 2}
+  - {fileID: 11400000, guid: e98dddd3536b91743875964bee68af2f, type: 2}
+  - {fileID: 11400000, guid: d1df94de56988ae4bb2ff69cb11cbbea, type: 2}
+  - {fileID: 11400000, guid: ba6f4f914280db249bfa9e44548d6312, type: 2}
+  - {fileID: 11400000, guid: 7a8824ccc93e929429ca0a9e3041336f, type: 2}
+  - {fileID: 11400000, guid: a53d9615640a41047b5e3a58994b6a38, type: 2}
+  - {fileID: 11400000, guid: 194f53285df65394c8ea67099d987a44, type: 2}
+  - {fileID: 11400000, guid: c83d14b081669874d9cd73158ffcc024, type: 2}
+  - {fileID: 11400000, guid: 624364a58bec53343898b9ec0ac6b8e2, type: 2}
+  - {fileID: 11400000, guid: 7b9899c9597a5c9458cdda398a6b233b, type: 2}
+  - {fileID: 11400000, guid: 606ad9f02f4aac641b6ff9251944cf17, type: 2}
+  - {fileID: 11400000, guid: 27151f08bd192fd40be9529d60f363c4, type: 2}
+  - {fileID: 11400000, guid: 93d27e6e90fd10a4883895734221d0cc, type: 2}
+  - {fileID: 11400000, guid: adb9c2e788f91f948ad4b85244309085, type: 2}
+  - {fileID: 11400000, guid: e93274f47e62d0548b864e233acf5a1a, type: 2}
   panelInventario: {fileID: 1617482111}
   prefabSlotItem: {fileID: 2763183034634821461, guid: 0f42fd6555ee2294ab29175116362ea6, type: 3}
   contenedorHerramientas: {fileID: 1485400382}
@@ -49731,18 +49750,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 606ad9f02f4aac641b6ff9251944cf17, type: 2}
   - {fileID: 11400000, guid: 27151f08bd192fd40be9529d60f363c4, type: 2}
   - {fileID: 11400000, guid: 93d27e6e90fd10a4883895734221d0cc, type: 2}
---- !u!114 &1468360318
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1468360313}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 078781ed91eb1ff4bbc84251fccfc961, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1468377846
 GameObject:
   m_ObjectHideFlags: 0
