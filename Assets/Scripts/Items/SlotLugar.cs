@@ -1,10 +1,17 @@
 using UnityEngine;
 
+[System.Serializable]
+public class SlotGuardado
+{
+    public string slotPath;  
+    public string itemNombre; 
+}
+
 public class SlotLugar : MonoBehaviour
 {
-    public CategoriaItem categoriaSlot; 
-    public Item itemActual;            
-    public SpriteRenderer render;      
+    public CategoriaItem categoriaSlot;
+    public Item itemActual;
+    public SpriteRenderer render;
 
     public void ColocarItem(Item nuevoItem)
     {
@@ -28,11 +35,4 @@ public class SlotLugar : MonoBehaviour
             itemNombre = itemActual != null ? itemActual.nombre : null
         };
     }
-}
-
-[System.Serializable]
-public class SlotGuardado
-{
-    public string slotPath;  
-    public string itemNombre; 
 }

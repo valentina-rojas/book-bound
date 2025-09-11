@@ -2,6 +2,13 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
+[System.Serializable]
+public class SlotCuadroGuardado
+{
+    public string slotPath;     
+    public string itemNombre;   
+}
+
 public class SlotCuadro : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     [Header("Slot")]
@@ -9,9 +16,9 @@ public class SlotCuadro : MonoBehaviour, IPointerClickHandler, IBeginDragHandler
     public Image render;
     public bool EstaOcupado => itemActual != null;
 
-    private UISlotItem dragItemInstance; 
+    private UISlotItem dragItemInstance;
     private Canvas canvas;
-    private SlotCuadro slotOrigen; 
+    private SlotCuadro slotOrigen;
 
     private void Awake()
     {
@@ -48,7 +55,7 @@ public class SlotCuadro : MonoBehaviour, IPointerClickHandler, IBeginDragHandler
         if (render != null)
         {
             render.sprite = null;
-            render.color = new Color(1f,1f,1f,1f/255f);
+            render.color = new Color(1f, 1f, 1f, 1f / 255f);
         }
     }
 
@@ -65,7 +72,7 @@ public class SlotCuadro : MonoBehaviour, IPointerClickHandler, IBeginDragHandler
     {
         if (itemActual == null) return;
 
-        slotOrigen = this; 
+        slotOrigen = this;
 
         GameObject temp = Instantiate(InventarioManager.Instance.prefabSlotItem);
         dragItemInstance = temp.GetComponent<UISlotItem>();
@@ -76,7 +83,7 @@ public class SlotCuadro : MonoBehaviour, IPointerClickHandler, IBeginDragHandler
 
         RectTransform rt = dragItemInstance.GetComponent<RectTransform>();
         rt.localScale = Vector3.one;
-        rt.pivot = new Vector2(0.5f,0.5f);
+        rt.pivot = new Vector2(0.5f, 0.5f);
 
         Vector3 worldPos;
         RectTransformUtility.ScreenPointToWorldPointInRectangle(
@@ -147,5 +154,14 @@ public class SlotCuadro : MonoBehaviour, IPointerClickHandler, IBeginDragHandler
         Destroy(dragItemInstance.gameObject);
         dragItemInstance = null;
         slotOrigen = null;
+    }
+
+    public SlotCuadroGuardado ToSlotCuadroGuardado()
+    {
+        return new SlotCuadroGuardado()
+        {
+            slotPath = SaveManager.ObtenerRutaCompleta(transform),
+            itemNombre = itemActual != null ? itemActual.nombre : null
+        };
     }
 }

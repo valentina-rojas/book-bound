@@ -21,6 +21,7 @@ public class SaveData
     public List<LibroPrestado> librosPrestados;
     public List<LibroGuardado> librosEstantes;
     public List<SlotGuardado> slotsGuardados; 
+    public List<SlotCuadroGuardado> slotsCuadrosGuardados; 
 }
 
 public static class SaveManager
@@ -33,10 +34,16 @@ public static class SaveManager
         BookData[] todosLibros = GameObject.FindObjectsOfType<BookData>(true); 
         foreach (BookData libro in todosLibros)
             librosEstantes.Add(libro.ToLibroGuardado());
+            
         List<SlotGuardado> slotsGuardados = new List<SlotGuardado>();
         SlotLugar[] todosSlots = GameObject.FindObjectsOfType<SlotLugar>(true);
         foreach (SlotLugar slot in todosSlots)
             slotsGuardados.Add(slot.ToSlotGuardado());
+            
+        List<SlotCuadroGuardado> slotsCuadrosGuardados = new List<SlotCuadroGuardado>();
+        SlotCuadro[] todosSlotsCuadros = GameObject.FindObjectsOfType<SlotCuadro>(true);
+        foreach (SlotCuadro slot in todosSlotsCuadros)
+            slotsCuadrosGuardados.Add(slot.ToSlotCuadroGuardado());
 
         SaveData data = new SaveData()
         {
@@ -44,14 +51,15 @@ public static class SaveManager
             dinero = EconomyManager.instance.ObtenerDinero(),
             librosPrestados = new List<LibroPrestado>(libros),
             librosEstantes = librosEstantes,
-            slotsGuardados = slotsGuardados
+            slotsGuardados = slotsGuardados,
+            slotsCuadrosGuardados = slotsCuadrosGuardados
         };
 
         string json = JsonUtility.ToJson(data);
         PlayerPrefs.SetString(SaveKey, json);
         PlayerPrefs.Save();
 
-        Debug.Log($"Juego guardado: Nivel {nivel}, Libros: {librosEstantes.Count}, Slots: {slotsGuardados.Count}");
+        Debug.Log($"Juego guardado: Nivel {nivel}, Libros: {librosEstantes.Count}, Slots: {slotsGuardados.Count}, SlotsCuadros: {slotsCuadrosGuardados.Count}");
     }
 
     public static SaveData CargarNivel()
@@ -65,13 +73,14 @@ public static class SaveManager
                 dinero = 0,
                 librosPrestados = new List<LibroPrestado>(),
                 librosEstantes = new List<LibroGuardado>(),
-                slotsGuardados = new List<SlotGuardado>()
+                slotsGuardados = new List<SlotGuardado>(),
+                slotsCuadrosGuardados = new List<SlotCuadroGuardado>()
             };
         }
 
         string json = PlayerPrefs.GetString(SaveKey);
         SaveData data = JsonUtility.FromJson<SaveData>(json);
-        Debug.Log($"Partida cargada: Nivel {data.nivelActual}, Libros: {data.librosEstantes.Count}, Slots: {data.slotsGuardados.Count}");
+        Debug.Log($"Partida cargada: Nivel {data.nivelActual}, Libros: {data.librosEstantes.Count}, Slots: {data.slotsGuardados.Count}, SlotsCuadros: {data.slotsCuadrosGuardados.Count}");
         return data;
     }
 
@@ -81,27 +90,23 @@ public static class SaveManager
 
         if (EconomyManager.instance != null)
             EconomyManager.instance.EstablecerDinero(data.dinero);
-            
+
         RestaurarLibros(data);
         RestaurarSlots(data);
+        RestaurarSlotsCuadros(data);
     }
 
     public static void RestaurarLibros(SaveData data)
     {
         if (data == null || data.librosEstantes == null || data.librosEstantes.Count == 0)
-        {
-            Debug.Log("No hay datos de libros para restaurar");
             return;
-        }
 
         BookData[] todosLibros = GameObject.FindObjectsOfType<BookData>(true);
-        Debug.Log($"Encontré {todosLibros.Length} libros en la escena para restaurar");
         ShelfSlots[] todosLosSlots = GameObject.FindObjectsOfType<ShelfSlots>(true);
 
         foreach (LibroGuardado libroGuardado in data.librosEstantes)
         {
             BookData libro = System.Array.Find(todosLibros, l => l.libroID == libroGuardado.libroID);
-
             if (libro != null)
             {
                 if (!string.IsNullOrEmpty(libroGuardado.parentPath))
@@ -113,36 +118,19 @@ public static class SaveManager
 
                 libro.transform.localPosition = libroGuardado.posicion;
                 libro.gameObject.SetActive(libroGuardado.estaHabilitado);
-
-                Debug.Log($"Libro {libroGuardado.libroID} restaurado en slot: {libroGuardado.parentPath}");
             }
-            else
-            {
-                Debug.LogWarning($"No se encontró el libro con ID {libroGuardado.libroID} en la escena");
-            }
-        }
-
-        if (ShelfManager.instance != null)
-        {
-            ShelfManager.instance.Invoke("ForzarVerificacionTodosEstantes", 0.3f);
-            ShelfManager.instance.Invoke("RevisarOrganizacion", 0.5f);
         }
     }
 
     public static void RestaurarSlots(SaveData data)
     {
-        if (data == null || data.slotsGuardados == null || data.slotsGuardados.Count == 0)
-        {
-            Debug.Log("No hay datos de slots para restaurar");
-            return;
-        }
+        if (data == null || data.slotsGuardados == null) return;
 
         SlotLugar[] todosSlots = GameObject.FindObjectsOfType<SlotLugar>(true);
 
         foreach (SlotGuardado slotGuardado in data.slotsGuardados)
         {
-            SlotLugar slot = System.Array.Find(
-                todosSlots,
+            SlotLugar slot = System.Array.Find(todosSlots,
                 s => ObtenerRutaCompleta(s.transform) == slotGuardado.slotPath
             );
 
@@ -152,7 +140,6 @@ public static class SaveManager
                 {
                     Item item = InventarioManager.Instance.ObtenerItemPorNombre(slotGuardado.itemNombre);
                     slot.itemActual = item;
-
                     if (slot.render != null && item != null && item.icono != null)
                         slot.render.sprite = item.icono;
                 }
@@ -161,12 +148,33 @@ public static class SaveManager
                     slot.itemActual = null;
                     if (slot.render != null) slot.render.sprite = null;
                 }
-
-                Debug.Log($"Slot {slotGuardado.slotPath} restaurado con item {slotGuardado.itemNombre}");
             }
-            else
+        }
+    }
+
+    public static void RestaurarSlotsCuadros(SaveData data)
+    {
+        if (data == null || data.slotsCuadrosGuardados == null) return;
+
+        SlotCuadro[] todosSlots = GameObject.FindObjectsOfType<SlotCuadro>(true);
+
+        foreach (SlotCuadroGuardado slotGuardado in data.slotsCuadrosGuardados)
+        {
+            SlotCuadro slot = System.Array.Find(todosSlots,
+                s => ObtenerRutaCompleta(s.transform) == slotGuardado.slotPath
+            );
+
+            if (slot != null)
             {
-                Debug.LogWarning($"No se encontró el slot con ruta {slotGuardado.slotPath}");
+                if (!string.IsNullOrEmpty(slotGuardado.itemNombre))
+                {
+                    Item item = InventarioManager.Instance.ObtenerItemPorNombre(slotGuardado.itemNombre);
+                    slot.TryColocarItem(item, out _);
+                }
+                else
+                {
+                    slot.QuitarItem();
+                }
             }
         }
     }
@@ -185,6 +193,5 @@ public static class SaveManager
     public static void BorrarGuardado()
     {
         PlayerPrefs.DeleteKey(SaveKey);
-        Debug.Log("Guardado eliminado");
     }
 }
