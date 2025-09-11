@@ -1,12 +1,5 @@
 using UnityEngine;
 
-[System.Serializable]
-public class SlotGuardado
-{
-    public string slotPath;  
-    public string itemNombre; 
-}
-
 public class SlotLugar : MonoBehaviour
 {
     public CategoriaItem categoriaSlot;

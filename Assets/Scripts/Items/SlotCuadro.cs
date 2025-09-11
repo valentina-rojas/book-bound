@@ -2,13 +2,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-[System.Serializable]
-public class SlotCuadroGuardado
-{
-    public string slotPath;     
-    public string itemNombre;   
-}
-
 public class SlotCuadro : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     [Header("Slot")]
