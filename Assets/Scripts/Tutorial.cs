@@ -43,25 +43,11 @@ public class Tutorial : MonoBehaviour
         }
 
         SaveData saveData = SaveManager.CargarNivel();
-        if (saveData.nivelActual > 1)
+
+        if (saveData.nivelActual != 1)
         {
-            if (telaranaTutorial != null)
-                telaranaTutorial.HabilitarInteraccion();
-
-            if (TaskManager.instance != null)
-            {
-                TaskManager.instance.MostrarTareas();
-                TaskManager.instance.botonAbrirTienda.gameObject.SetActive(true);
-            }
-
-            CameraManager.instance?.ActivarCamaraPrincipal();
-            CameraManager.instance?.ActivarBotonCamara();
-
-            flechaTelaraña?.SetActive(false);
-            flechaBiblioteca?.SetActive(false);
-            flechaVolver?.SetActive(false);
-
-            enabled = false; 
+            SaltarTutorial();
+            return;
         }
     }
 
@@ -112,6 +98,12 @@ public class Tutorial : MonoBehaviour
     #region Tutorial Control
     public void EmpezarTutorial()
     {
+        if (GameManager.instance.nivelActual != 1)
+        {
+            SaltarTutorial();
+            return;
+        }
+
         pasoActual = 0;
         MostrarPasoActual();
     }
@@ -119,6 +111,12 @@ public class Tutorial : MonoBehaviour
     private void MostrarPasoActual()
     {
         if (cat == null) return;
+
+        if (GameManager.instance.nivelActual != 1)
+        {
+            SaltarTutorial();
+            return;
+        }
 
         flechaTelaraña?.SetActive(false);
         flechaBiblioteca?.SetActive(false);
@@ -131,12 +129,12 @@ public class Tutorial : MonoBehaviour
             {
                 cat.IniciarDialogoExtraDesdeLista(dialogos);
             }
-            else if (pasoActual == 2 && GameManager.instance.nivelActual == 1)
+            else if (pasoActual == 2)
             {
-                flechaVolver.SetActive(true);
+                flechaVolver?.SetActive(true);
             }
 
-            if (pasoActual == 0 && GameManager.instance.nivelActual == 1)
+            if (pasoActual == 0)
             {
                 flechaTelaraña?.SetActive(true);
                 StartCoroutine(HabilitarTelaranaConDelay(2f));

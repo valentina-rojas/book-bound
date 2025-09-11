@@ -97,7 +97,7 @@ public class TaskManager : MonoBehaviour
 
         if (TendCat.instance != null)
             TendCat.instance.ActualizarVisibilidadObjetos();
-            DragRegadera.instance.ActualizarVisibilidadRegadera();
+        DragRegadera.instance.ActualizarVisibilidadRegadera();
     }
 
     public void MostrarTareas()
@@ -105,6 +105,11 @@ public class TaskManager : MonoBehaviour
         panelTareas.SetActive(true);
         botonAbrirLista.gameObject.SetActive(false);
         botonCerrarLista.gameObject.SetActive(true);
+
+        if (tareasYaCompletadas && botonAbrirTienda.gameObject.activeSelf)
+        {
+            botonAbrirTienda.gameObject.SetActive(false);
+        }
     }
 
     public void OcultarListaTareas()
@@ -122,6 +127,7 @@ public class TaskManager : MonoBehaviour
 
     private void OnClickAbrirTienda()
     {
+        OcultarListaTareas();
         botonAbrirTienda.gameObject.SetActive(false);
 
         RuidoSalaDeLecturaManager ruido = FindFirstObjectByType<RuidoSalaDeLecturaManager>();
@@ -257,10 +263,19 @@ public class TaskManager : MonoBehaviour
         if (botonAbrirTienda != null)
             botonAbrirTienda.gameObject.SetActive(true);
     }
-    
+
     public bool SeAbrioTiendaAlMenosUnaVez()
     {
         return tiendaAbiertaPorPrimeraVez;
     }
 
+    public void RestaurarEstadoTienda(bool estadoTienda)
+    {
+        tiendaAbiertaPorPrimeraVez = estadoTienda;
+
+        if (tiendaAbiertaPorPrimeraVez && TodasLasTareasCompletadas())
+        {
+            HabilitarBotonTienda();
+        }
+    }
 }

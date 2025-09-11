@@ -53,6 +53,7 @@ public class SaveData
     public List<SlotCuadroGuardado> slotsCuadrosGuardados;
     public List<string> itemsInventario; 
     public List<GeneroCantidad> librosEsperadosPorGeneroList;
+    public bool tiendaAbiertaPorPrimeraVez;
 }
 
 public static class SaveManager
@@ -94,7 +95,9 @@ public static class SaveManager
             slotsGuardados = slotsGuardados,
             slotsCuadrosGuardados = slotsCuadrosGuardados,
             itemsInventario = itemsInventario,
-            librosEsperadosPorGeneroList = listaGeneros
+            librosEsperadosPorGeneroList = listaGeneros,
+            tiendaAbiertaPorPrimeraVez = TaskManager.instance != null ? 
+                TaskManager.instance.SeAbrioTiendaAlMenosUnaVez() : false
         };
 
         string json = JsonUtility.ToJson(data);
@@ -113,6 +116,13 @@ public static class SaveManager
             Debug.Log("No hay partida guardada, comenzando nueva partida");
             int dineroInicial = EconomyManager.instance != null ? EconomyManager.instance.dineroInicial : 0;
 
+            List<GeneroCantidad> listaGeneros = new List<GeneroCantidad>();
+            if (ShelfManager.instance != null)
+            {
+                foreach (var kvp in ShelfManager.instance.librosEsperadosPorGenero)
+                    listaGeneros.Add(new GeneroCantidad(kvp.Key, kvp.Value));
+            }
+
             return new SaveData()
             {
                 nivelActual = 1,
@@ -122,7 +132,8 @@ public static class SaveManager
                 slotsGuardados = new List<SlotGuardado>(),
                 slotsCuadrosGuardados = new List<SlotCuadroGuardado>(),
                 itemsInventario = new List<string>(),
-                librosEsperadosPorGeneroList = new List<GeneroCantidad>()
+                librosEsperadosPorGeneroList = listaGeneros,
+                tiendaAbiertaPorPrimeraVez = false
             };
         }
 

@@ -83,6 +83,11 @@ public class GameManager : MonoBehaviour
     {
         SaveData data = SaveManager.CargarNivel();
         SaveManager.RestaurarDatos(data);
+
+        if (TaskManager.instance != null)
+        {
+            TaskManager.instance.RestaurarEstadoTienda(data.tiendaAbiertaPorPrimeraVez);
+        }
     }
     #endregion
 
