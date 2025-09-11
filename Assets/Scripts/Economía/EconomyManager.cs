@@ -57,6 +57,12 @@ public class EconomyManager : MonoBehaviour
         ActualizarUI();
     }
 
+    public void EstablecerDinero(int cantidad)
+    {
+        dineroActual = cantidad;
+        ActualizarUI();
+    }
+
     private void ActualizarUI()
     {
         if (textoDinero != null)

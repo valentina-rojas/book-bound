@@ -82,7 +82,7 @@ public class GameManager : MonoBehaviour
     private void RestaurarEstadoJuego()
     {
         SaveData data = SaveManager.CargarNivel();
-        SaveManager.RestaurarLibros(data);
+        SaveManager.RestaurarDatos(data);
     }
     #endregion
 

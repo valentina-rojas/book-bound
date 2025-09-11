@@ -17,6 +17,7 @@ public class LibroGuardado
 public class SaveData
 {
     public int nivelActual;
+    public int dinero;
     public List<LibroPrestado> librosPrestados;
     public List<LibroGuardado> librosEstantes;
 }
@@ -38,6 +39,7 @@ public static class SaveManager
         SaveData data = new SaveData()
         {
             nivelActual = nivel,
+            dinero = EconomyManager.instance.ObtenerDinero(),
             librosPrestados = new List<LibroPrestado>(libros),
             librosEstantes = librosEstantes
         };
@@ -56,6 +58,7 @@ public static class SaveManager
             return new SaveData()
             {
                 nivelActual = 1,
+                dinero = 0,
                 librosPrestados = new List<LibroPrestado>(),
                 librosEstantes = new List<LibroGuardado>()
             };
@@ -66,7 +69,15 @@ public static class SaveManager
         Debug.Log($"Partida cargada: Nivel {data.nivelActual}, Libros en estantes: {data.librosEstantes.Count}");
         return data;
     }
+    public static void RestaurarDatos(SaveData data)
+    {
+        if (data == null) return;
 
+        if (EconomyManager.instance != null)
+            EconomyManager.instance.EstablecerDinero(data.dinero);
+            
+        RestaurarLibros(data);
+    }
     public static void RestaurarLibros(SaveData data)
     {
         if (data == null || data.librosEstantes == null || data.librosEstantes.Count == 0)
