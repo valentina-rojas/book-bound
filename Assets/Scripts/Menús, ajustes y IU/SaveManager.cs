@@ -1,5 +1,5 @@
-using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine;
 
 [System.Serializable]
 public class LibroGuardado
@@ -28,6 +28,21 @@ public class SlotCuadroGuardado
 }
 
 [System.Serializable]
+public class GeneroCantidad
+{
+    public string genero;
+    public int cantidad;
+
+    public GeneroCantidad() { }
+
+    public GeneroCantidad(string genero, int cantidad)
+    {
+        this.genero = genero;
+        this.cantidad = cantidad;
+    }
+}
+
+[System.Serializable]
 public class SaveData
 {
     public int nivelActual;
@@ -36,40 +51,40 @@ public class SaveData
     public List<LibroGuardado> librosEstantes;
     public List<SlotGuardado> slotsGuardados;
     public List<SlotCuadroGuardado> slotsCuadrosGuardados;
-    public List<string> itemsInventario; // Items que están en el inventario
+    public List<string> itemsInventario; 
+    public List<GeneroCantidad> librosEsperadosPorGeneroList;
 }
 
 public static class SaveManager
 {
     private const string SaveKey = "JuegoGuardado";
 
-    // ------------------ GUARDAR ------------------
+    #region Guardar
     public static void GuardarNivel(int nivel, List<LibroPrestado> libros)
     {
-        // Guardar libros en estantes
         List<LibroGuardado> librosEstantes = new List<LibroGuardado>();
         BookData[] todosLibros = GameObject.FindObjectsOfType<BookData>(true);
         foreach (BookData libro in todosLibros)
             librosEstantes.Add(libro.ToLibroGuardado());
 
-        // Guardar slots normales
         List<SlotGuardado> slotsGuardados = new List<SlotGuardado>();
         SlotLugar[] todosSlots = GameObject.FindObjectsOfType<SlotLugar>(true);
         foreach (SlotLugar slot in todosSlots)
             slotsGuardados.Add(slot.ToSlotGuardado());
 
-        // Guardar slots de cuadros
         List<SlotCuadroGuardado> slotsCuadrosGuardados = new List<SlotCuadroGuardado>();
         SlotCuadro[] todosSlotsCuadros = GameObject.FindObjectsOfType<SlotCuadro>(true);
         foreach (SlotCuadro slot in todosSlotsCuadros)
             slotsCuadrosGuardados.Add(slot.ToSlotCuadroGuardado());
 
-        // Guardar items en inventario
         List<string> itemsInventario = new List<string>();
         foreach (Item i in InventarioManager.Instance.ObtenerItems())
             itemsInventario.Add(i.nombre);
 
-        // Crear objeto SaveData
+        List<GeneroCantidad> listaGeneros = new List<GeneroCantidad>();
+        foreach (var kvp in ShelfManager.instance.librosEsperadosPorGenero)
+            listaGeneros.Add(new GeneroCantidad(kvp.Key, kvp.Value));
+
         SaveData data = new SaveData()
         {
             nivelActual = nivel,
@@ -78,18 +93,19 @@ public static class SaveManager
             librosEstantes = librosEstantes,
             slotsGuardados = slotsGuardados,
             slotsCuadrosGuardados = slotsCuadrosGuardados,
-            itemsInventario = itemsInventario
+            itemsInventario = itemsInventario,
+            librosEsperadosPorGeneroList = listaGeneros
         };
 
-        // Guardar en PlayerPrefs
         string json = JsonUtility.ToJson(data);
         PlayerPrefs.SetString(SaveKey, json);
         PlayerPrefs.Save();
 
         Debug.Log($"Juego guardado: Nivel {nivel}, Libros: {librosEstantes.Count}, Slots: {slotsGuardados.Count}, SlotsCuadros: {slotsCuadrosGuardados.Count}, ItemsInventario: {itemsInventario.Count}");
     }
+    #endregion
 
-    // ------------------ CARGAR ------------------
+    #region Cargar
     public static SaveData CargarNivel()
     {
         if (!PlayerPrefs.HasKey(SaveKey))
@@ -100,12 +116,13 @@ public static class SaveManager
             return new SaveData()
             {
                 nivelActual = 1,
-                dinero = dineroInicial, // ← usa el valor inicial configurado
+                dinero = dineroInicial,
                 librosPrestados = new List<LibroPrestado>(),
                 librosEstantes = new List<LibroGuardado>(),
                 slotsGuardados = new List<SlotGuardado>(),
                 slotsCuadrosGuardados = new List<SlotCuadroGuardado>(),
-                itemsInventario = new List<string>()
+                itemsInventario = new List<string>(),
+                librosEsperadosPorGeneroList = new List<GeneroCantidad>()
             };
         }
 
@@ -114,8 +131,9 @@ public static class SaveManager
         Debug.Log($"Partida cargada: Nivel {data.nivelActual}, Libros: {data.librosEstantes.Count}, Slots: {data.slotsGuardados.Count}, SlotsCuadros: {data.slotsCuadrosGuardados.Count}, ItemsInventario: {data.itemsInventario.Count}");
         return data;
     }
+    #endregion
 
-    // ------------------ RESTAURAR ------------------
+    #region Restaurar
     public static void RestaurarDatos(SaveData data)
     {
         if (data == null) return;
@@ -127,6 +145,17 @@ public static class SaveManager
         RestaurarSlots(data);
         RestaurarSlotsCuadros(data);
         RestaurarInventario(data);
+
+        if (data.librosEsperadosPorGeneroList != null)
+        {
+            ShelfManager.instance.librosEsperadosPorGenero = new Dictionary<string,int>();
+            foreach (var gc in data.librosEsperadosPorGeneroList)
+                ShelfManager.instance.librosEsperadosPorGenero[gc.genero] = gc.cantidad;
+
+            ShelfEstante[] estantes = GameObject.FindObjectsOfType<ShelfEstante>(true);
+            foreach (var estante in estantes)
+                estante.ActualizarCantidadEsperada();
+        }
     }
 
     public static void RestaurarLibros(SaveData data)
@@ -224,8 +253,9 @@ public static class SaveManager
                 inventario.AgregarItemSinAbrir(item);
         }
     }
+    #endregion
 
-    // ------------------ UTILIDADES ------------------
+    #region Utilidades
     public static string ObtenerRutaCompleta(Transform transform)
     {
         string path = transform.name;
@@ -241,4 +271,5 @@ public static class SaveManager
     {
         PlayerPrefs.DeleteKey(SaveKey);
     }
+    #endregion
 }

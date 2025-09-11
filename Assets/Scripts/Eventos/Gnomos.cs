@@ -47,7 +47,6 @@ public class Gnomos : MonoBehaviour
             float probabilidad = 0.99f;
             if (Random.value <= probabilidad)
             {
-                Debug.Log("Evento de gnomos activado.");
                 desorganizarPendiente = true;
             }
             else
@@ -209,7 +208,6 @@ public class Gnomos : MonoBehaviour
         {
             ShelfManager.instance.DesorganizarLibros();
             desorganizarPendiente = false;
-            Debug.Log("Libros desorganizados en cámara 1.");
         }
     }
 

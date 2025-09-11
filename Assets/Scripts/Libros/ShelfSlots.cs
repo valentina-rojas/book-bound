@@ -38,4 +38,3 @@ public class ShelfSlots : MonoBehaviour, IDropHandler
         ShelfManager.instance.RevisarOrganizacionConDelay();
     }
 }
-

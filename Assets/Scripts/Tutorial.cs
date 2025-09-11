@@ -45,8 +45,6 @@ public class Tutorial : MonoBehaviour
         SaveData saveData = SaveManager.CargarNivel();
         if (saveData.nivelActual > 1)
         {
-            Debug.Log("Cargando partida de nivel superior al 1, tutorial saltado");
-
             if (telaranaTutorial != null)
                 telaranaTutorial.HabilitarInteraccion();
 

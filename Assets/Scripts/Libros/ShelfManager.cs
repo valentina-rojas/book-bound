@@ -35,7 +35,7 @@ public class ShelfManager : MonoBehaviour
 
     public int ObtenerLibrosEsperadosParaGenero(string genero)
     {
-        if (librosEsperadosPorGenero.TryGetValue(genero, out int cantidad))
+        if (librosEsperadosPorGenero != null && librosEsperadosPorGenero.TryGetValue(genero, out int cantidad))
             return cantidad;
         return 0;
     }

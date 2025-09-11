@@ -58,8 +58,6 @@ public class CameraManager : MonoBehaviour
         botonCambiarCamara2.interactable = (nivelCargado > 2);
         botonCambiarCamara3.interactable = (nivelCargado > 1);
         botonCambiarCamara4.interactable = (nivelCargado > 3);
-
-        Debug.Log($"Cámaras inicializadas para nivel: {nivelCargado}");
     }
     #endregion
 

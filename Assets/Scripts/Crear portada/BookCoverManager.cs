@@ -131,7 +131,6 @@ public class BookCoverManager : MonoBehaviour
         if (!StickersCubrenTitulo())
         {
             extras += 3;
-            Debug.Log("+3 extras: Los stickers no cubren el título");
         }
 
         GameManager.instance.CompletarPortada(stickersUsados, extras);
