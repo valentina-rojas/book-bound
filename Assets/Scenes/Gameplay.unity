@@ -41733,6 +41733,7 @@ MonoBehaviour:
   botonCambiarCamara2: {fileID: 930921487}
   botonCambiarCamara3: {fileID: 1013012246}
   botonCambiarCamara4: {fileID: 1587707136}
+  botonCambiarCamara5: {fileID: 570753312}
   panelReparacion: {fileID: 141407673}
   panelPortada: {fileID: 493142482}
   panelHechizo: {fileID: 830782714}
@@ -47996,7 +47997,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 811, y: -491}
+  m_AnchoredPosition: {x: 0, y: -491}
   m_SizeDelta: {x: 230, y: 68}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1269052731

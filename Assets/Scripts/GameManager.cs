@@ -122,6 +122,7 @@ public class GameManager : MonoBehaviour
             CameraManager.instance.botonCambiarCamara3.gameObject.SetActive(nivelActual > 1);
             CameraManager.instance.botonCambiarCamara2.gameObject.SetActive(nivelActual > 2);
             CameraManager.instance.botonCambiarCamara4.gameObject.SetActive(nivelActual > 3);
+            CameraManager.instance.botonCambiarCamara5.gameObject.SetActive(nivelActual > 3);
         }
 
         Time.timeScale = 0f;

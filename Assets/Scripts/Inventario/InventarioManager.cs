@@ -192,7 +192,6 @@ public class InventarioManager : MonoBehaviour
 
     public void MostrarInventarioCompleto()
     {
-        panelInventario.SetActive(true);
         MostrarBotonAbrirInventario();
         MostrarPestaña(CategoriaItem.Herramientas);
     }

@@ -17,6 +17,7 @@ public class CameraManager : MonoBehaviour
     public Button botonCambiarCamara2;
     public Button botonCambiarCamara3;
     public Button botonCambiarCamara4;
+    public Button botonCambiarCamara5;
 
     [Header("Paneles")]
     public GameObject panelReparacion;
@@ -42,7 +43,7 @@ public class CameraManager : MonoBehaviour
     {
         for (int i = 0; i < cameras.Length; i++)
         {
-            bool isActive = (i == 0); 
+            bool isActive = (i == 0);
             cameras[i].enabled = isActive;
 
             if (canvasObjects != null && i < canvasObjects.Length)
@@ -53,11 +54,13 @@ public class CameraManager : MonoBehaviour
         botonCambiarCamara2.gameObject.SetActive(nivelCargado > 2);
         botonCambiarCamara3.gameObject.SetActive(nivelCargado > 1);
         botonCambiarCamara4.gameObject.SetActive(nivelCargado > 3);
+        botonCambiarCamara5.gameObject.SetActive(nivelCargado > 3);
         botonCambiarCamara0.interactable = false;
         botonCambiarCamara1.interactable = (nivelCargado > 0);
         botonCambiarCamara2.interactable = (nivelCargado > 2);
         botonCambiarCamara3.interactable = (nivelCargado > 1);
         botonCambiarCamara4.interactable = (nivelCargado > 3);
+        botonCambiarCamara5.interactable = (nivelCargado > 3);
     }
     #endregion
 
@@ -98,6 +101,7 @@ public class CameraManager : MonoBehaviour
         botonCambiarCamara2.interactable = true;
         botonCambiarCamara3.interactable = true;
         botonCambiarCamara4.interactable = true;
+        botonCambiarCamara5.interactable = true;
 
         switch (currentCameraIndex)
         {
@@ -106,6 +110,7 @@ public class CameraManager : MonoBehaviour
             case 2: botonCambiarCamara2.interactable = false; break;
             case 3: botonCambiarCamara3.interactable = false; break;
             case 4: botonCambiarCamara4.interactable = false; break;
+            case 5: botonCambiarCamara5.interactable = false; break;
         }
     }
 
@@ -127,6 +132,7 @@ public class CameraManager : MonoBehaviour
         botonCambiarCamara2.interactable = false;
         botonCambiarCamara3.interactable = false;
         botonCambiarCamara4.interactable = false;
+        botonCambiarCamara5.interactable = false;
     }
 
     public void ActivarBotonCamara()
@@ -136,6 +142,7 @@ public class CameraManager : MonoBehaviour
         botonCambiarCamara2.interactable = true;
         botonCambiarCamara3.interactable = true;
         botonCambiarCamara4.interactable = true;
+        botonCambiarCamara5.interactable = true;
     }
 
     public void ActivarCamaraPrincipal()
