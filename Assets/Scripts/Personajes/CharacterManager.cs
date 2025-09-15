@@ -70,6 +70,10 @@ public class CharacterManager : MonoBehaviour
                 CameraManager.instance.ActivarPanelHechizo();
                 FindFirstObjectByType<HintsHechizos>()?.SendMessage("CargarPistasDePersonaje");
                 break;
+            case CharacterAttributes.TipoDePedido.Traduccion:
+                Debug.Log("Este personaje quiere traducir un libro.");
+                CameraManager.instance.ActivarPanelTraduccion();
+                break;
             case CharacterAttributes.TipoDePedido.JuegoTrivia:
                 Debug.Log("Este personaje quiere hacerte preguntas");
                 QuizManager.instance.StartQuiz(personaje.PreguntasTrivia);

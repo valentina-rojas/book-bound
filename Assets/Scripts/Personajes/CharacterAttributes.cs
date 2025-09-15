@@ -13,6 +13,7 @@ public class CharacterAttributes : MonoBehaviour
         HacerPortada,
         HechizarLibro,
         JuegoTrivia,
+        Traduccion,
         DonarLibro,
         DevolverLibro 
     }

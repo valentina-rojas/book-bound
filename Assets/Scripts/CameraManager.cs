@@ -23,6 +23,7 @@ public class CameraManager : MonoBehaviour
     public GameObject panelReparacion;
     public GameObject panelPortada;
     public GameObject panelHechizo;
+    public GameObject panelTraduccion; 
     public GameObject panelDonar;
     public GameObject panelDevolver;
 
@@ -202,6 +203,21 @@ public class CameraManager : MonoBehaviour
     public void DesctivarPanelHechizo()
     {
         panelHechizo.gameObject.SetActive(false);
+        InventarioManager.Instance.MostrarInventarioCompleto();
+        HistorialManager.Instance.MostrarBotonAbrirHistorial();
+    }
+
+    public void ActivarPanelTraduccion()
+    {
+        panelTraduccion.SetActive(true);
+        TaskManager.instance.OcultarBotonTareas();
+        InventarioManager.Instance.OcultarInventarioCompleto();
+        HistorialManager.Instance.OcultarBotonAbrirHistorial();
+    }
+
+    public void DesctivarPanelTraduccion()
+    {
+        panelTraduccion.SetActive(false);
         InventarioManager.Instance.MostrarInventarioCompleto();
         HistorialManager.Instance.MostrarBotonAbrirHistorial();
     }

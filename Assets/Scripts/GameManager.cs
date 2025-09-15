@@ -436,6 +436,14 @@ public class GameManager : MonoBehaviour
             characterSpawn.EndInteraction();
         }
     }
+    
+    public void CompletarTraduccion()
+    {
+        resultadoRecomendacion = ResultadoRecomendacion.Buena;
+        recomendacionesBuenas++;
+        EconomyManager.instance.SumarDinero(30);
+        ActualizarSpritePersonaje();
+    }
 
     public void CompletarTrivia(int correctas, int incorrectas)
     {
@@ -443,7 +451,7 @@ public class GameManager : MonoBehaviour
         {
             resultadoRecomendacion = ResultadoRecomendacion.Buena;
             recomendacionesBuenas++;
-            
+
             int recompensa = correctas * 6;
             EconomyManager.instance.SumarDinero(recompensa);
 
