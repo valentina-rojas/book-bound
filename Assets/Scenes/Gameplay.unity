@@ -46218,7 +46218,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: ESPEJO SUELTA
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 43e27e5a729134240a8c019756c2dba6, type: 2}
   m_sharedMaterial: {fileID: -8157375783647272421, guid: 43e27e5a729134240a8c019756c2dba6, type: 2}
@@ -62501,6 +62501,16 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 93d27e6e90fd10a4883895734221d0cc, type: 2}
   - {fileID: 11400000, guid: adb9c2e788f91f948ad4b85244309085, type: 2}
   - {fileID: 11400000, guid: e93274f47e62d0548b864e233acf5a1a, type: 2}
+  - {fileID: 11400000, guid: 94d7d970f53d54346ac7b7074395b8af, type: 2}
+  - {fileID: 11400000, guid: 7067f2742bc601c419a636affa15d92e, type: 2}
+  - {fileID: 11400000, guid: bab33ecdb3908294f9d064193accc63d, type: 2}
+  - {fileID: 11400000, guid: b5e83653bcb794a4899bfe21ea3c3176, type: 2}
+  - {fileID: 11400000, guid: 7baa6d8d84d3c40449a1d5384b429cdb, type: 2}
+  - {fileID: 11400000, guid: 7baa6d8d84d3c40449a1d5384b429cdb, type: 2}
+  - {fileID: 11400000, guid: f8dc8853bba808846b1130849c967e82, type: 2}
+  - {fileID: 11400000, guid: 989ef979fd3a968448b754480da7543b, type: 2}
+  - {fileID: 11400000, guid: 3216a5548ff00b64caf21902af90100f, type: 2}
+  - {fileID: 11400000, guid: 16a2f328d7574ec48b761ee2eea22978, type: 2}
   panelInventario: {fileID: 1617482111}
   prefabSlotItem: {fileID: 2763183034634821461, guid: 0f42fd6555ee2294ab29175116362ea6, type: 3}
   contenedorHerramientas: {fileID: 1485400382}
@@ -62562,6 +62572,15 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 606ad9f02f4aac641b6ff9251944cf17, type: 2}
   - {fileID: 11400000, guid: 27151f08bd192fd40be9529d60f363c4, type: 2}
   - {fileID: 11400000, guid: 93d27e6e90fd10a4883895734221d0cc, type: 2}
+  - {fileID: 11400000, guid: 94d7d970f53d54346ac7b7074395b8af, type: 2}
+  - {fileID: 11400000, guid: 7067f2742bc601c419a636affa15d92e, type: 2}
+  - {fileID: 11400000, guid: bab33ecdb3908294f9d064193accc63d, type: 2}
+  - {fileID: 11400000, guid: b5e83653bcb794a4899bfe21ea3c3176, type: 2}
+  - {fileID: 11400000, guid: 7baa6d8d84d3c40449a1d5384b429cdb, type: 2}
+  - {fileID: 11400000, guid: f8dc8853bba808846b1130849c967e82, type: 2}
+  - {fileID: 11400000, guid: 989ef979fd3a968448b754480da7543b, type: 2}
+  - {fileID: 11400000, guid: 3216a5548ff00b64caf21902af90100f, type: 2}
+  - {fileID: 11400000, guid: 16a2f328d7574ec48b761ee2eea22978, type: 2}
 --- !u!1 &1468377846
 GameObject:
   m_ObjectHideFlags: 0

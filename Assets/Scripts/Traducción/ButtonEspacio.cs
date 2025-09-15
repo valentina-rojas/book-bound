@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class ButtonEspacio : MonoBehaviour
 {
     [Header("Referencias")]
-    public TMP_Text texto; // asignar desde inspector
+    public TMP_Text texto; 
     private Button boton;
     private Image imagen;
     private CriptogramaManager manager;

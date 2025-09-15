@@ -160,7 +160,7 @@ MonoBehaviour:
   libroDeseadoID: 33
   tipoPreferido: herbologia
   nombreDelCliente: Aprendiz
-  descripcionPedido: Reparacion
+  descripcionPedido: "Traducci\xF3n"
   stickersRequeridos: 
   pistasReparacion:
   - m_TableReference:
@@ -227,6 +227,7 @@ MonoBehaviour:
     m_WaitForCompletion: 0
     m_LocalVariables: []
   pistasHechizo: []
+  claveMensajeCriptograma: Traduccion1
   m_preguntasTrivia: []
   libroDonadoID: 0
   libroDevueltoID: 0

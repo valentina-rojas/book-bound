@@ -79,6 +79,10 @@ MonoBehaviour:
     m_Key: BrujaMayor_Des
     m_Metadata:
       m_Items: []
+  - m_Id: 17375300330102784
+    m_Key: "Traducci\xF3n"
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

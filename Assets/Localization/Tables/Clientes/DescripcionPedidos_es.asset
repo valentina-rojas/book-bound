@@ -82,6 +82,10 @@ MonoBehaviour:
     m_Localized: "Solicit\xF3 \"Hierbas y Sabores de Reinos Olvidados\""
     m_Metadata:
       m_Items: []
+  - m_Id: 17375300330102784
+    m_Localized: "Traducci\xF3n"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

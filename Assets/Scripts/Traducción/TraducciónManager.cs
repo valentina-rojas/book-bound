@@ -17,6 +17,15 @@ public class TraduccionManager : MonoBehaviour
         }
     }
 
+    public void IniciarTraduccion(CharacterAttributes personaje)
+    {
+        if (personaje == null) return;
+
+        string clave = personaje.claveMensajeCriptograma;
+        CriptogramaManager.instance.GenerarCriptogramaPorClave(clave);
+        CameraManager.instance.ActivarPanelTraduccion();
+    }
+
     public void EntregarTraduccion()
     {
         GameManager.instance.CompletarTraduccion();

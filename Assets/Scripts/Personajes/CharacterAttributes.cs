@@ -155,11 +155,18 @@ public class CharacterAttributes : MonoBehaviour
     public LocalizedString tituloLibroPortadaKey;
     public StickerSet setStickersDeseado = StickerSet.Default;
     public List<LocalizedString> pistasPortada = new List<LocalizedString>();
+    #endregion
 
+    #region Hechizar
     [Header("Hechizo")]
     public Hechizo hechizoSolicitado = Hechizo.Ninguno;
     public LocalizedString tituloLibroHechizadoKey;
     public List<LocalizedString> pistasHechizo = new List<LocalizedString>();
+    #endregion
+
+    #region Traducir
+    [Header("Traducción")]
+    public string claveMensajeCriptograma;
     #endregion
 
     #region Trivia

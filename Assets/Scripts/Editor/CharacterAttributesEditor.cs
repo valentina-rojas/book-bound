@@ -27,6 +27,7 @@ public class CharacterAttributesEditor : Editor
     SerializedProperty tituloLibroDevuelto;      
     SerializedProperty nombreDelCliente;
     SerializedProperty descripcionPedido;
+    SerializedProperty claveMensajeCriptograma;
     #endregion
 
     #region OnEnable
@@ -61,6 +62,8 @@ public class CharacterAttributesEditor : Editor
 
         nombreDelCliente = serializedObject.FindProperty("nombreDelCliente");
         descripcionPedido = serializedObject.FindProperty("descripcionPedido");
+
+        claveMensajeCriptograma = serializedObject.FindProperty("claveMensajeCriptograma");
     }
     #endregion
 
@@ -159,6 +162,11 @@ public class CharacterAttributesEditor : Editor
                 EditorGUILayout.LabelField("📥 Devolución", EditorStyles.boldLabel);
                 EditorGUILayout.PropertyField(libroDevueltoID);
                 EditorGUILayout.PropertyField(tituloLibroDevuelto);
+                break;
+
+            case CharacterAttributes.TipoDePedido.Traduccion:
+                EditorGUILayout.LabelField("📝 Traducción", EditorStyles.boldLabel);
+                EditorGUILayout.PropertyField(claveMensajeCriptograma, new GUIContent("Clave Mensaje Criptograma"));
                 break;
         }
     }

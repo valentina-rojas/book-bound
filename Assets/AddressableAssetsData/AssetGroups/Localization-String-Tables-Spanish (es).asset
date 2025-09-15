@@ -116,6 +116,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-es
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c3a2b48c8e4901d4d86eb3716e3b2d1a
+    m_Address: MensajesCriptograma_es
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: dbb4c1e187cf9b844abdd1423c30e3a7
     m_Address: DescripcionLibros_es
     m_ReadOnly: 1

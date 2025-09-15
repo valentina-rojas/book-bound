@@ -75,6 +75,11 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: de3751bf7b4e70649a1503543d2c5b11
+    m_Address: Assets/Localization/Tables/Pedidos/MensajesCriptograma Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: e156b153c01272446b7be2288cc76b20
     m_Address: Assets/Localization/Tables/Libros/TitulosLibros Shared Data.asset
     m_ReadOnly: 1

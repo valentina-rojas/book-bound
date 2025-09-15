@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.Localization;
 
 public class CriptogramaManager : MonoBehaviour
 {
@@ -22,14 +23,38 @@ public class CriptogramaManager : MonoBehaviour
         else Destroy(gameObject);
     }
 
-    private void Start()
+    public void GenerarCriptogramaPorClave(string claveMensaje)
     {
-        GenerarCriptograma("ESPEJO SUELTA");
-        if (botonEntregar != null) botonEntregar.gameObject.SetActive(false);
+        if (string.IsNullOrEmpty(claveMensaje)) 
+        {
+            Debug.LogError("Clave de mensaje vacía en CriptogramaManager.");
+            return;
+        }
+
+        var localizedString = new LocalizedString
+        {
+            TableReference = "MensajesCriptograma",
+            TableEntryReference = claveMensaje
+        };
+
+        localizedString.GetLocalizedStringAsync().Completed += handle =>
+        {
+            if (handle.Status == UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationStatus.Succeeded)
+            {
+                string mensaje = handle.Result;
+                GenerarCriptograma(mensaje);
+            }
+            else
+            {
+                Debug.LogError($"No se pudo cargar el mensaje de criptograma: {claveMensaje}");
+            }
+        };
     }
 
-    public void GenerarCriptograma(string mensaje)
+    private void GenerarCriptograma(string mensaje)
     {
+        if (string.IsNullOrEmpty(mensaje)) return;
+
         mensajeCorrecto = mensaje;
         mensajeCorrectoSinEspaciosUpper = RemoveSpacesAndToUpper(mensaje);
 
@@ -45,7 +70,14 @@ public class CriptogramaManager : MonoBehaviour
         {
             char c = mensaje[i];
             GameObject espacioGO = Instantiate(prefabEspacio, contenedorEspacios);
+            espacioGO.SetActive(true); 
+
             ButtonEspacio be = espacioGO.GetComponent<ButtonEspacio>();
+            if (be == null)
+            {
+                Debug.LogError("Prefab no tiene ButtonEspacio asignado");
+                continue;
+            }
 
             be.AsignarManager(this);
 
@@ -55,7 +87,7 @@ public class CriptogramaManager : MonoBehaviour
             }
             else
             {
-                bool revelar = rnd.NextDouble() < 0.7;
+                bool revelar = rnd.NextDouble() < 0.5;
 
                 if (revelar)
                     be.ConfigureAsRevealed(c.ToString());
@@ -105,10 +137,9 @@ public class CriptogramaManager : MonoBehaviour
             if (t == null) continue;
 
             string text = t.text.Trim();
-            if (string.IsNullOrEmpty(text)) 
-                continue;
+            if (string.IsNullOrEmpty(text)) continue;
 
-            if (text == "_" || text == "__") 
+            if (text == "_" || text == "__")
             {
                 if (botonEntregar != null) botonEntregar.gameObject.SetActive(false);
                 return;
@@ -121,12 +152,10 @@ public class CriptogramaManager : MonoBehaviour
         if (resultadoUpper == mensajeCorrectoSinEspaciosUpper)
         {
             if (botonEntregar != null) botonEntregar.gameObject.SetActive(true);
-            Debug.Log("Criptograma completado correctamente: botón Entregar activo.");
         }
         else
         {
             if (botonEntregar != null) botonEntregar.gameObject.SetActive(false);
-            Debug.Log("Criptograma completado (llenado) pero incorrecto.");
         }
     }
 }

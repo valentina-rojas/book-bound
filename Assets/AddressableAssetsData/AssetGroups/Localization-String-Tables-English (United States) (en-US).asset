@@ -84,6 +84,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-en-US
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8a35b15488b215245b58e88d46c655a8
+    m_Address: MensajesCriptograma_en-US
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en-US
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 98f9e10dc48650043a5ccb0fcd064863
     m_Address: Quiz_en-US
     m_ReadOnly: 1

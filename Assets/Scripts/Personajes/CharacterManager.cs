@@ -73,6 +73,7 @@ public class CharacterManager : MonoBehaviour
             case CharacterAttributes.TipoDePedido.Traduccion:
                 Debug.Log("Este personaje quiere traducir un libro.");
                 CameraManager.instance.ActivarPanelTraduccion();
+                TraduccionManager.instance.IniciarTraduccion(personaje);
                 break;
             case CharacterAttributes.TipoDePedido.JuegoTrivia:
                 Debug.Log("Este personaje quiere hacerte preguntas");

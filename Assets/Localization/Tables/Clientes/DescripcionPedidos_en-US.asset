@@ -82,6 +82,10 @@ MonoBehaviour:
     m_Localized: Requested Herbs and Flavors of Forgotten Realms
     m_Metadata:
       m_Items: []
+  - m_Id: 17375300330102784
+    m_Localized: Translation
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
