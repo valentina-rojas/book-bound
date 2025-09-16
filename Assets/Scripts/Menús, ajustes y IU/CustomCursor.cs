@@ -10,23 +10,22 @@ public class CustomCursor : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(gameObject);
+            DontDestroyOnLoad(transform.root.gameObject); 
         }
         else
         {
-            Destroy(gameObject); 
+            Destroy(transform.root.gameObject);
         }
     }
 
     void Start()
     {
         Cursor.visible = false; 
-        DontDestroyOnLoad(gameObject);
     }
 
     void Update()
     {
-        Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        transform.position = mousePos + offset;
+        Vector2 mousePos = Input.mousePosition;
+        GetComponent<RectTransform>().position = mousePos + offset;
     }
 }
