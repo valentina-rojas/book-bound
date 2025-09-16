@@ -110,6 +110,74 @@ MonoBehaviour:
     m_Localized: Herbs and Flavors of Forgotten Realms
     m_Metadata:
       m_Items: []
+  - m_Id: 17703116888252416
+    m_Localized: society
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17703116900835328
+    m_Localized: secret
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17703116900835329
+    m_Localized: shadows
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17703116900835330
+    m_Localized: disappear
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17703116900835331
+    m_Localized: buy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17703116900835332
+    m_Localized: mysterious
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17703116900835333
+    m_Localized: book
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17703116900835334
+    m_Localized: The Runes of Salakhar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17703116900835335
+    m_Localized: Whispers Behind the Closed Door
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17703116900835336
+    m_Localized: recipes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17703116900835337
+    m_Localized: emotions
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17703116900835338
+    m_Localized: human
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17703116900835339
+    m_Localized: eclipse
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17703116900835340
+    m_Localized: seven days
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17703116900835341
+    m_Localized: stopped
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17703116900835342
+    m_Localized: time
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17703116900835343
+    m_Localized: Banquet of Full Moons
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

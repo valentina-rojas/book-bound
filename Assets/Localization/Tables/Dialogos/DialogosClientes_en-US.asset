@@ -522,7 +522,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 521059082320
-    m_Localized: I'm here to return The Guardian of the Blue Forest.
+    m_Localized: "I\u2019ve come to return this to you..."
     m_Metadata:
       m_Items: []
   - m_Id: 521059082321
@@ -748,20 +748,20 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 9123637525913600
-    m_Localized: "Hello... it\u2019s me again."
+    m_Localized: Hello, I'm here to look for a book.
     m_Metadata:
       m_Items: []
   - m_Id: 9123637525913601
-    m_Localized: This time I need you to help me with something... Could you?
+    m_Localized: I don't remember its name...
     m_Metadata:
       m_Items: []
   - m_Id: 9123637525913602
-    m_Localized: "I\u2019ve been writing a book about the adventures I lived on my
-      journeys, but I need help with the cover of the book."
+    m_Localized: "I only know that it\u2019s about people who disappear after buying
+      a mysterious book."
     m_Metadata:
       m_Items: []
   - m_Id: 9123637525913603
-    m_Localized: "I\u2019m very good at writing, but not at drawing."
+    m_Localized: Will you remember its name?
     m_Metadata:
       m_Items: []
   - m_Id: 9123637525913604
@@ -779,15 +779,15 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 9123637525913607
-    m_Localized: Excellent, this is just what I wanted...
+    m_Localized: "Thanks, that\u2019s the book I was looking for."
     m_Metadata:
       m_Items: []
   - m_Id: 9123637525913608
-    m_Localized: "Thank you, we\u2019ll see each other again..."
+    m_Localized: "I\u2019ll give it back to you when I\u2019m done."
     m_Metadata:
       m_Items: []
   - m_Id: 9123637525913609
-    m_Localized: "What is this? Didn\u2019t you listen to what I asked for?"
+    m_Localized: "I don\u2019t think this is the book I was looking for."
     m_Metadata:
       m_Items: []
   - m_Id: 9123637525913610
@@ -1090,6 +1090,454 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 9170868262051850
     m_Localized: Draw something related to that theme.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043018919936
+    m_Localized: Unless I disappear, haha.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043031502848
+    m_Localized: See you.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043035697152
+    m_Localized: Hello... today I came to leave this with you
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043035697153
+    m_Localized: maybe you can leave it here so someone else can make good use of
+      it.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043035697154
+    m_Localized: "Hello again... I\u2019m back."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043035697155
+    m_Localized: Those kids showed up again.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043035697156
+    m_Localized: hey managed to come back and cause trouble again...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043035697157
+    m_Localized: I need to get another book that will scare them more...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043035697158
+    m_Localized: Do you have Whispers Behind the Closed Door?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043035697159
+    m_Localized: Excellent, I think this will definitely scare them..
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043035697160
+    m_Localized: "No, what\u2019s this?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043035697161
+    m_Localized: "I\u2019m not even going to scare my own shadow with this book..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043035697162
+    m_Localized: "I\u2019m coming for you"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043035697163
+    m_Localized: I know you know about spells
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043035697164
+    m_Localized: and I need you to help me open this book to communicate with my
+      ancestors.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043035697165
+    m_Localized: and thus ask them for the secrets of eternal youth
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043035697166
+    m_Localized: The order of the runes is air, light, and water.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043035697167
+    m_Localized: "Do it, or I\u2019ll turn you into a toad!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043035697168
+    m_Localized: "Excellent, you\u2019ll know when you see me if it really works..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043035697169
+    m_Localized: After all, Don Vinagre was right about you...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043035697170
+    m_Localized: "Hi, I\u2019m here to leave this for you..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043035697171
+    m_Localized: "I\u2019m sure someone else will put it to better use than I do..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043035697172
+    m_Localized: Hi! Good morning!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043035697173
+    m_Localized: "Here\u2019s the book back, thank you so much!\""
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043035697174
+    m_Localized: Hello, lovely girl...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043035697175
+    m_Localized: "I\u2019ve come for you to help me cure my cold..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043035697176
+    m_Localized: "I found a spell, but because of my trembling hands I can\u2019t
+      manage it."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043035697177
+    m_Localized: Can you do it for me?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043035697178
+    m_Localized: Thank you very much, dear.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043035697179
+    m_Localized: "I\u2019m feeling much better now.."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043035697180
+    m_Localized: "Cough cough, I see I\u2019m still the same."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043035697181
+    m_Localized: "Don\u2019t worry, it will pass soon."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043039891456
+    m_Localized: "Hello, I\u2019m returning this to you"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043039891457
+    m_Localized: See you later...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043039891458
+    m_Localized: Hello! How are you today?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043039891459
+    m_Localized: I came to give you something; it will surely be useful to you..
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043039891460
+    m_Localized: "I found this book, and I think it\u2019s going to be useful in
+      your library..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043039891461
+    m_Localized: See you!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043039891462
+    m_Localized: "Phew, I see you\u2019re still here."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043039891463
+    m_Localized: "I\u2019ve come to put you to the test, but this time not with questions..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043039891464
+    m_Localized: "I\u2019ve come for a book"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043039891465
+    m_Localized: "It\u2019s about a secret society that operates in the shadows."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043039891466
+    m_Localized: "Let\u2019s see if you can figure out which one it is..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043039891467
+    m_Localized: "Hmm, unfortunately, you know what I\u2019m talking about."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043039891468
+    m_Localized: "Even so, you\u2019re no match for Rhea."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043039891469
+    m_Localized: You still have a lot to learn...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043039891470
+    m_Localized: "I\u2019m returning this..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043039891471
+    m_Localized: "So you can see that I never keep things that aren\u2019t mine."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043039891472
+    m_Localized: Hello! How are you today?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043039891473
+    m_Localized: "I\u2019m here to give you this book."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043039891474
+    m_Localized: "Since you\u2019ve been a great help."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043039891475
+    m_Localized: See you soon!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043039891476
+    m_Localized: Good morning...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043039891477
+    m_Localized: "\"Here\u2019s this back for you."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043039891478
+    m_Localized: Thanks for lending it to me, see you.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043039891479
+    m_Localized: "Hello! I\u2019ve come for your help..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043039891480
+    m_Localized: "I\u2019ve been told that you\u2019re an expert at helping people."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043039891481
+    m_Localized: "And that\u2019s why I came..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043039891482
+    m_Localized: "Where I live, there\u2019s a princess who got trapped in a mirror
+      from looking at herself too much.\""
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043039891483
+    m_Localized: And her parents asked me for help to rescue her
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043039891484
+    m_Localized: "I found the spell that breaks the curse, but I can\u2019t decipher
+      it..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043039891485
+    m_Localized: Would you help me translate it?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043039891486
+    m_Localized: You just have to choose the letter corresponding to the runic alphabet.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043039891487
+    m_Localized: And in this way, you can translate the phrase.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043039891488
+    m_Localized: Oh! Thank you so much!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043039891489
+    m_Localized: "You\u2019ve saved the princess of my kingdom."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043039891490
+    m_Localized: Surely you will be rewarded soon..
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043039891491
+    m_Localized: "Oh no! I can\u2019t save the princess, and the kings will exile
+      me."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043039891492
+    m_Localized: to cast this spell against the evil eye...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043039891493
+    m_Localized: "Excellent! You\u2019re really good at this..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043039891494
+    m_Localized: Have you ever thought about dedicating yourself to magic?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043039891495
+    m_Localized: See you soon...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043039891496
+    m_Localized: Oh, alright.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043039891497
+    m_Localized: I will keep practicing in my cabin...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043039891498
+    m_Localized: Good morning!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043039891499
+    m_Localized: Today I came to look for a book, since this is a bookstore hehe.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043039891500
+    m_Localized: I need it for my potion classes...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043039891501
+    m_Localized: It contains recipes based on basic human emotions.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043039891502
+    m_Localized: Can you lend it to me?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043039891503
+    m_Localized: "Thank you very much, I\u2019ll start practicing tomorrow."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043039891504
+    m_Localized: "I think I won\u2019t be able to do much with this.."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043039891505
+    m_Localized: Good day!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043039891506
+    m_Localized: "It\u2019s beautiful outside today, don\u2019t you think?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043039891507
+    m_Localized: "I need your help; I\u2019ve been told that you\u2019ve already
+      repaired several books."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043039891508
+    m_Localized: I was about to start preparing a potion for my crush.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043039891509
+    m_Localized: "And\u2026 the whole book fell apart on me!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043039891510
+    m_Localized: "It\u2019s a disaster; now I\u2019ll never be able to win them over..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043039891511
+    m_Localized: Please, can you help me?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043039891512
+    m_Localized: I implore you...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043039891513
+    m_Localized: Oh, this is PERFECT!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043039891514
+    m_Localized: "Thank you so much! You\u2019re the best of all."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043039891515
+    m_Localized: "It can\u2019t be, this way they\u2019ll never notice me..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043039891516
+    m_Localized: Hi! How are you?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043039891517
+    m_Localized: "I\u2019m looking for Feast of Full Moons, do you have it?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043039891518
+    m_Localized: "I\u2019m trying out new recipes to cook for my future husband."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043039891519
+    m_Localized: Since they say that love enters through the stomach...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043039891520
+    m_Localized: "Isn\u2019t it true?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043039891521
+    m_Localized: Oh, thank you so much! I truly appreciate it...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043039891522
+    m_Localized: "You\u2019ve saved me."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043039891523
+    m_Localized: "Oh, what a pity, I\u2019ll have to try with simpler recipes..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043039891524
+    m_Localized: Hello, how are you?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043039891525
+    m_Localized: "I\u2019ve been recommended this bookstore.."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043039891526
+    m_Localized: They told me you have everything I could need.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043039891527
+    m_Localized: "In this case, I\u2019m looking for a book about an eclipse."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043039891528
+    m_Localized: One that lasted seven days and stopped time...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043039891529
+    m_Localized: Could you lend it to me?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043039891530
+    m_Localized: "It\u2019s for a research I\u2019m doing."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043039891531
+    m_Localized: "Perfect, it\u2019s this one..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043039891532
+    m_Localized: "Thank you very much, I\u2019ll return it."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19616043039891533
+    m_Localized: "I think this book doesn\u2019t talk about any eclipse."
     m_Metadata:
       m_Items: []
   references:

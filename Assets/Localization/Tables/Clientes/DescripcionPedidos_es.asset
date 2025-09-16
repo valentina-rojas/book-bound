@@ -86,6 +86,33 @@ MonoBehaviour:
     m_Localized: "Traducci\xF3n"
     m_Metadata:
       m_Items: []
+  - m_Id: 17705923313836032
+    m_Localized: "Solicit\xF3 un libro que habla sobre una sociedad secreta que gobierna
+      en las sombras"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17705923330613248
+    m_Localized: "Solicit\xF3 un libro sobre personas que desaparecen al comprar
+      un misterioso libro"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17705923330613249
+    m_Localized: "Solicit\xF3 \"Susurros Tras la Puerta Cerrada\""
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17705923330613250
+    m_Localized: "Solicit\xF3 un libro con recetas basadas en las emociones humanas"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17705923330613251
+    m_Localized: "Solicit\xF3 un libro que habla sobre un eclipse que dur\xF3 siete
+      d\xEDas y detuvo el tiempo"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17705923330613252
+    m_Localized: "Solicit\xF3 \"Banquete de Lunas Llenas\""
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

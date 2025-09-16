@@ -79,6 +79,30 @@ MonoBehaviour:
     m_Key: BrujaMayor_Des
     m_Metadata:
       m_Items: []
+  - m_Id: 17705923313836032
+    m_Key: DonVinagre_Des
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17705923330613248
+    m_Key: Forastero1_Des
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17705923330613249
+    m_Key: Anciano1_Des
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17705923330613250
+    m_Key: AprendizMago_Des
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17705923330613251
+    m_Key: Pirata_Des
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17705923330613252
+    m_Key: Vampira_Des
+    m_Metadata:
+      m_Items: []
   - m_Id: 17375300330102784
     m_Key: "Traducci\xF3n"
     m_Metadata:

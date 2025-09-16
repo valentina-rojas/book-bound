@@ -165,8 +165,8 @@ MonoBehaviour:
   - BrujaMayor1_Mala_3
   spriteRespuestaBuena: {fileID: 199910097, guid: 68ad608c8f0e52745af1cbbc76225bd4, type: 3}
   spriteRespuestaMala: {fileID: -1394314759, guid: 68ad608c8f0e52745af1cbbc76225bd4, type: 3}
-  libroDeseadoID: 12
-  tipoPreferido: misterio
+  libroDeseadoID: 42
+  tipoPreferido: recetas
   nombreDelCliente: BrujaMayor
   descripcionPedido: BrujaMayor_Des
   stickersRequeridos: 
@@ -235,6 +235,8 @@ MonoBehaviour:
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
+  claveMensajeCriptograma: 
+  m_preguntasTrivia: []
   libroDonadoID: 0
   libroDevueltoID: 0
   tituloLibroDevuelto: 

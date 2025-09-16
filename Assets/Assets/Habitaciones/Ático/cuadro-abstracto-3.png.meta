@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      cuadro-abstracto-3_0: -8851824491428083072
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

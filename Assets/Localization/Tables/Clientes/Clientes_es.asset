@@ -62,6 +62,22 @@ MonoBehaviour:
     m_Localized: "Bot\xE1nico"
     m_Metadata:
       m_Items: []
+  - m_Id: 17679071551594496
+    m_Localized: Mago
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17679071589343232
+    m_Localized: Aprendiz Mago
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17679071589343233
+    m_Localized: Vampira
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17679071589343234
+    m_Localized: Pirata
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

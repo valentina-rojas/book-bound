@@ -44,7 +44,7 @@ public class Gnomos : MonoBehaviour
     {
         if (GameManager.instance.nivelActual >= 5 && !eventoActivadoHoy)
         {
-            float probabilidad = 0.99f;
+            float probabilidad = 0.20f;
             if (Random.value <= probabilidad)
             {
                 desorganizarPendiente = true;

@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      cuadro-gatos-3_0: -8155407188057232187
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -37,8 +37,8 @@ public class CatDialogues : MonoBehaviour
         { 3, new string[] { "cat3_1", "cat3_2", "cat3_3", "cat3_4" } },
         { 4, new string[] { "cat4_1", "cat4_2", "cat4_3", "cat4_4", "cat4_5", "cat4_6" } },
         { 5, new string[] { "cat5_1", "cat5_2", "cat5_3", "cat5_4", "cat5_5" } },
-        { 6, new string[] { "cat6_1" } },
-        { 7, new string[] { "cat7_1" } }
+        { 6, new string[] { "cat6_1", "cat6_2", "cat6_3", "cat6_4" } },
+        { 7, new string[] { "cat7_1", "cat7_2", "cat7_3", "cat7_4", "cat7_5" } }
     };
     #endregion
 

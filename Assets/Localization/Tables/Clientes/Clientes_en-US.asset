@@ -59,7 +59,23 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 34586927113
-    m_Localized: Botanist
+    m_Localized: Apothecary
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17679071551594496
+    m_Localized: Wizard
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17679071589343232
+    m_Localized: Apprentice Wizard
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17679071589343233
+    m_Localized: Vampire
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17679071589343234
+    m_Localized: Pirate
     m_Metadata:
       m_Items: []
   references:

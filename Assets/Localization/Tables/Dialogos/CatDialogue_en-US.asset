@@ -126,6 +126,42 @@ MonoBehaviour:
     m_Localized: "And apart from that, have fun! You\u2019re doing great!"
     m_Metadata:
       m_Items: []
+  - m_Id: 20624827589763072
+    m_Localized: Today is a new day...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20624827627511808
+    m_Localized: But you already know what to do...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20624827627511809
+    m_Localized: "You\u2019re doing great!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20624827627511810
+    m_Localized: Do what you know to keep it up...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20624827627511811
+    m_Localized: "It\u2019s been a week since you\u2019ve been here..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20624827627511812
+    m_Localized: and everything is going more than well.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20624827627511813
+    m_Localized: "Rumor has it that you\u2019re very good."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20624827627511814
+    m_Localized: so the flow of customers will keep increasing...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20624827627511815
+    m_Localized: Good luck on this new day!
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

@@ -148,7 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df2f3b74621b28f49a0a8e3505329b67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tipoDePedido: 5
+  tipoDePedido: 6
   dialogueLinesInicio:
   - Anciano1_Donacion_1
   - Anciano1_Donacion_2
@@ -188,6 +188,8 @@ MonoBehaviour:
     m_WaitForCompletion: 0
     m_LocalVariables: []
   pistasHechizo: []
+  claveMensajeCriptograma: 
+  m_preguntasTrivia: []
   libroDonadoID: 42
   libroDevueltoID: 0
   tituloLibroDevuelto: 

@@ -59,6 +59,22 @@ MonoBehaviour:
     m_Key: "Bot\xE1nico"
     m_Metadata:
       m_Items: []
+  - m_Id: 17679071551594496
+    m_Key: Mago
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17679071589343232
+    m_Key: AprendizMago
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17679071589343233
+    m_Key: Vampira
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17679071589343234
+    m_Key: Pirata
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

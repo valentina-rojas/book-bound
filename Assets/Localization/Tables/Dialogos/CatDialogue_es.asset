@@ -127,6 +127,42 @@ MonoBehaviour:
     m_Localized: "Por lo dem\xE1s, divi\xE9rtete \xA1Vas muy bien!"
     m_Metadata:
       m_Items: []
+  - m_Id: 20624827589763072
+    m_Localized: "Hoy es un nuevo d\xEDa..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20624827627511808
+    m_Localized: "pero tu ya sab\xE9s que hacer..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20624827627511809
+    m_Localized: "\xA1Vienes muy bien!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20624827627511810
+    m_Localized: "Haz lo que sabes para seguir as\xED..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20624827627511811
+    m_Localized: "Ha pasado una semana desde que est\xE1s aqu\xED..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20624827627511812
+    m_Localized: "y todo marcha m\xE1s que bien."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20624827627511813
+    m_Localized: "Se corri\xF3 el rumor de que eres muy buena"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20624827627511814
+    m_Localized: "por lo que el flujo de clientes ir\xE1 aumentando..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20624827627511815
+    m_Localized: "\xA1Buena suerte en este nuevo d\xEDa!"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

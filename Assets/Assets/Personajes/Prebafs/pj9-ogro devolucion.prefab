@@ -148,7 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df2f3b74621b28f49a0a8e3505329b67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tipoDePedido: 6
+  tipoDePedido: 7
   dialogueLinesInicio:
   - "Ogro_Devoluci\xF3n_1"
   dialogueLinesBuena:
@@ -162,6 +162,8 @@ MonoBehaviour:
   nombreDelCliente: Ogro
   descripcionPedido: Devolucion
   stickersRequeridos: 
+  pistasReparacion: []
+  categoriaLibroReparar: 0
   tituloLibroPortada: 
   tituloLibroPortadaKey:
     m_TableReference:
@@ -172,6 +174,8 @@ MonoBehaviour:
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
+  setStickersDeseado: 0
+  pistasPortada: []
   hechizoSolicitado: 0
   tituloLibroHechizadoKey:
     m_TableReference:
@@ -182,6 +186,9 @@ MonoBehaviour:
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
+  pistasHechizo: []
+  claveMensajeCriptograma: 
+  m_preguntasTrivia: []
   libroDonadoID: 0
   libroDevueltoID: 2
   tituloLibroDevuelto: L2fantasia

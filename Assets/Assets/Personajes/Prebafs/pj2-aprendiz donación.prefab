@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2788377987506924977}
   - component: {fileID: 4978074495582524776}
   m_Layer: 0
-  m_Name: pruebaTraduccion
+  m_Name: "pj2-aprendiz donaci\xF3n"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -148,11 +148,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df2f3b74621b28f49a0a8e3505329b67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tipoDePedido: 5
+  tipoDePedido: 6
   dialogueLinesInicio:
-  - Aprendiz_Inicio_1
+  - Aprendiz_Donacion_1
+  - Aprendiz_Donacion_2
+  - Aprendiz_Donacion_3
   dialogueLinesBuena:
-  - Aprendiz_Buena_1
+  - Aprendiz_Donacion_4
   dialogueLinesMala:
   - Pero no era lo que buscaba...
   spriteRespuestaBuena: {fileID: -1118278708, guid: b6f696f6fecafb949ae7a64dc6242b7e, type: 3}
@@ -160,7 +162,7 @@ MonoBehaviour:
   libroDeseadoID: 33
   tipoPreferido: herbologia
   nombreDelCliente: Aprendiz
-  descripcionPedido: "Traducci\xF3n"
+  descripcionPedido: Donacion
   stickersRequeridos: 
   pistasReparacion:
   - m_TableReference:
@@ -227,9 +229,9 @@ MonoBehaviour:
     m_WaitForCompletion: 0
     m_LocalVariables: []
   pistasHechizo: []
-  claveMensajeCriptograma: Traduccion1
+  claveMensajeCriptograma: 
   m_preguntasTrivia: []
-  libroDonadoID: 0
+  libroDonadoID: 51
   libroDevueltoID: 0
   tituloLibroDevuelto: 
   tituloLibroDevueltoKey:

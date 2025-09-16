@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      cuadro-paisaje-1_0: -5751444498495711607
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1151,13 +1151,13 @@ MonoBehaviour:
     - {fileID: 4652195673153815505, guid: 936769568974c334f94db094c46b8f26, type: 3}
     - {fileID: 5489013454305063670, guid: 5450ced4880d35e4eb7f17dd4ee1d761, type: 3}
   - personajesDelNivel:
-    - {fileID: 4406605961863887185, guid: c9b597989aea01644a55ec5bed144273, type: 3}
+    - {fileID: 4406605961863887185, guid: a8da8e8cc78bcbd419e10bb0856638f2, type: 3}
     - {fileID: 4406605961863887185, guid: 3292f0a8089a0bf47ba8eb57c5425656, type: 3}
     - {fileID: 4652195673153815505, guid: bcfe8eff6d8ec084084282120e380db0, type: 3}
     - {fileID: 4652195673153815505, guid: 7710f8d2258c02c48b805730fb95b8af, type: 3}
     - {fileID: 4652195673153815505, guid: d09f99b4cf6f82743a1b077e692455a6, type: 3}
   - personajesDelNivel:
-    - {fileID: 4406605961863887185, guid: a8da8e8cc78bcbd419e10bb0856638f2, type: 3}
+    - {fileID: 4652195673153815505, guid: 1b026a25b810aa64bb78c010516f220d, type: 3}
     - {fileID: 4652195673153815505, guid: 47de6e89785c5a240b6dfca0104d12b1, type: 3}
     - {fileID: 5489013454305063670, guid: cc2832197524e0742a1bb5522c5b1c54, type: 3}
     - {fileID: 4652195673153815505, guid: 5ed168854d0dcd642aedcca10c2ebfa4, type: 3}
@@ -1178,6 +1178,25 @@ MonoBehaviour:
     - {fileID: 4406605961863887185, guid: 9c197b67e876cdf4f9ce8f799ecd5dfd, type: 3}
     - {fileID: 4406605961863887185, guid: 0d48ba5db211d2b47b7107e5a70344b6, type: 3}
     - {fileID: 4652195673153815505, guid: a2f043e70dd4e974db3fec1d42b75fc1, type: 3}
+  - personajesDelNivel:
+    - {fileID: 4652195673153815505, guid: 4594f899527aafd419619a54c5f7878d, type: 3}
+    - {fileID: 4652195673153815505, guid: 2260724eaec70964589154204f394f76, type: 3}
+    - {fileID: 4406605961863887185, guid: c9b597989aea01644a55ec5bed144273, type: 3}
+    - {fileID: 4652195673153815505, guid: c6232cd65e0897643b89828783e26d5d, type: 3}
+    - {fileID: 4652195673153815505, guid: afa98517465dc154f800bc978ebf1858, type: 3}
+    - {fileID: 4652195673153815505, guid: 45ba99acae56cad458e6e7cf061573ae, type: 3}
+    - {fileID: 4652195673153815505, guid: 10a81b6101731d1469cfb25090579871, type: 3}
+    - {fileID: 4406605961863887185, guid: 2881f008b9e1ede459abd4045a188d4e, type: 3}
+    - {fileID: 4652195673153815505, guid: 2bd4c1bca52db6f49800d64175c93154, type: 3}
+  - personajesDelNivel:
+    - {fileID: 5489013454305063670, guid: c27d60555f278014ab84c54a3ed4abc0, type: 3}
+    - {fileID: 4652195673153815505, guid: 704f685d13a7ab949bc3fb44c734ad65, type: 3}
+    - {fileID: 4406605961863887185, guid: ac4783d4863f8554da662e8c3e0e945b, type: 3}
+    - {fileID: 4652195673153815505, guid: 55db8b0155f7cf04eb105afceab3c666, type: 3}
+    - {fileID: 4652195673153815505, guid: ff4d55d647eef334ab64e7e619aacb22, type: 3}
+    - {fileID: 4406605961863887185, guid: 214fb7cda49e77648b71ace7851b27f9, type: 3}
+    - {fileID: 4406605961863887185, guid: 38832866da63d30449dce8e7e347c1b0, type: 3}
+    - {fileID: 4652195673153815505, guid: 36359388c9913c746850f84cc9a1f757, type: 3}
   references:
     version: 2
     RefIds: []
@@ -22649,6 +22668,18 @@ MonoBehaviour:
   - textosTareas:
     - {fileID: 1867413056}
     - {fileID: 2039622572}
+  - textosTareas:
+    - {fileID: 1867413056}
+    - {fileID: 2039622572}
+    - {fileID: 328437950}
+    - {fileID: 507800318}
+    - {fileID: 100328859}
+  - textosTareas:
+    - {fileID: 1867413056}
+    - {fileID: 2039622572}
+    - {fileID: 328437950}
+    - {fileID: 507800318}
+    - {fileID: 100328859}
   - textosTareas:
     - {fileID: 1867413056}
     - {fileID: 2039622572}
@@ -64485,7 +64516,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -227, y: 285}
+  m_AnchoredPosition: {x: -400, y: 285}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1515155591
@@ -68413,7 +68444,7 @@ Transform:
   m_GameObject: {fileID: 1648088102}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -41.21424, y: 1.7223264, z: -1089.7573}
+  m_LocalPosition: {x: -42, y: 1.7223264, z: -1089.7573}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -78640,7 +78671,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 65, y: -29}
+  m_AnchoredPosition: {x: 0, y: -29}
   m_SizeDelta: {x: 854.87, y: 261.67}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1880652790
