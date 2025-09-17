@@ -1,5 +1,6 @@
-    public enum PageCategory
-    {
-        Default,
-        Recetas
-    }
+public enum PageCategory
+{
+    Default,
+    Recetas,
+    Amor
+}

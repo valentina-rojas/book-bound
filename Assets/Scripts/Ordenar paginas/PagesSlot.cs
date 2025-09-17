@@ -9,11 +9,13 @@ public class PagesSlot : MonoBehaviour, IDropHandler
     [Header("Placeholders por categoría")]
     public GameObject placeholderDefault;
     public GameObject placeholderRecetas;
+    public GameObject placeholderAmor;
 
     public void ActivarImagenPorCategoria(PageCategory categoria)
     {
         if (placeholderDefault != null) placeholderDefault.SetActive(categoria == PageCategory.Default);
         if (placeholderRecetas != null) placeholderRecetas.SetActive(categoria == PageCategory.Recetas);
+        if (placeholderAmor != null) placeholderAmor.SetActive(categoria == PageCategory.Amor);
     }
 
     public void OnDrop(PointerEventData eventData)
