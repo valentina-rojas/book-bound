@@ -16,24 +16,33 @@ public class TaskManager : MonoBehaviour
 
     public AnimacionLapiz animacionLapiz;
 
+    #region Variables Paneles y Botones
     [Header("Paneles y Botones")]
     public GameObject panelTareas;
     public Button botonAbrirLista;
     public Button botonCerrarLista;
     public Button botonAbrirTienda;
-    private bool tareasYaCompletadas = false;
 
+    private bool tareasYaCompletadas = false;
+    private bool tiendaAbiertaEnEsteNivel = false;
+    #endregion
+
+    #region Variables Audio
     [Header("Audio")]
     public AudioSource audioSource;
     public AudioClip sonidoTareaCompletada;
+    #endregion
 
+    #region Variables Configuración de Niveles
     [Header("Configuración de niveles")]
     public List<NivelDeTareas> nivelesDeTareas;
 
     private List<TMP_Text> textosTareas;
     private List<bool> tareasCompletadas;
     private bool tiendaAbiertaPorPrimeraVez = false;
+    #endregion
 
+    #region Unity Callbacks
     private void Awake()
     {
         instance = this;
@@ -51,10 +60,13 @@ public class TaskManager : MonoBehaviour
 
         InicializarTareasParaNivel();
     }
+    #endregion
 
+    #region Inicialización
     public void InicializarTareasParaNivel()
     {
         tareasYaCompletadas = false;
+        tiendaAbiertaEnEsteNivel = false;
 
         int nivelIndex = GameManager.instance.nivelActual - 1;
 
@@ -99,17 +111,14 @@ public class TaskManager : MonoBehaviour
             TendCat.instance.ActualizarVisibilidadObjetos();
         DragRegadera.instance.ActualizarVisibilidadRegadera();
     }
+    #endregion
 
+    #region Métodos de UI
     public void MostrarTareas()
     {
         panelTareas.SetActive(true);
         botonAbrirLista.gameObject.SetActive(false);
         botonCerrarLista.gameObject.SetActive(true);
-
-        if (tareasYaCompletadas && botonAbrirTienda.gameObject.activeSelf)
-        {
-            botonAbrirTienda.gameObject.SetActive(false);
-        }
     }
 
     public void OcultarListaTareas()
@@ -124,11 +133,14 @@ public class TaskManager : MonoBehaviour
         panelTareas.SetActive(false);
         botonAbrirLista.gameObject.SetActive(false);
     }
+    #endregion
 
+    #region Lógica de Tienda
     private void OnClickAbrirTienda()
     {
         OcultarListaTareas();
         botonAbrirTienda.gameObject.SetActive(false);
+        tiendaAbiertaEnEsteNivel = true;
 
         RuidoSalaDeLecturaManager ruido = FindFirstObjectByType<RuidoSalaDeLecturaManager>();
         if (ruido != null)
@@ -143,12 +155,33 @@ public class TaskManager : MonoBehaviour
             tiendaAbiertaPorPrimeraVez = true;
 
             if (Tutorial.instance != null)
-            {
                 Tutorial.instance.AvanzarAlSiguientePaso();
-            }
         }
     }
 
+    public void HabilitarBotonTienda()
+    {
+        if (botonAbrirTienda != null)
+            botonAbrirTienda.gameObject.SetActive(true);
+    }
+
+    public bool SeAbrioTiendaAlMenosUnaVez()
+    {
+        return tiendaAbiertaPorPrimeraVez;
+    }
+
+    public void RestaurarEstadoTienda(bool estadoTienda)
+    {
+        tiendaAbiertaPorPrimeraVez = estadoTienda;
+
+        if (tiendaAbiertaPorPrimeraVez && TodasLasTareasCompletadas())
+        {
+            HabilitarBotonTienda();
+        }
+    }
+    #endregion
+
+    #region Lógica de Tareas
     public void CompletarTareaPorID(int id)
     {
         if (id < 0 || id >= tareasCompletadas.Count)
@@ -218,7 +251,7 @@ public class TaskManager : MonoBehaviour
 
         if (GameManager.instance != null && GameManager.instance.nivelActual != 1)
         {
-            if (botonAbrirTienda != null)
+            if (botonAbrirTienda != null && !tiendaAbiertaEnEsteNivel)
             {
                 panelTareas.SetActive(true);
                 botonAbrirLista.gameObject.SetActive(false);
@@ -257,25 +290,5 @@ public class TaskManager : MonoBehaviour
 
         return textosTareas[id].gameObject.activeSelf;
     }
-
-    public void HabilitarBotonTienda()
-    {
-        if (botonAbrirTienda != null)
-            botonAbrirTienda.gameObject.SetActive(true);
-    }
-
-    public bool SeAbrioTiendaAlMenosUnaVez()
-    {
-        return tiendaAbiertaPorPrimeraVez;
-    }
-
-    public void RestaurarEstadoTienda(bool estadoTienda)
-    {
-        tiendaAbiertaPorPrimeraVez = estadoTienda;
-
-        if (tiendaAbiertaPorPrimeraVez && TodasLasTareasCompletadas())
-        {
-            HabilitarBotonTienda();
-        }
-    }
+    #endregion
 }

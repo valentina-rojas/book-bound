@@ -150,9 +150,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tipoDePedido: 7
   dialogueLinesInicio:
-  - "Elfo_Devoluci\xF3n_1"
+  - Elfo_Devolucion_1
   dialogueLinesBuena:
-  - "Elfo_Devoluci\xF3n_2"
+  - Elfo_Devolucion_2
   dialogueLinesMala:
   - ...
   spriteRespuestaBuena: {fileID: 1485804103, guid: 716730f6229ca4f4fa5108dfe4366d6a, type: 3}
