@@ -752,20 +752,20 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 9123637525913600
-    m_Localized: Hola, vengo a buscar un libro.
+    m_Localized: Hola... soy yo de nuevo.
     m_Metadata:
       m_Items: []
   - m_Id: 9123637525913601
-    m_Localized: No recuerdo su nombre...
+    m_Localized: "Esta vez necesito que me ayudes con algo...\xBFPodr\xEDas?"
     m_Metadata:
       m_Items: []
   - m_Id: 9123637525913602
-    m_Localized: "s\xF3lo s\xE9 que trata sobre personas que desaparecen al comprar
-      un misterioso libro."
+    m_Localized: "Estuve escribiendo un libro sobre las aventuras que viv\xED en
+      mis viajes, pero necesito ayuda con la portada del libro."
     m_Metadata:
       m_Items: []
   - m_Id: 9123637525913603
-    m_Localized: "\xBFRecordar\xE1s su nombre?"
+    m_Localized: Soy muy bueno escribiendo pero no dibujando.
     m_Metadata:
       m_Items: []
   - m_Id: 9123637525913604
@@ -782,15 +782,15 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 9123637525913607
-    m_Localized: Gracias, es el libro que estaba buscando.
+    m_Localized: "Excelente, es justo lo que quer\xEDa..."
     m_Metadata:
       m_Items: []
   - m_Id: 9123637525913608
-    m_Localized: Cuando lo termine te lo devuelvo,
+    m_Localized: Gracias, nos veremos nuevamente...
     m_Metadata:
       m_Items: []
   - m_Id: 9123637525913609
-    m_Localized: No creo que este sea el libro que buscaba
+    m_Localized: "\xBFQu\xE9 es esto? \xBFAcaso no escuchaste lo que ped\xED?"
     m_Metadata:
       m_Items: []
   - m_Id: 9123637525913610
@@ -1089,14 +1089,6 @@ MonoBehaviour:
     m_Localized: Dibuja algo relacionado a ese tema.
     m_Metadata:
       m_Items: []
-  - m_Id: 19616043018919936
-    m_Localized: si es que no desaparezco je
-    m_Metadata:
-      m_Items: []
-  - m_Id: 19616043031502848
-    m_Localized: Nos vemos.
-    m_Metadata:
-      m_Items: []
   - m_Id: 19616043035697152
     m_Localized: Hola... hoy vengo a dejarte esto
     m_Metadata:
@@ -1273,7 +1265,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19616043039891469
-    m_Localized: "te falta mucho por aprender todav\xEDa..."
+    m_Localized: "Jeje, sab\xEDa que fallar\xEDas"
     m_Metadata:
       m_Items: []
   - m_Id: 19616043039891470
@@ -1531,6 +1523,47 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 19616043039891533
     m_Localized: "Creo que este libro no habla de ning\xFAn eclipse."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19919679578087424
+    m_Localized: Hola, vengo a buscar un libro.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19919679611641856
+    m_Localized: No recuerdo su nombre...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19919679611641857
+    m_Localized: "s\xF3lo s\xE9 que trata sobre personas que desaparecen al comprar
+      un misterioso libro."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19919679611641858
+    m_Localized: "\xBFRecordar\xE1s su nombre?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19919679611641859
+    m_Localized: Gracias, es el libro que estaba buscando.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19919679611641860
+    m_Localized: Cuando lo termine te lo devuelvo,
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19919679611641861
+    m_Localized: si es que no desaparezco je
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19919679611641862
+    m_Localized: No creo que este sea el libro que buscaba
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19919679620030464
+    m_Localized: Nos vemos.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19919679620030465
+    m_Localized: "te falta mucho por aprender todav\xEDa..."
     m_Metadata:
       m_Items: []
   references:

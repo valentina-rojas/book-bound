@@ -177,6 +177,7 @@ public class ShelfManager : MonoBehaviour
 
         foreach (ShelfEstante estante in estantes)
         {
+            estante.ActualizarCantidadEsperada();
             estante.VerificarEstante();
         }
 

@@ -748,20 +748,20 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 9123637525913600
-    m_Localized: Hello, I'm here to look for a book.
+    m_Localized: "Hello... it\u2019s me again."
     m_Metadata:
       m_Items: []
   - m_Id: 9123637525913601
-    m_Localized: I don't remember its name...
+    m_Localized: This time I need you to help me with something... Could you?
     m_Metadata:
       m_Items: []
   - m_Id: 9123637525913602
-    m_Localized: "I only know that it\u2019s about people who disappear after buying
-      a mysterious book."
+    m_Localized: "I\u2019ve been writing a book about the adventures I lived on my
+      journeys, but I need help with the cover of the book."
     m_Metadata:
       m_Items: []
   - m_Id: 9123637525913603
-    m_Localized: Will you remember its name?
+    m_Localized: "I\u2019m very good at writing, but not at drawing."
     m_Metadata:
       m_Items: []
   - m_Id: 9123637525913604
@@ -779,15 +779,15 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 9123637525913607
-    m_Localized: "Thanks, that\u2019s the book I was looking for."
+    m_Localized: Excellent, this is just what I wanted...
     m_Metadata:
       m_Items: []
   - m_Id: 9123637525913608
-    m_Localized: "I\u2019ll give it back to you when I\u2019m done."
+    m_Localized: "Thank you, we\u2019ll see each other again..."
     m_Metadata:
       m_Items: []
   - m_Id: 9123637525913609
-    m_Localized: "I don\u2019t think this is the book I was looking for."
+    m_Localized: "What is this? Didn\u2019t you listen to what I asked for?"
     m_Metadata:
       m_Items: []
   - m_Id: 9123637525913610
@@ -1092,14 +1092,6 @@ MonoBehaviour:
     m_Localized: Draw something related to that theme.
     m_Metadata:
       m_Items: []
-  - m_Id: 19616043018919936
-    m_Localized: Unless I disappear, haha.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 19616043031502848
-    m_Localized: See you.
-    m_Metadata:
-      m_Items: []
   - m_Id: 19616043035697152
     m_Localized: Hello... today I came to leave this with you
     m_Metadata:
@@ -1277,7 +1269,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19616043039891469
-    m_Localized: You still have a lot to learn...
+    m_Localized: "Hehe, I knew you\u2019d fail."
     m_Metadata:
       m_Items: []
   - m_Id: 19616043039891470
@@ -1538,6 +1530,47 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 19616043039891533
     m_Localized: "I think this book doesn\u2019t talk about any eclipse."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19919679578087424
+    m_Localized: Hello, I'm here to look for a book.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19919679611641856
+    m_Localized: I don't remember its name...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19919679611641857
+    m_Localized: "I only know that it\u2019s about people who disappear after buying
+      a mysterious book."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19919679611641858
+    m_Localized: Will you remember its name?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19919679611641859
+    m_Localized: "Thanks, that\u2019s the book I was looking for."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19919679611641860
+    m_Localized: "I\u2019ll give it back to you when I\u2019m done."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19919679611641861
+    m_Localized: Unless I disappear, haha.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19919679611641862
+    m_Localized: "I don\u2019t think this is the book I was looking for."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19919679620030464
+    m_Localized: See you.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19919679620030465
+    m_Localized: You still have a lot to learn...
     m_Metadata:
       m_Items: []
   references:

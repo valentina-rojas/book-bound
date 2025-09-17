@@ -103,40 +103,40 @@ MonoBehaviour:
     m_Key: "Forastero_Devoluci\xF3n_2"
     m_Metadata:
       m_Items: []
-  - m_Id: 9123637525913600
-    m_Key: Forastero1_Inicio_1
+  - m_Id: 19919679578087424
+    m_Key: Forastero2_Inicio_1
     m_Metadata:
       m_Items: []
-  - m_Id: 9123637525913601
-    m_Key: Forastero1_Inicio_2
+  - m_Id: 19919679611641856
+    m_Key: Forastero2_Inicio_2
     m_Metadata:
       m_Items: []
-  - m_Id: 9123637525913602
-    m_Key: Forastero1_Inicio_3
+  - m_Id: 19919679611641857
+    m_Key: Forastero2_Inicio_3
     m_Metadata:
       m_Items: []
-  - m_Id: 9123637525913603
-    m_Key: Forastero1_Inicio_4
+  - m_Id: 19919679611641858
+    m_Key: Forastero2_Inicio_4
     m_Metadata:
       m_Items: []
-  - m_Id: 9123637525913607
-    m_Key: Forastero1_Buena_1
+  - m_Id: 19919679611641859
+    m_Key: Forastero2_Buena_1
     m_Metadata:
       m_Items: []
-  - m_Id: 9123637525913608
-    m_Key: Forastero1_Buena_2
+  - m_Id: 19919679611641860
+    m_Key: Forastero2_Buena_2
     m_Metadata:
       m_Items: []
-  - m_Id: 19616043018919936
-    m_Key: Forastero1_Buena_3
+  - m_Id: 19919679611641861
+    m_Key: Forastero2_Buena_3
     m_Metadata:
       m_Items: []
-  - m_Id: 9123637525913609
-    m_Key: Forastero1_Mala_1
+  - m_Id: 19919679611641862
+    m_Key: Forastero2_Mala_1
     m_Metadata:
       m_Items: []
-  - m_Id: 19616043031502848
-    m_Key: Forastero1_Mala_2
+  - m_Id: 19919679620030464
+    m_Key: Forastero2_Mala_2
     m_Metadata:
       m_Items: []
   - m_Id: 521059082303
@@ -687,50 +687,6 @@ MonoBehaviour:
     m_Key: Elfa_Devolucion_2
     m_Metadata:
       m_Items: []
-  - m_Id: 9123637500747776
-    m_Key: BrujaMayor2_Inicio_1
-    m_Metadata:
-      m_Items: []
-  - m_Id: 9123637517524992
-    m_Key: BrujaMayor2_Inicio_2
-    m_Metadata:
-      m_Items: []
-  - m_Id: 9123637517524993
-    m_Key: BrujaMayor2_Inicio_3
-    m_Metadata:
-      m_Items: []
-  - m_Id: 9123637517524994
-    m_Key: BrujaMayor2_Inicio_4
-    m_Metadata:
-      m_Items: []
-  - m_Id: 9123637517524995
-    m_Key: BrujaMayor2_Inicio_5
-    m_Metadata:
-      m_Items: []
-  - m_Id: 9123637517524996
-    m_Key: BrujaMayor2_Inicio_6
-    m_Metadata:
-      m_Items: []
-  - m_Id: 9123637517524997
-    m_Key: BrujaMayor2_Buena_1
-    m_Metadata:
-      m_Items: []
-  - m_Id: 9123637517524998
-    m_Key: BrujaMayor2_Buena_2
-    m_Metadata:
-      m_Items: []
-  - m_Id: 9123637517524999
-    m_Key: BrujaMayor2_Buena_3
-    m_Metadata:
-      m_Items: []
-  - m_Id: 9123637517525000
-    m_Key: BrujaMayor2_Mala_1
-    m_Metadata:
-      m_Items: []
-  - m_Id: 9123637517525001
-    m_Key: BrujaMayor2_Mala_2
-    m_Metadata:
-      m_Items: []
   - m_Id: 521059082286
     m_Key: BrujaMayor_Inicio_1
     m_Metadata:
@@ -841,6 +797,50 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 9123637525913639
     m_Key: BrujaMayor1_Mala_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637500747776
+    m_Key: BrujaMayor2_Inicio_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637517524992
+    m_Key: BrujaMayor2_Inicio_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637517524993
+    m_Key: BrujaMayor2_Inicio_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637517524994
+    m_Key: BrujaMayor2_Inicio_4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637517524995
+    m_Key: BrujaMayor2_Inicio_5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637517524996
+    m_Key: BrujaMayor2_Inicio_6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637517524997
+    m_Key: BrujaMayor2_Buena_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637517524998
+    m_Key: BrujaMayor2_Buena_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637517524999
+    m_Key: BrujaMayor2_Buena_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637517525000
+    m_Key: BrujaMayor2_Mala_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9123637517525001
+    m_Key: BrujaMayor2_Mala_2
     m_Metadata:
       m_Items: []
   - m_Id: 19616043035697174
@@ -1171,8 +1171,8 @@ MonoBehaviour:
     m_Key: DonVianagre2_Mala_1
     m_Metadata:
       m_Items: []
-  - m_Id: 19616043039891469
-    m_Key: DonVianagre2_Mala_1
+  - m_Id: 19919679620030465
+    m_Key: DonVianagre2_Mala_2
     m_Metadata:
       m_Items: []
   - m_Id: 19616043039891470
