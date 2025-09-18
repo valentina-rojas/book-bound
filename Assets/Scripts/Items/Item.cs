@@ -18,4 +18,7 @@ public class Item : ScriptableObject
     public Sprite icono;
     public int precio;
     public CategoriaItem categoria;
+
+    [HideInInspector] 
+    public bool comprado = false; 
 }
