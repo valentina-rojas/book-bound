@@ -14,7 +14,12 @@ public class TaskManager : MonoBehaviour
 {
     public static TaskManager instance;
 
+    [Header("Animaciones")]
+    public AnimacionPanelTareas animacionAbrirPanel;
+    public AnimacionPanelTareas animacionCerrarPanel;
     public AnimacionLapiz animacionLapiz;
+  
+
 
     #region Variables Paneles y Botones
     [Header("Paneles y Botones")]
@@ -116,22 +121,45 @@ public class TaskManager : MonoBehaviour
     #region Métodos de UI
     public void MostrarTareas()
     {
-        panelTareas.SetActive(true);
-        botonAbrirLista.gameObject.SetActive(false);
-        botonCerrarLista.gameObject.SetActive(true);
+        if (animacionAbrirPanel != null)
+        {
+            animacionAbrirPanel.ReproducirAnimacion(() =>
+            {
+                panelTareas.SetActive(true);
+                botonAbrirLista.gameObject.SetActive(false);
+                botonCerrarLista.gameObject.SetActive(true);
+            });
+        }
+        else
+        {
+            panelTareas.SetActive(true);
+            botonAbrirLista.gameObject.SetActive(false);
+            botonCerrarLista.gameObject.SetActive(true);
+        }
+    
     }
 
     public void OcultarListaTareas()
     {
-        panelTareas.SetActive(false);
+        panelTareas.SetActive(false); 
         botonAbrirLista.gameObject.SetActive(true);
         botonCerrarLista.gameObject.SetActive(false);
+        
+        if (animacionCerrarPanel != null)
+        {
+            animacionCerrarPanel.ReproducirAnimacion();
+        }
     }
 
     public void OcultarBotonTareas()
     {
         panelTareas.SetActive(false);
         botonAbrirLista.gameObject.SetActive(false);
+
+        if (animacionCerrarPanel != null)
+        {
+            animacionCerrarPanel.ReproducirAnimacion();
+        }
     }
     #endregion
 
