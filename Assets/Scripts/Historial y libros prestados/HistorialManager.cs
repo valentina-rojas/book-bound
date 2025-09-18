@@ -87,8 +87,9 @@ public class HistorialManager : MonoBehaviour
             uiManager.GetPanelHistorial().SetActive(false);
             historialCargado = false;
         }
+
         Tutorial tutorial = FindFirstObjectByType<Tutorial>();
-        if (tutorial != null)
+        if (tutorial != null && !tutorial.tutorialSaltado) 
         {
             tutorial.AlCerrarHistorial();
         }
@@ -359,17 +360,16 @@ public void RemoverLibroPrestado(string titulo)
         }
     }
     #endregion
-public void GuardarPartida(int nivelActual)
-{
-    SaveManager.GuardarNivel(nivelActual, librosPrestados);
-}
+    public void GuardarPartida(int nivelActual)
+    {
+        SaveManager.GuardarNivel(nivelActual, librosPrestados);
+    }
 
-public void CargarPartida()
-{
-    SaveData data = SaveManager.CargarNivel();
-    librosPrestados = new List<LibroPrestado>(data.librosPrestados);
-    StartCoroutine(MostrarLibrosPrestados());
-}
-
+    public void CargarPartida()
+    {
+        SaveData data = SaveManager.CargarNivel();
+        librosPrestados = new List<LibroPrestado>(data.librosPrestados);
+        StartCoroutine(MostrarLibrosPrestados());
+    }
 
 }

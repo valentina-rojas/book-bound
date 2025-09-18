@@ -168,7 +168,7 @@ public class CatDialogues : MonoBehaviour
             StopCoroutine(typingCoroutine);
             typingCoroutine = null;
         }
-        StopAllCoroutines(); 
+        StopAllCoroutines();
 
         isTyping = false;
         lineIndex = 0;
@@ -184,10 +184,13 @@ public class CatDialogues : MonoBehaviour
             if (lineIndex == dialogueKeys.Length - 1)
                 OnDialogoUltimaLineaTipeada?.Invoke();
 
-            TaskManager.instance?.MostrarTareas();
+            if (Tutorial.instance == null || !Tutorial.instance.tutorialSaltado)
+            {
+                TaskManager.instance?.MostrarTareas();
 
-            if (diaActual == 1)
-                Tutorial.instance?.EmpezarTutorial();
+                if (diaActual == 1)
+                    Tutorial.instance?.EmpezarTutorial();
+            }
         }
         else
         {

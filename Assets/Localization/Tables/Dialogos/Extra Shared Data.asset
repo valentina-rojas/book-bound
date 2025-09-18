@@ -83,6 +83,10 @@ MonoBehaviour:
     m_Key: Gnomos2
     m_Metadata:
       m_Items: []
+  - m_Id: 17556834722947072
+    m_Key: skipTuto
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

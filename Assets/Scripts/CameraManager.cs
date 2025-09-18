@@ -86,8 +86,10 @@ public class CameraManager : MonoBehaviour
         if (cameraIndex == 1)
             ShelfManager.instance?.RevisarOrganizacion();
 
-        if (cameraIndex == 0 && Tutorial.instance != null)
+        if (cameraIndex == 0 && Tutorial.instance != null && !Tutorial.instance.tutorialSaltado)
+        {
             Tutorial.instance.AlVolverACamaraPrincipal();
+        }
 
         ActualizarEstadoBotonesCamaras();
     }

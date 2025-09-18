@@ -44,8 +44,10 @@ public class CobwebCleaning : MonoBehaviour
             CobwebManager.instance.EliminarTelaraña(this);
             gameObject.SetActive(false);
 
-            if (esTelarañaTutorial)
-                Tutorial.instance?.AvanzarAlSiguientePaso();
+            if (esTelarañaTutorial && Tutorial.instance != null && !Tutorial.instance.tutorialSaltado)
+            {
+                Tutorial.instance.AvanzarAlSiguientePaso();
+            }
         }
     }
 

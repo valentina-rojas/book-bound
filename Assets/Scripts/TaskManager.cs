@@ -154,8 +154,10 @@ public class TaskManager : MonoBehaviour
         {
             tiendaAbiertaPorPrimeraVez = true;
 
-            if (Tutorial.instance != null)
+            if (Tutorial.instance != null && !Tutorial.instance.tutorialSaltado)
+            {
                 Tutorial.instance.AvanzarAlSiguientePaso();
+            }
         }
     }
 
@@ -249,21 +251,32 @@ public class TaskManager : MonoBehaviour
 
         tareasYaCompletadas = true;
 
-        if (GameManager.instance != null && GameManager.instance.nivelActual != 1)
+        if (GameManager.instance != null)
         {
-            if (botonAbrirTienda != null && !tiendaAbiertaEnEsteNivel)
+            if (GameManager.instance.nivelActual == 1)
             {
-                panelTareas.SetActive(true);
-                botonAbrirLista.gameObject.SetActive(false);
-                botonAbrirTienda.gameObject.SetActive(true);
+                if (Tutorial.instance != null && !Tutorial.instance.tutorialSaltado)
+                {
+                    Tutorial.instance.MostrarFlechaVolver();
+                }
+                else
+                {
+                    if (botonAbrirTienda != null && !tiendaAbiertaEnEsteNivel)
+                    {
+                        panelTareas.SetActive(true);
+                        botonAbrirLista.gameObject.SetActive(false);
+                        botonAbrirTienda.gameObject.SetActive(true);
+                    }
+                }
             }
-        }
-
-        if (GameManager.instance != null && GameManager.instance.nivelActual == 1)
-        {
-            if (Tutorial.instance != null)
+            else 
             {
-                Tutorial.instance.MostrarFlechaVolver();
+                if (botonAbrirTienda != null && !tiendaAbiertaEnEsteNivel)
+                {
+                    panelTareas.SetActive(true);
+                    botonAbrirLista.gameObject.SetActive(false);
+                    botonAbrirTienda.gameObject.SetActive(true);
+                }
             }
         }
     }

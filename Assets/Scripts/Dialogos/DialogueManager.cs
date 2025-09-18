@@ -204,14 +204,18 @@ public class DialogueManager : MonoBehaviour
         if (characterManager != null && characterAttributes != null)
         {
             characterManager.AtenderPersonaje(characterAttributes);
-            if (GameManager.instance.nivelActual == 1 && GameManager.instance.EsPrimerCliente())
+
+            if (GameManager.instance.nivelActual == 1 && GameManager.instance.EsPrimerCliente() &&
+                (Tutorial.instance != null && !Tutorial.instance.tutorialSaltado))
             {
-                Tutorial.instance?.PrimerClienteTerminoDialogo();
+                Tutorial.instance.PrimerClienteTerminoDialogo();
                 tutorialFinalizado = true;
             }
-            if (GameManager.instance.nivelActual == 1 && tutorialFinalizado)
+
+            if (GameManager.instance.nivelActual == 1 && tutorialFinalizado &&
+                (Tutorial.instance != null && !Tutorial.instance.tutorialSaltado))
             {
-                Tutorial.instance?.PrimerClienteTerminoDialogo();
+                Tutorial.instance.PrimerClienteTerminoDialogo();
             }
         }
     }

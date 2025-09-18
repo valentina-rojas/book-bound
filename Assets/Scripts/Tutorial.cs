@@ -10,6 +10,12 @@ public class Tutorial : MonoBehaviour
     public CobwebCleaning telaranaTutorial;
     public GameObject flechaBiblioteca;
     public GameObject flechaVolver;
+    public bool tutorialSaltado { get; private set; } = false;
+
+    [Header("Panel de decisión")]
+    public GameObject panelDecision;
+    public UnityEngine.UI.Button botonEmpezarTutorial;
+    public UnityEngine.UI.Button botonSaltarTutorial;
     #endregion
 
     #region Variables Privadas
@@ -42,8 +48,13 @@ public class Tutorial : MonoBehaviour
             cat.OnDialogoUltimaLineaTipeada += OnDialogoUltimaLineaTipeada;
         }
 
-        SaveData saveData = SaveManager.CargarNivel();
+        panelDecision?.SetActive(false);
+        if (botonEmpezarTutorial != null)
+            botonEmpezarTutorial.onClick.AddListener(OnBotonEmpezarTutorialClick);
+        if (botonSaltarTutorial != null)
+            botonSaltarTutorial.onClick.AddListener(OnBotonSaltarTutorialClick);
 
+        SaveData saveData = SaveManager.CargarNivel();
         if (saveData.nivelActual != 1)
         {
             SaltarTutorial();
@@ -103,15 +114,37 @@ public class Tutorial : MonoBehaviour
             SaltarTutorial();
             return;
         }
+        MostrarDialogoDecision();
+    }
 
+    private void MostrarDialogoDecision()
+    {
+        cat.IniciarDialogoExtraDesdeLista(new string[] { "skipTuto" }, "Extra");
+        panelDecision.SetActive(true);
+    }
+
+    private void OnBotonEmpezarTutorialClick()
+    {
+        if (cat != null)
+            cat.CancelarDialogo();
+
+        panelDecision.SetActive(false);
         pasoActual = 0;
         MostrarPasoActual();
+    }
+
+    private void OnBotonSaltarTutorialClick()
+    {
+        if (cat != null)
+            cat.CancelarDialogo();
+
+        panelDecision.SetActive(false);
+        SaltarTutorial();
     }
 
     private void MostrarPasoActual()
     {
         if (cat == null) return;
-
         if (GameManager.instance.nivelActual != 1)
         {
             SaltarTutorial();
@@ -145,7 +178,6 @@ public class Tutorial : MonoBehaviour
     private IEnumerator HabilitarTelaranaConDelay(float delay)
     {
         yield return new WaitForSeconds(delay);
-
         if (telaranaTutorial != null)
         {
             telaranaTutorial.HabilitarInteraccion();
@@ -175,11 +207,7 @@ public class Tutorial : MonoBehaviour
 
     public void PrimerClienteTerminoDialogo()
     {
-        if (pasoActual == 4)
-        {
-            AvanzarAlSiguientePaso();
-        }
-        else if (pasoActual == 6)
+        if (pasoActual == 4 || pasoActual == 6)
         {
             AvanzarAlSiguientePaso();
         }
@@ -197,10 +225,14 @@ public class Tutorial : MonoBehaviour
     public void SaltarTutorial()
     {
         pasoActual = dialogosPorPaso.Length;
-
+        tutorialSaltado = true;
         flechaTelaraña?.SetActive(false);
         flechaBiblioteca?.SetActive(false);
         flechaVolver?.SetActive(false);
+        panelDecision?.SetActive(false);
+
+        if (cat != null)
+            cat.CancelarDialogo();
 
         if (telaranaTutorial != null)
             telaranaTutorial.HabilitarInteraccion();
@@ -208,10 +240,10 @@ public class Tutorial : MonoBehaviour
         CameraManager.instance?.ActivarCamaraPrincipal();
         CameraManager.instance?.ActivarBotonCamara();
         TaskManager.instance?.MostrarTareas();
-        if (GameManager.instance != null)
-            TaskManager.instance.botonAbrirTienda.gameObject.SetActive(true);
+        TaskManager.instance.botonAbrirTienda.gameObject.SetActive(false);
 
         enabled = false;
     }
+
     #endregion
 }

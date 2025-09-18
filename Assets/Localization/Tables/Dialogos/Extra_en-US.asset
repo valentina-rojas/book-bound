@@ -91,6 +91,10 @@ MonoBehaviour:
     m_Localized: Good luck on your first day!
     m_Metadata:
       m_Items: []
+  - m_Id: 17556834722947072
+    m_Localized: Do you want to do the tutorial?
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

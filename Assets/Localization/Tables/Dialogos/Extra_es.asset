@@ -92,6 +92,10 @@ MonoBehaviour:
     m_Localized: "\xA1Suerte en tu primer d\xEDa!"
     m_Metadata:
       m_Items: []
+  - m_Id: 17556834722947072
+    m_Localized: "\xBFQuieres realizar el tutorial?"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
