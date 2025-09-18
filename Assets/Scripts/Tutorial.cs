@@ -240,7 +240,7 @@ public class Tutorial : MonoBehaviour
         CameraManager.instance?.ActivarCamaraPrincipal();
         CameraManager.instance?.ActivarBotonCamara();
         TaskManager.instance?.MostrarTareas();
-        TaskManager.instance.botonAbrirTienda.gameObject.SetActive(false);
+       // TaskManager.instance.botonAbrirTienda.gameObject.SetActive(false);
 
         enabled = false;
     }
