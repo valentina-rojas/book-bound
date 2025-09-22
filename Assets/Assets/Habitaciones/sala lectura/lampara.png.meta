@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      lampara_0: 6242528533265953460
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

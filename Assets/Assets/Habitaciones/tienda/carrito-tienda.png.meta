@@ -185,7 +185,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      carrito-tienda_0: -3260971422272378329
+      carrito-tienda_1: 371418234469115894
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      sillon-derecha_0: -3427923603932098066
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -8,6 +8,8 @@ public class ForceAspectRatio : MonoBehaviour
 
     void Start()
     {
+        // Solo aplicar en mobile
+        #if UNITY_ANDROID || UNITY_IOS
         Camera cam = GetComponent<Camera>();
 
         float targetAspect = targetAspectWidth / targetAspectHeight;
@@ -16,7 +18,7 @@ public class ForceAspectRatio : MonoBehaviour
 
         if (scaleHeight < 1.0f)
         {
-            // Letterbox (barras negras arriba y abajo)
+            // Letterbox
             Rect rect = cam.rect;
             rect.width = 1.0f;
             rect.height = scaleHeight;
@@ -26,9 +28,8 @@ public class ForceAspectRatio : MonoBehaviour
         }
         else
         {
-            // Pillarbox (barras negras a los lados)
+            // Pillarbox
             float scaleWidth = 1.0f / scaleHeight;
-
             Rect rect = cam.rect;
             rect.width = scaleWidth;
             rect.height = 1.0f;
@@ -36,5 +37,11 @@ public class ForceAspectRatio : MonoBehaviour
             rect.y = 0;
             cam.rect = rect;
         }
+        #else
+        // En PC forzamos full viewport
+        Camera cam = GetComponent<Camera>();
+        cam.rect = new Rect(0f, 0f, 1f, 1f);
+        #endif
     }
 }
+
