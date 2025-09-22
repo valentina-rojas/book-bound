@@ -93,6 +93,7 @@ public class Tutorial : MonoBehaviour
         {
             TaskManager.instance.MostrarTareas();
             TaskManager.instance.botonAbrirTienda.gameObject.SetActive(true);
+            TaskManager.instance.HabilitarBotonTienda();
         }
         else if (pasoActual == 5)
         {
@@ -119,7 +120,6 @@ public class Tutorial : MonoBehaviour
 
     private void MostrarDialogoDecision()
     {
-        cat.IniciarDialogoExtraDesdeLista(new string[] { "skipTuto" }, "Extra");
         panelDecision.SetActive(true);
     }
 
@@ -240,7 +240,6 @@ public class Tutorial : MonoBehaviour
         CameraManager.instance?.ActivarCamaraPrincipal();
         CameraManager.instance?.ActivarBotonCamara();
         TaskManager.instance?.MostrarTareas();
-       // TaskManager.instance.botonAbrirTienda.gameObject.SetActive(false);
 
         enabled = false;
     }
