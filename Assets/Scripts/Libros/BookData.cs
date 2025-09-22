@@ -9,16 +9,16 @@ public class BookData : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     #region Datos del libro
     public int libroID;
     public string tipoLibro;
-
     public string titulo;
     public string descripcion;
-
     public Sprite imagenLibro;
     #endregion
 
     #region Componentes internos
     private Image image;
     private Color originalColor;
+    private Color darkenedColor;
+    private Vector3 originalScale;
     #endregion
 
     #region Unity Events
@@ -26,6 +26,9 @@ public class BookData : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     {
         image = GetComponent<Image>();
         originalColor = image.color;
+        darkenedColor = new Color(originalColor.r * 0.7f, originalColor.g * 0.7f, originalColor.b * 0.7f);
+        image.color = darkenedColor;
+        originalScale = transform.localScale;
     }
 
     public void OnPointerClick(PointerEventData eventData)
@@ -35,12 +38,14 @@ public class BookData : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        image.color = new Color(originalColor.r * 0.7f, originalColor.g * 0.7f, originalColor.b * 0.7f);
+        image.color = originalColor;
+        transform.localScale = originalScale * 1.1f;
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        image.color = originalColor;
+        image.color = darkenedColor;
+        transform.localScale = originalScale;
     }
     #endregion
 
@@ -102,20 +107,20 @@ public class BookData : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
             titulo = this.titulo,
             descripcion = this.descripcion,
             estaHabilitado = this.gameObject.activeSelf,
-            posicion = this.transform.localPosition, 
+            posicion = this.transform.localPosition,
             parentPath = GetParentPath(this.transform.parent)
         };
     }
 
     private string GetParentPath(Transform parent)
     {
-        if (parent == null) 
+        if (parent == null)
         {
             Debug.LogWarning("El libro no tiene padre asignado");
             return "";
         }
-        
-        return parent.name; 
+
+        return parent.name;
     }
 
     public void FromLibroGuardado(LibroGuardado libroGuardado)
@@ -124,12 +129,12 @@ public class BookData : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         this.tipoLibro = libroGuardado.tipoLibro;
         this.titulo = libroGuardado.titulo;
         this.descripcion = libroGuardado.descripcion;
-        
+
         if (!string.IsNullOrEmpty(libroGuardado.parentPath))
         {
             ShelfSlots[] todosLosSlots = Object.FindObjectsByType<ShelfSlots>(FindObjectsSortMode.None);
             Transform parentSlot = System.Array.Find(todosLosSlots, s => s.gameObject.name == libroGuardado.parentPath)?.transform;
-            
+
             if (parentSlot != null)
             {
                 this.transform.SetParent(parentSlot);
@@ -140,10 +145,10 @@ public class BookData : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 Debug.LogWarning($"No se encontró el slot: {libroGuardado.parentPath}");
             }
         }
-        
+
         this.transform.localPosition = libroGuardado.posicion;
         this.gameObject.SetActive(libroGuardado.estaHabilitado);
-        
+
         if (transform.parent != null)
         {
             LayoutRebuilder.ForceRebuildLayoutImmediate(transform.parent as RectTransform);
