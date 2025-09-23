@@ -58,17 +58,32 @@ public class CharacterManager : MonoBehaviour
             case CharacterAttributes.TipoDePedido.RepararLibro:
                 Debug.Log("Este personaje necesita que repares un libro.");
                 CameraManager.instance.ActivarPanelReparacion();
-                FindFirstObjectByType<HintsReparar>()?.SendMessage("CargarPistasDePersonaje");
+                
+                HintsReparar hintsReparar = FindFirstObjectByType<HintsReparar>();
+                if (hintsReparar != null)
+                {
+                    hintsReparar.ReactivarSistemaHints(); 
+                }
                 break;
             case CharacterAttributes.TipoDePedido.HacerPortada:
                 Debug.Log("Este personaje quiere que le hagas una portada.");
                 CameraManager.instance.ActivarPanelPortada();
-                FindFirstObjectByType<HintsPortada>()?.SendMessage("CargarPistasDePersonaje");
+            
+                HintsPortada hints = FindFirstObjectByType<HintsPortada>();
+                if (hints != null)
+                {
+                    hints.ReactivarSistemaHints(); 
+                }
                 break;
             case CharacterAttributes.TipoDePedido.HechizarLibro:
                 Debug.Log("Este personaje quiere que le hechices un libro.");
                 CameraManager.instance.ActivarPanelHechizo();
-                FindFirstObjectByType<HintsHechizos>()?.SendMessage("CargarPistasDePersonaje");
+                
+                HintsHechizos hintsHechizos = FindFirstObjectByType<HintsHechizos>();
+                if (hintsHechizos != null)
+                {
+                    hintsHechizos.ReactivarSistemaHints(); 
+                }
                 break;
             case CharacterAttributes.TipoDePedido.Traduccion:
                 Debug.Log("Este personaje quiere traducir un libro.");
