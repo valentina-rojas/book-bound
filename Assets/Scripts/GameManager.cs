@@ -355,12 +355,22 @@ public class GameManager : MonoBehaviour
         EconomyManager.instance.SumarDinero(30);
         ActualizarSpritePersonaje();
     }
-
-    public void CompletarPortada(List<StickerID> stickersUsados, int extras = 0)
+    
+    public void CompletarPortada(List<StickerID> stickersUsados, int extras = 0, int cantidadVisibles = 0)
     {
         if (personajeActual == null)
         {
             Debug.LogError("No hay personaje actual asignado para comparar stickers.");
+            return;
+        }
+
+        if (cantidadVisibles > 6)
+        {
+            resultadoRecomendacion = ResultadoRecomendacion.Mala;
+            recomendacionesMalas++;
+            Debug.LogWarning("Portada rechazada: se usaron más de 6 stickers visibles.");
+            ActualizarSpritePersonaje();
+            characterSpawn?.EndInteraction();
             return;
         }
 
@@ -391,14 +401,14 @@ public class GameManager : MonoBehaviour
         {
             resultadoRecomendacion = ResultadoRecomendacion.Buena;
             recomendacionesBuenas++;
-            EconomyManager.instance.SumarDinero(15 + extras); 
+            EconomyManager.instance.SumarDinero(15 + extras);
             AudioManager.instance.sonidoEstrellas.Play();
         }
         else
         {
             resultadoRecomendacion = ResultadoRecomendacion.Buena;
             recomendacionesBuenas++;
-            EconomyManager.instance.SumarDinero(30 + extras); 
+            EconomyManager.instance.SumarDinero(30 + extras);
             AudioManager.instance.sonidoEstrellas.Play();
         }
 

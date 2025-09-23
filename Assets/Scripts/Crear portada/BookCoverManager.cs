@@ -94,6 +94,7 @@ public class BookCoverManager : MonoBehaviour
             finalizarButton.gameObject.SetActive(false);
 
         List<StickerID> stickersUsados = new List<StickerID>();
+        List<StickerData> stickersVisibles = new List<StickerData>(); 
         int extras = 0;
 
         foreach (Transform child in portadaEditable.transform)
@@ -109,6 +110,8 @@ public class BookCoverManager : MonoBehaviour
                 {
                     if (!stickersUsados.Contains(data.stickerID))
                         stickersUsados.Add(data.stickerID);
+
+                    stickersVisibles.Add(data);
 
                     if (GameManager.instance.personajeActual != null &&
                         GameManager.instance.personajeActual.stickersRequeridos.Contains(data.stickerID) &&
@@ -133,7 +136,7 @@ public class BookCoverManager : MonoBehaviour
             extras += 3;
         }
 
-        GameManager.instance.CompletarPortada(stickersUsados, extras);
+        GameManager.instance.CompletarPortada(stickersUsados, extras, stickersVisibles.Count);
         StartCoroutine(MostrarPreviewPortada());
     }
 
