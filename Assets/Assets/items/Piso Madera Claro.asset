@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 460f30a183331354c9fd9a08296342ea, type: 3}
-  m_Name: Piso Madera
+  m_Name: Piso Madera Claro
   m_EditorClassIdentifier: 
-  nombre: Madera
-  icono: {fileID: -973545076300677896, guid: 5c27cf3588b270b4798f2dddbcb40dfc, type: 3}
-  precio: 50
+  nombre: Madera Claro
+  icono: {fileID: 8032329019154119471, guid: 94934815c71d9a045b8672fddcda3df5, type: 3}
+  precio: 100
   categoria: 0
+  comprado: 0

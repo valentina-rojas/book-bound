@@ -9,6 +9,8 @@ public class MenuPrincipal : MonoBehaviour
     {
         SaveManager.BorrarGuardado();
         SceneManager.LoadScene("Cinematica");
+        foreach (Item item in InventarioManager.Instance.todosLosItems)
+            item.comprado = false;
     }
 
     public void CargarPartida()
@@ -18,10 +20,12 @@ public class MenuPrincipal : MonoBehaviour
         if (data == null || data.nivelActual <= 1)
         {
             SceneManager.LoadScene("Cinematica");
+            foreach (Item item in InventarioManager.Instance.todosLosItems)
+                item.comprado = false;
         }
         else
         {
-            SceneManager.LoadScene("Gameplay"); 
+            SceneManager.LoadScene("Gameplay");
         }
     }
 
