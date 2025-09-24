@@ -2,6 +2,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine.Localization;
+using System.Collections.Generic;
 
 public class CriptogramaManager : MonoBehaviour
 {
@@ -13,9 +14,13 @@ public class CriptogramaManager : MonoBehaviour
     public GameObject prefabEspacio;       
     public Button botonEntregar;           
 
+    [Header("Diccionario traducido")]
+    public DiccionarioBotonTraducido[] botonesTraducidos; 
+
     private ButtonEspacio espacioSeleccionado;
     private string mensajeCorrecto;        
     private string mensajeCorrectoSinEspaciosUpper;
+    private HashSet<string> letrasDescubiertas = new HashSet<string>();
 
     private void Awake()
     {
@@ -64,13 +69,23 @@ public class CriptogramaManager : MonoBehaviour
         foreach (Transform child in contenedorEspacios)
             Destroy(child.gameObject);
 
+        foreach (var boton in botonesTraducidos)
+        {
+            if (boton == null) continue;
+
+            if (letrasDescubiertas.Contains(boton.letra))
+                boton.RevelarLetra();
+            else
+                boton.Ocultar();
+        }
+
         System.Random rnd = new System.Random();
 
         for (int i = 0; i < mensaje.Length; i++)
         {
             char c = mensaje[i];
             GameObject espacioGO = Instantiate(prefabEspacio, contenedorEspacios);
-            espacioGO.SetActive(true); 
+            espacioGO.SetActive(true);
 
             ButtonEspacio be = espacioGO.GetComponent<ButtonEspacio>();
             if (be == null)
@@ -90,9 +105,14 @@ public class CriptogramaManager : MonoBehaviour
                 bool revelar = rnd.NextDouble() < 0.5;
 
                 if (revelar)
+                {
                     be.ConfigureAsRevealed(c.ToString());
+                    RevelarLetraTraducida(c.ToString()); 
+                }
                 else
+                {
                     be.ConfigureAsLetterPlaceholder(this);
+                }
             }
         }
 
@@ -125,7 +145,29 @@ public class CriptogramaManager : MonoBehaviour
         espacioSeleccionado.SetSelected(false);
         espacioSeleccionado = null;
 
+        if (mensajeCorrectoSinEspaciosUpper.Contains(letterUpper))
+        {
+            RevelarLetraTraducida(letterUpper);
+        }
+
         VerificarTraduccion();
+    }
+
+    private void RevelarLetraTraducida(string letra)
+    {
+        letra = letra.ToUpperInvariant();
+
+        if (!letrasDescubiertas.Contains(letra))
+            letrasDescubiertas.Add(letra);
+
+        foreach (var boton in botonesTraducidos)
+        {
+            if (boton != null && boton.letra == letra)
+            {
+                boton.RevelarLetra();
+                break;
+            }
+        }
     }
 
     private void VerificarTraduccion()
