@@ -66,6 +66,6 @@ public class EconomyManager : MonoBehaviour
     private void ActualizarUI()
     {
         if (textoDinero != null)
-            textoDinero.text = $"${dineroActual}";
+            textoDinero.text = $"{dineroActual}";
     }
 }

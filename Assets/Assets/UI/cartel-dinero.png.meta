@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: f955f002f686f6143846d59ee0c6d3dc
+guid: 1f8c0b6b4313a0d41ae2fd4b285830a9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7316489550304447770
-    second: flores-3_0
+      213: -6813020880518043761
+    second: cartel-dinero_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -97,7 +97,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: WebGL
+    buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -110,7 +110,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: Android
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: flores-3_0
+      name: cartel-dinero_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 155
-        height: 232
+        width: 118
+        height: 49
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a1d01c84b74698560800000000000000
-      internalID: 7316489550304447770
+      spriteID: f8727692b994371a0800000000000000
+      internalID: -6813020880518043761
       vertices: []
       indices: 
       edges: []
@@ -160,8 +160,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      flores-3_0: 7316489550304447770
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
