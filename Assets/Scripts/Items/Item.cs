@@ -6,7 +6,7 @@ public enum CategoriaItem
     Paredes,
     Cuadros,
     Muebles,
-    Decoracion,
+    Plantas,
     Herramientas,
     Otros
 }

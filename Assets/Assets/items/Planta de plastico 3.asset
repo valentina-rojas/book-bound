@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 460f30a183331354c9fd9a08296342ea, type: 3}
+  m_Name: Planta de plastico 3
+  m_EditorClassIdentifier: 
+  nombre: Planta de plastico 3
+  icono: {fileID: 7158141690416227076, guid: f6cee870416cc7044afd349a13492c7b, type: 3}
+  precio: 100
+  categoria: 4
+  comprado: 0

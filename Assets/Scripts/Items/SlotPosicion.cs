@@ -1,17 +1,23 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using System.Collections.Generic;
 
-public class SlotCuadro : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, IDragHandler, IEndDragHandler
+public class SlotPosicion : MonoBehaviour,
+    IPointerClickHandler, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
-    [Header("Slot")]
+    [Header("Configuración del Slot")]
+    [Tooltip("Categoría de ítem que este slot acepta (Cuadros, Plantas, Muebles, etc.)")]
+    public CategoriaItem categoriaAceptada;
+
+    [Header("Estado")]
     public Item itemActual;
     public Image render;
     public bool EstaOcupado => itemActual != null;
 
     private UISlotItem dragItemInstance;
     private Canvas canvas;
-    private SlotCuadro slotOrigen;
+    private SlotPosicion slotOrigen;
 
     private void Awake()
     {
@@ -22,7 +28,7 @@ public class SlotCuadro : MonoBehaviour, IPointerClickHandler, IBeginDragHandler
     {
         itemReemplazado = null;
 
-        if (item == null || item.categoria != CategoriaItem.Cuadros)
+        if (item == null || item.categoria != categoriaAceptada)
             return false;
 
         itemReemplazado = itemActual;
@@ -108,21 +114,26 @@ public class SlotCuadro : MonoBehaviour, IPointerClickHandler, IBeginDragHandler
     public void OnEndDrag(PointerEventData eventData)
     {
         if (dragItemInstance == null) return;
-        PointerEventData pointerData = new PointerEventData(EventSystem.current) { position = Input.mousePosition };
-        var results = new System.Collections.Generic.List<RaycastResult>();
+
+        PointerEventData pointerData = new PointerEventData(EventSystem.current)
+        {
+            position = Input.mousePosition
+        };
+
+        var results = new List<RaycastResult>();
         EventSystem.current.RaycastAll(pointerData, results);
 
-        SlotCuadro slotDestino = null;
+        SlotPosicion slotDestino = null;
         foreach (var r in results)
         {
-            slotDestino = r.gameObject.GetComponent<SlotCuadro>();
+            slotDestino = r.gameObject.GetComponent<SlotPosicion>();
             if (slotDestino != null) break;
         }
 
         if (slotDestino != null)
         {
             if (dragItemInstance.currentItem != null &&
-                dragItemInstance.currentItem.categoria == CategoriaItem.Cuadros)
+                dragItemInstance.currentItem.categoria == slotDestino.categoriaAceptada)
             {
                 if (slotDestino.TryColocarItem(dragItemInstance.currentItem, out var itemEnDestino))
                 {
@@ -149,9 +160,9 @@ public class SlotCuadro : MonoBehaviour, IPointerClickHandler, IBeginDragHandler
         slotOrigen = null;
     }
 
-    public SlotCuadroGuardado ToSlotCuadroGuardado()
+    public SlotPosicionGuardado ToSlotPosicionGuardado()
     {
-        return new SlotCuadroGuardado()
+        return new SlotPosicionGuardado()
         {
             slotPath = SaveManager.ObtenerRutaCompleta(transform),
             itemNombre = itemActual != null ? itemActual.nombre : null

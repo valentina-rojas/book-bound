@@ -21,7 +21,7 @@ public class SlotGuardado
 }
 
 [System.Serializable]
-public class SlotCuadroGuardado
+public class SlotPosicionGuardado
 {
     public string slotPath;
     public string itemNombre;
@@ -50,7 +50,7 @@ public class SaveData
     public List<LibroPrestado> librosPrestados;
     public List<LibroGuardado> librosEstantes;
     public List<SlotGuardado> slotsGuardados;
-    public List<SlotCuadroGuardado> slotsCuadrosGuardados;
+    public List<SlotPosicionGuardado> slotsCuadrosGuardados;
     public List<string> itemsInventario; 
     public List<GeneroCantidad> librosEsperadosPorGeneroList;
     public bool tiendaAbiertaPorPrimeraVez;
@@ -73,10 +73,10 @@ public static class SaveManager
         foreach (SlotLugar slot in todosSlots)
             slotsGuardados.Add(slot.ToSlotGuardado());
 
-        List<SlotCuadroGuardado> slotsCuadrosGuardados = new List<SlotCuadroGuardado>();
-        SlotCuadro[] todosSlotsCuadros = GameObject.FindObjectsOfType<SlotCuadro>(true);
-        foreach (SlotCuadro slot in todosSlotsCuadros)
-            slotsCuadrosGuardados.Add(slot.ToSlotCuadroGuardado());
+        List<SlotPosicionGuardado> slotsPosicionGuardados = new List<SlotPosicionGuardado>();
+        SlotPosicion[] todosSlotsPosicion = GameObject.FindObjectsOfType<SlotPosicion>(true);
+        foreach (SlotPosicion slot in todosSlotsPosicion)
+            slotsPosicionGuardados.Add(slot.ToSlotPosicionGuardado());
 
         List<string> itemsInventario = new List<string>();
         foreach (Item i in InventarioManager.Instance.ObtenerItems())
@@ -93,7 +93,7 @@ public static class SaveManager
             librosPrestados = new List<LibroPrestado>(libros),
             librosEstantes = librosEstantes,
             slotsGuardados = slotsGuardados,
-            slotsCuadrosGuardados = slotsCuadrosGuardados,
+            slotsCuadrosGuardados = slotsPosicionGuardados,
             itemsInventario = itemsInventario,
             librosEsperadosPorGeneroList = listaGeneros,
             tiendaAbiertaPorPrimeraVez = TaskManager.instance != null ? 
@@ -104,7 +104,7 @@ public static class SaveManager
         PlayerPrefs.SetString(SaveKey, json);
         PlayerPrefs.Save();
 
-        Debug.Log($"Juego guardado: Nivel {nivel}, Libros: {librosEstantes.Count}, Slots: {slotsGuardados.Count}, SlotsCuadros: {slotsCuadrosGuardados.Count}, ItemsInventario: {itemsInventario.Count}");
+        Debug.Log($"Juego guardado: Nivel {nivel}, Libros: {librosEstantes.Count}, Slots: {slotsGuardados.Count}, SlotsCuadros: {slotsPosicionGuardados.Count}, ItemsInventario: {itemsInventario.Count}");
     }
     #endregion
 
@@ -130,7 +130,7 @@ public static class SaveManager
                 librosPrestados = new List<LibroPrestado>(),
                 librosEstantes = new List<LibroGuardado>(),
                 slotsGuardados = new List<SlotGuardado>(),
-                slotsCuadrosGuardados = new List<SlotCuadroGuardado>(),
+                slotsCuadrosGuardados = new List<SlotPosicionGuardado>(),
                 itemsInventario = new List<string>(),
                 librosEsperadosPorGeneroList = listaGeneros,
                 tiendaAbiertaPorPrimeraVez = false
@@ -229,11 +229,11 @@ public static class SaveManager
     {
         if (data == null || data.slotsCuadrosGuardados == null) return;
 
-        SlotCuadro[] todosSlots = GameObject.FindObjectsOfType<SlotCuadro>(true);
+        SlotPosicion[] todosSlots = GameObject.FindObjectsOfType<SlotPosicion>(true);
 
-        foreach (SlotCuadroGuardado slotGuardado in data.slotsCuadrosGuardados)
+        foreach (SlotPosicionGuardado slotGuardado in data.slotsCuadrosGuardados)
         {
-            SlotCuadro slot = System.Array.Find(todosSlots,
+            SlotPosicion slot = System.Array.Find(todosSlots,
                 s => ObtenerRutaCompleta(s.transform) == slotGuardado.slotPath
             );
 

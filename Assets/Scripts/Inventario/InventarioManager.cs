@@ -16,12 +16,16 @@ public class InventarioManager : MonoBehaviour
     [SerializeField] private Transform contenedorParedes;
     [SerializeField] private Transform contenedorPisos;
     [SerializeField] private Transform contenedorCuadros;
+    [SerializeField] private Transform contenedorMuebles;
+    [SerializeField] private Transform contenedorPlantas;
 
     [Header("Botones de pestañas")]
     [SerializeField] private Button botonPestañaHerramientas;
     [SerializeField] private Button botonPestañaParedes;
     [SerializeField] private Button botonPestañaPisos;
     [SerializeField] private Button botonPestañaCuadros;
+    [SerializeField] private Button botonPestañaMuebles;
+    [SerializeField] private Button botonPestañaPlantas;
 
     [Header("Botón abrir/cerrar inventario")]
     [SerializeField] private Button botonAbrirInventario;
@@ -48,6 +52,10 @@ public class InventarioManager : MonoBehaviour
             botonPestañaPisos.onClick.AddListener(() => MostrarPestaña(CategoriaItem.Pisos));
         if (botonPestañaCuadros != null)
             botonPestañaCuadros.onClick.AddListener(() => MostrarPestaña(CategoriaItem.Cuadros));
+        if (botonPestañaMuebles != null)
+            botonPestañaMuebles.onClick.AddListener(() => MostrarPestaña(CategoriaItem.Muebles));
+        if (botonPestañaPlantas != null)
+            botonPestañaPlantas.onClick.AddListener(() => MostrarPestaña(CategoriaItem.Plantas));
 
         InicializarHerramientas();
         MostrarPestaña(CategoriaItem.Herramientas);
@@ -69,6 +77,8 @@ public class InventarioManager : MonoBehaviour
         contenedorParedes.gameObject.SetActive(categoria == CategoriaItem.Paredes);
         contenedorPisos.gameObject.SetActive(categoria == CategoriaItem.Pisos);
         contenedorCuadros.gameObject.SetActive(categoria == CategoriaItem.Cuadros);
+        contenedorMuebles.gameObject.SetActive(categoria == CategoriaItem.Muebles);
+        contenedorPlantas.gameObject.SetActive(categoria == CategoriaItem.Plantas);
     }
 
     public void AgregarItem(Item item, ItemMundo itemMundo)
@@ -120,6 +130,8 @@ public class InventarioManager : MonoBehaviour
             case CategoriaItem.Paredes: return contenedorParedes;
             case CategoriaItem.Pisos: return contenedorPisos;
             case CategoriaItem.Cuadros: return contenedorCuadros;
+            case CategoriaItem.Muebles: return contenedorMuebles;
+            case CategoriaItem.Plantas: return contenedorPlantas;
             default: return null;
         }
     }

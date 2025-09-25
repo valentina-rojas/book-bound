@@ -58,7 +58,7 @@ public class UISlotItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
     public void OnDrag(PointerEventData eventData)
     {
         rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
-        icono.color = (ObtenerSlotCuadroValidoDebajo() != null) ? Color.white : new Color(1f, 1f, 1f, 0.5f);
+        icono.color = (ObtenerSlotPosicionValidaDebajo() != null) ? Color.white : new Color(1f, 1f, 1f, 0.5f);
     }
 
     public void OnEndDrag(PointerEventData eventData)
@@ -67,7 +67,7 @@ public class UISlotItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
         canvasGroup.blocksRaycasts = true;
         bool colocado = false;
 
-        SlotCuadro slot = ObtenerSlotCuadroValidoDebajo();
+        SlotPosicion slot = ObtenerSlotPosicionValidaDebajo();
         if (slot != null)
         {
             if (slot.TryColocarItem(currentItem, out var reemplazado))
@@ -103,7 +103,7 @@ public class UISlotItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
         icono.color = Color.white;
     }
 
-    private SlotCuadro ObtenerSlotCuadroValidoDebajo()
+    private SlotPosicion ObtenerSlotPosicionValidaDebajo()
     {
         PointerEventData pointerData = new PointerEventData(EventSystem.current) { position = Input.mousePosition };
         var results = new List<RaycastResult>();
@@ -111,7 +111,7 @@ public class UISlotItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
 
         foreach (var r in results)
         {
-            var slot = r.gameObject.GetComponent<SlotCuadro>();
+            var slot = r.gameObject.GetComponent<SlotPosicion>();
             if (slot != null) return slot;
         }
         return null;

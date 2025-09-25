@@ -4,8 +4,8 @@ using System;
 
 public class AnimacionBoton : MonoBehaviour
 {
-    public Image image;         // Imagen con los frames de la animación
-    public Sprite[] frames;     // Frames de la animación
+    public Image image;        
+    public Sprite[] frames;    
     public float framesPerSecond = 12f;
 
     private int currentFrame;
