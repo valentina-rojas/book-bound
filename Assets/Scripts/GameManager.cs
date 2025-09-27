@@ -145,7 +145,6 @@ public class GameManager : MonoBehaviour
     private IEnumerator MostrarCartelFinDeDia()
     {
         TaskManager.instance.OcultarListaTareas();
-        TaskManager.instance.OcultarBotonTareas();
         MenuPausa.instance.OcultarBotonPausa();
         InventarioManager.Instance.OcultarInventarioCompleto();
         panelFinNivel.gameObject.SetActive(true);
