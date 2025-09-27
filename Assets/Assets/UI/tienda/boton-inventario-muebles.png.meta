@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: a0f1f6be77f408240916d85f29a2d473
+guid: 9683368ee63e49f4b9d966fa972adff2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4272897982942881614
-    second: elementos-fondo_0
-  - first:
-      213: -1099124993230186830
-    second: elementos-fondo_1
+      213: 2310692761548644676
+    second: boton-inventario-muebles_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,19 +97,6 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
     buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -129,35 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: elementos-fondo_0
+      name: boton-inventario-muebles_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 25
-        width: 1920
-        height: 861
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2b8d43d5ced93b4c0800000000000000
-      internalID: -4272897982942881614
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: elementos-fondo_1
-      rect:
-        serializedVersion: 2
-        x: 1773
         y: 0
-        width: 8
-        height: 5
+        width: 56
+        height: 56
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2b6d2ce54af1fb0f0800000000000000
-      internalID: -1099124993230186830
+      spriteID: 4416c25f2da311020800000000000000
+      internalID: 2310692761548644676
       vertices: []
       indices: 
       edges: []
@@ -185,9 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      elementos-fondo_0: -4272897982942881614
-      elementos-fondo_1: -1099124993230186830
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI; 
 
 public class EconomyManager : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class EconomyManager : MonoBehaviour
     private int dineroActual;
 
     public TMP_Text textoDinero;
+    public GameObject contenedorDinero; 
 
     private void Awake()
     {
@@ -67,5 +69,17 @@ public class EconomyManager : MonoBehaviour
     {
         if (textoDinero != null)
             textoDinero.text = $"{dineroActual}";
+    }
+
+    public void MostrarContenedorDinero()
+    {
+        if (contenedorDinero != null)
+            contenedorDinero.SetActive(true);
+    }
+
+    public void OcultarContenedorDinero()
+    {
+        if (contenedorDinero != null)
+            contenedorDinero.SetActive(false);
     }
 }

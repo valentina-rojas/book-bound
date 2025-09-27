@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      cartel-dinero_0: -6813020880518043761
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

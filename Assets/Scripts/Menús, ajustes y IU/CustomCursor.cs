@@ -4,13 +4,14 @@ public class CustomCursor : MonoBehaviour
 {
     public Vector2 offset;
     private static CustomCursor instance;
+    private RectTransform rectTransform;
 
     void Awake()
     {
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(transform.root.gameObject); 
+            DontDestroyOnLoad(transform.root.gameObject);
         }
         else
         {
@@ -20,12 +21,14 @@ public class CustomCursor : MonoBehaviour
 
     void Start()
     {
-        Cursor.visible = false; 
+        Cursor.visible = false;
+        rectTransform = GetComponent<RectTransform>();
     }
 
     void Update()
     {
         Vector2 mousePos = Input.mousePosition;
-        GetComponent<RectTransform>().position = mousePos + offset;
+        rectTransform.position = mousePos + offset;
     }
 }
+

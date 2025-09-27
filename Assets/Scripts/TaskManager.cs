@@ -13,7 +13,6 @@ public class NivelDeTareas
 public class TaskManager : MonoBehaviour
 {
     public static TaskManager instance;
-
     [Header("Animaciones")]
     public AnimacionPanelTareas animacionAbrirPanel;
     public AnimacionPanelTareas animacionCerrarPanel;
@@ -26,7 +25,6 @@ public class TaskManager : MonoBehaviour
     public Button botonAbrirLista;
     public Button botonCerrarLista;
     public Button botonAbrirTienda;
-
     private bool tareasYaCompletadas = false;
     private bool tiendaAbiertaEnEsteNivel = false;
     #endregion
@@ -40,7 +38,6 @@ public class TaskManager : MonoBehaviour
     #region Variables Configuración de Niveles
     [Header("Configuración de niveles")]
     public List<NivelDeTareas> nivelesDeTareas;
-
     private List<TMP_Text> textosTareas;
     private List<bool> tareasCompletadas;
     private bool tiendaAbiertaPorPrimeraVez = false;
@@ -154,7 +151,12 @@ public class TaskManager : MonoBehaviour
             animacionCerrarPanel.ReproducirAnimacion();
         }
     }
-
+    
+    public void MostrarListaTareas()
+    {
+        botonAbrirLista.gameObject.SetActive(true);
+        panelTareas.SetActive(false);
+    }
 
     public void OcultarBotonTareas()
     {
@@ -165,6 +167,12 @@ public class TaskManager : MonoBehaviour
         {
             animacionCerrarPanel.ReproducirAnimacion();
         }
+    }
+
+    public void OcultarBotonTareasMinijuegos()
+    {
+        panelTareas.SetActive(false);
+        botonAbrirLista.gameObject.SetActive(false);
     }
     #endregion
 
