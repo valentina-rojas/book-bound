@@ -17,11 +17,9 @@ public class UITiendaSlot : MonoBehaviour
     {
         currentItem = item;
         onBuyClick = onClickCallback;
-
-        icono.sprite = item.icono;
+        icono.sprite = item.iconoTienda != null ? item.iconoTienda : item.icono;
         textoNombre.text = item.nombre;
         textoPrecio.text = $"${item.precio}";
-
         botonComprar.onClick.RemoveAllListeners();
         botonComprar.onClick.AddListener(() => onBuyClick?.Invoke(currentItem));
     }

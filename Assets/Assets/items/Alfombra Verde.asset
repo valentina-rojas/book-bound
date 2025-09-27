@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: Alfombra Verde
   m_EditorClassIdentifier: 
   nombre: Alfombra Verde
-  icono: {fileID: -6557565760169831484, guid: d8f25346686f20640ac1293dd9b85b0b, type: 3}
+  icono: {fileID: -6557565760169831484, guid: 68394e703959a4941a9914bd2455cfcc, type: 3}
+  iconoTienda: {fileID: 0}
   precio: 50
   categoria: 0
+  comprado: 0

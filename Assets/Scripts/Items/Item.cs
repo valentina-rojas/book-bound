@@ -16,6 +16,7 @@ public class Item : ScriptableObject
 {
     public string nombre;
     public Sprite icono;
+    public Sprite iconoTienda;
     public int precio;
     public CategoriaItem categoria;
 

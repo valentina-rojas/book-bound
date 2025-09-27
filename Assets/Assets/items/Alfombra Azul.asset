@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: Alfombra Azul
   m_EditorClassIdentifier: 
   nombre: Alfombra Azul
-  icono: {fileID: -3078819186224147271, guid: 27e50a060b5f512409dcc433803b9e6e, type: 3}
+  icono: {fileID: -3078819186224147271, guid: dfec0da587a9e9a428acf8b141341b71, type: 3}
+  iconoTienda: {fileID: 0}
   precio: 50
   categoria: 0
+  comprado: 0

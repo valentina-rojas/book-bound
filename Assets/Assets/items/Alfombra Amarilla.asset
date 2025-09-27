@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: Alfombra Amarilla
   m_EditorClassIdentifier: 
   nombre: Alfombra Amarilla
-  icono: {fileID: 3308997351278165394, guid: 206a1413ff433584ea126e176b4f3a56, type: 3}
+  icono: {fileID: 3308997351278165394, guid: aa6567a4421b0f746ae03e1a02641de9, type: 3}
+  iconoTienda: {fileID: 0}
   precio: 50
   categoria: 0
+  comprado: 0
