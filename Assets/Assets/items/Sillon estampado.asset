@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nombre: Sillon estampado
   icono: {fileID: -4021930472148506538, guid: c71e473cc70a02f478ee861183188636, type: 3}
+  iconoTienda: {fileID: -5444818999452872187, guid: 491132ff231b3d94db9a61095651ec45, type: 3}
   precio: 200
   categoria: 3
   comprado: 0

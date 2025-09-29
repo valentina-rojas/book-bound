@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nombre: Madera Claro
   icono: {fileID: 8032329019154119471, guid: 94934815c71d9a045b8672fddcda3df5, type: 3}
+  iconoTienda: {fileID: -143215070926543929, guid: f3162deaa582ead43b9a57fcf8621b75, type: 3}
   precio: 100
   categoria: 0
-  comprado: 0
+  comprado: 1

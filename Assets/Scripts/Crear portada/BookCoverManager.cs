@@ -3,6 +3,8 @@ using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.Services.Analytics;
+using static EventManager;
 
 public class BookCoverManager : MonoBehaviour
 {
@@ -94,7 +96,7 @@ public class BookCoverManager : MonoBehaviour
             finalizarButton.gameObject.SetActive(false);
 
         List<StickerID> stickersUsados = new List<StickerID>();
-        List<StickerData> stickersVisibles = new List<StickerData>(); 
+        List<StickerData> stickersVisibles = new List<StickerData>();
         int extras = 0;
 
         foreach (Transform child in portadaEditable.transform)
@@ -136,8 +138,43 @@ public class BookCoverManager : MonoBehaviour
             extras += 3;
         }
 
+        bool correctCover = false;
+        if (GameManager.instance.personajeActual != null)
+        {
+            List<StickerID> stickersRequeridos = GameManager.instance.personajeActual.stickersRequeridos;
+            int totalRequeridos = stickersRequeridos.Count;
+            int correctos = 0;
+
+            foreach (StickerID requerido in stickersRequeridos)
+            {
+                if (stickersUsados.Contains(requerido))
+                    correctos++;
+            }
+
+            if (totalRequeridos > 0)
+            {
+                float porcentaje = (float)correctos / totalRequeridos;
+                correctCover = porcentaje >= 0.5f; 
+            }
+        }
+
+        RegistrarEventoPortada(correctCover);
+
         GameManager.instance.CompletarPortada(stickersUsados, extras, stickersVisibles.Count);
         StartCoroutine(MostrarPreviewPortada());
+    }
+
+    private void RegistrarEventoPortada(bool correctCover)
+    {
+        PortadaEvent portadaEvent = new PortadaEvent();
+        portadaEvent.correctCover = correctCover;
+        portadaEvent.level = GameManager.instance.nivelActual;
+
+#if !UNITY_EDITOR
+    Unity.Services.Analytics.AnalyticsService.Instance.RecordEvent(portadaEvent);
+#else
+        Debug.Log($"[ANALYTICS] PortadaEvent: correctCover={correctCover}, level={GameManager.instance.nivelActual}");
+#endif
     }
 
     private bool EstaStickerCompletamenteDentro(RectTransform sticker, RectTransform areaPortada)

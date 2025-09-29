@@ -14,5 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nombre: Tapiz Azul
   icono: {fileID: -3832745732226868762, guid: 9a4545761bd81ac499ee71affc459c30, type: 3}
+  iconoTienda: {fileID: -6866175491605052222, guid: e85e374a120ae6b4f993664d8309b667, type: 3}
   precio: 55
   categoria: 1
+  comprado: 0

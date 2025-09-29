@@ -60,7 +60,7 @@ public class BookManager : MonoBehaviour
     public void MostrarInformacion(BookData libro)
     {
         libroActual = libro;
-
+        StaticVariables.SessionData.bookOpened = true;
         librosMismaSeccion.Clear();
         BookData[] todosLosLibros = FindObjectsByType<BookData>(FindObjectsSortMode.None);
 

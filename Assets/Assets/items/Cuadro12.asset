@@ -14,5 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nombre: Cuadro 12
   icono: {fileID: 5788079387845154874, guid: 28d258b153998cc4eafbac013b375c1e, type: 3}
+  iconoTienda: {fileID: 4628980890474125733, guid: af638fe833adc454d9f5844c9c99c413, type: 3}
   precio: 35
   categoria: 2
+  comprado: 0

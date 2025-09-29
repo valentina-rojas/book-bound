@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nombre: Marmol
   icono: {fileID: 2797848783991387712, guid: 36a40b83f7a707e42bb0f27b58423f87, type: 3}
+  iconoTienda: {fileID: 5288473107960490809, guid: 9c546f6e8665c3046963f551b702fe97, type: 3}
   precio: 200
   categoria: 0
-  comprado: 0
+  comprado: 1

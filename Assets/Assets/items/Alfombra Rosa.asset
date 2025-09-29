@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nombre: Alfombra Rosa
   icono: {fileID: 3337731324349976835, guid: 6b49e3d2c97cf45449c722f762ab5044, type: 3}
-  iconoTienda: {fileID: 0}
+  iconoTienda: {fileID: -3196860479425517531, guid: a5fe6781dfa93f74caf6b259547e7852, type: 3}
   precio: 50
   categoria: 0
-  comprado: 0
+  comprado: 1

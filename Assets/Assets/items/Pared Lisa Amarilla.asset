@@ -14,5 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nombre: Lisa Amarilla
   icono: {fileID: 8681447420172947130, guid: aed8a8aa1cfc3b944b47fcecee73ba19, type: 3}
+  iconoTienda: {fileID: -7172818204367938144, guid: d007ba2dc7b6c334ab04546871155ffd, type: 3}
   precio: 50
   categoria: 1
+  comprado: 0

@@ -14,5 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nombre: Cuadro 9
   icono: {fileID: -8851824491428083072, guid: d00189b5e2ba6584ab16ea09af967b29, type: 3}
+  iconoTienda: {fileID: 2508269907133150384, guid: 2e556c05bbd6f314d8d5ed388a639159, type: 3}
   precio: 35
   categoria: 2
+  comprado: 0

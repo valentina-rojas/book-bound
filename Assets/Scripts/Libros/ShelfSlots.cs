@@ -1,5 +1,7 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+using Unity.Services.Analytics;
+using static EventManager; 
 
 public class ShelfSlots : MonoBehaviour, IDropHandler
 {
@@ -22,13 +24,17 @@ public class ShelfSlots : MonoBehaviour, IDropHandler
         BookData bookData = dropped.GetComponent<BookData>();
         if (bookData != null)
         {
-            if (bookData.tipoLibro == generoPermitido)
+            bool placedCorrect = (bookData.tipoLibro == generoPermitido);
+
+            if (placedCorrect)
             {
                 if (ShelfManager.instance.audioLibroCorrecto != null && ShelfManager.instance.audioLibroCorrecto.clip != null)
                 {
                     ShelfManager.instance.audioLibroCorrecto.PlayOneShot(ShelfManager.instance.audioLibroCorrecto.clip);
                 }
             }
+
+            RegistrarEventoEstante(bookData, placedCorrect);
         }
 
         ShelfEstante estante = GetComponentInParent<ShelfEstante>();
@@ -37,4 +43,21 @@ public class ShelfSlots : MonoBehaviour, IDropHandler
 
         ShelfManager.instance.RevisarOrganizacionConDelay();
     }
+
+    private void RegistrarEventoEstante(BookData bookData, bool placedCorrect)
+    {
+        EstanteEvent estanteEvent = new EstanteEvent();
+        estanteEvent.bookId = bookData.libroID.ToString();
+        estanteEvent.openedBefore = StaticVariables.SessionData.bookOpened;
+        estanteEvent.placedCorrect = placedCorrect;
+        estanteEvent.level = GameManager.instance.nivelActual;
+
+#if !UNITY_EDITOR
+    Unity.Services.Analytics.AnalyticsService.Instance.RecordEvent(estanteEvent);
+#else
+        Debug.Log($"[ANALYTICS] EstanteEvent: bookId={bookData.libroID}, openedBefore={StaticVariables.SessionData.bookOpened}, placedCorrect={placedCorrect}, level={GameManager.instance.nivelActual}");
+#endif
+        StaticVariables.SessionData.bookOpened = false;
+    }
+
 }

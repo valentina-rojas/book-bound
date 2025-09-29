@@ -14,5 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nombre: Lisa Verde
   icono: {fileID: 908540882805279750, guid: 3a9b3cea1a16f57438bc8856864bd2ba, type: 3}
+  iconoTienda: {fileID: 6245054747664160757, guid: 2f2381a65ebf14f449eb686daaa52ec0, type: 3}
   precio: 50
   categoria: 1
+  comprado: 0

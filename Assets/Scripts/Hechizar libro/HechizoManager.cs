@@ -3,6 +3,8 @@ using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;  
+using Unity.Services.Analytics;
+using static EventManager; 
 
 public class HechizoManager : MonoBehaviour
 {
@@ -142,13 +144,28 @@ public class HechizoManager : MonoBehaviour
 
         CharacterAttributes.Hechizo hechizoEnum = ConvertirStringAEnum(hechizoFormado);
 
+        bool hechizoCorrecto = (hechizoEnum == GameManager.instance.personajeActual.hechizoSolicitado);
+
         GameManager.instance.CompletarHechizo(hechizoEnum);
+
+        RegistrarEventoHechizo(hechizoCorrecto);
 
         ResetearSecuencia();
         CameraManager.instance.DesctivarPanelHechizo();
-       
-
         hechizoFormado = null;
+    }
+
+    private void RegistrarEventoHechizo(bool hechizoCorrecto)
+    {
+        HechizoEvent hechizoEvent = new HechizoEvent();
+        hechizoEvent.spell = hechizoCorrecto;
+        hechizoEvent.level = GameManager.instance.nivelActual;
+
+#if !UNITY_EDITOR
+    Unity.Services.Analytics.AnalyticsService.Instance.RecordEvent(hechizoEvent);
+#else
+        Debug.Log($"[ANALYTICS] HechizoEvent: spell={hechizoCorrecto}, level={GameManager.instance.nivelActual}");
+#endif
     }
 
     private IEnumerator MostrarMensajeTemporal(string mensaje, float duracion)

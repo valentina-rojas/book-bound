@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nombre: Sillon cuadros
   icono: {fileID: 2826805475117864534, guid: b63fa46145ed2564fa7ef042440202af, type: 3}
+  iconoTienda: {fileID: -8120283346981010170, guid: 3d04d16069932a94c9f38de807a7562a, type: 3}
   precio: 200
   categoria: 3
   comprado: 0

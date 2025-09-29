@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nombre: Lisa Morada
   icono: {fileID: 7214917249758912276, guid: 69e9a3fe138b73c47b72bff0e053cc3e, type: 3}
+  iconoTienda: {fileID: 0}
   precio: 50
   categoria: 1
   comprado: 0

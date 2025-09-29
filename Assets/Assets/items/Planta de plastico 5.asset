@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nombre: Planta de plastico 5
   icono: {fileID: 8536856177680766047, guid: cb1888e8c6c6d094b85ce34ee27faba2, type: 3}
+  iconoTienda: {fileID: -4299345942250371930, guid: 33a8653dc0311b74d99b3ec407ab94ee, type: 3}
   precio: 100
   categoria: 4
   comprado: 0

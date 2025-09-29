@@ -162,9 +162,7 @@ public class CameraManager : MonoBehaviour
         HistorialManager.Instance.OcultarBotonAbrirHistorial();
         TaskManager.instance.OcultarBotonTareasMinijuegos();
         PagesManager.instance.ResetSistema();
-        PagesManager.instance.DebugPaginas();
         PagesManager.instance.ActivarCategoriaCorrecta();
-        PagesManager.instance.DebugPaginas();
         EconomyManager.instance.OcultarContenedorDinero();
     }
 

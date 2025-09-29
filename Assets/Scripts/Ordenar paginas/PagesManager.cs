@@ -1,6 +1,8 @@
 using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.UI;
+using Unity.Services.Analytics;
+using static EventManager; 
 
 public class PagesManager : MonoBehaviour
 {
@@ -9,6 +11,8 @@ public class PagesManager : MonoBehaviour
     public PagesSlot[] slots;
     public Button botonEntregar;
     private CharacterSpawn characterSpawn;
+    private float tiempoInicioOrden;
+
 
     [Header("Sonido")]
     public AudioSource audioSource;
@@ -80,6 +84,8 @@ public class PagesManager : MonoBehaviour
             Debug.LogWarning("No hay personaje actual para activar categoría");
             return;
         }
+
+        tiempoInicioOrden = Time.time;
 
         PageCategory categoria = personaje.categoriaLibroReparar;
         Debug.Log($"Activando categoría: {categoria} para personaje: {personaje.name}");
@@ -171,26 +177,27 @@ public class PagesManager : MonoBehaviour
         CameraManager.instance.DesactivarPanelReparacion();
         GameManager.instance.CompletarRestauracion();
 
+        int tiempoTotal = Mathf.RoundToInt(Time.time - tiempoInicioOrden);
+
+        RegistrarEventoOrdenarPaginas(tiempoTotal);
+
         if (characterSpawn != null)
         {
             characterSpawn.EndInteraction();
         }
     }
 
-    public void DebugPaginas()
+    private void RegistrarEventoOrdenarPaginas(int tiempoTotal)
     {
-        Debug.Log($"=== DEBUG PÁGINAS - Total: {PageData.todasLasPaginas.Count} ===");
-        foreach (PageData pagina in PageData.todasLasPaginas)
-        {
-            if (pagina != null)
-            {
-                Debug.Log($"Página {pagina.pageID} - Categoría: {pagina.category} - Activa: {pagina.gameObject.activeSelf} - Parent: {pagina.transform.parent.name}");
-            }
-            else
-            {
-                Debug.Log("Página nula en la lista");
-            }
-        }
+        OrdenarPaginasEvent ordenarEvent = new OrdenarPaginasEvent();
+        ordenarEvent.timeOrder = tiempoTotal;
+        ordenarEvent.level = GameManager.instance.nivelActual;
+
+#if !UNITY_EDITOR
+    Unity.Services.Analytics.AnalyticsService.Instance.RecordEvent(ordenarEvent);
+#else
+        Debug.Log($"[ANALYTICS] OrdenarPaginasEvent: timeOrder={tiempoTotal}, level={GameManager.instance.nivelActual}");
+#endif
     }
 
     private void OnDestroy()

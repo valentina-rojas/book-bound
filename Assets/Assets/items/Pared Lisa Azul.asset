@@ -14,5 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nombre: Lisa Azul
   icono: {fileID: 2008339504132070407, guid: 499470cdf95851c4390fe2aec1d0724b, type: 3}
+  iconoTienda: {fileID: -416533004332382735, guid: 5a89ce081a94b24479e4f069ac31fe10, type: 3}
   precio: 50
   categoria: 1
+  comprado: 0

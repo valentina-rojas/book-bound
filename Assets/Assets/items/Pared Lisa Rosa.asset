@@ -14,5 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nombre: Lisa Rosa
   icono: {fileID: 5659912562168962575, guid: 36a5160daad3d8e4e83e6b9753e2f051, type: 3}
+  iconoTienda: {fileID: 969354113296044679, guid: e7e7213fed0418343b845912042a30d6, type: 3}
   precio: 50
   categoria: 1
+  comprado: 0

@@ -6929,9 +6929,9 @@ MonoBehaviour:
     - {fileID: 4406605961863887185, guid: 0d48ba5db211d2b47b7107e5a70344b6, type: 3}
     - {fileID: 4652195673153815505, guid: a2f043e70dd4e974db3fec1d42b75fc1, type: 3}
   - personajesDelNivel:
+    - {fileID: 4406605961863887185, guid: c9b597989aea01644a55ec5bed144273, type: 3}
     - {fileID: 4652195673153815505, guid: 4594f899527aafd419619a54c5f7878d, type: 3}
     - {fileID: 4652195673153815505, guid: 2260724eaec70964589154204f394f76, type: 3}
-    - {fileID: 4406605961863887185, guid: c9b597989aea01644a55ec5bed144273, type: 3}
     - {fileID: 4652195673153815505, guid: c6232cd65e0897643b89828783e26d5d, type: 3}
     - {fileID: 4652195673153815505, guid: afa98517465dc154f800bc978ebf1858, type: 3}
     - {fileID: 4652195673153815505, guid: 45ba99acae56cad458e6e7cf061573ae, type: 3}
@@ -162749,7 +162749,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 85.58249, y: 103}
+  m_AnchoredPosition: {x: 85.58246, y: 103}
   m_SizeDelta: {x: -828.835, y: -304.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &993897753

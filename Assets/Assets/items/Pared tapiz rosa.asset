@@ -14,5 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nombre: Tapiz Rosa
   icono: {fileID: -1773617451166555432, guid: 84d99cc2c45af49408280b2ce0d5f7dd, type: 3}
+  iconoTienda: {fileID: 1692086077903518101, guid: 3787c06965f88e6478e0a6e40eeaecdd, type: 3}
   precio: 55
   categoria: 1
+  comprado: 0

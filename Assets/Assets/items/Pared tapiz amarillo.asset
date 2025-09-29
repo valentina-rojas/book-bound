@@ -14,5 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nombre: Tapiz Amarillo
   icono: {fileID: -4376620784049155037, guid: 0d9fe69a4424d4b4b94793379d2f3c42, type: 3}
+  iconoTienda: {fileID: 58501633853229240, guid: 08ddb489dee67874387f280aab836460, type: 3}
   precio: 55
   categoria: 1
+  comprado: 0

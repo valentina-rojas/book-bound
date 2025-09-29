@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nombre: Madera Beige
   icono: {fileID: 3952900456838388915, guid: 17e4882dbab6ae14089b428491be9e24, type: 3}
+  iconoTienda: {fileID: 3381613535501757537, guid: b08eb7d1b773b614da2341dc5ec4f687, type: 3}
   precio: 100
   categoria: 0
   comprado: 0

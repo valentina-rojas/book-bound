@@ -14,5 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nombre: Tapiz Verde
   icono: {fileID: 5430597619081551406, guid: b7c46befe9d5f0b49ab064cc75685759, type: 3}
+  iconoTienda: {fileID: 7102115722872452039, guid: b4691a0d5c0a9a04fadb5257a4967b91, type: 3}
   precio: 55
   categoria: 1
+  comprado: 0
