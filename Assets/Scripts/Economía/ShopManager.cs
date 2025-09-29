@@ -1,6 +1,9 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using System.Diagnostics;
+using Unity.Services.Analytics;
+using static EventManager;
 
 public class ShopManager : MonoBehaviour
 {
@@ -14,21 +17,33 @@ public class ShopManager : MonoBehaviour
 
         panelTienda.SetActive(false);
         InicializarBotonesCategorias();
+        timerTienda = new Stopwatch();
+
+        comprasPorItem = new Dictionary<string, int>();
+        contadorTotalCompras = 0; 
     }
     #endregion
 
     #region UI References
     [Header("UI Tienda")]
     [SerializeField] private GameObject panelTienda;
-    [SerializeField] private Transform contenedorItems; 
+    [SerializeField] private Transform contenedorItems;
     [SerializeField] private GameObject prefabSlotTienda;
-    [SerializeField] private List<Button> botonesCategorias; 
+    [SerializeField] private List<Button> botonesCategorias;
     #endregion
 
     #region Items disponibles
     [Header("Items disponibles en la tienda")]
     [SerializeField] private List<Item> itemsDisponibles;
     private CategoriaItem categoriaActual = CategoriaItem.Pisos;
+    #endregion
+
+    #region Analytics
+    private Stopwatch timerTienda;
+    private bool openedOnce = false;
+    private bool intentoFallidoSesion = false;
+    private Dictionary<string, int> comprasPorItem;
+    private int contadorTotalCompras; 
     #endregion
 
     #region Inicialización
@@ -46,12 +61,26 @@ public class ShopManager : MonoBehaviour
     public void AbrirTienda()
     {
         panelTienda.SetActive(true);
-        CambiarCategoria(categoriaActual); 
+        CambiarCategoria(categoriaActual);
+
+        if (!openedOnce)
+            openedOnce = true;
+
+        timerTienda.Reset();
+        timerTienda.Start();
+
+        intentoFallidoSesion = false;
+        comprasPorItem.Clear(); 
     }
 
     public void CerrarTienda()
     {
         panelTienda.SetActive(false);
+
+        timerTienda.Stop();
+        int segundos = (int)(timerTienda.ElapsedMilliseconds / 1000f);
+
+        RegistrarEventoTienda(segundos);
     }
     #endregion
 
@@ -91,13 +120,66 @@ public class ShopManager : MonoBehaviour
             EconomyManager.instance.RestarDinero(item.precio);
             InventarioManager.Instance.AgregarItemSinAbrir(item);
 
-            item.comprado = true; 
+            item.comprado = true;
+            contadorTotalCompras++;
+
+            if (comprasPorItem.ContainsKey(item.nombre))
+                comprasPorItem[item.nombre]++;
+            else
+                comprasPorItem[item.nombre] = 1;
 
             ActualizarUI();
         }
         else
         {
-            Debug.Log("No tienes suficiente dinero para comprar " + item.nombre);
+            UnityEngine.Debug.Log("No tienes suficiente dinero para comprar " + item.nombre);
+            intentoFallidoSesion = true;
+        }
+    }
+    #endregion
+
+    #region Analytics Métodos
+    private void RegistrarEventoTienda(int segundos)
+    {
+        TiendaEvent tiendaEvent = new TiendaEvent();
+        tiendaEvent.opened = openedOnce;
+        tiendaEvent.timeInShop = segundos;
+        tiendaEvent.level = GameManager.instance.nivelActual;
+
+#if !UNITY_EDITOR
+        AnalyticsService.Instance.RecordEvent(tiendaEvent);
+#else
+        UnityEngine.Debug.Log($"[ANALYTICS] TiendaEvent: opened={openedOnce}, timeInShop={segundos}, level={GameManager.instance.nivelActual}");
+#endif
+
+        foreach (var kvp in comprasPorItem)
+        {
+            TiendaCompraEvent compraEvent = new TiendaCompraEvent();
+            compraEvent.itemName = kvp.Key;
+            compraEvent.cant = kvp.Value;
+            compraEvent.failed = intentoFallidoSesion;
+            compraEvent.level = GameManager.instance.nivelActual;
+
+#if !UNITY_EDITOR
+            AnalyticsService.Instance.RecordEvent(compraEvent);
+#else
+            UnityEngine.Debug.Log($"[ANALYTICS] TiendaCompraEvent: itemName={kvp.Key}, cant={kvp.Value}, failed={intentoFallidoSesion}, level={GameManager.instance.nivelActual}");
+#endif
+        }
+
+        if (contadorTotalCompras > 0)
+        {
+            TiendaCompraEvent totalEvent = new TiendaCompraEvent();
+            totalEvent.itemName = "TotalItemsComprados";
+            totalEvent.cant = contadorTotalCompras;
+            totalEvent.failed = intentoFallidoSesion;
+            totalEvent.level = GameManager.instance.nivelActual;
+
+#if !UNITY_EDITOR
+            AnalyticsService.Instance.RecordEvent(totalEvent);
+#else
+            UnityEngine.Debug.Log($"[ANALYTICS] TiendaCompraEvent: itemName=TotalItemsComprados, cant={contadorTotalCompras}, failed={intentoFallidoSesion}, level={GameManager.instance.nivelActual}");
+#endif
         }
     }
     #endregion
