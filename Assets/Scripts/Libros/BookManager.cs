@@ -4,6 +4,8 @@ using TMPro;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.Services.Analytics;
+using static EventManager; 
 
 public class BookManager : MonoBehaviour
 {
@@ -161,9 +163,34 @@ public class BookManager : MonoBehaviour
         TaskManager.instance.OcultarListaTareas();
         panelConfirmarSeleccion.SetActive(true);
         imagenConfirmarSeleccion.sprite = libroActual.imagenLibro;
+        StartCoroutine(libroActual.GetTituloLocalized(titulo => tituloConfirmarSeleccion.text = titulo));
+
         if (botonCamaraMostrador != null) botonCamaraMostrador.interactable = true;
         if (botonCamaraPatio != null) botonCamaraPatio.interactable = true;
-        StartCoroutine(libroActual.GetTituloLocalized(titulo => tituloConfirmarSeleccion.text = titulo));
+
+        RegistrarEventoLibroSeleccionado(libroActual);
+    }
+
+    private void RegistrarEventoLibroSeleccionado(BookData libro)
+    {
+        LibrosEvent libroEvent = new LibrosEvent();
+        libroEvent.bookId = libro.libroID.ToString(); 
+        libroEvent.opened = true;
+        libroEvent.level = GameManager.instance.nivelActual;
+
+        bool selectedCorrectly = false;
+        if (GameManager.instance.personajeActual != null)
+        {
+            selectedCorrectly = GameManager.instance.personajeActual.libroDeseadoID == libro.libroID;
+        }
+
+        libroEvent.selectedCorrectly = selectedCorrectly;
+
+#if !UNITY_EDITOR
+    AnalyticsService.Instance.RecordEvent(libroEvent);
+#else
+        Debug.Log($"[ANALYTICS] LibrosEvent: bookId={libro.libroID}, opened=true, selectedCorrectly={selectedCorrectly}, level={GameManager.instance.nivelActual}");
+#endif
     }
 
     public void RecomendarLibro()

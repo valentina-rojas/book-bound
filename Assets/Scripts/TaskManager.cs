@@ -3,6 +3,8 @@ using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.Services.Analytics;
+using static EventManager;
 
 [System.Serializable]
 public class NivelDeTareas
@@ -13,6 +15,7 @@ public class NivelDeTareas
 public class TaskManager : MonoBehaviour
 {
     public static TaskManager instance;
+    
     [Header("Animaciones")]
     public AnimacionPanelTareas animacionAbrirPanel;
     public AnimacionPanelTareas animacionCerrarPanel;
@@ -41,6 +44,7 @@ public class TaskManager : MonoBehaviour
     private List<TMP_Text> textosTareas;
     private List<bool> tareasCompletadas;
     private bool tiendaAbiertaPorPrimeraVez = false;
+    private float tiempoInicioNivel;
     #endregion
 
     #region Unity Callbacks
@@ -60,6 +64,7 @@ public class TaskManager : MonoBehaviour
         botonAbrirTienda.onClick.AddListener(OnClickAbrirTienda);
 
         InicializarTareasParaNivel();
+        tiempoInicioNivel = Time.time;
     }
     #endregion
 
@@ -113,6 +118,8 @@ public class TaskManager : MonoBehaviour
         if (TendCat.instance != null)
             TendCat.instance.ActualizarVisibilidadObjetos();
         DragRegadera.instance.ActualizarVisibilidadRegadera();
+        
+        tiempoInicioNivel = Time.time;
     }
     #endregion
 
@@ -134,7 +141,6 @@ public class TaskManager : MonoBehaviour
             botonAbrirLista.gameObject.SetActive(false);
             botonCerrarLista.gameObject.SetActive(true);
         }
-    
     }
 
     public void OcultarListaTareas()
@@ -216,7 +222,6 @@ public class TaskManager : MonoBehaviour
             }
         }
     }
-
 
     public void HabilitarBotonTienda()
     {
@@ -306,6 +311,8 @@ public class TaskManager : MonoBehaviour
         }
 
         tareasYaCompletadas = true;
+        
+        RegistrarEventoTareasCompletadas();
 
         if (GameManager.instance != null)
         {
@@ -335,6 +342,21 @@ public class TaskManager : MonoBehaviour
                 }
             }
         }
+    }
+
+    private void RegistrarEventoTareasCompletadas()
+    {
+        TareasCompletadasEvent tareasEvent = new TareasCompletadasEvent();
+        tareasEvent.level = GameManager.instance.nivelActual;
+        float tiempoParaCompletar = Time.time - tiempoInicioNivel;
+        int tiempoEnSegundos = Mathf.RoundToInt(tiempoParaCompletar);
+        tareasEvent.timeTasks = tiempoEnSegundos;
+
+#if !UNITY_EDITOR
+    AnalyticsService.Instance.RecordEvent(tareasEvent);
+#else
+        Debug.Log($"[ANALYTICS] TareasCompletadasEvent: timeTasks={tiempoEnSegundos}, level={GameManager.instance.nivelActual}");
+#endif
     }
 
     public bool TodasLasTareasCompletadas()

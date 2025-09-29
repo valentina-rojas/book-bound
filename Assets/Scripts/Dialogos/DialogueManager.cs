@@ -3,6 +3,8 @@ using System.Collections;
 using TMPro;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using Unity.Services.Analytics;
+using static EventManager; 
 
 public class DialogueManager : MonoBehaviour
 {
@@ -26,6 +28,8 @@ public class DialogueManager : MonoBehaviour
     private Coroutine typingCoroutine;
     private bool isTyping = false;
     public bool tutorialFinalizado = false;
+    private float tiempoInicioDialogo;
+    private bool dialogoRepetido = false;
     #endregion
 
     #region Inicialización
@@ -78,7 +82,9 @@ public class DialogueManager : MonoBehaviour
         dialoguePanel.SetActive(true);
         dialogueMark.gameObject.SetActive(false);
 
-        didDialogueStart = true; 
+        didDialogueStart = true;
+        dialogoRepetido = false;
+        tiempoInicioDialogo = Time.time;  
 
         switch (GameManager.instance.resultadoRecomendacion)
         {
@@ -161,6 +167,8 @@ public class DialogueManager : MonoBehaviour
 
     private void ReiniciarDialogo()
     {
+        dialogoRepetido = true;
+
         if (isTyping)
         {
             StopCoroutine(typingCoroutine);
@@ -200,6 +208,8 @@ public class DialogueManager : MonoBehaviour
         botonRepetir?.gameObject.SetActive(false);
         botonFinalizar?.gameObject.SetActive(false);
 
+        RegistrarEventoDialogo();
+
         CharacterManager characterManager = FindObjectsByType<CharacterManager>(FindObjectsSortMode.None)[0];
         if (characterManager != null && characterAttributes != null)
         {
@@ -218,6 +228,20 @@ public class DialogueManager : MonoBehaviour
                 Tutorial.instance.PrimerClienteTerminoDialogo();
             }
         }
+    }
+
+    private void RegistrarEventoDialogo()
+    {
+        DialogoEvent dlgEvent = new DialogoEvent();
+        dlgEvent.repeat = dialogoRepetido;
+        dlgEvent.timeDialogue = Mathf.RoundToInt(Time.time - tiempoInicioDialogo);
+        dlgEvent.level = GameManager.instance.nivelActual;
+
+#if !UNITY_EDITOR
+    Unity.Services.Analytics.AnalyticsService.Instance.RecordEvent(dlgEvent);
+#else
+        Debug.Log($"[ANALYTICS] DialogoEvent repeat={dialogoRepetido}, timeDialogue={Mathf.RoundToInt(Time.time - tiempoInicioDialogo)}, level={GameManager.instance.nivelActual}");
+#endif
     }
 
     public void EnableDialogue()

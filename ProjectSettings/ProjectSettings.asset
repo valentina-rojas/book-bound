@@ -769,11 +769,11 @@ PlayerSettings:
   captureStartupLogs: {}
   activeInputHandler: 2
   windowsGamepadBackendHint: 0
-  cloudProjectId: 6b70e747-a233-4505-9826-27ce4ad566fc
+  cloudProjectId: f2a02b0f-d7bd-450b-938d-8ae8ba213379
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: prueba unity 6
-  organizationId: valentinarojas
+  projectName: book bound
+  organizationId: solromero051099
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}
