@@ -191,7 +191,31 @@ MonoBehaviour:
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
-  pistasHechizo: []
+  pistasHechizo:
+  - m_TableReference:
+      m_TableCollectionName: GUID:ffdf678cb2a3ab94e96750349361a141
+    m_TableEntryReference:
+      m_KeyId: 25350446311448576
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:ffdf678cb2a3ab94e96750349361a141
+    m_TableEntryReference:
+      m_KeyId: 25350446328225792
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:ffdf678cb2a3ab94e96750349361a141
+    m_TableEntryReference:
+      m_KeyId: 25350446328225793
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   claveMensajeCriptograma: 
   m_preguntasTrivia: []
   libroDonadoID: 0

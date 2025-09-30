@@ -19,7 +19,8 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 22856965201920
-    m_Localized: "\xA1Hola! Soy Minino, tu asistente en esta librer\xEDa m\xE1gica."
+    m_Localized: "\xA1Hola! Soy Minino, tu asistente en esta librer\xEDa m\xE1gica.
+      Para avanzar haz clic en el cuadro de di\xE1logo."
     m_Metadata:
       m_Items: []
   - m_Id: 23021344169984
@@ -57,7 +58,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23328451108864
-    m_Localized: "Pero por el resto vas bien \xA1Sigue as\xED!"
+    m_Localized: 'Encontraras todo lo necesario en el inventario, solo debes arrastrar
+      los objetos '
     m_Metadata:
       m_Items: []
   - m_Id: 23374785585152
@@ -161,6 +163,15 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 20624827627511815
     m_Localized: "\xA1Buena suerte en este nuevo d\xEDa!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25600134092595200
+    m_Localized: La regadera sobre las plantas, la comida sobre mi plato y el cepillo
+      sobre mi, asi no se me haran nudos en el pelo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25600134134538240
+    m_Localized: "Pero por el resto vas bien \xA1Sigue as\xED!"
     m_Metadata:
       m_Items: []
   references:

@@ -38,7 +38,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 71429693443
     m_Localized: "\xA1Genial! La tienda ya est\xE1 ordenada, as\xED que puedes abrirla
-      ahora."
+      ahora, toca la campanilla."
     m_Metadata:
       m_Items: []
   - m_Id: 71429693444
@@ -46,7 +46,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 71433887744
-    m_Localized: "Haz clic en el signo de exclamaci\xF3n para saber qu\xE9 desea."
+    m_Localized: "y haz clic en el signo de exclamaci\xF3n para saber qu\xE9 desea."
     m_Metadata:
       m_Items: []
   - m_Id: 71433887745

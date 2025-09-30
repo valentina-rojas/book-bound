@@ -67,6 +67,14 @@ MonoBehaviour:
     m_Key: BTN_SELECCIONAR
     m_Metadata:
       m_Items: []
+  - m_Id: 25595746582175744
+    m_Key: BTN_DESELECCIONAR
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25595746611535872
+    m_Key: PanelOtroLibro
+    m_Metadata:
+      m_Items: []
   - m_Id: 2879503551078406
     m_Key: BTN_CONFIRMAR
     m_Metadata:
@@ -91,16 +99,20 @@ MonoBehaviour:
     m_Key: SALIR
     m_Metadata:
       m_Items: []
-  - m_Id: 7853250800427008
-    m_Key: NOTA
-    m_Metadata:
-      m_Items: []
   - m_Id: 18121272379219968
     m_Key: Load
     m_Metadata:
       m_Items: []
   - m_Id: 18121352951799808
     m_Key: New
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7853250800427008
+    m_Key: NOTA
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25574975994503168
+    m_Key: Metricas
     m_Metadata:
       m_Items: []
   m_Metadata:

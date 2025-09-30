@@ -58,6 +58,19 @@ MonoBehaviour:
     m_Localized: "Finalmente, el elemento que arrasa\u2026 coloca la runa roja."
     m_Metadata:
       m_Items: []
+  - m_Id: 25350446311448576
+    m_Localized: "Una brisa suave quiz\xE1 ayudar\xEDa..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25350446328225792
+    m_Localized: La que todo ilumina puede ser la siguiente..
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25350446328225793
+    m_Localized: "Solo al fluir con ligereza encontrar\xE1s la runa para culminar
+      el hechizo."
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

@@ -108,6 +108,19 @@ MonoBehaviour:
     m_Localized: NUEVA PARTIDA
     m_Metadata:
       m_Items: []
+  - m_Id: 25574975994503168
+    m_Localized: "Este juego recopila datos de uso de forma an\xF3nima. \xBFNos das
+      tu consentimiento para analizar estas m\xE9tricas?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25595746582175744
+    m_Localized: DESELECCIONAR
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25595746611535872
+    m_Localized: Otro libro seleccionado
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

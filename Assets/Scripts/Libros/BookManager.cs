@@ -5,7 +5,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Unity.Services.Analytics;
-using static EventManager; 
+using static EventManager;
 
 public class BookManager : MonoBehaviour
 {
@@ -16,7 +16,7 @@ public class BookManager : MonoBehaviour
     public TMP_Text tituloTexto;
     public TMP_Text descripcionTexto;
     public Image imagenLibroUI;
-    public TMP_Text textoIndicacion; 
+    public TMP_Text textoIndicacion;
     public Button botonCamaraMostrador;
     public Button botonCamaraPatio;
 
@@ -25,6 +25,8 @@ public class BookManager : MonoBehaviour
     public TMP_Text tituloConfirmarSeleccion;
 
     public Button botonConfirmar;
+    public Button botonDeseleccionar; 
+    public GameObject panelOtroLibroSeleccionado;
     public Button botonSiguiente;
     public Button botonAnterior;
     #endregion
@@ -34,6 +36,7 @@ public class BookManager : MonoBehaviour
     private List<BookData> librosMismaSeccion = new List<BookData>();
     private int indiceLibroActual = 0;
     private CharacterSpawn characterSpawn;
+    private BookData libroConfirmado;
     #endregion
 
     #region Inicialización
@@ -47,6 +50,11 @@ public class BookManager : MonoBehaviour
         characterSpawn = FindFirstObjectByType<CharacterSpawn>();
         if (characterSpawn == null)
             Debug.LogError("CharacterSpawn no encontrado por BookManager.");
+
+        if (botonDeseleccionar != null)
+            botonDeseleccionar.onClick.AddListener(DeseleccionarLibro);
+
+        panelOtroLibroSeleccionado?.SetActive(false); 
     }
 
     private void Update()
@@ -126,6 +134,26 @@ public class BookManager : MonoBehaviour
 
         botonAnterior.interactable = indice > 0;
         botonSiguiente.interactable = indice < librosMismaSeccion.Count - 1;
+
+        if (libroConfirmado != null)
+        {
+            if (libroActual == libroConfirmado)
+            {
+                botonDeseleccionar.gameObject.SetActive(true);
+                panelOtroLibroSeleccionado.SetActive(false);
+            }
+            else
+            {
+                botonDeseleccionar.gameObject.SetActive(false);
+                botonConfirmar.gameObject.SetActive(false);
+                panelOtroLibroSeleccionado.SetActive(true);
+            }
+        }
+        else
+        {
+            botonDeseleccionar.gameObject.SetActive(false);
+            panelOtroLibroSeleccionado.SetActive(false);
+        }
     }
     #endregion
 
@@ -158,15 +186,14 @@ public class BookManager : MonoBehaviour
             return;
         }
 
+        libroConfirmado = libroActual; 
+
         Debug.Log("Libro seleccionado: " + libroActual.titulo);
-        panelInfoLibro.SetActive(false);
         TaskManager.instance.OcultarListaTareas();
         panelConfirmarSeleccion.SetActive(true);
         imagenConfirmarSeleccion.sprite = libroActual.imagenLibro;
         StartCoroutine(libroActual.GetTituloLocalized(titulo => tituloConfirmarSeleccion.text = titulo));
-
-        if (botonCamaraMostrador != null) botonCamaraMostrador.interactable = true;
-        if (botonCamaraPatio != null) botonCamaraPatio.interactable = true;
+        botonDeseleccionar.gameObject.SetActive(true); 
 
         RegistrarEventoLibroSeleccionado(libroActual);
     }
@@ -174,7 +201,7 @@ public class BookManager : MonoBehaviour
     private void RegistrarEventoLibroSeleccionado(BookData libro)
     {
         LibrosEvent libroEvent = new LibrosEvent();
-        libroEvent.bookId = libro.libroID.ToString(); 
+        libroEvent.bookId = libro.libroID.ToString();
         libroEvent.opened = true;
         libroEvent.level = GameManager.instance.nivelActual;
 
@@ -199,6 +226,17 @@ public class BookManager : MonoBehaviour
 
         GameManager.instance.VerificarRecomendacion(libroActual);
 
+        libroConfirmado = null;
+        libroActual = null;
+
+        panelInfoLibro.SetActive(false);
+        panelOtroLibroSeleccionado.SetActive(false);
+        botonDeseleccionar.gameObject.SetActive(false);
+        botonConfirmar.gameObject.SetActive(true);
+
+        if (botonCamaraMostrador != null) botonCamaraMostrador.interactable = true;
+        if (botonCamaraPatio != null) botonCamaraPatio.interactable = true;
+
         if (characterSpawn != null)
             characterSpawn.EndInteraction();
     }
@@ -220,6 +258,26 @@ public class BookManager : MonoBehaviour
         panelInfoLibro.SetActive(false);
         if (botonCamaraMostrador != null) botonCamaraMostrador.interactable = true;
         if (botonCamaraPatio != null) botonCamaraPatio.interactable = true;
+    }
+
+    public void DeseleccionarLibro()
+    {
+        if (libroConfirmado == null)
+            return;
+
+        panelConfirmarSeleccion.SetActive(false);
+        panelOtroLibroSeleccionado.SetActive(false);
+
+        libroConfirmado = null;
+
+        panelInfoLibro.SetActive(true);
+
+        if (botonCamaraMostrador != null) botonCamaraMostrador.interactable = false;
+        if (botonCamaraPatio != null) botonCamaraPatio.interactable = false;
+
+        botonDeseleccionar.gameObject.SetActive(false);
+        botonConfirmar.gameObject.SetActive(true);
+        Debug.Log("Libro deseleccionado.");
     }
     #endregion
 }

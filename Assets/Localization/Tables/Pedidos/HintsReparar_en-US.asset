@@ -32,33 +32,49 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 22607994882
+    m_Localized: The target can be seen in the distance.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22607994883
     m_Localized: "To open a treasure, you first need the key\u2026 have you found
       it yet?"
     m_Metadata:
       m_Items: []
-  - m_Id: 22607994883
+  - m_Id: 388853991645184
     m_Localized: "Returning home isn\u2019t the start; make sure you\u2019ve completed
       everything before."
     m_Metadata:
       m_Items: []
-  - m_Id: 388853991645184
+  - m_Id: 388854025199616
     m_Localized: Do you have all the ingredients ready?
     m_Metadata:
       m_Items: []
-  - m_Id: 388854025199616
+  - m_Id: 388854025199617
     m_Localized: Time to mix everything well to make the dough.
     m_Metadata:
       m_Items: []
-  - m_Id: 388854025199617
+  - m_Id: 388854025199618
     m_Localized: "Let\u2019s knead until the dough is soft and smooth."
     m_Metadata:
       m_Items: []
-  - m_Id: 388854025199618
+  - m_Id: 388854025199619
     m_Localized: "The dough needs to rise\u2026 give it a little rest."
     m_Metadata:
       m_Items: []
-  - m_Id: 388854025199619
+  - m_Id: 15879494615867392
     m_Localized: "Don\u2019t eat them raw! Into the oven they go."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15879494632644608
+    m_Localized: For it to turn out well, you must mix all the ingredients.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15879494632644609
+    m_Localized: "Once it\u2019s finished, make sure to store it properly."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15879494632644610
+    m_Localized: Tea prepared with love mends hearts.
     m_Metadata:
       m_Items: []
   references:

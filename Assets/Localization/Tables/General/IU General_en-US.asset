@@ -107,6 +107,19 @@ MonoBehaviour:
     m_Localized: NEW GAME
     m_Metadata:
       m_Items: []
+  - m_Id: 25574975994503168
+    m_Localized: This game collects usage data anonymously. Do you give your consent
+      to analyze these metrics?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25595746582175744
+    m_Localized: DESELECT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25595746611535872
+    m_Localized: Other book selected
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

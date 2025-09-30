@@ -170,7 +170,31 @@ MonoBehaviour:
   nombreDelCliente: Vampira
   descripcionPedido: Reparacion
   stickersRequeridos: 
-  pistasReparacion: []
+  pistasReparacion:
+  - m_TableReference:
+      m_TableCollectionName: GUID:e73f8710991d0c742a5265b33c9934ff
+    m_TableEntryReference:
+      m_KeyId: 15879494632644608
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:e73f8710991d0c742a5265b33c9934ff
+    m_TableEntryReference:
+      m_KeyId: 15879494632644609
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:e73f8710991d0c742a5265b33c9934ff
+    m_TableEntryReference:
+      m_KeyId: 15879494632644610
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   categoriaLibroReparar: 2
   tituloLibroPortada: 
   tituloLibroPortadaKey:

@@ -16,6 +16,9 @@ public class Tutorial : MonoBehaviour
     public GameObject panelDecision;
     public UnityEngine.UI.Button botonEmpezarTutorial;
     public UnityEngine.UI.Button botonSaltarTutorial;
+
+    [Header("Animación de tienda")]
+    public PulseAnimation pulsoBotonTienda;
     #endregion
 
     #region Variables Privadas
@@ -60,6 +63,9 @@ public class Tutorial : MonoBehaviour
             SaltarTutorial();
             return;
         }
+
+        if (pulsoBotonTienda != null)
+            pulsoBotonTienda.enabled = false; 
     }
 
     private void OnDestroy()
@@ -173,6 +179,11 @@ public class Tutorial : MonoBehaviour
                 StartCoroutine(HabilitarTelaranaConDelay(2f));
             }
         }
+
+        if (pulsoBotonTienda != null)
+        {
+            pulsoBotonTienda.enabled = (pasoActual == 3);
+        }
     }
 
     private IEnumerator HabilitarTelaranaConDelay(float delay)
@@ -241,8 +252,10 @@ public class Tutorial : MonoBehaviour
         CameraManager.instance?.ActivarBotonCamara();
         TaskManager.instance?.MostrarTareas();
 
+        if (pulsoBotonTienda != null)
+            pulsoBotonTienda.enabled = false; 
+
         enabled = false;
     }
-
     #endregion
 }

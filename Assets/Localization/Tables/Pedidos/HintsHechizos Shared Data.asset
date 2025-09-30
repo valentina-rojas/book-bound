@@ -55,6 +55,18 @@ MonoBehaviour:
     m_Key: Hechizos_hint_10
     m_Metadata:
       m_Items: []
+  - m_Id: 25350446311448576
+    m_Key: Hechizos_hint_11
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25350446328225792
+    m_Key: Hechizos_hint_12
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25350446328225793
+    m_Key: Hechizos_hint_13
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

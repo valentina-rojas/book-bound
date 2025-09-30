@@ -19,7 +19,8 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 22856965201920
-    m_Localized: Hi! I'm Minino, your assistant in this magical library.
+    m_Localized: Hi! I'm Minino, your assistant in this magical library. To continue,
+      click on the dialog box.
     m_Metadata:
       m_Items: []
   - m_Id: 23021344169984
@@ -57,7 +58,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23328451108864
-    m_Localized: But otherwise, you're doing well! Keep it up!
+    m_Localized: You'll find everything you need in your inventory; just drag the
+      items.
     m_Metadata:
       m_Items: []
   - m_Id: 23374785585152
@@ -160,6 +162,15 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 20624827627511815
     m_Localized: Good luck on this new day!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25600134092595200
+    m_Localized: "The watering can on the plants, the food on my plate, and the brush
+      on me so my hair doesn\u2019t get tangled."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25600134134538240
+    m_Localized: But otherwise, you're doing well! Keep it up!
     m_Metadata:
       m_Items: []
   references:

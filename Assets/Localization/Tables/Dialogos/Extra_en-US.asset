@@ -37,7 +37,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 71429693443
-    m_Localized: Great! The store is ready, so you can open it now.
+    m_Localized: Great! The store is ready, so you can open it now, ring the bell
     m_Metadata:
       m_Items: []
   - m_Id: 71429693444
@@ -45,7 +45,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 71433887744
-    m_Localized: Click on the exclamation mark to see what they want.
+    m_Localized: and click on the exclamation mark to see what they want.
     m_Metadata:
       m_Items: []
   - m_Id: 71433887745

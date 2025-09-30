@@ -27,37 +27,53 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 22607994881
-    m_Localized: Los monstruos se ven a lo lejos; no pierdas la secuencia de encuentros.
+    m_Localized: Los monstruos se acercan, ten cuidado.
     m_Metadata:
       m_Items: []
   - m_Id: 22607994882
+    m_Localized: A lo lejos se observa el objetivo.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22607994883
     m_Localized: "Para abrir un tesoro, primero necesitas la llave\u2026 \xBFla encontraste
       ya?"
     m_Metadata:
       m_Items: []
-  - m_Id: 22607994883
+  - m_Id: 388853991645184
     m_Localized: "Volver a casa no es el inicio; aseg\xFArate de haber pasado todo
       lo anterior."
     m_Metadata:
       m_Items: []
-  - m_Id: 388853991645184
+  - m_Id: 388854025199616
     m_Localized: "\xBFTienes todos los ingredientes listos?"
     m_Metadata:
       m_Items: []
-  - m_Id: 388854025199616
+  - m_Id: 388854025199617
     m_Localized: Es hora de mezclar todo bien para hacer la masa.
     m_Metadata:
       m_Items: []
-  - m_Id: 388854025199617
+  - m_Id: 388854025199618
     m_Localized: Amasemos hasta que la masa quede suave y lisa.
     m_Metadata:
       m_Items: []
-  - m_Id: 388854025199618
+  - m_Id: 388854025199619
     m_Localized: "La masa debe levar\u2026 dale un buen descanso."
     m_Metadata:
       m_Items: []
-  - m_Id: 388854025199619
+  - m_Id: 15879494615867392
     m_Localized: "\xA1No te los comas crudos! Al horno con ellos."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15879494632644608
+    m_Localized: Para que salga bien, debes mezclar todos los ingredientes.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15879494632644609
+    m_Localized: Una vez terminada, asegurate de guardarla correctamente.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15879494632644610
+    m_Localized: "El t\xE9 preparado con amor arregla corazones."
     m_Metadata:
       m_Items: []
   references:
