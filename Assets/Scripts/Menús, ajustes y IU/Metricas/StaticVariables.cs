@@ -54,10 +54,6 @@ public class StaticVariables : MonoBehaviour
         public static int itemCount;
         public static bool purchaseFailed;
 
-        // InventarioUso
-        public static string usedItemName;
-        public static int usedItemCount;
-
         // Quit
         public static string reason;
         public static int strikes;

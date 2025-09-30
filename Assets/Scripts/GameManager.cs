@@ -5,6 +5,9 @@ using System.Collections.Generic;
 using UnityEngine.Localization.Components;
 using UnityEngine.Localization;
 using TMPro;
+using Unity.Services.Analytics;
+using static EventManager;
+
 
 public class GameManager : MonoBehaviour
 {
@@ -24,6 +27,8 @@ public class GameManager : MonoBehaviour
     public int recomendacionesBuenas = 0;
     public int recomendacionesMalas = 0;
     private bool primerClienteDetectado = false;
+    private float tiempoInicioNivel;
+
     #endregion
 
     #region UI
@@ -117,6 +122,9 @@ public class GameManager : MonoBehaviour
             textoDia.text = $"Día {nivelActual}";
         }
 
+        RegistrarEventoLevelStart();
+        tiempoInicioNivel = Time.time;
+
         if (CameraManager.instance != null)
         {
             CameraManager.instance.botonCambiarCamara3.gameObject.SetActive(nivelActual > 1);
@@ -144,6 +152,7 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator MostrarCartelFinDeDia()
     {
+        RegistrarEventoLevelComplete();
         TaskManager.instance.OcultarListaTareas();
         MenuPausa.instance.OcultarBotonPausa();
         InventarioManager.Instance.OcultarInventarioCompleto();
@@ -209,6 +218,7 @@ public class GameManager : MonoBehaviour
         personasSentadas.DesactivarPersonasSentadas();
         recomendacionesBuenas = 0;
         recomendacionesMalas = 0;
+        tiempoInicioNivel = 0f;
     }
 
     public void AvanzarAlSiguienteNivel()
@@ -220,7 +230,7 @@ public class GameManager : MonoBehaviour
             SceneManager.LoadScene("EscenaFinal");
             return;
         }
-            SaveManager.GuardarNivel(nivelActual, HistorialManager.Instance.GetLibrosPrestados());
+        SaveManager.GuardarNivel(nivelActual, HistorialManager.Instance.GetLibrosPrestados());
 
 
         if (CameraManager.instance != null)
@@ -354,7 +364,7 @@ public class GameManager : MonoBehaviour
         EconomyManager.instance.SumarDinero(30);
         ActualizarSpritePersonaje();
     }
-    
+
     public void CompletarPortada(List<StickerID> stickersUsados, int extras = 0, int cantidadVisibles = 0)
     {
         if (personajeActual == null)
@@ -445,7 +455,7 @@ public class GameManager : MonoBehaviour
             characterSpawn.EndInteraction();
         }
     }
-    
+
     public void CompletarTraduccion()
     {
         resultadoRecomendacion = ResultadoRecomendacion.Buena;
@@ -515,6 +525,35 @@ public class GameManager : MonoBehaviour
             characterSpawn.EndInteraction();
             EconomyManager.instance.SumarDinero(5);
         }
+    }
+    #endregion
+
+    #region Analytics
+    private void RegistrarEventoLevelStart()
+    {
+        LevelStartEvent levelStart = new LevelStartEvent();
+        levelStart.level = nivelActual;
+
+#if !UNITY_EDITOR
+    Unity.Services.Analytics.AnalyticsService.Instance.RecordEvent(levelStart);
+#else
+        Debug.Log($"[ANALYTICS] LevelStartEvent: level={nivelActual}");
+#endif
+    }
+
+    private void RegistrarEventoLevelComplete()
+    {
+        LevelCompleteEvent levelComplete = new LevelCompleteEvent();
+        levelComplete.level = nivelActual;
+        levelComplete.timeComplete = Mathf.RoundToInt(Time.time - tiempoInicioNivel);
+        levelComplete.goodClients = recomendacionesBuenas;
+        levelComplete.badClients = recomendacionesMalas;
+
+#if !UNITY_EDITOR
+    Unity.Services.Analytics.AnalyticsService.Instance.RecordEvent(levelComplete);
+#else
+        Debug.Log($"[ANALYTICS] LevelCompleteEvent: level={nivelActual}, timeComplete={levelComplete.timeComplete}, goodClients={recomendacionesBuenas}, badClients={recomendacionesMalas}");
+#endif
     }
     #endregion
 }

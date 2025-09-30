@@ -89,14 +89,6 @@ public class EventManager : MonoBehaviour
         public int level { set { SetParameter("level", value); } }
     }
 
-    public class InventarioUsoEvent : AnalyticsEvent
-    {
-        public InventarioUsoEvent() : base("InventarioUso") { }
-        public string itemName { set { SetParameter("itemName", value); } }
-        public int cant { set { SetParameter("cant", value); } }
-        public int level { set { SetParameter("level", value); } }
-    }
-
     public class LevelStartEvent : AnalyticsEvent
     {
         public LevelStartEvent() : base("LevelStart") { }
@@ -106,10 +98,10 @@ public class EventManager : MonoBehaviour
     public class LevelCompleteEvent : AnalyticsEvent
     {
         public LevelCompleteEvent() : base("LevelComplete") { }
-        public int level { set { SetParameter("level", value); } }
-        public int timeComplete { set { SetParameter("timeComplete", value); } }
-        public int goodClients { set { SetParameter("goodClients", value); } }
-        public int badClients { set { SetParameter("badClients", value); } }
+        public int level { get; set; }
+        public int timeComplete { get; set; }
+        public int goodClients { get; set; }
+        public int badClients { get; set; }
     }
 
     public class QuitEvent : AnalyticsEvent

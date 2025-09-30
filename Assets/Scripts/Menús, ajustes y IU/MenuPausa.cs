@@ -52,6 +52,11 @@ public class MenuPausa : MonoBehaviour
 
     public void Salir()
     {
+        if (GameManager.instance != null && GameManager.instance.nivelActual > 1)
+        {
+            RegistrarEventoQuit();
+        }
+
         SceneManager.LoadScene("MenuPrincipal");
     }
 
@@ -59,10 +64,22 @@ public class MenuPausa : MonoBehaviour
     {
         botonPausa.SetActive(false);
     }
-    
+
     public void MostrarBotonPausa()
     {
         botonPausa.SetActive(true);
+    }
+    
+        private void RegistrarEventoQuit()
+    {
+        EventManager.QuitEvent quit = new EventManager.QuitEvent();
+        quit.level = GameManager.instance.nivelActual;
+
+#if !UNITY_EDITOR
+    Unity.Services.Analytics.AnalyticsService.Instance.RecordEvent(quit);
+#else
+        Debug.Log($"[ANALYTICS] QuitEvent: level={GameManager.instance.nivelActual}");
+#endif
     }
 
 }
