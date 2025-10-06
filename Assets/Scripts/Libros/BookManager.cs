@@ -67,6 +67,7 @@ public class BookManager : MonoBehaviour
     #region Lógica principal
     public void MostrarInformacion(BookData libro)
     {
+        TaskManager.instance.OcultarListaTareas();
         libroActual = libro;
         StaticVariables.SessionData.bookOpened = true;
         librosMismaSeccion.Clear();

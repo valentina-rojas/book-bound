@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using TMPro;
 
 public class DevolverLibro : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class DevolverLibro : MonoBehaviour
     public GameObject canvasDevolucion;
     public Image imagenLibro;
     public Button botonConfirmarDevolucion;
+    public TMP_Text tituloLibroTexto;
 
     [Header("Sprites por género")]
     public Sprite fantasiaSprite;
@@ -62,6 +64,8 @@ public class DevolverLibro : MonoBehaviour
         {
             Debug.LogWarning("No hay personaje actual para mostrar devolución.");
             imagenLibro.sprite = spriteDefault;
+            if (tituloLibroTexto != null)
+                tituloLibroTexto.text = "";
             return;
         }
 
@@ -82,11 +86,12 @@ public class DevolverLibro : MonoBehaviour
         {
             Debug.LogWarning($"No se encontró el libro con ID {libroID}.");
             imagenLibro.sprite = spriteDefault;
+            if (tituloLibroTexto != null)
+                tituloLibroTexto.text = "";
         }
         else
         {
             string genero = libroActual.tipoLibro.ToLower().Trim();
-
             if (!string.IsNullOrEmpty(genero) && spritesPorGenero.TryGetValue(genero, out Sprite spriteGenero))
             {
                 imagenLibro.sprite = spriteGenero;
@@ -99,6 +104,14 @@ public class DevolverLibro : MonoBehaviour
             }
 
             imagenLibro.preserveAspect = true;
+
+            if (tituloLibroTexto != null)
+            {
+                StartCoroutine(libroActual.GetTituloLocalized(titulo =>
+                {
+                    tituloLibroTexto.text = string.IsNullOrEmpty(titulo) ? libroActual.titulo : titulo;
+                }));
+            }
         }
 
         if (botonConfirmarDevolucion != null)

@@ -54,6 +54,15 @@ public class CharacterManager : MonoBehaviour
             case CharacterAttributes.TipoDePedido.DevolverLibro:
                 Debug.Log("Este personaje quiere devolver un libro.");
                 CameraManager.instance.ActivarPanelDevolver();
+
+                if (!string.IsNullOrEmpty(personaje.tituloLibroDevuelto))
+                {
+                    personaje.tituloLibroDevueltoKey = new UnityEngine.Localization.LocalizedString
+                    {
+                        TableReference = "TitulosLibros",
+                        TableEntryReference = personaje.tituloLibroDevuelto
+                    };
+                }
                 break;
             case CharacterAttributes.TipoDePedido.RepararLibro:
                 Debug.Log("Este personaje necesita que repares un libro.");
