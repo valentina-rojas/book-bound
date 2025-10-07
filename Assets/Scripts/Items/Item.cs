@@ -19,6 +19,7 @@ public class Item : ScriptableObject
     public Sprite iconoTienda;
     public int precio;
     public CategoriaItem categoria;
+    public bool puedeRetirarse = true;
 
     [HideInInspector] 
     public bool comprado = false; 

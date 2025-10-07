@@ -60,7 +60,7 @@ public class SlotPosicion : MonoBehaviour,
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        if (itemActual != null)
+        if (itemActual != null && itemActual.puedeRetirarse)
         {
             InventarioManager.Instance.AgregarItem(itemActual, null);
             QuitarItem();

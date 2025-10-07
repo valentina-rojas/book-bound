@@ -51,20 +51,32 @@ public class UISlotItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
     public void OnBeginDrag(PointerEventData eventData)
     {
         originalPosition = rectTransform.anchoredPosition;
-        canvasGroup.alpha = 0.6f;
         canvasGroup.blocksRaycasts = false;
+        if (currentItem != null && currentItem.categoria == CategoriaItem.Herramientas)
+            rectTransform.localScale = Vector3.one * 2f;
     }
+
 
     public void OnDrag(PointerEventData eventData)
     {
         rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
-        icono.color = (ObtenerSlotPosicionValidaDebajo() != null) ? Color.white : new Color(1f, 1f, 1f, 0.5f);
+
+        if (currentItem != null && currentItem.categoria != CategoriaItem.Herramientas)
+        {
+            icono.color = (ObtenerSlotPosicionValidaDebajo() != null) ? Color.white : new Color(1f, 1f, 1f, 0.5f);
+        }
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
         canvasGroup.alpha = 1f;
         canvasGroup.blocksRaycasts = true;
+
+        if (currentItem != null && currentItem.categoria == CategoriaItem.Herramientas)
+            rectTransform.localScale = Vector3.one * 0.6f;
+        else
+            rectTransform.localScale = Vector3.one; 
+
         bool colocado = false;
 
         SlotPosicion slot = ObtenerSlotPosicionValidaDebajo();
@@ -80,9 +92,9 @@ public class UISlotItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
         }
 
         if (!colocado && currentItem != null &&
-            currentItem.categoria == CategoriaItem.Paredes || 
-            currentItem.categoria == CategoriaItem.Pisos || 
-            currentItem.categoria == CategoriaItem.Otros)
+            (currentItem.categoria == CategoriaItem.Paredes ||
+             currentItem.categoria == CategoriaItem.Pisos ||
+             currentItem.categoria == CategoriaItem.Otros))
         {
             SlotLugar[] slotsLugar = GameObject.FindObjectsByType<SlotLugar>(FindObjectsSortMode.None);
             foreach (var s in slotsLugar)

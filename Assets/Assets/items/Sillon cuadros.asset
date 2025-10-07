@@ -17,4 +17,5 @@ MonoBehaviour:
   iconoTienda: {fileID: -8120283346981010170, guid: 3d04d16069932a94c9f38de807a7562a, type: 3}
   precio: 200
   categoria: 3
-  comprado: 0
+  puedeRetirarse: 0
+  comprado: 1

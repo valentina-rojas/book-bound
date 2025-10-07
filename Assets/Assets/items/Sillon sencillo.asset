@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nombre: Sillon sencillo
   icono: {fileID: -3427923603932098066, guid: 0e7bdd57d4552764f8951370070cbd27, type: 3}
+  iconoTienda: {fileID: 0}
   precio: 100
   categoria: 3
+  puedeRetirarse: 0
   comprado: 0
