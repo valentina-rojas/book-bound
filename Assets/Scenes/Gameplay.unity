@@ -56554,8 +56554,8 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 21f523c546a635f44ae9ff25512bb1c4, type: 3}
   m_Resource: {fileID: 8300000, guid: 21f523c546a635f44ae9ff25512bb1c4, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
+  m_Volume: 0.15
+  m_Pitch: 0.9
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -186127,8 +186127,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 608.51, y: -329.28}
-  m_SizeDelta: {x: 458.5, y: 282.56}
+  m_AnchoredPosition: {x: 658.98, y: -356.66}
+  m_SizeDelta: {x: 357.55, y: 227.81}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1088219258
 MonoBehaviour:
@@ -223780,6 +223780,7 @@ MonoBehaviour:
   platitoLlenoSprite: {fileID: 1922352228, guid: 2b32f1e9ff6a9f945b4c8f0dedfb3ace, type: 3}
   platitoVacioSprite: {fileID: 1793180555, guid: 2b32f1e9ff6a9f945b4c8f0dedfb3ace, type: 3}
   corazonesGO: {fileID: 1008965756}
+  puedeAcariciar: 0
 --- !u!82 &1322635168
 AudioSource:
   m_ObjectHideFlags: 0
@@ -307546,6 +307547,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: CameraManager, Assembly-CSharp
         m_MethodName: CambiarCamara
         m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1468360317}
+        m_TargetAssemblyTypeName: ShopManager, Assembly-CSharp
+        m_MethodName: CerrarTienda
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

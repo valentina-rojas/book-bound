@@ -77,7 +77,7 @@ public class DialogueManager : MonoBehaviour
     private void StartDialogue()
     {
         if (characterAttributes == null) return;
-
+        CameraManager.instance?.DesactivarBotonCamaraBiblioteca();
         TaskManager.instance.OcultarListaTareas();
         dialoguePanel.SetActive(true);
         dialogueMark.gameObject.SetActive(false);
@@ -199,6 +199,7 @@ public class DialogueManager : MonoBehaviour
 
     private void FinalizarDialogo()
     {
+        CameraManager.instance?.ActivarBotonCamaraBiblioteca();
         didDialogueStart = false;
         dialoguePanel.SetActive(false);
         dialogueMark.gameObject.SetActive(false);

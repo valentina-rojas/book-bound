@@ -87,7 +87,6 @@ public class InventarioManager : MonoBehaviour
             items.Add(item);
 
         ActualizarUI(item.categoria);
-        AbrirInventario();
     }
 
     public void AgregarItemSinAbrir(Item item)

@@ -130,24 +130,33 @@ public class CameraManager : MonoBehaviour
     #region Botones de Cámara
     public void DesactivarBotonCamara()
     {
-        botonCambiarCamara0.interactable = false;
-        botonCambiarCamara1.interactable = false;
-        botonCambiarCamara2.interactable = false;
-        botonCambiarCamara3.interactable = false;
-        botonCambiarCamara4.interactable = false;
-        botonCambiarCamara5.interactable = false;
+        botonCambiarCamara0.gameObject.SetActive(false);
+        botonCambiarCamara1.gameObject.SetActive(false);
+        botonCambiarCamara2.gameObject.SetActive(false);
+        botonCambiarCamara3.gameObject.SetActive(false);
+        botonCambiarCamara4.gameObject.SetActive(false);
+        botonCambiarCamara5.gameObject.SetActive(false);
     }
 
     public void ActivarBotonCamara()
     {
-        botonCambiarCamara0.interactable = true;
-        botonCambiarCamara1.interactable = true;
-        botonCambiarCamara2.interactable = true;
-        botonCambiarCamara3.interactable = true;
-        botonCambiarCamara4.interactable = true;
-        botonCambiarCamara5.interactable = true;
+        botonCambiarCamara0.gameObject.SetActive(true);
+        botonCambiarCamara1.gameObject.SetActive(true);
+        botonCambiarCamara2.gameObject.SetActive(true);
+        botonCambiarCamara3.gameObject.SetActive(true);
+        botonCambiarCamara4.gameObject.SetActive(true);
+        botonCambiarCamara5.gameObject.SetActive(true);
     }
 
+    public void DesactivarBotonCamaraBiblioteca()
+    {
+        botonCambiarCamara1.gameObject.SetActive(false);
+    }
+
+    public void ActivarBotonCamaraBiblioteca()
+    {
+        botonCambiarCamara1.gameObject.SetActive(true);
+    }
     public void ActivarCamaraPrincipal()
     {
         CambiarCamara(0);
@@ -164,6 +173,8 @@ public class CameraManager : MonoBehaviour
         PagesManager.instance.ResetSistema();
         PagesManager.instance.ActivarCategoriaCorrecta();
         EconomyManager.instance.OcultarContenedorDinero();
+        if (TendCat.instance != null)
+            TendCat.instance.puedeAcariciar = false;
     }
 
     public void DesactivarPanelReparacion()
@@ -173,6 +184,8 @@ public class CameraManager : MonoBehaviour
         HistorialManager.Instance.MostrarBotonAbrirHistorial();
         EconomyManager.instance.MostrarContenedorDinero();
         TaskManager.instance.MostrarListaTareas();
+        if (TendCat.instance != null)
+            TendCat.instance.puedeAcariciar = true;
     }
 
     public void ActivarPanelPortada()
@@ -187,6 +200,8 @@ public class CameraManager : MonoBehaviour
             StartCoroutine(bookCoverManager.ActualizarTituloLibroDespuesDeFrame());
 
         bookCoverManager?.ActivarStickersPorSet();
+        if (TendCat.instance != null)
+            TendCat.instance.puedeAcariciar = false;
     }
 
     public void DesctivarPanelPortada()
@@ -196,6 +211,8 @@ public class CameraManager : MonoBehaviour
         HistorialManager.Instance.MostrarBotonAbrirHistorial();
         EconomyManager.instance.MostrarContenedorDinero();
         TaskManager.instance.MostrarListaTareas();
+        if (TendCat.instance != null)
+            TendCat.instance.puedeAcariciar = true;
     }
 
     public void ActivarPanelHechizo()
@@ -205,6 +222,8 @@ public class CameraManager : MonoBehaviour
         InventarioManager.Instance.OcultarInventarioCompleto();
         HistorialManager.Instance.OcultarBotonAbrirHistorial();
         EconomyManager.instance.OcultarContenedorDinero();
+        if (TendCat.instance != null)
+            TendCat.instance.puedeAcariciar = false;
     }
 
     public void DesctivarPanelHechizo()
@@ -214,6 +233,8 @@ public class CameraManager : MonoBehaviour
         HistorialManager.Instance.MostrarBotonAbrirHistorial();
         EconomyManager.instance.MostrarContenedorDinero();
         TaskManager.instance.MostrarListaTareas();
+        if (TendCat.instance != null)
+            TendCat.instance.puedeAcariciar = true;
     }
 
     public void ActivarPanelTraduccion()
@@ -223,6 +244,8 @@ public class CameraManager : MonoBehaviour
         InventarioManager.Instance.OcultarInventarioCompleto();
         HistorialManager.Instance.OcultarBotonAbrirHistorial();
         EconomyManager.instance.OcultarContenedorDinero();
+        if (TendCat.instance != null)
+            TendCat.instance.puedeAcariciar = false;
     }
 
     public void DesctivarPanelTraduccion()
@@ -232,6 +255,8 @@ public class CameraManager : MonoBehaviour
         HistorialManager.Instance.MostrarBotonAbrirHistorial();
         EconomyManager.instance.MostrarContenedorDinero();
         TaskManager.instance.MostrarListaTareas();
+        if (TendCat.instance != null)
+            TendCat.instance.puedeAcariciar = true;
     }
 
     public void ActivarPanelDonar()
@@ -242,6 +267,8 @@ public class CameraManager : MonoBehaviour
         panelDonar.gameObject.SetActive(true);
         TaskManager.instance.OcultarBotonTareasMinijuegos();
         EconomyManager.instance.OcultarContenedorDinero();
+        if (TendCat.instance != null)
+            TendCat.instance.puedeAcariciar = false;
     }
 
     public void DesctivarPanelDonar()
@@ -251,6 +278,8 @@ public class CameraManager : MonoBehaviour
         HistorialManager.Instance.MostrarBotonAbrirHistorial();
         EconomyManager.instance.MostrarContenedorDinero();
         TaskManager.instance.MostrarListaTareas();
+        if (TendCat.instance != null)
+            TendCat.instance.puedeAcariciar = true;
     }
 
     public void ActivarPanelDevolver()

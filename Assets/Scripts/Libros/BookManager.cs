@@ -117,8 +117,8 @@ public class BookManager : MonoBehaviour
                 textoIndicacion.gameObject.SetActive(false);
             }
         }
-        if (botonCamaraMostrador != null) botonCamaraMostrador.interactable = false;
-        if (botonCamaraPatio != null) botonCamaraPatio.interactable = false;
+        if (botonCamaraMostrador != null) botonCamaraMostrador.gameObject.SetActive(false);
+        if (botonCamaraPatio != null) botonCamaraPatio.gameObject.SetActive(false);
 
     }
 
@@ -235,8 +235,8 @@ public class BookManager : MonoBehaviour
         botonDeseleccionar.gameObject.SetActive(false);
         botonConfirmar.gameObject.SetActive(true);
 
-        if (botonCamaraMostrador != null) botonCamaraMostrador.interactable = true;
-        if (botonCamaraPatio != null) botonCamaraPatio.interactable = true;
+        if (botonCamaraMostrador != null) botonCamaraMostrador.gameObject.SetActive(true);
+        if (botonCamaraPatio != null) botonCamaraPatio.gameObject.SetActive(true);
 
         if (characterSpawn != null)
             characterSpawn.EndInteraction();
@@ -257,8 +257,8 @@ public class BookManager : MonoBehaviour
     public void CancelarSeleccion()
     {
         panelInfoLibro.SetActive(false);
-        if (botonCamaraMostrador != null) botonCamaraMostrador.interactable = true;
-        if (botonCamaraPatio != null) botonCamaraPatio.interactable = true;
+        if (botonCamaraMostrador != null) botonCamaraMostrador.gameObject.SetActive(true);
+        if (botonCamaraPatio != null) botonCamaraPatio.gameObject.SetActive(true);
     }
 
     public void DeseleccionarLibro()
@@ -273,8 +273,8 @@ public class BookManager : MonoBehaviour
 
         panelInfoLibro.SetActive(true);
 
-        if (botonCamaraMostrador != null) botonCamaraMostrador.interactable = false;
-        if (botonCamaraPatio != null) botonCamaraPatio.interactable = false;
+        if (botonCamaraMostrador != null) botonCamaraMostrador.gameObject.SetActive(false);
+        if (botonCamaraPatio != null) botonCamaraPatio.gameObject.SetActive(false);
 
         botonDeseleccionar.gameObject.SetActive(false);
         botonConfirmar.gameObject.SetActive(true);

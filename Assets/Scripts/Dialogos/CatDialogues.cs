@@ -94,6 +94,8 @@ public class CatDialogues : MonoBehaviour
 
     private void StartDialogue()
     {
+        if (TendCat.instance != null)
+            TendCat.instance.puedeAcariciar = false;
         dialoguePanel.SetActive(true);
         lineIndex = 0;
 
@@ -163,6 +165,8 @@ public class CatDialogues : MonoBehaviour
     public System.Action OnDialogoExtraFinalizado;
     public void FinalizarDialogo()
     {
+        if (TendCat.instance != null)
+            TendCat.instance.puedeAcariciar = true;
         if (typingCoroutine != null)
         {
             StopCoroutine(typingCoroutine);

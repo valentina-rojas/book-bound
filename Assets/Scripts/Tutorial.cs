@@ -92,7 +92,7 @@ public class Tutorial : MonoBehaviour
         if (pasoActual == 1 && GameManager.instance.nivelActual == 1)
         {
             TaskManager.instance?.OcultarListaTareas();
-            CameraManager.instance.ActivarBotonCamara();
+        
             flechaBiblioteca?.SetActive(true);
         }
         else if (pasoActual == 3 && GameManager.instance.nivelActual == 1)
@@ -249,7 +249,6 @@ public class Tutorial : MonoBehaviour
             telaranaTutorial.HabilitarInteraccion();
 
         CameraManager.instance?.ActivarCamaraPrincipal();
-        CameraManager.instance?.ActivarBotonCamara();
         TaskManager.instance?.MostrarTareas();
 
         if (pulsoBotonTienda != null)

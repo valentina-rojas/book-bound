@@ -30,6 +30,7 @@ public class TendCat : MonoBehaviour
     #region Acariciar
     public GameObject corazonesGO;
     private bool acariciando = false;
+    public bool puedeAcariciar = false;
     #endregion
 
     private Camera camara;
@@ -126,6 +127,14 @@ public class TendCat : MonoBehaviour
     private void VerificarAcariciar()
     {
         if (CameraManager.instance.CurrentCameraIndex != 0)
+        {
+            if (corazonesGO != null)
+                corazonesGO.SetActive(false);
+            return;
+        }
+
+        // Solo permite acariciar si la bandera está activada
+        if (!puedeAcariciar)
         {
             if (corazonesGO != null)
                 corazonesGO.SetActive(false);

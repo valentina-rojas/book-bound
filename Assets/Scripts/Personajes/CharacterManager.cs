@@ -48,7 +48,6 @@ public class CharacterManager : MonoBehaviour
         {
             case CharacterAttributes.TipoDePedido.BuscarLibro:
                 Debug.Log("Este personaje busca un libro.");
-                CameraManager.instance.ActivarBotonCamara();
                 BookManager.instance.HabilitarBotonConfirmacion();
                 break;
             case CharacterAttributes.TipoDePedido.DevolverLibro:
