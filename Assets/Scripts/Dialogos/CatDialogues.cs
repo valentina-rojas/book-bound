@@ -14,6 +14,7 @@ public class CatDialogues : MonoBehaviour
     [SerializeField] private Button botonSiguiente;
     [SerializeField] private Button botonRepetir;
     [SerializeField] private Button botonFinalizar;
+    [SerializeField] private Animator gatoAnimator;
     #endregion
 
     #region Configuración
@@ -94,6 +95,10 @@ public class CatDialogues : MonoBehaviour
 
     private void StartDialogue()
     {
+        if (gatoAnimator != null)
+        {
+            gatoAnimator.SetTrigger("gatoHablando");
+        }
         if (TendCat.instance != null)
             TendCat.instance.puedeAcariciar = false;
         dialoguePanel.SetActive(true);
@@ -165,6 +170,10 @@ public class CatDialogues : MonoBehaviour
     public System.Action OnDialogoExtraFinalizado;
     public void FinalizarDialogo()
     {
+        if (gatoAnimator != null)
+        {
+            gatoAnimator.SetTrigger("gatoDescansando");
+        }
         if (TendCat.instance != null)
             TendCat.instance.puedeAcariciar = true;
         if (typingCoroutine != null)
