@@ -27,7 +27,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 521054887938
-    m_Localized: URGENTE!!
+    m_Localized: "\xA1\xA1URGENTE!!"
     m_Metadata:
       m_Items: []
   - m_Id: 521054887939
@@ -60,7 +60,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 521054887946
     m_Localized: "Si un d\xEDa quieres deshacerte de alg\xFAn vecino, p\xE1sate por
-      mi caba\xF1a"
+      mi caba\xF1a."
     m_Metadata:
       m_Items: []
   - m_Id: 521054887947
@@ -72,23 +72,23 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 521054887949
-    m_Localized: Esto no me sirve
+    m_Localized: Esto no me sirve.
     m_Metadata:
       m_Items: []
   - m_Id: 521054887951
-    m_Localized: Vengo a devolver esto
+    m_Localized: Vengo a devolver esto.
     m_Metadata:
       m_Items: []
   - m_Id: 521054887952
-    m_Localized: "Fue muy \xFAtil, volver\xE9 otra vez"
+    m_Localized: "Fue muy \xFAtil, volver\xE9 otra vez."
     m_Metadata:
       m_Items: []
   - m_Id: 521054887953
-    m_Localized: Esta vez vine a dar y no pedir
+    m_Localized: Esta vez vine a dar y no pedir.
     m_Metadata:
       m_Items: []
   - m_Id: 521054887954
-    m_Localized: "Quiz\xE1 le des m\xE1s utilidad que yo"
+    m_Localized: "Quiz\xE1 le des m\xE1s utilidad que yo."
     m_Metadata:
       m_Items: []
   - m_Id: 521054887955
@@ -145,7 +145,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 521054887968
-    m_Localized: Buen dia...
+    m_Localized: "Buen d\xEDa..."
     m_Metadata:
       m_Items: []
   - m_Id: 521054887969
@@ -162,7 +162,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 521054887972
-    m_Localized: "Pero tenia historias de manos fr\xEDas, risas raras en los armarios..."
+    m_Localized: "Pero ten\xEDa historias de manos fr\xEDas, risas raras en los armarios..."
     m_Metadata:
       m_Items: []
   - m_Id: 521054887973
@@ -200,19 +200,19 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 521059082241
-    m_Localized: Buen dia...
+    m_Localized: "Buen d\xEDa..."
     m_Metadata:
       m_Items: []
   - m_Id: 521059082242
-    m_Localized: Te devuelvo esto
+    m_Localized: Te devuelvo esto.
     m_Metadata:
       m_Items: []
   - m_Id: 521059082243
-    m_Localized: Hubieras visto como corrieron esos mocosos
+    m_Localized: "Hubieras visto c\xF3mo corrieron esos mocosos."
     m_Metadata:
       m_Items: []
   - m_Id: 521059082244
-    m_Localized: Fue muy divertido
+    m_Localized: Fue muy divertido.
     m_Metadata:
       m_Items: []
   - m_Id: 521059082245
@@ -220,7 +220,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 521059082246
-    m_Localized: "\xBFtienes un momento?"
+    m_Localized: "\xBFTienes un momento?"
     m_Metadata:
       m_Items: []
   - m_Id: 521059082247
@@ -244,7 +244,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 521059082252
-    m_Localized: "\xBFt\xFA podr\xEDas hacerlo?"
+    m_Localized: "\xBFT\xFA podr\xEDas hacerlo?"
     m_Metadata:
       m_Items: []
   - m_Id: 521059082253
@@ -268,7 +268,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 521059082258
-    m_Localized: "Cada detalle\u2026 es justo lo que imaginaba"
+    m_Localized: "Cada detalle\u2026 es justo lo que imaginaba."
     m_Metadata:
       m_Items: []
   - m_Id: 521059082259
@@ -292,7 +292,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 521059082264
-    m_Localized: "\xBFqu\xE9 hora es? Da igual."
+    m_Localized: "\xBFQu\xE9 hora es? Da igual."
     m_Metadata:
       m_Items: []
   - m_Id: 521059082265
@@ -385,7 +385,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 521059082287
-    m_Localized: Dentro guarda una receta muy antigua..
+    m_Localized: Dentro guarda una receta muy antigua...
     m_Metadata:
       m_Items: []
   - m_Id: 521059082288
@@ -406,16 +406,17 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 521059082292
-    m_Localized: "No es dif\xEDcil, solo debes agregarle las runas correctas en orden"
+    m_Localized: "No es dif\xEDcil; solo debes agregar las runas correctas, en ese
+      orden."
     m_Metadata:
       m_Items: []
   - m_Id: 521059082293
-    m_Localized: "Lo har\xEDa yo pero ya me tiemblan las manos y se me dificulta"
+    m_Localized: "Lo har\xEDa yo pero ya me tiemblan las manos y se me dificulta."
     m_Metadata:
       m_Items: []
   - m_Id: 521059082294
     m_Localized: Las runas que debes usar son las de tierra, sombra y fuego, en ese
-      orden
+      orden.
     m_Metadata:
       m_Items: []
   - m_Id: 521059082295
@@ -528,7 +529,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 521059082321
-    m_Localized: "Volver\xE9 de nuevo"
+    m_Localized: "Volver\xE9 de nuevo."
     m_Metadata:
       m_Items: []
   - m_Id: 521059082322
@@ -591,7 +592,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 521059082336
-    m_Localized: "Buen d\xEDa\u2026 vine a devolver esto"
+    m_Localized: "Buen d\xEDa\u2026 vine a devolver esto."
     m_Metadata:
       m_Items: []
   - m_Id: 521059082337
@@ -649,11 +650,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 521059082350
-    m_Localized: Te traje esto
+    m_Localized: Te traje esto.
     m_Metadata:
       m_Items: []
   - m_Id: 521059082351
-    m_Localized: Fue muy divertido
+    m_Localized: Fue muy divertido.
     m_Metadata:
       m_Items: []
   - m_Id: 521059082352
@@ -711,11 +712,11 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 9123637517524992
     m_Localized: Estaba buscando una receta para cocinar con hongos venenosos y hacerlos
-      inofensivos para su consumo
+      inofensivos para su consumo...
     m_Metadata:
       m_Items: []
   - m_Id: 9123637517524993
-    m_Localized: "Y se me desarm\xF3 el libro..."
+    m_Localized: "y se me desarm\xF3 el libro..."
     m_Metadata:
       m_Items: []
   - m_Id: 9123637517524994
@@ -756,7 +757,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 9123637525913601
-    m_Localized: "Esta vez necesito que me ayudes con algo...\xBFPodr\xEDas?"
+    m_Localized: "Esta vez necesito que me ayudes con algo... \xBFPodr\xEDas?"
     m_Metadata:
       m_Items: []
   - m_Id: 9123637525913602
@@ -794,11 +795,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 9123637525913610
-    m_Localized: "Buenos d\xEDas.."
+    m_Localized: "Buenos d\xEDas..."
     m_Metadata:
       m_Items: []
   - m_Id: 9123637525913611
-    m_Localized: Hoy no vengo a pedirte ayuda..
+    m_Localized: Hoy no vengo a pedirte ayuda...
     m_Metadata:
       m_Items: []
   - m_Id: 9123637525913612
@@ -815,7 +816,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 9123637525913615
-    m_Localized: "Que bueno que nadie lo haya llevado a\xFAn"
+    m_Localized: "\xA1Qu\xE9 bueno que nadie lo haya llevado a\xFAn!"
     m_Metadata:
       m_Items: []
   - m_Id: 9123637525913616
@@ -823,7 +824,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 9123637525913617
-    m_Localized: Esto no es lo que esperaba..
+    m_Localized: Esto no es lo que esperaba...
     m_Metadata:
       m_Items: []
   - m_Id: 9123637525913618
@@ -835,7 +836,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 9123637525913630
-    m_Localized: Hoy vengo a solicitar que me prestes un libro
+    m_Localized: Hoy vengo a solicitar que me prestes un libro.
     m_Metadata:
       m_Items: []
   - m_Id: 9123637525913631
@@ -964,7 +965,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 9123637525913661
-    m_Localized: '"Agua que fluye, tierra que sostiene y fuego que arrasa"'
+    m_Localized: '"Agua que fluye, tierra que sostiene y fuego que arrasa".'
     m_Metadata:
       m_Items: []
   - m_Id: 9123637525913662
@@ -972,19 +973,19 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 9123637525913663
-    m_Localized: "Sinceramente no confiaba en que lo har\xEDas...Gracias."
+    m_Localized: "Sinceramente no confiaba en que lo har\xEDas... Gracias."
     m_Metadata:
       m_Items: []
   - m_Id: 9123637525913664
-    m_Localized: Oh no, eh perdido la oportunidad de leer sus secretos.
+    m_Localized: Oh no, he perdido la oportunidad de leer sus secretos.
     m_Metadata:
       m_Items: []
   - m_Id: 9123637525913665
-    m_Localized: "Sab\xEDa que no deb\xEDa dejar que me ayudes, eres una inexperta."
+    m_Localized: "Sab\xEDa que no deb\xEDa dejar que me ayudes..."
     m_Metadata:
       m_Items: []
   - m_Id: 9123637525913666
-    m_Localized: Hola...Vengo en busca de tu ayuda.
+    m_Localized: Hola... Vengo en busca de tu ayuda.
     m_Metadata:
       m_Items: []
   - m_Id: 9123637525913667
@@ -1012,7 +1013,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 9123637525913672
-    m_Localized: "Principalmente la relaci\xF3n entre las diversas constelaciones"
+    m_Localized: "Principalmente la relaci\xF3n entre las diversas constelaciones."
     m_Metadata:
       m_Items: []
   - m_Id: 9123637525913673
@@ -1025,7 +1026,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 9123637525913675
-    m_Localized: "Creo que no eres tan buena como dicen por ah\xED..."
+    m_Localized: "Creo que no eres tan genial como dicen por ah\xED..."
     m_Metadata:
       m_Items: []
   - m_Id: 9170868245274624
@@ -1054,7 +1055,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 9170868262051842
-    m_Localized: Uno que detalle tanto flora curativa como maldita
+    m_Localized: Uno que detalle tanto flora curativa como maldita.
     m_Metadata:
       m_Items: []
   - m_Id: 9170868262051843
@@ -1070,7 +1071,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 9170868262051846
-    m_Localized: "Pronto lo devolver\xE9"
+    m_Localized: "Pronto lo devolver\xE9."
     m_Metadata:
       m_Items: []
   - m_Id: 9170868262051847
@@ -1094,12 +1095,12 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19616043035697153
-    m_Localized: "tal vez puedas dejarlo aqu\xED para que alguien m\xE1s le de un
-      buen uso"
+    m_Localized: "Tal vez puedas dejarlo aqu\xED para que alguien m\xE1s le d\xE9
+      un buen uso."
     m_Metadata:
       m_Items: []
   - m_Id: 19616043035697154
-    m_Localized: "Buen d\xEDa.. he vuelto"
+    m_Localized: "Buen d\xEDa... he vuelto."
     m_Metadata:
       m_Items: []
   - m_Id: 19616043035697155
@@ -1111,7 +1112,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19616043035697157
-    m_Localized: "Necesito llevarme otro libro que los asuste m\xE1s.."
+    m_Localized: "Necesito llevarme otro libro que los asuste m\xE1s..."
     m_Metadata:
       m_Items: []
   - m_Id: 19616043035697158
@@ -1119,7 +1120,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19616043035697159
-    m_Localized: Excelente, creo que esto definitivamente los va a espantar...
+    m_Localized: Excelente, creo que esto definitivamente los va a espantar.
     m_Metadata:
       m_Items: []
   - m_Id: 19616043035697160
@@ -1131,11 +1132,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19616043035697162
-    m_Localized: "Vengo por t\xED"
+    m_Localized: Vengo por ti.
     m_Metadata:
       m_Items: []
   - m_Id: 19616043035697163
-    m_Localized: Se que sabes de hechizos
+    m_Localized: "S\xE9 que sabes de hechizos..."
     m_Metadata:
       m_Items: []
   - m_Id: 19616043035697164
@@ -1148,7 +1149,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19616043035697166
-    m_Localized: El orden de las runas es aire, luz y agua
+    m_Localized: El orden de las runas es aire, luz y agua.
     m_Metadata:
       m_Items: []
   - m_Id: 19616043035697167
@@ -1160,7 +1161,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19616043035697169
-    m_Localized: "Al final Don Vinagre ten\xEDa raz\xF3n sobre t\xED..."
+    m_Localized: "Al final, Don Vinagre ten\xEDa raz\xF3n sobre ti..."
     m_Metadata:
       m_Items: []
   - m_Id: 19616043035697170
@@ -1172,15 +1173,15 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19616043035697172
-    m_Localized: "\xA1Hola! \xA1Buen d\xEDa!"
+    m_Localized: "\xA1Hola! \xA1Buen d\xEDa! Te devuelvo este libro."
     m_Metadata:
       m_Items: []
   - m_Id: 19616043035697173
-    m_Localized: "Te devuelvo este libro, \xA1muchas gracias!"
+    m_Localized: "\xA1Muchas gracias!"
     m_Metadata:
       m_Items: []
   - m_Id: 19616043035697174
-    m_Localized: "Hola ni\xF1a bonita..."
+    m_Localized: "Hola cari\xF1o... \xBFc\xF3mo est\xE1s hoy?"
     m_Metadata:
       m_Items: []
   - m_Id: 19616043035697175
@@ -1189,7 +1190,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 19616043035697176
     m_Localized: "Encontr\xE9 un hechizo, pero debido a mis temblorosas manos no
-      puedo lograrlo"
+      puedo lograrlo."
     m_Metadata:
       m_Items: []
   - m_Id: 19616043035697177
@@ -1197,7 +1198,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19616043035697178
-    m_Localized: "Muchas gracias cari\xF1o"
+    m_Localized: Muchas gracias tesoro
     m_Metadata:
       m_Items: []
   - m_Id: 19616043035697179
@@ -1205,7 +1206,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19616043035697180
-    m_Localized: Cof Cof, veo que sigo igual
+    m_Localized: Cof Cof, veo que sigo igual.
     m_Metadata:
       m_Items: []
   - m_Id: 19616043035697181
@@ -1237,7 +1238,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19616043039891462
-    m_Localized: "Uf, veo que sigues aqu\xED"
+    m_Localized: "Uf, veo que sigues aqu\xED."
     m_Metadata:
       m_Items: []
   - m_Id: 19616043039891463
@@ -1285,7 +1286,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19616043039891474
-    m_Localized: ya que has sido de mucha ayuda
+    m_Localized: ya que has sido de mucha ayuda.
     m_Metadata:
       m_Items: []
   - m_Id: 19616043039891475
@@ -1309,7 +1310,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19616043039891480
-    m_Localized: Me han dicho que eres experta en dar ayuda a las personas
+    m_Localized: "Me han recomendado que venga aqu\xED, ya que has solucionado varios
+      problemas..."
     m_Metadata:
       m_Items: []
   - m_Id: 19616043039891481
@@ -1322,7 +1324,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19616043039891483
-    m_Localized: y sus padres me pidieron ayuda para rescatarla
+    m_Localized: y sus padres me pidieron ayuda para rescatarla.
     m_Metadata:
       m_Items: []
   - m_Id: 19616043039891484
@@ -1350,7 +1352,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19616043039891490
-    m_Localized: "seguramente pronto ser\xE1s recompensada..."
+    m_Localized: "seguramente pronto te recompensar\xE1n..."
     m_Metadata:
       m_Items: []
   - m_Id: 19616043039891491
@@ -1362,7 +1364,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19616043039891493
-    m_Localized: "\xA1Excelente! Eres muy buena en esto..."
+    m_Localized: "\xA1Excelente! Eres genial en esto..."
     m_Metadata:
       m_Items: []
   - m_Id: 19616043039891494
@@ -1394,7 +1396,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19616043039891501
-    m_Localized: "contiene recetas basadas en las emociones humanas b\xE1sicas."
+    m_Localized: es un libro que se mantiene tibio al tacto y tiene muchas recetas
+      de pociones.
     m_Metadata:
       m_Items: []
   - m_Id: 19616043039891502
@@ -1446,7 +1449,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19616043039891514
-    m_Localized: "\xA1Muchas gracias! Eres la mejor de todas"
+    m_Localized: "\xA1Muchas gracias! Eres de lo mejor."
     m_Metadata:
       m_Items: []
   - m_Id: 19616043039891515
@@ -1462,7 +1465,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19616043039891518
-    m_Localized: Estoy intentando nuevas recetas, para cocinarle a mi futuro prometido
+    m_Localized: Estoy intentando nuevas recetas, para cocinarle a mi futuro prometido.
     m_Metadata:
       m_Items: []
   - m_Id: 19616043039891519
@@ -1478,7 +1481,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19616043039891522
-    m_Localized: Me has salvado
+    m_Localized: Me has salvado.
     m_Metadata:
       m_Items: []
   - m_Id: 19616043039891523
@@ -1510,7 +1513,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19616043039891530
-    m_Localized: "Es para una investigaci\xF3n que realizo"
+    m_Localized: "Es para una investigaci\xF3n que realizo."
     m_Metadata:
       m_Items: []
   - m_Id: 19616043039891531
@@ -1547,15 +1550,15 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19919679611641860
-    m_Localized: Cuando lo termine te lo devuelvo,
+    m_Localized: Cuando lo termine, te lo devuelvo.
     m_Metadata:
       m_Items: []
   - m_Id: 19919679611641861
-    m_Localized: si es que no desaparezco je
+    m_Localized: Si es que no desaparezco, je.
     m_Metadata:
       m_Items: []
   - m_Id: 19919679611641862
-    m_Localized: No creo que este sea el libro que buscaba
+    m_Localized: No creo que este sea el libro que buscaba.
     m_Metadata:
       m_Items: []
   - m_Id: 19919679620030464

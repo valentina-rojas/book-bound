@@ -981,7 +981,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 9123637525913665
-    m_Localized: "I knew I shouldn\u2019t let you help; you\u2019re inexperienced."
+    m_Localized: "I knew I shouldn\u2019t let you help..."
     m_Metadata:
       m_Items: []
   - m_Id: 9123637525913666
@@ -1027,7 +1027,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 9123637525913675
-    m_Localized: "I don\u2019t think you\u2019re as good as they say..."
+    m_Localized: "I think you\u2019re not as great as they say..."
     m_Metadata:
       m_Items: []
   - m_Id: 9170868245274624
@@ -1122,7 +1122,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19616043035697159
-    m_Localized: Excellent, I think this will definitely scare them..
+    m_Localized: Excellent, I think this will definitely scare them.
     m_Metadata:
       m_Items: []
   - m_Id: 19616043035697160
@@ -1175,15 +1175,15 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19616043035697172
-    m_Localized: Hi! Good morning!
+    m_Localized: "Hi! Good morning! Here\u2019s the book back."
     m_Metadata:
       m_Items: []
   - m_Id: 19616043035697173
-    m_Localized: "Here\u2019s the book back, thank you so much!\""
+    m_Localized: Thank you so much!
     m_Metadata:
       m_Items: []
   - m_Id: 19616043035697174
-    m_Localized: Hello, lovely girl...
+    m_Localized: Hello, darling... how are you today?
     m_Metadata:
       m_Items: []
   - m_Id: 19616043035697175
@@ -1200,7 +1200,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19616043035697178
-    m_Localized: Thank you very much, dear.
+    m_Localized: Thank you very much, sweetheart
     m_Metadata:
       m_Items: []
   - m_Id: 19616043035697179
@@ -1313,7 +1313,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19616043039891480
-    m_Localized: "I\u2019ve been told that you\u2019re an expert at helping people."
+    m_Localized: "I was recommended to come here, since you\u2019ve solved several
+      problems..."
     m_Metadata:
       m_Items: []
   - m_Id: 19616043039891481
@@ -1355,7 +1356,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19616043039891490
-    m_Localized: Surely you will be rewarded soon..
+    m_Localized: Surely you will be rewarded soon...
     m_Metadata:
       m_Items: []
   - m_Id: 19616043039891491
@@ -1368,7 +1369,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19616043039891493
-    m_Localized: "Excellent! You\u2019re really good at this..."
+    m_Localized: "Excellent! You\u2019re great at this..."
     m_Metadata:
       m_Items: []
   - m_Id: 19616043039891494
@@ -1400,7 +1401,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19616043039891501
-    m_Localized: It contains recipes based on basic human emotions.
+    m_Localized: It's a book that stays warm to the touch and contains many potion
+      recipes.
     m_Metadata:
       m_Items: []
   - m_Id: 19616043039891502
@@ -1453,7 +1455,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19616043039891514
-    m_Localized: "Thank you so much! You\u2019re the best of all."
+    m_Localized: "Thank you so much! You\u2019re one of the best."
     m_Metadata:
       m_Items: []
   - m_Id: 19616043039891515
@@ -1465,7 +1467,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19616043039891517
-    m_Localized: "I\u2019m looking for Feast of Full Moons, do you have it?"
+    m_Localized: "I\u2019m looking for Banquet of Full Moons, do you have it?"
     m_Metadata:
       m_Items: []
   - m_Id: 19616043039891518

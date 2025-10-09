@@ -109,6 +109,8 @@ public class ShopManager : MonoBehaviour
                 slot.Configurar(item, ComprarItem);
             }
         }
+
+        LayoutRebuilder.ForceRebuildLayoutImmediate(contenedorItems.GetComponent<RectTransform>());
     }
     #endregion
 
