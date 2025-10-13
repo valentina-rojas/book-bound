@@ -159,7 +159,7 @@ public static class SaveManager
 
         if (data.librosEsperadosPorGeneroList != null)
         {
-            ShelfManager.instance.librosEsperadosPorGenero = new Dictionary<string,int>();
+            ShelfManager.instance.librosEsperadosPorGenero = new Dictionary<string, int>();
             foreach (var gc in data.librosEsperadosPorGeneroList)
                 ShelfManager.instance.librosEsperadosPorGenero[gc.genero] = gc.cantidad;
 
@@ -167,6 +167,7 @@ public static class SaveManager
             foreach (var estante in estantes)
                 estante.ActualizarCantidadEsperada();
         }
+        SincronizarEstadoItems(data.itemsInventario);
     }
 
     public static void RestaurarLibros(SaveData data)
@@ -263,6 +264,42 @@ public static class SaveManager
             if (item != null)
                 inventario.AgregarItemSinAbrir(item);
         }
+    }
+
+    public static void SincronizarEstadoItems(List<string> itemsInventario)
+    {
+        List<Item> todosLosItems = ShopManager.Instance != null ? ShopManager.Instance.ObtenerTodosLosItems() : null;
+        if (todosLosItems == null) return;
+
+        HashSet<string> itemsPresentes = new HashSet<string>(itemsInventario);
+
+        SlotLugar[] slotsLugar = GameObject.FindObjectsOfType<SlotLugar>(true);
+        foreach (var slot in slotsLugar)
+        {
+            if (slot.itemActual != null)
+                itemsPresentes.Add(slot.itemActual.nombre);
+        }
+
+        SlotPosicion[] slotsCuadros = GameObject.FindObjectsOfType<SlotPosicion>(true);
+        foreach (var slot in slotsCuadros)
+        {
+            if (slot.itemActual != null)
+                itemsPresentes.Add(slot.itemActual.nombre);
+        }
+
+        foreach (var item in todosLosItems)
+        {
+            if (itemsPresentes.Contains(item.nombre))
+            {
+                item.comprado = true; 
+            }
+            else
+            {
+                item.comprado = false; 
+            }
+        }
+
+        Debug.Log($"Sincronización de ítems completada. {itemsPresentes.Count} ítems encontrados en inventario o slots.");
     }
     #endregion
 

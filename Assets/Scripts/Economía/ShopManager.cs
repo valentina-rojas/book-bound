@@ -102,6 +102,7 @@ public class ShopManager : MonoBehaviour
         {
             if (item.categoria != categoriaActual) continue;
 
+
             if (item.categoria == CategoriaItem.Herramientas || !item.comprado)
             {
                 GameObject nuevoSlot = Instantiate(prefabSlotTienda, contenedorItems);
@@ -183,6 +184,18 @@ public class ShopManager : MonoBehaviour
             UnityEngine.Debug.Log($"[ANALYTICS] TiendaCompraEvent: itemName=TotalItemsComprados, cant={contadorTotalCompras}, failed={intentoFallidoSesion}, level={GameManager.instance.nivelActual}");
 #endif
         }
+    }
+    #endregion
+
+    #region Métodos públicos adicionales
+    public List<Item> ObtenerItemsDisponibles()
+    {
+        return itemsDisponibles;
+    }
+
+    public List<Item> ObtenerTodosLosItems()
+    {
+        return itemsDisponibles;
     }
     #endregion
 }
