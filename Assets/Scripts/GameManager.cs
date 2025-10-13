@@ -156,7 +156,6 @@ public class GameManager : MonoBehaviour
         TaskManager.instance.OcultarListaTareas();
         MenuPausa.instance.OcultarBotonPausa();
         InventarioManager.Instance.OcultarInventarioCompleto();
-        panelFinNivel.gameObject.SetActive(true);
 
         int diaMostrado = nivelActual;
         nivelActual++;
@@ -164,9 +163,31 @@ public class GameManager : MonoBehaviour
         var ruidoManager = FindFirstObjectByType<RuidoSalaDeLecturaManager>();
         if (ruidoManager != null)
         {
-            ruidoManager.DesactivarSalaRuidosa();
-            ruidoManager.CancelarPosibilidadDeEvento();
+            ruidoManager.OnSalaRuidosaDesactivada = null;
+
+            if (ruidoManager.EventoActivo)
+            {
+                bool cartelMostrado = false;
+
+                ruidoManager.OnSalaRuidosaDesactivada += () =>
+                {
+                    if (!cartelMostrado)
+                    {
+                        cartelMostrado = true;
+                        StartCoroutine(MostrarCartelFinDeDia());
+                    }
+                };
+
+                yield break; 
+            }
+            else
+            {
+                ruidoManager.DesactivarSalaRuidosa();
+                ruidoManager.CancelarPosibilidadDeEvento();
+            }
         }
+
+        panelFinNivel.gameObject.SetActive(true);
 
         var handleTitulo = textoFinDiaLocalized.GetLocalizedStringAsync();
         yield return handleTitulo;

@@ -28,6 +28,11 @@ public class RuidoSalaDeLecturaManager : MonoBehaviour
     private bool eventosPermitidos = true;
     #endregion
 
+    #region Eventos Públicos
+    public System.Action OnSalaRuidosaDesactivada;
+    public bool EventoActivo => eventoActivo;
+    #endregion
+
     #region Ciclo de Vida
     private void Awake()
     {
@@ -55,9 +60,7 @@ public class RuidoSalaDeLecturaManager : MonoBehaviour
     public void IntentarActivarSalaRuidosa()
     {
         if (!eventosPermitidos) 
-        {
             return;
-        }
 
         if (eventoActivo || esperandoProbabilidad)
             return;
@@ -177,6 +180,8 @@ public class RuidoSalaDeLecturaManager : MonoBehaviour
             botonDetenerRuido.SetActive(false);
 
         catDialogues?.FinalizarDialogo();
+
+        OnSalaRuidosaDesactivada?.Invoke();
 
         if (eventosPermitidos)
             IntentarActivarSalaRuidosa();

@@ -95,6 +95,7 @@ public class CatDialogues : MonoBehaviour
 
     private void StartDialogue()
     {
+        CameraManager.instance?.DesactivarBotonCamaraBiblioteca();
         if (gatoAnimator != null)
         {
             gatoAnimator.SetTrigger("gatoHablando");
@@ -170,6 +171,7 @@ public class CatDialogues : MonoBehaviour
     public System.Action OnDialogoExtraFinalizado;
     public void FinalizarDialogo()
     {
+        CameraManager.instance?.ActivarBotonCamaraBiblioteca();
         if (gatoAnimator != null)
         {
             gatoAnimator.SetTrigger("gatoDescansando");

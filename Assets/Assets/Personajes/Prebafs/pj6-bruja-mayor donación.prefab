@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3892951439070596770}
   - component: {fileID: 1177564428679998758}
   m_Layer: 0
-  m_Name: pj10-coleccionista devolucion
+  m_Name: "pj6-bruja-mayor donaci\xF3n"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -79,12 +79,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -3
-  m_Sprite: {fileID: -440053791, guid: 25d4922366bb00f4ea48642a1a0539de, type: 3}
+  m_Sprite: {fileID: 199910097, guid: 68ad608c8f0e52745af1cbbc76225bd4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 4.28, y: 8}
+  m_Size: {x: 4.87, y: 7.09}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -128,8 +128,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.28, y: 8}
-    newSize: {x: 4.28, y: 8}
+    oldSize: {x: 4.87, y: 8}
+    newSize: {x: 4.87, y: 7.09}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -148,19 +148,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df2f3b74621b28f49a0a8e3505329b67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tipoDePedido: 7
+  tipoDePedido: 6
   dialogueLinesInicio:
-  - "Coleccionista_Devoluci\xF3n_1"
+  - BrujaMayor1_Inicio_1
+  - BrujaMayor1_Inicio_2
+  - BrujaMayor1_Inicio_3
+  - BrujaMayor1_Inicio_4
+  - BrujaMayor1_Inicio_5
   dialogueLinesBuena:
-  - "Coleccionista_Devoluci\xF3n_2"
+  - BrujaMayor1_Buena_1
+  - BrujaMayor1_Buena_2
+  - BrujaMayor1_Buena_3
   dialogueLinesMala:
-  - ...
-  spriteRespuestaBuena: {fileID: -581190463, guid: 25d4922366bb00f4ea48642a1a0539de, type: 3}
-  spriteRespuestaMala: {fileID: 587403971, guid: 25d4922366bb00f4ea48642a1a0539de, type: 3}
-  libroDeseadoID: 62
-  tipoPreferido: terror
-  nombreDelCliente: Coleccionista
-  descripcionPedido: Devolucion
+  - BrujaMayor1_Mala_1
+  - BrujaMayor1_Mala_2
+  - BrujaMayor1_Mala_3
+  spriteRespuestaBuena: {fileID: 199910097, guid: 68ad608c8f0e52745af1cbbc76225bd4, type: 3}
+  spriteRespuestaMala: {fileID: -1394314759, guid: 68ad608c8f0e52745af1cbbc76225bd4, type: 3}
+  libroDeseadoID: 42
+  tipoPreferido: recetas
+  nombreDelCliente: BrujaMayor
+  descripcionPedido: BrujaMayor_Des
   stickersRequeridos: 
   pistasReparacion: []
   categoriaLibroReparar: 0
@@ -176,7 +184,7 @@ MonoBehaviour:
     m_LocalVariables: []
   setStickersDeseado: 0
   pistasPortada: []
-  hechizoSolicitado: 0
+  hechizoSolicitado: 1
   tituloLibroHechizadoKey:
     m_TableReference:
       m_TableCollectionName: 
@@ -186,12 +194,52 @@ MonoBehaviour:
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
-  pistasHechizo: []
+  pistasHechizo:
+  - m_TableReference:
+      m_TableCollectionName: GUID:ffdf678cb2a3ab94e96750349361a141
+    m_TableEntryReference:
+      m_KeyId: 5704949760
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:ffdf678cb2a3ab94e96750349361a141
+    m_TableEntryReference:
+      m_KeyId: 32477192192
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:ffdf678cb2a3ab94e96750349361a141
+    m_TableEntryReference:
+      m_KeyId: 44732948480
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:ffdf678cb2a3ab94e96750349361a141
+    m_TableEntryReference:
+      m_KeyId: 56460222464
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:ffdf678cb2a3ab94e96750349361a141
+    m_TableEntryReference:
+      m_KeyId: 67864535040
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   claveMensajeCriptograma: 
   m_preguntasTrivia: []
   libroDonadoID: 0
-  libroDevueltoID: 61
-  tituloLibroDevuelto: L2terror
+  libroDevueltoID: 0
+  tituloLibroDevuelto: 
   tituloLibroDevueltoKey:
     m_TableReference:
       m_TableCollectionName: 
