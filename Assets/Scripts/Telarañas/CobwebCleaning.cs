@@ -2,8 +2,9 @@ using UnityEngine;
 
 public class CobwebCleaning : MonoBehaviour
 {
-    public float cantidadClicsParaDesaparecer = 5f;
-    private float clicsActuales = 0f;
+    [Header("Configuración de limpieza")]
+    public float cantidadClicsParaDesaparecer = 5f; 
+    private float progresoLimpieza = 0f;
     private SpriteRenderer sr;
 
     [Header("¿Es la telaraña del tutorial?")]
@@ -13,7 +14,7 @@ public class CobwebCleaning : MonoBehaviour
     public int nivelMinimo = 1;
 
     [Header("Sala a la que pertenece")]
-    public string sala; 
+    public string sala;
 
     [HideInInspector] public bool puedeInteractuar = true;
     [HideInInspector] public bool interaccionFueHabilitada = false;
@@ -31,15 +32,16 @@ public class CobwebCleaning : MonoBehaviour
             puedeInteractuar = false;
     }
 
-    private void OnMouseDown()
+    public void LimpiarTick(float delta)
     {
         if (!puedeInteractuar) return;
 
-        clicsActuales++;
-        float alpha = Mathf.Lerp(1f, 0f, clicsActuales / cantidadClicsParaDesaparecer);
+        progresoLimpieza += delta;
+
+        float alpha = Mathf.Lerp(1f, 0f, progresoLimpieza / cantidadClicsParaDesaparecer);
         sr.color = new Color(sr.color.r, sr.color.g, sr.color.b, alpha);
 
-        if (clicsActuales >= cantidadClicsParaDesaparecer)
+        if (progresoLimpieza >= cantidadClicsParaDesaparecer)
         {
             CobwebManager.instance.EliminarTelaraña(this);
             gameObject.SetActive(false);
@@ -53,9 +55,9 @@ public class CobwebCleaning : MonoBehaviour
 
     public void ReiniciarTelaraña()
     {
-        clicsActuales = 0f;
+        progresoLimpieza = 0f;
 
-        if (sr == null) 
+        if (sr == null)
             sr = GetComponent<SpriteRenderer>();
 
         if (sr != null)

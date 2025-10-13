@@ -10,7 +10,7 @@ public class CobwebManager : MonoBehaviour
     private List<CobwebCleaning> telarañasActivas = new List<CobwebCleaning>();
     private bool gameManagerListo = false;
 
-    private const int maxPorSala = 3; 
+    private const int maxPorSala = 3;
 
     private void Awake()
     {
@@ -53,7 +53,7 @@ public class CobwebManager : MonoBehaviour
 
         foreach (CobwebCleaning t in todasLasTelarañas)
         {
-            if (t != null)   
+            if (t != null)
                 t.ReiniciarTelaraña();
         }
 
@@ -83,7 +83,7 @@ public class CobwebManager : MonoBehaviour
                     if (!telarañasActivas.Contains(t))
                         telarañasActivas.Add(t);
                 }
-                continue; 
+                continue;
             }
 
             if (nivelActual == 1)
@@ -127,4 +127,8 @@ public class CobwebManager : MonoBehaviour
         Debug.Log($"Nivel {nivelActual}: Activadas {telarañasActivas.Count} telarañas (Tutorial incluida: {nivelActual == 1})");
     }
 
+    public List<CobwebCleaning> ObtenerTelarañasActivas()
+    {
+        return new List<CobwebCleaning>(telarañasActivas);
+    }
 }
