@@ -1133,22 +1133,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   imagenUI: {fileID: 1397782870}
-  imagenes:
-  - {fileID: -855298285791758126, guid: 077d6dd72fac5a44eb311dfc805904ef, type: 3}
-  - {fileID: 4941998722648637955, guid: a98e508702d2e4c45b30f8ad510f39ef, type: 3}
-  - {fileID: -6861306803392217323, guid: dcc8b0f18abbe144ca95d1679511f5b4, type: 3}
-  - {fileID: 6937817954938267909, guid: 373b6b68e13b74949a1dc3259f04ef98, type: 3}
-  - {fileID: -8340546935106921150, guid: 7dd991d38db5e1448b855edabf498c49, type: 3}
-  - {fileID: -7254447487243667316, guid: cf06c21eaf2088d4199ec090bfb22de4, type: 3}
-  - {fileID: -6470460504253458178, guid: 63ab2b78fcf75b3488f4d5603344f040, type: 3}
-  - {fileID: 1090376217813512402, guid: 6525c55442697764bb216e7e3db1eb33, type: 3}
-  - {fileID: -3033962309406360609, guid: 3cbaa5a662919e849ae9a3602ddf063e, type: 3}
-  - {fileID: -2048401832836714687, guid: 107d86daf4c57d343a98c6018fb6f779, type: 3}
-  - {fileID: -4178046375966092550, guid: 88955814be9989d479a2611a7cbcbd72, type: 3}
-  - {fileID: -2006298336991220807, guid: 5c2d871e86d1eff4c8f8b16e9dbf7f85, type: 3}
-  - {fileID: -5065918741699235849, guid: eb07afda378a79d458eb84e56291a0a0, type: 3}
-  - {fileID: 4130640169021434097, guid: b55f9c359adeb5e498fbca4f288056e4, type: 3}
-  - {fileID: 8166355864642938, guid: 6e01285d9ea4a69438f254bea5591203, type: 3}
   gruposDeTexto:
   - {fileID: 248414729}
   - {fileID: 692959247}
@@ -1165,7 +1149,24 @@ MonoBehaviour:
   - {fileID: 86632494}
   - {fileID: 248414729}
   - {fileID: 1433587982}
+  imagenes:
+  - {fileID: -855298285791758126, guid: 077d6dd72fac5a44eb311dfc805904ef, type: 3}
+  - {fileID: 4941998722648637955, guid: a98e508702d2e4c45b30f8ad510f39ef, type: 3}
+  - {fileID: -6861306803392217323, guid: dcc8b0f18abbe144ca95d1679511f5b4, type: 3}
+  - {fileID: 6937817954938267909, guid: 373b6b68e13b74949a1dc3259f04ef98, type: 3}
+  - {fileID: -8340546935106921150, guid: 7dd991d38db5e1448b855edabf498c49, type: 3}
+  - {fileID: -7254447487243667316, guid: cf06c21eaf2088d4199ec090bfb22de4, type: 3}
+  - {fileID: -6470460504253458178, guid: 63ab2b78fcf75b3488f4d5603344f040, type: 3}
+  - {fileID: 1090376217813512402, guid: 6525c55442697764bb216e7e3db1eb33, type: 3}
+  - {fileID: -3033962309406360609, guid: 3cbaa5a662919e849ae9a3602ddf063e, type: 3}
+  - {fileID: -2048401832836714687, guid: 107d86daf4c57d343a98c6018fb6f779, type: 3}
+  - {fileID: -4178046375966092550, guid: 88955814be9989d479a2611a7cbcbd72, type: 3}
+  - {fileID: -2006298336991220807, guid: 5c2d871e86d1eff4c8f8b16e9dbf7f85, type: 3}
+  - {fileID: -5065918741699235849, guid: eb07afda378a79d458eb84e56291a0a0, type: 3}
+  - {fileID: 4130640169021434097, guid: b55f9c359adeb5e498fbca4f288056e4, type: 3}
+  - {fileID: 8166355864642938, guid: 6e01285d9ea4a69438f254bea5591203, type: 3}
   tiempoPorImagen: 2
+  escenaSiguiente: Gameplay
 --- !u!4 &658888299
 Transform:
   m_ObjectHideFlags: 0
@@ -2758,7 +2759,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 842, y: -558}
+  m_AnchoredPosition: {x: 1664, y: -797}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1458551060
@@ -2862,7 +2863,7 @@ MonoBehaviour:
   m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 282bd1408f3a58648aa6336cd8b55445, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 7822390024991218659, guid: 282bd1408f3a58648aa6336cd8b55445, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2886,7 +2887,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 61.05
+  m_fontSize: 64.35
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2927,7 +2928,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1458551064

@@ -69,6 +69,7 @@ public class CameraManager : MonoBehaviour
     public void CambiarCamara(int cameraIndex)
     {
         TaskManager.instance.OcultarListaTareas();
+        InventarioManager.Instance.CerrarInventario();
 
         if (cameraIndex < 0 || cameraIndex >= cameras.Length) return;
 

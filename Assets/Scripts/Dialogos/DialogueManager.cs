@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine.UI;
 using System.Collections.Generic;
 using Unity.Services.Analytics;
-using static EventManager; 
+using static EventManager;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -56,9 +56,9 @@ public class DialogueManager : MonoBehaviour
         botonRepetir?.onClick.AddListener(ReiniciarDialogo);
         botonFinalizar?.onClick.AddListener(FinalizarDialogo);
         dialogueMark?.onClick.AddListener(EmpezarDialogoResultado);
-
         characterAttributes = GetComponent<CharacterAttributes>();
-
+        dialoguePanel?.SetActive(false);
+        dialogueText.text = "";
         botonSiguiente?.gameObject.SetActive(false);
         botonRepetir?.gameObject.SetActive(false);
         botonFinalizar?.gameObject.SetActive(false);
@@ -77,14 +77,25 @@ public class DialogueManager : MonoBehaviour
     private void StartDialogue()
     {
         if (characterAttributes == null) return;
-        CameraManager.instance?.DesactivarBotonCamaraBiblioteca();
-        TaskManager.instance.OcultarListaTareas();
+
+        if (typingCoroutine != null)
+        {
+            StopCoroutine(typingCoroutine);
+            typingCoroutine = null;
+        }
+        isTyping = false;
+
+        dialogueText.text = "";
+        dialogueText.ForceMeshUpdate(); 
         dialoguePanel.SetActive(true);
         dialogueMark.gameObject.SetActive(false);
 
+        CameraManager.instance?.DesactivarBotonCamaraBiblioteca();
+        TaskManager.instance?.OcultarListaTareas();
+
         didDialogueStart = true;
         dialogoRepetido = false;
-        tiempoInicioDialogo = Time.time;  
+        tiempoInicioDialogo = Time.time;
 
         switch (GameManager.instance.resultadoRecomendacion)
         {
@@ -108,6 +119,16 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
+        if (typingCoroutine != null)
+        {
+            StopCoroutine(typingCoroutine);
+            typingCoroutine = null;
+        }
+        isTyping = false;
+
+        dialogueText.text = "";
+        dialogueText.ForceMeshUpdate();
+
         dialogueLines = localizedLines.ToArray();
         lineIndex = 0;
         hasInteracted = false;
@@ -126,6 +147,7 @@ public class DialogueManager : MonoBehaviour
         if (isTyping)
         {
             StopCoroutine(typingCoroutine);
+            typingCoroutine = null;
             dialogueText.text = dialogueLines[lineIndex];
             isTyping = false;
             return;
@@ -149,6 +171,7 @@ public class DialogueManager : MonoBehaviour
     {
         isTyping = true;
         dialogueText.text = "";
+        dialogueText.ForceMeshUpdate();
 
         foreach (char ch in dialogueLines[lineIndex])
         {
@@ -169,17 +192,19 @@ public class DialogueManager : MonoBehaviour
     {
         dialogoRepetido = true;
 
-        if (isTyping)
+        if (typingCoroutine != null)
         {
             StopCoroutine(typingCoroutine);
-            dialogueText.text = dialogueLines[lineIndex];
-            isTyping = false;
-            return;
+            typingCoroutine = null;
         }
+        isTyping = false;
+
+        dialogueText.text = "";
+        dialogueText.ForceMeshUpdate();
 
         if (characterAttributes == null) return;
 
-        TaskManager.instance.OcultarListaTareas();
+        TaskManager.instance?.OcultarListaTareas();
         dialoguePanel.SetActive(true);
         dialogueMark.gameObject.SetActive(false);
 
@@ -239,7 +264,7 @@ public class DialogueManager : MonoBehaviour
         dlgEvent.level = GameManager.instance.nivelActual;
 
 #if !UNITY_EDITOR
-    Unity.Services.Analytics.AnalyticsService.Instance.RecordEvent(dlgEvent);
+        Unity.Services.Analytics.AnalyticsService.Instance.RecordEvent(dlgEvent);
 #else
         Debug.Log($"[ANALYTICS] DialogoEvent repeat={dialogoRepetido}, timeDialogue={Mathf.RoundToInt(Time.time - tiempoInicioDialogo)}, level={GameManager.instance.nivelActual}");
 #endif

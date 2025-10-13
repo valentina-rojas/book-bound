@@ -95,13 +95,21 @@ public class CatDialogues : MonoBehaviour
 
     private void StartDialogue()
     {
+        if (typingCoroutine != null)
+        {
+            StopCoroutine(typingCoroutine);
+            typingCoroutine = null;
+        }
+        isTyping = false;
+        cancelandoDialogo = false;
+        dialogueText.text = "";
+
         CameraManager.instance?.DesactivarBotonCamaraBiblioteca();
         if (gatoAnimator != null)
-        {
             gatoAnimator.SetTrigger("gatoHablando");
-        }
         if (TendCat.instance != null)
             TendCat.instance.puedeAcariciar = false;
+
         dialoguePanel.SetActive(true);
         lineIndex = 0;
 
@@ -263,11 +271,14 @@ public class CatDialogues : MonoBehaviour
 
     private void OnBotonRepetirClick()
     {
-        if (isTyping)
+        if (isTyping && typingCoroutine != null)
         {
             StopCoroutine(typingCoroutine);
-            isTyping = false;
+            typingCoroutine = null;
         }
+        isTyping = false;
+
+        dialogueText.text = "";
 
         StartDialogue();
     }
