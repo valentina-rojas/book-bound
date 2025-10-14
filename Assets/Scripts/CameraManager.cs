@@ -24,6 +24,7 @@ public class CameraManager : MonoBehaviour
     public GameObject panelPortada;
     public GameObject panelHechizo;
     public GameObject panelTraduccion; 
+    public GameObject panelEncanto;
     public GameObject panelDonar;
     public GameObject panelDevolver;
 
@@ -259,6 +260,29 @@ public class CameraManager : MonoBehaviour
         if (TendCat.instance != null)
             TendCat.instance.puedeAcariciar = true;
     }
+
+    public void ActivarPanelEncanto()
+    {
+        panelEncanto.SetActive(true);
+        TaskManager.instance.OcultarBotonTareasMinijuegos();
+        InventarioManager.Instance.OcultarInventarioCompleto();
+        HistorialManager.Instance.OcultarBotonAbrirHistorial();
+        EconomyManager.instance.OcultarContenedorDinero();
+        if (TendCat.instance != null)
+            TendCat.instance.puedeAcariciar = false;
+    }
+
+    public void DesctivarPanelEncanto()
+    {
+        panelEncanto.SetActive(false);
+        InventarioManager.Instance.MostrarInventarioCompleto();
+        HistorialManager.Instance.MostrarBotonAbrirHistorial();
+        EconomyManager.instance.MostrarContenedorDinero();
+        TaskManager.instance.MostrarListaTareas();
+        if (TendCat.instance != null)
+            TendCat.instance.puedeAcariciar = true;
+    }
+
 
     public void ActivarPanelDonar()
     {

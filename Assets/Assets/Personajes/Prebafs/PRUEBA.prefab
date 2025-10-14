@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2788377987506924977}
   - component: {fileID: 4978074495582524776}
   m_Layer: 0
-  m_Name: PRUEBA TRADUCCION
+  m_Name: PRUEBA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -148,20 +148,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df2f3b74621b28f49a0a8e3505329b67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tipoDePedido: 5
+  tipoDePedido: 8
   dialogueLinesInicio:
   - Mago_Inicio_1
-  - Mago_Inicio_2
-  - Mago_Inicio_3
-  - Mago_Inicio_4
-  - Mago_Inicio_5
-  - Mago_Inicio_6
-  - Mago_Inicio_7
-  - Mago_Inicio_8
-  - Mago_Inicio_9
   dialogueLinesBuena:
-  - Mago_Buena_1
-  - Mago_Buena_2
   - Mago_Buena_3
   dialogueLinesMala:
   - Mago_Mala_1

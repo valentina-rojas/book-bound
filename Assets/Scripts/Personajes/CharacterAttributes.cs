@@ -15,7 +15,8 @@ public class CharacterAttributes : MonoBehaviour
         JuegoTrivia,
         Traduccion,
         DonarLibro,
-        DevolverLibro 
+        DevolverLibro,
+        EncantarLibro
     }
 
     public enum Hechizo

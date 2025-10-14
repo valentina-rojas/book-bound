@@ -485,6 +485,14 @@ public class GameManager : MonoBehaviour
         ActualizarSpritePersonaje();
     }
 
+    public void CompletarEncanto()
+    {
+        resultadoRecomendacion = ResultadoRecomendacion.Buena;
+        recomendacionesBuenas++;
+        EconomyManager.instance.SumarDinero(30);
+        ActualizarSpritePersonaje();
+    }
+
     public void CompletarTrivia(int correctas, int incorrectas)
     {
         if (correctas > incorrectas)

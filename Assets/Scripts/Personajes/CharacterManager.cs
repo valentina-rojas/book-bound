@@ -93,6 +93,10 @@ public class CharacterManager : MonoBehaviour
                     hintsHechizos.ReactivarSistemaHints(); 
                 }
                 break;
+            case CharacterAttributes.TipoDePedido.EncantarLibro:
+                Debug.Log("Este personaje quiere encantar un libro");
+                CameraManager.instance.ActivarPanelEncanto();
+                break;
             case CharacterAttributes.TipoDePedido.Traduccion:
                 Debug.Log("Este personaje quiere traducir un libro.");
                 CameraManager.instance.ActivarPanelTraduccion();
