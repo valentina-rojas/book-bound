@@ -134,18 +134,18 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 292
-        height: 270
+        width: 282
+        height: 280
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 29c80840e3eda3e80800000000000000
-      internalID: -8197995813729694574
+      spriteID: a1ae134cef1240446b7560996001c329
+      internalID: 1332360580
       vertices: []
       indices: 
       edges: []
@@ -154,20 +154,20 @@ TextureImporter:
       name: vendedor_1
       rect:
         serializedVersion: 2
-        x: 299
+        x: 282
         y: 0
-        width: 283
-        height: 270
+        width: 282
+        height: 280
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 566da58ad53ec67f0800000000000000
-      internalID: -617869057460611483
+      spriteID: b8168e6dd744be346889e9b724ab71c3
+      internalID: -697998050
       vertices: []
       indices: 
       edges: []
@@ -176,7 +176,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: dbb8a0ad195e651469567686e48367ca
     internalID: 0
     vertices: []
     indices: 
@@ -186,8 +186,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      vendedor_0: -8197995813729694574
-      vendedor_1: -617869057460611483
+      vendedor_0: 1332360580
+      vendedor_1: -697998050
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
