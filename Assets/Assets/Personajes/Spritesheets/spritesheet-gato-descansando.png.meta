@@ -168,8 +168,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d3977d739922aeb4db987d541304df4f
-      internalID: 1882405160
+      spriteID: 3ca6aa53af492114f991a24eae4b1abb
+      internalID: -787857852
       vertices: []
       indices: 
       edges: []
@@ -190,8 +190,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fd907a32a486a444a9446002982d555e
-      internalID: -1031455142
+      spriteID: e2de990f8c27d514c89812728692178d
+      internalID: 1489202538
       vertices: []
       indices: 
       edges: []
@@ -212,8 +212,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e6f7f77affedac748ab7ef77ae950846
-      internalID: -1739304397
+      spriteID: 77c9f2c774975b346a4a67a20386aea9
+      internalID: -1314502526
       vertices: []
       indices: 
       edges: []
@@ -234,8 +234,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 38544f4fa34d7aa4cac510cd601bd272
-      internalID: -335615273
+      spriteID: b998659488b24df459f278734e794b2b
+      internalID: 361206274
       vertices: []
       indices: 
       edges: []
@@ -256,8 +256,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 32a9f61946520c04c8949eef274647f0
-      internalID: -1608704835
+      spriteID: ff630087baba888428b958e845046153
+      internalID: -1796459418
       vertices: []
       indices: 
       edges: []
@@ -278,8 +278,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 85e62edd6378d5f498e876e75a64071f
-      internalID: 1631165782
+      spriteID: dc11f586891bed142b7767272b9a3a32
+      internalID: 1810029425
       vertices: []
       indices: 
       edges: []
@@ -300,8 +300,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b1cd103f5263e4742949be6c018a26cb
-      internalID: 870555568
+      spriteID: ddd809cf1a1261e43acca31b7ac46e20
+      internalID: -2127255560
       vertices: []
       indices: 
       edges: []
@@ -322,8 +322,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ead8a7b2c5d5f904a8f2f4acdd71f1f1
-      internalID: 88220469
+      spriteID: 6f1093fe4247cac42bb66227a98963e0
+      internalID: 1492818746
       vertices: []
       indices: 
       edges: []
@@ -344,8 +344,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9344ee47530d35346a7794db66570b02
-      internalID: 1006491736
+      spriteID: 030649184dc493348baea3b0daa71367
+      internalID: -339476143
       vertices: []
       indices: 
       edges: []
@@ -366,8 +366,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0f244369c8495de4aba341f5cba6bfb1
-      internalID: -568886270
+      spriteID: 9a56d8cc345c6c04e8d4625b072529ef
+      internalID: 1709612768
       vertices: []
       indices: 
       edges: []
@@ -376,7 +376,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: df622948f2e96284d9d90a2753880c39
+    spriteID: 483b645fd5781ae4d93a545d1328bd75
     internalID: 0
     vertices: []
     indices: 
@@ -386,16 +386,16 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      spritesheet-gato-descansando_0: 1882405160
-      spritesheet-gato-descansando_1: -1031455142
-      spritesheet-gato-descansando_2: -1739304397
-      spritesheet-gato-descansando_3: -335615273
-      spritesheet-gato-descansando_4: -1608704835
-      spritesheet-gato-descansando_5: 1631165782
-      spritesheet-gato-descansando_6: 870555568
-      spritesheet-gato-descansando_7: 88220469
-      spritesheet-gato-descansando_8: 1006491736
-      spritesheet-gato-descansando_9: -568886270
+      spritesheet-gato-descansando_0: -787857852
+      spritesheet-gato-descansando_1: 1489202538
+      spritesheet-gato-descansando_2: -1314502526
+      spritesheet-gato-descansando_3: 361206274
+      spritesheet-gato-descansando_4: -1796459418
+      spritesheet-gato-descansando_5: 1810029425
+      spritesheet-gato-descansando_6: -2127255560
+      spritesheet-gato-descansando_7: 1492818746
+      spritesheet-gato-descansando_8: -339476143
+      spritesheet-gato-descansando_9: 1709612768
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

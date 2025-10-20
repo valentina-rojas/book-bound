@@ -168,8 +168,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 75429bbaf63e53b4fb283079bea33cf7
-      internalID: 484446948
+      spriteID: 68d87db46972dbd4c8898a27e6de5887
+      internalID: 2001930
       vertices: []
       indices: 
       edges: []
@@ -190,8 +190,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 13491c9390a8a734db0f828e96cf5676
-      internalID: -1065278484
+      spriteID: f554d61223c471d46be126e8322d1f0b
+      internalID: 334852540
       vertices: []
       indices: 
       edges: []
@@ -212,8 +212,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 14187a0742d4a6f4885c008d109d636d
-      internalID: -480272456
+      spriteID: 3d2a834ef1e1d1740a36bc82f476bb03
+      internalID: -246519353
       vertices: []
       indices: 
       edges: []
@@ -234,8 +234,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cee79efaa3680b340b95709ea2999429
-      internalID: -683424116
+      spriteID: e9a0d8c14b8dd2849967923814c12f05
+      internalID: 1760128182
       vertices: []
       indices: 
       edges: []
@@ -256,8 +256,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b1a62f5f68c474a4da3c667c817ca3ae
-      internalID: 2040231312
+      spriteID: acacf1e06d937c94cbd4ceab83837864
+      internalID: -1435166496
       vertices: []
       indices: 
       edges: []
@@ -278,8 +278,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2b1a0d4a01b68874b94101a58bfb48b6
-      internalID: -1462582771
+      spriteID: 54355e6c4067a234c944277ee2571c32
+      internalID: -1265719785
       vertices: []
       indices: 
       edges: []
@@ -300,8 +300,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e4ac4a31919a3bd48bdcdf45a1f7ce7e
-      internalID: 1240498885
+      spriteID: f618e25575cdc564a86c88229d8be062
+      internalID: 47754319
       vertices: []
       indices: 
       edges: []
@@ -322,8 +322,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 20483930ce78e53488baa5a14c83fa5d
-      internalID: 1473983418
+      spriteID: 195339db48c03124ea2147c3e34d30a4
+      internalID: 812397073
       vertices: []
       indices: 
       edges: []
@@ -344,8 +344,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee2a407eaa68b3445a5a323e8b1f1512
-      internalID: 1648264493
+      spriteID: 2fec0a4cab211ba459d3a335a44ed7dc
+      internalID: -1858603605
       vertices: []
       indices: 
       edges: []
@@ -366,8 +366,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2a423e30702aec04283bcb02aefec498
-      internalID: 1494614581
+      spriteID: c291b407dfff1494b87447545aea1985
+      internalID: 538634155
       vertices: []
       indices: 
       edges: []
@@ -376,7 +376,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: b102e5cae6324b6458455267585ac68d
+    spriteID: 6d682ace9896e55468a1ac0c44d15f54
     internalID: 0
     vertices: []
     indices: 
@@ -386,16 +386,16 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      spritesheet-gato-hablando_0: 484446948
-      spritesheet-gato-hablando_1: -1065278484
-      spritesheet-gato-hablando_2: -480272456
-      spritesheet-gato-hablando_3: -683424116
-      spritesheet-gato-hablando_4: 2040231312
-      spritesheet-gato-hablando_5: -1462582771
-      spritesheet-gato-hablando_6: 1240498885
-      spritesheet-gato-hablando_7: 1473983418
-      spritesheet-gato-hablando_8: 1648264493
-      spritesheet-gato-hablando_9: 1494614581
+      spritesheet-gato-hablando_0: 2001930
+      spritesheet-gato-hablando_1: 334852540
+      spritesheet-gato-hablando_2: -246519353
+      spritesheet-gato-hablando_3: 1760128182
+      spritesheet-gato-hablando_4: -1435166496
+      spritesheet-gato-hablando_5: -1265719785
+      spritesheet-gato-hablando_6: 47754319
+      spritesheet-gato-hablando_7: 812397073
+      spritesheet-gato-hablando_8: -1858603605
+      spritesheet-gato-hablando_9: 538634155
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
