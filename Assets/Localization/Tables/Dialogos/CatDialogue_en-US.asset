@@ -173,6 +173,55 @@ MonoBehaviour:
     m_Localized: But otherwise, you're doing well! Keep it up!
     m_Metadata:
       m_Items: []
+  - m_Id: 32994050223808512
+    m_Localized: "I hope you came with lots of energy today\u2026"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32994050257362944
+    m_Localized: There are new orders to attend to.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32994050257362945
+    m_Localized: And a lot to do.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32994050257362946
+    m_Localized: Have a great day!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32994050257362947
+    m_Localized: "You\u2019re almost at the end of your stay here."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32994050257362948
+    m_Localized: "I can say that you\u2019ve been a great help while Rhea was away
+      on her trip."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32994050257362949
+    m_Localized: "One more effort, and you\u2019ll be able to take your own vacation."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32994050257362950
+    m_Localized: "Today is your last day \u2014 how do you feel?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32994050257362951
+    m_Localized: "I hope you\u2019ve been comfortable and happy all this time."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32994050257362952
+    m_Localized: "I have to admit, I\u2019ll miss your presence."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32994050257362953
+    m_Localized: I hope to see you again soon.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32994050257362954
+    m_Localized: Who knows, the future is an open book.
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

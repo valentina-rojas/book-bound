@@ -174,6 +174,54 @@ MonoBehaviour:
     m_Localized: "Pero por el resto vas bien \xA1Sigue as\xED!"
     m_Metadata:
       m_Items: []
+  - m_Id: 32994050223808512
+    m_Localized: "Espero que hayas venido con mucha energ\xEDa hoy..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32994050257362944
+    m_Localized: hay nuevos pedidos que atender.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32994050257362945
+    m_Localized: Y mucho por hacer.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32994050257362946
+    m_Localized: "\xA1Que tengas un buen d\xEDa!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32994050257362947
+    m_Localized: "Ya casi llegas al final de tu estad\xEDa aqu\xED."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32994050257362948
+    m_Localized: Puedo decir que has ayudado mucho mientras Rhea estuvo de viaje.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32994050257362949
+    m_Localized: "Un esfuerzo m\xE1s y ya podr\xE1s tomarte tus propias vacaciones."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32994050257362950
+    m_Localized: "Hoy es tu \xFAltimo d\xEDa \xBFc\xF3mo te sientes? "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32994050257362951
+    m_Localized: Espero que hayas estado a gusto todo este tiempo.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32994050257362952
+    m_Localized: "Tengo que admitir que extra\xF1ar\xE9 tu presencia."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32994050257362953
+    m_Localized: Espero volver a verte pronto.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32994050257362954
+    m_Localized: Quien sabe, el futuro es un libro abierto.
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
