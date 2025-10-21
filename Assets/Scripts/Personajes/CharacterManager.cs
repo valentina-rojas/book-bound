@@ -96,6 +96,7 @@ public class CharacterManager : MonoBehaviour
             case CharacterAttributes.TipoDePedido.EncantarLibro:
                 Debug.Log("Este personaje quiere encantar un libro");
                 CameraManager.instance.ActivarPanelEncanto();
+                EncantoManager.instance.ActivarEncanto(personaje.tipoEncantoSolicitado);
                 break;
             case CharacterAttributes.TipoDePedido.Traduccion:
                 Debug.Log("Este personaje quiere traducir un libro.");

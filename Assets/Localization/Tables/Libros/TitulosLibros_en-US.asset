@@ -94,6 +94,14 @@ MonoBehaviour:
     m_Localized: Whispers Behind the Closed Door
     m_Metadata:
       m_Items: []
+  - m_Id: 32358060337569792
+    m_Localized: The Great Enchanted Feast
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32358060354347008
+    m_Localized: 'Magic Wars: From Conflict to Peace'
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

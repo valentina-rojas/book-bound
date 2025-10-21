@@ -46,12 +46,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   localizationKey: Q3
   options:
-  - localizationKey: A7
-    correct: 0
-    text: Compendio de plantas susurrantes
   - localizationKey: A8
     correct: 1
     text: Herbarium de sombras y lumbres
+  - localizationKey: A7
+    correct: 0
+    text: Compendio de plantas susurrantes
   - localizationKey: A9
     correct: 0
     text: Hierbas y sabores de reinos olvidados

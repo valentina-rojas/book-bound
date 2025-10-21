@@ -28,6 +28,15 @@ public class CharacterAttributes : MonoBehaviour
         Restauracion,
         Comunicacion
     }
+
+    public enum TipoEncanto
+    {
+        Ninguno,
+        MalDeOjo,
+        Resfriado,
+        Hongos,
+        Verrugas
+    }
     #endregion
 
     #region Propiedades Generales
@@ -168,6 +177,11 @@ public class CharacterAttributes : MonoBehaviour
     #region Traducir
     [Header("Traducción")]
     public string claveMensajeCriptograma;
+    #endregion
+
+    #region Encanto 
+    [Header("Encanto")]
+    public TipoEncanto tipoEncantoSolicitado = TipoEncanto.Ninguno;
     #endregion
 
     #region Trivia

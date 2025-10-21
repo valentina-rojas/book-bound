@@ -178,6 +178,26 @@ MonoBehaviour:
       it is left.
     m_Metadata:
       m_Items: []
+  - m_Id: 32357888677289984
+    m_Localized: "Have you ever wanted to prepare delicious dishes for an entire
+      feast\u2026 in just minutes? This book is your ultimate guide to cooking large
+      quantities of food with magical recipes that delight everyone. Recipes that
+      multiply on their own, perfect for banquets and celebrations; culinary spells
+      that speed up cooking without losing flavor or texture; and tricks to make
+      even the most complicated dishes ready in the blink of an eye.\nIdeal for witches
+      and wizards who wish to feed families, friends, or magical creatures without
+      wasting time, while keeping the flavor in every dish."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32357888694067200
+    m_Localized: For centuries, dragons, elves, wizards, and other magical creatures
+      clashed in epic battles filled with spells and betrayals. This book recounts
+      the most intense conflicts and how, through heroism, cunning, and diplomacy,
+      peace was achieved among all magical species. A fascinating tale of magic,
+      power, and reconciliation that will captivate every lover of the history of
+      our world.
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

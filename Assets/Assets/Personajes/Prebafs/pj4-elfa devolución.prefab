@@ -79,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -3
-  m_Sprite: {fileID: -3656374577517229106, guid: 1b550e1cc6f31224fbc5c0b99cbe78a9, type: 3}
+  m_Sprite: {fileID: -1300581898, guid: afe1cec9e28d9a84099a7d453d54140b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -128,7 +128,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.79, y: 7.79}
+    oldSize: {x: 4.79, y: 8}
     newSize: {x: 4.79, y: 7.24}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -228,6 +228,7 @@ MonoBehaviour:
     m_LocalVariables: []
   pistasHechizo: []
   claveMensajeCriptograma: 
+  tipoEncantoSolicitado: 0
   m_preguntasTrivia: []
   libroDonadoID: 41
   libroDevueltoID: 1

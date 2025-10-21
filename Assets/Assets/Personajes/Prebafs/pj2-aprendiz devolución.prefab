@@ -79,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -3
-  m_Sprite: {fileID: 829811526, guid: b6f696f6fecafb949ae7a64dc6242b7e, type: 3}
+  m_Sprite: {fileID: -1118278708, guid: b6f696f6fecafb949ae7a64dc6242b7e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -229,6 +229,7 @@ MonoBehaviour:
     m_LocalVariables: []
   pistasHechizo: []
   claveMensajeCriptograma: 
+  tipoEncantoSolicitado: 0
   m_preguntasTrivia: []
   libroDonadoID: 51
   libroDevueltoID: 32

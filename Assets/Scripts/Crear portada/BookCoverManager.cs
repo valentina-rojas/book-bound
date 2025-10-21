@@ -20,6 +20,7 @@ public class BookCoverManager : MonoBehaviour
     public GameObject portadaDefault;
     public GameObject portadaAventura;
     public GameObject portadaAstronomico;
+    public GameObject portadaPlantas;
 
     public IEnumerator ActualizarTituloLibroDespuesDeFrame()
     {
@@ -70,6 +71,7 @@ public class BookCoverManager : MonoBehaviour
         portadaDefault?.SetActive(false);
         portadaAventura?.SetActive(false);
         portadaAstronomico?.SetActive(false);
+        portadaPlantas?.SetActive(false);
 
         switch (setDeseado)
         {
@@ -81,6 +83,9 @@ public class BookCoverManager : MonoBehaviour
                 break;
             case StickerSet.Astronomico:
                 portadaAstronomico?.SetActive(true);
+                break;
+            case StickerSet.Plantas:
+                portadaPlantas?.SetActive(true);
                 break;
         }
     }

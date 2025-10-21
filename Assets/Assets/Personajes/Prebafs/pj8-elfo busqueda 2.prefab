@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3892951439070596770}
   - component: {fileID: 1177564428679998758}
   m_Layer: 0
-  m_Name: pj14-aprendiz mago
+  m_Name: pj8-elfo busqueda 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -79,12 +79,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -3
-  m_Sprite: {fileID: 76207770, guid: 89b3e073facd6cf43897a9d86b2787a3, type: 3}
+  m_Sprite: {fileID: -707852886, guid: 716730f6229ca4f4fa5108dfe4366d6a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 4.38, y: 7.51}
+  m_Size: {x: 5.92, y: 8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -128,8 +128,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.38, y: 7.51}
-    newSize: {x: 4.38, y: 7.51}
+    oldSize: {x: 5.92, y: 8}
+    newSize: {x: 5.92, y: 8}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -150,21 +150,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tipoDePedido: 0
   dialogueLinesInicio:
-  - AprendizMago1_Inicio_1
-  - AprendizMago1_Inicio_2
-  - AprendizMago1_Inicio_3
-  - AprendizMago1_Inicio_4
-  - AprendizMago1_Inicio_5
+  - Elfo2_Inicio_1
+  - Elfo2_Inicio_2
+  - Elfo2_Inicio_3
+  - Elfo2_Inicio_4
   dialogueLinesBuena:
-  - AprendizMago1_Buena_1
+  - Elfo2_Buena_1
   dialogueLinesMala:
-  - AprendizMago1_Mala_1
-  spriteRespuestaBuena: {fileID: -711885313, guid: 89b3e073facd6cf43897a9d86b2787a3, type: 3}
-  spriteRespuestaMala: {fileID: 2013372324, guid: 89b3e073facd6cf43897a9d86b2787a3, type: 3}
-  libroDeseadoID: 22
+  - Elfo2_Mala_1
+  spriteRespuestaBuena: {fileID: 1485804103, guid: 716730f6229ca4f4fa5108dfe4366d6a, type: 3}
+  spriteRespuestaMala: {fileID: -165214668, guid: 716730f6229ca4f4fa5108dfe4366d6a, type: 3}
+  libroDeseadoID: 21
   tipoPreferido: pociones
-  nombreDelCliente: AprendizMago
-  descripcionPedido: AprendizMago_Des
+  nombreDelCliente: Elfo
+  descripcionPedido: Elfo1_Des
   stickersRequeridos: 
   pistasReparacion: []
   categoriaLibroReparar: 0
@@ -192,6 +191,7 @@ MonoBehaviour:
     m_LocalVariables: []
   pistasHechizo: []
   claveMensajeCriptograma: 
+  tipoEncantoSolicitado: 0
   m_preguntasTrivia: []
   libroDonadoID: 0
   libroDevueltoID: 0

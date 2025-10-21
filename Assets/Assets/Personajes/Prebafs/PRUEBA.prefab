@@ -152,7 +152,7 @@ MonoBehaviour:
   dialogueLinesInicio:
   - Mago_Inicio_1
   dialogueLinesBuena:
-  - Mago_Buena_3
+  - Mago_Buena_1
   dialogueLinesMala:
   - Mago_Mala_1
   spriteRespuestaBuena: {fileID: 6059626146354324672, guid: 978e32d032c63de4f8d06b5213269cfd, type: 3}
@@ -228,6 +228,7 @@ MonoBehaviour:
     m_LocalVariables: []
   pistasHechizo: []
   claveMensajeCriptograma: Traduccion2
+  tipoEncantoSolicitado: 2
   m_preguntasTrivia: []
   libroDonadoID: 0
   libroDevueltoID: 0

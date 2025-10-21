@@ -94,6 +94,14 @@ MonoBehaviour:
     m_Localized: Susurros Tras la Puerta Cerrada
     m_Metadata:
       m_Items: []
+  - m_Id: 32358060337569792
+    m_Localized: El Gran Banquete Encantado
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32358060354347008
+    m_Localized: 'Guerras de Magia: Del Conflicto a la Paz'
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

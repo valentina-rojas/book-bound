@@ -103,8 +103,32 @@ MonoBehaviour:
     m_Key: Vampira_Des
     m_Metadata:
       m_Items: []
+  - m_Id: 30067882805862400
+    m_Key: Mago_Des
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30067882818445312
+    m_Key: Ogro1_Des
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30067882818445313
+    m_Key: Elfo1_Des
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30067882818445314
+    m_Key: DonVinagre1_Des
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30067882818445315
+    m_Key: Elfa2_Des
+    m_Metadata:
+      m_Items: []
   - m_Id: 17375300330102784
     m_Key: "Traducci\xF3n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30070281138249728
+    m_Key: Encanto
     m_Metadata:
       m_Items: []
   m_Metadata:

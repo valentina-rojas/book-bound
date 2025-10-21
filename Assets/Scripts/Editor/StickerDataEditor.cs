@@ -77,6 +77,29 @@ public class StickerDataEditor : Editor
                     StickerID.Sol_Astronomia,
                     StickerID.Telescopio
                 };
+            case StickerSet.Plantas:
+                return new StickerID[]
+                {
+                    StickerID.Lirio,
+                    StickerID.Flor_pomposa,
+                    StickerID.Hongo_solo,
+                    StickerID.Planta_espinosa,
+                    StickerID.Cerezas,
+                    StickerID.Nenufar,
+                    StickerID.Hoja_corazon,
+                    StickerID.Bellota,
+                    StickerID.Nabo,
+                    StickerID.Carnivora_grande,
+                    StickerID.Hoja_plantas,
+                    StickerID.Trebol,
+                    StickerID.cactus,
+                    StickerID.Carnivora_chica,
+                    StickerID.Hoja_ondulada,
+                    StickerID.Hongos_duo,
+                    StickerID.Caracol,
+                    StickerID.Sapo,
+                    StickerID.Arbol
+                };
             default: 
                 return new StickerID[]
                 {

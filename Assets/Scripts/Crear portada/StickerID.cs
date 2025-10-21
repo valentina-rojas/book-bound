@@ -67,4 +67,25 @@ public enum StickerID
     Sol_Astronomia,
     Telescopio,
     #endregion
+    #region Plantas
+    Lirio,
+    Flor_pomposa,
+    Hongo_solo,
+    Planta_espinosa,
+    Cerezas,
+    Nenufar,
+    Hoja_corazon,
+    Bellota,
+    Nabo,
+    Carnivora_grande,
+    Hoja_plantas,
+    Trebol,
+    cactus,
+    Carnivora_chica,
+    Hoja_ondulada,
+    Hongos_duo,
+    Caracol,
+    Sapo,
+    Arbol,
+    #endregion
 }

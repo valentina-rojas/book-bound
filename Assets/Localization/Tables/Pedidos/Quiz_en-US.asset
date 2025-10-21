@@ -148,19 +148,19 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 10236841266159627
-    m_Localized: How many plants does Rhea have?
+    m_Localized: What appears at night and disappears during the day?
     m_Metadata:
       m_Items: []
   - m_Id: 10236841266159628
-    m_Localized: 5
+    m_Localized: A ghost
     m_Metadata:
       m_Items: []
   - m_Id: 10236841266159629
-    m_Localized: 6
+    m_Localized: A star
     m_Metadata:
       m_Items: []
   - m_Id: 10236841266159630
-    m_Localized: 7
+    m_Localized: The moon
     m_Metadata:
       m_Items: []
   - m_Id: 10236841266159631
@@ -178,6 +178,86 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 10236841266159634
     m_Localized: Magical Travel Stories
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32730176098574336
+    m_Localized: Which of these titles is a Potions book?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32730176119545856
+    m_Localized: Fire in the Blood
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32730176119545857
+    m_Localized: Herbarium of Shadows and Gleams
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32730176119545858
+    m_Localized: Compendium of Whispering Plants
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32730176119545859
+    m_Localized: What has leaves but is not a tree?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32730176119545860
+    m_Localized: Plant
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32730176119545861
+    m_Localized: Book
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32730176119545862
+    m_Localized: Parchment
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32730176119545863
+    m_Localized: What is the first charm you were asked to help with?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32730176119545864
+    m_Localized: To cure a cold
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32730176119545865
+    m_Localized: To ward off the evil eye
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32730176119545866
+    m_Localized: To cure warts
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32730176119545867
+    m_Localized: "Which customer asks for help to make their fianc\xE9 fall in love?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32730176119545868
+    m_Localized: Pirate
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32730176119545869
+    m_Localized: Elf
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32730176119545870
+    m_Localized: Vampire
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32730176119545871
+    m_Localized: What rune spell does the Ancient Witch request for her book?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32730176119545872
+    m_Localized: Communicate
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32730176119545873
+    m_Localized: Restore
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32730176119545874
+    m_Localized: Seal
     m_Metadata:
       m_Items: []
   references:

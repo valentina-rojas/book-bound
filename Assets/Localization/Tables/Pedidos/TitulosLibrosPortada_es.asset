@@ -30,6 +30,10 @@ MonoBehaviour:
     m_Localized: El universo del todo
     m_Metadata:
       m_Items: []
+  - m_Id: 32711203894239232
+    m_Localized: Manual de Plantas Malditas
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

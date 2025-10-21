@@ -189,6 +189,27 @@ MonoBehaviour:
       nunca permanece quieto donde se deja."
     m_Metadata:
       m_Items: []
+  - m_Id: 32357888677289984
+    m_Localized: "\xBFAlguna vez has querido preparar deliciosos manjares para un
+      fest\xEDn entero\u2026 en cuesti\xF3n de minutos? Este libro es tu gu\xEDa
+      definitiva para cocinar grandes cantidades de comida con recetas m\xE1gicas
+      que encantan a todos. Recetas que se multiplican solas, perfectas para banquetes
+      y celebraciones, hechizos culinarios que aceleran la cocci\xF3n sin perder
+      sabor ni textura y  trucos para que incluso los platos m\xE1s complicados se
+      preparen en un abrir y cerrar de ojos.\r\nIdeal para brujas y magos que deseen
+      alimentar a familias, amigos o criaturas m\xE1gicas sin perder tiempo, manteniendo
+      el sabor en cada plato.\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32357888694067200
+    m_Localized: "Durante siglos, dragones, elfos, brujos y otras criaturas m\xE1gicas
+      se enfrentaron en \xE9picas batallas llenas de hechizos y traiciones. Este
+      libro narra los conflictos m\xE1s intensos y c\xF3mo, a trav\xE9s de hero\xEDsmo,
+      astucia y diplomacia, se logr\xF3 la paz entre todas las especies m\xE1gicas.
+      Una historia fascinante de magia, poder y reconciliaci\xF3n que cautivar\xE1
+      a todo amante de la historia de nuestro mundo."
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

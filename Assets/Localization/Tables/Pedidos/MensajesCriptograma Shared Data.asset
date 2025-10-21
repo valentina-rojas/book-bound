@@ -23,6 +23,14 @@ MonoBehaviour:
     m_Key: Traduccion2
     m_Metadata:
       m_Items: []
+  - m_Id: 12693241124790272
+    m_Key: Traduccion3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12693241141567488
+    m_Key: Traduccion4
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
