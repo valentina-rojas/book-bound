@@ -19,6 +19,11 @@ public class AudioManager : MonoBehaviour
     public AudioSource sonidoArpasLibroDonado;
     public AudioSource sonidoGato;
     public AudioSource sonidoRonroneo;
+    public AudioSource abrirLista;
+    public AudioSource cambioLibro;
+    public AudioSource campanita;
+    public AudioSource letra;
+    public AudioSource encanto;
  
     private void Awake()
     {

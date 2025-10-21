@@ -164,6 +164,7 @@ public class CriptogramaManager : MonoBehaviour
         {
             if (boton != null && boton.letra == letra)
             {
+                AudioManager.instance.letra.Play();
                 boton.RevelarLetra();
                 break;
             }

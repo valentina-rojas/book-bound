@@ -18,16 +18,19 @@ public class HechizoManager : MonoBehaviour
     [Header("Nombres de runas")]
     public string[] nombresRunas = { "Fuego", "Agua", "Tierra", "Aire", "Luz", "Sombra" };
 
+    [Header("Partículas de runas")]
+    public ParticleSystem[] particulasRunas; 
+
     [Header("Texto para mensajes en pantalla")]
     public TMP_Text mensajeEnPantalla;  
 
     private List<int> secuenciaSeleccionada = new List<int>();
+    private Dictionary<int, ParticleSystem> particulasActivas = new Dictionary<int, ParticleSystem>();
 
     private Vector3 escalaOriginal = Vector3.one;
     private Vector3 escalaSeleccionada = Vector3.one * 1.2f;
 
     private Dictionary<string, List<int>> hechizos = new Dictionary<string, List<int>>();
-
     private string hechizoFormado = null;
 
     private void Awake()
@@ -61,13 +64,31 @@ public class HechizoManager : MonoBehaviour
             return;
 
         botonesRunas[indiceRuna].transform.localScale = escalaSeleccionada;
-
         secuenciaSeleccionada.Add(indiceRuna);
+        AudioManager.instance.encanto.Play();
+
+        GenerarParticulasRuna(indiceRuna);
 
         if (secuenciaSeleccionada.Count == 3)
         {
             VerificarHechizo();
         }
+    }
+
+    private void GenerarParticulasRuna(int indiceRuna)
+    {
+        if (particulasRunas == null || particulasRunas.Length <= indiceRuna || particulasRunas[indiceRuna] == null)
+            return;
+
+        if (particulasActivas.ContainsKey(indiceRuna)) return;
+
+        Transform runaTransform = botonesRunas[indiceRuna].transform;
+        Transform contenedor = runaTransform.parent; 
+        ParticleSystem particulas = Instantiate(particulasRunas[indiceRuna], contenedor);
+
+        particulas.transform.position = runaTransform.position;
+        particulas.Play();
+        particulasActivas[indiceRuna] = particulas;
     }
 
     private void VerificarHechizo()
@@ -108,7 +129,19 @@ public class HechizoManager : MonoBehaviour
         foreach (int i in secuenciaSeleccionada)
         {
             botonesRunas[i].transform.localScale = escalaOriginal;
+
+            if (particulasActivas.ContainsKey(i))
+            {
+                ParticleSystem p = particulasActivas[i];
+                if (p != null)
+                {
+                    p.Stop();
+                    Destroy(p.gameObject, 0.5f);
+                }
+            }
         }
+
+        particulasActivas.Clear();
         secuenciaSeleccionada.Clear();
         botonEntregarHechizo.interactable = false;
     }
@@ -162,7 +195,7 @@ public class HechizoManager : MonoBehaviour
         hechizoEvent.level = GameManager.instance.nivelActual;
 
 #if !UNITY_EDITOR
-    Unity.Services.Analytics.AnalyticsService.Instance.RecordEvent(hechizoEvent);
+        Unity.Services.Analytics.AnalyticsService.Instance.RecordEvent(hechizoEvent);
 #else
         Debug.Log($"[ANALYTICS] HechizoEvent: spell={hechizoCorrecto}, level={GameManager.instance.nivelActual}");
 #endif
@@ -178,4 +211,3 @@ public class HechizoManager : MonoBehaviour
         mensajeEnPantalla.gameObject.SetActive(false);
     }
 }
-

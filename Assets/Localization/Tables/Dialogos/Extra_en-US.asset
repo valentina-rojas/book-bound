@@ -19,7 +19,8 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 71333224448
-    m_Localized: Let's start by cleaning the cobwebs at the reception.
+    m_Localized: Let's start by removing the cobwebs in the reception; you can find
+      a duster in your inventory.
     m_Metadata:
       m_Items: []
   - m_Id: 71429693440

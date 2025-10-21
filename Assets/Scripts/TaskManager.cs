@@ -131,6 +131,7 @@ public class TaskManager : MonoBehaviour
             animacionAbrirPanel.ReproducirAnimacion(() =>
             {
                 panelTareas.SetActive(true);
+                AudioManager.instance.abrirLista.Play();
                 botonAbrirLista.gameObject.SetActive(false);
                 botonCerrarLista.gameObject.SetActive(true);
             });
@@ -155,6 +156,7 @@ public class TaskManager : MonoBehaviour
         if (animacionCerrarPanel != null)
         {
             animacionCerrarPanel.ReproducirAnimacion();
+            AudioManager.instance.abrirLista.Play();
         }
     }
     
@@ -200,6 +202,7 @@ public class TaskManager : MonoBehaviour
 
     private void EjecutarAbrirTienda()
     {
+        AudioManager.instance.campanita.Play();
         OcultarListaTareas();
         botonAbrirTienda.interactable = false;
         tiendaAbiertaEnEsteNivel = true;

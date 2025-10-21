@@ -176,6 +176,7 @@ public class PagesManager : MonoBehaviour
     {
         CameraManager.instance.DesactivarPanelReparacion();
         GameManager.instance.CompletarRestauracion();
+        AudioManager.instance.sonidoLibroCorrecto.Play();
 
         int tiempoTotal = Mathf.RoundToInt(Time.time - tiempoInicioOrden);
 

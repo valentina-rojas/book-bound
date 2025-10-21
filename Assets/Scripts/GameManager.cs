@@ -426,6 +426,7 @@ public class GameManager : MonoBehaviour
         {
             resultadoRecomendacion = ResultadoRecomendacion.Mala;
             recomendacionesMalas++;
+            AudioManager.instance.sonidoLibroIncorrecto.Play();
         }
         else if (porcentaje < 1f)
         {
@@ -469,6 +470,7 @@ public class GameManager : MonoBehaviour
             EconomyManager.instance.SumarDinero(15);
             Debug.LogWarning($"Hechizo incorrecto. Realizado: {hechizoRealizado}, Solicitado: {personajeActual.hechizoSolicitado}");
             ActualizarSpritePersonaje();
+            AudioManager.instance.sonidoLibroIncorrecto.Play();
         }
         CameraManager.instance.DesctivarPanelHechizo();
         if (characterSpawn != null)

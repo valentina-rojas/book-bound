@@ -41,6 +41,7 @@ public class TraduccionManager : MonoBehaviour
 
         GameManager.instance.CompletarTraduccion();
         CameraManager.instance.DesctivarPanelTraduccion();
+        AudioManager.instance.sonidoLibroCorrecto.Play();
 
         RegistrarEventoTraduccion(segundos);
 

@@ -140,6 +140,7 @@ public class EncantoManager : MonoBehaviour
 
         if (indice == indiceActual)
         {
+            AudioManager.instance.encanto.Play();
             CambiarColorPunto(indice, Color.yellow);
             indiceActual++;
 
@@ -167,6 +168,7 @@ public class EncantoManager : MonoBehaviour
         mousePresionado = false;
 
         GameManager.instance.CompletarEncanto();
+        AudioManager.instance.sonidoLibroCorrecto.Play();
 
         if (botonFinalizar != null)
             botonFinalizar.gameObject.SetActive(true);

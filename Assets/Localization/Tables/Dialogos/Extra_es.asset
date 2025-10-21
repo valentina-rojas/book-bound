@@ -19,7 +19,8 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 71333224448
-    m_Localized: "Comencemos quitando las telara\xF1as en la recepci\xF3n."
+    m_Localized: "Comencemos quitando las telara\xF1as en la recepci\xF3n, puedes
+      encontrar un plumero en tu inventario."
     m_Metadata:
       m_Items: []
   - m_Id: 71429693440

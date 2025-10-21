@@ -163,6 +163,7 @@ public class BookManager : MonoBehaviour
     {
         if (indiceLibroActual < librosMismaSeccion.Count - 1)
         {
+            AudioManager.instance.cambioLibro.Play();
             indiceLibroActual++;
             MostrarLibroPorIndice(indiceLibroActual);
         }
@@ -172,6 +173,7 @@ public class BookManager : MonoBehaviour
     {
         if (indiceLibroActual > 0)
         {
+            AudioManager.instance.cambioLibro.Play();
             indiceLibroActual--;
             MostrarLibroPorIndice(indiceLibroActual);
         }
