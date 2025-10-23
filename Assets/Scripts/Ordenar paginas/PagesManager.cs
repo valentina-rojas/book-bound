@@ -164,11 +164,6 @@ public class PagesManager : MonoBehaviour
             }
         }
 
-        if (audioSource != null && sonidoCorrecto != null)
-        {
-            audioSource.PlayOneShot(sonidoCorrecto);
-        }
-
         botonEntregar.gameObject.SetActive(true);
     }
 

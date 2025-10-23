@@ -52,20 +52,30 @@ public class Tutorial : MonoBehaviour
         }
 
         panelDecision?.SetActive(false);
+
         if (botonEmpezarTutorial != null)
             botonEmpezarTutorial.onClick.AddListener(OnBotonEmpezarTutorialClick);
         if (botonSaltarTutorial != null)
             botonSaltarTutorial.onClick.AddListener(OnBotonSaltarTutorialClick);
 
         SaveData saveData = SaveManager.CargarNivel();
-        if (saveData.nivelActual != 1)
+
+        if (saveData != null && saveData.nivelActual > 1)
         {
-            SaltarTutorial();
+            tutorialSaltado = true;
+
+            if (pulsoBotonTienda != null)
+                pulsoBotonTienda.enabled = false;
+
+            if (panelDecision != null)
+                panelDecision.SetActive(false);
+
+            gameObject.SetActive(false);
             return;
         }
 
         if (pulsoBotonTienda != null)
-            pulsoBotonTienda.enabled = false; 
+            pulsoBotonTienda.enabled = false;
     }
 
     private void OnDestroy()

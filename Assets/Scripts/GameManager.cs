@@ -28,6 +28,7 @@ public class GameManager : MonoBehaviour
     public int recomendacionesMalas = 0;
     private bool primerClienteDetectado = false;
     private float tiempoInicioNivel;
+    private bool spawnEnCurso = false;
 
     #endregion
 
@@ -288,9 +289,25 @@ public class GameManager : MonoBehaviour
         }
         return false;
     }
+
     public void IniciarSpawnDePersonajes()
     {
+        if (spawnEnCurso)
+        {
+            Debug.Log("Spawn ya en curso, ignorando nuevo intento.");
+            return;
+        }
+
+        spawnEnCurso = true;
+        StartCoroutine(IniciarSpawnConDelay());
+    }
+
+    private IEnumerator IniciarSpawnConDelay()
+    {
         TaskManager.instance.OcultarListaTareas();
+
+        yield return new WaitForSeconds(2f);
+
         if (nivelActual - 1 < niveles.Length)
         {
             characterSpawn.AsignarPersonajesDelNivel(niveles[nivelActual - 1].personajesDelNivel);
@@ -305,6 +322,8 @@ public class GameManager : MonoBehaviour
         {
             personasSentadas.ActivarPersonasSentadas();
         }
+
+        spawnEnCurso = false;
     }
 
     public void EstablecerPersonajeActual(CharacterAttributes personaje)

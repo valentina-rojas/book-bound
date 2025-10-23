@@ -187,6 +187,11 @@ public class TaskManager : MonoBehaviour
     #region Lógica de Tienda
     private void OnClickAbrirTienda()
     {
+        if (!botonAbrirTienda.interactable)
+            return;
+
+        botonAbrirTienda.interactable = false;
+
         if (animacionBotonTienda != null)
         {
             animacionBotonTienda.ReproducirAnimacion(() =>
