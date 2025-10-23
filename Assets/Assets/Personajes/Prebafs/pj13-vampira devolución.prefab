@@ -192,7 +192,7 @@ MonoBehaviour:
   m_preguntasTrivia: []
   libroDonadoID: 0
   libroDevueltoID: 41
-  tituloLibroDevuelto: 
+  tituloLibroDevuelto: L2recetas
   tituloLibroDevueltoKey:
     m_TableReference:
       m_TableCollectionName: 

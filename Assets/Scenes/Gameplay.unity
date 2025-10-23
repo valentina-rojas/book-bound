@@ -287297,7 +287297,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9373fec3c4f64ad4b99e32185e84abe6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dineroInicial: 1000
+  dineroInicial: 0
   textoDinero: {fileID: 1140412513}
   contenedorDinero: {fileID: 132500571}
 --- !u!114 &1468360317

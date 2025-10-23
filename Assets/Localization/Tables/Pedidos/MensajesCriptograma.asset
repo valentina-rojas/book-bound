@@ -30,7 +30,7 @@ MonoBehaviour:
         - rid: 788440357926600780
         - rid: 788440357926600781
         - rid: 788440357926600782
-        m_ConnectedFile: C:/Users/Urano/Downloads/Pedidos - MensajesCriptograma (6).csv
+        m_ConnectedFile: C:/Users/Urano/Downloads/Pedidos - MensajesCriptograma.csv
     - rid: 788440357926600780
       type: {class: KeyIdColumns, ns: UnityEditor.Localization.Plugins.CSV.Columns, asm: Unity.Localization.Editor}
       data:

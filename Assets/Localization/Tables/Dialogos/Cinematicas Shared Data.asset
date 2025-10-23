@@ -59,6 +59,22 @@ MonoBehaviour:
     m_Key: outro_thanks
     m_Metadata:
       m_Items: []
+  - m_Id: 28532818733342720
+    m_Key: outro_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28532818766897152
+    m_Key: outro_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28532818766897153
+    m_Key: outro_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28532818766897154
+    m_Key: outro_4
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

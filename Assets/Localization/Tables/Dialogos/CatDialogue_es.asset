@@ -215,10 +215,14 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 32994050257362953
-    m_Localized: Espero volver a verte pronto.
+    m_Localized: "As\xED que te tengo un regalo, \xFAsalo en la tienda."
     m_Metadata:
       m_Items: []
   - m_Id: 32994050257362954
+    m_Localized: Espero volver a verte pronto.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 33919593987350528
     m_Localized: Quien sabe, el futuro es un libro abierto.
     m_Metadata:
       m_Items: []

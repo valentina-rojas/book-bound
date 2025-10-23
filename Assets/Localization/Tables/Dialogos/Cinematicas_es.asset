@@ -62,6 +62,23 @@ MonoBehaviour:
     m_Localized: "\xA1Gracias por cuidar la librer\xEDa!"
     m_Metadata:
       m_Items: []
+  - m_Id: 28532818733342720
+    m_Localized: "\xA1Estoy de vuelta! Qu\xE9 gusto ver que todo sigue en orden"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28532818766897152
+    m_Localized: "Nunca hab\xEDa visto los grimorios tan cuidados\u2026 buen trabajo"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28532818766897153
+    m_Localized: "Si quieres\u2026 la librer\xEDa siempre tendr\xE1 un lugar para
+      ti."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28532818766897154
+    m_Localized: "Una mano extra nunca viene mal\u2026"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

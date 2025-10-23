@@ -23,15 +23,15 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 28148670464
-    m_Localized: THE TREASURE IS AT THE END OF  THE SEA
+    m_Localized: "THE TREASURE IS AT THE END OF THE SEA\r"
     m_Metadata:
       m_Items: []
   - m_Id: 12693241124790272
-    m_Localized: SLEEPING WORDS  DOORS OF       KNOWLEDGE LET  ME READ
+    m_Localized: SLEEPING WORDS DOORS OF WISDOM LET ME READ
     m_Metadata:
       m_Items: []
   - m_Id: 12693241141567488
-    m_Localized: TOAD IS TAIL   PIG IS FEET    TURN THIS      WRETCH INTO A  WORM
+    m_Localized: TOAD TAIL PIG  FEET TURN THIS FOOL INTO A    WORM
     m_Metadata:
       m_Items: []
   references:

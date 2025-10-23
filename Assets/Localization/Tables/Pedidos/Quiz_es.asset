@@ -149,19 +149,19 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 10236841266159627
-    m_Localized: "\xBFCu\xE1ntas plantas tiene Rhea?"
+    m_Localized: "\xBFQu\xE9 es lo que aparece de noche y de d\xEDa desaparece?"
     m_Metadata:
       m_Items: []
   - m_Id: 10236841266159628
-    m_Localized: 5
+    m_Localized: Un fantasma
     m_Metadata:
       m_Items: []
   - m_Id: 10236841266159629
-    m_Localized: 6
+    m_Localized: Una estrella
     m_Metadata:
       m_Items: []
   - m_Id: 10236841266159630
-    m_Localized: 7
+    m_Localized: La luna
     m_Metadata:
       m_Items: []
   - m_Id: 10236841266159631
@@ -182,83 +182,84 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 32730176098574336
-    m_Localized: 
+    m_Localized: "\xBFCu\xE1l de estos t\xEDtulos es de un libro de Pociones?"
     m_Metadata:
       m_Items: []
   - m_Id: 32730176119545856
-    m_Localized: 
+    m_Localized: El Fuego en la Sangre
     m_Metadata:
       m_Items: []
   - m_Id: 32730176119545857
-    m_Localized: 
+    m_Localized: Herbarium de Sombras y Lumbres
     m_Metadata:
       m_Items: []
   - m_Id: 32730176119545858
-    m_Localized: 
+    m_Localized: Compendio de Plantas Susurrantes
     m_Metadata:
       m_Items: []
   - m_Id: 32730176119545859
-    m_Localized: 
+    m_Localized: "\xBFQu\xE9 es lo que tiene hojas pero sin ser un \xE1rbol?"
     m_Metadata:
       m_Items: []
   - m_Id: 32730176119545860
-    m_Localized: 
+    m_Localized: Planta
     m_Metadata:
       m_Items: []
   - m_Id: 32730176119545861
-    m_Localized: 
+    m_Localized: Libro
     m_Metadata:
       m_Items: []
   - m_Id: 32730176119545862
-    m_Localized: 
+    m_Localized: Pergamino
     m_Metadata:
       m_Items: []
   - m_Id: 32730176119545863
-    m_Localized: 
+    m_Localized: "\xBFPara qu\xE9 sirve el primer encanto con el que te pidieron
+      ayuda?"
     m_Metadata:
       m_Items: []
   - m_Id: 32730176119545864
-    m_Localized: 
+    m_Localized: Para curar un resfriado
     m_Metadata:
       m_Items: []
   - m_Id: 32730176119545865
-    m_Localized: 
+    m_Localized: Para el mal de ojos
     m_Metadata:
       m_Items: []
   - m_Id: 32730176119545866
-    m_Localized: 
+    m_Localized: Para curar verrugas
     m_Metadata:
       m_Items: []
   - m_Id: 32730176119545867
-    m_Localized: 
+    m_Localized: "\xBFCu\xE1l es el cliente que pide ayuda para enamorar a su prometido?"
     m_Metadata:
       m_Items: []
   - m_Id: 32730176119545868
-    m_Localized: 
+    m_Localized: Pirata
     m_Metadata:
       m_Items: []
   - m_Id: 32730176119545869
-    m_Localized: 
+    m_Localized: Elfa
     m_Metadata:
       m_Items: []
   - m_Id: 32730176119545870
-    m_Localized: 
+    m_Localized: Vampira
     m_Metadata:
       m_Items: []
   - m_Id: 32730176119545871
-    m_Localized: 
+    m_Localized: "\xBFQu\xE9 hechizo de runas solicita la Bruja Anciana para su libro?"
     m_Metadata:
       m_Items: []
   - m_Id: 32730176119545872
-    m_Localized: 
+    m_Localized: Comunicar
     m_Metadata:
       m_Items: []
   - m_Id: 32730176119545873
-    m_Localized: 
+    m_Localized: Restaurar
     m_Metadata:
       m_Items: []
   - m_Id: 32730176119545874
-    m_Localized: 
+    m_Localized: Sellar
     m_Metadata:
       m_Items: []
   references:

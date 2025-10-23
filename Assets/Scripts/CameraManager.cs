@@ -57,7 +57,7 @@ public class CameraManager : MonoBehaviour
         botonCambiarCamara3.gameObject.SetActive(nivelCargado > 1);
         botonCambiarCamara4.gameObject.SetActive(nivelCargado > 3);
         botonCambiarCamara5.gameObject.SetActive(nivelCargado > 3);
-        botonCambiarCamara0.interactable = false;
+        botonCambiarCamara0.interactable = (nivelCargado > 0);
         botonCambiarCamara1.interactable = (nivelCargado > 0);
         botonCambiarCamara2.interactable = (nivelCargado > 2);
         botonCambiarCamara3.interactable = (nivelCargado > 1);

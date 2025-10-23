@@ -42,7 +42,7 @@ public class CatDialogues : MonoBehaviour
         { 7, new string[] { "cat7_1", "cat7_2", "cat7_3", "cat7_4", "cat7_5" } },
         { 8, new string[] { "cat8_1", "cat8_2", "cat8_3", "cat8_4"} },
         { 9, new string[] { "cat9_1", "cat9_2", "cat9_3"} },
-        { 10, new string[] { "cat10_1", "cat10_2", "cat10_3", "cat10_4", "cat10_5" } },
+        { 10, new string[] { "cat10_1", "cat10_2", "cat10_3", "cat10_4", "cat10_5", "cat10_6" } },
     };
     #endregion
 
@@ -123,7 +123,7 @@ public class CatDialogues : MonoBehaviour
         typingCoroutine = StartCoroutine(ShowLocalizedLine());
     }
 
-    public System.Action OnDialogoUltimaLineaTipeada; 
+    public System.Action OnDialogoUltimaLineaTipeada;
 
     private IEnumerator ShowLocalizedLine()
     {
@@ -156,6 +156,11 @@ public class CatDialogues : MonoBehaviour
         if (lineIndex == dialogueKeys.Length - 1)
         {
             OnDialogoUltimaLineaTipeada?.Invoke();
+
+            if (diaActual == 10 && key == "cat10_6")
+            {
+                EconomyManager.instance.SumarDinero(1000);
+            }
         }
     }
 
@@ -184,9 +189,7 @@ public class CatDialogues : MonoBehaviour
     {
         CameraManager.instance?.ActivarBotonCamaraBiblioteca();
         if (gatoAnimator != null)
-        {
             gatoAnimator.SetTrigger("gatoDescansando");
-        }
         if (TendCat.instance != null)
             TendCat.instance.puedeAcariciar = true;
         if (typingCoroutine != null)
@@ -205,11 +208,13 @@ public class CatDialogues : MonoBehaviour
         botonFinalizar?.gameObject.SetActive(false);
         botonRepetir?.gameObject.SetActive(false);
 
+        if (!esDialogoExtra && diaActual == 10)
+        {
+            EconomyManager.instance?.SumarDinero(1000);
+        }
+
         if (!esDialogoExtra)
         {
-            if (lineIndex == dialogueKeys.Length - 1)
-                OnDialogoUltimaLineaTipeada?.Invoke();
-
             if (Tutorial.instance == null || !Tutorial.instance.tutorialSaltado)
             {
                 TaskManager.instance?.MostrarTareas();

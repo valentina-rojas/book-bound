@@ -164,6 +164,11 @@ public class PagesManager : MonoBehaviour
             }
         }
 
+        if (audioSource != null && sonidoCorrecto != null)
+        {
+            audioSource.PlayOneShot(sonidoCorrecto);
+        }
+
         botonEntregar.gameObject.SetActive(true);
     }
 
@@ -171,7 +176,6 @@ public class PagesManager : MonoBehaviour
     {
         CameraManager.instance.DesactivarPanelReparacion();
         GameManager.instance.CompletarRestauracion();
-        AudioManager.instance.sonidoLibroCorrecto.Play();
 
         int tiempoTotal = Mathf.RoundToInt(Time.time - tiempoInicioOrden);
 
