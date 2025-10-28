@@ -94,9 +94,11 @@ public class EncantoManager : MonoBehaviour
             setActivo.SetActive(true);
 
             puntosEncanto.Clear();
-            foreach (Transform punto in setActivo.transform)
-                puntosEncanto.Add(punto);
-
+           for (int i = 0; i < setActivo.transform.childCount; i++)
+            {
+                if (i == 0) continue; // ignora el primer hijo
+                puntosEncanto.Add(setActivo.transform.GetChild(i));
+            }
             Debug.Log($"Encanto seleccionado: {tipoEncanto} - puntos cargados: {puntosEncanto.Count}");
         }
     }
