@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 460f30a183331354c9fd9a08296342ea, type: 3}
-  m_Name: Sillon cuadros
+  m_Name: Lampara 1
   m_EditorClassIdentifier: 
-  nombre: Sillon cuadros 1
-  icono: {fileID: 2826805475117864534, guid: b63fa46145ed2564fa7ef042440202af, type: 3}
-  iconoTienda: {fileID: -8120283346981010170, guid: 3d04d16069932a94c9f38de807a7562a, type: 3}
-  precio: 200
+  nombre: Lampara 1
+  icono: {fileID: 4965576046754518691, guid: 02c97185c4644d2459783be0fae702f8, type: 3}
+  iconoTienda: {fileID: 4965576046754518691, guid: a301d45bee0bcc8448466e70691bd41c, type: 3}
+  precio: 100
   categoria: 3
   puedeRetirarse: 0
   comprado: 0

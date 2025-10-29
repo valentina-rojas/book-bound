@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 460f30a183331354c9fd9a08296342ea, type: 3}
-  m_Name: Sillon cuadros
+  m_Name: Sillon cuadros 1
   m_EditorClassIdentifier: 
-  nombre: Sillon cuadros 1
-  icono: {fileID: 2826805475117864534, guid: b63fa46145ed2564fa7ef042440202af, type: 3}
-  iconoTienda: {fileID: -8120283346981010170, guid: 3d04d16069932a94c9f38de807a7562a, type: 3}
+  nombre: Sillon cuadros 2
+  icono: {fileID: 3523439139936539884, guid: 2b9423e8317ddb14d956bfaadf230434, type: 3}
+  iconoTienda: {fileID: 3523439139936539884, guid: e1d90565ff9234f4e9454ddb2fac531d, type: 3}
   precio: 200
   categoria: 3
   puedeRetirarse: 0
