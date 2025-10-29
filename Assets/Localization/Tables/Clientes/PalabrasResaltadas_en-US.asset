@@ -178,6 +178,54 @@ MonoBehaviour:
     m_Localized: Banquet of Full Moons
     m_Metadata:
       m_Items: []
+  - m_Id: 33241194218299392
+    m_Localized: alchemist
+    m_Metadata:
+      m_Items: []
+  - m_Id: 33241194239270912
+    m_Localized: twenty years
+    m_Metadata:
+      m_Items: []
+  - m_Id: 33241194239270913
+    m_Localized: Silent Forests
+    m_Metadata:
+      m_Items: []
+  - m_Id: 33241194239270914
+    m_Localized: rise
+    m_Metadata:
+      m_Items: []
+  - m_Id: 33241194239270915
+    m_Localized: fall
+    m_Metadata:
+      m_Items: []
+  - m_Id: 33241194239270916
+    m_Localized: lost civilizations
+    m_Metadata:
+      m_Items: []
+  - m_Id: 33241194239270917
+    m_Localized: Unguents of the Forgotten Forest
+    m_Metadata:
+      m_Items: []
+  - m_Id: 33241194239270918
+    m_Localized: magical wars
+    m_Metadata:
+      m_Items: []
+  - m_Id: 33241194239270919
+    m_Localized: magical beings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 33241194239270920
+    m_Localized: cook
+    m_Metadata:
+      m_Items: []
+  - m_Id: 33241194239270921
+    m_Localized: quick
+    m_Metadata:
+      m_Items: []
+  - m_Id: 33241194239270922
+    m_Localized: abundant
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

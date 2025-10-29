@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      sillos-cuadros-rojo-1-izq_0: -6159742199963136962
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

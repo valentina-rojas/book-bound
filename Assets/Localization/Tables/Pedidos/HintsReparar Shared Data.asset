@@ -71,6 +71,22 @@ MonoBehaviour:
     m_Key: Reparar_hint_14
     m_Metadata:
       m_Items: []
+  - m_Id: 26418985902448640
+    m_Key: Reparar_hint_15
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26418985931808768
+    m_Key: Reparar_hint_16
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26418985931808769
+    m_Key: Reparar_hint_17
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26418985931808770
+    m_Key: Reparar_hint_18
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

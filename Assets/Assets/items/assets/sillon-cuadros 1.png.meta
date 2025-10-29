@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      sillon-cuadros 1_0: 3464062404856889422
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

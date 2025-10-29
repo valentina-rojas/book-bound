@@ -184,7 +184,31 @@ MonoBehaviour:
     m_WaitForCompletion: 0
     m_LocalVariables: []
   setStickersDeseado: 3
-  pistasPortada: []
+  pistasPortada:
+  - m_TableReference:
+      m_TableCollectionName: GUID:fe0b7a3ca1207384b870d9d03d6d3bc9
+    m_TableEntryReference:
+      m_KeyId: 35895122328199168
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:fe0b7a3ca1207384b870d9d03d6d3bc9
+    m_TableEntryReference:
+      m_KeyId: 35895122344976384
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:fe0b7a3ca1207384b870d9d03d6d3bc9
+    m_TableEntryReference:
+      m_KeyId: 35895122344976385
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   hechizoSolicitado: 0
   tituloLibroHechizadoKey:
     m_TableReference:

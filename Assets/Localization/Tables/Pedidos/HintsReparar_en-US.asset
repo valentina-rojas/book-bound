@@ -77,6 +77,22 @@ MonoBehaviour:
     m_Localized: Tea prepared with love mends hearts.
     m_Metadata:
       m_Items: []
+  - m_Id: 26418985902448640
+    m_Localized: A dragon guards the tower.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26418985931808768
+    m_Localized: No knight has managed to get close yet.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26418985931808769
+    m_Localized: Someone is approaching...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26418985931808770
+    m_Localized: "It\u2019s her friend! And she\u2019s coming to save her."
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

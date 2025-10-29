@@ -76,6 +76,22 @@ MonoBehaviour:
     m_Localized: "El t\xE9 preparado con amor arregla corazones."
     m_Metadata:
       m_Items: []
+  - m_Id: 26418985902448640
+    m_Localized: "Un drag\xF3n custodia la torre"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26418985931808768
+    m_Localized: "Ning\xFAn caballero ha logrado acercarse a\xFAn"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26418985931808769
+    m_Localized: Alguien se acerca...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26418985931808770
+    m_Localized: "\xA1Es su amiga! Y viene a salvarla"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

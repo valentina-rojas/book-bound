@@ -74,6 +74,18 @@ MonoBehaviour:
     m_Localized: "Do your best to meet the client\u2019s expectations."
     m_Metadata:
       m_Items: []
+  - m_Id: 35895122328199168
+    m_Localized: Which plants seem evil to you?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35895122344976384
+    m_Localized: "Something that pricks is never good\u2026"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35895122344976385
+    m_Localized: Nor anything that bites.
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

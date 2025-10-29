@@ -232,7 +232,7 @@ MonoBehaviour:
   m_preguntasTrivia: []
   libroDonadoID: 0
   libroDevueltoID: 42
-  tituloLibroDevuelto: 
+  tituloLibroDevuelto: L1recetas
   tituloLibroDevueltoKey:
     m_TableReference:
       m_TableCollectionName: 

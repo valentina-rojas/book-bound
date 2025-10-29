@@ -76,6 +76,18 @@ MonoBehaviour:
     m_Localized: 'Haz lo mejor por cumplir las espectativas del cliente '
     m_Metadata:
       m_Items: []
+  - m_Id: 35895122328199168
+    m_Localized: "\xBFQu\xE9 plantas te parecen malvadas?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35895122344976384
+    m_Localized: Algo que pincha nunca es bueno...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35895122344976385
+    m_Localized: Ni tampoco algo que muerde.
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

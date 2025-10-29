@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      sillon-cuadros-celeste-der_0: -8364488261179459663
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
